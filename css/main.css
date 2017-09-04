@@ -1,0 +1,5520 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+    
+}
+
+body {
+    margin: 0;
+    height: 100%;
+}
+
+footer,
+nav,
+section {
+    display: block
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,
+a:hover {
+    outline: 0
+}
+
+h1 {
+    font-size: 2em;
+    margin: .67em 0
+}
+
+img {
+    border: 0
+}
+
+input,
+textarea {
+    color: inherit;
+    font: inherit;
+    margin: 0
+}
+
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0
+}
+
+input {
+    line-height: normal
+}
+
+textarea {
+    overflow: auto
+}
+
+
+/* ==========================================================================
+   Start of base Webflow CSS - If you're looking for some ultra-clean CSS, skip the boilerplate and see the unminified code below.
+   ========================================================================== */
+
+@font-face {
+    font-family: 'webflow-icons';
+    src: url(data:application/x-font-ttf;charset=utf-8;base64,AAEAAAALAIAAAwAwT1MvMg6SAy0AAAC8AAAAYGNtYXAaVcxaAAABHAAAAExnYXNwAAAAEAAAAWgAAAAIZ2x5ZgscV1gAAAFwAAABhGhlYWQCkFKvAAAC9AAAADZoaGVhB0MDyQAAAywAAAAkaG10eBIAA10AAANQAAAAIGxvY2EBMADyAAADcAAAABJtYXhwAAwATQAAA4QAAAAgbmFtZWTuiIAAAAOkAAABe3Bvc3QAAwAAAAAFIAAAACAAAwQAAZAABQAAApkCzAAAAI8CmQLMAAAB6wAzAQkAAAAAAAAAAAAAAAAAAAABEAAAAAAAAAAAAAAAAAAAAABAAADmAwPA/8D/wAPAAEAAAAABAAAAAAAAAAAAAAAgAAAAAAACAAAAAwAAABQAAwABAAAAFAAEADgAAAAKAAgAAgACAAEAIOYD//3//wAAAAAAIOYA//3//wAB/+MaBAADAAEAAAAAAAAAAAAAAAEAAf//AA8AAQAAAAAAAAAAAAIAADc5AQAAAAABAAAAAAAAAAAAAgAANzkBAAAAAAEAAAAAAAAAAAACAAA3OQEAAAAAAQEgAAADIAOAAAUAAAkBBwkBFwMg/kBAAYD+gEABwAHAQP6A/oBAAAEA4AAAAuADgAAFAAATARcJAQfgAcBA/oABgEABwAHAQP6A/oBAAAADAMAA4ANAAsAAGAAxAEoAAAEhIg4CHQEUHgIzITI+Aj0BNC4CIxUhIg4CHQEUHgIzITI+Aj0BNC4CIxUhIg4CHQEUHgIzITI+Aj0BNC4CIwMg/cAHCwkFBQkLBwJABwsJBQUJCwf9wAcLCQUFCQsHAkAHCwkFBQkLB/3ABwsJBQUJCwcCQAcLCQUFCQsHAsAFCQsHIAcLCQUFCQsHIAcLCQXABQkLByAHCwkFBQkLByAHCwkFwAUJCwcgBwsJBQUJCwcgBwsJBQAAAAABAJ0AtAOBApUABQAACQIHCQEDJP7r/upcAXEBcgKU/usBFFv+egGGAAAAAAEAAAABAADSLAJOXw889QALBAAAAAAAz/iHGQAAAADP+IcZAAAAAAOBA4AAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAA4EAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAACAAAABAABIAQAAOAEAADABAAAnQAAAAAACgAUAB4AMgBGAKwAwgAAAAEAAAAIAEsAAwAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAOAK4AAQAAAAAAAQAaAAAAAQAAAAAAAgAOAHEAAQAAAAAAAwAaADAAAQAAAAAABAAaAH8AAQAAAAAABQAWABoAAQAAAAAABgANAEoAAQAAAAAACgA0AJkAAwABBAkAAQAaAAAAAwABBAkAAgAOAHEAAwABBAkAAwAaADAAAwABBAkABAAaAH8AAwABBAkABQAWABoAAwABBAkABgAaAFcAAwABBAkACgA0AJkAdwBlAGIAZgBsAG8AdwAtAGkAYwBvAG4AcwBWAGUAcgBzAGkAbwBuACAAMQAuADAAdwBlAGIAZgBsAG8AdwAtAGkAYwBvAG4Ac3dlYmZsb3ctaWNvbnMAdwBlAGIAZgBsAG8AdwAtAGkAYwBvAG4AcwBSAGUAZwB1AGwAYQByAHcAZQBiAGYAbABvAHcALQBpAGMAbwBuAHMARgBvAG4AdAAgAGcAZQBuAGUAcgBhAHQAZQBkACAAYgB5ACAASQBjAG8ATQBvAG8AbgAuAAADAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA) format('truetype'), url(data:application/font-woff;charset=utf-8;base64,d09GRk9UVE8AAAVcAAoAAAAABRQAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABDRkYgAAAA9AAAAZMAAAGTuzUomU9TLzIAAAKIAAAAYAAAAGAOkgMtY21hcAAAAugAAABMAAAATBpVzFpnYXNwAAADNAAAAAgAAAAIAAAAEGhlYWQAAAM8AAAANgAAADYCkFKvaGhlYQAAA3QAAAAkAAAAJAdDA8lobXR4AAADmAAAACAAAAAgEgADXW1heHAAAAO4AAAABgAAAAYACFAAbmFtZQAAA8AAAAF7AAABe2TuiIBwb3N0AAAFPAAAACAAAAAgAAMAAAEABAQAAQEBDndlYmZsb3ctaWNvbnMAAQIAAQA6+BwC+BsD+BgEHgoACXf/i4seCgAJd/+LiwwHi0v6lPpUBR0AAACaDx0AAACfER0AAAAJHQAAAYoSAAkBAQ4bHR8iJywxNndlYmZsb3ctaWNvbnN3ZWJmbG93LWljb25zdTB1MXUyMHVFNjAwdUU2MDF1RTYwMnVFNjAzAAACAYkABgAIAQEEBwoNJDvH4P6UDv6UDv6UDvyUDvm0+FQV/FT4VEtL+BT8FPwU/BTLSwUO93T4VBX4VPhUy0v8FPwU+BT8FEtLBQ75tPlUFfzUiwV5i319i3kIi2sFi3mZfZ2LCPjUiwWdi5mZi50Ii6sFi519mXmLCIv7VBX81IsFeYt9fYt5CItrBYt5mX2diwj41IsFnYuZmYudCIurBYudfZl5iwiL+1QV/NSLBXmLfX2LeQiLawWLeZl9nYsI+NSLBZ2LmZmLnQiLqwWLnX2ZeYsIDvm4+SkV+6n7qvuq96ovLvgG/Bj4BvgYBQ76lBT6lBWLDAoAAAMEAAGQAAUAAAKZAswAAACPApkCzAAAAesAMwEJAAAAAAAAAAAAAAAAAAAAARAAAAAAAAAAAAAAAAAAAAAAQAAA5gMDwP/A/8ADwABAAAAAAQAAAAAAAAAAAAAAIAAAAAAAAgAAAAMAAAAUAAMAAQAAABQABAA4AAAACgAIAAIAAgABACDmA//9//8AAAAAACDmAP/9//8AAf/jGgQAAwABAAAAAAAAAAAAAAABAAH//wAPAAEAAAABAAC1pQTjXw889QALBAAAAAAAz/iHGQAAAADP+IcZAAAAAAOBA4AAAAAIAAIAAAAAAAAAAQAAA8D/wAAABAAAAAAAA4EAAQAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAACAAAABAABIAQAAOAEAADABAAAnQAAUAAACAAAAAAADgCuAAEAAAAAAAEAGgAAAAEAAAAAAAIADgBxAAEAAAAAAAMAGgAwAAEAAAAAAAQAGgB/AAEAAAAAAAUAFgAaAAEAAAAAAAYADQBKAAEAAAAAAAoANACZAAMAAQQJAAEAGgAAAAMAAQQJAAIADgBxAAMAAQQJAAMAGgAwAAMAAQQJAAQAGgB/AAMAAQQJAAUAFgAaAAMAAQQJAAYAGgBXAAMAAQQJAAoANACZAHcAZQBiAGYAbABvAHcALQBpAGMAbwBuAHMAVgBlAHIAcwBpAG8AbgAgADEALgAwAHcAZQBiAGYAbABvAHcALQBpAGMAbwBuAHN3ZWJmbG93LWljb25zAHcAZQBiAGYAbABvAHcALQBpAGMAbwBuAHMAUgBlAGcAdQBsAGEAcgB3AGUAYgBmAGwAbwB3AC0AaQBjAG8AbgBzAEYAbwBuAHQAIABnAGUAbgBlAHIAYQB0AGUAZAAgAGIAeQAgAEkAYwBvAE0AbwBvAG4ALgAAAwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==) format('woff');
+    font-weight: normal;
+    font-style: normal
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block
+}
+
+.w-inline-block {
+    max-width: 100%;
+    display: inline-block
+}
+
+.w-button {
+    display: inline-block;
+    padding: 9px 15px;
+    background-color: #3898EC;
+    color: white;
+    border: 0;
+    line-height: inherit;
+    text-decoration: none;
+    cursor: pointer;
+    border-radius: 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+input.w-button {
+    -webkit-appearance: button
+}
+
+
+/*.w-webflow-badge,.w-webflow-badge * {
+    position: static;
+    left: auto;
+    top: auto;
+    right: auto;
+    bottom: auto;
+    z-index: auto;
+    display: block;
+    visibility: visible;
+    overflow: visible;
+    overflow-x: visible;
+    overflow-y: visible;
+    box-sizing: border-box;
+    width: auto;
+    height: auto;
+    max-height: none;
+    max-width: none;
+    min-height: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    float: none;
+    clear: none;
+    border: 0 none transparent;
+    border-radius: 0;
+    background: none;
+    background-image: none;
+    background-position: 0 0;
+    background-size: auto auto;
+    background-repeat: repeat;
+    background-origin: padding-box;
+    background-clip: border-box;
+    background-attachment: scroll;
+    background-color: transparent;
+    box-shadow: none;
+    opacity: 1;
+    transform: none;
+    transition: none;
+    direction: ltr;
+    font-family: inherit;
+    font-weight: inherit;
+    color: inherit;
+    font-size: inherit;
+    line-height: inherit;
+    font-style: inherit;
+    font-variant: inherit;
+    text-align: inherit;
+    letter-spacing: inherit;
+    text-decoration: inherit;
+    text-indent: 0;
+    text-transform: inherit;
+    list-style-type: disc;
+    text-shadow: none;
+    font-smoothing: auto;
+    vertical-align: baseline;
+    cursor: inherit;
+    white-space: inherit;
+    word-break: normal;
+    word-spacing: normal;
+    word-wrap: normal
+}
+
+.w-webflow-badge {
+    position: fixed !important;
+    display: inline-block !important;
+    visibility: visible !important;
+    z-index: 2147483647 !important;
+    top: auto !important;
+    right: 12px !important;
+    bottom: 12px !important;
+    left: auto !important;
+    color: #AAADB0 !important;
+    background-color: #fff !important;
+    border-radius: 3px !important;
+    padding: 6px 8px 6px 6px !important;
+    font-size: 12px !important;
+    opacity: 1 !important;
+    line-height: 14px !important;
+    text-decoration: none !important;
+    transform: none !important;
+    margin: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    overflow: visible !important;
+    white-space: nowrap;
+    box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 3px rgba(0,0,0,0.1)
+}
+
+.w-webflow-badge>img {
+    display: inline-block !important;
+    visibility: hidden!important;
+    opacity: 1 !important;
+    vertical-align: middle !important
+}
+*/
+
+h1,
+h2 {
+    font-weight: bold;
+    margin-bottom: 10px
+}
+
+h1 {
+    font-size: 38px;
+    line-height: 44px;
+    margin-top: 20px
+}
+
+h2 {
+    font-size: 32px;
+    line-height: 36px;
+    margin-top: 20px
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+a:focus {
+    outline: 0
+}
+
+.w-form {
+    margin: 0 0 15px
+}
+
+.w-form-done {
+    display: none;
+    padding: 20px;
+    text-align: center;
+    background-color: #dddddd
+}
+
+.w-form-fail {
+    display: none;
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #ffdede
+}
+
+.w-input {
+    display: block;
+    width: 100%;
+    height: 38px;
+    padding: 8px 12px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333333;
+    vertical-align: middle;
+    background-color: #ffffff;
+    border: 1px solid #cccccc
+}
+
+.w-input:-moz-placeholder {
+    color: #999
+}
+
+.w-input::-moz-placeholder {
+    color: #999;
+    opacity: 1
+}
+
+.w-input:-ms-input-placeholder {
+    color: #999
+}
+
+.w-input::-webkit-input-placeholder {
+    color: #999
+}
+
+.w-input:focus {
+    border-color: #3898EC;
+    outline: 0
+}
+
+textarea.w-input {
+    height: auto
+}
+
+.w-row {
+    margin-left: -10px;
+    margin-right: -10px
+}
+
+.w-row:before,
+.w-row:after {
+    content: " ";
+    display: table
+}
+
+.w-row:after {
+    clear: both
+}
+
+.w-row .w-row {
+    margin-left: 0;
+    margin-right: 0
+}
+
+.w-col {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding-left: 10px;
+    padding-right: 10px
+}
+
+.w-col .w-col {
+    padding-left: 0;
+    padding-right: 0
+}
+
+.w-col-5 {
+    width: 41.66666667%
+}
+
+.w-col-6 {
+    width: 50%
+}
+
+.w-col-7 {
+    width: 58.33333333%
+}
+
+@media screen and (max-width: 767px) {
+    .w-row,
+    .w-row {
+        margin-left: 0;
+        margin-right: 0
+    }
+    .w-col {
+        width: 100%;
+        left: auto;
+        right: auto
+    }
+    .w-col-small-6 {
+        width: 50%
+    }
+}
+
+@media screen and (max-width: 479px) {
+    .w-col {
+        width: 100%
+    }
+    .w-col-tiny-6 {
+        width: 50%
+    }
+}
+
+
+/* ==========================================================================
+   Start of custom Webflow CSS
+   ========================================================================== */
+
+body {
+    height: 100%;
+    padding-left: 329px;
+    background-color: #edeff2;
+    font-family: Oswald, sans-serif;
+    color: rgba(0, 0, 0, .74);
+    font-size: 16px;
+    line-height: 20px;
+}
+
+h1 {
+    font-family: Oswald, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 38px;
+    line-height: 44px;
+    font-weight: 700;
+}
+
+h2 {
+    font-family: Oswald, sans-serif;
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 700;
+}
+
+p {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    font-family: Oswald, sans-serif;
+    font-size: 15px;
+}
+
+.button {
+    display: inline-block;
+    padding: 0.6em 1.2em;
+    border-radius: 0.2em;
+    background-color: #cf404d;
+    -webkit-transition: background-color 300ms ease;
+    -o-transition: background-color 300ms ease;
+    transition: background-color 300ms ease;
+    color: #fff;
+    font-size: 16px;
+    line-height: 1.1em;
+    text-align: center;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #000;
+}
+
+.button.full-width {
+    display: block;
+    width: 100%;
+    background-color: #2e80b6;
+    font-size: 1rem;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.button.full-width:hover {
+    background-color: #cf404d;
+}
+
+.section {
+    position: relative;
+    padding: 5em 0;
+    background-color: #F0F2F2;
+}
+
+.section.section-contact {
+    min-height: 1100px;
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    background-color: #fafafa;
+}
+
+.call-to-action-section {
+    background-color: #141e28;
+    color: #fff;
+}
+
+.call-to-action-heading {
+    text-align: right;
+}
+
+.align-right {
+    display: block;
+    margin-top: 32px;
+    text-align: right;
+}
+
+.call-to-action-form {}
+
+.hero-heading {
+    margin-bottom: 0.45em;
+    color: #fff;
+    font-size: 4rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-shadow: 1px 3px 8px #000;
+}
+
+.hero-subheading {
+    margin-bottom: 0.8em;
+    color: #fff;
+    font-size: 1.7rem;
+    text-shadow: 1px 3px 8px #000;
+}
+
+.hollow-button {
+    display: inline-block;
+    margin-right: 5px;
+    margin-left: 5px;
+    font-size: 1rem;
+    padding: 0.6em 1.2em;
+    border: 0.02em solid #1db0fc;
+    border-radius: 0.2em;
+    -webkit-transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+    -o-transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+    transition: background-color 300ms ease, border 300ms ease, color 300ms ease;
+    color: #1db0fc;
+    line-height: 1.1em;
+    text-decoration: none;
+}
+
+.hollow-button:hover {
+    border-color: #000;
+    color: #000;
+}
+
+.hollow-button.white {
+    border-color: #2e80b6;
+    background-color: #2e80b6;
+    color: #fff;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.hollow-button.white:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #cf404d;
+}
+
+.hollow-button.red {
+    border-color: #cf404d;
+    background-color: #cf404d;
+    color: #fff;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.hollow-button.red:hover {
+    border-color: #fff;
+    background-color: #fff;
+    color: #2e80b6;
+}
+
+.section-heading.centered {
+    padding: 30px;
+    margin-bottom: 0;
+    color: #313131;
+    font-size: 4rem;
+    font-weight: 500;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.section-subheading.center {
+    font-family: 'Droid Sans', sans-serif;
+    color: #0b0000;
+    font-size: 1.8rem;
+    line-height: 1em;
+    text-align: center;
+}
+
+.section-title-group {
+    margin-bottom: 3em;
+}
+
+.form-field {
+    padding: 1.2em 0.6em;
+    margin-right: 1px;
+    margin-bottom: 10px;
+    border: 0px solid #000;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    font-size: 1rem;
+}
+
+.form-field:focus {
+    -webkit-box-shadow: 0 0 0 1px #2e80b6;
+    box-shadow: 0 0 0 1px #2e80b6;
+}
+
+.form-field.text-area {
+    min-height: 150px;
+}
+
+.form-wrapper.squeezed {
+    margin-bottom: 60px;
+}
+
+.social-icon-link {
+    padding: 3px;
+    opacity: 0.66;
+    -webkit-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+}
+
+.social-icon-link:hover {
+    opacity: 1;
+}
+
+.footer {
+    padding-top: 35px;
+    padding-bottom: 35px;
+}
+
+.footer.center {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    /*border-top: 2px solid #edeff2;*/
+    background-color: #141e28;
+    text-align: center;
+}
+
+.footer-text {
+    margin: 10px auto;
+    color: #edeff2;
+    font-size: 0.8rem;
+}
+
+.hero-title-wrapper {
+    position: relative;
+    top: 82%;
+    transform: perspective(1px) translateY(-82%);
+    text-align: center;
+}
+
+.plan-visit {
+    display: none;
+    position: fixed;
+    z-index: 10000;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F0F2F2;
+    padding-top: 10%;
+}
+
+.plan-visit .container {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+}
+
+.container .title {
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 30px;
+}
+
+.title h1,
+h3 {
+    color: black;
+    font-weight: 700;
+    font-family: Oswald, sans-serif;
+    font-size: 2.5rem;
+}
+
+.title h3 {
+    margin: 15px auto;
+    font-weight: 500;
+    font-family: Oswald, sans-serif;
+    font-size: 1.5rem;
+}
+
+.form-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.form-row {
+    width: 32.5%;
+}
+
+.submit-button {
+    border-radius: 0.2em;
+    background-color: #2e80b6;
+    color: white;
+    margin-top: 10px;
+}
+
+.close-button {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    right: 5%;
+    top: 5%;
+    cursor: pointer;
+    background-color: #cf404d;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.selection {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 0 0 10px;
+    min-height: 50px;
+    margin: auto;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+select {
+    font-weight: 400;
+    font-family: Oswald, sans-serif;
+    font-size: 18px;
+    width: 18%;
+    padding: 5px 10px;
+    height: 40px;
+    background-color: white;
+    border-radius: 2px;
+    border-width: 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.attend-service,
+.select-date,
+.service-date {
+    height: 40px;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 400;
+    font-family: Oswald, sans-serif;
+    margin-bottom: 0;
+}
+
+#attendance-date {
+    text-align: left;
+    height: 40px;
+    border-radius: 2px;
+    color: black;
+    background-color: white;
+    padding: 10px;
+    border-width: 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.main-nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    bottom: 0px;
+    width: 20%;
+    height: 100%;
+    padding-top: 2%;
+    background-color: #141e28;
+}
+
+.mobile-nav {
+    display: none;
+    z-index: 1000;
+}
+
+.hamburger {
+    display: none;
+    height: 2.6rem;
+    width: 3rem;
+    padding: 0;
+    margin-left: 10px;
+    background-image: url(../img/menu1.png);
+    background-size: 3rem;
+    background-repeat: no-repeat
+}
+
+.nav-container {
+    text-align: center;
+}
+
+.brand-logo,
+.brand-logo p {
+    font-family: Oswald, sans-serif;
+    color: #edeff2;
+    font-size: 1.6rem;
+    line-height: 1.1em;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    text-decoration: none;
+    margin-bottom: 0px;
+}
+
+.beta {
+    position: relative;
+    top: -8px;
+    left: -4px;
+    background-color: #cf404d;
+    font-size: 0.7rem;
+    padding: 0.4em 0.6em;
+    border-radius: 0.3em;
+    color: #edeff2;
+}
+
+.multiple-lang {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 30px;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.multiple-lang div a {
+    text-decoration: none;
+    font-size: 0.85rem;
+}
+
+.multiple-lang div a:hover {
+    color: #f9c635;
+}
+
+.social-container {
+    position: absolute;
+    width: 100%;
+    bottom: 20px;
+}
+
+.social-container p {
+    font-family: Oswald, sans-serif;
+    color: #edeff2;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.social-container p:hover {
+    color: #f9c635;
+}
+
+.social-icon-link img {
+    width: 1.4rem;
+}
+
+.navbar {
+    padding-top: 10%;
+}
+
+.nav-link {
+    display: block;
+    padding: 1.1em 0px;
+    color: #fff;
+    font-size: 1.3rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: #cf404d;
+}
+
+.home-section {
+    height: 100%;
+    background-image: url("../img/cogs.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.content {
+    height: 100%;
+}
+
+.success-message {
+    text-align: center;
+}
+
+.paragraph-form {
+    margin-bottom: 0px;
+}
+
+.transparent-layer {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(8, 8, 8, 0);
+}
+
+.body {
+    padding-left: 20%;
+}
+
+.image {
+    font-size: 16px;
+}
+
+.title {
+    display: block;
+    color: rgba(255, 0, 0, .74);
+    font-size: 1.2rem;
+    line-height: 0.8em;
+    text-align: left;
+}
+
+.bulletin-row {
+    width: 20rem;
+    height: 7rem;
+    border: 1px solid #edeff2;
+    border-radius: 0.2em;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
+
+.bulletin-image {
+    height: 100%;
+    flex: 1.4;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    background-image: url("../img/bulletin1.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+}
+
+.bulletin-description {
+    flex: 1;
+    text-align: left;
+    padding-left: 20px;
+}
+
+.date-published {
+    display: block;
+    margin: 0.4em 0;
+    color: #141e28;
+    font-size: 1.1rem;
+    line-height: 1.3em;
+    text-align: left;
+}
+
+.column-2 {
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+.bulletin-download {
+    padding: 0.5em 0.8em;
+    border-radius: 0.2em;
+    background-color: rgba(255, 14, 14, .74);
+    color: #edeff2;
+    font-size: 1rem;
+    line-height: 1.1em;
+    text-align: left;
+}
+
+.bulletin-download:hover {
+    background-color: #2e80b6;
+}
+
+.share-website {
+    padding: 10px;
+    margin: auto;
+    margin-top: 8%;
+    border-radius: 0.2em;
+    background: #F0F2F2;
+}
+
+.share-container {
+    padding: 2% 4%;
+}
+
+.share-container a {
+    text-decoration: none;
+}
+
+.share-container p {
+    font-size: 0.9rem;
+    margin-bottom: 12px;
+}
+
+.share-button {
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 0.8rem;
+    text-align: center;
+    line-height: 1.25em;
+    color: white;
+    border-radius: 0.2em;
+    background-color: #2e80b6;
+    padding: 0.6em 1.2em;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    font-weight: 400;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.share-button:hover {
+    background-color: #cf404d;
+}
+
+.welcome-column-1 {
+    padding-right: 15px;
+    padding-left: 0;
+}
+
+.welcome-column-2 {
+    padding-left: 15px;
+    padding-right: 0;
+}
+
+.visit {
+    margin-right: 10px;
+    background-color: #cf404d;
+}
+
+.visit, .history, .hollow-button, .close-button {
+    font-size: 1rem;
+    line-height: 1.1em;
+    padding: 0.6em 1.2em;
+    border-radius: 0.2em;
+}
+
+.visit:hover {
+    background-color: #2e80b6;
+    color: #ecf0f1;
+}
+
+.welcome-button-container {
+    text-align: right;
+}
+
+.history {
+    background-color: #fff;
+    color: #000;
+}
+
+.history:hover {
+    border-color: #2e80b6;
+    background-color: #2e80b6;
+    color: #ecf0f1;
+}
+
+.welcome-pgraph, .welcome-author {
+    font-size: 1.5rem;
+    line-height: 1.3em;
+    padding-bottom: 1em;
+    text-align: right;
+}
+.group-photo-caption {
+    font-size: 1.2rem;
+    line-height: 1.3em;
+    text-align: center;
+}
+
+.group-photo-container {
+    padding-bottom: 1em;
+    text-align: left;
+}
+
+.photo-pcc {
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.call-to-action-row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.call-to-action-description {
+    flex: 1;
+    padding-right: 10px;
+}
+
+.call-to-action-form {
+    flex: 1;
+    padding: 10px 20px;
+}
+
+.column-5 {
+    height: 100%;
+}
+
+.submit-button {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.6em 1em;
+    margin-top: 0;
+    border-radius: 0.2em;
+    background-color: #f36;
+    text-align: right;
+}
+
+.submit-button:hover {
+    background-color: #2e80b6;
+}
+
+.text-field {
+    display: inline-block;
+    width: 300px;
+    font-size: 1rem;
+    padding: 1em 0.6em;
+    margin-bottom: 0;
+    margin-right: 10px;
+    border-radius: 0.2em;
+}
+
+.form {
+    display: block;
+    margin-top: -5px;
+    text-align: left;
+}
+
+.cogs-news-form {
+    display: flex;
+    align-items: center;
+}
+
+.nospam {
+    margin-top: -5px;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.call-to-action-pgraph {
+    text-align: right;
+}
+
+.main-news {
+    height: 500px;
+    margin-bottom: 30px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.main-news:hover .main-news-description {
+    opacity: 1;
+}
+
+.main-news a {
+    text-decoration: none;
+    color: white;
+}
+
+.top-news {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    height: 900px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.news {
+    height: 150px;
+    width: 220px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.news a {
+    text-decoration: none;
+}
+
+.news:hover .newsdescription {
+    background-color: #2e80b6;
+}
+
+.news:hover .card__share {
+    display: block;
+}
+
+.round-radius {
+    border: 1px solid white;
+    border-radius: 0.2em;
+}
+
+.news-image {
+    max-width: 100%;
+    height: 100%;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.resize-img1 {
+    width: 220px;
+}
+
+.main-news-description {
+    position: relative;
+    height: 100%;
+    top: -500px;
+    background-color: #141e28;
+    opacity: 0.9;
+    text-align: center;
+    padding-top: 100px;
+    color: white;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.newsdescription {
+    position: relative;
+    height: 120px;
+    top: 0px;
+    background-color: #141e28;
+    text-align: left;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 0.5em 1em;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.newsdescription .top-news-title,
+.news-pgraph2 {
+    text-decoration: none;
+    color: white;
+}
+
+.top-news-title {
+    padding-top: 0px;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.4em;
+    margin-bottom: 5px;
+}
+
+.news-pgraph2 {
+    font-size: 0.8rem;
+    line-height: 1.2em;
+}
+
+.main-news-title {
+    padding-top: 100px;
+    font-size: 5rem;
+    line-height: 0.6em;
+    margin-bottom: 50px;
+}
+
+.news-pgraph1 {
+    font-size: 2.1rem;
+}
+
+.news-pgraph1 span,
+.feedback-pgraph span a {
+    color: #f36;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.feedback-pgraph span {
+    color: #f36;
+    font-weight: 700;
+}
+
+.fa-whatsapp {
+    background-color: #25D366;
+}
+
+.web__share {
+    display: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 0.35s ease;
+    transition: -webkit-transform 0.35s ease;
+    -o-transition: transform 0.35s ease;
+    transition: transform 0.35s ease;
+    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.card__share {
+    display: none;
+    float: right;
+    position: relative;
+    margin-top: -140px;
+    margin-right: 5px;
+    z-index: 3;
+}
+
+.card__social {
+    position: absolute;
+    top: 0;
+    right: -10px;
+    visibility: hidden;
+    width: 170px;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 0.35s ease;
+    transition: -webkit-transform 0.35s ease;
+    -o-transition: transform 0.35s ease;
+    transition: transform 0.35s ease;
+    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.card__social--active {
+    visibility: visible;
+    /*z-index: 3;*/
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(-48px);
+    -ms-transform: translateX(-48px);
+    transform: translateX(-48px);
+    -webkit-transition: -webkit-transform 0.35s ease;
+    transition: -webkit-transform 0.35s ease;
+    -o-transition: transform 0.35s ease;
+    transition: transform 0.35s ease;
+    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.share-toggle {
+    z-index: 200;
+}
+
+.share-toggle:before {
+    content: "\f1e0";
+    font-family: 'FontAwesome';
+    color: #3498db;
+}
+
+.share-toggle.share-expanded:before {
+    content: "\f00d";
+}
+
+.share-icon {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    outline: 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.share-icon:hover,
+.share-icon:focus {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #00abe3;
+}
+
+.googleplus {
+    background-color: #d3492c;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.facebook,
+.twitter,
+.googleplus,
+.whatsapp {
+    color: #fff;
+}
+
+.facebook:hover,
+.twitter:hover,
+.googleplus:hover,
+.whatsapp:hover {
+    color: #eee;
+}
+
+.container-2 {
+    background-color: #141e28;
+}
+
+.address {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 31em;
+    text-align: center;
+}
+
+.location {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+    background-color: #2e80b6;
+    border-radius: 0.2em;
+    padding: 2em;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.googlemap {
+    -webkit-box-flex: 2;
+    -ms-flex: 2;
+    flex: 2;
+    padding-left: 10px;
+}
+
+.googlemap iframe {
+    width: 100%;
+    height: 27.4em;
+    border-radius: 0.2em;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+address,
+.contact-info p,
+.office-hour p {
+    font-family: Oswald, sans-serif;
+    font-size: 1rem;
+    font-style: normal;
+    line-height: 1.3em;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.location h2,
+.contact-info h2,
+.office-hour h2 {
+    color: white;
+    font-size: 1.9rem;
+}
+
+.direction-button {
+    width: 100%;
+    margin: 0.5em auto;
+    padding: 0.6em 0;
+    border-radius: 0.2em;
+    background-color: #2e80b6;
+    font-size: 1rem;
+    text-align: center;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.direction-button:hover {
+    background-color: #cf404d;
+}
+
+.contact-section {
+    text-align: center;
+}
+
+.english {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 auto;
+    flex: 0 auto;
+    color: #f9c635;
+}
+
+.chinese {
+    margin-right: 10px;
+    margin-left: 10px;
+    color: #edeff2;
+}
+
+.bm {
+    color: #edeff2;
+}
+
+.mission-statement-section {
+    height: 100%;
+    background-image: url("../img/hillsong.jpeg");
+    background-position: 50% 50%;
+    background-size: cover;
+    text-align: left;
+}
+
+.bible-verse {
+    color: #edeff2;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    text-align: center;
+}
+
+.verse-container {
+    position: relative;
+    top: 55%;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    display: block;
+    overflow: visible;
+    width: 60%;
+    margin-right: auto;
+    margin-left: auto;
+    text-align: center;
+}
+
+.transparent-layer-2 {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 1, 1, .38);
+}
+
+.bulletin-section {
+    border-top: 3px solid #edeff2;
+    background-color: #141e28;
+}
+
+.bulletin-flex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.bulletin-container-1 {
+    padding-right: 20px;
+    flex: 2;
+}
+
+.bulletin-container-2 {
+    flex: 1;
+}
+
+.bulletin-text, .feedback-text, .call-to-action-heading {
+    font-size: 1.5rem;
+    line-height: 1.6rem;
+    font-weight: 500;
+    margin-bottom: 5px;
+    color: #f9c635;
+}
+.bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph {
+    color: #edeff2;
+    font-size: 1.2rem;
+    line-height: 1.3em;  
+}
+
+.bulletin-row {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.column-6 {
+    padding-top: 10px;
+}
+
+.feedback-section {
+    background-color: #141e28;
+}
+
+.adjust-padding-td {
+    padding: 40px 0;
+}
+.adjust-padding-lr {
+    padding: 0 80px;
+}
+#announcements .adjust-padding-lr {
+    padding: 0 120px;
+}
+
+
+/* ----------- Laptop with HiDPI ----------- */
+
+@media screen and ( max-width: 1441px) and (orientation: landscape) {
+    html {
+        font-size: 22px;
+    }
+    /*main navigation*/
+    .main-nav {
+        padding-top: 6%;
+    }
+    .beta {
+        top: -10px;
+        left: -6px;
+        font-size: 0.8rem;
+    }
+    .brand-logo,
+    .brand-logo p {
+        font-size: 1.9rem;
+    }
+    .multiple-lang div a {
+        font-size: 1rem;
+    }
+    .nav-link {
+        padding: 1.2em 0;
+    }
+    .hero-heading {
+        font-size: 5rem;
+    }
+    .hero-subheading {
+        font-size: 2rem;
+    }
+    .share-website {
+        margin-top: 12%;
+    }
+    .section {
+        padding: 9em 0 4em;
+    }
+    #welcome {
+        padding: 9em 0 5em;
+    }
+    .plan-visit {
+        padding-top: 15%;
+    }
+    .address {
+        height: 34em;
+    }
+    .googlemap iframe {
+        height: 30.2em;
+    }
+    .mission-statement-section {
+        height: 94%;
+    }
+    #announcements .adjust-padding-lr {
+    padding: 0 80px;
+    }
+}
+
+
+/* ----------- iPad Pro Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (orientation: landscape) {
+    html {
+        font-size: 20px;
+    }
+    .main-nav {
+        padding-top: 8%;
+    }
+    .brand-logo,
+    .brand-logo p {
+        font-size: 1.8rem;
+    }
+    .multiple-lang div a {
+        font-size: 1rem;
+    }
+    .nav-link {
+        padding: 1.4em 0;
+    }
+    .share-website {
+        margin-top: 12%;
+    }
+    .share-container {
+        padding: 2%;
+    }
+    .share-container p {
+        font-size: 0.8rem;
+    }
+    .share-button {
+        font-size: 0.7rem;
+    }
+    .bulletin-row {
+        height: 8rem;
+    }
+    .top-news-title {
+        font-size: 0.8rem;
+    }
+    
+    .submit-button {
+        padding: 0.66em 1em;
+    }
+    .address {
+        height: 37em;
+    }
+    .googlemap iframe {
+        height: 32.9em;
+    }
+    .adjust-padding-lr {
+        padding: 0 50px;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 50px;
+    }
+}
+
+
+/* ----------- Aspire E1 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (max-height: 670px) {
+    html {
+        font-size: 18px;
+    }
+    .main-nav {
+        padding-top: 2%;
+    }
+    .nav-link {
+        padding: 1em 0;
+    }
+    .navbar {
+        padding-top: 6%;
+    }
+    .share-website {
+        margin-top: 6%;
+    }
+    .share-container {
+        padding: 0 2%;
+    }
+    .share-container p {
+        font-size: 1rem;
+    }
+    .share-button {
+        font-size: 0.9rem;
+    }
+    .title {
+        font-size: 1.3rem;
+    }
+    .plan-visit {
+        padding-top: 7%;
+    }
+    .bulletin-container-1 {
+        flex: 1.3;
+    }
+    .section {
+        padding: 4em 0;
+    }
+    #welcome {
+        padding: 3em 0;
+    }
+    .top-news-title {
+        font-size: 1rem;
+    }
+    .news-pgraph2 {
+        font-size: 0.9rem;
+    }
+    .newsdescription {
+        padding: 0.8em 1em;
+    }
+    .address {
+        height: 30em;
+    }
+    .googlemap iframe {
+        height: 26.6em;
+    }
+}
+
+
+/* ----------- Laptop with Touch ----------- */
+
+@media screen and ( max-width: 1280px) {
+    html {
+        font-size: 20px;
+    }
+    .main-nav {
+        padding-top: 10%;
+    }
+    .share-website {
+        margin-top: 14%;
+    }
+    .align-right {
+        margin-top: 38px;
+    }
+    .plan-visit {
+        padding-top: 15%;
+    }
+    .submit-button {
+        padding: 0.61em 1em;
+    }
+    .nospam {
+        margin-top: 0;
+    }
+    .address {
+        height: 35em;
+    }
+    .googlemap iframe {
+        height: 31.2em;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 25px;
+    }
+}
+
+
+/* ----------- Laptop with MDPI screen----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 800px) {
+    .main-nav {
+        padding-top: 4%;
+    }
+    .nav-link {
+        padding: 1em 0;
+    }
+    .hero-heading {
+        font-size: 4.5rem;
+    }
+    .hero-subheading {
+        font-size: 1.85rem;
+    }
+    .section {
+        padding: 10em 0 6em;
+    }
+    #welcome {
+        padding: 7em 0;
+    }
+}
+
+
+/* ----------- S Tab 10.1 Landscape ----------- */
+
+@media screen and ( max-width: 1281px) and (max-height: 670px) {
+    html {
+        font-size: 18px;
+    }
+    .main-nav {
+        padding-top: 2%;
+    }
+    .share-website {
+        margin-top: 8%;
+    }
+    .section {
+        padding: 6em 0 4em;
+    }
+    #welcome {
+        padding: 3em 0;
+    }
+    .plan-visit {
+        padding-top: 8%;
+    }
+    .align-right {
+        margin-top: 32px;
+    }
+    .submit-button {
+        padding: 0.52em 1em;
+    }
+    .nospam {
+        margin-top: 10px;
+    }
+    .w-form {
+        margin: 0;
+    }
+}
+
+
+/* ----------- Aspire V3 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1100px) {
+    html {
+        font-size: 16px;
+    }
+    .beta {
+        top: -6px;
+    }
+    .navbar {
+        padding-top: 0;
+    }
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 0.9em 0;
+    }
+    .share-container p {
+        font-size: 0.8rem;
+        line-height: 1.2em;
+        margin-bottom: 5px;
+    }
+    .share-button {
+        font-size: 0.8rem;
+    }
+    .social-container {
+        bottom: 10px;
+    }
+    .social-container p {
+        margin-bottom: 5px;
+    }
+    .bulletin-row {
+        height: 8rem;
+        width: 22em;
+    }
+    .plan-visit {
+        padding-top: 1%;
+    }
+    .select-date, .attend-service {
+        display: none;
+    }
+    .service-time {
+        width: 24%;
+    }
+    #welcome {
+        padding: 4em 0;
+    }
+    .news-container {
+        min-height: 1400px;
+    }
+    .top-news {
+        height: 840px;
+    }
+    .news {
+        width: 190px;
+        height: 140px;
+    }
+    .w-form {
+        margin: 0 0 5px;
+    }
+    .submit-button {
+        margin-top: 0;
+    }
+    .address {
+        height: 30em;
+    }
+    .googlemap iframe {
+        height: 26.8em;
+    }
+}
+
+
+/* ----------- iPad Pro Potrait------------------*/
+
+@media screen and ( max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+    .body {
+        padding-left: 0%;
+    }
+    .section {
+        padding: 7em 0em;
+    }
+    #welcome {
+        padding: 8em 0em;
+        height: 78%;
+    }
+    .plan-visit {
+        padding-top: 20%;
+        padding-bottom: 20px;
+    }
+    .title h1 {
+        font-size: 5rem;
+        line-height: 1em;
+    }
+    .title h3 {
+        font-size: 3rem;
+        line-height: 1em;
+    }
+    .close-button {
+        font-size: 1.5rem;
+        padding: 0.6em 0.7em;
+        top: 5%;
+    }
+    .form-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+    .form-row {
+        width: 100%;
+    }
+    .selection {
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    }
+    select,
+    #attendance-date {
+        width: 49.5%;
+        margin-bottom: 10px;
+        font-size: 1.5rem;
+        height: 56px;
+    }
+    #attendance-date {
+        padding-top: 5px;
+    }
+    .plan-submit.button.full-width {
+        height: 56px;
+    }
+    .service-time {
+        width: 99.5%;
+    }
+    .select-date {
+        padding-top: 5px;
+        width: 50px;
+    }
+    .attend-service {
+        padding-top: 5px;
+        width: 120px;
+    }
+    .select-date,
+    .attend-service {
+        display: none;
+    }
+    .plan-submit {
+        margin-bottom: 10%;
+    }
+    .mobile-nav {
+        display: block;
+        position: fixed;
+        background-color: #141e28;
+        height: 10%;
+        width: 100%;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    }
+    .mobile-container {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 30px;
+        position: relative;
+        top: 50%;
+        transform: perspective(1px) translateY(-50%);
+    }
+    .COGS-title {
+        display: inline-block;
+        -webkit-box-flex: 6;
+        -ms-flex: 6;
+        flex: 6;
+        color: white;
+    }
+    .COGS-title h1,
+    .navburger h1,
+    .bulletin-text,
+    .feedback-text,
+    .call-to-action-heading,
+    .title,
+    .date-published {
+        font-size: 2.5rem;
+    }
+    .hollow-button,
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph,
+    .bulletin-download,
+    .welcome-pgraph,
+    .welcome-author,
+    .group-photo-caption,
+    .visit,
+    .history {
+        font-size: 2rem;
+    }
+    .COGS-title h1 {
+        font-weight: 500;
+        margin-bottom: 0;
+    }
+    .navburger {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1;
+        display: flex;
+        align-items: center;
+        z-index: 1000;
+    }
+    .navburger h1 {
+        display: inline-block;
+        color: white;
+        margin-bottom: 0;
+        flex: 1;
+    }
+    .main-nav {
+        display: none;
+        bottom: auto;
+        width: 100%;
+        padding-top: 5%;
+        float: none;
+        z-index: 1001;
+    }
+    .hamburger {
+        display: inline-block;
+        flex: 1;
+    }
+    .cogs-logo {
+        margin-bottom: 30px;
+    }
+    .menu-links {
+        -webkit-transition: 50ms;
+        -o-transition: 50ms;
+        transition: 50ms;
+    }
+    .menu-links a {
+        -webkit-transition: 50ms;
+        -o-transition: 50ms;
+        transition: 50ms
+    }
+    .menu-links .closebtn {
+        position: absolute;
+        top: 47px;
+        right: 27px;
+        padding: 0;
+        background-image: url(../img/error.png);
+        background-size: 50px;
+        height: 50px;
+        width: 50px;
+        background-repeat: no-repeat
+    }
+    .brand-logo,
+    .brand-logo p {
+        font-size: 4rem;
+        font-weight: 700;
+    }
+    .beta {
+        top: -20px;
+        left: -10px;
+        font-size: 2rem;
+    }
+    .multiple-lang {
+        margin-top: 15px;
+    }
+    .multiple-lang div a {
+        font-size: 2.5rem;
+        line-height: 1em;
+    }
+    .chinese {
+        margin: 0 15px;
+    }
+    .navbar {
+        padding-top: 30px;
+    }
+    .nav-link {
+        font-size: 3rem;
+        padding: 1.3em 0;
+    }
+    .share-website {
+        width: 100%;
+        padding: 0;
+        margin-top: 60px;
+    }
+    .social-container {
+        bottom: unset;
+        margin: 50px auto;
+    }
+    .social-container p {
+        line-height: 1em;
+        margin-bottom: 20px;
+    }
+    .social-icon-link img {
+        width: 3.5rem;
+        margin-left: 7px;
+        margin-right: 7px;
+    }
+    .share-container {
+        padding: 2%;
+        border-radius: 0;
+    }
+    .share-container p {
+        font-size: 2.5rem;
+        line-height: 1em;
+        margin-top: 20px;
+        margin-bottom: 30px;
+    }
+    .share-button {
+        font-size: 2rem;
+    }
+    .web__share>.share-icon {
+        width: 80px;
+        height: 80px;
+        line-height: 80px;
+        font-size: 35px;
+    }
+    .card__share {
+        display: block;
+    }
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph {
+        line-height: 1.3em;
+    }
+    .title {
+        font-weight: 500;
+    }
+    .container {
+        height: 100%;
+    }
+    .bible-verse {
+        font-size: 3.5rem;
+        line-height: 1.1em;
+    }
+    .hero-title-wrapper {
+        position: relative;
+        top: 80%;
+        transform: perspective(1px) translateY(-80%);
+    }
+    .hero-heading {
+        font-size: 8rem;
+        line-height: 0.9em;
+        margin-bottom: 30px;
+    }
+    .hero-subheading,
+    .section-subheading.center {
+        font-size: 3rem;
+    }
+    .hero-subheading {
+        line-height: 1em;
+        margin-bottom: 30px;
+    }
+    .bulletin-section {
+        padding: 0;
+    }
+    .bulletin-text,
+    .feedback-text,
+    .call-to-action-heading {
+        line-height: 1.3em;
+    }
+    .bulletin-container-1 {
+        margin-bottom: 30px;
+        padding: 0;
+    }
+    .bulletin-pgraph {
+        margin-bottom: 0;
+    }
+    .bulletin-flex {
+        flex-direction: column;
+        align-items: left;
+    }
+    .bulletin-row {
+        width: 40em;
+        height: 14em;
+    }
+    /*Welcome Home*/
+    .section-heading.centered {
+        font-size: 7rem;
+        padding-bottom: 50px;
+    }
+    .welcome-column-1 {
+        padding-right: 5px;
+    }
+    .welcome-pgraph,
+    .welcome-author {
+        text-align: left;
+    }
+    .group-photo-container {
+        padding: 15px 0;
+        text-align: center;
+    }
+    .group-photo-caption {
+        text-align: center;
+    }
+    .welcome-button-container {
+        padding-top: 3em;
+        text-align: left;
+        position: absolute;
+        width: 600px;
+    }
+    .feedback-section {
+        padding: 0;
+    }
+    .news-container {
+        height: 1450px;
+    }
+    .main-news-title {
+        font-size: 6rem;
+    }
+    .news-pgraph1 {
+        font-size: 2.5rem;
+    }
+    .social-container p {
+        font-size: 3rem;
+    }
+    .top-news {
+        height: 65%;
+    }
+    .news {
+        height: 155px;
+    }
+    .news,
+    .resize-img1 {
+        width: 205px;
+    }
+    .newsdescription {
+        height: 140px;
+        padding: 1em;
+    }
+    .top-news-title {
+        font-size: 1.3rem;
+        line-height: 1.1em;
+    }
+    .news-pgraph2 {
+        font-size: 1.1rem;
+    }
+    .card__social {
+        width: 436%;
+    }
+    .card__share {
+        margin-top: -45px;
+    }
+    .call-to-action-section {
+        height: 26%;
+    }
+    .call-to-action-description,
+    .cogs-news-form {
+        margin-bottom: 15px;
+    }
+    .call-to-action-description,
+    .call-to-action-form {
+        padding: 0;
+    }
+    .call-to-action-form {
+        width: 100%;
+    }
+    .call-to-action-row {
+        flex-direction: column;
+        align-items: left;
+    }
+    .call-to-action-heading,
+    .call-to-action-pgraph,
+    call-to-action-form {
+        text-align: left;
+    }
+    .align-right {
+        margin-top: 0;
+    }
+    .cogs-news-form>.text-field {
+        width: 80%;
+    }
+    .text-field,
+    .submit-button,
+    .nospam,
+    .form-field,
+    .button.full-width,
+    .direction-button {
+        font-size: 1.5rem;
+    }
+    .form-field.text-area {
+        min-height: 200px;
+    }
+    .submit-button {
+        padding: 15px;
+    }
+    .address {
+        height: 33em;
+    }
+    .location h2,
+    .contact-info h2,
+    .office-hour h2 {
+        font-size: 2rem;
+    }
+    address,
+    .contact-info p,
+    .office-hour p {
+        font-size: 1.3rem;
+    }
+    .googlemap iframe {
+        height: 29em;
+    }
+    .footer.center {
+        padding: 1.5em 0;
+    }
+    .footer-text {
+        font-size: 2rem;
+    }
+    .adjust-padding-td {
+        padding: 50px 0;
+    }
+    .adjust-padding-lr {
+        padding: 0 80px;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 80px;
+    }
+}
+
+
+/* ----------- iPad Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 770px) {
+    html {
+        font-size: 12px;
+    }
+    .COGS-title h1,
+    .navburger h1,
+    .bulletin-text,
+    .feedback-text,
+    .call-to-action-heading,
+    .title,
+    .date-published {
+        font-weight: 400;
+    }
+    .menu-links .closebtn {
+        top: 2%;
+        right: 4.5%;
+    }
+    .nav-link {
+        font-size: 2.5rem;
+        padding: 1.2em 0;
+    }
+    .web__share>.share-icon {
+        width: 60px;
+        height: 60px;
+        line-height: 60px;
+        font-size: 27px;
+    }
+    .bulletin-row {
+        width: 34em;
+        height: 12em;
+    }
+    .title,
+    .date-published {
+        font-weight: 500;
+    }
+    #welcome {
+        height: 110%
+    }
+    .plan-visit {
+        padding-top: 5%;
+    }
+    .call-to-action-section {
+        height: 42%;
+    }
+    .main-news-title {
+        font-size: 8rem;
+    }
+    .news-pgraph1 {
+        font-size: 3rem;
+    }
+    .top-news {
+        height: 64%;
+    }
+    .address {
+        height: 31em;
+    }
+    .googlemap iframe {
+        height: 27.3em;
+    }
+    .bible-verse {
+        font-size: 2.8rem;
+    }
+    .footer-text {
+        font-size: 1.6rem;
+        margin: 0 auto;
+    }
+    .footer.center {
+        height: 8%;
+        padding: 2% 0;
+    }
+}
+
+
+/* ----------- iPad Mini 4 Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 680px) {
+    html {
+        font-size: 12px;
+    }
+    .brand-logo,
+    .brand-logo p {
+        font-size: 3.5rem;
+        font-weight: 500;
+    }
+    .beta {
+        font-size: 1.5rem;
+        top: -12px;
+        right: -7px;
+    }
+    .navbar {
+        padding-top: 0;
+    }
+    .multiple-lang {
+        margin-top: 5px;
+    }
+    .multiple-lang div a {
+        font-size: 2rem;
+    }
+    .share-container {
+        padding: 1% 0 2%;
+    }
+    .share-container p {
+        margin: 20px;
+    }
+    #welcome {
+        height: 130%;
+    }
+    .bulletin-row {
+        width: 35em;
+        height: 12em;
+    }
+    .location h2,
+    .contact-info h2,
+    .office-hour h2 {
+        font-size: 2.6rem;
+    }
+    address,
+    .contact-info p,
+    .office-hour p {
+        font-size: 1.6rem;
+    }
+    .googlemap iframe {
+        height: 27.6em;
+    }
+}
+
+
+/* ----------- Lenova IdeaPad Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    html {
+        font-size: 10px;
+    }
+    .plan-visit {
+        padding-top: 5%;
+    }
+    .hero-heading,
+    .hero-subheading {
+        margin-bottom: 15px;
+    }
+    .bulletin-text,
+    .feedback-text,
+    .call-to-action-heading,
+    .title,
+    .date-published {
+        font-size: 3rem;
+    }
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph {
+        font-size: 2.5rem;
+    }
+    .section-heading.centered {
+        padding: 25px;
+    }
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph,
+    .bulletin-download,
+    .welcome-pgraph,
+    .welcome-author,
+    .group-photo-caption,
+    .visit,
+    .history {
+        font-size: 2.5rem;
+    }
+    #welcome {
+        height: 160%;
+    }
+    .main-news-title {
+        font-size: 9rem;
+    }
+    .news-pgraph1 {
+        font-size: 3.5rem;
+    }
+    .address {
+        height: 33em;
+    }
+    .googlemap iframe {
+        height: 29.4em;
+    }
+    .call-to-action-section {
+        height: 55%;
+    }
+    .hollow-button,
+    .text-field,
+    .submit-button,
+    .nospam,
+    .form-field,
+    .button.full-width,
+    .direction-button,
+    address,
+    .contact-info p,
+    .office-hour p {
+        font-size: 2rem;
+    }
+    .location h2,
+    .contact-info h2,
+    .office-hour h2 {
+        font-size: 3rem;
+    }
+    .bible-verse {
+        font-size: 2.5rem;
+    }
+    .footer-text {
+        margin: -1% auto;
+    }
+}
+
+
+/* ----------- S Note 8.0 Landscape ----------- */
+
+@media screen and ( max-width: 970px) and (max-height: 490px) {
+    html {
+        font-size: 10px;
+    }
+    .mobile-nav {
+        height: 12%;
+    }
+    .COGS-title {
+        flex: 8;
+    }
+    .menu-links .closebtn {
+        height: 2.5em;
+        width: 2.5em;
+        background-size: 2.5em;
+        top: 2%;
+        right: 4%;
+    }
+    .web__share>.share-icon {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 21px;
+    }
+    .section {
+        padding: 6em 0;
+    }
+    #welcome {
+        height: 155%;
+        padding: 5em 0 0;
+    }
+    .welcome-button-container {
+        padding-top: 1em;
+    }
+    .main-news {
+        height: 350px;
+    }
+    .main-news-description {
+        top: -350px;
+        padding-top: 4%;
+    }
+    .main-news-title {
+        margin-bottom: 35px;
+    }
+    .news,
+    .resize-img1 {
+        width: 190px;
+    }
+    .news {
+        height: 140px;
+        margin-bottom: 20px;
+    }
+    .news-container {
+        height: 1160px;
+        min-height: 1200px;
+    }
+    .top-news {
+        height: 69%;
+    }
+    .newsdescription {
+        height: 120px;
+    }
+    .top-news-title {
+        font-size: 1.6rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.4rem;
+    }
+    .card__social {
+        width: 445%;
+    }
+    .share-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 14px;
+    }
+    .title, .date-published {
+        padding-left: 0;
+    }
+    .bulletin-download {
+        margin-left: 0;
+        font-size: 2.5rem;
+    }
+    .hollow-button, .visit, .history {
+        font-size: 1.8rem;
+    }
+    .group-photo-caption {
+        font-size: 2.2rem;
+    }
+    .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph, .welcome-pgraph, .welcome-author {
+        font-size: 2.5rem;
+    }
+    .text-field, .submit-button, .nospam, .form-field, .plan-submit.button.full-width, .direction-button, address, .contact-info p, .office-hour p {
+        font-size: 1.8rem;
+    }
+    .form-field, select, #attendance-date {
+        margin-bottom: 5px;
+    }
+    .selection {
+        padding-bottom: 0;
+    }
+    select, #attendance-date, .form-field, .plan-submit.button.full-width {
+        height: 40px;
+    }
+    .call-to-action-section {
+        height: 64%;
+    }
+}
+
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    html {
+        font-size: 14px;
+    }
+    /*Navigation Bar */
+    .menu-links .closebtn {
+        top: 35px;
+    }
+    .nav-link {
+        padding: 1.1em 0;
+    }
+    .share-container {
+        padding: 2% 1%;
+    }
+    .share-container p {
+        margin: 0.3em 0 0.6em;
+    }
+    .web__share>.share-icon {
+        width: 65px;
+        height: 65px;
+        line-height: 65px;
+        font-size: 25px;
+    }
+    .social-container {
+        bottom: unset;
+        margin-top: 50px;
+    }
+    .social-container p {
+        font-size: 2.6rem;
+        margin-bottom: 15px;
+    }
+    .social-icon-link img {
+        margin: 0 5px;
+        width: 3.5rem;
+    }
+    /*Home Page*/
+    .hero-heading {
+        font-size: 6.5rem;
+    }
+    .hero-subheading {
+        font-size: 2.75rem;
+    }
+    .bulletin-text,
+    .feedback-text,
+    .call-to-action-heading {
+        font-size: 2.5rem;
+        line-height: 1.2em;
+    }
+    .bulletin-row {
+        height: 14em;
+    }
+    .bulletin-image {
+        flex: 1.5;
+    }
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph {
+        font-size: 2rem;
+    }
+    .date-published {
+        font-size: 2.2rem;
+        margin: 0.5em 0;
+    }
+    .call-to-action-section {
+        height: 34%;
+    }
+    /*Welcome Message Session*/
+    .section-heading.centered {
+        font-size: 5.5rem;
+    }
+    .section-subheading.center {
+        font-size: 2.2rem;
+    }
+    .section-title-group {
+        margin-bottom: 2em;
+    }
+    .welcome-button-container {
+        display: flex;
+        position: absolute;
+    }
+    /*Plan a Visit*/
+    .attend-service {
+        display: none;
+    }
+    .service-time {
+        width: 99.6%;
+    }
+    .call-to-action-form {
+        padding: 10px 0;
+    }
+    .cogs-news-form {
+        flex-direction: column;
+        align-items: left;
+    }
+    .cogs-news-form>.text-field {
+        margin-bottom: 15px;
+    }
+    .align-right {
+        margin-top: 0;
+    }
+    .call-to-action-description,
+    .call-to-action-pgraph {
+        margin-bottom: 0;
+    }
+    #welcome {
+        height: 88%;
+    }
+    /*Announcement*/
+    #announcements {
+        padding: 6em 0 26em;
+    }
+    .news {
+        margin-bottom: 160px;
+    }
+    /*Contact Session*/
+    .address {
+        min-height: 27em;
+    }
+    .googlemap iframe {
+        min-height: 24em;
+    }
+    /*Bible Words*/
+    .verse-container {
+        top: 50%;
+    }
+    .adjust-padding-lr {
+        padding: 0 60px;
+    }
+}
+
+
+/* ----------- iPad Potrait----------- */
+
+@media screen and ( max-width: 768px) {
+    #announcements {
+        padding: 6em 0 4em;
+    }
+    .news-container {
+        height: 1700px;
+    }
+    .top-news {
+        height: unset;
+    }
+    .news {
+        margin-bottom: 140px;
+    }
+    .share-icon {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 15px;
+    }
+    .card__share {
+        margin-top: -38px;
+    }
+    .card__social {
+        width: 440%;
+    }
+    .newsdescription {
+        height: 120px;
+    }
+    #welcome {
+        height: 95%;
+    }
+    .plan-visit {
+        padding: 5% 0;
+    }
+    select,
+    #attendance-date,
+    .form-field {
+        margin-bottom: 0.5em;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 60px;
+    }
+    .call-to-action-section {
+        height: 37%;
+    }
+    .verse-container {
+        top: 55%;
+    }
+    .bible-verse {
+        font-size: 3rem;
+    }
+}
+
+
+/* ----------- iPad Mini4 Potrait----------- */
+
+@media screen and ( max-width: 768px) and (max-height: 930px) {
+    html {
+        font-size: 12px;
+    }
+    .nav-container {
+        padding-top: 30px;
+    }
+    .beta {
+        top: -17px;
+    }
+    .menu-links .closebtn {
+        top: 23px;
+        right: 22px;
+    }
+    .social-container {
+        margin-top: 25px;
+    }
+    .social-container p {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+    .social-icon-link img {
+        margin: 0 3px;
+        width: 3rem;
+    }
+    .plan-visit {
+        padding: 5% 0;
+    }
+    select,
+    #attendance-date,
+    .form-field {
+        margin-bottom: 0.5em;
+    }
+    #welcome {
+        padding: 6em 0 2em;
+    }
+    .submit-button,
+    .send-message-button.button,
+    .direction-button {
+        padding: 10px 15px;
+    }
+    /*Contact us*/
+    .location h2,
+    .contact-info h2,
+    .office-hour h2 {
+        font-size: 2.5rem;
+    }
+    address,
+    .contact-info p,
+    .office-hour p {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ----------- iPone 6 Plus Landscape ----------- */
+
+@media screen and ( max-width: 740px) and (max-height: 420px) {
+    html {
+        font-size: 10px
+    }
+    .menu-links .closebtn {
+        height: 3rem;
+        width: 3rem;
+        background-size: 3rem;
+        top: 3%;
+        right: 4%;
+    }
+    .brand-logo,
+    .brand-logo p {
+        font-size: 3rem;
+    }
+    .beta {
+        font-size: 1.3rem;
+        top: -10px;
+        right: 5px;
+        left: unset;
+    }
+    .web__share>.share-icon {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 19px;
+    }
+    .hollow-button {
+        font-size: 1.6rem;
+    }
+    .bulletin-row {
+        height: 12em;
+        width: 33em;
+    }
+    #welcome {
+        height: 270%;
+    }
+    select,
+    #attendance-date,
+    .form-field,
+    .plan-submit.button.full-width {
+        font-size: 1.6rem;
+        height: 40px;
+    }
+    .news-container {
+        height: 1530px;
+    }
+    .main-news-title {
+        font-size: 8rem;
+    }
+    .welcome-button-container {
+        position: relative;
+        margin-bottom: 40px;
+        max-width: 100%;
+    }
+    .call-to-action-section {
+        height: 70%;
+    }
+    .column-remove-padding {
+        padding: 0;
+    }
+    address,
+    .contact-info p,
+    .office-hour p {
+        font-size: 1.7rem;
+    }
+    .bible-verse {
+        font-size: 2.5rem;
+    }
+}
+
+
+/* ----------- iPone 6 Landscape ----------- */
+
+@media screen and ( max-width: 670px) and (max-height: 380px) {
+    #welcome {
+        height: 300%;
+    }
+    .bulletin-row {
+        height: 11em;
+        width: 29em;
+        padding: 0;
+    }
+    .bulletin-description {
+        padding-left: 10px;
+    }
+    .bulletin-download {
+        font-size: 2rem;
+    }
+    .main-news-title {
+        font-size: 7rem;
+    }
+    .news-container {
+        height: 1470px;
+    }
+    .news-pgraph1 {
+        font-size: 3rem;
+    }
+    .news {
+        margin-bottom: 130px;
+    }
+    .call-to-action-section {
+        height: 85%;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 40px;
+    }
+    .adjust-padding-lr {
+        padding: 0 40px;
+    }
+    .bible-verse {
+        font-size: 2rem;
+    }
+    .footer.center {
+        height: 9%;
+    }
+    .footer-text {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ----------- S Galaxy S5 ----------- */
+
+@media screen and ( max-width: 640px) and (max-height: 360px) {
+    .mobile-nav {
+        height: 15%;
+    }
+    #welcome {
+        height: 320%;
+    }
+    .news, .resize-img1 {
+        width: 180px;
+    }
+    .card__social {
+        width: 435%;
+    }
+    .card__social--active {
+        transform: translateX(-44px);
+    }
+    .address {
+        height: 37em;
+    }
+    .googlemap iframe {
+        height: 33.7em;
+    }
+}
+
+
+/* ----------- S Galaxy Note 3 Neo ----------- */
+
+@media screen and ( max-width: 640px) and (max-height: 280px) {
+    html {font-size: 9px;}
+    #welcome {
+        height: 405%;
+    }
+    .call-to-action-section {
+        height: 110%;
+    }
+    .address {
+        min-height: 30em;
+        height: 31em;
+    }
+    .googlemap iframe {
+        min-height: 27em;
+        height: 27.8em;
+    }
+    .footer.center {
+        padding: 1.6% 0;
+        height: 10%;
+    }
+}
+
+
+/* ----------- iPhone 7 Landscape ----------- */
+
+@media screen and ( max-width: 635px) and (max-height: 420px) {
+    .main-news-description {
+        top: -300px;
+    }
+    .main-news {
+        height: 300px;
+    }
+    .news, .resize-img1 {
+        width: 165px;
+    }
+    .main-news-title {
+        font-size: 4em;
+    }
+    .news-pgraph1 {
+        font-size: 1.7em;
+    }
+    .main-news-title {
+        margin-bottom: 25px;
+    }
+}
+
+
+/* ----------- S Note 8.0 Potrait ----------- */
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    html {
+        font-size: 12px;
+    }
+    .brand-logo,
+    .brand-logo p {
+        font-size: 3rem;
+        font-weight: 500;
+    }
+    .beta {
+        font-size: 1.5rem;
+        top: -12px;
+        left: -8px;
+    }
+    .multiple-lang {
+        margin-top: 10px;
+    }
+    .multiple-lang div a,
+    .share-container p,
+    .social-container p {
+        font-size: 2rem;
+    }
+    .navbar {
+        padding-top: 0;
+    }
+    .nav-link {
+        font-size: 2.5rem;
+        padding: 1.3em 0;
+    }
+    .share-website {
+        margin-top: 40px;
+    }
+    .share-button {
+        font-size: 1.5rem;
+    }
+    .share-container {
+        width: 100%;
+    }
+    .web__share>.share-icon {
+        width: 45px;
+        height: 45px;
+        line-height: 45px;
+        font-size: 21px;
+    }
+    .social-container {
+        display: flex;
+        justify-content: center;
+        margin: 30px auto;
+    }
+    .social-container p {
+        margin-right: 5px;
+        margin-bottom: 0;
+        padding-top: 4px;
+    }
+    .social-icons {
+        margin-left: 5px;
+    }
+    .social-icon-link img {
+        width: 2.5rem;
+        margin: 0;
+    }
+    .hero-heading {
+        font-size: 5.5rem;
+        letter-spacing: 0.01em;
+        margin-bottom: 0.35em;
+    }
+    .hero-subheading {
+        font-size: 2.7rem;
+        margin-bottom: 0.8em;
+    }
+    .bulletin-flex {
+        
+    }
+    .bulletin-container-1 {
+        padding: 0;
+        margin-bottom: 10px;
+    }
+    .bulletin-text,
+    .feedback-text,
+    .call-to-action-heading {
+        font-size: 2.5rem;
+    }
+    
+    .bulletin-row {
+        width: 33em;
+        height: 12em;
+    }
+    .title {
+        font-size: 2.5rem;
+    }
+    .date-published {
+        font-size: 2rem;
+    }
+    .bulletin-download {
+        font-size: 1.8rem;
+    }
+    #welcome {
+        height: 130%;
+        padding: 4em 0 0;
+    }
+    .welcome-column-1 {
+        height: 100%;
+        margin-bottom: 22%;
+    }
+    .welcome-column-2 {
+        padding-left: 0;
+    }
+    .welcome-pgraph,
+    .welcome-author {
+        font-size: 2rem;
+        text-align: left;
+        margin-bottom: 0;
+    }
+    .welcome-button-container {
+        width: 100%;
+        padding-top: 15px;
+    }
+    .group-photo-caption {
+        font-size: 2rem;
+    }
+    #announcements {
+        padding: 5em 0 4em;
+    }
+    .section-heading.centered {
+        padding-bottom: 25px;
+    }
+    .news-container {
+        height: 2480px;
+    }
+    .main-news {
+        height: 320px;
+    }
+    .main-news-description {
+        top: -320px;
+        padding-top: 5%;
+    }
+    .main-news-title {
+        font-size: 5rem;
+        margin-bottom: 25px;
+    }
+    .section-title-group, .main-news {
+        margin-bottom: 20px;
+    }
+    .news-pgraph1 {
+        font-size: 2.1rem;
+    }
+    .top-news {
+        height: 2100px;
+        padding: 0;
+    }
+    .newsdescription .top-news-title {
+        font-size: 2.1rem;
+    }
+    .news {
+        width: 100%;
+        height: 160px;
+        margin-bottom: 0;
+        border-radius: 5px;
+    }
+    .news-image {
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border-top-right-radius: 0;
+        background-position: 50% 50%;
+        background-size: cover;
+        width: 39.6%;
+    }
+    .newsdescription {
+        top: -160.6px;
+        left: 40%;
+        width: 60%;
+        height: 161px;
+        border-top-right-radius: 5px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
+    }
+    .top-news-title {
+        font-size: 2.5rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.7rem;
+    }
+    .card__share {
+        display: flex;
+        margin-top: 0;
+        margin-right: 0;
+        top: -225px;
+        right: 12px;
+    }
+    .card__social {
+        position: relative;
+        width: 240px;
+    }
+    .card__social--active {
+        -webkit-transform: translateX(-15px);
+        -ms-transform: translateX(-15px);
+        transform: translateX(-15px);
+    }
+    .news:hover .card__share {
+        display: flex;
+    }
+    .card__social>.share-icon {
+        margin-left: 5px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 23px;
+    }
+    .share-toggle {
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 23px;
+    }
+    .call-to-action-section {
+        height: 44%;
+    }
+    .call-to-action-heading,
+    .call-to-action-pgraph {
+        text-align: left;
+    }
+    .call-to-action-description {
+        padding: 0;
+    }
+    .call-to-action-form {
+        width: 100%;
+    }
+    .call-to-action-row {
+        display: flex;
+        flex-direction: column;
+    }
+    .cogs-news-form>.text-field {
+        width: 100%;
+    }
+    .submit-button,
+    .cogs-news-form>.text-field {
+        font-size: 1.5rem;
+        line-height: 1em;
+    }
+    .nospam,
+    .form-field {
+        font-size: 1.5rem;
+    }
+    .column-remove-padding {
+        padding: 0;
+    }
+    .send-message-button.full-width {
+        margin-top: 2%;
+        font-size: 1.5rem;
+    }
+    .address {
+        display: flex;
+        flex-direction: column;
+        height: 68em;
+    }
+    .location h2,
+    .contact-info h2,
+    .office-hour h2 {
+        font-size: 3rem;
+    }
+    address,
+    .contact-info p,
+    .office-hour p {
+        font-size: 1.8rem;
+    }
+    .location {
+        margin-bottom: 40px;
+    }
+    .googlemap {
+        padding-left: 0;
+    }
+    .direction-button {
+        font-size: 1.5rem;
+    }
+    .bible-verse {
+        font-size: 2.8rem;
+    }
+    .footer.center {
+        padding: 0.6em 0;
+    }
+    .footer-text {
+        font-size: 1.6rem;
+    }
+    .adjust-padding-lr {
+        padding: 0 40px;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 40px;
+    }
+}
+
+
+/* ----------- iPhone 5 5s Landscape ----------- */
+
+@media screen and ( max-width: 568px) {
+    html {font-size: 10px;}
+    .mobile-nav {
+        height: 15%;
+    }
+    .hero-heading,
+    .section-heading.centered, .hero-subheading {
+        padding-bottom: 10px;
+        margin-bottom: 0;
+    }
+    .menu-links .closebtn {
+        top: 10px;
+    }
+    .menu-links a {
+        padding: 0.8em 0;
+    }
+    .multiple-lang {
+        margin-top: 5px;
+    }
+    .share-container {
+        width: 90%;
+    }
+    .web__share>.share-icon {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 16px;
+    }
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph {
+        font-weight: 300;
+        padding-bottom: 10px;
+    }
+    .bulletin-row {
+        width: 28em;
+        height: 10em;
+    }
+    .bulletin-download {
+        font-size: 2rem;
+    }
+    .welcome-column-1 {
+        margin-bottom: 0;
+    }
+    .group-photo-container {
+        padding: 0;
+    }
+    .group-photo-caption {
+        padding-top: 10px;
+    }
+    #welcome {
+        height: 300%;
+        padding: 4em 0 0;
+    }
+    .welcome-container {
+        margin-bottom: 0;
+    }
+    .news-container {
+        height: 2200px;
+    }
+    .main-news {
+        height: 260px;
+    }
+    .main-news-description {
+        top: -260px;
+        padding-top: 0;
+    }
+    .newsdescription {
+        top: -140px;
+        height: 140px;
+    }
+    .news {
+        height: 140px;
+    }
+    .main-news a .news-image {
+        width: 100%;
+    }
+    .top-news {
+        height: 1900px;
+    }
+    .top-news-title {
+        line-height: 1em;
+    }
+    .card__share {
+        top: -190px;
+    }
+    .card__social {
+        width: 200px;
+    }
+    .share-toggle,
+    .card__share .card__social .share-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 17px;
+    }
+    #announcements {
+        padding: 4em 0 4em;
+    }
+    .call-to-action-section {
+        height: 88%;
+    }
+    .call-to-action-form {
+        padding: 0;
+        margin-top: 0;
+    }
+    .call-to-action-section .container {
+        height: 210px;
+    }
+    .cogs-news-form {
+        margin-top: 0;
+    }
+    .submit-button,
+    .cogs-news-form>.text-field {
+        line-height: 0;
+        height: 35px;
+    }
+    .nospam {
+        margin-top: 0;
+    }
+    .nospam,
+    .form-field {
+        font-size: 1.3rem;
+    }
+    .address {
+        height: 49em;
+    }
+    .googlemap iframe {
+        height: 15em;
+        min-height: 15em;
+    }
+    .bible-verse {
+        font-size: 1.7rem;
+    }
+    .footer-text {
+        font-size: 1.2rem;
+    }
+    .adjust-padding-td {
+        padding: 35px 0;
+    }
+}
+
+
+/* ----------- VIVO 5 Samsung J Landscape ----------- */
+
+@media screen and ( max-width: 560px) and (max-height: 360px) {
+    #welcome {
+        height: 255%;
+    }
+    .call-to-action-section {
+        height: 78%;
+    }
+}
+
+
+/* ----------- iPhone 6S Landscape ----------- */
+
+@media screen and ( max-width: 540px) {
+    .menu-links a {
+        padding: 0.9em 0;
+    }
+    #welcome {
+        height: 240%;
+    }
+    .call-to-action-section {
+        height: 75%;
+    }
+    .form-wrapper.squeezed {
+        margin-bottom: 30px;
+    }
+}
+
+
+/* ----------- HuaWei Mate 9 Landscape ----------- */
+
+@media screen and ( max-width: 530px) {
+    .menu-links a {
+        padding: 0.8em 0;
+    }
+    .bible-verse {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* ----------- iPhone 4 Landscape ----------- */
+
+@media screen and ( max-width: 480px) and (max-height: 215px) {
+    .hero-heading {
+        font-size: 4rem;
+    }
+    .hero-subheading {
+        font-size: 2rem;
+    }
+    .bulletin-row {
+        width: 25em;
+        height: 9em;
+    }
+    .bulletin-description {
+        padding-left: 0;
+    }
+    .hollow-button, .visit, .history {
+        font-size: 1.3rem;
+    }
+    #welcome {
+        height: 400%;
+    }
+    .section-heading.centered {
+        font-size: 4.5rem;
+    }
+    .COGS-title h1, .navburger h1, .bulletin-text, .feedback-text, .call-to-action-heading, .title, .date-published {
+        font-size: 2rem;
+    }
+}
+
+
+/* ----------- iPhone 6 PLUS Potrait----------- */
+
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    html {
+        font-size: 14px;
+    }
+    .mobile-container {
+        padding: 0 20px;
+    }
+    .COGS-title h1,
+    .navburger h1 {
+        font-size: 1.6rem;
+        font-weight: 500;
+    }
+    .hamburger {
+        background-size: 2.5rem;
+    }
+    .mobile-nav {
+        height: 10%;
+    }
+    .nav-container {
+        padding-top: 0;
+    }
+    .menu-links .closebtn {
+        top: 2.6%;
+        right: 6.6%;
+        width: 2.5rem;
+        height: 2.5rem;
+        background-size: 2.5rem;
+    }
+    .beta {
+        font-size: 1.2rem;
+    }
+    .cogs-logo {
+        position: unset;
+    }
+    .brand-logo,
+    .brand-logo p {
+        font-size: 3rem;
+    }
+    .multiple-lang {
+        margin-bottom: 0;
+    }
+    .multiple-lang div a,
+    .share-container p,
+    .social-container p {
+        font-size: 1.5rem;
+    }
+    .menu-links a {
+        font-size: 1.8rem;
+        padding: 1.3em 0;
+    }
+    .share-container {
+        padding: 3% 0;
+        flex-direction: column;
+        width: 100%;
+    }
+    .share-container p {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+    }
+    .share-button {
+        font-size: 1.2rem;
+    }
+    .web__share>.share-icon {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 18px;
+    }
+    .social-container {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+    .social-icon-link img {
+        width: 2rem;
+    }
+    .hero-heading {
+        font-size: 3.5rem;
+    }
+    .hero-heading, .section-heading.centered, .hero-subheading {
+        padding-bottom: 15px;
+    }
+    .section-heading.centered {
+        font-size: 3rem;
+        padding-top: 0;
+    }
+    .hero-subheading {
+        font-size: 2rem;
+        margin: 0 auto;
+        width: 70%;
+    }
+    .hero-button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .hollow-button.white {
+        margin-bottom: 10px;
+    }
+    .hollow-button {
+        width: 65%;
+        margin: 0 auto;
+    }
+    .hollow-button, .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph, .bulletin-download, .welcome-pgraph, .welcome-author, .group-photo-caption, .visit, .history {
+        font-size: 1.4rem;
+    }
+    .section-subheading.center {
+        font-size: 1.5rem;
+    }
+    #welcome {
+        height: 120%;
+        padding: 5em 0 0;
+    }
+    .welcome-column-1 {
+        padding-right: 0;
+        margin-bottom: 110px;
+    }
+    .welcome-pgraph,
+    .welcome-author,
+    .group-photo-caption {
+        font-size: 1.4rem;
+    }
+    .feedback-pgraph {
+        padding-bottom: 0;
+        margin-bottom: 0;
+    }
+    .welcome-column-2 {
+        height: 90%;
+    }
+    .bulletin-description {
+        padding-left: 0;
+    }
+    .bulletin-row {
+        width: 21em;
+        height: 8em;
+        padding: 0;
+    }
+    .bulletin-text,
+    .feedback-text,
+    .call-to-action-heading {
+        font-size: 1.7rem;
+    }
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph {
+        font-size: 1.4rem;
+    }
+    .bulletin-row {
+        width: 22em;
+        height: 8em;
+    }
+    .title,
+    .date-published {
+        font-size: 1.5rem;
+    }
+    .date-published {
+        margin: 0.4em 0;
+    }
+    .bulletin-download {
+        font-size: 1.25rem;
+    }
+    .plan-visit {
+        padding-top: 25%;
+    }
+    .close-button {
+        font-size: 1.2rem;
+        padding: 7px 10px;
+    }
+    .container .title {
+        margin-bottom: 15px;
+    }
+    .title h1 {
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    .title h3 {
+        font-size: 1.5rem;
+        margin: 0 auto;
+    }
+    .plan-visit .form-container .form-row .form-field {
+        height: 40px
+    }
+    .plan-visit .form-field.text-area {
+        min-height: 130px;
+    }
+    select,
+    #attendance-date,
+    .attend-service,
+    .service-time {
+        padding: 0 10px;
+        height: 40px;
+        margin-bottom: 5px;
+    }
+    .plan-visit .form-container .form-row .form-field, select, #attendance-date {
+        font-size: 1.2rem;
+        margin-bottom: 5px;
+    }
+    .plan-visit form .button.full-width {
+        font-size: 1.2rem;
+        height: 40px;
+        margin-top: 1px;
+        padding: 5px;
+    }
+    .form-container {
+        flex-direction: column;
+    }
+    .reduce-width {
+        width: 100%;
+    }
+    .selection {
+        height: 135px;
+    }
+    .main-news {
+        margin-bottom: 15px;
+        height: 300px;
+    }
+    .main-news-description {
+        top: -300px;
+    }
+    .main-news-title {
+        font-size: 4rem;
+        line-height: 1em;
+        padding-top: 20%;
+        margin-bottom: 15px;
+    }
+    .news-pgraph1 {
+        font-size: 1.6rem;
+        padding: 0 40px;
+        line-height: 1.3em;
+    }
+    .newsdescription {
+        padding: 15px;
+    }
+    .newsdescription .top-news-title,
+    .news-pgraph2 {
+        font-size: 1.3rem;
+        line-height: 1.2em;
+        margin-bottom: 2px;
+    }
+    .news-pgraph2 {
+        font-size: 1.2rem;
+        font-weight: 300;
+        padding-right: 30px;
+    }
+    .news-container {
+        height: 1800px;
+        padding: 0;
+    }
+    .top-news {
+        height: 1500px;
+    }
+    .news {
+        height: 110px;
+    }
+    .news-image {
+        width: 33.6%;
+    }
+    .newsdescription {
+        top: -110px;
+        height: 110px;
+        left: 34%;
+        width: 66%;
+    }
+    .card__share {
+        top: -160px;
+    }
+    .card__social--active {
+        transform: translateX(-10px);
+    }
+    .card__social {
+        width: 177px;
+    }
+    .card__social>.share-icon {
+        margin-left: 0;
+    }
+    .form-wrapper.squeezed {
+        margin-bottom: 40px;
+    }
+    .call-to-action-section {
+        height: 42%;
+    }
+    .section {
+        padding: 4em 0;
+    }
+    .address {
+        height: 60em;
+    }
+    .location h2,
+    .contact-info h2,
+    .office-hour h2 {
+        font-size: 2rem;
+        font-weight: 500;
+        margin: 5px auto;
+    }
+    address,
+    .contact-info p,
+    .office-hour p {
+        font-size: 1.3rem;
+        font-weight: 300;
+        margin-bottom: 20px;
+    }
+    .form-field {
+        padding: 5px 10px;
+    }
+    .form-field,
+    .send-message-button.full-width,
+    .direction-button {
+        font-size: 1.2rem;
+    }
+    .googlemap iframe {
+        height: 24em;
+    }
+    .bible-verse {
+        font-size: 2rem;
+    }
+    .footer-text {
+        font-size: 1.2rem;
+    }
+    .footer.center {
+        padding: 12px 0;
+        height: 6%;
+    }
+    .submit-button,
+    .cogs-news-form>.text-field {
+        font-size: 1.1rem;
+    }
+    .nospam {
+        font-size: 1.2rem;
+        font-weight: 300;
+    }
+    .adjust-padding-lr {
+        padding: 0 30px;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 30px;
+    }
+}
+
+
+/* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
+
+@media screen and ( max-width: 420px) and ( max-height: 630px) {
+    .brand-logo, .brand-logo p {
+        font-size: 2.5rem;
+    }
+    .beta {
+        font-size: 1.1rem;
+    }
+    .cogs-logo {
+        margin-bottom: 20px;
+    }
+    .multiple-lang {
+        margin-top: 0;
+    }
+    .multiple-lang div a, .share-container p, .social-container p {
+        font-size: 1.3rem;
+    }
+    .menu-links .closebtn {
+        top: 2.2%;
+        right: 6.5%;
+    }
+    .menu-links a {
+        font-size: 1.6rem;
+        padding: 1.1em 0;
+    }
+    .share-website {
+        margin-top: 30px;
+    }
+    .share-button {
+        font-size: 1.1rem;
+    }
+    .social-icon-link img {
+        font-size: 1.7rem;
+    }
+    #welcome {
+        height: 140%;
+    }
+    .cogs-news-form {
+        margin-bottom: 10px;
+    }
+    .call-to-action-section {
+        height: 51%;
+    }
+    .newsdescription .top-news-title {
+        font-size: 1.2rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.1rem;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 17px;
+    }
+    .card__share {
+        top: -155px;
+    }
+    .card__social {
+        width: 160px;
+    }
+    .social-container p {
+        padding-top: 6px;
+    }
+    .plan-visit {
+        padding-top: 15%;
+        padding-bottom: 0;
+    }
+    .container .title {
+        padding: 0;
+    }
+    .address {
+        height: 59em;
+    }
+    .location {
+        padding: 1.5em;
+    }
+    
+    .bible-verse {
+        font-size: 1.6rem;
+    }
+    .footer.center {
+        padding: 10px 0;
+    }
+    .footer-text {
+        font-size: 1rem;
+    }
+}
+
+
+/* ----------- iPhone 6  Potrait----------- */
+
+@media screen and ( max-width: 380px) {
+    html {
+        font-size: 12px;
+    }
+    .cogs-logo {
+        margin-bottom: 20px;
+    }
+    .bulletin-row {
+        width: 20em;
+    }
+    .hero-subheading {
+        width: 65%;
+    }
+    #welcome {
+        height: 115%;
+    }
+    .welcome-column-1 {
+        margin-bottom: 90px;
+    }
+    .container .title {
+        padding: 0;
+    }
+    .main-news-title {
+        font-size: 5rem;
+        margin-bottom: 10px;
+        padding-top: 22%;
+    }
+    .news-container {
+        height: 1620px;
+    }
+    .main-news {
+        margin-bottom: 10px;
+    }
+    .news, .newsdescription {
+        height: 100px;
+    }
+    .newsdescription {
+        top: -100px;
+    }
+    .top-news {
+        height: 1320px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 17px;
+    }
+    .card__social {
+        width: 155px;
+    }
+    .card__share {
+        top: -145px;
+    }
+    .cogs-news-form {
+        margin-bottom: 5px;
+    }
+    .address {
+        height: 55em;
+    }
+    .location {
+        padding: 15px;
+    }
+    address {
+        margin-bottom: 15px;
+    }
+    .cogs-news-form>.text-field {
+        margin-bottom: 10px;
+    }
+}
+
+
+/* ----------- iPhone 6  Potrait----------- */
+
+@media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .cogs-logo {
+        margin-bottom: 15px;
+    }
+    .plan-visit {
+        padding-top: 12%;
+        margin-bottom: 0;
+    }
+    .close-button {
+        top: 3%;
+    }
+    .plan-visit .form-container .form-row .form-field, select, #attendance-date {
+        height: 35px;
+    }
+    .selection {
+        height: unset;
+        padding-bottom: 0;
+    }
+    .plan-visit form .button.full-width {
+        margin-bottom: 0;
+    }
+    #welcome {
+        height: 135%;
+    }
+    .footer.center {
+        padding: 7px 0;
+    }
+}
+
+
+/* ----------- iPhone 6 Potrait ----------- */
+
+@media screen and ( max-width: 380px) and ( max-height: 540px) {
+    html {
+        font-size: 11px
+    }
+    .beta {
+        top: -8px;
+        left: -6px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 2.8rem;
+    }
+    .multiple-lang div a {
+        font-size: 1.5rem;
+    }
+    .share-container p, .social-container p {
+        font-size: 1.4rem;
+    }
+    .share-container p {
+        margin-bottom: 10px;
+    }
+    .share-button {
+        font-size: 1.2rem;
+    }
+    .social-container {
+        margin-top: 11px;
+    }
+    .social-container p {
+        font-size: 1.5rem;
+        margin-bottom: -2px;
+    }
+    .social-icon-link img {
+        font-size: 2rem;
+    }
+    .multiple-lang {
+        margin-bottom: 20px;
+    }
+    .menu-links a {
+        font-size: 1.8rem;
+        padding: 1em 0;
+    }
+    .hero-subheading {
+        font-size: 2.2rem;
+    }
+    .section-heading.centered {
+        padding-bottom: 5px;
+    }
+    .title, .date-published {
+        font-size: 1.8rem;
+    }
+    .bulletin-download {
+        font-size: 1.5rem;
+    }
+    .welcome-column-1 {
+        height: 75%;
+    }
+    .newsdescription {
+        padding: 10px;
+    }
+    .plan-visit {
+        padding-top: 10%;
+    }
+    .plan-visit .form-container .form-row .form-field,
+    .plan-visit .form-field.text-area,
+    select,
+    #attendance-date,
+    .attend-service,
+    .service-time,
+    .plan-visit form .button.full-width {
+        font-size: 1.3rem;
+    }
+    .address {
+        height: 57em;
+    }
+    .plan-visit .form-container .form-row .form-field,
+    select,
+    #attendance-date,
+    .attend-service,
+    .service-time,
+    .plan-visit form .button.full-width{
+        height: 35px;
+    }
+    .selection {
+        height: 120px;
+    }
+    .call-to-action-section {
+        height: 48%;
+    }
+    .direction-button, .send-message-button.full-width {
+        height: 35px;
+        padding: 7px;
+    }
+    .address {
+        height: 54em;
+    }
+}
+
+
+/* ----------- Galaxy Note 3 Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 640px) {
+    .brand-logo, .brand-logo p {
+        font-size: 2.8rem;
+    }
+    .beta {
+        top: -10px;
+    }
+    .menu-links a {
+        font-size: 1.8rem;
+        padding: 1.2em 0;
+    }
+    .social-container {
+        margin-top: 30px;
+    }
+    .hero-subheading {
+        font-size: 2.2rem;
+        width: 75%;
+    }
+    .plan-visit {
+        padding-top: 15%;
+    }
+    .bulletin-row {
+        width: 18em;
+        height: 7em;
+    }
+    .bulletin-description {
+        padding-left: 7px;
+    }
+    .section {
+        padding: 4em 0 3em;
+    }
+    #welcome {
+        height: 120%;
+        padding: 4em 0;
+    }
+    .welcome-column-2 {
+        height: 80%;
+    }
+    .card__share {
+        top: -140px;
+        right: 5px;
+    }
+    .card__social {
+        width: 160px;
+    }
+    .top-news {
+        height: 1330px;
+    }
+    .news {
+        height: 100px;
+    }
+    .newsdescription {
+        top: -100px;
+        height: 100px;
+        padding: 10px;
+    }
+    .submit-button, .cogs-news-form>.text-field, .direction-button, .send-message-button.full-width {
+        height: 35px;
+        padding: 8px 15px;
+        font-size: 1.2rem;
+        border: 0;
+    }
+    .verse-container {
+        width: 75%;
+    }
+    .footer.center {
+        padding: 10px 0;
+    }
+    .adjust-padding-lr {
+        padding: 0 30px;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 20px;
+    }
+}
+
+
+/* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 560px) {
+    .menu-links a {
+        font-size: 1.7rem;
+        padding: 1em 0;
+    }
+    #welcome {
+        height: 135%;
+    }
+    .plan-visit {
+        padding-top: 13%;
+    }
+    select, #attendance-date, .attend-service, .service-time, .plan-visit form .button.full-width {
+        height: 35px;
+    }
+    .share-container {
+        padding: 3% 2%;
+    }
+    .share-button {
+        font-size: 1.2rem;
+    }
+    .social-container {
+        margin-top: 20px;
+    }
+    .bible-verse {
+        font-size: 1.8rem;
+    }
+    .footer.center {
+        padding: 7px 0;
+    }
+}
+
+
+/* ----------- HuaWei Mate9 Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 530px) {
+    .hero-subheading {
+        width: 70%;
+    }
+    .social-container {
+        margin-top: 12px;
+    }
+    .bulletin-row {
+        width: 19em;
+    }
+    .bulletin-description {
+        padding-left: 1px;
+    }
+    .plan-visit .form-container .form-row .form-field,
+    select,
+    #attendance-date,
+    .attend-service,
+    .service-time {
+        height: 30px;
+    }
+    .menu-links a {
+        font-size: 1.7rem;
+    }
+    .multiple-lang {
+        margin-bottom: 15px;
+    }
+    .share-website {
+        margin-top: 25px;
+    }
+    .share-button {
+        font-size: 1.3rem;
+    }
+    .call-to-action-section {
+        height: 52%;
+    }
+}
+
+
+/* ----------- YES M631Y Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 512px) {
+    .beta {
+        top: -8px;
+    }
+    .share-container {
+        padding: 2%;
+    }
+    .selection {
+        height: 110px;
+    }
+    .plan-visit {
+        padding-top: 10%;
+    }
+    .address {
+        height: 53em;
+    }
+    .location h2, .contact-info h2, .office-hour h2 {
+        margin: 0 auto;
+        font-size: 1.8rem;
+    }
+    .footer.center {
+        padding: 5px 0;
+    }
+}
+
+
+/* ----------- iPhone 5 and 5S Potrait ----------- */
+
+@media screen and ( max-width: 320px) and ( max-height: 568px) {
+    .hamburger {
+        margin-left: 7px;
+    }
+    .mobile-container {
+        padding-left: 20px;
+        padding-right: 15px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 2.6rem;
+    }
+    .menu-links a {
+        font-size: 1.7rem;
+        padding: 1em 0;
+    }
+    .share-button {
+        font-size: 1.2rem;
+    }
+    .social-container {
+        margin-top: 25px;
+    }
+    .web__share>.share-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 16px;
+    }
+    .hero-heading {
+        font-size: 3.3rem;
+    }
+    .hero-subheading {
+        width: 84%;
+    }
+    .hero-heading, .section-heading.centered, .hero-subheading {
+        padding-bottom: 15px;
+    }
+    .bulletin-text, .feedback-text, .call-to-action-heading {
+        font-size: 1.5rem;
+    }
+    .bulletin-row {
+        width: 17.5em;
+    }
+    .title, .date-published {
+        font-size: 1.4rem;
+    }
+    .bulletin-download {
+        font-size: 1.2rem;
+    }
+    .hero-heading, .section-heading.centered, .hero-subheading {
+        padding: 0 0 8px;
+    }
+    #welcome {
+        height: 135%;
+    }
+    .section-subheading.center {
+        line-height: 1.3em;
+    }
+    .main-news-description {
+        top: -260px;
+    }
+    .main-news {
+        height: 260px;
+    }
+    .main-news-title {
+        padding-top: 17%;
+    }
+    .news-pgraph1 {
+        padding: 0 25px;
+    }
+    .news-container {
+        height: 1600px;
+    }
+    
+    .call-to-action-section {
+        height: 46%;
+    }
+    
+    .news-image {
+        width: 37.6%;
+    }
+    .newsdescription {
+        left: 38%;
+        width: 62%;
+    }
+    .footer.center {
+        padding: 7px 0;
+    }
+    
+    .adjust-padding-td {
+        padding: 25px 0;
+    }
+    .adjust-padding-lr {
+        padding: 0 20px;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 12px;
+    }
+}
+
+/* ----------- iPhone 4 and 4S Potrait----------- */
+
+@media screen and ( max-width: 320px) and ( max-height: 480px) {
+    .brand-logo, .brand-logo p {
+        font-size: 2.4rem;
+    }
+    .menu-links a {
+        font-size: 1.6rem;
+        padding: 0.9em 0;
+    }
+    .multiple-lang {
+        margin-bottom: 0;
+    }
+    .multiple-lang div a {
+        font-size: 1.3rem;
+    }
+    .chinese {
+        margin: 0 10px;
+    }
+    .share-button {
+        font-size: 1.2rem;
+    }
+    .social-container {
+        margin-top: 15px;
+    }
+    .web__share>.share-icon {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 15px;
+    }
+    .hero-subheading {
+        width: 75%;
+    }
+    .hero-heading, .section-heading.centered, .hero-subheading {
+        padding-bottom: 10px;
+    }
+    .title, .date-published {
+        font-size: 1.6rem;
+    }
+    .bulletin-download {
+        font-size: 1.3rem;
+    }
+    .bulletin-description {
+        padding-left: 7px;
+    }
+    .welcome-pgraph, .welcome-author, .group-photo-caption {
+        font-size: 1.5rem;
+    }
+    #welcome {
+        height: 150%;
+    }
+    .plan-visit {
+        padding-top: 13%;
+    }
+    .plan-visit .form-field.text-area {
+        min-height: 100px;
+    }
+    .main-news-title {
+        padding-top: 20%;
+    }
+    .news-pgraph1 {
+        padding: 0 30px;
+    }
+    .call-to-action-section {
+        height: 53%;
+    }
+}
+
+/* iPhone 5S Potrait */
+
+@media screen and ( max-width: 320px) and ( max-height: 460px) {
+    .cogs-logo {
+        margin-bottom: 10px;
+    }
+    .share-website {
+        margin-top: 15px;
+    }
+    .social-container {
+        margin-top: 12px;
+    }
+    .plan-visit {
+        padding-top: 10%;
+    }
+    .title h1 {
+        font-size: 2.6rem;
+    }
+    .plan-visit form .button.full-width {
+        height: 30px;
+    }
+    #welcome {
+        height: 155%;
+    }
+}
+
+/*@media screen and (min-height: 736px) and (max-height: 737px) {
+    .nav-link {
+        font-size: 28px;
+        padding: 20px 0;
+    }
+    .navbar {
+        padding-top: 20px;
+    }
+    .share-website {
+        margin-top: 40px;
+    }
+    .share-container {
+        padding: 20px 10px;
+    }
+    .share-container p {
+        margin-bottom: 25px;
+    }
+    .social-container p {
+        font-size: 25px;
+        line-height: 25px;
+    }
+    .share-container p {
+        font-size: 19px;
+        line-height: 19px;
+    }
+    .share-button {
+        font-size: 18px;
+    }
+    .social-container {
+        margin-top: 40px;
+    }
+    .social-icon-link img {
+        width: 32px;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    .beta {
+        left: 20%;
+    }
+    .multiple-lang {
+        margin-bottom: 15px;
+    }
+    .multiple-lang div a {
+        font-size: 22px;
+    }
+    .nav-link {
+        font-size: 26px;
+        padding-bottom: 20px;
+    }
+    .share-website {
+        margin-top: 30px;
+    }
+    .share-button {
+        font-size: 16px;
+    }
+    .social-container p {
+        font-size: 22px;
+    }
+   
+    
+    .hero-title-wrapper {
+        top: 44%;
+    }
+    .hero-heading {
+        font-size: 60px;
+        line-height: 60px;
+    }
+    .hero-subheading {
+        width: 64%;
+    }
+    .hollow-button.white, .hollow-button.red {
+        font-size: 18px;
+        width: 62%;
+    }
+  
+    .bulletin-text, .feedback-text, .call-to-action-heading {
+        font-size: 22px;
+    }
+    .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph {
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .row {
+        height: 110px;
+    }
+    .bulletin-row {
+        height: 250px;
+    }
+    .title, .date-published {
+        font-size: 22px;
+        margin-top: 0;
+        padding-left: 15px;
+    }
+    .bulletin-download {
+        font-size: 16px;
+        margin-left: 15px;
+    }
+   
+    .welcome-pgraph, .welcome-author {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .visit, .history {
+        width: 96%;
+        margin-bottom: 15px;
+    }
+    .group-photo-container {
+        margin-top: 15px;
+    }
+    .group-photo-caption {
+        font-size: 18px;
+    }
+   
+    .news-pgraph1 {
+        font-size: 30px;
+        line-height: 34px;
+        width: 90%;
+        margin: auto;
+    }
+    .newsdescription {
+        padding-left: 45%;
+    }
+    .card__social {
+        width: 154px;
+    }
+    .share-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+    }
+    
+    .call-to-action-section {
+        height: 300px;
+    }
+    .column-5 {
+        height: 100px;
+        margin-bottom: 0;
+        padding-top: 10px;
+    }
+    .call-to-action-pgraph {
+        margin-bottom: 0;
+    }
+    .align-right {
+        margin-top: 0;
+    }
+   
+    .form-wrapper.squeezed {
+        margin-bottom: 50px;
+    }
+    .googlemap {
+        margin-top: 50px;
+    }
+    .bible-verse {
+        line-height: 35px;
+    }
+    
+    .mission-statement-section {
+        height: 580px;
+    }
+    .verse-container {
+        padding-top: 75%;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .hero-title-wrapper {
+        top: 42%;
+    }
+    .hero-heading {
+        font-size: 65px;
+        line-height: 60px;
+    }
+    .hero-subheading {
+        width: 56%;
+        font-size: 24px;
+        line-height: 24px;
+    }
+    .beta {
+        top: 23px;
+        left: 23%;
+        font-size: 14px;
+        line-height: 11px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 1.8rem;
+        line-height: 1em;
+    }
+    .multiple-lang {
+        margin-bottom: 0;
+    }
+    .multiple-lang div a {
+        font-size: 20px;
+        line-height: 16px;
+    }
+    .nav-link {
+        font-size: 24px;
+        line-height: 24px;
+        padding-top: 15px;
+        padding-bottom: 25px;
+    }
+    .share-container p {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .share-button {
+        font-size: 14px;
+    }
+    .social-container {
+        margin-top: 30px;
+    }
+    .social-container p {
+        font-size: 20px;
+    }
+    .social-icon-link img {
+        width: 25px;
+    }
+    .hollow-button.white, .hollow-button.red {
+        font-size: 18px;
+        width: 70%;
+    }
+  
+    .plan-visit {
+        padding-top: 5%;
+    }
+    .title h1 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .close-button {
+        top: 2%;
+        font-size: 14px;
+        padding: 4px 8px;
+    }
+    .form-field {
+        min-height: 35px;
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    .form-field.text-area {
+        margin-bottom: 5px;
+    }
+    .selection {
+        padding: 5px 0;
+    }
+    select {
+        height: 33px;
+        font-size: 15px;
+        margin-bottom: 8px;
+    }
+    #attendance-date {
+        height: 33px;
+        font-size: 15px;
+        padding-top: 8px;
+        padding-bottom: 5px;
+        margin-bottom: 8px;
+    }
+    .button.plan-submit {
+        margin-top: 26%;
+    }
+    
+    .section-heading.centered {
+        font-size: 48px;
+        line-height: 48px;
+    }
+    .section-subheading.center {
+        font-size: 19px;
+        line-height: 19px;
+    }
+    .welcome-container {
+        margin-bottom: 0;
+    }
+    .news-image {
+        width: 130px;
+    }
+    .newsdescription {
+        padding-left: 42%;
+    }
+    
+    .location h2, .contact-info h2, .office-hour h2 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .address {
+        height: 990px;
+    }
+    address, .contact-info p, .office-hour p {
+        font-size: 18px;
+        line-height: 24px;
+    }
+    .googlemap iframe {
+        height: 380px;
+    }
+}
+
+@media screen and (min-height: 559px) and (max-height: 560px){
+    .hero-heading {
+        font-size: 55px;
+        line-height: 55px;
+        margin-bottom: 15px;
+    }
+    .hero-subheading {
+        margin-bottom: 20px;
+    }
+    .hollow-button.white, .hollow-button.red {
+        font-size: 17px;
+        width: 57%;
+    }
+    .nav-link {
+        font-size: 23px;
+        line-height: 23px;
+        padding: 15px 0;
+    }
+    .share-container {
+        padding: 15px 0;
+    }
+    .share-website {
+        margin-top: 20px;
+    }
+    .share-container p {
+        margin-bottom: 10px;
+    }
+    .share-button {
+        font-size: 13px;
+    }
+    .social-container {
+        margin-top: 20px;
+    }
+    .plan-visit {
+        padding-top: 0;
+    }
+}
+
+@media screen and (min-height: 523px) and (max-height: 524px) {
+    .mobile-container {
+        padding: 0 20px;
+    }
+    .hero-heading {
+        font-size: 50px;
+        line-height: 50px;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+    .hero-subheading {
+        width: 55%;
+        font-size: 23px;
+        line-height: 23px;
+    }
+    .hollow-button.white, .hollow-button.red {
+        font-size: 16px;
+        line-height: 16px;
+        width: 56%;
+    }
+    .nav-container {
+        padding-top: 14px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .beta {
+        top: 17px;
+        left: 26%;
+        font-size: 14px;
+        line-height: 11px;
+        padding: 8px;
+    }
+    .menu-links .closebtn {
+        top: 13px;
+        background-size: 28px;
+        width: 28px;
+        height: 28px;
+    }
+    .multiple-lang {
+        margin-top: 0;
+    }
+    .multiple-lang div a {
+        font-size: 18px;
+    }
+    .nav-link {
+        font-size: 22px;
+        line-height: 22px;
+        padding: 15px 0 18px;
+    }
+    .share-website {
+        margin-top: 20px;
+    }
+    .share-container {
+        padding: 10px 0;
+    }
+    .share-container p {
+        margin-bottom: 10px;
+    }
+    .share-button {
+        padding: 8px;
+    }
+    .social-container {
+        margin-top: 20px;
+    }
+    .social-container p {
+        font-size: 18px;
+        margin-bottom: 0;
+    }
+    .social-icon-link img {
+        width: 22px;
+    }
+    .plan-visit {
+        padding-top: 0;
+    }
+    .container .title {
+        padding-top: 20px;
+        margin-bottom: 10px;
+    }
+    .title h1 {
+        font-size: 1.8rem;
+        line-height: 1em;
+        margin-bottom: 5px;
+    }
+    .title h3 {
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .button.plan-submit {
+        font-size: 16px;
+        line-height: 16px;
+        margin-top: 24%;
+    }
+}
+
+/*
+@media screen and (min-height: 510px) and (max-height: 512px) {
+    .hero-title-wrapper {
+        top: 40%;
+    }
+    .hero-heading {
+        font-size: 50px;
+        line-height: 50px;
+        padding: 0 10px;
+        margin-bottom: 15px;
+    }
+    .hero-subheading {
+        margin-bottom: 20px;
+    }
+    .hollow-button.white, .hollow-button.red {
+        font-size: 16px;
+        line-height: 16px;
+        width: 55%;
+    }
+    .nav-container {
+        padding-top: 14px;
+    }
+    .beta {
+        top: 15px;
+        left: 25%;
+        line-height: 9px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .multiple-lang {
+        margin-top: 0;
+    }
+    .multiple-lang div a {
+        font-size: 18px;
+    }
+    .nav-link {
+        font-size: 21px;
+        line-height: 21px;
+        padding-bottom: 15px;
+    }
+    .share-website {
+        margin-top: 20px;
+    }
+    .share-container {
+        padding: 10px 0;
+    }
+    .share-container p {
+        margin-bottom: 5px;
+    }
+    .share-button {
+        font-size: 13px;
+    }
+    .social-container {
+        margin-top: 20px;
+    }
+    .social-container p {
+        font-size: 18px;
+    }
+    .social-icon-link img {
+        width: 22px;
+    }
+    .plan-visit {
+        padding-top: 0;
+    }
+    .container .title {
+        padding-top: 25px;
+        margin-bottom: 5px;
+    }
+    .title h1 {
+        font-size: 1.8rem;
+        line-height: 1em;
+        margin-bottom: 0;
+    }
+    .title h3 {
+        font-size: 18px;
+        line-height: 18px;
+        margin: 5px auto 10px;
+    }
+    .form-field {
+        margin-bottom: 5px;
+    }
+    select, #attendance-date {
+        margin-bottom: 5px;
+    }
+    .button.plan-submit {
+        margin-top: 23%;
+        font-size: 16px;
+        line-height: 16px;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .mobile-container {
+        padding: 0 20px;
+    }
+    .COGS-title h1, .navburger h1 {
+        font-size: 20px;
+        line-height: 20px;
+    }
+    .navburger {
+        top: 13px;
+        text-align: center;
+    }
+    .hamburger, .menu-links .closebtn {
+        background-size: 28px;
+        width: 28px;
+        height: 28px;
+    }
+    .menu-links .closebtn {
+        top: 14px;
+        right: 20px;
+    }
+    .hero-heading {
+        font-size: 55px;
+        line-height: 55px;
+        margin-bottom: 15px;
+    }
+    .section-heading.centered {
+        font-size: 40px;
+        line-height: 40px;
+    }
+    .hero-subheading {
+        font-size: 24px;
+        line-height: 28px;
+        width: 64%;
+        margin-bottom: 20px;
+    }
+    .hollow-button.white, .hollow-button.red {
+        font-size: 17px;
+        width: 63%;
+        padding: 10px 18px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 1.8rem;
+        line-height: 1em;
+    }
+    .beta {
+        top: 21px;
+        left: 19%;
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .multiple-lang div a {
+        font-size: 21px;
+    }
+    .navbar {
+        padding-top: 10px;
+    }
+    .menu-links a {
+        padding-top: 15px;
+        padding-bottom: 10px;
+    }
+    .share-container p {
+        font-size: 18px;
+        line-height: 18px;
+        width: 90%;
+    }
+    .social-container {
+        margin-top: 15px;
+    }
+    .social-container p {
+        font-size: 19px;
+        line-height: 19px;
+    }
+    .share-container a {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+    .share-button {
+        font-size: 14px;
+    }
+    .social-icon-link img {
+        width: 23px;
+    }
+    
+    .bulletin-row {
+        height: 260px;
+    }
+    .bulletin-text, .feedback-text, .call-to-action-heading {
+        font-size: 18px;
+    }
+    .row {
+        height: 96px;
+    }
+    .title, .date-published {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .bulletin-download {
+        margin-top: 5px;
+    }
+    
+    .welcome-button-container {
+        margin-top: 20px;
+    }
+    .welcome-column-1 {
+        height: 100%;
+    }
+    .section-subheading.center {
+        padding: 0 5px;
+    }
+    .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph  {
+        line-height: 20px;
+    }
+    .plan-visit {
+        padding-top: 0;
+    }
+    .close-button {
+        top: 2%;
+        font-size: 12px;
+    }
+    .title h1 {
+        font-size: 1.8rem;
+        line-height: 1em;
+    }
+    .title h3 {
+        font-size: 18px;
+    }
+    .container .title {
+        margin-bottom: 15px;
+    }
+    .form-field {
+        margin-bottom: 10px;
+    }
+    .form-field.text-area {
+        min-height: 120px;
+        margin-bottom: 10px;
+    }
+    .button.plan-submit {
+        margin-top: 30%;
+        font-size: 17px;
+    }
+    
+    .main-news-title {
+        font-size: 65px;
+        line-height: 65px;
+    }
+    .news, .news-image, .newsdescription {
+        height: 120px;
+    }
+    .newsdescription {
+        top: -120px;
+        padding-top: 5%;
+        padding-left: 40%;
+        padding-right: 10px;
+    }
+    .news-image {
+        width: 110px;
+    }
+    .top-news-title {
+        font-size: 17px;
+        line-height: 20px;
+    }
+    .news-pgraph2 {
+        font-size: 14px;
+        line-height: 16px;
+    }
+    .card__share {
+        margin-top: -170px;
+    }
+    .share-icon {
+        width: 32px;
+        height: 32px;
+        line-height: 31px;
+    }
+    .card__social {
+        width: 140px;
+    }
+    #announcements {
+        height: 2240px;
+    }
+}
+
+
+@media screen and (max-height: 480px) {
+    .mobile-container {
+        padding: 0 20px;
+    }
+    .COGS-title {
+        padding-top: 15px;
+    }
+    .COGS-title h1, .navburger h1 {
+        font-size: 20px;
+        line-height: 20px;
+        margin-bottom: 0;
+    }
+    .navburger {
+        top: 13px;
+        text-align: center;
+    }
+    .navburger h1 {
+        top: -6px;
+    }
+    .hamburger {
+        background-size: 28px;
+        width: 28px;
+        height: 28px;
+    }
+    .menu-links .closebtn {
+        top: 13px;
+        background-size: 28px;
+        width: 28px;
+        height: 28px;
+        right: 20px;
+    }
+    .nav-container {
+        padding-top: 13px;
+    }   
+    .beta {
+        top: 13px;
+        left: 22%;
+        line-height: 11px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .multiple-lang {
+        margin-top: 0;
+    }
+    .multiple-lang div a {
+        font-size: 18px;
+    }
+    .nav-link {
+        font-size: 21px;
+        line-height: 21px;
+        padding-top: 10px;
+    }
+    .share-website {
+        margin-top: 20px;
+    }
+    .share-container {
+        padding: 10px 0;
+    }
+    .share-container p {
+        font-size: 15px;
+        line-height: 15px;
+        width: 100%;
+        margin: 5px auto 10px;
+    }
+    .share-button {
+        padding: 8px;
+    }
+    .social-container p {
+        font-size: 18px;
+        line-height: 18px;
+    }
+    .social-icon-link img {
+        width: 22px;
+    }
+    .hero-title-wrapper {
+        top: 34%;
+    }
+    .hero-heading {
+        font-size: 50px;
+        line-height: 50px;
+    }
+    .hero-subheading {
+        font-size: 24px;
+        width: 65%;
+    }
+    .hollow-button.white, .hollow-button.red {
+        font-size: 18px;
+        width: 62%;
+    }
+
+    .container .title {
+        padding-top: 15px;
+    }
+    .title h1 {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .title h3 {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .form-field {
+        min-height: 25px;
+        font-size: 14px;
+        margin-bottom: 7px;
+    }
+    .form-field.text-area {
+        min-height: 90px;
+        margin-bottom: 0;
+    }
+    select {
+        font-size: 14px;
+        height: 32px;
+    }
+    #attendance-date {
+        font-size: 14px;
+        padding-top: 6px;
+        height: 32px;
+    }
+    .button.plan-submit {
+        font-size: 16px;
+        margin-top: 27%;
+        padding: 7px 10px;
+    }
+
+    .address {
+        height: 950px;
+    }
+    .googlemap iframe {
+        height: 320px;
+    }
+
+    .mission-statement-section {
+        height: 480px;
+    }
+    .bible-verse {
+        font-size: 24px;
+        line-height: 30px;
+    }
+}*/

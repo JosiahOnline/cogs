@@ -1,0 +1,12 @@
+body {
+    background-image: url(../News/img/boys.jpg);
+    background-size: cover;
+    background-position: 40%;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+section {
+    background-color: rgba(20,30,40,0.2);
+    height: 100vh;
+}

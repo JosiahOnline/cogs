@@ -1,0 +1,241 @@
+body,
+html {
+    padding: 0;
+    margin: 0;
+    font-family: 'Merriweather', serif;
+}
+
+
+/*Navbar Styling*/
+
+a:hover {
+    text-decoration: none;
+}
+
+.navbar {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .navbar-brand {
+    color: white;
+}
+
+.navbar .navbar-brand:hover {
+    color: white;
+}
+
+.navbar a>p {
+    padding: 7px 12px 5px;
+    font-size: 18px;
+    background-color: #23B5D3;
+    color: white;
+    border-radius: 4px;
+    margin-bottom: 0;
+}
+
+
+/*End of Navbar Styling*/
+
+
+/*Carousel*/
+
+.carousel {
+    margin-top: 20px;
+}
+
+.carousel .title {
+    position: absolute;
+    top: 15px;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+}
+
+.carousel .title>h1 {
+    width: 25%;
+    margin: 0 auto;
+    background-color: rgba(20, 30, 40, 0.5);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 10px;
+    font-size: 25px;
+    line-height: 25px;
+}
+
+.carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li {
+    height: 6px;
+}
+
+.carousel-caption p {
+    display: none;
+}
+
+.img-fluid {
+    margin: 0 auto;
+    border-radius: 20px;
+    max-height: 543px;
+}
+
+.new-caption-area {
+    height: 30px;
+    width: 600px;
+    margin: 45px auto 0;
+    color: white;
+}
+
+.new-caption-area p {
+    text-align: center;
+    margin-bottom: 0;
+}
+
+section.main {
+    background-color: rgba(20, 30, 40, 1);
+    height: 100vh;
+}
+
+
+/*Share This Page Section*/
+
+.share-info {
+    position: absolute;
+    top: 5px;
+    right: 90px;
+    width: 240px;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.share-container {
+    width: 200px;
+    margin: 0 auto;
+}
+
+.share-container p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.share-button {
+    display: inline-block;
+    width: 200px;
+    margin: 0 auto;
+    cursor: pointer;
+    font-size: 18px;
+    text-align: center;
+    line-height: 24px;
+    color: white;
+    border-radius: 4px;
+    background-color: #23B5D3;
+    padding: 7px 12px;
+    text-transform: uppercase;
+    font-weight: 500;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.navbar>a p:hover,
+.share-button:hover {
+    background-color: #EA526F;
+}
+
+.web__share {
+    display: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 0.35s ease;
+    transition: -webkit-transform 0.35s ease;
+    -o-transition: transform 0.35s ease;
+    transition: transform 0.35s ease;
+    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.share-toggle {
+    z-index: 200;
+}
+
+.share-toggle:before {
+    content: "\f1e0";
+    font-family: 'FontAwesome';
+    color: #3498db;
+}
+
+.share-toggle.share-expanded:before {
+    content: "\f00d";
+}
+
+.share-icon {
+    display: inline-block;
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    outline: 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.share-icon:hover,
+.share-icon:focus {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #00abe3;
+}
+
+.googleplus {
+    background-color: #d3492c;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.facebook,
+.twitter,
+.googleplus,
+.whatsapp {
+    color: #fff;
+}
+
+.facebook:hover,
+.twitter:hover,
+.googleplus:hover,
+.whatsapp:hover {
+    color: #eee;
+}
