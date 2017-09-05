@@ -648,6 +648,11 @@ p {
     font-size: 0.8rem;
 }
 
+.home-container {
+    position: relative;
+    top: 90%;
+    transform: perspective(1px) translateY(-90%);
+}
 .hero-title-wrapper {
     position: relative;
     top: 82%;
@@ -914,9 +919,10 @@ select {
 }
 
 .transparent-layer {
-    width: 100%;
+    position: absolute;
+    width: 80%;
     height: 100%;
-    background-color: rgba(8, 8, 8, 0);
+    background-color: rgba(20, 30, 40, 1);
 }
 
 .body {
