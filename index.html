@@ -717,19 +717,18 @@
             var iCurScrollPos = $(this).scrollTop();
             if (window.matchMedia("(max-width: 1024px)").matches) {
                   if (iCurScrollPos > iScrollPos) {
-                    $("#scrollDown").show(500).css('display', 'none');
+                    $("#scrollDown").css('display', 'none');
                 } else {
-                    $("#scrollDown").show(500).css('display', 'block');
+                    $("#scrollDown").css('display', 'block');
                 }
                 iScrollPos = iCurScrollPos; 
                 
                 var triggered_times = 0;
                     if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times == 0) {
-                        $("#scrollDown").show(500).css("display", "block");
+                        $("#scrollDown").css("display", "block");
                         
                         triggered_times = 1;
                     }
-            
             }
         });
         
