@@ -169,7 +169,20 @@
         <section class="home-section" id="home">
             <div class="transparent-layer adjust-padding-lr">
                 <div class="hero-title-wrapper">
-                    <h1 class="hero-heading">Welcome Home</h1>
+                    
+                    <ul class="fly-in-text hidden">
+                        <li>W</li>
+                        <li>E</li>
+                        <li>L</li>
+                        <li>C</li>
+                        <li>O</li>
+                        <li>M</li>
+                        <li>E</li>
+                        <li>H</li>
+                        <li>O</li>
+                        <li>M</li>
+                        <li>E</li>
+                    </ul>
                     <div class="hero-subheading">Official Website of Good Shepherd Church</div>
                     <div class="hero-button-container">
                         <a class="hollow-button white" href="#welcome">Welcome Message</a>
@@ -689,6 +702,13 @@
                 }
             });
         });
+        $(function() {
+                
+                setTimeout(function() {
+                    $('.fly-in-text').removeClass('hidden');
+                }, 500);
+                
+            });
 
     </script>
     <script>
@@ -701,7 +721,10 @@
                 } else {
                     $("#scrollDown").css('display', 'block');
                 }
-                iScrollPos = iCurScrollPos;  
+                iScrollPos = iCurScrollPos; 
+                if ($(document).height() <= ($(window).height() + $(window).scrollTop())) {
+                        $("#scrollDown").css('display', 'block');
+                    }
             }
         });
     </script>
