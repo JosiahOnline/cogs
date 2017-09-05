@@ -724,9 +724,26 @@
                 iScrollPos = iCurScrollPos; 
                 if ($(document).height() <= ($(window).height() + $(window).scrollTop())) {
                         $("#scrollDown").css('display', 'block');
-                    }
+                }
+                //helper function
+                function fullScreen(element) {
+                  if(element.requestFullScreen) {
+                    element.requestFullScreen();
+                  } else if(element.webkitRequestFullScreen ) {
+                    element.webkitRequestFullScreen();
+                  } else if(element.mozRequestFullScreen) {
+                    element.mozRequestFullScreen();
+                  }
+                }
+                //for the whole page
+                var html = document.documentElement;
+                fullScreen(html);
             }
         });
+        
+    </script>
+    <script>
+        
     </script>
 </body>
 
