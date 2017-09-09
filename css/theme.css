@@ -1,0 +1,81 @@
+.preloader-container {
+    position: fixed;
+    height: 100vh;
+    width: 100%;
+    background-color: #f0f2f2;
+    transition: all 2s ease;
+    z-index: 1000;
+}
+
+.preloader {
+    position: absolute;
+    top: 50%;
+    left: 41%;
+    transform: translate(-50%, -50%);
+}
+
+.pulse {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background: #141e28;
+    border-radius: 50%;
+    animation: animate 2s linear infinite;
+}
+
+.pulse h3 {
+    position: absolute;
+    color: #fff;
+    background: #141e28;
+    font-size: 3rem;
+    left: 33%;
+    top: 10px;
+    line-height: 80px;
+    Font-family: verdana;
+    text-transform: uppercase;
+    transition: all 2s ease;
+}
+
+.pulse h3:nth-child(1) {
+    z-index: 4;
+}
+.pulse h3:nth-child(2) {
+    z-index: 3;
+}
+.pulse h3:nth-child(3) {
+    z-index: 2;
+}
+.pulse h3:nth-child(4) {
+    z-index: 1;
+}
+
+@keyframes animate {
+    0% {
+        box-shadow: 0 0 0 0 rgba(20, 30, 40, .7), 0 0 50px 0 rgba(20, 30, 40, .7);
+          
+    }
+    25% {
+        box-shadow: 0 0 0 50px rgba(20, 30, 40, .1.5), 0 0 0 10px rgba(20, 30, 40, .6);
+ 
+    }
+    540% {
+        box-shadow: 0 0 0 100px rgba(20, 30, 40, .1.5), 0 0 0 50px rgba(20, 30, 40, .6);
+ 
+    }
+    75% {
+        box-shadow: 0 0 0 200px rgba(20, 30, 40, 0), 0 0 0 100px rgba(20, 30, 40, 0);
+    }
+    100% {
+        box-shadow: 0 0 0 300PX rgba(20, 30, 40, .0), 0 0 0 200px rgba(20, 30, 40, 0);
+ 
+    }
+}
+
+@media screen and ( max-width: 1280px) {
+    
+    .preloader {
+        top: 55%;
+        left: 50%;
+}
+    
+
