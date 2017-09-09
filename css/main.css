@@ -513,10 +513,10 @@ p {
 .fly-in-text.hidden li:nth-child(8) { transform: translateX(10px) translateY(-200px); }
 .fly-in-text.hidden li:nth-child(9) { transform: translateX(-150px) translateY(-80px); }
 .fly-in-text.hidden li:nth-child(10) { transform: translateX(-200px) translateY(-200px); }
-.fly-in-text.hidden li:nth-child(11) { transform: translateX(20px) translateY(-20px); }
+.fly-in-text.hidden li:nth-child(11) { transform: translateX(20px) translateY(-200px); }
 
 .hero-subheading {
-    margin-bottom: 0.8em;
+    margin: 0.5em auto 0.8em;
     color: #fff;
     font-size: 1.7rem;
     text-shadow: 1px 3px 8px #000;
@@ -655,8 +655,8 @@ p {
 }
 .hero-title-wrapper {
     position: relative;
-    top: 82%;
-    transform: perspective(1px) translateY(-82%);
+    top: 55%;
+    transform: perspective(1px) translateY(-55%);
     text-align: center;
 }
 
@@ -1976,6 +1976,13 @@ address,
     .body {
         padding-left: 0%;
     }
+    
+    .transparent-layer {
+        width: 100%;
+    }
+    .hero-subheading {
+        margin-top: 0.2em;
+    }
     .section {
         padding: 7em 0em;
     }
@@ -2230,15 +2237,10 @@ address,
         font-size: 3.5rem;
         line-height: 1.1em;
     }
-    .hero-title-wrapper {
-        position: relative;
-        top: 80%;
-        transform: perspective(1px) translateY(-80%);
-    }
     .fly-in-text li {
         font-size: 8rem;
         line-height: 0.9em;
-        margin-bottom: 30px;
+        margin-bottom: 15px;
     }
     .hero-subheading,
     .section-subheading.center {
@@ -2421,6 +2423,9 @@ address,
     html {
         font-size: 12px;
     }
+    .hero-title-wrapper {
+        transform: perspective(1px) translateY(-30%)
+    }
     .COGS-title h1,
     .navburger h1,
     .bulletin-text,
@@ -2496,6 +2501,9 @@ address,
     html {
         font-size: 12px;
     }
+    .hero-title-wrapper {
+        transform: perspective(1px) translateY(-30%)
+    }
     .brand-logo,
     .brand-logo p {
         font-size: 3.5rem;
@@ -2549,6 +2557,12 @@ address,
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {
         font-size: 10px;
+    }
+    .navburger {
+        flex: 0;
+    }
+    .hero-title-wrapper {
+        transform: perspective(1px) translateY(-10%)
     }
     .plan-visit {
         padding-top: 5%;
@@ -3776,8 +3790,19 @@ address,
     .social-icon-link img {
         width: 2rem;
     }
+    .hero-title-wrapper {
+        transform: perspective(1px) translateY(-15%);
+    }
+    .fly-in-text {
+        width: 85%;
+        margin: 0 auto;
+    }
     .fly-in-text li {
-        font-size: 3.5rem;
+        font-size: 5rem;
+        text-align: center;
+    }
+    .fly-in-text li:nth-child(7) {
+        margin-right: 0;
     }
     .fly-in-text li, .section-heading.centered, .hero-subheading {
         padding-bottom: 15px;
@@ -4073,6 +4098,10 @@ address,
     }
     .social-icon-link img {
         font-size: 1.7rem;
+    }
+    
+    .hero-title-wrapper {
+        transform: perspective(1px) translateY(-10%);
     }
     #welcome {
         height: 140%;
@@ -4545,11 +4574,15 @@ address,
         line-height: 35px;
         font-size: 16px;
     }
+    .fly-in-text {
+        width: 80%;
+    }
     .fly-in-text li {
-        font-size: 3.3rem;
+        font-size: 4.2rem;
     }
     .hero-subheading {
         width: 84%;
+        font-size: 2rem;
     }
     .fly-in-text li, .section-heading.centered, .hero-subheading {
         padding-bottom: 15px;
