@@ -928,6 +928,7 @@ select {
     height: 100%;
     background-color: rgba(20, 30, 40, 1);
     transition: all 4.5s ease;
+    /*background: url(../img/overlay.png) rgba(0, 0, 0, 0.25) repeat 0px 0px*/
 }
 
 .body {
@@ -1503,6 +1504,9 @@ address,
     font-size: 1.9rem;
 }
 
+.location h2 {
+    padding-top: 5px;
+}
 .direction-button {
     width: 100%;
     margin: 0.5em auto;
@@ -1685,9 +1689,6 @@ address,
     .googlemap iframe {
         height: 30.2em;
     }
-    .mission-statement-section {
-        height: 94%;
-    }
     #announcements .adjust-padding-lr {
     padding: 0 80px;
     }
@@ -1736,10 +1737,13 @@ address,
         padding: 0.66em 1em;
     }
     .address {
-        height: 37em;
+        height: 33em;
     }
     .googlemap iframe {
-        height: 32.9em;
+        height: 29em;
+    }
+    .direction-button {
+        height: 50px;
     }
     .adjust-padding-lr {
         padding: 0 50px;
@@ -1787,10 +1791,10 @@ address,
         flex: 1.3;
     }
     .section {
-        padding: 4em 0;
+        padding: 5em 0;
     }
     #welcome {
-        padding: 3em 0;
+        padding: 5em 0;
     }
     .top-news-title {
         font-size: 1rem;
@@ -1802,10 +1806,13 @@ address,
         padding: 0.8em 1em;
     }
     .address {
-        height: 30em;
+        height: 31em;
     }
     .googlemap iframe {
-        height: 26.6em;
+        height: 27.2em;
+    }
+    .direction-button {
+        line-height: 1.5em;
     }
 }
 
@@ -1834,11 +1841,12 @@ address,
     .nospam {
         margin-top: 0;
     }
-    .address {
-        height: 35em;
+    
+    .section {
+        padding: 9em 0 6em;
     }
-    .googlemap iframe {
-        height: 31.2em;
+    #welcome {
+        padding: 9em 0 6em;
     }
     #announcements .adjust-padding-lr {
         padding: 0 25px;
@@ -1886,7 +1894,7 @@ address,
         padding: 6em 0 4em;
     }
     #welcome {
-        padding: 3em 0;
+        padding: 6em 0;
     }
     .plan-visit {
         padding-top: 8%;
@@ -1974,6 +1982,12 @@ address,
     .googlemap iframe {
         height: 26.8em;
     }
+    .send-message-button, .direction-button {
+        height: 40px;
+    }
+    .direction-button {
+        line-height: 1.2em;
+    }
 }
 
 
@@ -1997,7 +2011,7 @@ address,
         padding: 7em 0em;
     }
     #welcome {
-        padding: 8em 0em;
+        padding: 8em 0em 14em;
         height: 78%;
     }
     .plan-visit {
@@ -2391,10 +2405,10 @@ address,
         min-height: 200px;
     }
     .submit-button {
-        padding: 15px;
+        padding: 0.65em 1em;
     }
     .address {
-        height: 33em;
+        height: 34em;
     }
     .location h2,
     .contact-info h2,
@@ -2407,13 +2421,16 @@ address,
         font-size: 1.3rem;
     }
     .googlemap iframe {
-        height: 29em;
+        height: 29.6em;
     }
     .footer.center {
         padding: 1.5em 0;
     }
     .footer-text {
         font-size: 2rem;
+    }
+    .send-message-button, .direction-button {
+        height: 55px;
     }
     .adjust-padding-td {
         padding: 50px 0;
@@ -2617,13 +2634,16 @@ address,
         font-size: 3.5rem;
     }
     .address {
-        height: 33em;
+        height: 34em;
     }
     .googlemap iframe {
-        height: 29.4em;
+        height: 29.6em;
     }
     .call-to-action-section {
         height: 55%;
+    }
+    .direction-button {
+        line-height: 1.4em;
     }
     .hollow-button,
     .text-field,
@@ -2680,8 +2700,7 @@ address,
         padding: 6em 0;
     }
     #welcome {
-        height: 155%;
-        padding: 5em 0 0;
+        padding: 6em 0 8em;
     }
     .welcome-button-container {
         padding-top: 1em;
@@ -2748,6 +2767,12 @@ address,
     .text-field, .submit-button, .nospam, .form-field, .plan-submit.button.full-width, .direction-button, address, .contact-info p, .office-hour p {
         font-size: 1.8rem;
     }
+    .submit-button {
+        padding: 9px 15px;
+    }
+    .send-message-button, .direction-button {
+        height: 45px;
+    }
     .form-field, select, #attendance-date {
         margin-bottom: 5px;
     }
@@ -2759,6 +2784,12 @@ address,
     }
     .call-to-action-section {
         height: 64%;
+    }
+    .address {
+        height: 31em;
+    }
+    .googlemap iframe {
+        height: 27.4em;
     }
 }
 
@@ -2867,7 +2898,7 @@ address,
     }
     .call-to-action-description,
     .call-to-action-pgraph {
-        margin-bottom: 0;
+        margin-bottom: 5px;
     }
     #welcome {
         height: 88%;
@@ -2880,16 +2911,25 @@ address,
     .news {
         margin-bottom: 160px;
     }
+    .submit-button {
+        padding: 0.55em 1em;
+    }
     /*Contact Session*/
     .address {
-        min-height: 27em;
+        height: 35em;
     }
     .googlemap iframe {
-        min-height: 24em;
+        height: 30.7em;
+    }
+    .direction-button {
+        line-height: 1.3em;
     }
     /*Bible Words*/
     .verse-container {
         top: 50%;
+    }
+    .bible-verse {
+        font-size: 3rem;
     }
     .adjust-padding-lr {
         padding: 0 60px;
@@ -2940,6 +2980,12 @@ address,
     }
     #announcements .adjust-padding-lr {
         padding: 0 60px;
+    }
+    .address {
+        height: 37em;
+    }
+    .googlemap iframe {
+        height: 32.7em;
     }
     .call-to-action-section {
         height: 37%;
@@ -3478,6 +3524,9 @@ window.outerHeight include toolbar and address bar----------- */
     .footer-text {
         font-size: 1.6rem;
     }
+    .section.section-contact {
+        padding: 7em 0em 12em;
+    }
     .adjust-padding-lr {
         padding: 0 40px;
     }
@@ -3551,6 +3600,9 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .group-photo-caption {
         font-size: 2rem;
+    }
+    .section.section-contact {
+        padding: 7em 0em 10em;
     }
 }
 
@@ -3850,15 +3902,12 @@ window.outerHeight include toolbar and address bar----------- */
     .social-icon-link img {
         width: 2rem;
     }
-    .hero-title-wrapper {
-        transform: perspective(1px) translateY(-15%);
-    }
     .fly-in-text {
-        width: 85%;
+        width: 75%;
         margin: 0 auto;
     }
     .fly-in-text li {
-        font-size: 5rem;
+        font-size: 4rem;
         text-align: center;
     }
     .fly-in-text li:nth-child(7) {
@@ -3874,7 +3923,7 @@ window.outerHeight include toolbar and address bar----------- */
     .hero-subheading {
         font-size: 2rem;
         margin: 0 auto;
-        width: 70%;
+        width: 68%;
     }
     .hero-button-container {
         display: flex;
@@ -3896,7 +3945,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     #welcome {
         height: 120%;
-        padding: 5em 0 0;
+        padding: 5em 0;
     }
     .welcome-column-1 {
         padding-right: 0;
@@ -4040,13 +4089,13 @@ window.outerHeight include toolbar and address bar----------- */
         height: 110px;
     }
     .news-image {
-        width: 33.6%;
+        width: 39.6%;
     }
     .newsdescription {
         top: -110px;
         height: 110px;
-        left: 34%;
-        width: 66%;
+        left: 40%;
+        width: 60%;
     }
     .card__share {
         top: -160px;
@@ -4093,12 +4142,14 @@ window.outerHeight include toolbar and address bar----------- */
     .send-message-button.full-width,
     .direction-button {
         font-size: 1.2rem;
+        line-height: 1.4em;
     }
     .googlemap iframe {
         height: 24em;
     }
     .bible-verse {
-        font-size: 2rem;
+        font-size: 1.6rem;
+        line-height: 1.2em;
     }
     .footer-text {
         font-size: 1.2rem;
@@ -4115,6 +4166,12 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1.2rem;
         font-weight: 300;
     }
+    .call-to-action-section .container {
+        height: 240px;
+    }
+    .section.section-contact {
+        padding: 7em 0em 6em;
+    }    
     .adjust-padding-lr {
         padding: 0 30px;
     }
@@ -4158,10 +4215,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .social-icon-link img {
         font-size: 1.7rem;
-    }
-    
-    .hero-title-wrapper {
-        transform: perspective(1px) translateY(-10%);
     }
     #welcome {
         height: 140%;
@@ -4289,6 +4342,12 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .cogs-news-form>.text-field {
         margin-bottom: 10px;
+    }
+    .call-to-action-section .container {
+        height: 220px;
+    }
+    .send-message-button.full-width, .direction-button {
+        height: 40px;
     }
 }
 
@@ -4540,6 +4599,9 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- HuaWei Mate9 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
+    .fly-in-text {
+        width: 70%;
+    }
     .hero-subheading {
         width: 70%;
     }
@@ -4641,7 +4703,7 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 4.2rem;
     }
     .hero-subheading {
-        width: 84%;
+        width: 72%;
         font-size: 2rem;
     }
     .fly-in-text li, .section-heading.centered, .hero-subheading {
@@ -4687,16 +4749,12 @@ window.outerHeight include toolbar and address bar----------- */
     .call-to-action-section {
         height: 46%;
     }
-    
-    .news-image {
-        width: 37.6%;
-    }
-    .newsdescription {
-        left: 38%;
-        width: 62%;
-    }
+
     .footer.center {
         padding: 7px 0;
+    }
+    .section.section-contact {
+        padding: 5em 0 4em;
     }
     
     .adjust-padding-td {
@@ -4713,6 +4771,9 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- iPhone 4 and 4S Potrait----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
+    .hero-title-wrapper {
+        transform: perspective(1px) translateY(-30%);
+    }
     .brand-logo, .brand-logo p {
         font-size: 2.4rem;
     }
