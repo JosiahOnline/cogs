@@ -9,9 +9,13 @@
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 
 html {
-    font-family: sans-serif;
+    font-family: 'Droid Serif', serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    background-color: #fff;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333;
 }
 
 body {
@@ -278,11 +282,6 @@ html {
 body {
     margin: 0;
     min-height: 100%;
-    background-color: #fff;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-    line-height: 20px;
-    color: #333
 }
 
 img {
@@ -2075,7 +2074,7 @@ textarea.w-select {
     background-color: #141e28;
     text-align: center;
     opacity: 1;
-    display: block;
+    display: none;
     animation: out 4s ease forwards 2s
 }
 
@@ -2106,7 +2105,6 @@ textarea.w-select {
 
 .intro-pgraph {
     margin-bottom: 0px;
-    font-family: 'Droid Serif', serif;
     color: #fff;
     font-size: 30px;
     line-height: 35px;
@@ -2118,6 +2116,45 @@ textarea.w-select {
     transform: perspective(1px) translateY(-50%);
     padding-right: 50px;
     padding-left: 50px;
+}
+
+.top-nav {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    height: 10%;
+    padding: 0 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.text-block {
+    display: inline-block;
+    font-size: 2rem;
+    color: white;
+}
+
+.link {
+    font-size: 2rem;
+    text-decoration: none;
+    color: white;
 }
 
 .page1 {
@@ -2160,7 +2197,6 @@ textarea.w-select {
 .heading, .paragraph {
     display: inline-block;
     margin-bottom: 0px;
-    font-family: 'Droid Serif', serif;
     color: #34231c;
     font-weight: 700;
     text-align: center;
@@ -2204,7 +2240,6 @@ textarea.w-select {
     -webkit-flex: auto;
     -ms-flex: auto;
     flex: auto;
-    font-family: 'Droid Serif', serif;
     color: #fff;
     font-size: 35px;
     line-height: 40px;
@@ -2223,7 +2258,7 @@ textarea.w-select {
     right: 0px;
     bottom: 25%;
     display: block;
-    width: 57%;
+    width: 45%;
     margin-right: auto;
     margin-left: auto;
     padding: 20px;
@@ -2248,7 +2283,6 @@ textarea.w-select {
 
 .page4-pgraph {
     padding: 20px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     border-radius: 4px;
     background-color: hsla(0, 0%, 100%, .85);
@@ -2319,6 +2353,39 @@ textarea.w-select {
     height: 100vh;
 }
 
+.fund-table {
+    margin: 50px auto;
+    width: 50%;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.fund-table tr {
+    background-color: #F6F7F8;
+    color: #534951;
+}
+
+.fund-table tr:hover {
+    background-color: #534951;
+    color: white;
+}
+
+.fund-table th {
+    background-color: #534951;
+    border: 2px solid white;
+    color: white;
+}
+.fund-table th, .fund-table td {
+    font-size: 35px;
+    padding: 10px 15px;
+    line-height: 40px;
+    font-weight: 400;
+}
+
+.fund-table td {
+    border: 2px solid white;
+}
+
 .page17 {
     position: relative;
     height: 100vh;
@@ -2350,7 +2417,6 @@ textarea.w-select {
 }
 
 .intro-heading {
-    font-family: 'Droid Serif', serif;
     color: #fff;
     font-size: 60px;
     line-height: 65px;
@@ -2369,7 +2435,6 @@ textarea.w-select {
 .page5-pgraph {
     width: 85%;
     padding: 15px 20px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     border-radius: 4px;
     background-color: hsla(0, 0%, 100%, .85);
@@ -2391,7 +2456,6 @@ textarea.w-select {
 .land-pgraph {
     display: inline-block;
     padding: 15px 20px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     border-radius: 4px;
     background-color: #fff;
@@ -2403,7 +2467,6 @@ textarea.w-select {
 
 .find-pgraph {
     margin-bottom: 0px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 20px;
     line-height: 25px;
@@ -2423,7 +2486,6 @@ textarea.w-select {
     padding: 15px 20px;
     width: 85%;
     text-align: center;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     border-radius: 4px;
     background-color: hsla(0, 0%, 100%, .85);
@@ -2439,7 +2501,6 @@ textarea.w-select {
 
 .raise-pgraph {
     padding: 15px 20px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     background-color: #fff;
     border-radius: 4px;
@@ -2485,7 +2546,6 @@ textarea.w-select {
 
 .process-pgraph {
     padding: 15px;
-    font-family: 'Droid Serif', serif;
     color: #fff;
     font-size: 20px;
     line-height: 25px;
@@ -2509,7 +2569,6 @@ textarea.w-select {
 }
 
 .fund-pgraph {
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 20px;
     line-height: 25px;
@@ -2526,7 +2585,6 @@ textarea.w-select {
     -webkit-flex-basis: 270px;
     -ms-flex-preferred-size: 270px;
     flex-basis: 270px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 60px;
     line-height: 65px;
@@ -2582,7 +2640,6 @@ textarea.w-select {
     -webkit-flex: 0 0 270px;
     -ms-flex: 0 0 270px;
     flex: 0 0 270px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 60px;
     line-height: 65px;
@@ -2618,7 +2675,6 @@ textarea.w-select {
     -webkit-flex: 0 0 400px;
     -ms-flex: 0 0 400px;
     flex: 0 0 400px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 60px;
     line-height: 65px;
@@ -2637,7 +2693,6 @@ textarea.w-select {
 .raise-heading {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 60px;
     line-height: 65px;
@@ -2654,7 +2709,6 @@ textarea.w-select {
 .dedication-heading {
     margin-top: 0px;
     margin-bottom: 0px;
-    font-family: 'Droid Serif', serif;
     color: #c6a677;
     font-size: 60px;
     line-height: 65px;
@@ -2662,7 +2716,6 @@ textarea.w-select {
 }
 
 .progress-pgraph {
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 20px;
     line-height: 25px;
@@ -2701,7 +2754,6 @@ textarea.w-select {
     -webkit-flex-basis: 300px;
     -ms-flex-preferred-size: 300px;
     flex-basis: 300px;
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 70px;
     line-height: 80px;
@@ -2709,7 +2761,6 @@ textarea.w-select {
 }
 
 .phase1-pgraph {
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 25px;
     line-height: 30px;
@@ -2769,7 +2820,6 @@ textarea.w-select {
 .d6-pgraph,
 .d7-pgraph {
     padding: 15px;
-    font-family: 'Droid Serif', serif;
     color: #c6a677;
     font-size: 20px;
     line-height: 25px;
@@ -2777,10 +2827,6 @@ textarea.w-select {
     border: 1px solid #c6a677;
     border-radius: 4px;
     background-color: #fff;
-}
-
-.body {
-    padding-bottom: 30px;
 }
 
 .pic1 {
@@ -2832,7 +2878,7 @@ textarea.w-select {
 }
 
 .pic9 {
-    height: 620px;
+    height: 600px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59b9edde3a582f000119541a_pledge-card.jpg");
     background-position: 50% 50%;
@@ -2841,7 +2887,7 @@ textarea.w-select {
 }
 
 .pic10 {
-    height: 700px;
+    height: 600px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c49b82a634500001b91d11_dinner1.jpeg");
     background-position: 50% 50%;
@@ -2850,16 +2896,16 @@ textarea.w-select {
 }
 
 .pic10a {
-    height: 790px;
+    height: 600px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c49b9cb7ea86000189e02c_dinner2.jpeg");
     background-position: 50% 50%;
-    background-size: auto;
+    background-size: contain;
     background-repeat: no-repeat;
 }
 
 .pic11 {
-    height: 550px;
+    height: 600px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c49bd64567500001953192_womenfellow.jpeg");
     background-position: 50% 50%;
@@ -2868,7 +2914,7 @@ textarea.w-select {
 }
 
 .pic12 {
-    height: 550px;
+    height: 600px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c49c66777a1a0001e2bfa4_robert.jpeg");
     background-position: 50% 50%;
@@ -2877,7 +2923,7 @@ textarea.w-select {
 }
 
 .pic13 {
-    height: 550px;
+    height: 600px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c49cfb17ef930001def7dc_bazaar.jpeg");
     background-position: 50% 50%;
@@ -2886,7 +2932,7 @@ textarea.w-select {
 }
 
 .process1-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59bdff5953d30a000121d2bb_1st%20visit.jpeg");
     background-position: 50% 100%;
     background-size: cover;
@@ -2894,7 +2940,7 @@ textarea.w-select {
 }
 
 .process2-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be019a53d30a000121d38d_groundbreaking.jpeg");
     background-position: 50% 0px;
     background-size: cover;
@@ -2902,7 +2948,7 @@ textarea.w-select {
 }
 
 .process3-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be09a753d30a000121d4b2_progress.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2910,7 +2956,7 @@ textarea.w-select {
 }
 
 .process4-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be07ad5ea0cd00010f07b7_progress%202.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2918,7 +2964,7 @@ textarea.w-select {
 }
 
 .process5-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be0a41ac06760001db8b60_progress%201.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2926,7 +2972,7 @@ textarea.w-select {
 }
 
 .process6-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be0a94157a460001f87c38_progress%203.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2934,7 +2980,7 @@ textarea.w-select {
 }
 
 .process7-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be0fbf157a460001f87cc9_cleaning1.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2942,7 +2988,7 @@ textarea.w-select {
 }
 
 .process8-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be1086234573000188ad60_cleaning2.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2950,7 +2996,7 @@ textarea.w-select {
 }
 
 .process9-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be1101157a460001f87ce1_cleaning3.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2958,7 +3004,7 @@ textarea.w-select {
 }
 
 .process10-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be11e9d0c4540001f9a942_completed1.jpeg");
     background-position: 50% 100%;
     background-size: cover;
@@ -2966,7 +3012,7 @@ textarea.w-select {
 }
 
 .process11-pic {
-    height: 600px;
+    height: 685px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59be155f234573000188adc7_completed2.jpeg");
     background-position: 50% 50%;
     background-size: cover;
@@ -2974,7 +3020,7 @@ textarea.w-select {
 }
 
 .picd1 {
-    height: 550px;
+    height: 620px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c0cb9e1421dd0001361483_dedication%20service%201.jpeg");
     background-position: 50% 100%;
@@ -2983,7 +3029,7 @@ textarea.w-select {
 }
 
 .picd2 {
-    height: 550px;
+    height: 620px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c0cc121fc3950001f37dd4_dedication%20service%202.jpeg");
     background-position: 50% 50%;
@@ -2992,7 +3038,7 @@ textarea.w-select {
 }
 
 .picd3 {
-    height: 550px;
+    height: 620px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c0cc516eb47c00013978be_dedication%20service%203.jpeg");
     background-position: 50% 37%;
@@ -3001,7 +3047,7 @@ textarea.w-select {
 }
 
 .picd4 {
-    height: 550px;
+    height: 620px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c0ccee9f2cec00012dad19_dedication%20service%204.jpeg");
     background-position: 50% 50%;
@@ -3010,7 +3056,7 @@ textarea.w-select {
 }
 
 .picd5 {
-    height: 550px;
+    height: 620px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c0cc80221db50001e812a4_dedication%20service%205.jpeg");
     background-position: 50% 50%;
@@ -3019,7 +3065,7 @@ textarea.w-select {
 }
 
 .picd6 {
-    height: 550px;
+    height: 620px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c0cca5221db50001e812b6_dedication%20service%206.jpeg");
     background-position: 50% 50%;
@@ -3028,7 +3074,7 @@ textarea.w-select {
 }
 
 .picd7 {
-    height: 550px;
+    height: 620px;
     margin-bottom: 30px;
     background-image: url("http://uploads.webflow.com/59b783a790514f000127c8b6/59c0cd5b221db50001e812dd_dedication%20service%207.jpeg");
     background-position: 50% -30px;
@@ -3037,21 +3083,19 @@ textarea.w-select {
 }
 
 .phase1-subheading {
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 25px;
     line-height: 30px;
 }
 
 .source {
-    padding-top: 150px;
-    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-bottom: 50px;
     background-color: #534951;
 }
 
 .source-heading {
     margin-top: 0px;
-    font-family: 'Droid Serif', serif;
     color: #fff;
     font-size: 60px;
     line-height: 60px;
@@ -3065,6 +3109,7 @@ textarea.w-select {
     display: flex;
     margin-right: auto;
     margin-left: auto;
+    width: 70%;
     padding-top: 10px;
     padding-right: 10px;
     padding-left: 10px;
@@ -3078,12 +3123,10 @@ textarea.w-select {
     -ms-flex-pack: center;
     justify-content: center;
     border-radius: 4px;
-    background-color: #fff;
 }
 
 .source-row {
-    padding-top: 25px;
-    padding-bottom: 15px;
+    padding: 10px 0;
     -webkit-box-flex: 250px;
     -webkit-flex: 250px;
     -ms-flex: 250px;
@@ -3095,10 +3138,8 @@ textarea.w-select {
     margin-bottom: 0px;
     padding-right: 10px;
     padding-left: 10px;
-    border: 1px solid #fff;
     border-radius: 4px;
-    font-family: 'Droid Serif', serif;
-    color: #534951;
+    color: white;
     font-size: 20px;
     line-height: 20px;
     font-weight: 400;
@@ -3122,7 +3163,6 @@ textarea.w-select {
 
 .source-pgraph {
     margin-bottom: 20px;
-    font-family: 'Droid Serif', serif;
     color: #fff;
     font-size: 25px;
     line-height: 30px;
@@ -3131,11 +3171,74 @@ textarea.w-select {
 }
 
 .source-subheading2 {
-    font-family: 'Droid Serif', serif;
     color: #534951;
     font-size: 20px;
     line-height: 25px;
     font-weight: 400;
+}
+
+.footer {
+    height: 10%;
+    padding:20px 0;
+    background-color: #534951;
+    color: #fff;
+    border-top: 1px solid white;
+}
+
+.footer-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.social-media-text {
+    display: inline-block;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: right;
+}
+
+.social-icons {
+    display: inline-block;
+    padding-left: 10px;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.social-icon-link {
+    padding: 3px;
+    padding-right: 5px;
+    opacity: 0.66;
+    -webkit-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+}
+
+.social-icon-link:hover {
+    opacity: 1;
+}
+
+.social-icon-link img {
+    width: 1.5rem;
+}
+
+.scroll-container {
+    position: relative;
+    bottom: -30%;
 }
 
 @media (max-width: 991px) {
