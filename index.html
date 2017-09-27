@@ -702,13 +702,13 @@
                 if (iCurScrollPos > iScrollPos) {
                     $("#scrollDown").css('display', 'none');
                 } else {
-                    $("#scrollDown").css('display', 'block');
+                    $("#scrollDown").css('display', 'flex');
                 }
                 iScrollPos = iCurScrollPos;
 
                 var triggered_times = 0;
                 if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times == 0) {
-                    $("#scrollDown").css("display", "block");
+                    $("#scrollDown").css("display", "flex");
 
                     triggered_times = 1;
                 }
@@ -727,15 +727,15 @@
                     }
                     $('html, body').stop().animate({
                         scrollTop: target.offset().top
-                    }, 1000);
+                    }, 1500);
                 }
             });
 
-            $(window).load(function() {
+            
                 $(function() {
                     setTimeout(function() {
                         $('#preloaderBG').css('opacity', '0');
-                    }, 1200);
+                    }, 1800);
                 });
 
                 $(function() {
@@ -764,7 +764,6 @@
                     }, 6000);
                 });
             });
-        });
 
     </script>
     <script>

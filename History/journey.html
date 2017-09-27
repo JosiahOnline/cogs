@@ -7,7 +7,7 @@
     <title>COGS History - Our Journey</title>
     <meta content="Church of Good Shepeherds Sandakan - Our History, Our journey" name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
-    
+
     <link rel="stylesheet" type="text/css" href="../css/animate.css">
     <link href="../History/journey.css" rel="stylesheet" type="text/css">
 
@@ -17,7 +17,7 @@
 </head>
 
 <body class="body">
-    
+
     <div id="introOne" class="_1-intro">
         <div class="intro-container w-container">
             <h1 class="intro-heading">Ten years of searching</h1>
@@ -36,7 +36,7 @@
             <p class="intro-pgraph">a vision becomes a reality</p>
         </div>
     </div>
-    <div class="top-nav">
+    <div id="scrollDown" class="top-nav">
         <div class="text-block">OUR JOURNEY</div>
         <a href="../index.html" class="link">BACK</a>
     </div>
@@ -54,7 +54,7 @@
     </div>
     <div class="page3">
         <div class="pic3"></div>
-        <div class="page3-container">
+        <div id="ideaConcept" class="page3-container">
             <h1 class="heading">The Idea Conception</h1>
             <p class="paragraph">Started in St.Michael &amp;All Angel's Church</p>
         </div>
@@ -156,7 +156,7 @@
     <div class="raise7">
         <div class="raise-container2 w-container">
             <h1 class="raise-heading">Building Fund Summary as at 31st December</h1>
-            
+
             <table class="fund-table">
                 <tr>
                     <th>YEAR</th>
@@ -340,25 +340,25 @@
         </div>
     </div>
     <div class="footer">
-            <div class="footer-container w-container">
-                <div class="social-media-text">COGS SANDAKAN @ Copyright 2017. </div>
-                <div class="social-icons">
-                    <a class="social-icon-link " target="_blank" href="https://facebook.com">
-                        <img src="../img/fb.png" width="30">
-                    </a>
-                    <a class="social-icon-link " target="_blank" href="https://twitter.com">
-                        <img src="../img/twitter.png" width="30">
-                    </a>
-                    <a class="social-icon-link " target="_blank" href="https://instagram.com">
-                        <img src="../img/instag.png" width="30">
-                    </a>
-                    <a class="social-icon-link " target="_blank" href="https://gmail.com">
-                        <img src="../img/email.png" width="30">
-                    </a>
-                </div>
+        <div class="footer-container w-container">
+            <div class="social-media-text">COGS SANDAKAN @ Copyright 2017. </div>
+            <div class="social-icons">
+                <a class="social-icon-link " target="_blank" href="https://facebook.com">
+                    <img src="../img/fb.png" width="30">
+                </a>
+                <a class="social-icon-link " target="_blank" href="https://twitter.com">
+                    <img src="../img/twitter.png" width="30">
+                </a>
+                <a class="social-icon-link " target="_blank" href="https://instagram.com">
+                    <img src="../img/instag.png" width="30">
+                </a>
+                <a class="social-icon-link " target="_blank" href="https://gmail.com">
+                    <img src="../img/email.png" width="30">
+                </a>
             </div>
         </div>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script>
         $(function() {
             setTimeout(function() {
@@ -385,7 +385,7 @@
                 $('#introThree').css('opacity', '0');
             }, 12000);
         });
-        
+
         $(function() {
             setTimeout(function() {
                 $('#introThree').css('display', 'none');
@@ -393,7 +393,38 @@
         });
 
     </script>
+    <script>
+        var iScrollPos = 0;
+        $(window).scroll(function() {
+            var iCurScrollPos = $(this).scrollTop();
+            if (iCurScrollPos > iScrollPos) {
+                $("#scrollDown").css('display', 'none');
+            } else {
+                $("#scrollDown").css('display', 'flex');
+                $("#scrollDown").css('background-color', '#232321');
+                $("#scrollDown").css('border-bottom-color', 'white');
+            }
+            iScrollPos = iCurScrollPos;
 
+            var triggered_times = 0;
+            if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times == 0) {
+                $("#scrollDown").css("display", "flex");
+                $("#scrollDown").css('background-color', '#232321');
+                $("#scrollDown").css('border-bottom-color', 'white');
+
+                triggered_times = 1;
+            }
+
+            if ($(document).scrollTop() == 0) {
+                $("#scrollDown").css("display", "flex");
+                $("#scrollDown").css('background-color', 'transparent');
+                $("#scrollDown").css('border-bottom-color', 'transparent');
+
+            }
+        });
+
+    </script>
+    
 </body>
 
 </html>
