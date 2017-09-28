@@ -390,7 +390,7 @@ p {
 
 .fund-table {
     margin: 50px auto;
-    width: 50%;
+    width: 60%;
     text-align: center;
     border-radius: 4px;
 }
@@ -476,7 +476,7 @@ p {
 }
 
 .page5-pgraph {
-    width: 85%;
+    width: 90%;
     padding: 15px 20px;
     color: #534951;
     border-radius: 4px;
@@ -627,7 +627,7 @@ p {
 .raise-container2 {
     text-align: center;
     position: relative;
-    top: 50%;
+    top: 55%;
     -webkit-transform: perspective(1px) translateY(-50%);
             transform: perspective(1px) translateY(-50%);
 }
@@ -651,7 +651,7 @@ p {
 }
 
 .pic3 {
-    background-image: url("../History/img/pic3.jpg");
+    background-image: url("../History/img/pic3a.jpg");
 }
 
 .pic4 {
@@ -709,24 +709,24 @@ p {
 }
 
 .pic9{
-    background-image: url("../History/img/pic9.jpg");
+    background-image: url("../History/img/pic9a.jpg");
 }
 
 .pic10 {
-    background-image: url("../History/img/pic10.jpg");
+    background-image: url("../History/img/pic10a.jpg");
 }
 
 .pic11 {
-    background-image: url("../History/img/pic11.jpg");
+    background-image: url("../History/img/pic11a.jpg");
     background-size: cover;
 }
 
 .pic12 {
-    background-image: url("../History/img/pic12.jpg");
+    background-image: url("../History/img/pic12a.jpg");
 }
 
 .pic13 {
-    background-image: url("../History/img/pic13.jpg");
+    background-image: url("../History/img/pic13a.jpg");
     background-size: cover;
 }
 
@@ -846,8 +846,8 @@ p {
 }
 
 .dedication-heading {
-    margin-top: 0px;
-    margin-bottom: 0px;
+    width: 60%;
+    margin: 0 auto;
     color: #c6a677;
     font-size: 60px;
     line-height: 65px;
@@ -944,7 +944,6 @@ p {
 
 .phase1-end {
     height: 100vh;
-    padding-top: 20%;
     border-top: 2px solid #c6a677;
 }
 
@@ -960,6 +959,10 @@ p {
     -ms-flex-align: center;
     align-items: center;
     text-align: center;
+    position: relative;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+            transform: perspective(1px) translateY(-50%); 
 }
 
 .phase1-heading {
@@ -1129,6 +1132,141 @@ p {
 
 .social-icon-link img {
     width: 1.5rem;
+}
+
+/* ----------- Laptop with HiDPI ----------- */
+
+@media screen and ( max-width: 1441px) and (orientation: landscape) {
+    .pic5 {
+        background-position: 50% 100%;
+    }
+    .pic7 {
+        background-position: 50% 55%;
+    }
+    .raise-container2 {
+        width: 65%;
+    }
+    .fund-table {
+        width: 85%;
+    }
+    .dedication-heading {
+        width: 65%;
+    }
+}
+
+/* ----------- iPad Pro Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (orientation: landscape) {
+    .page1-container {
+        width: 65%;
+    }
+    .raise1, .raise2, .raise3, .raise4, .raise5, .raise6 {
+        padding-bottom: 5vh;
+    }
+    .pic5 {
+        background-position: 50% 10%;
+    }
+    .pic7 {
+        background-position: 50% 0%;
+    }
+    .pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+        height: 90vh;
+        margin-bottom: 2vh;
+        background-position: 50% 100%;
+    }
+    .fund-table {
+        margin: 20px auto;
+    }
+}
+
+
+/* ----------- Aspire E1 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (max-height: 670px) {
+    .pic5, .pic7 {
+        background-position: 50% 70%;
+    }
+    .pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+        height: 88vh;
+    }
+    .raise-container2 {
+        width: 90%;
+    }
+    .fund-table {
+        width: 75%;
+        margin: 30px auto;
+    }
+    .source-container {
+        top: 56%;
+    }
+    .source-pgraph {
+        margin-bottom: 0;
+    }
+    .source-div {
+        width: 80%;
+    }
+    
+}
+
+/* ----------- Laptop with Touch ----------- */
+
+@media screen and ( max-width: 1280px) {
+    .page1-container {
+        width: 70%;
+    }
+    .page3-container {
+        width: 52%;
+    }
+    .dedication-heading {
+        width: 75%;
+    }
+    .source-container {
+        top: 60%;
+        width: 800px;
+    }
+    .source-pgraph {
+        margin-bottom: 10px;
+    }
+    .source-div {
+        width: 85%;
+    }
+}
+
+/* ----------- Laptop with MDPI screen----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 800px) {
+    .fund-table {
+        width: 80%;
+    }
+    .source-container {
+        top: 57%;
+        width: 900px;
+    }
+    .source-div {
+        width: 75%;
+    }
+}
+
+
+/* ----------- S Tab 10.1 Landscape ----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .raise-container2 {
+        width: 65%;
+    }
+    .fund-table {
+        width: 90%;
+        margin: 10px auto;
+    }
+    .source-pgraph {
+        margin-bottom: 0;
+    }
+}
+
+/* ----------- Aspire V3 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1100px) {
+    
 }
 
 @media (max-width: 991px) {
