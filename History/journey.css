@@ -903,12 +903,16 @@ p {
 
 .source-pgraph, .source-subheading1 {
     color: white;
-    font-size: 25px;
-    line-height: 30px;
     font-weight: 400;
     text-align: center;
 }
+.source-pgraph, .source-subheading1 {
+    font-size: 30px;
+    line-height: 35px;
+}
 .source-subheading1 {
+    font-size: 25px;
+    line-height: 30px;
     margin-bottom: 0px;
 }
 
@@ -1109,18 +1113,25 @@ p {
         margin: 10px auto;
     }
     .source-pgraph {
+        font-size: 25px;
+        line-height: 30px;
         margin-bottom: 0;
+    }
+    .source-subheading1 {
+        font-size: 20px;
+        line-height: 25px;
     }
 }
 
 /* ----------- Aspire V3 Laptop Landscape ----------- */
 
-@media screen and ( max-width: 1100px) {
+@media screen and ( max-width: 1100px) and (max-height: 520px) {
     .page1-container {
-        width: 70%;
+        width: 60%;
+        background-color: white;
     }
     .page3-container {
-        width: 58%;
+        width: 50%;
     }
     .raise-pgraph {
         padding: 10px 20px;
@@ -1131,24 +1142,56 @@ p {
     .raise-container2 {
         width: 100%;
     }
-    .raise-heading {
-        font-size: 45px;
-        line-height: 45px;
-    }
-    .fund-table th, .fund-table td {
+    .paragraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading {
         font-size: 25px;
         line-height: 30px;
+    }
+    .page4-pgraph, .page5-pgraph, .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .find-pgraph, .fund-pgraph, .progress-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .page5-pgraph {
+        width: 100%;
+    }
+    .page4-container, .page5-container {
+        max-width: 95%;
+        margin: 0 auto;
     }
     .fund-table {
         width: 90%;
     }
-    .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
-        font-size: 50px;
-        line-height: 55px;
+    .raise-heading, .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .page2-heading {
+        font-size: 30px;
+        line-height: 30px;
+    }
+    .process-container {
+        height: 9vh;
+    }
+    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+        text-align: center;
     }
     .phase1-heading {
-        font-size: 60px;
+        font-size: 55px;
         line-height: 60px;
+    }
+    .source-heading {
+        font-size: 35px;
+        line-height: 35px;
+        margin-bottom: 5px;
+    }
+    .source-subheading1 {
+        margin-top: 10px;
+    }
+    .source-pic1, .source-pic2 {
+        height: 230px;
     }
 }
 
@@ -1162,6 +1205,10 @@ p {
     .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
         font-size: 70px;
         line-height: 70px;
+    }
+    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+        font-size: 30px;
+        line-height: 35px;
     }
     .page1-container {
         width: 100%;
@@ -1187,14 +1234,21 @@ p {
         bottom: 10%;
         background-color: white;
     }
-    .page4-pgraph, .page5-pgraph {
+    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
         text-align: left;
+    }
+    .page5-pgraph, .land-pgraph2 {
+        width: 90%;
     }
     .page5-container {
         bottom: 4%;
     }
+    .find-pgraph, .fund-pgraph, .progress-pgraph {
+        font-size: 33px;
+        line-height: 38px;
+    }
     .land-pgraph {
-        width: 52%;
+        width: 65%;
     }
     .pic6, .pic7 {
         background-size: contain;
@@ -1206,7 +1260,82 @@ p {
     }
     
     .land-container2 {
-        bottom: 11%;
+        bottom: 10%;
+    }
+    .raise1, .raise2, .raise3, .raise4, .raise5, .raise6 {
+        padding-bottom: 0;
+    }
+    .pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+        height: 75vh;
+        background-position: 50% 100%;
+        margin-bottom: 2vh;
+    }
+    .pic11, .pic13 {
+        background-size: contain;
+    }
+    .raise-container {
+        height: 25vh;
+    }
+    .raise-pgraph {
+        top: 0;
+        transform: perspective(1px) translateY(0%);
+    }
+    .fund-table {
+        width: 90%;
+    }
+    .process1, .process2, .process3, .process4, .process5, .process6, .process7, .process8, .process9, .process10, .process11 {
+        height: 100vh;
+    }
+    .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic {
+        height: 75vh;
+        background-size: contain;
+        background-position: 50% 100%;
+    }
+    .dedication-heading {
+        width: 70%;
+    }
+    .paged1, .paged2, .paged3, .paged4, .paged5, .paged6, .paged7 {
+        height: 100vh;
+    }
+    .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+        height: 75vh;
+        background-size: contain;
+        background-position: 50% 100%;
+    }
+    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+        text-align: center;
+    }
+    .phase1-heading {
+        font-size: 70px;
+        line-height: 70px;
+    }
+    .phase1-subheading {
+        margin-bottom: 20px;
+    }
+    .phase1-pgraph, .phase1-subheading {
+        font-size: 40px;
+        line-height: 45px;
+    }
+    .source-pgraph {
+        font-size: 35px;
+        line-height: 40px;
+        margin-bottom: 20px;
+    }
+    .source-subheading1 {
+        font-size: 30px;
+        line-height: 35px;
+        margin-top: 30px;
+    }
+    .social-media-text {
+        font-size: 25px;
+    }
+    .social-icon-link img {
+        width: 2.5rem;
+        margin-left: 10px;
     }
     
 }
