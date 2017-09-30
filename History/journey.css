@@ -1270,6 +1270,15 @@ p {
         background-position: 50% 100%;
         margin-bottom: 2vh;
     }
+    .raise5 {
+        padding-top: 10vh;
+    }
+    .raise5 .raise-container {
+        height: 15vh;
+    }
+    .pic12 {
+        height: 75vh;
+    }
     .pic11, .pic13 {
         background-size: contain;
     }
@@ -1336,9 +1345,260 @@ p {
     .social-icon-link img {
         width: 2.5rem;
         margin-left: 10px;
+    } 
+}
+
+/* ----------- iPad Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 770px) {
+    .text-block, .link, .paragraph, .page2-heading {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .page1-container, .page3-container {
+        padding: 20px;
+    }
+    .pic4, .pic5 {
+        height: 65vh;
+        background-size: cover;
+    }
+    .pic4 {
+        background-position: 50% 40%;
+    }
+    .pic5 {
+        background-position: 50% 65%;
+    }
+    .page4-container, .page5-container {
+        height: 35vh;
+        position: static;
+    }
+    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .pic6, .pic7 {
+        height: 80vh;
+        background-size: cover;
+        background-position: 50% 100%;
+    }
+    .land-container, .land-container2 {
+        position: static;
+    }
+    .raise1, .raise2, .raise3, .raise4, .raise5, .raise6 {
+        padding-top: 11vh;
+    }
+    .raise-container {
+        height: 14vh;
+    }
+    .pic8, .pic9 {
+        background-size: cover;
+        background-position: 50% 50%;
+    }
+    .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+        font-size: 60px;
+        line-height: 65px;
+    }
+    .find-pgraph, .fund-pgraph, .progress-pgraph {
+        font-size: 26px;
+        line-height: 31px;
+    }
+    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph, .source-subheading1 {
+        font-size: 25px;
+        line-height: 30px;
+        padding: 10px 15px;
+    }
+    .process1, .process2, .process3, .process4, .process5, .process6, .process7, .process8, .process9, .process10, .process11 {
+        padding-top: 11vh;
+    }
+    .paged1, .paged2, .paged3, .paged4, .paged5, .paged6, .paged7 {
+        padding-top: 11vh;
+        padding-bottom: 0;
+    }
+    .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic {
+        background-size: cover;
+        background-position: 50% 50%;
     }
     
+    .process1-pic {
+        background-position: 50% 100%;
+    }
+    .process2-pic {
+        background-position: 50% 0%;
+    }
+    .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+        background-size: cover;
+        margin-bottom: 2vh;
+    }
+    .picd7 {
+        background-position: 50% 0%;
+    }
+    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+        width: 80%;
+    }
+    .phase1-heading {
+        font-size: 65px;
+        line-height: 70px;
+    }
+    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+        font-size: 30px;
+        line-height: 35px;
+    }
+    .source-heading {
+        font-size: 50px;
+        line-height: 55px;
+        padding: 0 100px;
+    }
+    .social-media-text {
+        font-size: 20px;
+    }
+    .social-icon-link img {
+        width: 1.8rem;
+        margin-left: 5px;
+    }
 }
+
+
+/* ----------- iPad Mini 4 Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 680px) {
+    .text-block, .link{
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .page4 {
+        margin-bottom: 30px;
+    }
+    .raise-fund {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .w-container{
+        max-width: 90%;
+    }
+    .pic8 {
+        background-position: 50% 0%;
+    }
+    .pic9 {
+        background-position: 50% 62%;
+    }
+    .pic11 {
+        background-size: cover;
+    }
+    .raise7, .progress {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+    .source-heading {
+        font-size: 45px;
+        line-height: 50px;
+    }
+    .source-pgraph {
+        margin-bottom: 5px;
+    }
+    .source-subheading1 {
+        margin-top: 5px;
+    }
+}
+
+/* ----------- Lenova IdeaPad Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+        font-size: 50px;
+        line-height: 55px;
+    }
+    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .pic4 {
+        background-position: 50% 90%;
+    }
+    .pic4, .pic5 {
+        height: 75vh;
+    }
+    .w-container, .land-container2 {
+        max-width: 95%;
+        margin: 0 auto;
+    }
+    .page4-pgraph, .page5-pgraph {
+        padding-right: 0;
+    }
+    .page5-pgraph, .land-pgraph2 {
+        width: 100%;
+    }
+    .find-pgraph, .fund-pgraph, .progress-pgraph,
+    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph, .source-subheading1 {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .pic7 {
+        background-position: 50% 70%;
+    }
+    .pic8, .pic9{
+        background-size: contain;
+    }
+    .pic11 {
+        background-position: 50% 50%;
+    }
+    .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic {
+        height: 80vh;
+    }
+    .process7-pic {
+        background-position: 50% 30%;
+    }
+    .process10-pic {
+        background-position: 50% 100%;
+    }
+    .dedication-heading {
+        width: 50%;
+    }
+    .paged7 {
+        margin-bottom: 30px;
+    }
+    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+        width: 100%;
+    }
+    .picd1 {
+        background-position: 50% 100%;
+    }
+    .picd4 {
+        background-position: 50% 55%;
+    }
+    .picd2, .picd3, .picd5, .picd6 {
+        background-position: 50% 50%;
+    }
+    .picd7 {
+        background-position: 50% 25%;
+    }
+    .phase1-heading {
+        font-size: 55px;
+        line-height: 60px;
+    }
+    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+        font-size: 25px;
+        line-height: 30px;
+    }
+    .source-heading {
+        font-size: 40px;
+        line-height: 45px;
+        padding: 0;
+    }
+    .source-row {
+        padding: 0;
+    }
+    .source-div {
+        width: 80%;
+    }
+    .social-media-text {
+        font-size: 18px;
+    }
+    .social-icon-link img {
+        width: 1.5rem;
+        margin-left: 0;
+    }
+}
+
 
 @media (max-width: 991px) {
     ._1-intro {
