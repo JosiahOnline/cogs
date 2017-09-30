@@ -702,13 +702,13 @@
                 if (iCurScrollPos > iScrollPos) {
                     $("#scrollDown").css('display', 'none');
                 } else {
-                    $("#scrollDown").css('display', 'flex');
+                    $("#scrollDown").css('display', 'block');
                 }
                 iScrollPos = iCurScrollPos;
 
                 var triggered_times = 0;
                 if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times == 0) {
-                    $("#scrollDown").css("display", "flex");
+                    $("#scrollDown").css("display", "block");
 
                     triggered_times = 1;
                 }
