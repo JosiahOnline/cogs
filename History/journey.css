@@ -285,7 +285,7 @@ p {
 }
 
 .heading, .paragraph {
-    display: inline-block;
+    display: block;
     margin-bottom: 0px;
     color: #34231c;
     font-weight: 700;
@@ -1600,398 +1600,141 @@ p {
 }
 
 
-@media (max-width: 991px) {
-    ._1-intro {
-        padding-top: 40%;
-    }
+
+/* ----------- S Note 8.0 Landscape ----------- */
+
+@media screen and ( max-width: 970px) and (max-height: 490px) {
     .intro-pgraph {
         font-size: 25px;
         line-height: 30px;
-    }
-    ._2-intro {
-        padding-top: 40%;
     }
     .intro-container {
         padding-right: 0px;
         padding-left: 0px;
     }
-    ._3-intro {
-        padding-top: 40%;
-    }
-    .page1-container {
-        bottom: 10%;
-    }
-    .paragraph {
-        font-size: 25px;
-        line-height: 30px;
-    }
-    .heading {
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .page2 {
-        height: 650px;
-    }
-    .page2-heading {
-        font-size: 25px;
-        line-height: 30px;
-    }
-    .page3 {
-        height: auto;
-    }
-    .page3-container {
-        width: 80%;
-    }
-    .page4 {
-        height: auto;
-        padding-bottom: 30px;
-    }
-    .page4-container {
-        position: static;
-        bottom: 15%;
-    }
-    .page4-pgraph {
-        display: block;
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-        border: 1px solid #534951;
-        border-radius: 4px;
-        text-align: left;
-    }
-    .page5 {
-        height: auto;
-        background-color: #fff;
-    }
-    .land1 {
-        height: auto;
-        background-color: #000;
-    }
-    .land2 {
-        height: auto;
-        padding-bottom: 30px;
-        background-color: #fff;
-    }
-    .raise1 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise2 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise4 {
-        padding-bottom: 40px;
-        background-color: #000;
-    }
-    .raise6 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise3 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise5 {
-        padding-bottom: 40px;
-        background-color: #000;
-    }
-    .process1 {
-        background-color: #000;
-    }
-    .process2 {
-        background-color: #000;
-    }
-    .process3 {
-        background-color: #000;
-    }
-    .process10 {
-        background-color: #000;
-    }
-    .page-dedication {
-        padding-top: 35%;
-    }
-    .intro-heading {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .page5-container {
-        position: static;
-        bottom: 0px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        border: 1px solid #64505a;
-        background-color: transparent;
-    }
-    .page5-pgraph {
-        color: #64505a;
-        text-align: left;
-    }
-    .land-container {
-        position: static;
-        width: 100%;
-        border-radius: 0px;
-        background-color: #000;
-    }
-    .land-container2 {
-        position: static;
-        bottom: 0px;
-        border: 1px solid #64505a;
-        background-color: #fff;
-    }
-    .land-pgraph2 {
-        text-align: left;
-    }
-    .raise-container {
-        bottom: 0px;
-        width: 100%;
-        border-radius: 0px;
-        background-color: #000;
-    }
-    .process-container {
-        bottom: 0px;
-        width: 100%;
-    }
-    .process4 {
-        background-color: #000;
-    }
-    .process5 {
-        background-color: #000;
-    }
-    .process6 {
-        background-color: #000;
-    }
-    .process7 {
-        background-color: #000;
-    }
-    .process8 {
-        background-color: #000;
-    }
-    .process9 {
-        background-color: #000;
-    }
-    .process11 {
-        background-color: #000;
-    }
-    .fund-pgraph {
-        line-height: 20px;
-    }
-    .fund-heading {
-        margin-bottom: 10px;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .fund-container {
-        position: static;
-        bottom: 20%;
-        padding-right: 30px;
-        padding-left: 30px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    .find-land {
-        height: auto;
-    }
-    .find-container {
-        position: static;
-        bottom: 15%;
-        padding-right: 30px;
-        padding-left: 30px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-    .find-heading {
-        margin-bottom: 10px;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: right;
-    }
-    .land-pgraph {
-        color: #fff;
-    }
-    .progress-container {
-        position: static;
-        bottom: 10%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-    .progress-heading {
-        margin-bottom: 10px;
-        padding-right: 0px;
-        padding-left: 20px;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
-    }
-    .raise-heading {
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .dedication-heading {
-        padding-right: 90px;
-        padding-left: 90px;
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .progress-div {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    .phase1-end {
-        padding-top: 25%;
-    }
-    .phase1-container {
-        width: 90%;
-    }
-    .phase1-heading {
-        text-align: left;
-    }
-    .phase1-pgraph {
-        padding-left: 20px;
-        text-align: left;
-    }
-    .paged1 {
-        background-color: #fff;
-    }
-    .paged2 {
-        background-color: #fff;
-    }
-    .paged3 {
-        background-color: #fff;
-    }
-    .paged4 {
-        background-color: #fff;
-    }
-    .paged5 {
-        background-color: #fff;
-    }
-    .paged7 {
-        background-color: #fff;
-    }
-    .d1-container {
-        bottom: 0px;
-        width: 90%;
-    }
-    .d2-container {
-        bottom: 0px;
-        width: 70%;
-    }
-    .d3-container {
-        bottom: 0px;
-        width: 60%;
-    }
-    .d4-container {
-        bottom: 0px;
-        width: 75%;
-        margin-bottom: 0px;
-    }
-    .d5-container {
-        bottom: 0px;
-        width: 32%;
-    }
-    .d6-container {
-        bottom: 0px;
-        width: 75%;
-    }
-    .d7-container {
-        bottom: 0px;
-        width: 35%;
-    }
-    .pic1 {
-        height: 650px;
-    }
-    .pic5 {
-        height: 650px;
-        background-position: 50% 50%;
-        background-size: cover;
-    }
-    .pic3 {
-        height: 650px;
-    }
-    .pic4 {
-        height: 550px;
-        margin-bottom: 30px;
-        background-size: cover;
-    }
-    .pic6 {
-        height: 550px;
-    }
-    .pic7 {
-        height: 550px;
-        margin-bottom: 30px;
-        background-position: 50% 0px;
-        background-size: cover;
-    }
-    .pic8 {
-        height: 480px;
-        margin-bottom: 0px;
-        background-size: cover;
-    }
-    .pic9{
-        height: 550px;
-        margin-bottom: 0px;
-        background-size: cover;
-    }
-    .pic10 {
-        height: 600px;
-        margin-bottom: 0px;
-        background-size: cover;
-    }
-    .pic11 {
-        margin-bottom: 0px;
-    }
-    .pic12 {
-        margin-bottom: 0px;
-    }
-    .pic13 {
-        margin-bottom: 0px;
-    }
-    .process6-pic {
-        background-size: cover;
-    }
-    .picd7 {
-        height: 550px;
-        background-position: 50% 50%;
-    }
-    .phase1-subheading {
-        padding-left: 20px;
-        text-align: left;
-    }
-    .source-heading {
-        font-size: 40px;
-        line-height: 45px;
-    }
-    .source-div {
-        width: 93%;
-    }
-    .source-pgraph {
+    .text-block, .link {
         font-size: 20px;
         line-height: 25px;
+    }
+    .page1-container {
+        bottom: 15%;
+        padding: 15px;
+    }
+    .raise-heading, .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+        font-size: 40px;line-height: 45px;
+    }
+    .find-heading, .fund-heading, .progress-heading {
+        -ms-flex: 0 0 250px;
+            flex: 0 0 250px;
+    }
+    .fund-table {
+        width: 86%;
+    }
+    .pic4, .pic5 {
+        height: 68vh;
+    }
+    .dedication-container {
+        padding: 0 20px;
+    }
+    .dedication-heading {
+        width: 40%;
+    }
+    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+        font-size: 20px;
+        line-height: 25px;
+    }
+    .source-heading {
+        font-size: 35px;
+        line-height: 35px;
+    }
+    .source-subheading1 {
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .social-media-text {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .social-icon-link img {
+        width: 1.3rem;
+    }
+}
+
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .text-block, .link, .paragraph, .page2-heading {
+        font-size: 35px;
+        line-height: 1.2em;
+    }
+    
+    
+    .pic4, .pic5 {
+        height: 60vh;
+        background-position: 50% 100%;
+        background-size: cover;
+    }
+    .page4-container, .page5-container {
+        height: 40vh;
+    }
+    .page4-pgraph, .page5-pgraph {
+        padding-right: 0;
+    }
+    .pic6, .pic7 {
+        height: 75vh;
+        background-position: 50% 100%;
+    }
+    .land-pgraph {
+        width: 100%;
+    }
+    .page4-container, .page5-container, .land-container, .land-container2 {
+        position: static;
+    }
+    
+    .raise-container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+        font-size: 25px;
+        line-height: 1.2em;
+    }
+    
+    .fund-table th, .fund-table td {
+        font-size: 30px;
+        line-height: 1.2em;
+    }
+    
+    .heading, .find-heading, .fund-heading, .raise-heading .progress-heading, .dedication-heading {
+        font-size: 55px;
+        line-height: 1.1em;
+    }
+    
+    .find-pgraph, .fund-pgraph, .progress-pgraph {
+        font-size: 28px;
+        line-height: 1.2em;
+    }
+    
+    .dedication-heading,
+    .phase1-container {
+        width: 80%;
+    }
+    .phase1-heading, .source-heading {
+        font-size: 60px;
+        line-height: 1em;
+    }
+    .source-heading, .source-pgraph {
+        padding: 0 70px;
+    }
+    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+        font-size: 35px;
+        line-height: 1.2em;
+    }
+    .source-subheading1 {
+        font-size: 30px;
+        line-height: 1em;
     }
 }
 
