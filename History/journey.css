@@ -1,4 +1,3 @@
-
 html {
     font-family: 'Droid Serif', serif;
     -ms-text-size-adjust: 100%;
@@ -129,7 +128,7 @@ p {
     opacity: 1;
     display: none;
     -webkit-animation: out 4s ease forwards 2s;
-            animation: out 4s ease forwards 2s
+    animation: out 4s ease forwards 2s
 }
 
 @-webkit-keyframes out {
@@ -161,21 +160,20 @@ p {
 ._2-intro {
     z-index: 1002;
     -webkit-animation-delay: 5s;
-            animation-delay: 5s
+    animation-delay: 5s
 }
 
 ._3-intro {
     z-index: 1001;
     -webkit-animation-delay: 9s;
-            animation-delay: 9s
+    animation-delay: 9s
 }
-
 
 .intro-container {
     position: relative;
     top: 50%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
     padding-right: 50px;
     padding-left: 50px;
 }
@@ -260,8 +258,8 @@ p {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     width: 60%;
     margin-right: auto;
     margin-left: auto;
@@ -270,32 +268,33 @@ p {
     background-color: hsla(0, 0%, 100%, .85);
     text-align: center;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-delay: 12s;
-            animation-delay: 12s;
+    animation-delay: 12s;
     -webkit-animation-iteration-count: 1;
-            animation-iteration-count: 1;
+    animation-iteration-count: 1;
 }
 
 .heading {
     margin-top: 0px;
     color: #34231c;
     font-size: 60px;
-    line-height: 65px; 
+    line-height: 65px;
 }
 
-.heading, .paragraph {
-    display: inline-block;
+.heading,
+.paragraph {
+    display: block;
     margin-bottom: 0px;
     color: #34231c;
     font-weight: 700;
     text-align: center;
     -webkit-animation-duration: 1s;
-            animation-duration: 1s;
+    animation-duration: 1s;
     -webkit-animation-delay: 12s;
-            animation-delay: 12s;
+    animation-delay: 12s;
     -webkit-animation-iteration-count: 3;
-            animation-iteration-count: 3;
+    animation-iteration-count: 3;
 }
 
 .paragraph {
@@ -303,7 +302,10 @@ p {
     line-height: 35px;
 }
 
-.page2-container, .page3-container, .page4-container, .page5-container {
+.page2-container,
+.page3-container,
+.page4-container,
+.page5-container {
     position: absolute;
     left: 0px;
     right: 0px;
@@ -326,7 +328,8 @@ p {
     text-align: center;
 }
 
-.page4-container, .page5-container {
+.page4-container,
+.page5-container {
     bottom: 5%;
 }
 
@@ -339,7 +342,8 @@ p {
     font-weight: 400;
 }
 
-.page4-pgraph, .page5-pgraph {
+.page4-pgraph,
+.page5-pgraph {
     padding: 20px;
     color: #534951;
     border-radius: 4px;
@@ -350,7 +354,9 @@ p {
     text-align: center;
 }
 
-.find-pgraph, .fund-pgraph, .progress-pgraph {
+.find-pgraph,
+.fund-pgraph,
+.progress-pgraph {
     color: #534951;
     font-size: 30px;
     line-height: 35px;
@@ -360,10 +366,11 @@ p {
 .page5-pgraph {
     width: 90%;
     margin: 0 auto;
-    
 }
 
-.find-container, .fund-container, .progress-container {
+.find-container,
+.fund-container,
+.progress-container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -376,12 +383,12 @@ p {
     position: relative;
     top: 50%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
 }
 
-
-
-.find-heading, .fund-heading, .progress-heading {
+.find-heading,
+.fund-heading,
+.progress-heading {
     margin-top: 0px;
     margin-bottom: 0px;
     padding-right: 30px;
@@ -389,15 +396,15 @@ p {
     font-size: 60px;
     line-height: 65px;
     text-align: right;
-    
 }
 
-.find-heading, .fund-heading, .progress-heading {
+.find-heading,
+.fund-heading,
+.progress-heading {
     -webkit-box-flex: 0;
     -ms-flex: 0 0 300px;
     flex: 0 0 300px;
 }
-
 
 .find-land,
 .land1,
@@ -443,7 +450,9 @@ p {
     border: 2px solid white;
     color: white;
 }
-.fund-table th, .fund-table td {
+
+.fund-table th,
+.fund-table td {
     font-size: 35px;
     padding: 10px 15px;
     line-height: 40px;
@@ -462,7 +471,7 @@ p {
     bottom: 5%;
 }
 
-.land-pgraph, 
+.land-pgraph,
 .land-pgraph2 {
     padding: 15px 20px;
     margin: 0 auto;
@@ -496,7 +505,7 @@ p {
     position: relative;
     top: 55%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
 }
 
 .raise-heading {
@@ -507,12 +516,18 @@ p {
     line-height: 65px;
 }
 
-.pic1, .pic3, .pic4, .pic5, .pic6, .pic7 {
+.pic1,
+.pic3,
+.pic4,
+.pic5,
+.pic6,
+.pic7 {
     height: 100vh;
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .pic1 {
     background-image: url("../History/img/pic1.jpg");
 }
@@ -540,13 +555,19 @@ p {
     background-position: 50% 100%;
 }
 
-.pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+.pic8,
+.pic9,
+.pic10,
+.pic11,
+.pic12,
+.pic13 {
     height: 90vh;
     margin-bottom: 3vh;
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 .raise-container {
     height: 7vh;
     display: -webkit-box;
@@ -554,8 +575,8 @@ p {
     display: flex;
     position: relative;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .raise-pgraph {
@@ -565,14 +586,14 @@ p {
     border-radius: 4px;
 }
 
-.raise-pgraph, 
+.raise-pgraph,
 .process-pgraph {
     font-size: 25px;
     font-weight: 700;
     position: absolute;
     top: 50%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
 }
 
 .process-pgraph {
@@ -584,7 +605,7 @@ p {
     background-image: url("../History/img/pic8.jpg");
 }
 
-.pic9{
+.pic9 {
     background-image: url("../History/img/pic9a.jpg");
 }
 
@@ -606,7 +627,6 @@ p {
     background-size: cover;
 }
 
-
 .process1,
 .process2,
 .process3,
@@ -622,16 +642,16 @@ p {
     background-color: #232321;
 }
 
-.process1-pic, 
-.process2-pic, 
-.process3-pic, 
-.process4-pic, 
-.process5-pic, 
-.process6-pic, 
-.process7-pic, 
-.process8-pic, 
-.process9-pic, 
-.process10-pic, 
+.process1-pic,
+.process2-pic,
+.process3-pic,
+.process4-pic,
+.process5-pic,
+.process6-pic,
+.process7-pic,
+.process8-pic,
+.process9-pic,
+.process10-pic,
 .process11-pic {
     height: 93vh;
     background-position: 50% 50%;
@@ -646,8 +666,8 @@ p {
     position: relative;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .process1-pic {
@@ -696,15 +716,13 @@ p {
     background-image: url("../History/img/pic24.jpg");
 }
 
-
-
 .dedication-container {
     padding-right: 50px;
     padding-left: 50px;
     position: relative;
     top: 50%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
 }
 
 .dedication-heading {
@@ -783,8 +801,8 @@ p {
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .d1-pgraph,
@@ -824,7 +842,7 @@ p {
     position: relative;
     top: 50%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%); 
+    transform: perspective(1px) translateY(-50%);
 }
 
 .phase1-heading {
@@ -841,7 +859,8 @@ p {
     text-align: left;
 }
 
-.phase1-pgraph, .phase1-subheading {
+.phase1-pgraph,
+.phase1-subheading {
     color: #534951;
     font-size: 30px;
     line-height: 35px;
@@ -859,7 +878,7 @@ p {
     position: relative;
     top: 55%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
 }
 
 .source-heading {
@@ -901,22 +920,27 @@ p {
     margin-bottom: 20px;
 }
 
-.source-pgraph, .source-subheading1 {
+.source-pgraph,
+.source-subheading1 {
     color: white;
     font-weight: 400;
     text-align: center;
 }
-.source-pgraph, .source-subheading1 {
+
+.source-pgraph,
+.source-subheading1 {
     font-size: 30px;
     line-height: 35px;
 }
+
 .source-subheading1 {
     font-size: 25px;
     line-height: 30px;
     margin-bottom: 0px;
 }
 
-.source-pic1, .source-pic2 {
+.source-pic1,
+.source-pic2 {
     height: 260px;
     background-position: 50% 50%;
     background-size: contain;
@@ -951,7 +975,7 @@ p {
     position: relative;
     top: 50%;
     -webkit-transform: perspective(1px) translateY(-50%);
-            transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
 }
 
 .social-media-text {
@@ -988,6 +1012,40 @@ p {
     width: 1.5rem;
 }
 
+.rotate-screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow: hidden;
+    z-index: 1005;
+}
+.rotate-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+    
+}
+
+.rotate-pic {
+    height: 23vh;
+    width: 23vh;
+    background-image: url('../History/img/rotate.png');
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.rotate-container h2 {
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+}
+
 /* ----------- Laptop with HiDPI ----------- */
 
 @media screen and ( max-width: 1441px) and (orientation: landscape) {
@@ -1008,13 +1066,19 @@ p {
     }
 }
 
+
 /* ----------- iPad Pro Landscape ----------- */
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     .page1-container {
         width: 65%;
     }
-    .raise1, .raise2, .raise3, .raise4, .raise5, .raise6 {
+    .raise1,
+    .raise2,
+    .raise3,
+    .raise4,
+    .raise5,
+    .raise6 {
         padding-bottom: 5vh;
     }
     .pic5 {
@@ -1023,7 +1087,12 @@ p {
     .pic7 {
         background-position: 50% 0%;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic12,
+    .pic13 {
         height: 90vh;
         margin-bottom: 2vh;
         background-position: 50% 100%;
@@ -1037,10 +1106,16 @@ p {
 /* ----------- Aspire E1 Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
-    .pic5, .pic7 {
+    .pic5,
+    .pic7 {
         background-position: 50% 70%;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic12,
+    .pic13 {
         height: 88vh;
     }
     .raise-container2 {
@@ -1059,8 +1134,8 @@ p {
     .source-div {
         width: 80%;
     }
-    
 }
+
 
 /* ----------- Laptop with Touch ----------- */
 
@@ -1085,6 +1160,7 @@ p {
         width: 85%;
     }
 }
+
 
 /* ----------- Laptop with MDPI screen----------- */
 
@@ -1123,6 +1199,7 @@ p {
     }
 }
 
+
 /* ----------- Aspire V3 Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1100px) and (max-height: 520px) {
@@ -1136,31 +1213,61 @@ p {
     .raise-pgraph {
         padding: 10px 20px;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic12,
+    .pic13 {
         margin-bottom: 4vh;
     }
     .raise-container2 {
         width: 100%;
     }
-    .paragraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading {
+    .paragraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading {
         font-size: 25px;
         line-height: 30px;
     }
-    .page4-pgraph, .page5-pgraph, .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .find-pgraph, .fund-pgraph, .progress-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 20px;
         line-height: 25px;
     }
     .page5-pgraph {
         width: 100%;
     }
-    .page4-container, .page5-container {
+    .page4-container,
+    .page5-container {
         max-width: 95%;
         margin: 0 auto;
     }
     .fund-table {
         width: 90%;
     }
-    .raise-heading, .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .raise-heading,
+    .heading,
+    .find-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 45px;
         line-height: 50px;
     }
@@ -1171,11 +1278,23 @@ p {
     .process-container {
         height: 9vh;
     }
-    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+    .d1-container,
+    .d2-container,
+    .d3-container,
+    .d4-container,
+    .d5-container,
+    .d6-container,
+    .d7-container {
         width: 90%;
         margin: 0 auto;
     }
-    .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         text-align: center;
     }
     .phase1-heading {
@@ -1190,23 +1309,42 @@ p {
     .source-subheading1 {
         margin-top: 10px;
     }
-    .source-pic1, .source-pic2 {
+    .source-pic1,
+    .source-pic2 {
         height: 230px;
     }
 }
 
+
 /* ----------- iPad Pro Potrait------------------*/
 
 @media screen and ( max-width: 1024px) {
-    .text-block, .link, .paragraph, .page2-heading {
+    .text-block,
+    .link,
+    .paragraph,
+    .page2-heading {
         font-size: 40px;
         line-height: 45px;
     }
-    .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .heading,
+    .find-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 70px;
         line-height: 70px;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 30px;
         line-height: 35px;
     }
@@ -1225,7 +1363,8 @@ p {
         width: 100%;
         padding: 30px;
     }
-    .pic4, .pic5 {
+    .pic4,
+    .pic5 {
         background-size: contain;
         background-position: 50% 30%;
     }
@@ -1234,38 +1373,52 @@ p {
         bottom: 10%;
         background-color: white;
     }
-    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
+    .page4-pgraph,
+    .page5-pgraph,
+    .land-pgraph2 {
         text-align: left;
     }
-    .page5-pgraph, .land-pgraph2 {
+    .page5-pgraph,
+    .land-pgraph2 {
         width: 90%;
     }
     .page5-container {
         bottom: 4%;
     }
-    .find-pgraph, .fund-pgraph, .progress-pgraph {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
         font-size: 33px;
         line-height: 38px;
     }
     .land-pgraph {
         width: 65%;
     }
-    .pic6, .pic7 {
+    .pic6,
+    .pic7 {
         background-size: contain;
         background-position: 50% 50%;
     }
-    
     .land-container {
         bottom: 22%;
     }
-    
     .land-container2 {
         bottom: 10%;
     }
-    .raise1, .raise2, .raise3, .raise4, .raise5, .raise6 {
+    .raise1,
+    .raise2,
+    .raise3,
+    .raise4,
+    .raise5,
+    .raise6 {
         padding-bottom: 0;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic12, .pic13 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic12,
+    .pic13 {
         height: 75vh;
         background-position: 50% 100%;
         margin-bottom: 2vh;
@@ -1279,7 +1432,8 @@ p {
     .pic12 {
         height: 75vh;
     }
-    .pic11, .pic13 {
+    .pic11,
+    .pic13 {
         background-size: contain;
     }
     .raise-container {
@@ -1292,10 +1446,30 @@ p {
     .fund-table {
         width: 90%;
     }
-    .process1, .process2, .process3, .process4, .process5, .process6, .process7, .process8, .process9, .process10, .process11 {
+    .process1,
+    .process2,
+    .process3,
+    .process4,
+    .process5,
+    .process6,
+    .process7,
+    .process8,
+    .process9,
+    .process10,
+    .process11 {
         height: 100vh;
     }
-    .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic {
+    .process1-pic,
+    .process2-pic,
+    .process3-pic,
+    .process4-pic,
+    .process5-pic,
+    .process6-pic,
+    .process7-pic,
+    .process8-pic,
+    .process9-pic,
+    .process10-pic,
+    .process11-pic {
         height: 75vh;
         background-size: contain;
         background-position: 50% 100%;
@@ -1303,19 +1477,43 @@ p {
     .dedication-heading {
         width: 70%;
     }
-    .paged1, .paged2, .paged3, .paged4, .paged5, .paged6, .paged7 {
+    .paged1,
+    .paged2,
+    .paged3,
+    .paged4,
+    .paged5,
+    .paged6,
+    .paged7 {
         height: 100vh;
     }
-    .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+    .picd1,
+    .picd2,
+    .picd3,
+    .picd4,
+    .picd5,
+    .picd6,
+    .picd7 {
         height: 75vh;
         background-size: contain;
         background-position: 50% 100%;
     }
-    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+    .d1-container,
+    .d2-container,
+    .d3-container,
+    .d4-container,
+    .d5-container,
+    .d6-container,
+    .d7-container {
         width: 90%;
         margin: 0 auto;
     }
-    .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         text-align: center;
     }
     .phase1-heading {
@@ -1325,7 +1523,8 @@ p {
     .phase1-subheading {
         margin-bottom: 20px;
     }
-    .phase1-pgraph, .phase1-subheading {
+    .phase1-pgraph,
+    .phase1-subheading {
         font-size: 40px;
         line-height: 45px;
     }
@@ -1345,20 +1544,26 @@ p {
     .social-icon-link img {
         width: 2.5rem;
         margin-left: 10px;
-    } 
+    }
 }
+
 
 /* ----------- iPad Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
-    .text-block, .link, .paragraph, .page2-heading {
+    .text-block,
+    .link,
+    .paragraph,
+    .page2-heading {
         font-size: 30px;
         line-height: 35px;
     }
-    .page1-container, .page3-container {
+    .page1-container,
+    .page3-container {
         padding: 20px;
     }
-    .pic4, .pic5 {
+    .pic4,
+    .pic5 {
         height: 65vh;
         background-size: cover;
     }
@@ -1368,78 +1573,145 @@ p {
     .pic5 {
         background-position: 50% 65%;
     }
-    .page4-container, .page5-container {
+    .page4-container,
+    .page5-container {
         height: 35vh;
         position: static;
     }
-    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
+    .page4-pgraph,
+    .page5-pgraph,
+    .land-pgraph2 {
         font-size: 25px;
         line-height: 30px;
     }
-    .pic6, .pic7 {
+    .pic6,
+    .pic7 {
         height: 80vh;
         background-size: cover;
         background-position: 50% 100%;
     }
-    .land-container, .land-container2 {
+    .land-container,
+    .land-container2 {
         position: static;
     }
-    .raise1, .raise2, .raise3, .raise4, .raise5, .raise6 {
+    .raise1,
+    .raise2,
+    .raise3,
+    .raise4,
+    .raise5,
+    .raise6 {
         padding-top: 11vh;
     }
     .raise-container {
         height: 14vh;
     }
-    .pic8, .pic9 {
+    .pic8,
+    .pic9 {
         background-size: cover;
         background-position: 50% 50%;
     }
-    .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .heading,
+    .find-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 60px;
         line-height: 65px;
     }
-    .find-pgraph, .fund-pgraph, .progress-pgraph {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
         font-size: 26px;
         line-height: 31px;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph, .source-subheading1 {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph,
+    .source-subheading1 {
         font-size: 25px;
         line-height: 30px;
         padding: 10px 15px;
     }
-    .process1, .process2, .process3, .process4, .process5, .process6, .process7, .process8, .process9, .process10, .process11 {
+    .process1,
+    .process2,
+    .process3,
+    .process4,
+    .process5,
+    .process6,
+    .process7,
+    .process8,
+    .process9,
+    .process10,
+    .process11 {
         padding-top: 11vh;
     }
-    .paged1, .paged2, .paged3, .paged4, .paged5, .paged6, .paged7 {
+    .paged1,
+    .paged2,
+    .paged3,
+    .paged4,
+    .paged5,
+    .paged6,
+    .paged7 {
         padding-top: 11vh;
         padding-bottom: 0;
     }
-    .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic {
+    .process1-pic,
+    .process2-pic,
+    .process3-pic,
+    .process4-pic,
+    .process5-pic,
+    .process6-pic,
+    .process7-pic,
+    .process8-pic,
+    .process9-pic,
+    .process10-pic,
+    .process11-pic {
         background-size: cover;
         background-position: 50% 50%;
     }
-    
     .process1-pic {
         background-position: 50% 100%;
     }
     .process2-pic {
         background-position: 50% 0%;
     }
-    .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+    .picd1,
+    .picd2,
+    .picd3,
+    .picd4,
+    .picd5,
+    .picd6,
+    .picd7 {
         background-size: cover;
         margin-bottom: 2vh;
     }
     .picd7 {
         background-position: 50% 0%;
     }
-    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+    .d1-container,
+    .d2-container,
+    .d3-container,
+    .d4-container,
+    .d5-container,
+    .d6-container,
+    .d7-container {
         width: 80%;
     }
     .phase1-heading {
         font-size: 65px;
         line-height: 70px;
     }
-    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 30px;
         line-height: 35px;
     }
@@ -1461,7 +1733,8 @@ p {
 /* ----------- iPad Mini 4 Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 680px) {
-    .text-block, .link{
+    .text-block,
+    .link {
         font-size: 25px;
         line-height: 30px;
     }
@@ -1472,7 +1745,7 @@ p {
         margin-top: 50px;
         margin-bottom: 50px;
     }
-    .w-container{
+    .w-container {
         max-width: 90%;
     }
     .pic8 {
@@ -1484,7 +1757,8 @@ p {
     .pic11 {
         background-size: cover;
     }
-    .raise7, .progress {
+    .raise7,
+    .progress {
         margin-top: 50px;
         margin-bottom: 50px;
     }
@@ -1500,48 +1774,83 @@ p {
     }
 }
 
+
 /* ----------- Lenova IdeaPad Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
-    .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .heading,
+    .find-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 50px;
         line-height: 55px;
     }
-    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
+    .page4-pgraph,
+    .page5-pgraph,
+    .land-pgraph2 {
         font-size: 20px;
         line-height: 25px;
     }
     .pic4 {
         background-position: 50% 90%;
     }
-    .pic4, .pic5 {
+    .pic4,
+    .pic5 {
         height: 75vh;
     }
-    .w-container, .land-container2 {
+    .w-container,
+    .land-container2 {
         max-width: 95%;
         margin: 0 auto;
     }
-    .page4-pgraph, .page5-pgraph {
+    .page4-pgraph,
+    .page5-pgraph {
         padding-right: 0;
     }
-    .page5-pgraph, .land-pgraph2 {
+    .page5-pgraph,
+    .land-pgraph2 {
         width: 100%;
     }
-    .find-pgraph, .fund-pgraph, .progress-pgraph,
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph, .source-subheading1 {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph,
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph,
+    .source-subheading1 {
         font-size: 20px;
         line-height: 25px;
     }
     .pic7 {
         background-position: 50% 70%;
     }
-    .pic8, .pic9{
+    .pic8,
+    .pic9 {
         background-size: contain;
     }
     .pic11 {
         background-position: 50% 50%;
     }
-    .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic {
+    .process1-pic,
+    .process2-pic,
+    .process3-pic,
+    .process4-pic,
+    .process5-pic,
+    .process6-pic,
+    .process7-pic,
+    .process8-pic,
+    .process9-pic,
+    .process10-pic,
+    .process11-pic {
         height: 80vh;
     }
     .process7-pic {
@@ -1556,7 +1865,13 @@ p {
     .paged7 {
         margin-bottom: 30px;
     }
-    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+    .d1-container,
+    .d2-container,
+    .d3-container,
+    .d4-container,
+    .d5-container,
+    .d6-container,
+    .d7-container {
         width: 100%;
     }
     .picd1 {
@@ -1565,7 +1880,10 @@ p {
     .picd4 {
         background-position: 50% 55%;
     }
-    .picd2, .picd3, .picd5, .picd6 {
+    .picd2,
+    .picd3,
+    .picd5,
+    .picd6 {
         background-position: 50% 50%;
     }
     .picd7 {
@@ -1575,7 +1893,9 @@ p {
         font-size: 55px;
         line-height: 60px;
     }
-    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 25px;
         line-height: 30px;
     }
@@ -1600,631 +1920,226 @@ p {
 }
 
 
-@media (max-width: 991px) {
-    ._1-intro {
-        padding-top: 40%;
-    }
+/* ----------- S Note 8.0 Landscape ----------- */
+
+@media screen and ( max-width: 970px) and (max-height: 490px) {
     .intro-pgraph {
         font-size: 25px;
         line-height: 30px;
     }
-    ._2-intro {
-        padding-top: 40%;
-    }
     .intro-container {
         padding-right: 0px;
         padding-left: 0px;
     }
-    ._3-intro {
-        padding-top: 40%;
+    .text-block,
+    .link {
+        font-size: 20px;
+        line-height: 25px;
     }
     .page1-container {
-        bottom: 10%;
-    }
-    .paragraph {
-        font-size: 25px;
-        line-height: 30px;
-    }
-    .heading {
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .page2 {
-        height: 650px;
-    }
-    .page2-heading {
-        font-size: 25px;
-        line-height: 30px;
-    }
-    .page3 {
-        height: auto;
-    }
-    .page3-container {
-        width: 80%;
-    }
-    .page4 {
-        height: auto;
-        padding-bottom: 30px;
-    }
-    .page4-container {
-        position: static;
         bottom: 15%;
+        padding: 15px;
     }
-    .page4-pgraph {
-        display: block;
-        width: 90%;
-        margin-right: auto;
-        margin-left: auto;
-        border: 1px solid #534951;
-        border-radius: 4px;
-        text-align: left;
-    }
-    .page5 {
-        height: auto;
-        background-color: #fff;
-    }
-    .land1 {
-        height: auto;
-        background-color: #000;
-    }
-    .land2 {
-        height: auto;
-        padding-bottom: 30px;
-        background-color: #fff;
-    }
-    .raise1 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise2 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise4 {
-        padding-bottom: 40px;
-        background-color: #000;
-    }
-    .raise6 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise3 {
-        padding-bottom: 0px;
-        background-color: #000;
-    }
-    .raise5 {
-        padding-bottom: 40px;
-        background-color: #000;
-    }
-    .process1 {
-        background-color: #000;
-    }
-    .process2 {
-        background-color: #000;
-    }
-    .process3 {
-        background-color: #000;
-    }
-    .process10 {
-        background-color: #000;
-    }
-    .page-dedication {
-        padding-top: 35%;
-    }
-    .intro-heading {
-        margin-top: 0px;
-        margin-bottom: 0px;
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .page5-container {
-        position: static;
-        bottom: 0px;
-        margin-top: 30px;
-        margin-bottom: 30px;
-        border: 1px solid #64505a;
-        background-color: transparent;
-    }
-    .page5-pgraph {
-        color: #64505a;
-        text-align: left;
-    }
-    .land-container {
-        position: static;
-        width: 100%;
-        border-radius: 0px;
-        background-color: #000;
-    }
-    .land-container2 {
-        position: static;
-        bottom: 0px;
-        border: 1px solid #64505a;
-        background-color: #fff;
-    }
-    .land-pgraph2 {
-        text-align: left;
-    }
-    .raise-container {
-        bottom: 0px;
-        width: 100%;
-        border-radius: 0px;
-        background-color: #000;
-    }
-    .process-container {
-        bottom: 0px;
-        width: 100%;
-    }
-    .process4 {
-        background-color: #000;
-    }
-    .process5 {
-        background-color: #000;
-    }
-    .process6 {
-        background-color: #000;
-    }
-    .process7 {
-        background-color: #000;
-    }
-    .process8 {
-        background-color: #000;
-    }
-    .process9 {
-        background-color: #000;
-    }
-    .process11 {
-        background-color: #000;
-    }
-    .fund-pgraph {
-        line-height: 20px;
-    }
-    .fund-heading {
-        margin-bottom: 10px;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .fund-container {
-        position: static;
-        bottom: 20%;
-        padding-right: 30px;
-        padding-left: 30px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-pack: start;
-        -ms-flex-pack: start;
-        justify-content: flex-start;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    .find-land {
-        height: auto;
-    }
-    .find-container {
-        position: static;
-        bottom: 15%;
-        padding-right: 30px;
-        padding-left: 30px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-    }
-    .find-heading {
-        margin-bottom: 10px;
-        -ms-flex-negative: 0;
-        flex-shrink: 0;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: right;
-    }
-    .land-pgraph {
-        color: #fff;
-    }
-    .progress-container {
-        position: static;
-        bottom: 10%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-    .progress-heading {
-        margin-bottom: 10px;
-        padding-right: 0px;
-        padding-left: 20px;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-        font-size: 45px;
-        line-height: 50px;
-        text-align: center;
-    }
-    .raise-heading {
-        font-size: 45px;
-        line-height: 50px;
-    }
+    .raise-heading,
+    .heading,
+    .find-heading,
+    .fund-heading,
+    .progress-heading,
     .dedication-heading {
-        padding-right: 90px;
-        padding-left: 90px;
-        font-size: 45px;
-        line-height: 50px;
-    }
-    .progress-div {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    .phase1-end {
-        padding-top: 25%;
-    }
-    .phase1-container {
-        width: 90%;
-    }
-    .phase1-heading {
-        text-align: left;
-    }
-    .phase1-pgraph {
-        padding-left: 20px;
-        text-align: left;
-    }
-    .paged1 {
-        background-color: #fff;
-    }
-    .paged2 {
-        background-color: #fff;
-    }
-    .paged3 {
-        background-color: #fff;
-    }
-    .paged4 {
-        background-color: #fff;
-    }
-    .paged5 {
-        background-color: #fff;
-    }
-    .paged7 {
-        background-color: #fff;
-    }
-    .d1-container {
-        bottom: 0px;
-        width: 90%;
-    }
-    .d2-container {
-        bottom: 0px;
-        width: 70%;
-    }
-    .d3-container {
-        bottom: 0px;
-        width: 60%;
-    }
-    .d4-container {
-        bottom: 0px;
-        width: 75%;
-        margin-bottom: 0px;
-    }
-    .d5-container {
-        bottom: 0px;
-        width: 32%;
-    }
-    .d6-container {
-        bottom: 0px;
-        width: 75%;
-    }
-    .d7-container {
-        bottom: 0px;
-        width: 35%;
-    }
-    .pic1 {
-        height: 650px;
-    }
-    .pic5 {
-        height: 650px;
-        background-position: 50% 50%;
-        background-size: cover;
-    }
-    .pic3 {
-        height: 650px;
-    }
-    .pic4 {
-        height: 550px;
-        margin-bottom: 30px;
-        background-size: cover;
-    }
-    .pic6 {
-        height: 550px;
-    }
-    .pic7 {
-        height: 550px;
-        margin-bottom: 30px;
-        background-position: 50% 0px;
-        background-size: cover;
-    }
-    .pic8 {
-        height: 480px;
-        margin-bottom: 0px;
-        background-size: cover;
-    }
-    .pic9{
-        height: 550px;
-        margin-bottom: 0px;
-        background-size: cover;
-    }
-    .pic10 {
-        height: 600px;
-        margin-bottom: 0px;
-        background-size: cover;
-    }
-    .pic11 {
-        margin-bottom: 0px;
-    }
-    .pic12 {
-        margin-bottom: 0px;
-    }
-    .pic13 {
-        margin-bottom: 0px;
-    }
-    .process6-pic {
-        background-size: cover;
-    }
-    .picd7 {
-        height: 550px;
-        background-position: 50% 50%;
-    }
-    .phase1-subheading {
-        padding-left: 20px;
-        text-align: left;
-    }
-    .source-heading {
         font-size: 40px;
         line-height: 45px;
     }
-    .source-div {
-        width: 93%;
+    .find-heading,
+    .fund-heading,
+    .progress-heading {
+        -ms-flex: 0 0 250px;
+        flex: 0 0 250px;
     }
+    .fund-table {
+        width: 86%;
+    }
+    .pic4,
+    .pic5 {
+        height: 68vh;
+    }
+    .dedication-container {
+        padding: 0 20px;
+    }
+    .dedication-heading {
+        width: 40%;
+    }
+    .phase1-pgraph,
+    .phase1-subheading,
     .source-pgraph {
         font-size: 20px;
         line-height: 25px;
-    }
-}
-
-@media (max-width: 767px) {
-    ._1-intro {
-        padding-top: 55%;
-    }
-    ._2-intro {
-        padding-top: 55%;
-    }
-    .intro-container {
-        padding-right: 20px;
-        padding-left: 20px;
-    }
-    .page1-container {
-        width: 85%;
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-    .paragraph {
-        line-height: 25px;
-    }
-    .heading {
-        margin-bottom: 10px;
-        font-size: 40px;
-        line-height: 40px;
-    }
-    .page4-container {
-        position: static;
-        bottom: 0%;
-        background-color: #fff;
-    }
-    .page4-pgraph {
-        padding-right: 15px;
-        padding-left: 30px;
-        text-align: left;
-    }
-    .raise-fund {
-        background-color: #fff;
-    }
-    .raise7 {
-        background-color: #fff;
-    }
-    .progress {
-        background-color: #fff;
-    }
-    .page-dedication {
-        background-color: #fff;
-    }
-    .intro-heading {
-        font-size: 40px;
-        line-height: 45px;
-    }
-    .page5-pgraph {
-        padding-right: 20px;
-        padding-left: 30px;
-        text-align: left;
-    }
-    .process-container {
-        bottom: 0px;
-    }
-    .process-pgraph {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-    .fund-heading {
-        padding-right: 0px;
-        -webkit-box-flex: 0;
-        -ms-flex: 0 auto;
-        flex: 0 auto;
-        text-align: left;
-    }
-    .fund-container {
-        bottom: 7%;
-        padding-right: 35px;
-        padding-left: 35px;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        text-align: left;
-    }
-    .find-land {
-        background-color: #fff;
-    }
-    .find-container {
-        bottom: 10%;
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-    }
-    .find-heading {
-        -ms-flex-preferred-size: 60px;
-        flex-basis: 60px;
-    }
-    .land-pgraph {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-    .progress-container {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
-        align-items: flex-start;
-    }
-    .progress-heading {
-        padding-right: 0px;
-        -ms-flex-negative: 1;
-        flex-shrink: 1;
-        -ms-flex-preferred-size: auto;
-        flex-basis: auto;
-        text-align: left;
-    }
-    .raise-container2 {
-        padding-right: 50px;
-        padding-left: 50px;
-    }
-    .raise-heading {
-        text-align: left;
-    }
-    .dedication-container {
-        top: 35%;
-        padding-right: 35px;
-        padding-left: 35px;
-    }
-    .dedication-heading {
-        text-align: left;
-    }
-    .phase1-end {
-        background-color: #fff;
-    }
-    .phase1-container {
-        width: 90%;
-    }
-    .phase1-heading {
-        font-size: 50px;
-        line-height: 55px;
-        text-align: center;
-    }
-    .phase1-pgraph {
-        padding-left: 0px;
-        font-size: 20px;
-        line-height: 25px;
-        text-align: center;
-    }
-    .d1-container {
-        bottom: 0px;
-        width: 90%;
-    }
-    .d2-container {
-        bottom: 0px;
-        width: 72%;
-    }
-    .d3-container {
-        bottom: 0px;
-        width: 82%;
-    }
-    .d4-container {
-        bottom: 0px;
-        width: 90%;
-    }
-    .d5-container {
-        bottom: 0px;
-        width: 43%;
-        border: 1px solid #c6a677;
-    }
-    .d6-container {
-        bottom: 0px;
-        width: 78%;
-    }
-    .d7-container {
-        bottom: 0px;
-        width: 48%;
-        border: 1px solid #c6a677;
-    }
-    .raise-pgraph {
-        padding-right: 30px;
-        padding-left: 30px;
-    }
-    .pic1 {
-        background-position: -39px 50%;
-    }
-    .pic4 {
-        height: 450px;
-        background-size: cover;
-    }
-    .pic7 {
-        background-position: 50% 0px;
-    }
-    .pic8 {
-        background-position: 50% 50%;
-        background-size: cover;
-    }
-    .pic9{
-        background-size: cover;
-    }
-    .phase1-subheading {
-        padding-left: 0px;
-        font-size: 20px;
-        line-height: 25px;
-        text-align: center;
-    }
-    .source {
-        padding-top: 100px;
-    }
-    .source-container {
-        padding-right: 50px;
-        padding-left: 50px;
     }
     .source-heading {
         font-size: 35px;
         line-height: 35px;
-        font-weight: 700;
-        text-align: left;
     }
-    .source-div {
-        width: 100%;
-        padding-top: 0px;
-    }
-    .source-pgraph {
+    .source-subheading1 {
         font-size: 18px;
         line-height: 23px;
-        text-align: left;
+    }
+    .social-media-text {
+        font-size: 16px;
+        line-height: 16px;
+    }
+    .social-icon-link img {
+        width: 1.3rem;
+    }
+}
+
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .text-block,
+    .link,
+    .paragraph,
+    .page2-heading {
+        font-size: 35px;
+        line-height: 1.2em;
+    }
+    .pic4,
+    .pic5 {
+        height: 60vh;
+        background-position: 50% 100%;
+        background-size: cover;
+    }
+    .page4-container,
+    .page5-container {
+        height: 40vh;
+    }
+    .page4-pgraph,
+    .page5-pgraph {
+        padding-right: 0;
+    }
+    .pic6,
+    .pic7 {
+        height: 75vh;
+        background-position: 50% 100%;
+    }
+    .land-pgraph {
+        width: 100%;
+    }
+    .page4-container,
+    .page5-container,
+    .land-container,
+    .land-container2 {
+        position: static;
+    }
+    .raise-container {
+        width: 90%;
+        margin: 0 auto;
+        text-align: center;
+    }
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
+        font-size: 25px;
+        line-height: 1.2em;
+    }
+    .fund-table th,
+    .fund-table td {
+        font-size: 30px;
+        line-height: 1.2em;
+    }
+    .heading,
+    .find-heading,
+    .fund-heading,
+    .raise-heading .progress-heading,
+    .dedication-heading {
+        font-size: 55px;
+        line-height: 1.1em;
+    }
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
+        font-size: 28px;
+        line-height: 1.2em;
+    }
+    .dedication-heading,
+    .phase1-container {
+        width: 80%;
+    }
+    .phase1-heading,
+    .source-heading {
+        font-size: 60px;
+        line-height: 1em;
+    }
+    .source-heading,
+    .source-pgraph {
+        padding: 0 70px;
+    }
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
+        font-size: 35px;
+        line-height: 1.2em;
+    }
+    .source-subheading1 {
+        font-size: 30px;
+        line-height: 1em;
+    }
+}
+
+
+/* ----------- iPad Potrait----------- */
+
+@media screen and ( max-width: 768px) {
+    .pic5 {
+        background-position: 50% 0%;
+    }
+    .dedication-heading {
+        width: 70%;
+    }
+    .phase1-container {
+        width: 85%;
+    }
+    .source-container {
+        width: 100%;
+    }
+    .w-container {
+        max-width: 95%;
+    }
+    .raise-heading, .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+        font-size: 50px;
+        line-height: 1em;
+    }
+    .find-heading, .fund-heading, .progress-heading {
+        -ms-flex: 0 0 180px;
+            flex: 0 0 180px;
+    }
+    .page5-pgraph, .land-pgraph2 {
+        width: 95%;
+    }
+    .fund-table {
+        margin: 30px auto;
+    }
+    .page4 {
+        margin-bottom: 30px;
+    }
+}
+
+/* ----------- iPone 6 Plus Landscape ----------- */
+
+@media screen and ( max-width: 740px) and (max-height: 420px) {
+    .top-nav {
+        height: 12vh;
+    }
+    .text-block, .link, .paragraph, .page2-heading {
+        font-size: 25px;
+        
     }
 }
 
@@ -2328,10 +2243,8 @@ p {
         font-size: 16px;
         line-height: 20px;
     }
-    .process6 {
-    }
-    .process11 {
-    }
+    .process6 {}
+    .process11 {}
     .raise-container {
         padding-right: 0px;
         padding-left: 0px;
@@ -2407,8 +2320,7 @@ p {
     .paged1 {
         padding-bottom: 10px;
     }
-    .paged2 {
-    }
+    .paged2 {}
     .d1-pgraph {
         padding-right: 10px;
         padding-left: 10px;
@@ -2497,7 +2409,7 @@ p {
         background-position: 50% 0px;
         background-size: contain;
     }
-    .pic9{
+    .pic9 {
         height: 230px;
         background-size: contain;
     }
