@@ -1795,9 +1795,8 @@ p {
     .pic4 {
         background-position: 50% 90%;
     }
-    .pic4,
-    .pic5 {
-        height: 75vh;
+    pic5 {
+        background-position: 50% 58%;
     }
     .w-container,
     .land-container2 {
@@ -2140,6 +2139,89 @@ p {
     .text-block, .link, .paragraph, .page2-heading {
         font-size: 25px;
         
+    }
+}
+
+/* ----------- S Note 8.0 Potrait include browser toolbar and menu ----------- */
+
+@media screen and ( max-width: 610px) and (max-height: 940px) {
+    .text-block, .link {
+        font-size: 25px;
+    }
+    .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+        font-size: 55px;
+    }
+    .raise-heading {
+        font-size: 50px;
+        padding: 10px;
+    }
+    .w-container {
+        max-width: 100%;
+    }
+    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
+        width: 100%;
+        padding: 20px 15px 20px 30px;
+    }
+    .page1-container {
+        padding: 30px 40px;
+        background-color: hsla(0, 0%, 100%, .85);
+    }
+    .page3-container {
+        padding: 30px 0px;
+    }
+    .paragraph, .page2-heading {
+        font-size: 30px;
+        font-weight: 400;
+    }
+    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+        font-weight: 400;
+    }
+    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph {
+        font-size: 25px;
+        line-height: 1.2em;
+        font-weight: 400;
+    }
+    .find-container, .fund-container, .progress-container {
+        flex-direction: column;
+        align-items: left;
+    }
+    .find-heading, .fund-heading, .progress-heading {
+        flex: auto;
+        text-align: left;
+        padding: 10px 30px;
+    }
+    .find-pgraph, .fund-pgraph, .progress-pgraph {
+        padding: 0 30px;
+    }
+    
+    .dedication-heading {
+        text-align: left;
+        width: 85%;
+    }
+    .dedication-container {
+        padding: 0;
+    }
+    .phase1-heading, .source-heading {
+        font-size: 50px;
+    }
+    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+        font-size: 30px;
+    }
+    .phase1-container {
+        width: 82%;
+    }
+    .source-subheading1 {
+        font-size: 25px;
+    }
+    .social-media-text {
+        font-size: 20px;
+    }
+    .social-icon-link img {
+        width: 1.8rem;
+        margin-left: 5px;
+    }
+    .footer.section .fp-tableCell {
+        height: 60px !important;
     }
 }
 
