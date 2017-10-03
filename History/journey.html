@@ -438,20 +438,19 @@
     <script>
         $(document).ready(function() {
             $('#fullpage').fullpage();
-            $('#footerSec').css("height", "80");
+            
             // set the max height
-            if (window.matchMedia('(max-height: 480px)').matches) {
-                // second filter is to target those landscape mode which is under max height 500px
-                if (window.innerWidth > window.innerHeight) {
-                    $("#rorchtateDevice").css("display", "block");
-                }
+             if ((window.matchMedia('(max-height: 500px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
             }
         });
 
     </script>
     <script>
         $(window).resize(function() {
-            if ((window.matchMedia('(max-height: 480px)').matches) && (window.innerWidth > window.innerHeight)) {
+            if ((window.matchMedia('(max-height: 500px)').matches) && (window.innerWidth > window.innerHeight)) {
                 $("#rotateDevice").css("display", "block");
             } else {
                 $("#rotateDevice").css("display", "none");
