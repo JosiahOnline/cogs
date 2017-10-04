@@ -97,7 +97,7 @@ tr td:nth-child(2) {
     position: unset;
 }
 
-/* Orignal position:s fixed at the bottom */
+/* Orignal position: fixed at the bottom */
 .footer {
     background-color: transparent;
     position: absolute;

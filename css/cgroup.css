@@ -513,6 +513,13 @@ textarea.w-input {
     background-color: #ea526f;
 }
 
+.footer-container {
+    position: unset;
+    top: unset;
+    -webkit-transform: unset;
+    transform: unset;
+}
+
 .scroll-container {
     position: relative;
     bottom: -30%;
@@ -949,6 +956,12 @@ textarea.w-input {
 @media screen and ( max-width: 530px) {
     .verse-container {
         padding-top: 26%;
+    }
+}
+
+@media screen and ( max-width: 480px) {
+    .social-icon-link img {
+        width: 20px;
     }
 }
 
