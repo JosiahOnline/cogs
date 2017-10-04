@@ -1,0 +1,392 @@
+.top-nav {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    padding: 30px 0;
+    width: 100%;
+    height: 10%;
+    min-height: 50px;
+    max-height: 100px;
+}
+
+.top-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    padding: 0 30px;
+}
+
+.text-block, .link {
+    display: inline-block;
+    font-family: Merriweather, serif;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 1em;
+    color: white;
+}
+
+.text-block {
+    flex: 3;
+    text-align: left;
+}
+
+.link {
+    flex: 1;
+    text-decoration: none;
+    text-align: right;
+}
+
+/* ----------- iPad Pro Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (orientation: landscape) {
+    .text-block, .link {
+        font-size: 35px;
+    }
+}
+
+/* ----------- Aspire E1 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (max-height: 670px) {
+    .text-block, .link {
+        font-size: 25px;
+    }
+}
+
+
+/* ----------- Laptop with Touch ----------- */
+
+@media screen and ( max-width: 1280px) {
+    .text-block, .link {
+        font-size: 32px;
+    }
+}
+
+/* ----------- Laptop with MDPI screen----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 800px) {
+    .text-block, .link {
+        font-size: 30px;
+    }
+}
+
+
+/* ----------- S Tab 10.1 Landscape ----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .text-block, .link {
+        font-size: 27px;
+    }
+}
+
+/* ----------- Aspire V3 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1100px) {
+    .top-nav {
+        padding: 15px 0;
+    }
+    .top-container {
+        padding: 0 25px;
+    }
+    .text-block, .link {
+        font-size: 20px;
+    }
+}
+
+/* ----------- iPad Pro Potrait------------------*/
+
+@media screen and ( max-width: 1024px) {
+    .top-nav {
+        padding: 30px 0;
+    }
+    .top-container {
+        padding: 0 30px;
+    }
+    .top-nav .text-block, .top-nav a {
+        font-size: 35px;
+    }
+}
+
+@media screen and ( max-width: 1024px) and (max-height: 770px) {
+    .top-nav {
+        padding: 20px 0;
+    }
+    .top-nav .text-block, .top-nav a {
+        font-size: 25px;
+    }
+}
+
+/* ----------- Lenova IdeaPad Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 22px;
+    }
+}
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 32px;
+    }
+}
+
+/* ----------- iPone 6 Plus Landscape ----------- */
+
+@media screen and ( max-width: 740px) and (max-height: 420px) {
+    .top-nav {
+        padding: 15px 0;
+    }
+    .top-container {
+        padding: 0 20px;
+    }
+    .top-nav .text-block, .top-nav a {
+        font-size: 20px;
+    }
+}
+
+/* ----------- S Note 8.0 Potrait ----------- */
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .top-container {
+        padding: 0 25px;
+    }
+    .top-nav .text-block, .top-nav a {
+        font-size: 25px;
+    }
+}
+
+/* ----------- iPhone 6 PLUS Potrait----------- */
+
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 20px;
+    }
+}
+
+/* ----------- iPhone 7 Potrait----------- */
+
+@media screen and ( max-width: 420px) and (max-height: 630px) {
+    .top-nav {
+        padding: 15px 0;
+    }
+    .top-container {
+        padding: 0 20px;
+    }
+    .top-nav .text-block, .top-nav a {
+        font-size: 18px;
+    }
+}
+
+/* ----------- iPhone 6  Potrait----------- */
+
+@media screen and ( max-width: 380px) {
+    .top-nav {
+        padding: 15px 0;
+    }
+    .top-container {
+        padding: 0 20px;
+    }
+    .top-nav .text-block, .top-nav a {
+        font-size: 17px;
+    }
+}
+
+/* ----------- iPhone 5 and 5S Potrait ----------- */
+
+@media screen and ( max-width: 320px) and ( max-height: 568px) {
+    .top-container {
+        padding: 0 15px;
+    }
+    .top-nav .text-block, .top-nav a {
+        font-size: 16px;
+    }
+}
+
+
+/****** JUST For Footer Section ******/
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.w-container:before,.w-container:after {
+    content: " ";
+    display: table
+}
+
+.w-container:after {
+    clear: both
+}
+
+@media screen and ( max-width: 1441px) {
+    .w-container {
+        max-width: 80%;
+    }
+}
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) {
+    .w-container {
+        max-width: 85%;
+    }
+}
+
+.footer {
+    height: 10%;
+    padding: 15px 0;
+    background-color: #000;
+    color: #fff;
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    min-height: 55px;
+    max-height: 100px;
+}
+
+.footer-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.social-media-text {
+    display: inline-block;
+    padding-right: 10px;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: right;
+
+    font-size: 0.9rem;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.social-icons {
+    display: inline-block;
+    padding-left: 10px;
+    margin-left: 0;
+    margin-top: 0;
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    text-align: left;
+}
+
+.social-icon-link {
+    padding: 0;
+    padding-right: 10px;
+    opacity: 0.66;
+    -webkit-transition: opacity 300ms ease;
+    -o-transition: opacity 300ms ease;
+    transition: opacity 300ms ease;
+}
+
+.social-icon-link:hover {
+    opacity: 1;
+}
+
+.social-icon-link img {
+    width: 25px;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+
+/* ----------- S Tab 10.1 Landscape ----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+/* ----------- Aspire V3 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1100px) {
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+/* ----------- iPad Pro Potrait------------------*/
+
+@media screen and ( max-width: 1024px) {
+    .footer {
+        padding: 20px 0;
+    }
+}
+
+/* ----------- iPad Mini 4 Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 680px) {
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .footer {
+        padding: 25px 0;
+    }
+}
+
+/* ----------- iPone 6 Plus Landscape ----------- */
+
+@media screen and ( max-width: 740px) and (max-height: 420px) {
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+/* ----------- S Note 8.0 Potrait ----------- */
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .social-media-text {
+        font-size: 0.8rem;
+    }
+    .social-icon-link img {
+        width: 1.2rem;
+    }
+}
+
+/* ----------- iPhone 6 PLUS Potrait----------- */
+
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    .footer {
+        padding: 20px 0;
+    }
+}
+
+/* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 560px) {
+    .footer {
+        padding: 15px 0;
+    }
+}
+
+
+/****** End of Footer Section ********/

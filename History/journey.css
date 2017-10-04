@@ -1018,7 +1018,7 @@ p {
 
 .social-icon-link img {
     width: 1.8rem;
-    margin-left: 10px;
+    margin-left: 5px;
 }
 
 .rotate-screen {
@@ -1053,13 +1053,6 @@ p {
     color: black;
     margin: 10px 0;
     text-align: center;
-}
-
-@media all and ( display-mode: fullscreen ) {
-  body {
-    background-color: yellow; 
-  }
-
 }
 
 /* ----------- Laptop with HiDPI ----------- */
