@@ -7,6 +7,7 @@
     <meta content="Church of Good Shepeherds Sandakan - Official Website for church activities including news, events, announcements and info." name="description">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta name="apple-mobile-web-app-capable" content="yes" />
+    <link href="css/nav&footer.css" rel="stylesheet" type="text/css">
     <link href="css/theme.css" rel="stylesheet" type="text/css">
     <link href="css/main.css" rel="stylesheet" type="text/css">
     <script src="js/webfont.js"></script>
@@ -249,7 +250,7 @@
             </div>
         </div>
         <section class="section" id="announcements">
-            <div class="w-container adjust-padding-lr">
+            <div class="adjust-padding-lr">
                 <div class="section-title-group">
                     <h2 class="centered section-heading">Announcements</h2>
                     <div class="center section-subheading">All major news, events & information</div>
@@ -579,7 +580,7 @@
 </p></div>-->
         </section>
         <section class="section section-contact" id="contact">
-            <div class="w-container adjust-padding-lr">
+            <div class="adjust-padding-lr">
                 <div class="section-title-group">
                     <h2 class="centered section-heading">Contact us</h2>
                     <div class="center section-subheading">Don't be shy, contact us for more details!</div>
@@ -649,13 +650,33 @@
                 <div class="verse-container">
                     <p class="bible-verse">"For God so love the world that he gave his one and only Son, that whoever believe in him shall not perish but have eternal life."<br>John 3:16</p>
                 </div>
+                <div class="footer">
+                    <div class="footer-container w-container">
+                        <div class="social-media-text">COGS SANDAKAN @ Copyright 2017. </div>
+                        <div class="social-icons">
+                            <a class="social-icon-link " target="_blank" href="https://facebook.com">
+                                <img src="img/fb.png" width="30">
+                            </a>
+                            <a class="social-icon-link " target="_blank" href="https://twitter.com">
+                                <img src="img/twitter.png" width="30">
+                            </a>
+                            <a class="social-icon-link " target="_blank" href="https://instagram.com">
+                                <img src="img/instag.png" width="30">
+                            </a>
+                            <a class="social-icon-link " target="_blank" href="https://gmail.com">
+                                <img src="img/email.png" width="30">
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <footer class="center footer">
-            <div class="container-2 w-container">
-                <div class="footer-text">COGS SANDAKAN @ Copyright 2017.</div>
-            </div>
-        </footer>
+        <div id="rotateDevice" class="rotate-screen">
+        <div class="rotate-container">
+            <div class="rotate-pic"></div>
+            <h2>Rotate your device</h2>
+        </div>
+    </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
     <!--<script src="js/main.js" type="text/javascript"></script>-->
@@ -785,6 +806,26 @@
             } 
             window.scrollTo(0, 1);
         }
+    </script>
+    <script>
+        $(document).ready(function() {
+            // set the max height
+             if ((window.matchMedia('(max-height: 500px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
+            }
+        });
+
+    </script>
+    <script>
+        $(window).resize(function() {
+            if ((window.matchMedia('(max-height: 500px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
+            }
+        });
     </script>
 </body>
 
