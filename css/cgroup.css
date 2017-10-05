@@ -478,7 +478,7 @@ textarea.w-input {
     width: 49.5%;
 }
 
-.text-field, .text-field-2, .text-field-3, .textarea, .submit-button, .social-media-text {
+.text-field, .text-field-2, .text-field-3, .textarea, .submit-button {
     font-size: 0.9rem;
     border-radius: 4px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -517,6 +517,10 @@ textarea.w-input {
     position: unset;
     top: unset;
     -webkit-transform: unset;
+    transform: unset;
+}
+
+.social-icons {
     transform: unset;
 }
 
@@ -916,10 +920,7 @@ textarea.w-input {
     .text-field, .text-field-2, .text-field-3, .textarea {
         margin-bottom: 10px;
     }
-    .social-icon-link img {
-        width: 1.2rem;
-    }
-    .text-field, .text-field-2, .text-field-3, .textarea, .submit-button, .social-media-text {
+    .text-field, .text-field-2, .text-field-3, .textarea, .submit-button {
         font-size: 0.8rem;
     }
     .contact-heading2 {
@@ -956,12 +957,6 @@ textarea.w-input {
 @media screen and ( max-width: 530px) {
     .verse-container {
         padding-top: 26%;
-    }
-}
-
-@media screen and ( max-width: 480px) {
-    .social-icon-link img {
-        width: 20px;
     }
 }
 
