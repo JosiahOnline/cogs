@@ -850,12 +850,12 @@ select {
 }
 
 .navbar {
-    padding-top: 10%;
+    padding-top: 15%;
 }
 
 .nav-link {
     display: block;
-    padding: 1.1em 0px;
+    padding: 1.2em 0px;
     color: #fff;
     font-size: 1.3rem;
     text-align: center;
@@ -963,11 +963,10 @@ select {
 }
 
 .share-website {
-    position: fixed;
-    bottom: 5%;
     padding: 10px;
-    margin-left: 0.5%;
-    width: 19%;
+    margin-top: 15%;
+    margin-left: 5%;
+    width: 90%;
     border-radius: 0.2em;
     background: #F0F2F2;
 }
@@ -982,6 +981,7 @@ select {
 
 .share-container p {
     font-size: 0.9rem;
+    line-height: 1.2em;
     margin-bottom: 12px;
 }
 
@@ -1336,6 +1336,25 @@ select {
     transition: transform 0.35s ease, -webkit-transform 0.35s ease;
 }
 
+.card__social--active {
+    visibility: visible;
+    /*z-index: 3;*/
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(-48px);
+    -ms-transform: translateX(-48px);
+    transform: translateX(-48px);
+    -webkit-transition: -webkit-transform 0.35s ease;
+    transition: -webkit-transform 0.35s ease;
+    -o-transition: transform 0.35s ease;
+    transition: transform 0.35s ease;
+    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.share-toggle.share-expanded:before {
+    content: "\f00d";
+}
+
 .share-toggle {
     z-index: 200;
 }
@@ -1651,17 +1670,17 @@ address,
     .multiple-lang div a {
         font-size: 1rem;
     }
+    .navbar {
+        padding-top: 20%;
+    }
     .nav-link {
-        padding: 1.2em 0;
+        padding: 1.5em 0;
     }
     .fly-in-text li {
         font-size: 5rem;
     }
     .hero-subheading {
         font-size: 2rem;
-    }
-    .share-website {
-        margin-top: 12%;
     }
     .section {
         padding: 9em 0 4em;
@@ -1689,7 +1708,7 @@ address,
         font-size: 20px;
     }
     .main-nav {
-        padding-top: 8%;
+        padding-top: 4%;
     }
     .brand-logo,
     .brand-logo p {
@@ -1698,20 +1717,15 @@ address,
     .multiple-lang div a {
         font-size: 1rem;
     }
-    .nav-link {
-        padding: 1.4em 0;
+    .navbar {
+        padding-top: 25%;
     }
-    .share-website {
-        margin-top: 12%;
+    .nav-link {
+        padding: 2em 0;
+        font-size: 1.4rem;
     }
     .share-container {
-        padding: 2%;
-    }
-    .share-container p {
-        font-size: 0.8rem;
-    }
-    .share-button {
-        font-size: 0.7rem;
+        padding: 2% 3%;
     }
     .bulletin-row {
         height: 8rem;
@@ -1748,19 +1762,16 @@ address,
         font-size: 18px;
     }
     .main-nav {
-        padding-top: 2%;
+        padding-top: 4%;
     }
     .nav-link {
-        padding: 1em 0;
+        padding: 1.2em 0;
     }
     .navbar {
         padding-top: 6%;
     }
     .share-website {
         margin-top: 6%;
-    }
-    .share-container {
-        padding: 0 2%;
     }
     .share-container p {
         font-size: 1rem;
@@ -1812,8 +1823,14 @@ address,
     html {
         font-size: 20px;
     }
-    .main-nav {
-        padding-top: 10%;
+    .navbar {
+        padding-top: 35%;
+    }
+    .nav-link {
+        padding: 1.6em 0;
+    }
+    .share-container {
+        padding: 2%;
     }
     .share-website {
         margin-top: 14%;
@@ -1876,8 +1893,15 @@ address,
     .main-nav {
         padding-top: 2%;
     }
+    .navbar {
+        padding-top: 12%;
+    }
+    .nav-link {
+        padding: 1.2em 0;
+        font-size: 1.3rem;
+    }
     .share-website {
-        margin-top: 8%;
+        margin-top: 15%;
     }
     .section {
         padding: 6em 0 4em;
@@ -1912,15 +1936,15 @@ address,
     .beta {
         top: -6px;
     }
-    .navbar {
-        padding-top: 0;
-    }
     .nav-link {
         font-size: 1.1rem;
-        padding: 0.9em 0;
+        padding: 1.1em 0;
+    }
+    .share-website {
+        margin-top: 14%;
     }
     .share-container p {
-        font-size: 0.8rem;
+        font-size: 0.9rem;
         line-height: 1.2em;
         margin-bottom: 5px;
     }
@@ -2200,15 +2224,15 @@ address,
         margin: 0 15px;
     }
     .navbar {
-        padding-top: 30px;
+        padding-top: 10%;
     }
     .nav-link {
         font-size: 3rem;
-        padding: 1.3em 0;
+        padding: 1.5em 0;
     }
     .share-website {
+        margin-top: 7%;
         width: 100%;
-        padding: 0;
         margin-left: 0;
     }
     .social-container {
@@ -2218,10 +2242,6 @@ address,
     .social-container p {
         line-height: 1em;
         margin-bottom: 20px;
-    }
-    .share-container {
-        padding: 2%;
-        border-radius: 0;
     }
     .share-container p {
         font-size: 2.5rem;
@@ -2455,6 +2475,18 @@ address,
     html {
         font-size: 12px;
     }
+    .navbar {
+        padding-top: 0;
+    }
+    .share-website {
+        margin-top: 3%;
+    }
+    .share-container {
+        padding: 0;
+    }
+    .share-container p {
+        margin: 20px 0;
+    }
     .hero-title-wrapper {
         -webkit-transform: perspective(1px) translateY(-30%);
                 transform: perspective(1px) translateY(-30%)
@@ -2473,8 +2505,8 @@ address,
         right: 4.5%;
     }
     .nav-link {
-        font-size: 2.5rem;
-        padding: 1.2em 0;
+        font-size: 2.3rem;
+        padding: 1.1em 0;
     }
     .web__share>.share-icon {
         width: 60px;
@@ -2526,6 +2558,9 @@ address,
     html {
         font-size: 12px;
     }
+    .main-nav {
+        padding-top: 2%;
+    }
     .hero-title-wrapper {
         -webkit-transform: perspective(1px) translateY(-30%);
                 transform: perspective(1px) translateY(-30%)
@@ -2549,11 +2584,18 @@ address,
     .multiple-lang div a {
         font-size: 2rem;
     }
+    .nav-link {
+        font-size: 2rem;
+    }
     .share-container {
         padding: 1% 0 2%;
     }
     .share-container p {
+        font-size: 2rem;
         margin: 20px;
+    }
+    .share-button {
+        font-size: 1.5rem;
     }
     #welcome {
         height: 130%;
@@ -2583,6 +2625,19 @@ address,
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {
         font-size: 10px;
+    }
+    .cogs-logo {
+        margin-bottom: 10px;
+    }
+    .share-website {
+        margin-top: 2%;
+        padding: 5px;
+    }
+    .share-container {
+        padding: 0;
+    }
+    .share-container p {
+        margin: 5px 0 10px;
     }
     .navburger {
         -webkit-box-flex: 0;
@@ -2805,11 +2860,11 @@ address,
     .menu-links .closebtn {
         top: 35px;
     }
-    .nav-link {
-        padding: 1.1em 0;
+    .navbar {
+        padding-top: 5%;
     }
-    .share-container {
-        padding: 2% 1%;
+    .nav-link {
+        padding: 1.4em 0;
     }
     .share-container p {
         margin: 0.3em 0 0.6em;
@@ -2946,6 +3001,9 @@ address,
 /* ----------- iPad Potrait----------- */
 
 @media screen and ( max-width: 768px) {
+    .nav-link {
+        padding: 1.1em 0;
+    }
     #announcements {
         padding: 6em 0 4em;
     }
@@ -3189,6 +3247,9 @@ address,
     .card__social {
         width: 435%;
     }
+    .card__social--active {
+        transform: translateX(-44px);
+    }
     .address {
         height: 37em;
     }
@@ -3251,6 +3312,9 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 3rem;
         font-weight: 500;
     }
+    .main-nav {
+        padding-top: 7%;
+    }
     .beta {
         font-size: 1.5rem;
         top: -12px;
@@ -3269,7 +3333,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .nav-link {
         font-size: 2.5rem;
-        padding: 1.3em 0;
+        padding: 1.5em 0;
     }
     .share-website {
         margin-top: 40px;
@@ -3415,6 +3479,11 @@ window.outerHeight include toolbar and address bar----------- */
         top: -225px;
         right: 12px;
     }
+    .card__social--active {
+        -webkit-transform: translateX(-15px);
+        -ms-transform: translateX(-15px);
+        transform: translateX(-15px);
+    }
     .card__social {
         position: relative;
         width: 240px;
@@ -3531,6 +3600,9 @@ window.outerHeight include toolbar and address bar----------- */
 @media screen and ( max-width: 610px) and (max-height: 850px) {
     html {
         font-size: 12px;
+    }
+    .nav-link {;
+        padding: 1.4em 0;
     }
     .fly-in-text li {
         font-size: 5.5rem;
@@ -4100,6 +4172,9 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .card__social {
         width: 177px;
+    }
+    .card__social--active {
+        transform: translateX(-10px);
     }
     .card__social>.share-icon {
         margin-left: 0;
