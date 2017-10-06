@@ -35,8 +35,8 @@ a:hover {
 .navbar a>p {
     padding: 7px 12px 5px;
     font-size: 18px;
-    background-color: #23B5D3;
-    color: white;
+    background-color: white;
+    color: rgba(20, 30, 40, 1);
     border-radius: 4px;
     margin-bottom: 0;
     text-decoration: none;
@@ -143,9 +143,9 @@ section.main {
     font-size: 18px;
     text-align: center;
     line-height: 24px;
-    color: white;
+    color:  rgba(20, 30, 40, 1);
     border-radius: 4px;
-    background-color: #23B5D3;
+    background-color: white;
     padding: 8px 12px 6px;
     text-transform: uppercase;
     font-weight: 500;
@@ -166,6 +166,7 @@ section.main {
 .navbar>a p:hover,
 .share-button:hover {
     background-color: #EA526F;
+    color: white;
 }
 
 .web__share {
@@ -250,6 +251,41 @@ section.main {
 .googleplus:hover,
 .whatsapp:hover {
     color: #eee;
+}
+
+
+.rotate-screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow: hidden;
+    z-index: 1005;
+}
+.rotate-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+    
+}
+
+.rotate-pic {
+    height: 23vh;
+    width: 23vh;
+    background-image: url('../History/img/rotate.png');
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.rotate-container h2 {
+    color: black;
+    margin: 10px 0;
+    text-align: center;
 }
 
 
@@ -582,7 +618,7 @@ section.main {
     }
     .navbar a>p {
         padding: 7px 12px 5px;
-        background-color: #23B5D3;
+        background-color: white;
     }
     .carousel {
         top: 17%;
