@@ -103,6 +103,40 @@ tr td:nth-child(2) {
     position: absolute;
 }
 
+.rotate-screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow: hidden;
+    z-index: 1005;
+}
+.rotate-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+    
+}
+
+.rotate-pic {
+    height: 23vh;
+    width: 23vh;
+    background-image: url('../History/img/rotate.png');
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.rotate-container h2 {
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+}
+
 
 /*Begining of Plan A Visit Section*/
 
