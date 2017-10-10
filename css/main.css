@@ -869,8 +869,8 @@ select {
 
 .home-section {
     height: 100vh;
-    background-image: url("../img/cogs.jpg");
-    background-position: 50% 50%;
+    background-image: url("../img/worship2a.jpg");
+    background-position: 17% 50%;
     background-size: cover;
 }
 
@@ -1519,7 +1519,7 @@ address,
 
 .mission-statement-section {
     height: 100vh;
-    background-image: url("../img/worship.jpg");
+    background-image: url("../img/worship3a.jpg");
     background-position: 50% 50%;
     background-size: cover;
     text-align: left;
