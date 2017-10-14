@@ -1,12 +1,844 @@
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
 body {
-    background-image: url(../News/img/walk.jpg);
+    margin: 0;
+    font-family: Oswald, sans-serif;
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,a:hover {
+    outline: 0
+}
+
+img {
+    border: 0
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+html {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: Arial,sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.45em;
+    color: #333
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.w-container:before,.w-container:after {
+    content: " ";
+    display: table
+}
+
+.w-container:after {
+    clear: both
+}
+
+@media screen and ( max-width: 1441px) {
+    .w-container {
+        max-width: 80%;
+    }
+}
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) {
+    .w-container {
+        max-width: 85%;
+    }
+}
+
+
+/* ==========================================================================
+   Start of custom CSS
+   ========================================================================== */
+
+.main-section {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    background-image: url("../News/img/walk.jpg");
+    background-position: 50% 100%;
     background-size: cover;
-    background-position: 40%;
-    background-repeat: no-repeat;
+    font-family: Merriweather, serif;
+    color: #fff;
+    font-weight: 700;
+}
+
+.transparent-layer {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    background: url("../img/overlay.png"), rgba(0, 0, 0, 0);
+}
+
+.share-pgraph {
+    font-size: 1.3rem;
+    line-height: 1.3em;
+}
+.verse-container {
+    position: absolute;
+    top: 10%;
+    display: block;
+    width: 100%;
+    height: 90%;
+    padding-top: 20%;
+    padding-right: 15%;
+    padding-left: 15%;
     text-align: center;
 }
 
-section {
-    background-color: rgba(20,30,40,0.2);
+.verse-container:hover {
+    border-radius: 4px;
+}
+
+.verse-pgraph {
+    margin-bottom: 0px;
+    padding-bottom: 15px;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+}
+
+.verse-pgraph, .scroll-down {
+    font-weight: 300;
+}
+
+.scroll-down {
+    display: inline-block;
+    font-size: 1.2rem;
+    line-height: 1em;
+}
+
+.share-info {
+    padding: 30px 0;
+    background-color: #000;
+    color: #fff;
+}
+
+.share-container {
+    text-align: center;
+}
+
+.share-button {
+    display: inline-block;
+    margin: 0 auto;
+    cursor: pointer;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1em;
+    color: white;
+    border-radius: 4px;
+    background-color: #23B5D3;
+    padding: 0.6em 0.8em;
+    text-transform: uppercase;
+    font-weight: 500;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 1s ease;
+    transition: -webkit-transform 1s ease;
+    -o-transition: transform 1s ease;
+    transition: transform 1s ease;
+    transition: transform 1s ease, -webkit-transform 1s ease;
+}
+
+.share-button:hover {
+    background-color: #EA526F;
+}
+
+.web__share {
+    display: none;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-transform: translateX(0px);
+    -ms-transform: translateX(0px);
+    transform: translateX(0px);
+    -webkit-transition: -webkit-transform 0.35s ease;
+    transition: -webkit-transform 0.35s ease;
+    -o-transition: transform 0.35s ease;
+    transition: transform 0.35s ease;
+    transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+}
+
+.share-icon {
+    display: inline-block;
+    width: 2.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    font-size: 1rem;
+    text-align: center;
+    border-radius: 50%;
+    text-decoration: none;
+    background-color: #fff;
+    -webkit-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    outline: 0;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.share-icon:hover,
+.share-icon:focus {
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.12), 0 3px 6px rgba(0, 0, 0, 0.24);
+    -webkit-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+.facebook {
+    background-color: #3b5998;
+}
+
+.twitter {
+    background-color: #00abe3;
+}
+
+.googleplus {
+    background-color: #d3492c;
+}
+
+.whatsapp {
+    background-color: #25D366;
+}
+
+.facebook,
+.twitter,
+.googleplus,
+.whatsapp {
+    color: #fff;
+}
+
+.facebook:hover,
+.twitter:hover,
+.googleplus:hover,
+.whatsapp:hover {
+    color: #eee;
+}
+
+.slide-container {
+    background-color: black;
+}
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720990/WalkForJesus17/walk4.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720997/WalkForJesus17/walk3.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720994/WalkForJesus17/walk2.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720986/WalkForJesus17/walk11.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721004/WalkForJesus17/walk9.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721004/WalkForJesus17/walk6.jpg");
+}
+
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720982/WalkForJesus17/walk10.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720983/WalkForJesus17/walk1.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721000/WalkForJesus17/walk7.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721001/WalkForJesus17/walk8.jpg");
+}
+
+
+
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10 {
     height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pic-container {
+    padding-top: 80vh;
+    text-align: center;
+}
+
+.slide-heading {
+    display: inline-block;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 4px;
+    font-weight: 400;
+    padding: 15px 20px;
+}
+
+.fp-controlArrow.fp-prev {
+    border-color: transparent rgba(250, 250, 250, 1) transparent transparent !important;
+}
+
+.fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent rgba(250, 250, 250, 1) !important;
+}
+
+.share-pgraph {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.youtube {
+     background-color: black;
+}
+.youtube .fp-tableCell {
+    text-align: center;
+}
+.youtube iframe {
+    height: 50%;
+    width: 50%;
+}
+
+
+.footer {
+    height: 80px !important;
+    background-color: black;
+    color: #fff;
+}
+
+.footer.section .fp-tableCell {
+    height: 80px !important;
+}
+
+.footer-container {
+   
+    position: unset;
+    top: unset;
+    -webkit-transform: unset;
+    transform: unset;
+    
+}
+
+
+.social-icons {
+    transform: unset;
+}
+
+
+
+
+.rotate-screen {
+    display: none;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    overflow: hidden;
+    z-index: 1005;
+}
+.rotate-container {
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    -webkit-transform: perspective(1px) translateY(-50%);
+    transform: perspective(1px) translateY(-50%);
+    
+}
+
+.rotate-pic {
+    height: 23vh;
+    width: 23vh;
+    background-image: url('../History/img/rotate.png');
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.rotate-container h2 {
+    color: black;
+    margin: 10px 0;
+    text-align: center;
+}
+
+.scroll-container {
+    position: relative;
+    bottom: -30%;
+    z-index: 1000
+}
+
+/* ----------- Laptop with HiDPI ----------- */
+
+@media screen and ( max-width: 1441px) and (orientation: landscape) {
+    html{font-size: 24px;}
+    .scroll-container {
+        bottom: -35%;
+    }
+    .share-info {
+        padding: 40px 0;
+    }
+    .scroll-down {
+        font-size: 1rem;
+    }
+}
+
+/* ----------- iPad Pro Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (orientation: landscape) {
+    html {font-size: 25px;}
+    .verse-container {
+        padding-top: 25%;
+    }
+    .scroll-down {
+        font-size: 1.1rem;
+    }
+}
+
+/* ----------- Aspire E1 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1370px) and (max-height: 670px) {
+    html {font-size: 20px;}
+    .verse-container {
+        padding-top: 15%;
+    }
+    
+}
+
+/* ----------- Laptop with Touch ----------- */
+
+@media screen and ( max-width: 1280px) {
+    html {font-size: 22px;}
+    .verse-container {
+        padding-top: 30%;
+    }
+    .scroll-down {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* ----------- Laptop with MDPI screen----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 800px) {
+    html {font-size: 20px;}
+    .verse-container {
+        padding-top: 25%;
+    }
+}
+
+/* ----------- S Tab 10.1 Landscape ----------- */
+
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .verse-container {
+        padding-top: 15%;
+    }
+    .scroll-down {
+        font-size: 1.1rem;
+    }
+}
+
+/* ----------- Aspire V3 Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1100px) {
+    html {font-size: 15px;}
+    .share-info {
+        padding: 30px 0;
+    }
+}
+
+/* ----------- iPad Pro Potrait------------------*/
+
+@media screen and ( max-width: 1024px) {
+    html {font-size: 28px;}
+    .verse-container {
+        padding-top: 40%;
+    }
+    .scroll-container {
+        bottom: -35%;
+    }
+    .scroll-down {
+        font-size: 1.2rem;
+    }
+    .share-info {
+        padding: 50px 0;
+    }
+    .share-pgraph {
+        padding-bottom: 35px;
+    }
+}
+
+/* ----------- iPad Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 770px) {
+    html {font-size: 20px;}
+    .verse-container {
+        padding-top: 23%;
+    }
+    .share-info {
+        padding: 40px 0;
+    }
+    .share-pgraph {
+        padding-bottom: 25px;
+    }
+}
+
+/* ----------- iPad Mini 4 Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 680px) {
+    .verse-container {
+        padding-top: 20%;
+    }
+    .scroll-container {
+        bottom: -25%;
+    }
+}
+
+/* ----------- Lenova IdeaPad Laptop Landscape ----------- */
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    html {font-size: 16px;}
+    .verse-container {
+        padding-top: 18%;
+    }
+    .share-info {
+        padding: 30px 0;
+    }
+    .share-pgraph {
+        padding-bottom: 20px;
+    }
+}
+
+
+/* ----------- S Note 8.0 Landscape ----------- */
+
+@media screen and ( max-width: 970px) and (max-height: 490px) {
+    .verse-container {
+        padding-top: 14%;
+    }
+    .scroll-container {
+        bottom: -23%;
+    }
+}
+
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .verse-container {
+        padding-top: 45%;
+    }
+    .verse-pgraph {
+        font-size: 1.3rem;
+        line-height: 1.25em;
+        padding-bottom: 25px;
+    }
+    .scroll-container {
+        bottom: -20%;
+    }
+    .scroll-down {
+        font-size: 1.1rem;
+    }
+    .share-pgraph {
+        font-size: 1rem;
+    }
+    .share-button {
+        font-size: 0.8rem;
+    }
+    .share-icon {
+        font-size: 0.8rem;
+    }
+}
+
+/* ----------- iPad Potrait----------- */
+
+@media screen and ( max-width: 768px) {
+    .verse-container {
+        padding-top: 40%;
+    }
+}
+
+/* ----------- iPad Mini4 Potrait----------- */
+
+@media screen and ( max-width: 768px) and (max-height: 930px) {
+    .verse-container {
+        padding-top: 30%;
+    } 
+    .verse-pgraph {
+        font-size: 1.2rem;
+    }
+}
+
+/* ----------- iPone 6 Plus Landscape ----------- */
+
+@media screen and ( max-width: 740px) and (max-height: 420px) {
+    .verse-container {
+        padding-top: 17%;
+    }
+    .verse-pgraph {
+        padding-bottom: 5px;
+    }
+    .scroll-down {
+        font-size: 1rem;
+    }
+    .share-pgraph {
+        font-size: 1.2rem;
+    }
+    .share-button, .share-icon {
+        font-size: 1rem;
+    }
+}
+
+/* ----------- S Galaxy S5 ----------- */
+
+@media screen and ( max-width: 640px) and (max-height: 360px) {
+    .verse-container {
+        padding-top: 15%;
+    }
+}
+
+/* ----------- iPhone 7 Landscape ----------- */
+
+@media screen and ( max-width: 635px) and (max-height: 420px) {
+    .verse-container {
+        padding-top: 22%;
+    }
+}
+
+/* ----------- S Note 8.0 Potrait ----------- */
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .verse-pgraph, .scroll-down {
+        font-size: 0.9rem;
+    }
+    .verse-container {
+        padding: 50% 10% 0 10%;
+    }
+    .scroll-container {
+        bottom: -30%;
+    }
+}
+
+/* ----------- iPhone 5 5s Landscape ----------- */
+
+@media screen and ( max-width: 568px) {
+    .verse-container {
+        padding-top: 18%;
+    }
+}
+
+/* ----------- VIVO 5 Samsung J Landscape ----------- */
+
+@media screen and ( max-width: 560px) and (max-height: 360px) {
+    .verse-container {
+        padding-top: 22%;
+    }
+}
+
+/* ----------- iPhone 6S Landscape ----------- */
+
+@media screen and ( max-width: 540px) {
+    .verse-container {
+        padding-top: 28%;
+    }
+}
+
+/* ----------- HuaWei Mate 9 Landscape ----------- */
+
+@media screen and ( max-width: 530px) {
+    .verse-container {
+        padding-top: 26%;
+    }
+}
+
+/* ----------- iPhone 4 Landscape ----------- */
+
+@media screen and ( max-width: 480px) and (max-height: 215px) {
+    .verse-container {
+        padding-top: 14%;
+    }
+}
+
+/* ----------- iPhone 6 PLUS Potrait----------- */
+
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    .verse-container {
+        padding-top: 45%;
+    }
+    .verse-pgraph, .scroll-down {
+        font-size: 1.1rem;    
+    }
+    .share-button, .share-icon {
+        font-size: 1rem;
+    }
+}
+
+/* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
+
+@media screen and ( max-width: 420px) and ( max-height: 630px) {
+    html{font-size: 18px;}
+    .scroll-container {
+        bottom: -20%;
+    }
+}
+
+/* ----------- iPhone 6  Potrait----------- */
+
+@media screen and ( max-width: 380px) {
+    .verse-container {
+        padding-top: 55%;
+    }
+    .verse-pgraph, .scroll-down {
+        font-size: 1rem;
+    }
+    .scroll-container {
+        bottom: -20%;
+    }
+}
+
+/* ----------- iPhone 6  Potrait----------- */
+
+@media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .verse-container {
+        padding-top: 42%;
+    }
+}
+
+/* ----------- Galaxy Note 3 Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 640px) {
+    .verse-container {
+        padding-top: 50%;
+    }
+    .scroll-down {
+        font-size: 0.8rem;
+    }
+    .share-button, .share-icon {
+        font-size: 0.8rem;
+    }
+}
+
+/* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 560px) {
+    
+    .scroll-down {
+        font-size: 0.9rem;
+    }
+    .verse-container {
+        padding-top: 45%;
+    }
+    .share-info {
+        padding: 30px 0;
+    }
+    .share-button, .share-icon {
+        font-size: 0.9rem;
+    }
+}
+
+/* ----------- HuaWei Mate9 Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 530px) {
+    .scroll-down {
+        font-size: 0.9rem;
+    }
+    .verse-container {
+        padding-top: 40%;
+    }
+    .verse-pgraph {
+        padding-bottom: 10px;
+    }
+    .scroll-container {
+        bottom: -23%;
+    }
+}
+
+/* ----------- iPhone 5 and 5S Potrait ----------- */
+
+@media screen and ( max-width: 320px) and ( max-height: 568px) { 
+    .verse-pgraph {
+        padding-bottom: 15px;
+    }
+    .share-info {
+        padding: 30px 0;
+    }
+    .share-pgraph {
+        padding-bottom: 20px;
+    }
+    .scroll-down {
+        font-size: 0.9rem;
+    }
+}
+
+
+/* ----------- iPhone 4 and 4S Potrait----------- */
+
+@media screen and ( max-width: 320px) and ( max-height: 480px) {
+    .verse-container {
+        padding-top: 30%;
+    }
+    .scroll-container {
+        bottom: -18%;
+    }
+}
+
+/* iPhone 5S Potrait */
+
+@media screen and ( max-width: 320px) and ( max-height: 460px) {
+    .verse-pgraph {
+        padding-bottom: 5px;
+    }
+    .scroll-container {
+        bottom: -16%;
+    }
 }
