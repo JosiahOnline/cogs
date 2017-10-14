@@ -136,6 +136,9 @@
 
         <div class="youtube section">
             <iframe src="https://www.youtube.com/embed/r9-DM9uBtVI" frameborder="0" allowfullscreen></iframe>
+            <div class="scroll2-container">
+                    <h1 class="link scroll-down">Scroll Down For COGS Social Media</h1>
+            </div>
         </div>
         <div id="footerSec" class="footer section">
             <div class="footer-container w-container">
@@ -176,7 +179,12 @@
     </script>
     <script>
         $(document).ready(function() {
-            $('#fullpage').fullpage();
+            $('#fullpage').fullpage({
+                autoScrolling:true,
+                fitToSection:false,
+                scrollBar:true
+            });
+            
             // set the max height
             if ((window.matchMedia('(max-height: 500px)').matches) && (window.innerWidth > window.innerHeight)) {
                 $("#rotateDevice").css("display", "block");
