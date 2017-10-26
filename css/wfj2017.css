@@ -743,6 +743,9 @@ p {
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
 @media screen and ( max-width: 420px) and (max-height: 740px) {
+    .pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10 {
+        background-size: contain;
+    }
     .main-section {
         background-position: 20% 100%;
     }
@@ -761,6 +764,27 @@ p {
     }
     .slide-heading {
         font-size: 1rem;
+    }
+    .fp-controlArrow {
+        top: unset !important;
+        bottom: 10% !important;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 20px !important;
+        border-width: 20.5px 15px 20.5px 0 !important;
+    }
+
+    .fp-controlArrow.fp-next {
+        right: 20px !important;
+        border-width: 20.5px 0 20.5px 15px !important;
+    }
+    .pic-container {
+        position: relative;
+    }
+    .slide-heading {
+        position: absolute;
+        bottom: -4%;
+        left: 36%;
     }
 }
 
