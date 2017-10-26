@@ -46,7 +46,6 @@ textarea {
 
 * {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -489,14 +488,11 @@ textarea.w-input {
 
 .form {
     display: -webkit-box;
-    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
-    -webkit-justify-content: space-between;
     -ms-flex-pack: justify;
     justify-content: space-between;
-    -webkit-flex-wrap: wrap;
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
     text-align: center;
@@ -519,11 +515,14 @@ textarea.w-input {
     position: unset;
     top: unset;
     -webkit-transform: unset;
-    transform: unset;
+    -ms-transform: unset;
+        transform: unset;
 }
 
 .social-icons {
-    transform: unset;
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
 }
 
 .rotate-screen {
