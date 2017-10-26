@@ -459,10 +459,6 @@
     .social-media-text {
         font-size: 14px;
     }
-    .social-icons {
-        -webkit-transform: perspective(1px) translateY(-8%) !important;
-        transform: perspective(1px) translateY(-8%) !important;
-    }
 }
 
 @media screen and ( max-width: 360px) {
