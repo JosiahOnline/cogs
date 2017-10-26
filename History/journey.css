@@ -2310,12 +2310,12 @@ p {
 
 @media screen and ( max-width: 420px) and (max-height: 740px){
     .intro-heading {
-        font-size: 35px;
+        font-size: 34px;
         line-height: 1.1em;
         margin-bottom: 5px;
     }
     .intro-pgraph {
-        font-size: 22px;
+        font-size: 21px;
         line-height: 1.2em;
     }
     .page1-container {
@@ -2326,10 +2326,10 @@ p {
         padding: 20px 0;
     }
     .heading, .find-heading, .phase1-heading, .source-heading {
-        font-size: 35px;
+        font-size: 34px;
     }
     .raise-heading, .fund-heading, .progress-heading, .dedication-heading {
-        font-size: 30px;
+        font-size: 28px;
     }
     .page4-pgraph, .page5-pgraph {
         padding: 15px 20px;
@@ -2350,14 +2350,14 @@ p {
         margin: 10px auto;
     }
     .text-block, .link {
-        font-size: 20px;
+        font-size: 19px;
     }
     .top-nav {
         padding: 0 25px;
         max-height: 60px;
     }
     .paragraph, .page2-heading, .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
-        font-size: 20px;
+        font-size: 19px;
     }
     .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic, .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
         background-size: contain;
@@ -2416,11 +2416,14 @@ p {
     .page4-container, .page5-container {
         height: 60vh;
     }
-    .text-block, .link, .paragraph, .page2-heading, .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .text-block, .link, .paragraph, .page2-heading {
         font-size: 18px;
     }
+    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+        font-size: 17px;
+    }
     .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
-        font-size: 18px;
+        font-size: 17px;
     }
     .raise-fund, .raise7, .progress {
         margin-top: 0;
@@ -2480,8 +2483,11 @@ p {
     .page4-container, .page5-container {
         height: 60vh;
     }
-    .text-block, .link, .paragraph, .page2-heading, .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
-        font-size: 18px
+    .text-block, .link, .paragraph, .page2-heading {
+        font-size: 18px;
+    }
+    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+        font-size: 17px
     }
     .raise-fund, .raise7, .progress {
         margin-top: 0;
@@ -2494,7 +2500,7 @@ p {
         font-size: 25px;
     }
     .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
-        font-size: 18px;
+        font-size: 17px;
     }
     .pic6, .pic7 {
         height: 65vh;
@@ -2527,10 +2533,10 @@ p {
     }
     
     .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
-        font-size: 16.5px;
+        font-size: 15.5px;
     }
     .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
-        font-size: 16.5px;
+        font-size: 15.5px;
     }
     .find-heading, .fund-heading, .raise-heading, .progress-heading {
         padding-bottom: 5px;
@@ -2565,14 +2571,14 @@ p {
         padding: 0 15px;
     }
     .paragraph, .page2-heading {
-        font-size: 18px;
+        font-size: 17px;
     }
     
     .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
-        font-size: 17px;
+        font-size: 16px;
     }
     .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
-        font-size: 17px;
+        font-size: 16px;
         padding: 10px;
     }
     .fund-heading, .raise-heading, .progress-heading {
@@ -2602,10 +2608,10 @@ p {
 
 @media screen and ( max-width: 360px) and ( max-height: 560px) {
     .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
-        font-size: 16.5px;
+        font-size: 15.5px;
     }
     .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
-        font-size: 16.5px;
+        font-size: 15.5px;
     }
     .fund-table {
         margin-top: 5px;
@@ -2628,10 +2634,10 @@ p {
         font-size: 18px;
     }
     .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading {
-        font-size: 15px;
+        font-size: 14px;
     }
     .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
-        font-size: 15px;
+        font-size: 14px;
     }
     .raise-heading, .fund-heading, .progress-heading, .dedication-heading {
         font-size: 28px;
@@ -2654,22 +2660,22 @@ p {
         padding: 0 10px;
     }
     .paragraph {
-        font-size: 17px;
+        font-size: 16px;
     }
     .page4-pgraph, .page5-pgraph, .fund-table th, .fund-table td {
-        font-size: 15px;
+        font-size: 14px;
         padding: 10px;
     }
     .fund-table {
         margin-top: 5px;
     }
     .find-pgraph, .fund-pgraph, .progress-pgraph {
-        font-size: 15px;
+        font-size: 14px;
         padding: 0 10px;
     }
     .land-pgraph2 {
         padding: 10px 20px;
-        font-size: 15px;
+        font-size: 14px;
     }
     .find-heading, .raise-heading, .fund-heading {
         padding: 0 10px 5px;
@@ -2678,7 +2684,7 @@ p {
         padding-left: 10px;
     }
     .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
-        font-size: 15px;
+        font-size: 14px;
     }
     .dedication-heading {
         padding-left: 15px;
@@ -2710,7 +2716,7 @@ p {
         padding: 0;
     }
     .social-media-text {
-        font-size: 15px;
+        font-size: 14px;
         margin: 15px auto 8px;
     }
     .social-icon-link img {
