@@ -2722,6 +2722,9 @@ address,
     .bible-verse {
         font-size: 2.5rem;
     }
+    .footer-container {
+        top: 30%;
+    }
 }
 
 
@@ -3248,7 +3251,9 @@ address,
         width: 435%;
     }
     .card__social--active {
-        transform: translateX(-44px);
+        -webkit-transform: translateX(-44px);
+            -ms-transform: translateX(-44px);
+                transform: translateX(-44px);
     }
     .address {
         height: 37em;
@@ -3891,6 +3896,9 @@ window.outerHeight include toolbar and address bar----------- */
     html {
         font-size: 14px;
     }
+    .home-container {
+        top: 95%;
+    }
     .mobile-container {
         padding: 0 20px;
     }
@@ -3963,7 +3971,7 @@ window.outerHeight include toolbar and address bar----------- */
         margin-bottom: 0;
     }
     .fly-in-text {
-        width: 75%;
+        width: 70%;
         margin: 0 auto;
     }
     .fly-in-text li {
@@ -4001,7 +4009,7 @@ window.outerHeight include toolbar and address bar----------- */
         margin-bottom: 10px;
     }
     .hollow-button {
-        width: 65%;
+        width: 55%;
         margin: 0 auto;
     }
     .hollow-button, .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph, .bulletin-download, .welcome-pgraph, .welcome-author, .group-photo-caption, .visit, .history {
@@ -4174,7 +4182,9 @@ window.outerHeight include toolbar and address bar----------- */
         width: 177px;
     }
     .card__social--active {
-        transform: translateX(-10px);
+        -webkit-transform: translateX(-10px);
+            -ms-transform: translateX(-10px);
+                transform: translateX(-10px);
     }
     .card__social>.share-icon {
         margin-left: 0;
@@ -4240,6 +4250,9 @@ window.outerHeight include toolbar and address bar----------- */
     }
     #announcements .adjust-padding-lr {
         padding: 0 30px;
+    }
+    .footer-container {
+        top: 30%;
     }
 }
 
@@ -4530,6 +4543,18 @@ window.outerHeight include toolbar and address bar----------- */
     }
 }
 
+/* ----------- Galaxy Note 8 Potrait  ----------- */
+@media screen and ( max-width: 360px) and ( max-height: 668px) {
+    .home-container {
+        top: 100%;
+    }
+    .hero-subheading {
+        width: 68%;
+    }
+    .bulletin-description, .title, .date-published {
+        text-align: center;
+    }
+}
 
 /* ----------- Galaxy Note 3 Potrait  ----------- */
 
@@ -4550,6 +4575,9 @@ window.outerHeight include toolbar and address bar----------- */
     .hero-subheading {
         font-size: 2.2rem;
         width: 75%;
+    }
+    .bulletin-description, .title, .date-published {
+        text-align: left;
     }
     .plan-visit {
         padding-top: 15%;

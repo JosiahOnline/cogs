@@ -1,4 +1,21 @@
-html {
+/* Put your CSS code in the left column, instead of example, to put or remove unnecessary prefixes. */
+
+.example {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}html {
     font-family: 'Droid Serif', serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%;
@@ -215,6 +232,8 @@ p {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    -webkit-transition: all 500ms ease;
+    -o-transition: all 500ms ease;
     transition: all 500ms ease;
     z-index: 1000;
 }
@@ -1473,7 +1492,8 @@ p {
     }
     .raise-pgraph {
         top: 0;
-        transform: perspective(1px) translateY(0%);
+        -webkit-transform: perspective(1px) translateY(0%);
+                transform: perspective(1px) translateY(0%);
     }
     .fund-table {
         width: 90%;
@@ -1990,7 +2010,8 @@ p {
     .fund-heading,
     .progress-heading {
         -ms-flex: 0 0 250px;
-        flex: 0 0 250px;
+        -webkit-box-flex: 0;
+                flex: 0 0 250px;
     }
     .fund-table {
         width: 86%;
@@ -2161,7 +2182,8 @@ p {
     }
     .find-heading, .fund-heading, .progress-heading {
         -ms-flex: 0 0 180px;
-            flex: 0 0 180px;
+            -webkit-box-flex: 0;
+                flex: 0 0 180px;
     }
     .page5-pgraph, .land-pgraph2 {
         width: 95%;
@@ -2236,11 +2258,18 @@ p {
         font-weight: 400;
     }
     .find-container, .fund-container, .progress-container {
-        flex-direction: column;
-        align-items: left;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
+        -webkit-box-align: left;
+            -ms-flex-align: left;
+                align-items: left;
     }
     .find-heading, .fund-heading, .progress-heading {
-        flex: auto;
+        -webkit-box-flex: 1;
+            -ms-flex: auto;
+                flex: auto;
         text-align: left;
         padding: 10px 30px;
     }
@@ -2397,7 +2426,10 @@ p {
         padding-right: 50px;
     }
     .footer-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .social-media-text {
         font-size: 16px;
@@ -2752,5 +2784,4 @@ p {
         height: 160px;
     }
 }
-
 

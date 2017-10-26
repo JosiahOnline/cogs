@@ -39,20 +39,30 @@ h3 {
 }
 
 .button-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: center;
-    align-items: baseline;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: baseline;
+        -ms-flex-align: baseline;
+            align-items: baseline;
 }
 
 .visit {
     margin-right: 10px;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: right;
 }
 
 .share-info {
     margin-left: 10px;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: left;
 }
 
@@ -617,7 +627,10 @@ input.w-button {
         padding-top: 8%;
     }
     .form-container {
-        flex-direction: row;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     .form-field.text-area {
         margin-bottom: 5px;
@@ -692,7 +705,8 @@ input.w-button {
     .selection {
         height: 40px;
         padding-top: 0;
-        flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
     }
     select {
         width: 16.4%;
@@ -1011,7 +1025,10 @@ input.w-button {
         font-size: 14px;
     }
     .share-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
         width: 100%;
     }
     .share-button {
@@ -1048,7 +1065,10 @@ input.w-button {
         min-height: 140px;
     }
     .form-container {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .form-field {
         height: 40px;
@@ -1258,7 +1278,8 @@ input.w-button {
         min-height: 100px;
     }
     .selection {
-        flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
         height: auto;
     }
     select {

@@ -23,7 +23,6 @@ img {
 
 * {
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
     box-sizing: border-box
 }
 
@@ -371,13 +370,16 @@ p {
     position: unset;
     top: unset;
     -webkit-transform: unset;
-    transform: unset;
+    -ms-transform: unset;
+        transform: unset;
     
 }
 
 
 .social-icons {
-    transform: unset;
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
 }
 
 
