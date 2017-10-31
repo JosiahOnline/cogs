@@ -108,6 +108,12 @@
     
 }
 
+/* ----------- S Note 8.0 Potrait include Address bar----------- */
+
+@media screen and ( max-width: 610px ) and ( max-height: 940px ) {
+    
+}
+
 /* ----------- S Note 8.0 Potrait ----------- */
 
 @media screen and ( max-width: 610px ) and ( max-height: 850px ) {
