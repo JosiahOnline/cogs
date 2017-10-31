@@ -140,8 +140,9 @@ p {
 
 .scroll-down {
     display: inline-block;
-    font-size: 1.2rem;
+    font-size: 1rem;
     line-height: 1em;
+    margin: 0;
 }
 
 .share-info {
@@ -321,11 +322,12 @@ p {
 
 .slide-heading {
     display: inline-block;
+    font-size: 1rem;
     color: white;
     background-color: rgba(0, 0, 0, 0.5);
     border-radius: 4px;
     font-weight: 400;
-    padding: 15px 20px;
+    padding: 10px 20px;
     margin: 0;
 }
 
@@ -398,14 +400,147 @@ p {
     display: block;
     position: absolute;
     width: 100%;
-    bottom: 0;
     text-align: center;
     z-index: 1000
 }
 
+.scroll2-container {
+    bottom: 10px;
+}
+
+.scroll3-container {
+    bottom: 20px;
+}
+
 .scroll2-container h1, .scroll3-container a {
     font-size: 0.9rem;
+    border-radius: 4px;
 }
+
+.scroll3-container .tooltiptext {
+    position: absolute;
+    visibility: hidden;
+    width: 160px;
+    font-size: 0.8rem;
+    background-color: rgba(59,89,152,1);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 8px 14px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    transition: opacity 1s;
+}
+
+.scroll3-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(59,89,152,1) transparent transparent transparent;
+}
+
+.scroll3-container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.scroll3-container a {
+    color: rgba(59,89,152,1);
+    background: rgba(246,246,246, 0.8);
+    font-weight: bold;
+    padding: 10px 20px;
+}
+
+.scroll3-container a:hover {
+    background: white;
+}
+
+@media screen and (max-width: 1441px) and (orientation: landscape) {
+    .scroll2-container {
+        bottom: 15px;
+    }
+    .scroll3-container {
+        bottom: 15px;
+    }
+}
+
+@media screen and ( max-width: 1370px) and (orientation: landscape) {
+    .scroll2-container {
+        bottom: 25px;
+    }
+    .scroll3-container {
+        bottom: 30px;
+    }
+}
+
+@media screen and ( max-width: 1370px) and (max-height: 670px) {
+    .scroll2-container {
+        bottom: 10px;
+    }
+}
+
+@media screen and ( max-width: 1280px) and (max-height: 800px) {
+    .scroll2-container {
+        bottom: 15px;
+    }
+    .scroll3-container {
+        bottom: 10px;
+    }
+}
+
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .scroll2-container {
+        bottom: 10px;
+    }
+}
+@media screen and ( max-width: 1100px) {
+    .scroll2-container {
+        bottom: 2px;
+    }
+}
+
+@media screen and ( max-width: 1024px) {
+   .scroll2-container, .scroll3-container {
+        bottom: 30px;
+    }
+    .scroll-down, .slide-heading {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and ( max-width: 1024px) and ( max-height: 770px) {
+    .scroll2-container {
+        bottom: 15px;
+    }
+    .scroll-down, .slide-heading {
+        font-size: 1rem;
+    }
+}
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    .scroll2-container {
+        bottom: 3px;
+    }
+    .scroll3-container {
+        bottom: 10px;
+    }
+    .scroll-down, .slide-heading {
+        font-size: 1rem;
+    }
+}
+
+
+
+
+
 
 /* ----------- Laptop with HiDPI ----------- */
 
@@ -413,9 +548,6 @@ p {
     html{font-size: 24px;}
     .share-info {
         padding: 40px 0;
-    }
-    .scroll-down {
-        font-size: 1rem;
     }
 }
 
@@ -425,9 +557,6 @@ p {
     html {font-size: 25px;}
     .verse-container {
         padding-top: 25%;
-    }
-    .scroll-down {
-        font-size: 1.1rem;
     }
 }
 
@@ -447,9 +576,6 @@ p {
     .verse-container {
         padding-top: 30%;
     }
-    .scroll-down {
-        font-size: 1.2rem;
-    }
 }
 
 
@@ -468,9 +594,6 @@ p {
     .verse-container {
         padding-top: 15%;
     }
-    .scroll-down {
-        font-size: 1.1rem;
-    }
 }
 
 /* ----------- Aspire V3 Laptop Landscape ----------- */
@@ -488,9 +611,6 @@ p {
     html {font-size: 28px;}
     .verse-container {
         padding-top: 40%;
-    }
-    .scroll-down {
-        font-size: 1.2rem;
     }
     .share-info {
         padding: 50px 0;
