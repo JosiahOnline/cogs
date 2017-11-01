@@ -1,4 +1,21 @@
-html {
+/* Put your CSS code in the left column, instead of example, to put or remove unnecessary prefixes. */
+
+.example {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
     -webkit-text-size-adjust: 100%
@@ -429,6 +446,8 @@ p {
     left: 50%;
     margin-left: -60px;
     opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
     transition: opacity 1s;
 }
 
@@ -872,11 +891,62 @@ p {
 }
 
 @media screen and ( max-width: 360px ) and ( max-height: 670px ) {
-    
+    .slide-heading {
+        bottom: 95px;
+        left: 37%;
+    }
+    .pic10 .pic-container .slide-heading {
+        left: 36%;
+    }
+    .fp-controlArrow {
+        bottom: 95px !important;
+    }
+    .scroll2-container {
+        bottom: 15px;
+    }
 }
 
+@media screen and ( max-width: 360px) and ( max-height: 640px) {
+    .slide-heading {
+        font-size: 0.9rem;
+    }
+}
 
+@media screen and ( max-width: 360px ) and ( max-height: 570px ) {
+    .slide-heading {
+        bottom: 60px;
+        left: 38.5%;
+    }
+    .pic10 .pic-container .slide-heading {
+        left: 37.5%;
+    }
+    .fp-controlArrow {
+        bottom: 60px !important;
+    }
+}
 
+@media screen and ( max-width: 320px) and ( max-height: 568px) {
+    .slide-heading {
+        bottom: 80px;
+        left: 37.5%;
+    }
+    .pic10 .pic-container .slide-heading {
+        left: 36.5%;
+    }
+    .fp-controlArrow {
+        bottom: 80px !important;
+    }
+}
+
+@media screen and ( max-width: 320px ) and ( max-height: 480px ) { 
+    .slide-heading {
+        bottom: 60px;
+    }
+    .fp-controlArrow {
+        bottom: 60px !important;
+        top: unset !important;
+    }
+}
 
 
 /* ----------- Laptop with HiDPI ----------- */
@@ -1217,9 +1287,6 @@ p {
     .verse-pgraph {
         font-size: 0.9rem;
     }
-    .scroll-container {
-        font-size: 0.8rem;
-    }
     .scroll-down, .scroll2-container h1 {
         font-size: 0.7rem;
     }
@@ -1242,9 +1309,6 @@ p {
     .verse-container {
         padding-top: 50%;
     }
-    .scroll-down {
-        font-size: 0.8rem;
-    }
     .share-button, .share-icon {
         font-size: 0.8rem;
     }
@@ -1253,10 +1317,6 @@ p {
 /* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 560px) {
-    
-    .scroll-down {
-        font-size: 0.9rem;
-    }
     .share-info {
         padding: 30px 0;
     }
@@ -1268,9 +1328,6 @@ p {
 /* ----------- HuaWei Mate9 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
-    .scroll-down {
-        font-size: 0.9rem;
-    }
     .verse-container {
         padding-top: 40%;
     }
@@ -1290,9 +1347,6 @@ p {
     }
     .share-pgraph {
         padding-bottom: 20px;
-    }
-    .scroll-down {
-        font-size: 0.9rem;
     }
 }
 
