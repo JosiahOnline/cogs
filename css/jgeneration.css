@@ -1,152 +1,193 @@
-body,
+/* Put your CSS code in the left column, instead of example, to put or remove unnecessary prefixes. */
+
+.example {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    -o-transition: all .5s;
+    transition: all .5s;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+    background: -webkit-gradient(linear, left top, left bottom, from(white), to(black));
+    background: -webkit-linear-gradient(top, white, black);
+    background: -o-linear-gradient(top, white, black);
+    background: linear-gradient(to bottom, white, black);
+}html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%
+}
+
+.body {
+    margin: 0;
+    font-family: Oswald, sans-serif;
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,a:hover {
+    outline: 0
+}
+
+img {
+    border: 0
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
 html {
-    padding: 0;
+    height: 100%
+}
+
+body {
     margin: 0;
-    font-family: 'Merriweather', serif;
+    min-height: 100%;
+    background-color: #fff;
+    font-family: Arial,sans-serif;
+    font-size: 0.7rem;
+    line-height: 1.45em;
+    color: #333
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 10px
+}
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.w-container:before,.w-container:after {
+    content: " ";
+    display: table
+}
+
+.w-container:after {
+    clear: both
+}
+
+@media screen and ( max-width: 1441px) {
+    .w-container {
+        max-width: 80%;
+    }
+}
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) {
+    .w-container {
+        max-width: 85%;
+    }
 }
 
 
-/*Navbar Styling*/
+/* ==========================================================================
+   Start of custom CSS
+   ========================================================================== */
 
-a:hover {
-    text-decoration: none;
-}
-
-.navbar {
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: 70px;
-    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-}
-
-.navbar .navbar-brand {
-    color: white;
-    padding-top: 10px;
-    padding-left: 12px;
-    /*to have the same padding as "BACK" Button*/
-}
-
-.navbar .navbar-brand:hover {
-    color: white;
-}
-
-.navbar a>p {
-    padding: 7px 12px 5px;
-    font-size: 18px;
-    background-color: white;
-    color: rgba(20, 30, 40, 1);
-    border-radius: 4px;
-    margin-bottom: 0;
-    text-decoration: none;
-}
-
-
-/*End of Navbar Styling*/
-
-.row {
-    margin: 0;
-}
-
-
-/*Carousel*/
-
-.carousel {
-    top: 45px;
-}
-
-.carousel .title {
+.main-section {
     position: relative;
-    top: -15px;
-    left: 35%;
-    width: 30%;
-    text-align: center;
-    padding: 0;
-    z-index: 1;
-}
-
-.carousel .title>h1 {
-    width: 100%;
-    margin: 0 auto;
-    background-color: rgba(20, 30, 40, 0.5);
-    color: white;
-    padding: 10px 20px;
-    border-radius: 10px;
-    font-size: 25px;
-    line-height: 25px;
-}
-
-.carousel-indicators {
-    bottom: -30px;
-}
-
-.carousel-indicators li {
-    height: 6px;
-}
-
-.carousel-caption p {
-    display: none;
-}
-
-.img-fluid {
-    margin: 0 auto;
-    border-radius: 20px;
-    max-height: 60vh;
-}
-
-.new-caption-area {
-    height: 30px;
-    position: relative;
-    color: white;
-    bottom: -65px;
-}
-
-.new-caption-area p {
-    text-align: center;
-    margin-bottom: 0;
-}
-
-section.main {
-    background-color: rgba(20, 30, 40, 1);
+    left: 0px;
+    top: 0px;
     height: 100vh;
+    background-image: url("../News/img/jgeneration.jpg");
+    background-position: 50% 1%;
+    background-size: cover;
+    font-family: Merriweather, serif;
+    color: #fff;
+    font-weight: 700;
 }
 
+.transparent-layer {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .20);
+}
 
-/*Share This Page Section*/
+.share-pgraph {
+    font-size: 1.5rem;
+    line-height: 1.3em;
+}
+.verse-container {
+    position: absolute;
+    top: 10%;
+    display: block;
+    width: 100%;
+    height: 90%;
+    padding-top: 20%;
+    text-align: center;
+}
+
+.verse-container:hover {
+    border-radius: 4px;
+}
+
+.verse-pgraph {
+    margin-bottom: 0px;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 1.5rem;
+    line-height: 1.2em;
+}
+
+.verse-pgraph, .scroll-down {
+    font-weight: 300;
+}
+
+.scroll-down {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1em;
+    margin: 0;
+}
+
+.scroll-down img {
+    width: 25px;
+    margin-left: 5px;
+}
 
 .share-info {
-    position: fixed;
-    top: 6px;
-    right: 90px;
-    width: 240px;
-    text-align: center;
-    padding: 10px 0;
+    padding: 30px 0;
+    background-color: #000;
+    color: #fff;
 }
 
 .share-container {
-    width: 100%;
-}
-
-.share-container p {
-    font-size: 18px;
-    line-height: 24px;
-    margin-bottom: 10px;
-    color: white;
+    text-align: center;
 }
 
 .share-button {
     display: inline-block;
-    /*width: 200px;*/
     margin: 0 auto;
     cursor: pointer;
-    font-size: 18px;
     text-align: center;
-    line-height: 24px;
-    color:  rgba(20, 30, 40, 1);
+    font-size: 1rem;
+    line-height: 1em;
+    color: white;
     border-radius: 4px;
-    background-color: white;
-    padding: 8px 12px 6px;
+    background-color: #23B5D3;
+    padding: 0.6em 0.8em;
     text-transform: uppercase;
     font-weight: 500;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -163,10 +204,8 @@ section.main {
     transition: transform 1s ease, -webkit-transform 1s ease;
 }
 
-.navbar>a p:hover,
 .share-button:hover {
     background-color: #EA526F;
-    color: white;
 }
 
 .web__share {
@@ -183,25 +222,12 @@ section.main {
     transition: transform 0.35s ease, -webkit-transform 0.35s ease;
 }
 
-.share-toggle {
-    z-index: 200;
-}
-
-.share-toggle:before {
-    content: "\f1e0";
-    font-family: 'FontAwesome';
-    color: #3498db;
-}
-
-.share-toggle.share-expanded:before {
-    content: "\f00d";
-}
-
 .share-icon {
     display: inline-block;
-    width: 38px;
-    height: 38px;
-    line-height: 40px;
+    width: 2.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    font-size: 1rem;
     text-align: center;
     border-radius: 50%;
     text-decoration: none;
@@ -253,1114 +279,1154 @@ section.main {
     color: #eee;
 }
 
+.slide-container {
+    background-color: black;
+}
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531882/JGeneration/j1.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j2.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j3.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531904/JGeneration/j4.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j5.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531893/JGeneration/j6.jpg");
+}
+
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j7.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j8.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531918/JGeneration/j9.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531915/JGeneration/j10.jpg");
+}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j11.jpg");
+}
+
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j12.jpg");
+}
+
+.pic13 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531921/JGeneration/j13.jpg");
+}
+
+.pic14 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531922/JGeneration/j14.jpg");
+}
+
+.pic15 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j15.jpg");
+}
+
+.pic16 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j16.jpg");
+}
+
+.pic17 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531927/JGeneration/j17.jpg");
+}
+
+.pic18 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j18.jpg");
+}
+
+.pic19 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531937/JGeneration/j19.jpg");
+}
+
+.pic20 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j20.jpg");
+}
+
+.pic21 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531862/JGeneration/j21.jpg");
+}
+
+.pic22 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j22.jpg");
+}
+
+.pic23 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531879/JGeneration/j23.jpg");
+}
+
+.pic24 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531866/JGeneration/j24.jpg");
+}
+
+.pic25 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j25.jpg");
+}
+
+.pic26 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531875/JGeneration/j26.jpg");
+}
+
+.pic27 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531881/JGeneration/j27.jpg");
+}
+
+.pic28 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j28.jpg");
+}
+
+.pic29 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531888/JGeneration/j29.jpg");
+}
+
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16, .pic17, .pic18, .pic19, .pic20, .pic21, .pic22, .pic23, .pic24, .pic25, .pic26, .pic27, .pic28, .pic29 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.pic-container {
+    padding-top: 80vh;
+    text-align: center;
+}
+
+.slide-heading {
+    display: inline-block;
+    font-size: 1rem;
+    color: white;
+    background-color: rgba(0,0,0,0.5);
+    border-radius: 4px;
+    font-weight: 400;
+    padding: 10px 20px;
+    margin: 0;
+    position: absolute;
+    bottom: 80px;
+    left: 46.5%;
+}
+.adjust-space {
+    left: 46.1%;
+}
+.fp-tableCell {
+        position: relative;
+    }
+
+.fp-controlArrow.fp-prev {
+    border-color: transparent rgba(250, 250, 250, 1) transparent transparent !important;
+}
+
+.fp-controlArrow.fp-next {
+    border-color: transparent transparent transparent rgba(250, 250, 250, 1) !important;
+}
+
+.share-pgraph {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+}
+
+.youtube {
+    position: relative;
+    background-color: black;
+}
+.youtube .fp-tableCell {
+    text-align: center;
+}
+.youtube iframe {
+    height: 100vh;
+    width: 100%;
+}
+
+.footer {
+    height: 60px !important;
+    background-color: black;
+    color: #fff;
+}
+
+.footer.section .fp-tableCell {
+    height: 60px !important;
+}
+
+.footer-container {
+   
+    position: unset;
+    top: unset;
+    -webkit-transform: unset;
+    -ms-transform: unset;
+        transform: unset;
+    
+}
+
+.social-icons {
+    -webkit-transform: unset;
+        -ms-transform: unset;
+            transform: unset;
+}
+
+@media screen and ( max-width: 380px) {
+    .social-icons {
+        -webkit-transform: perspective(1px) translateY(-8%) !important;
+        transform: perspective(1px) translateY(-8%) !important;
+    }
+}
+
+.scroll-container, .scroll2-container, .scroll3-container {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    z-index: 1000
+}
+
+.scroll2-container, .scroll3-container {
+    display: block;
+    text-align: center;
+}
+
+.scroll2-container h1, .scroll3-container a {
+    font-size: 0.9rem;
+    border-radius: 4px;
+}
+
+.scroll3-container .tooltiptext {
+    position: absolute;
+    visibility: hidden;
+    width: 160px;
+    font-size: 0.8rem;
+    background-color: rgba(59,89,152,1);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 10px 8px 14px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s;
+}
+
+.scroll3-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(59,89,152,1) transparent transparent transparent;
+}
+
+.scroll3-container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+.scroll3-container a {
+    color: rgba(59,89,152,1);
+    background: rgba(246,246,246, 1);
+    font-weight: bold;
+    padding: 10px 15px 8px;
+    width: 180px;
+    text-align: left;
+}
+
+.scroll3-container a:hover {
+    background: white;
+}
+
+.scroll3-container a {
+    position: relative;
+}
+
+.scroll3-container a img {
+    right: 10px;
+    position:absolute;
+    top: 5px;
+    width: 25px;
+}
+
+@media screen and (max-width: 1441px) and (orientation: landscape) {
+    .verse-container {
+        padding-top: 25%;
+    }
+    .verse-pgraph {
+        font-size: 1.4rem;
+    }
+    .scroll2-container {
+        bottom: 20px;
+    }
+    .scroll3-container {
+        bottom: 13px;
+    }
+    .scroll3-container a {
+        width: 208px;
+    }
+    .scroll3-container a img {
+        width: 28px;
+        top: 6px;
+    }
+    .slide-heading {
+        left: 45.5%;
+        bottom: 65px;
+    }
+    .adjust-space {
+        left: 45.4%;
+    }
+}
+
+@media screen and ( max-width: 1370px) and (orientation: landscape) {
+    .scroll3-container {
+        bottom: 30px;
+    }
+    .scroll3-container a {
+        width: 212px;
+    }
+    .scroll3-container a img {
+        width: 28px;
+        top: 7px;
+    }
+    .adjust-space {
+        left: 45%;
+    }
+}
+
+@media screen and ( max-width: 1370px) and (max-height: 670px) {
+    .scroll3-container a {
+        width: 180px;
+    }
+    .scroll3-container a img {
+        width: 25px;
+        top: 6px;
+    }
+    .slide-heading {
+        left: 46%;
+    }
+    .adjust-space {
+        left: 45.4%;
+    }
+}
+
+@media screen and ( max-width: 1281px ) and ( max-height: 951px ) {
+    .scroll3-container a {
+        width: 193px;
+    }
+    .scroll3-container a img {
+        top: 5px;
+    }
+    .slide-heading {
+        left: 45.5%;
+    }
+    .adjust-space {
+        left: 44.6%;
+    }
+}
+
+@media screen and ( max-width: 1280px) and (max-height: 800px) {
+    .scroll3-container {
+        bottom: 10px;
+    }
+    .scroll3-container a {
+        width: 180px;
+    }
+    .scroll3-container a img {
+        width: 25px;
+        top: 6px;
+    }
+    .slide-heading {
+        left: 45.7%;
+    }
+    .adjust-space {
+        left: 45.5%;
+    }
+}
+
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .scroll3-container {
+        bottom: 15px;
+    }
+    .scroll3-container a {
+        width: 178px;
+    }
+    .scroll3-container a img {
+        width: 24px;
+        top: 6px;
+    }
+}
+@media screen and ( max-width: 1100px) {
+    .scroll2-container {
+        bottom: 25px;
+    }
+    .scroll3-container a {
+        width: 147px;
+        padding: 10px 15px;
+    }
+    .scroll3-container a img {
+        width: 23px;
+        top: 5px;
+    }
+}
+
+@media screen and ( max-width: 1024px) {
+    .slide-heading {
+        bottom: 150px;
+        padding: 15px 20px;
+        left: 42.5%;
+        font-size: 1.2rem;
+    }
+    .adjust-space {
+        left: 42%;
+    }
+    .fp-controlArrow {
+        top: unset !important;
+        bottom: 155px !important;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 35% !important;
+        border-width: 20.5px 15px 20.5px 0 !important;
+    }
+
+    .fp-controlArrow.fp-next {
+        right: 35% !important;
+        border-width: 20.5px 0 20.5px 15px !important;
+    }
+    .scroll-down, .scroll2-container h1, .scroll3-container a {
+        font-size: 1.1rem;
+    }
+    .scroll3-container a {
+        width: 285px;
+        padding: 15px 20px 11px;
+    }
+    .scroll3-container a img {
+        width: 38px;
+        top: 10px;
+    }
+    .scroll3-container .tooltiptext {
+        font-size: 1rem;
+        line-height: 1.2em;
+        width: 220px;
+        padding: 15px 8px;
+        left: 47%;
+    }
+   .scroll2-container, .scroll3-container {
+        bottom: 30px;
+    }
+}
+
+@media screen and ( max-width: 1024px) and ( max-height: 770px) {
+    .scroll-down, .scroll2-container h1, .scroll3-container a {
+        font-size: 1rem;
+    }
+    .slide-heading {
+        bottom: 80px;
+        left: 44%;
+    }
+    .fp-controlArrow {
+        bottom: 85px !important;
+    }
+    .scroll3-container a {
+        width: 200px;
+    }
+    .scroll3-container a img {
+        width: 28px;
+    }
+    .scroll3-container .tooltiptext {
+        line-height: 1.2em;
+        padding: 15px;
+    }
+    .adjust-space {
+        left: 44%;
+    }
+}
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    .scroll-down {
+        font-size: 1.1rem;
+    }
+    .scroll2-container h1, .scroll3-container a {
+        font-size: 1rem;
+    }
+    .scroll3-container a {
+        width: 170px;
+        padding: 14px 20px 12px;
+    }
+    .scroll3-container a img {
+        width: 26px;
+        top: 9px;
+    }
+    .slide-heading {
+        left: 45.2%;
+    }
+    .fp-controlArrow {
+        top: 55% !important;
+        bottom: unset !important;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 15px !important;
+        border-width: 38.5px 34px 38.5px 0;
+    }
+    .fp-controlArrow.fp-next {
+        right: 15px !important;
+        border-width: 38.5px 0 38.5px 34px;
+    }
+    .adjust-space {
+        left: 44.3%;
+    }
+}
+
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .scroll-down, .scroll2-container h1, .scroll3-container a  {
+        font-size: 1rem;
+    }
+    .slide-heading {
+        font-size: 1.2rem;
+        left: 41%;
+    }
+    .adjust-space {
+        left: 40%;
+    }
+    .scroll3-container a {
+        width: 262px;
+    }
+    .scroll3-container a img {
+        width: 35px;
+        top: 10px;
+    }
+}
+
+@media screen and ( max-width: 768px ) {
+    .slide-heading {
+        left: 40.5%;
+        bottom: 85px;
+    }
+    .adjust-space {
+        left: 39.4%;
+    }
+    .fp-controlArrow {
+        bottom: 90px !important;
+    }
+    .scroll3-container a {
+        width: 265px;
+    }
+}
+
+@media screen and ( max-width: 610px ) and ( max-height: 940px ) {
+    .slide-heading {
+        left: 39.9%;
+        padding: 10px 15px;
+        font-size: 1rem;
+    }
+    .adjust-space {
+        left: 38.6%;
+    }   
+    .scroll-down, .scroll2-container h1, .scroll3-container a {
+        font-size: 0.8rem;
+    }
+    .scroll3-container a {
+        width: 222px;
+    }
+    .scroll3-container a img {
+        width: 32px;
+        top: 9px;
+    }
+    .fp-controlArrow {
+        bottom: 88px !important;
+    }
+}
+
+@media screen and ( max-width: 420px ) and ( max-height: 740px ) {
+    .scroll-down img {
+        width: 20px;
+    }
+    .slide-heading {
+        left: 39%;
+    }
+    .adjust-space {
+        left: 38%;
+    }
+    .scroll2-container {
+        bottom: 15px;
+    }
+    .scroll-container {
+        font-size: 0.9rem;
+        bottom: 15px;
+    }
+    .slide-heading {
+        font-size: 1rem;
+    }
+    .scroll3-container {
+        bottom: 35px;
+    }
+    .scroll2-container h1 {
+        font-size: 0.7rem;
+    }
+    .scroll3-container a {
+        font-size: 0.7rem;
+    }
+    .fp-controlArrow {
+        bottom: 86px !important;
+    }
+    .fp-controlArrow.fp-prev {
+        left: 25% !important;
+        border-width: 18.5px 13px 18.5px 0 !important;
+    }  
+    .fp-controlArrow.fp-next {
+        right: 25% !important;
+        border-width: 18.5px 0 18.5px 13px !important;
+    }
+    .scroll3-container a {
+        width: 150px;
+        padding: 13px 15px 11px;
+    }
+    .scroll3-container a img {
+        width: 23px;
+        top: 7px;
+    }
+    .scroll3-container .tooltiptext {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+}
+
+/* ----------- Galaxy Note 5 ----------- */
+
+@media screen and ( max-width: 420px ) and ( max-height: 655px ) {
+    .scroll3-container a {
+        width: 150px;
+    }
+    .scroll3-container a {
+        padding: 13px 15px 9px;
+    }
+    .scroll-down, .scroll2-container h1 {
+        font-size: 0.7rem;
+    }
+}
+
+@media screen and ( max-width: 420px ) and ( max-height: 630px ) {
+    .slide-heading {
+        bottom: 70px;
+        left: 39.6%;
+    }
+    .fp-controlArrow {
+        bottom: 70px !important;
+    }
+    .scroll3-container a {
+        width: 138px;
+    }
+    .scroll3-container a img {
+        width: 21px;
+        top: 7px;
+    }
+    .adjust-space {
+        left: 39%;
+    }
+}
+
+@media screen and ( max-width: 380px ) and ( max-height: 670px ) {
+    .slide-heading {
+        bottom: 85px;
+        left: 38%;
+    }
+    .fp-controlArrow {
+        bottom: 85px !important;
+    }
+    .adjust-space {
+        left: 37%;
+    }
+    .scroll2-container {
+        bottom: 30px;
+    }
+    .scroll3-container a {
+        padding: 13px 15px 9px;
+    }
+    .scroll3-container a img {
+        width: 21.5px;
+        top: 7px;
+    }
+}
+
+@media screen and ( max-width: 360px ) and ( max-height: 670px ) {
+    .slide-heading {
+        bottom: 95px;
+        left: 37%;
+    }
+    .adjust-space {
+        left: 36%;
+    }
+    .fp-controlArrow {
+        bottom: 95px !important;
+    }
+    .scroll2-container {
+        bottom: 15px;
+    }
+}
+
+@media screen and ( max-width: 360px) and ( max-height: 640px) {
+    .slide-heading {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and ( max-width: 360px ) and ( max-height: 570px ) {
+    .slide-heading {
+        bottom: 60px;
+        left: 38.5%;
+    }
+    .adjust-space {
+        left: 37.5%;
+    }
+    .fp-controlArrow {
+        bottom: 60px !important;
+    }
+}
+
+@media screen and ( max-width: 320px) and ( max-height: 568px) {
+    .slide-heading {
+        bottom: 80px;
+        left: 37.5%;
+    }
+    .adjust-space {
+        left: 36.5%;
+    }
+    .fp-controlArrow {
+        bottom: 80px !important;
+    }
+}
+
+@media screen and ( max-width: 320px ) and ( max-height: 480px ) { 
+    .slide-heading {
+        bottom: 60px;
+    }
+    .fp-controlArrow {
+        bottom: 60px !important;
+        top: unset !important;
+    }
+}
+
 
 /* ----------- Laptop with HiDPI ----------- */
 
-@media screen and ( max-width: 1441px) and ( max-height: 901px) {
-    .carousel {
-        top: 100px;
-    }
-    .carousel .title {
-        top: -25px;
-    }
-    .share-icon {
-        width: 40px;
-        height: 40px;
-        line-height: 42px;
-        font-size: 15px;
+@media screen and ( max-width: 1441px) and (orientation: landscape) {
+    html{font-size: 24px;}
+    .share-info {
+        padding: 40px 0;
     }
 }
-
 
 /* ----------- iPad Pro Landscape ----------- */
 
-@media screen and ( max-width: 1370px) and ( max-height: 1024px) {
-    .navbar {
-        height: 100px;
-    }
-    .navbar-brand {
-        font-size: 2rem;
-    }
-    .navbar a>p {
-        font-size: 1.2rem;
-        padding: 10px 12px 6px;
-    }
-    .carousel {
-        top: 135px;
-    }
-    .carousel .title {
-        width: 40%;
-        top: -25px;
-        left: 30%;
-    }
-    .carousel .title>h1 {
-        font-size: 2rem;
-    }
-    .img-fluid {
-        max-height: 50vh;
-    }
-    .new-caption-area p {
-        font-size: 1.5rem;
-    }
-    .share-info {
-        width: 300px;
-        top: 1.42%;
-        right: 7%;
-    }
-    .share-button {
-        font-size: 1.2rem;
-        padding: 15px 15px 13px;
-    }
-    .share-icon {
-        width: 52px;
-        height: 52px;
-        line-height: 54px;
+@media screen and ( max-width: 1370px) and (orientation: landscape) {
+    html {font-size: 25px;}
+    .verse-container {
+        padding-top: 25%;
     }
 }
-
 
 /* ----------- Aspire E1 Laptop Landscape ----------- */
 
-@media screen and ( max-width: 1370px) and ( max-height: 670px) {
-    .navbar {
-        height: 70px;
-    }
-    .navbar-brand {
-        font-size: 1.3rem;
-    }
-    .navbar a>p {
-        font-size: 0.8rem;
-        padding: 7px 12px 5px;
-    }
-    .carousel {
-        top: 30px;
-    }
-    .carousel .title {
-        top: -10px;
-    }
-    .carousel .title>h1 {
-        font-size: 1.4rem;
-    }
-    .img-fluid {
-        max-height: 400px;
-    }
-    .new-caption-area {
-        bottom: 40px;
-    }
-    .new-caption-area {
-        bottom: -50px;
-    }
-    .new-caption-area p {
-        font-size: 1.2rem;
-    }
-    .carousel-indicators {
-        bottom: -25px;
-    }
-    .share-info {
-        top: 1%;
-        right: 3%;
-    }
-    .share-button {
-        font-size: 0.8rem;
-        padding: 8px 12px 4px;
-    }
-    .share-icon {
-        width: 38px;
-        height: 38px;
-        line-height: 40px;
+@media screen and ( max-width: 1370px) and (max-height: 670px) {
+    html {font-size: 20px;}
+    .verse-container {
+        padding-top: 15%;
     }
 }
 
-
 /* ----------- Laptop with Touch ----------- */
 
-@media screen and ( max-width: 1281px) and ( max-height: 951px) {
-    .navbar .navbar-brand {
-        font-size: 1.5rem;
-    }
-    .carousel {
-        top: 100px;
-    }
-    .carousel .title>h1 {
-        font-size: 1.5rem;
-    }
-    .img-fluid {
-        max-height: 55vh;
-    }
-    .new-caption-area p {
-        font-size: 1.3rem;
-    }
-    .share-info {
-        right: 8%;
+@media screen and ( max-width: 1280px) {
+    html {font-size: 22px;}
+    .verse-container {
+        padding-top: 30%;
     }
 }
 
 
 /* ----------- Laptop with MDPI screen----------- */
 
-@media screen and ( max-width: 1281px) and ( max-height: 801px) {
-    .carousel {
-        top: 60px;
-    }
-    .share-info {
-        top: 1.8%;
-        width: 255px;
-        right: 10%;
-    }
-    .img-fluid {
-        max-height: 60vh;
-    }
-    .new-caption-area {
-        bottom: -60px;
-    }
-    .new-caption-area p {
-        font-size: 1rem;
-    }
-    .share-icon {
-        font-size: 22px;
+@media screen and ( max-width: 1280px) and (max-height: 800px) {
+    html {font-size: 20px;}
+    .verse-container {
+        padding-top: 25%;
     }
 }
-
 
 /* ----------- S Tab 10.1 Landscape ----------- */
 
-@media screen and ( max-width: 1280px) and ( max-height: 656px) {
-    .navbar .navbar-brand {
-        font-size: 1.2rem;
-    }
-    .carousel {
-        top: 25px;
-    }
-    .carousel .title>h1 {
-        font-size: 1.3rem;
-    }
-    .new-caption-area {
-        bottom: -55px;
-    }
-    .share-info {
-        top: 1.2%;
-        width: 180px;
-        right: 8%;
-    }
-    .share-icon {
-        width: 38px;
-        height: 38px;
-        line-height: 40px;
-        font-size: 18px;
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .verse-container {
+        padding-top: 15%;
     }
 }
-
 
 /* ----------- Aspire V3 Laptop Landscape ----------- */
 
-@media screen and ( max-width: 1100px) and ( max-height: 520px) {
-    .navbar {
-        height: 60px;
-    }
-    .navbar-brand {
-        font-size: 1.2rem;
-    }
-    .navbar a>p {
-        font-size: 0.7rem;
-    }
-    .carousel {
-        top: 30px;
-    }
-    .carousel .title {
-        top: -10px;
-    }
-    .carousel .title>h1 {
-        font-size: 1rem;
-        padding: 5px;
-    }
-    .carousel-indicators {
-        bottom: -20px;
-    }
-    .img-fluid {
-        max-height: 55vh;
-    }
-    .new-caption-area {
-        bottom: -45px;
-    }
-    .new-caption-area p {
-        font-size: 0.9rem;
-    }
+@media screen and ( max-width: 1100px) {
+    html {font-size: 15px;}
     .share-info {
-        top: 3px;
-        width: unset;
-        right: 9%;
-    }
-    .share-button {
-        font-size: 0.7rem;
-        padding: 6px 12px 3px;
-    }
-    .share-icon {
-        width: 33px;
-        height: 33px;
-        line-height: 35px;
+        padding: 30px 0;
     }
 }
-
 
 /* ----------- iPad Pro Potrait------------------*/
 
-@media screen and ( max-width: 1024px) and ( max-height: 1367px) {
-    .navbar {
-        height: 130px;
-        padding: 30px;
+@media screen and ( max-width: 1024px) {
+    html {font-size: 28px;}
+    .verse-container {
+        padding-top: 45%;
     }
-    h1.navbar-brand {
-        font-size: 2.5rem;
+    .verse-pgraph {
+        font-size: 1.4rem;
     }
-    .navbar a>p {
-        font-size: 2.2rem;
-        background-color: unset;
-    }
-    .navbar a>p:hover {
-        background-color: unset;
-    }
-    .carousel {
-        position: fixed;
-        top: 30%;
-    }
-    .carousel .title {
-        top: -50px;
-        left: 7%;
-        width: 86%;
-    }
-    .carousel .title>h1 {
-        font-size: 2.5rem;
-    }
-    .img-fluid {
-        max-height: 38vh;
-    }
-    .carousel-indicators {
-        bottom: -50px;
-    }
-    .carousel-indicators li {
-        height: 10px;
-    }
-    .new-caption-area {
-        bottom: -80px;
-    }
-    .new-caption-area p {
-        font-size: 1.8rem;
+    .share-button, .share-icon {
+        font-size: 1.2rem;
     }
     .share-info {
-        top: unset;
-        bottom: 50px;
-        right: 25%;
-        width: 50%;
+        padding: 50px 0;
     }
-    .share-button {
-        font-size: 2rem;
+    .share-pgraph {
+        padding-bottom: 35px;
+    }
+    .youtube iframe {
+        height: 60vh;
         width: 100%;
-        padding: 5% 0 4%;
-        border-radius: 10px;
     }
-    .share-icon {
-        width: 80px;
-        height: 80px;
-        line-height: 82px;
-        font-size: 32px;
+    .main-section {
+        background-position: 28% 1%;
     }
 }
-
 
 /* ----------- iPad Landscape ----------- */
 
-@media screen and ( max-width: 1024px) and ( max-height: 768px) {
-    .navbar {
-        height: 70px;
-        padding: 0 15px;
+@media screen and ( max-width: 1024px) and ( max-height: 770px) {
+    html {font-size: 20px;}
+    .verse-container {
+        padding-top: 26%;
     }
-    h1.navbar-brand {
+    .verse-pgraph {
         font-size: 1.3rem;
     }
-    .navbar a>p,
-    .share-button {
-        font-size: 1rem;
-    }
-    .navbar a>p {
-        padding: 7px 12px 5px;
-        background-color: white;
-    }
-    .carousel {
-        top: 17%;
-    }
-    .carousel .title {
-        top: -20px;
-        left: 23%;
-        width: 54%;
-    }
-    .carousel .title>h1 {
-        font-size: 1.5rem;
-    }
-    .img-fluid {
-        max-height: 59vh;
-    }
-    .carousel-indicators {
-        bottom: -30px;
-    }
-    .new-caption-area {
-        bottom: -60px;
-    }
-    .new-caption-area p {
-        font-size: 1.1rem;
-    }
     .share-info {
-        top: 0.6%;
-        width: 220px;
-        right: 10%;
-        bottom: unset;
+        padding: 40px 0;
     }
-    .share-button {
-        width: unset;
-        height: unset;
-        padding: 9px 15px 8px;
-        border-radius: 4px;
-    }
-    .share-icon {
-        width: 42px;
-        height: 42px;
-        line-height: 44px;
-        font-size: 20px;
+    .share-pgraph {
+        padding-bottom: 25px;
     }
 }
-
 
 /* ----------- iPad Mini 4 Landscape ----------- */
 
-@media screen and ( max-width: 1024px) and ( max-height: 672px) {
-    .carousel {
-        top: 17%;
-    }
-    .img-fluid {
-        max-height: 55vh;
+@media screen and ( max-width: 1024px) and ( max-height: 680px) {
+    .verse-container {
+        padding-top: 20%;
     }
 }
-
 
 /* ----------- Lenova IdeaPad Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
-    .navbar {
-        height: 60px;
-    }
-    h1.navbar-brand {
-        font-size: 1.1rem;
-    }
-    .navbar a>p {
-        font-size: 0.7rem;
-    }
-    .carousel {
-        top: 18%;
-    }
-    .carousel .title {
-        top: -10px;
-        left: 32%;
-        width: 36%;
-    }
-    .carousel .title>h1 {
-        font-size: 1.2rem;
-    }
-    .carousel-indicators {
-        bottom: -20px;
-    }
-    .new-caption-area {
-        bottom: -40px;
-    }
-    .carousel-indicators li {
-        height: 6px;
-    }
-    .new-caption-area p {
-        font-size: 0.8rem;
+    html {font-size: 16px;}
+    .verse-container {
+        padding-top: 18%;
     }
     .share-info {
-        right: 75px;
-        width: 180px;
+        padding: 30px 0;
     }
-    .share-button {
-        font-size: 0.7rem;
-        padding: 6px 15px 3px
+    .share-pgraph {
+        padding-bottom: 20px;
     }
-    .share-icon {
-        width: 33px;
-        height: 33px;
-        line-height: 35px;
-        font-size: 15px;
+    .youtube iframe {
+        height: 100vh;
+        width: 100%;
     }
 }
 
 
 /* ----------- S Note 8.0 Landscape ----------- */
 
-@media screen and ( max-width: 970px) and ( max-height: 490px) {
-    .carousel {
-        top: 20%;
-    }
-    .img-fluid {
-        max-height: 53vh;
-    }
-    .new-caption-area {
-        bottom: -45px;
+@media screen and ( max-width: 970px) and (max-height: 490px) {
+    .verse-container {
+        padding-top: 14%;
     }
 }
 
 
 /* ----------- S Tab 10.1 Potrait ----------- */
 
-@media screen and ( max-width: 800px) and ( max-height: 1136px) {
-    h1.navbar-brand,
-    .navbar a>p {
-        font-size: 2rem;
+@media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .verse-container {
+        padding-top: 40%;
     }
-    .carousel {
-        top: 26%;
+    .verse-pgraph {
+        font-size: 1.2rem;
+        line-height: 1.25em;
+        padding-bottom: 25px;
     }
-    .carousel .title>h1 {
-        font-size: 2.2rem;
+    .share-pgraph {
+        font-size: 1.2rem;
     }
-    .img-fluid {
-        max-height: 37vh;
+    .share-button, .share-icon {
+        font-size: 1rem;
     }
-    .new-caption-area {
-        bottom: -90px;
-    }
-    .share-button,
-    .new-caption-area p {
-        font-size: 1.5rem;
-    }
-    .share-icon {
-        width: 70px;
-        height: 70px;
-        line-height: 72px;
+    
+    .youtube iframe {
+        height: 50vh;
+        width: 100%;
     }
 }
-
 
 /* ----------- iPad Potrait----------- */
 
-@media screen and ( max-width: 768px) and ( max-height: 1024px) {
-    .navbar {
-        height: 100px;
-    }
-    h1.navbar-brand {
-        font-size: 2rem;
-    }
-    .navbar a>p {
-        font-size: 1.8rem;
-    }
-    .carousel {
-        top: 25%;
-    }
-    .carousel .title {
-        left: 10%;
-        width: 80%;
-    }
-    .carousel-indicators {}
-    .img-fluid {
-        max-height: 40vh;
-    }
-    .new-caption-area p {
-        font-size: 1.5rem;
-    }
-    .share-button {
-        font-size: 1.5rem;
+@media screen and ( max-width: 768px) {
+    .verse-container {
+        padding-top: 32%;
     }
 }
-
 
 /* ----------- iPad Mini4 Potrait----------- */
 
-@media screen and ( max-width: 768px) and ( max-height: 930px) {
-    .carousel .title {
-        top: -30px;
+@media screen and ( max-width: 768px) and (max-height: 930px) {
+    .verse-container {
+        padding-top: 26%;
     }
-    .carousel .title>h1 {
-        font-size: 2rem;
-    }
-    .carousel-indicators {
-        bottom: -35px;
-    }
-    .new-caption-area {
-        bottom: -70px;
-    }
-    .share-info {
-        bottom: 40px;
+    .verse-pgraph {
+        font-size: 1.15rem;
     }
 }
-
 
 /* ----------- iPone 6 Plus Landscape ----------- */
 
-@media screen and ( max-width: 740px) and ( max-height: 420px) {
-    .navbar {
-        height: 50px;
-        padding: 0 15px;
+@media screen and ( max-width: 740px) and (max-height: 420px) {
+    .verse-container {
+        padding-top: 17%;
     }
-    .navbar .navbar-brand {
+    .verse-pgraph {
+        padding-bottom: 5px;
+    }
+    .scroll-down {
         font-size: 1rem;
     }
-    .navbar a>p,
-    .share-button {
-        font-size: 0.6rem;
+    .share-pgraph {
+        font-size: 1.2rem;
     }
-    .carousel {
-        top: 20%;
-    }
-    .carousel .title {
-        top: -10px;
-    }
-    .carousel .title>h1 {
+    .share-button, .share-icon {
         font-size: 1rem;
-    }
-    .img-fluid {
-        max-height: 50vh;
-    }
-    .carousel-indicators {
-        bottom: -15px;
-    }
-    .carousel-indicators li {
-        max-width: 20px;
-    }
-    .new-caption-area {
-        bottom: -40px;
-    }
-    .new-caption-area p {
-        font-size: 0.7rem;
-    }
-    .share-info {
-        top: -1px;
-        width: 150px;
-        height: 50px;
-    }
-    .share-button {
-        padding: 4px 15px 1.5px;
-    }
-    .share-icon {
-        width: 31px;
-        height: 31px;
-        line-height: 33px;
     }
 }
 
+/* ----------- S Galaxy S5 ----------- */
 
-/* ----------- iPone 6 Landscape ----------- */
-
-@media screen and ( max-width: 670px) and ( max-height: 380px) {
-    .navbar {
-        height: 40px;
-    }
-    .navbar .navbar-brand {
-        font-size: 0.8rem;
-    }
-    .navbar a>p {
-        font-size: 0.5rem;
-        padding: 7px 8px 5px;
-    }
-    .carousel {
-        top: 15%;
-    }
-    .carousel .title {
-        top: 0;
-        left: 33%;
-        width: 34%;
-    }
-    .carousel .title>h1 {
-        font-size: 0.8rem;
-        padding: 10px;
-    }
-    .carousel-indicators li {
-        max-width: 15px;
-    }
-    .share-info {
-        top: -6.3px;
-        width: 120px;
-        height: 30px;
-        right: 65px;
-    }
-    .share-button {
-        font-size: 0.5rem;
-        padding: 3px 10px 0;
-    }
-    .new-caption-area {
-        bottom: -35px;
-    }
-    .new-caption-area p {
-        font-size: 0.7rem;
-    }
-    .share-icon {
-        width: 25px;
-        height: 25px;
-        line-height: 26px;
-        font-size: 12px;
+@media screen and ( max-width: 640px) and (max-height: 360px) {
+    .verse-container {
+        padding-top: 15%;
     }
 }
-
 
 /* ----------- iPhone 7 Landscape ----------- */
 
-@media screen and ( max-width: 630px) and ( max-height: 420px) {
-    .navbar .navbar-brand {
-        font-size: 0.8rem;
-    }
-    .carousel .title>h1 {
-        font-size: 1rem;
-        padding: 8px;
-    }
-    .new-caption-area {
-        bottom: -36px;
-    }
-    .share-icon {
-        width: 30px;
-        height: 30px;
-        line-height: 33px;
-        font-size: 15px;
+@media screen and ( max-width: 635px) and (max-height: 420px) {
+    .verse-container {
+        padding-top: 22%;
     }
 }
 
+/* ----------- S Note 8.0 Potrait include Address bar----------- */
+
+@media screen and ( max-width: 610px ) and ( max-height: 940px ) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 0.9rem;
+    }
+    .verse-pgraph {
+        font-size: 0.9rem;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    .verse-container {
+        padding-top: 50%;
+    }
+    .share-pgraph {
+        font-size: 1.1rem;
+    }
+    .share-button, .share-icon {
+        font-size: 0.9rem;
+    }
+}
 
 /* ----------- S Note 8.0 Potrait ----------- */
 
-@media screen and ( max-width: 610px) and ( max-height: 850px) {
-    .navbar {
-        height: 80px;
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .verse-container {
+        padding-top: 45%;
     }
-    h1.navbar-brand,
-    .navbar a>p {
-        font-size: 1.5rem;
-    }
-    .carousel .title {}
-    .carousel .title>h1 {
-        font-size: 1.5rem;
-    }
-    .img-fluid {
-        max-height: 38vh;
-    }
-    .carousel-indicators {}
-    .new-caption-area {}
-    .new-caption-area p {
-        font-size: 1rem;
-    }
-    .share-button {
-        font-size: 1.1rem;
-        height: 55px;
-        padding-top: 18px;
-    }
-    .share-icon {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 20px;
+    .verse-pgraph {
+        font-size: 0.9rem;
     }
 }
 
+/* ----------- iPhone 5 5s Landscape ----------- */
 
-/* ----------- iPhone 5 Landscape ----------- */
-
-@media screen and ( max-width: 568px) and ( max-height: 320px) {
-    .navbar {
-        height: 40px;
-        padding: 0 10px;
-    }
-    .navbar h1.navbar-brand {
-        font-size: 0.7rem;
-        padding-left: 0;
-    }
-    .navbar a>p {
-        font-size: 0.5rem;
-        padding: 6px 8px 5px;
-    }
-    .carousel {
-        top: 15%;
-    }
-    .carousel .title {
-        top: 0;
-        width: 40%;
-        left: 30%;
-    }
-    .carousel .title>h1 {
-        font-size: 0.7rem;
-    }
-    .carousel-indicators {
-        bottom: -10px;
-    }
-    .img-fluid {
-        max-height: 55vh;
-    }
-    .new-caption-area {
-        bottom: -27px;
-    }
-    .new-caption-area p {
-        font-size: 0.6rem;
-    }
-    .share-info {
-        right: 58px;
-    }
-    .share-button {
-        font-size: 0.5rem;
-        height: 26px;
-        padding: 3px 8px 0px;
-    }
-    .share-icon {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        font-size: 12px;
+@media screen and ( max-width: 568px) {
+    .verse-container {
+        padding-top: 18%;
     }
 }
-
 
 /* ----------- VIVO 5 Samsung J Landscape ----------- */
 
-@media screen and ( max-width: 560px) and ( max-height: 360px) {
-    .navbar {
-        height: 40px;
-    }
-    .navbar .navbar-brand {
-        font-size: 0.7rem;
-    }
-    .navbar a>p {
-        font-size: 0.6rem;
-        padding: 5px 6px 3px;
-    }
-    .carousel .title {
-        left: 25%;
-        width: 50%;
-    }
-    .carousel .title>h1 {
-        font-size: 0.8rem;
-    }
-    .carousel-indicators {}
-    .img-fluid {
-        max-height: 50vh;
-    }
-    .new-caption-area {}
-    .new-caption-area p {
-        font-size: 0.7rem;
-    }
-    .share-info {
-        top: -5.3px;
-        width: 140px;
-        height: 30px;
-        right: 62px;
-    }
-    .share-button {
-        font-size: 0.6rem;
-        height: 26px;
-        padding: 3px 10px 0;
-    }
-    .share-icon {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
-        font-size: 12px;
+@media screen and ( max-width: 560px) and (max-height: 360px) {
+    .verse-container {
+        padding-top: 22%;
     }
 }
-
 
 /* ----------- iPhone 6S Landscape ----------- */
 
-@media screen and ( max-width: 540px) and ( max-height: 380px) {
-    .navbar {
-        height: 40px;
-        padding: 0 10px;
-    }
-    .navbar a>p {
-        font-size: 0.7rem;
-    }
-    .carousel {
-        top: 15%;
-    }
-    .carousel .title {
-        left: 25%;
-        width: 50%;
-    }
-    .carousel .title>h1 {
-        font-size: 1rem;
-    }
-    .carousel-indicators {}
-    .img-fluid {
-        max-height: 50vh;
-    }
-    .new-caption-area {}
-    .new-caption-area p {
-        font-size: 0.7rem;
-    }
-    .share-info {
-        width: 155px;
-        right: 67px;
-    }
-    .share-button {
-        font-size: 0.7rem;
-        height: 33px;
-        padding: 6px 10px 8px;
-    }
-    .share-icon {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 13px;
+@media screen and ( max-width: 540px) {
+    .verse-container {
+        padding-top: 28%;
     }
 }
-
 
 /* ----------- HuaWei Mate 9 Landscape ----------- */
 
-@media screen and ( max-width: 525px) and ( max-height: 360px) {
-    .carousel .title>h1 {
-        font-size: 0.9rem;
-    }
-    .carousel-indicators {}
-    .new-caption-area {}
-    .share-info {
-        top: -5.3px;
-    }
-    .share-button {
-        height: 29px;
-        padding: 4px 10px 8px;
+@media screen and ( max-width: 530px) {
+    .verse-container {
+        padding-top: 26%;
     }
 }
-
 
 /* ----------- iPhone 4 Landscape ----------- */
 
-@media screen and ( max-width: 480px) and ( max-height: 320px) {
-    .navbar a>p {
-        font-size: 0.4rem;
-        padding: 6px 7px 5px;
-    }
-    .carousel .title {
-        left: 23%;
-        width: 54%;
-    }
-    .img-fluid {
-        max-height: 160px;
-    }
-    .share-info {
-        top: -6px;
-        width: 105px;
-        right: 50px;
-    }
-    .share-button {
-        font-size: 0.4rem;
-        height: 23px;
-        padding: 2px 7px;
-    }
-    .share-icon {
-        width: 21px;
-        height: 21px;
-        line-height: 24px;
-        font-size: 8px;
+@media screen and ( max-width: 480px) and (max-height: 215px) {
+    .verse-container {
+        padding-top: 14%;
     }
 }
-
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 420px) and ( max-height: 740px) {
-    .navbar {
-        height: 60px;
-        padding: 10px 15px;
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    .main-section {
+        background-position: 30% 100%;
     }
-    .navbar .navbar-brand {
-        font-size: 1rem;
+    .verse-container {
+        padding-top: 55%;
     }
-    .navbar a>p {
-        font-size: 1rem;
-        background-color: unset;
+    .verse-pgraph {
+        font-size: 1rem;    
     }
-    .carousel {
-        top: 30%;
-    }
-    .carousel .title {}
-    .carousel .title>h1 {
-        font-size: 1.1rem;
-    }
-    .img-fluid {
-        max-height: 30vh;
-    }
-    .carousel-indicators {
-        bottom: -30px;
-    }
-    .carousel-indicators li {
-        height: 6px;
-    }
-    .new-caption-area {
-        bottom: -60px;
-    }
-    .new-caption-area p {
-        font-size: 0.8rem;
-    }
-    .share-info {
-        top: unset;
-        width: 60%;
-        right: 20%;
-    }
-    .share-button {
-        font-size: 0.8rem;
-        height: 40px;
-        padding-top: 9px;
+    .share-button, .share-icon {
+        font-size: 0.9rem;
     }
 }
 
+/* ----------- Galaxy Note 5 ----------- */
 
-/* ----------- iPhone 7 Potrait ----------- */
+@media screen and ( max-width: 420px ) and ( max-height: 655px ) {
+    .verse-pgraph {
+        font-size: 0.9rem;
+    }
+}
+
+/* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
 
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
-    .carousel {
-        top: 22%;
-    }
-    .carousel .title {
-        top: 21%;
-    }
-    .carousel-indicators {
-        bottom: 24%;
-    }
-    .new-caption-area {
-        bottom: 17%;
-    }
-    .new-caption-area p {
-        font-size: 0.8rem;
-    }
-    .share-info {
-        bottom: 40px;
-    }
-    .share-icon {
-        width: 38px;
-        height: 38px;
-        line-height: 40px;
-        font-size: 15px;
+    html{font-size: 18px;}
+    .main-section {
+        background-position: 30% 100%;
     }
 }
-
 
 /* ----------- iPhone 6  Potrait----------- */
 
-@media screen and ( max-width: 380px) and ( max-height: 670px) {
-    .carousel {}
-    .img-fluid {}
-    .carousel-indicators {
-        bottom: -20px;
+@media screen and ( max-width: 380px) {
+    .verse-container {
+        padding-top: 60%;
     }
-    .carousel .title {
-        top: -15px;
-        left: 0;
-        width: 100%;
+    .verse-pgraph {
+        font-size: 0.9rem;
     }
-    .carousel .title>h1 {
-        font-size: 1rem;
-    }
-    .new-caption-area {
-        bottom: -41px;
-    }
-    .new-caption-area p {
-        font-size: 0.8rem;
-    }
-    .share-info {
-        bottom: 40px;
-    }
-    .share-button {
+    .scroll-down, .scroll2-container h1 {
         font-size: 0.7rem;
     }
-    .share-icon {
-        width: 38px;
-        height: 38px;
-        line-height: 40px;
-        font-size: 15px;
-    }
 }
 
+/* ----------- iPhone 6  Potrait----------- */
 
-/* ----------- iPhone 6S Potrait ----------- */
-
-@media screen and ( max-width: 380px) and ( max-height: 540px) {
-    .carousel {
-        top: 25%;
+@media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .main-section {
+        background-position: 30% 100%;
     }
-    .img-fluid {
-        max-height: 34vh;
-    }
-    .share-info {
-        bottom: 20px;
+    .verse-container {
+        padding-top: 42%;
     }
 }
-
 
 /* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
-    .carousel {
-        top: 28%;
+    .verse-container {
+        padding-top: 50%;
     }
-    .new-caption-area {}
-    .carousel-indicators {}
+    .share-button, .share-icon {
+        font-size: 0.8rem;
+    }
 }
-
 
 /* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 560px) {
-    .carousel {
-        top: 25%;
-    }
-    .img-fluid {
-        max-height: 32vh;
-    }
     .share-info {
-        bottom: 30px;
+        padding: 30px 0;
+    }
+    .share-button, .share-icon {
+        font-size: 0.9rem;
     }
 }
-
 
 /* ----------- HuaWei Mate9 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
-    .navbar {
-        height: 50px;
-        padding: 0 15px;
+    .verse-container {
+        padding-top: 40%;
     }
-    .carousel .title>h1 {
-        font-size: 1rem;
-    }
-    .carousel-indicators {}
-    .new-caption-area {}
-    .carousel-indicators li {
-        max-width: 15px;
-    }
-    .share-info {
-        bottom: 15px;
+    .verse-pgraph {
+        padding-bottom: 10px;
     }
 }
-
-
-/* ----------- YES M631Y Potrait  ----------- */
-
-@media screen and ( max-width: 360px) and ( max-height: 512px) {
-    .carousel .title {}
-}
-
 
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
-@media screen and ( max-width: 320px) and ( max-height: 568px) {
-    .carousel {
-        top: 30%;
-    }
-    .carousel .title>h1 {
-        font-size: 1rem;
-    }
-    .img-fluid {
-        max-height: 28vh;
-    }
-    .carousel-indicators {}
-    .new-caption-area {}
-    .new-caption-area p {
-        font-size: 0.7rem;
+@media screen and ( max-width: 320px) and ( max-height: 568px) { 
+    .verse-pgraph {
+        padding-bottom: 15px;
     }
     .share-info {
-        bottom: 30px;
+        padding: 30px 0;
+    }
+    .share-pgraph {
+        padding-bottom: 20px;
     }
 }
 
@@ -1368,49 +1434,15 @@ section.main {
 /* ----------- iPhone 4 and 4S Potrait----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
-    .navbar {
-        height: 50px;
-        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    .verse-container {
+        padding-top: 30%;
     }
-    .navbar>a {
-        margin-right: -15px;
-    }
-    .navbar .navbar-brand {
-        font-size: 1rem;
-    }
-    .navbar a>p {
-        font-size: 0.9rem;
-        background-color: unset;
-    }
-    .navbar a>p:hover {
-        background-color: unset;
-    }
-    .carousel {
-        top: 25%;
-    }
-    .carousel .title {}
-    .carousel .title h1 {
-        font-size: 0.8rem;
-    }
-    .carousel-indicators {
-        ;
-    }
-    .img-fluid {
-        max-height: 34vh;
-    }
-    .new-caption-area {}
-    .new-caption-area p {
-        font-size: 0.7rem;
-    }
-    .share-info {
-        bottom: 20px;
-    }
-    .share-container {
-        background-color: unset;
-    }
-    .share-button {
-        font-size: 0.7rem;
-        width: 180px;
+}
+
+/* iPhone 5S Potrait */
+
+@media screen and ( max-width: 320px) and ( max-height: 460px) {
+    .verse-pgraph {
+        padding-bottom: 5px;
     }
 }
