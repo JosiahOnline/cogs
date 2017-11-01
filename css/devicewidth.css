@@ -184,9 +184,21 @@
     
 }
 
+/* ----------- Galaxy Note 8 Potrait  ----------- */
+
+@media screen and ( max-width: 360px ) and ( max-height: 670px ) {
+    
+}
+
 /* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px ) and ( max-height: 640px ) {
+    
+}
+
+/* ----------- Samsung J Potrait  ----------- */
+
+@media screen and ( max-width: 360px ) and ( max-height: 570px ) {
     
 }
 
