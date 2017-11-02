@@ -3518,7 +3518,7 @@ window.outerHeight include toolbar and address bar----------- */
     .send-message-button.full-width {
         margin-top: 2%;
         font-size: 1.5rem;
-        height: 45px;
+        height: 50px;
     }
     .address {
         display: -webkit-box;
@@ -3548,8 +3548,8 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .direction-button {
         font-size: 1.5rem;
-        line-height: 1em;
-        height: 45px;
+        line-height: 1.2em;
+        height: 50px;
     }
     .bible-verse {
         font-size: 2.3rem;
@@ -3584,8 +3584,11 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 2.7rem;
         margin-bottom: 0.8em;
     }
-    .bulletin-flex {
-        
+    .send-message-button.full-width, .direction-button {
+        height: 45px;
+    }
+    .direction-button {
+        line-height: 1.3em;
     }
     .bulletin-container-1 {
         padding: 0;
@@ -4500,10 +4503,6 @@ window.outerHeight include toolbar and address bar----------- */
     .call-to-action-section {
         height: 48%;
     }
-    .direction-button, .send-message-button.full-width {
-        height: 35px;
-        padding: 7px;
-    }
     .address {
         height: 54em;
     }
@@ -4583,7 +4582,7 @@ window.outerHeight include toolbar and address bar----------- */
         height: 100px;
         padding: 10px;
     }
-    .submit-button, .cogs-news-form>.text-field, .direction-button, .send-message-button.full-width {
+    .submit-button, .cogs-news-form>.text-field {
         height: 35px;
         padding: 8px 15px;
         font-size: 1.2rem;
