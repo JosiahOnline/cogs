@@ -107,7 +107,7 @@ p {
     left: 0px;
     top: 0px;
     height: 100vh;
-    background-image: url("../News/img/boysbrigade.jpg");
+    background-image: url("../News/img/basketball.jpg");
     background-position: 50% 100%;
     background-size: cover;
     font-family: Merriweather, serif;
@@ -122,7 +122,7 @@ p {
     right: 0px;
     bottom: 0px;
     height: 100%;
-    background-color: rgba(0, 0, 0, .20);
+    background-color: rgba(0, 0, 0, .40);
 }
 
 .share-pgraph {
@@ -132,10 +132,12 @@ p {
 .verse-container {
     position: absolute;
     top: 10%;
-    display: block;
-    width: 100%;
-    height: 90%;
-    padding-top: 20%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
+    left: 10%;
+    padding-top: 12%;
     text-align: center;
 }
 
@@ -143,18 +145,72 @@ p {
     border-radius: 4px;
 }
 
-.verse-pgraph {
+.verse-container p, .verse-container .join {
     margin-bottom: 0px;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     line-height: 1.2em;
+    
 }
 
-.verse-pgraph, .scroll-down {
+.verse-container p:nth-child(1){
+    width: 100%;
+    font-size: 2rem;
+}
+
+.verse-container p:nth-child(2) {
+    width: 100%;
+    padding: 1% 5% 2%;
+    line-height: 1.4em;
+}
+
+.verse-container p:nth-child(3) {
+    text-align: right;
+    width: 30%;
+}
+
+.verse-container p:nth-child(4) {
+    margin: 0 40px;
+    border-left: 4px solid white;
+    border-right: 4px solid white;
+    width: 32%;
+}
+
+.verse-container p:nth-child(5) {
+    color: white;
+    text-align: left;
+    width: 30%;
+}
+
+.verse-container p, .verse-container .join, .scroll-down {
     font-weight: 300;
 }
+.verse-container .join {
+    text-decoration: none;
+    color: white;
+    margin-top: 40px;
+    padding: 15px 20px;
+    border: 1px solid white;
+}
 
+.verse-container .join:hover {
+    color: brown;
+    background-color: white;
+    font-weight: bold;
+}
+
+.credit-photographer {
+    position: absolute;
+    bottom: 30px;
+    left: 30px;
+    z-index: 1001;
+}
+
+.credit-photographer a {
+    text-decoration: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 300;
+}
 .scroll-down {
     display: inline-block;
     font-size: 1rem;
@@ -283,107 +339,123 @@ p {
     background-color: black;
 }
 .pic1 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609284/BoysBrigade/BB1.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531882/JGeneration/j1.jpg");
 }
 
 .pic2 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609296/BoysBrigade/BB2.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j2.jpg");
 }
 
 .pic3 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609297/BoysBrigade/BB3.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j3.jpg");
 }
 
 .pic4 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609296/BoysBrigade/BB4.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531904/JGeneration/j4.jpg");
 }
 
 .pic5 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609341/BoysBrigade/BB5.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j5.jpg");
 }
 
 .pic6 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609349/BoysBrigade/BB6.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531893/JGeneration/j6.jpg");
 }
 
 .pic7 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609335/BoysBrigade/BB7.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j7.jpg");
 }
 
 .pic8 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609349/BoysBrigade/BB8.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j8.jpg");
 }
 
 .pic9 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609364/BoysBrigade/BB9.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531918/JGeneration/j9.jpg");
 }
 
 .pic10 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609405/BoysBrigade/BB10.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531915/JGeneration/j10.jpg");
 }
 
 .pic11 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609365/BoysBrigade/BB11.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j11.jpg");
 }
 
 .pic12 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609384/BoysBrigade/BB12.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j12.jpg");
 }
 
 .pic13 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609391/BoysBrigade/BB13.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531921/JGeneration/j13.jpg");
 }
 
 .pic14 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609390/BoysBrigade/BB14.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531922/JGeneration/j14.jpg");
 }
 
 .pic15 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609400/BoysBrigade/BB15.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j15.jpg");
 }
 
 .pic16 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609409/BoysBrigade/BB16.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j16.jpg");
 }
 
 .pic17 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609409/BoysBrigade/BB17.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531927/JGeneration/j17.jpg");
 }
 
 .pic18 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609410/BoysBrigade/BB18.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j18.jpg");
 }
 
 .pic19 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609261/BoysBrigade/BB19.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531937/JGeneration/j19.jpg");
 }
 
 .pic20 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609260/BoysBrigade/BB20.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j20.jpg");
 }
 
 .pic21 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609259/BoysBrigade/BB21.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531862/JGeneration/j21.jpg");
 }
 
 .pic22 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609308/BoysBrigade/BB22.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j22.jpg");
 }
 
 .pic23 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609269/BoysBrigade/BB23.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531879/JGeneration/j23.jpg");
 }
 
 .pic24 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609284/BoysBrigade/BB24.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531866/JGeneration/j24.jpg");
 }
 
 .pic25 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609298/BoysBrigade/BB25.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j25.jpg");
+}
+
+.pic26 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531875/JGeneration/j26.jpg");
+}
+
+.pic27 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531881/JGeneration/j27.jpg");
+}
+
+.pic28 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j28.jpg");
+}
+
+.pic29 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531888/JGeneration/j29.jpg");
 }
 
 
-.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16, .pic17, .pic18, .pic19, .pic20, .pic21, .pic22, .pic23, .pic24, .pic25 {
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16, .pic17, .pic18, .pic19, .pic20, .pic21, .pic22, .pic23, .pic24, .pic25, .pic26, .pic27, .pic28, .pic29 {
     height: 100vh;
     width: 100%;
     background-position: 50% 50%;
@@ -474,24 +546,25 @@ p {
     }
 }
 
-.scroll-container, .scroll2-container, .scroll4-container {
+.scroll-container, .scroll2-container, .scroll3-container {
     position: absolute;
-    bottom: 20px;
+    bottom: 30px;
     width: 100%;
+    text-align: center;
     z-index: 1000
 }
 
-.scroll2-container, .scroll4-container {
+.scroll2-container, .scroll3-container {
     display: block;
     text-align: center;
 }
 
-.scroll2-container h1, .scroll4-container a {
+.scroll2-container h1, .scroll3-container a {
     font-size: 0.9rem;
     border-radius: 4px;
 }
 
-.scroll4-container .tooltiptext {
+.scroll3-container .tooltiptext {
     position: absolute;
     visibility: hidden;
     width: 160px;
@@ -512,7 +585,7 @@ p {
     transition: opacity 1s;
 }
 
-.scroll4-container .tooltiptext::after {
+.scroll3-container .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -523,12 +596,12 @@ p {
     border-color: rgba(59,89,152,1) transparent transparent transparent;
 }
 
-.scroll4-container:hover .tooltiptext {
+.scroll3-container:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
 
-.scroll4-container a {
+.scroll3-container a {
     color: rgba(59,89,152,1);
     background: rgba(246,246,246, 1);
     font-weight: bold;
@@ -537,15 +610,15 @@ p {
     text-align: left;
 }
 
-.scroll4-container a:hover {
+.scroll3-container a:hover {
     background: white;
 }
 
-.scroll4-container a {
+.scroll3-container a {
     position: relative;
 }
 
-.scroll4-container a img {
+.scroll3-container a img {
     right: 10px;
     position:absolute;
     top: 5px;
@@ -554,21 +627,29 @@ p {
 
 @media screen and (max-width: 1441px) and (orientation: landscape) {
     .verse-container {
-        padding-top: 25%;
+        padding-top: 15%;
+        width: 86%;
+        left: 7%;
     }
-    .verse-pgraph {
+    .verse-container p:nth-child(3), .verse-container p:nth-child(5) {
+        width: 25%;
+    }
+    .verse-container p:nth-child(4) {
+        width: 42%;
+    }
+    .verse-container p, .verse-container .join {
         font-size: 1.4rem;
     }
     .scroll2-container {
         bottom: 20px;
     }
-    .scroll4-container {
+    .scroll3-container {
         bottom: 13px;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 208px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 28px;
         top: 6px;
     }
@@ -582,13 +663,13 @@ p {
 }
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
-    .scroll4-container {
-        bottom: 8px;
+    .scroll3-container {
+        bottom: 30px;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 212px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 28px;
         top: 7px;
     }
@@ -598,10 +679,10 @@ p {
 }
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
-    .scroll4-container a {
+    .scroll3-container a {
         width: 180px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 25px;
         top: 6px;
     }
@@ -614,10 +695,10 @@ p {
 }
 
 @media screen and ( max-width: 1281px ) and ( max-height: 951px ) {
-    .scroll4-container a {
+    .scroll3-container a {
         width: 193px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         top: 5px;
     }
     .slide-heading {
@@ -629,13 +710,13 @@ p {
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
-    .scroll4-container {
+    .scroll3-container {
         bottom: 10px;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 180px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 25px;
         top: 6px;
     }
@@ -648,13 +729,13 @@ p {
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
-    .scroll4-container {
+    .scroll3-container {
         bottom: 15px;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 178px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 24px;
         top: 6px;
     }
@@ -663,11 +744,11 @@ p {
     .scroll2-container {
         bottom: 25px;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 147px;
         padding: 10px 15px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 23px;
         top: 5px;
     }
@@ -696,31 +777,31 @@ p {
         right: 35% !important;
         border-width: 20.5px 0 20.5px 15px !important;
     }
-    .scroll-down, .scroll2-container h1, .scroll4-container a {
+    .scroll-down, .scroll2-container h1, .scroll3-container a {
         font-size: 1.1rem;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 285px;
         padding: 15px 20px 11px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 38px;
         top: 10px;
     }
-    .scroll4-container .tooltiptext {
+    .scroll3-container .tooltiptext {
         font-size: 1rem;
         line-height: 1.2em;
         width: 220px;
         padding: 15px 8px;
         left: 47%;
     }
-   .scroll2-container, .scroll4-container {
+   .scroll2-container, .scroll3-container {
         bottom: 30px;
     }
 }
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
-    .scroll-down, .scroll2-container h1, .scroll4-container a {
+    .scroll-down, .scroll2-container h1, .scroll3-container a {
         font-size: 1rem;
     }
     .slide-heading {
@@ -730,16 +811,13 @@ p {
     .fp-controlArrow {
         bottom: 85px !important;
     }
-    .scroll4-container {
-        bottom: 15px;
-    }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 200px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 28px;
     }
-    .scroll4-container .tooltiptext {
+    .scroll3-container .tooltiptext {
         line-height: 1.2em;
         padding: 15px;
     }
@@ -752,14 +830,14 @@ p {
     .scroll-down {
         font-size: 1.1rem;
     }
-    .scroll2-container h1, .scroll4-container a {
+    .scroll2-container h1, .scroll3-container a {
         font-size: 1rem;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 170px;
         padding: 14px 20px 12px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 26px;
         top: 9px;
     }
@@ -784,7 +862,7 @@ p {
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
-    .scroll-down, .scroll2-container h1, .scroll4-container a  {
+    .scroll-down, .scroll2-container h1, .scroll3-container a  {
         font-size: 1rem;
     }
     .slide-heading {
@@ -794,10 +872,10 @@ p {
     .adjust-space {
         left: 40%;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 262px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 35px;
         top: 10px;
     }
@@ -814,10 +892,7 @@ p {
     .fp-controlArrow {
         bottom: 90px !important;
     }
-    .scroll4-container {
-        bottom: 15px;
-    }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 265px;
     }
 }
@@ -831,13 +906,13 @@ p {
     .adjust-space {
         left: 38.6%;
     }   
-    .scroll-down, .scroll2-container h1, .scroll4-container a {
+    .scroll-down, .scroll2-container h1, .scroll3-container a {
         font-size: 0.8rem;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 222px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 32px;
         top: 9px;
     }
@@ -866,13 +941,13 @@ p {
     .slide-heading {
         font-size: 1rem;
     }
-    .scroll4-container {
-        bottom: 20px;
+    .scroll3-container {
+        bottom: 35px;
     }
     .scroll2-container h1 {
         font-size: 0.7rem;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         font-size: 0.7rem;
     }
     .fp-controlArrow {
@@ -886,15 +961,15 @@ p {
         right: 25% !important;
         border-width: 18.5px 0 18.5px 13px !important;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 150px;
         padding: 13px 15px 11px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 23px;
         top: 7px;
     }
-    .scroll4-container .tooltiptext {
+    .scroll3-container .tooltiptext {
         font-size: 0.9rem;
         padding: 10px;
     }
@@ -903,10 +978,10 @@ p {
 /* ----------- Galaxy Note 5 ----------- */
 
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
-    .scroll4-container a {
+    .scroll3-container a {
         width: 150px;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         padding: 13px 15px 9px;
     }
     .scroll-down, .scroll2-container h1 {
@@ -922,10 +997,10 @@ p {
     .fp-controlArrow {
         bottom: 70px !important;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         width: 138px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 21px;
         top: 7px;
     }
@@ -948,10 +1023,10 @@ p {
     .scroll2-container {
         bottom: 30px;
     }
-    .scroll4-container a {
+    .scroll3-container a {
         padding: 13px 15px 9px;
     }
-    .scroll4-container a img {
+    .scroll3-container a img {
         width: 21.5px;
         top: 7px;
     }
@@ -990,9 +1065,6 @@ p {
     .fp-controlArrow {
         bottom: 60px !important;
     }
-    .scroll4-container {
-        bottom: 10px;
-    }
 }
 
 @media screen and ( max-width: 320px) and ( max-height: 568px) {
@@ -1006,9 +1078,6 @@ p {
     .fp-controlArrow {
         bottom: 80px !important;
     }
-    .scroll4-container {
-        bottom: 20px;
-    }
 }
 
 @media screen and ( max-width: 320px ) and ( max-height: 480px ) { 
@@ -1018,9 +1087,6 @@ p {
     .fp-controlArrow {
         bottom: 60px !important;
         top: unset !important;
-    }
-    .scroll4-container {
-        bottom: 10px;
     }
 }
 
@@ -1039,7 +1105,15 @@ p {
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     html {font-size: 25px;}
     .verse-container {
-        padding-top: 25%;
+        padding-top: 18%;
+        width: 90%;
+        left: 5%;
+    }
+    .verse-container p:nth-child(3), .verse-container p:nth-child(5) {
+        width: 23%;
+    }
+    .verse-container p:nth-child(4) {
+        width: 43%;
     }
 }
 
@@ -1048,7 +1122,12 @@ p {
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 15%;
+        padding-top: 10%;
+        width: 94%;
+        left: 3%;
+    }
+    .verse-container p:nth-child(4) {
+        width: 37%;
     }
 }
 
@@ -1057,7 +1136,7 @@ p {
 @media screen and ( max-width: 1280px) {
     html {font-size: 22px;}
     .verse-container {
-        padding-top: 30%;
+        padding-top: 20%;
     }
 }
 
@@ -1067,7 +1146,7 @@ p {
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 25%;
+        padding-top: 15%;
     }
 }
 
@@ -1075,7 +1154,7 @@ p {
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
     .verse-container {
-        padding-top: 15%;
+        padding-top: 8%;
     }
 }
 
@@ -1093,10 +1172,28 @@ p {
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
     .verse-container {
-        padding-top: 45%;
+        padding-top: 35%;
+        width: 94%;
+        left: 3%;
+        align-items: center;
     }
-    .verse-pgraph {
-        font-size: 1.4rem;
+    .verse-container p, .verse-container .join {
+        font-size: 1.3rem;
+    }
+    .verse-container p:nth-child(2) {
+        padding: 3% 5% 6%;
+    }
+    .verse-container p:nth-child(3), .verse-container p:nth-child(5) {
+        width: 23%;
+    }
+    .verse-container p:nth-child(4) {
+        width: 40%;
+    }
+    .verse-container .join {
+        margin-top: 8%;
+    }
+    .credit-photographer {
+        width: 140px;
     }
     .share-button, .share-icon {
         font-size: 1.2rem;
@@ -1112,7 +1209,7 @@ p {
         width: 100%;
     }
     .main-section {
-        background-position: 75% 70%;
+        background-position: 10% 1%;
     }
 }
 
@@ -1121,10 +1218,16 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 26%;
+        padding-top: 18%;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 1.3rem;
+    }
+    .verse-container p:nth-child(2) {
+        padding: 2% 5% 3%;
+    }
+    .verse-container .join {
+        margin-top: 45px;
     }
     .share-info {
         padding: 40px 0;
@@ -1147,7 +1250,13 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
     .verse-container {
-        padding-top: 18%;
+        padding-top: 9%;
+    }
+    .verse-container p:nth-child(2) {
+        padding: 2% 5%;
+    }
+    .verse-container .join {
+        margin-top: 30px;
     }
     .share-info {
         padding: 30px 0;
@@ -1166,7 +1275,7 @@ p {
 
 @media screen and ( max-width: 970px) and (max-height: 490px) {
     .verse-container {
-        padding-top: 14%;
+        padding-top: 6%;
     }
 }
 
@@ -1175,13 +1284,28 @@ p {
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .verse-container {
-        padding-top: 40%;
+        padding-top: 22%;
+        flex-direction: column;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 1.2rem;
         line-height: 1.25em;
-        padding-bottom: 25px;
     }
+    .verse-container p:nth-child(1) {
+        font-size: 1.5rem;
+    }
+    .verse-container p:nth-child(3), .verse-container p:nth-child(4), .verse-container p:nth-child(5) {
+        width: 100%;
+        text-align: center;
+        padding-bottom: 20px;
+    }
+    .verse-container p:nth-child(4) {
+        border: none;
+    }
+    .verse-container .join {
+        margin-top: 20px;
+    }
+    
     .share-pgraph {
         font-size: 1.2rem;
     }
@@ -1209,7 +1333,7 @@ p {
     .verse-container {
         padding-top: 26%;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 1.15rem;
     }
 }
@@ -1220,7 +1344,7 @@ p {
     .verse-container {
         padding-top: 17%;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         padding-bottom: 5px;
     }
     .scroll-down {
@@ -1256,7 +1380,7 @@ p {
     .top-nav .text-block, .top-nav a {
         font-size: 0.9rem;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 0.9rem;
         padding-left: 10%;
         padding-right: 10%;
@@ -1278,7 +1402,7 @@ p {
     .verse-container {
         padding-top: 45%;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 0.9rem;
     }
 }
@@ -1327,12 +1451,12 @@ p {
 
 @media screen and ( max-width: 420px) and (max-height: 740px) {
     .main-section {
-        background-position: 75% 1%;
+        background-position: 30% 100%;
     }
     .verse-container {
         padding-top: 55%;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 1rem;    
     }
     .share-button, .share-icon {
@@ -1343,7 +1467,7 @@ p {
 /* ----------- Galaxy Note 5 ----------- */
 
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 0.9rem;
     }
 }
@@ -1353,7 +1477,7 @@ p {
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
     html{font-size: 18px;}
     .main-section {
-        background-position: 75% 1%;
+        background-position: 30% 100%;
     }
 }
 
@@ -1363,7 +1487,7 @@ p {
     .verse-container {
         padding-top: 60%;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         font-size: 0.9rem;
     }
     .scroll-down, .scroll2-container h1 {
@@ -1375,18 +1499,10 @@ p {
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .main-section {
-        background-position: 75% 1%;
+        background-position: 30% 100%;
     }
     .verse-container {
         padding-top: 42%;
-    }
-}
-
-/* ----------- Galaxy Note 8 Potrait  ----------- */
-
-@media screen and ( max-width: 360px) and ( max-height: 670px) {
-    .main-section {
-        background-position: 80% 1%;
     }
 }
 
@@ -1418,7 +1534,7 @@ p {
     .verse-container {
         padding-top: 40%;
     }
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         padding-bottom: 10px;
     }
 }
@@ -1426,7 +1542,7 @@ p {
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 568px) { 
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         padding-bottom: 15px;
     }
     .share-info {
@@ -1449,7 +1565,7 @@ p {
 /* iPhone 5S Potrait */
 
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
-    .verse-pgraph {
+    .verse-container p, .verse-container .join {
         padding-bottom: 5px;
     }
 }
