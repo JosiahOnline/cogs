@@ -154,7 +154,7 @@ p {
 
 .verse-container p:nth-child(1){
     width: 100%;
-    font-size: 2rem;
+    font-size: 1.8rem;
 }
 
 .verse-container p:nth-child(2) {
@@ -905,8 +905,11 @@ p {
     }
     .adjust-space {
         left: 38.6%;
-    }   
-    .scroll-down, .scroll2-container h1, .scroll3-container a {
+    }  
+    .scroll-down {
+        font-size: 0.7rem;
+    }
+    .scroll2-container h1, .scroll3-container a {
         font-size: 0.8rem;
     }
     .scroll3-container a {
@@ -1172,7 +1175,7 @@ p {
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
     .verse-container {
-        padding-top: 35%;
+        padding-top: 40%;
         width: 94%;
         left: 3%;
         align-items: center;
@@ -1180,8 +1183,14 @@ p {
     .verse-container p, .verse-container .join {
         font-size: 1.3rem;
     }
+    .verse-container p:nth-child(1) {
+        font-size: 1.5rem;
+        text-align: right;
+        padding-right: 4%;
+    }
     .verse-container p:nth-child(2) {
-        padding: 3% 5% 6%;
+        padding: 3% 4% 8% 4%;
+        text-align: right;
     }
     .verse-container p:nth-child(3), .verse-container p:nth-child(5) {
         width: 23%;
@@ -1223,7 +1232,12 @@ p {
     .verse-container p, .verse-container .join {
         font-size: 1.3rem;
     }
+    .verse-container p:nth-child(1) {
+        text-align: center;
+        padding-right: 0;
+    }
     .verse-container p:nth-child(2) {
+        text-align: center;
         padding: 2% 5% 3%;
     }
     .verse-container .join {
@@ -1253,7 +1267,7 @@ p {
         padding-top: 9%;
     }
     .verse-container p:nth-child(2) {
-        padding: 2% 5%;
+        padding: 2% 4%;
     }
     .verse-container .join {
         margin-top: 30px;
@@ -1284,26 +1298,26 @@ p {
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .verse-container {
-        padding-top: 22%;
-        flex-direction: column;
+        padding-top: 35%;
+        width: 86%;
+        left: 7%;
     }
     .verse-container p, .verse-container .join {
         font-size: 1.2rem;
         line-height: 1.25em;
     }
     .verse-container p:nth-child(1) {
-        font-size: 1.5rem;
+        font-size: 1.3rem;
     }
-    .verse-container p:nth-child(3), .verse-container p:nth-child(4), .verse-container p:nth-child(5) {
-        width: 100%;
-        text-align: center;
-        padding-bottom: 20px;
+    .verse-container p:nth-child(3) {
+        width: 18%;
     }
     .verse-container p:nth-child(4) {
-        border: none;
+        padding: 0 20px;
+        width: 50%;
     }
-    .verse-container .join {
-        margin-top: 20px;
+    .verse-container p:nth-child(5) {
+        width: 18%;
     }
     
     .share-pgraph {
@@ -1323,7 +1337,16 @@ p {
 
 @media screen and ( max-width: 768px) {
     .verse-container {
-        padding-top: 32%;
+        padding-top: 30%;
+    }
+    .verse-container p:nth-child(1) {
+        font-size: 1.15rem;
+    }
+    .verse-container p:nth-child(2) {
+        padding: 3% 4% 6% 3%;
+    }
+    .verse-container p, .verse-container .join {
+        font-size: 1.1rem;
     }
 }
 
@@ -1331,10 +1354,10 @@ p {
 
 @media screen and ( max-width: 768px) and (max-height: 930px) {
     .verse-container {
-        padding-top: 26%;
+        padding-top: 28%;
     }
     .verse-container p, .verse-container .join {
-        font-size: 1.15rem;
+        font-size: 1rem;
     }
 }
 
@@ -1381,12 +1404,24 @@ p {
         font-size: 0.9rem;
     }
     .verse-container p, .verse-container .join {
-        font-size: 0.9rem;
-        padding-left: 10%;
-        padding-right: 10%;
+        font-size: 0.8rem;
     }
     .verse-container {
         padding-top: 50%;
+        width: 90%;
+        left: 5%;
+    }
+    .verse-container p:nth-child(1) {
+        font-size: 0.9rem;
+    }
+    .verse-container p:nth-child(2) {
+        padding: 3% 4% 8% 3%;
+    }
+    .verse-container p:nth-child(4) {
+        width: 48%;
+    }
+    .credit-photographer a {
+        font-size: 0.6rem;
     }
     .share-pgraph {
         font-size: 1.1rem;
@@ -1400,10 +1435,7 @@ p {
 
 @media screen and ( max-width: 610px) and (max-height: 850px) {
     .verse-container {
-        padding-top: 45%;
-    }
-    .verse-container p, .verse-container .join {
-        font-size: 0.9rem;
+        padding-top: 40%;
     }
 }
 
@@ -1454,10 +1486,22 @@ p {
         background-position: 30% 100%;
     }
     .verse-container {
-        padding-top: 55%;
+        padding-top: 35%;
+        width: 90%;
+        left: 5%;
     }
-    .verse-container p, .verse-container .join {
-        font-size: 1rem;    
+    .verse-container p:nth-child(2) {
+        padding: 2% 5% 8%;
+    }
+    .verse-container .join {
+        padding: 15px 20px;
+    }
+    .credit-photographer {
+        width: 90px;
+        bottom: 17px;
+    }
+    .credit-photographer a {
+        font-size: 0.6rem;
     }
     .share-button, .share-icon {
         font-size: 0.9rem;
