@@ -90,8 +90,8 @@ p {
     left: 0px;
     top: 0px;
     height: 100vh;
-    background-image: url("../News/img/walk.jpg");
-    background-position: 50% 100%;
+    background-image: url("../News/img/s_white.jpg");
+    background-position: 50% 1%;
     background-size: cover;
     font-family: Merriweather, serif;
     color: #fff;
@@ -266,46 +266,123 @@ p {
     background-color: black;
 }
 .pic1 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720990/WalkForJesus17/walk4.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531882/JGeneration/j1.jpg");
 }
 
 .pic2 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720997/WalkForJesus17/walk3.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j2.jpg");
 }
 
 .pic3 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720994/WalkForJesus17/walk2.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j3.jpg");
 }
 
 .pic4 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720986/WalkForJesus17/walk11.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531904/JGeneration/j4.jpg");
 }
 
 .pic5 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721004/WalkForJesus17/walk9.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j5.jpg");
 }
 
 .pic6 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721004/WalkForJesus17/walk6.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531893/JGeneration/j6.jpg");
 }
 
 .pic7 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720982/WalkForJesus17/walk10.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j7.jpg");
 }
 
 .pic8 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720983/WalkForJesus17/walk1.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j8.jpg");
 }
 
 .pic9 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721000/WalkForJesus17/walk7.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531918/JGeneration/j9.jpg");
 }
 
 .pic10 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721001/WalkForJesus17/walk8.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531915/JGeneration/j10.jpg");
 }
 
-.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10 {
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j11.jpg");
+}
+
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j12.jpg");
+}
+
+.pic13 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531921/JGeneration/j13.jpg");
+}
+
+.pic14 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531922/JGeneration/j14.jpg");
+}
+
+.pic15 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j15.jpg");
+}
+
+.pic16 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j16.jpg");
+}
+
+.pic17 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531927/JGeneration/j17.jpg");
+}
+
+.pic18 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j18.jpg");
+}
+
+.pic19 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531937/JGeneration/j19.jpg");
+}
+
+.pic20 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j20.jpg");
+}
+
+.pic21 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531862/JGeneration/j21.jpg");
+}
+
+.pic22 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j22.jpg");
+}
+
+.pic23 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531879/JGeneration/j23.jpg");
+}
+
+.pic24 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531866/JGeneration/j24.jpg");
+}
+
+.pic25 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j25.jpg");
+}
+
+.pic26 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531875/JGeneration/j26.jpg");
+}
+
+.pic27 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531881/JGeneration/j27.jpg");
+}
+
+.pic28 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j28.jpg");
+}
+
+.pic29 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531888/JGeneration/j29.jpg");
+}
+
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16, .pic17, .pic18, .pic19, .pic20, .pic21, .pic22, .pic23, .pic24, .pic25, .pic26, .pic27, .pic28, .pic29 {
     height: 100vh;
     width: 100%;
     background-position: 50% 50%;
@@ -396,11 +473,16 @@ p {
     }
 }
 
-.scroll-container, .scroll2-container, .scroll3-container {
+.scroll-container, .scroll3-container, .scroll5-container {
     position: absolute;
     bottom: 30px;
-    width: 100%;
+    width: 30%;
+    left: 35%;
+    text-align: center;
     z-index: 1000
+}
+.scroll5-container {
+    bottom: 60px;
 }
 
 .scroll2-container, .scroll3-container {
@@ -1018,6 +1100,9 @@ p {
         height: 60vh;
         width: 100%;
     }
+    .main-section {
+        background-position: 28% 1%;
+    }
 }
 
 /* ----------- iPad Landscape ----------- */
@@ -1231,7 +1316,7 @@ p {
 
 @media screen and ( max-width: 420px) and (max-height: 740px) {
     .main-section {
-        background-position: 20% 100%;
+        background-position: 30% 100%;
     }
     .verse-container {
         padding-top: 55%;
@@ -1257,7 +1342,7 @@ p {
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
     html{font-size: 18px;}
     .main-section {
-        background-position: 15% 100%;
+        background-position: 30% 100%;
     }
 }
 
@@ -1279,7 +1364,7 @@ p {
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .main-section {
-        background-position: 10% 100%;
+        background-position: 30% 100%;
     }
     .verse-container {
         padding-top: 42%;
