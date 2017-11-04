@@ -90,7 +90,7 @@ p {
     left: 0px;
     top: 0px;
     height: 100vh;
-    background-image: url("../News/img/s_white.jpg");
+    background-image: url("../News/img/s_white3.jpg");
     background-position: 50% 1%;
     background-size: cover;
     font-family: Merriweather, serif;
@@ -105,7 +105,7 @@ p {
     right: 0px;
     bottom: 0px;
     height: 100%;
-    background-color: rgba(0, 0, 0, .20);
+    background-color: rgba(0, 0, 0, .10);
 }
 
 .share-pgraph {
@@ -116,26 +116,72 @@ p {
     position: absolute;
     top: 10%;
     display: block;
-    width: 100%;
+    width: 26%;
     height: 90%;
-    padding-top: 20%;
+    padding-top: 18%;
+    right: 0;
     text-align: center;
-}
-
-.verse-container:hover {
-    border-radius: 4px;
+    
 }
 
 .verse-pgraph {
-    margin-bottom: 0px;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 1.5rem;
-    line-height: 1.2em;
+    border-radius: 4px;
+    font-size: 1.2rem;
+    line-height: 1.2em; 
 }
 
+.join {
+    position: absolute;
+    right: 10%;
+    text-decoration: none;
+    color: white;
+    font-weight: 300;
+    font-size: 1.2rem;
+    line-height: 1.2em;
+    padding: 10px 15px;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.join:hover {
+    background-color: white;
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
+    color: rgb(216,23,46);
+}
+.verse-pgraph p {
+    background-color: rgba(255,255,255,1);
+    color: rgb(216,23,46);
+    padding: 8px 0;
+    position:relative;
+    padding-left: 10px;
+}
+
+.verse-pgraph p:before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    border-width:50px 13px 0px 0px;
+    border-style:solid;
+    border-color:rgb(190,50,67) transparent transparent rgb(190,50,67) ;
+}
 .verse-pgraph, .scroll-down {
     font-weight: 300;
+}
+
+.verse-pgraph p:nth-child(1) {
+    width: 93%;
+    left: 7%;
+}
+
+.verse-pgraph p:nth-child(2) {
+    width: 96%;
+    left: 4%;
+}
+.verse-pgraph p:nth-child(3) {
+    width: 99%;
+    left: 1%;
 }
 
 .scroll-down {
@@ -152,8 +198,8 @@ p {
 
 .share-info {
     padding: 30px 0;
-    background-color: #000;
-    color: #fff;
+    background-color: rgba(245,245,245,1);
+    color: black;
 }
 
 .share-container {
@@ -169,7 +215,7 @@ p {
     line-height: 1em;
     color: white;
     border-radius: 4px;
-    background-color: #23B5D3;
+    background-color: rgb(216,23,46);
     padding: 0.6em 0.8em;
     text-transform: uppercase;
     font-weight: 500;
@@ -188,7 +234,7 @@ p {
 }
 
 .share-button:hover {
-    background-color: #EA526F;
+    background-color: #23B5D3;
 }
 
 .web__share {
@@ -483,6 +529,10 @@ p {
 }
 .scroll5-container {
     bottom: 60px;
+}
+
+.scroll5-container h1 {
+    color: black;
 }
 
 .scroll2-container, .scroll3-container {
