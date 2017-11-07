@@ -118,7 +118,7 @@ p {
     display: block;
     width: 26%;
     height: 90%;
-    padding-top: 18%;
+    padding-top: 6%;
     right: 0;
     text-align: center;
     
@@ -130,9 +130,22 @@ p {
     line-height: 1.2em; 
 }
 
+.verse-container h1 {
+    font-size: 2.5em;
+    line-height: 1.3em;
+    width: 70%;
+    margin-left: 20%;
+}
+
+.verse-container .little-info {
+    font-size: 0.9rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
 .join {
     position: absolute;
-    right: 10%;
+    left: 22%;
     text-decoration: none;
     color: white;
     font-weight: 300;
@@ -476,7 +489,7 @@ p {
 
 .youtube {
     position: relative;
-    background-color: black;
+    background-color: rgba(245,245,245,1);
 }
 .youtube .fp-tableCell {
     text-align: center;
@@ -486,9 +499,13 @@ p {
     width: 100%;
 }
 
+.social-media-text {
+    -webkit-box-shadow: none;
+        box-shadow: none;
+}
 .footer {
     height: 60px !important;
-    background-color: black;
+    background-color: rgb(216,23,46) !important;
     color: #fff;
 }
 
@@ -607,8 +624,23 @@ p {
 }
 
 @media screen and (max-width: 1441px) and (orientation: landscape) {
+    .main-section {
+        background-position: 0% 1%;
+    }
     .verse-container {
-        padding-top: 25%;
+        padding-top: 8%;
+        width: 28%;
+    }
+    .verse-pgraph p:before {
+        border-width: unset;
+        border-color: unset;
+        border-style: unset;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3) {
+        width: 100%;
+        left: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
     }
     .verse-pgraph {
         font-size: 1.4rem;
