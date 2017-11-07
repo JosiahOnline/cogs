@@ -1277,6 +1277,11 @@ select {
     border-radius: 0.2em;
 }
 
+.main-image {
+    min-width: 100%;
+    max-height: 500px;
+}
+
 .news-image {
     max-width: 100%;
     height: 100%;
@@ -1295,7 +1300,9 @@ select {
     background-color: #141e28;
     opacity: 0.9;
     text-align: center;
-    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     color: white;
     border-radius: 2px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -1335,17 +1342,27 @@ select {
 }
 
 .main-news-title {
-    padding-top: 100px;
     font-size: 5rem;
-    line-height: 0.6em;
-    margin-bottom: 50px;
+    line-height: 1em;
+    margin-bottom: 30px;
+}
+
+.news-pgraph3 {
+    font-size: 2rem;
+    line-height: 1rem;
+    margin-bottom: 30px;
 }
 
 .news-pgraph1 {
-    font-size: 2.1rem;
+    font-size: 1.8rem;
 }
 
-.news-pgraph1 span,
+.news-pgraph1 span {
+    color: #f36;
+    text-decoration: underline;
+}
+
+
 .feedback-pgraph span a {
     color: #f36;
     font-weight: 700;
@@ -2005,11 +2022,14 @@ address,
     #welcome {
         padding: 4em 0;
     }
-    .news-container {
-        min-height: 1400px;
+    .main-news {
+        height: 457px;
     }
-    .top-news {
-        height: 840px;
+    .main-image {
+        max-height: 457px;
+    }
+    .main-news-description {
+        top: -457px;
     }
     .news {
         width: 190px;
@@ -2377,9 +2397,6 @@ address,
     .feedback-section {
         padding: 0;
     }
-    .news-container {
-        height: 1450px;
-    }
     .main-news-title {
         font-size: 6rem;
     }
@@ -2390,7 +2407,7 @@ address,
         font-size: 3rem;
     }
     .top-news {
-        height: 65%;
+        height: 350px;
     }
     .news {
         height: 155px;
@@ -2569,9 +2586,6 @@ address,
     .news-pgraph1 {
         font-size: 3rem;
     }
-    .top-news {
-        height: 64%;
-    }
     .address {
         height: 31em;
     }
@@ -2719,6 +2733,16 @@ address,
     .main-news-title {
         font-size: 9rem;
     }
+    
+    .main-news {
+        height: 400px;
+    }
+    .main-image {
+        max-height: 400px;
+    }
+    .main-news-description {
+        top: -400px;
+    }
     .news-pgraph1 {
         font-size: 3.5rem;
     }
@@ -2797,14 +2821,19 @@ address,
         padding-top: 1em;
     }
     .main-news {
-        height: 350px;
+        height: 400px;
+    }
+    .main-image {
+        max-height: 400px;
     }
     .main-news-description {
-        top: -350px;
-        padding-top: 4%;
+        top: -400px;
     }
     .main-news-title {
         margin-bottom: 35px;
+    }
+    .top-news {
+        height: 300px;
     }
     .news,
     .resize-img1 {
@@ -2814,13 +2843,7 @@ address,
         height: 140px;
         margin-bottom: 20px;
     }
-    .news-container {
-        height: 1160px;
-        min-height: 1200px;
-    }
-    .top-news {
-        height: 69%;
-    }
+    
     .newsdescription {
         height: 120px;
     }
@@ -3002,10 +3025,35 @@ address,
     }
     /*Announcement*/
     #announcements {
-        padding: 6em 0 26em;
+        padding: 6em 0 0;
+    }
+    .main-news {
+        height: 390px;
+    }
+    .main-image {
+        max-height: 390px;
+    }
+    .main-news-description {
+        top: -390px;
+    }
+    .newsdescription {
+        height: 120px;
+    }
+    .news, .resize-img1 {
+        width: 160px;
+        height: 125px;
+    }
+    .top-news {
+        height: 310px;
     }
     .news {
         margin-bottom: 160px;
+    }
+    .top-news-title {
+        font-size: 1.1rem;
+    }
+    .news-pgraph2 {
+        font-size: 0.9rem;
     }
     .submit-button {
         padding: 0.55em 1em;
@@ -3027,8 +3075,11 @@ address,
     .bible-verse {
         font-size: 3rem;
     }
+    #announcements .adjust-padding-lr {
+        padding: 0 50px;
+    }
     .adjust-padding-lr {
-        padding: 0 60px;
+        padding: 0 50px;
     }
 }
 
@@ -3040,13 +3091,10 @@ address,
         padding: 1.1em 0;
     }
     #announcements {
-        padding: 6em 0 4em;
-    }
-    .news-container {
-        height: 1700px;
+        padding: 6em 0 0;
     }
     .top-news {
-        height: unset;
+        height: 280px;
     }
     .news {
         margin-bottom: 140px;
@@ -3078,7 +3126,7 @@ address,
         margin-bottom: 0.5em;
     }
     #announcements .adjust-padding-lr {
-        padding: 0 60px;
+        padding: 0 35px;
     }
     .address {
         height: 37em;
@@ -3133,6 +3181,14 @@ address,
     .send-message-button.button,
     .direction-button {
         padding: 10px 15px;
+    }
+    
+    /*Announcement*/
+    .top-news-title {
+        font-size: 1.3rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.1rem;
     }
     /*Contact us*/
     .location h2,
@@ -3444,20 +3500,19 @@ window.outerHeight include toolbar and address bar----------- */
         padding: 0 40px;
     }
     #announcements {
-        padding: 5em 0 4em;
+        padding: 5em 0 0;
     }
     .section-heading.centered {
         padding-bottom: 25px;
     }
-    .news-container {
-        height: 2480px;
-    }
     .main-news {
-        height: 320px;
+        height: 293px;
+    }
+    .main-image {
+        max-height: 293px;
     }
     .main-news-description {
-        top: -320px;
-        padding-top: 5%;
+        top: -293px;
     }
     .main-news-title {
         font-size: 5rem;
@@ -3470,8 +3525,7 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 2.1rem;
     }
     .top-news {
-        height: 2100px;
-        padding: 0;
+        height: 720px;
     }
     .newsdescription .top-news-title {
         font-size: 2.1rem;
@@ -3489,6 +3543,7 @@ window.outerHeight include toolbar and address bar----------- */
         background-position: 50% 50%;
         background-size: cover;
         width: 39.6%;
+        height: 100%;
     }
     .newsdescription {
         top: -160.6px;
@@ -3769,15 +3824,11 @@ window.outerHeight include toolbar and address bar----------- */
     .welcome-container {
         margin-bottom: 0;
     }
-    .news-container {
-        height: 2200px;
-    }
     .main-news {
         height: 260px;
     }
     .main-news-description {
         top: -260px;
-        padding-top: 0;
     }
     .newsdescription {
         top: -140px;
@@ -3809,7 +3860,7 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 17px;
     }
     #announcements {
-        padding: 4em 0 4em;
+        padding: 4em 0 0;
     }
     .call-to-action-section {
         height: 88%;
@@ -4159,9 +4210,16 @@ window.outerHeight include toolbar and address bar----------- */
     .selection {
         height: 135px;
     }
+    .news-container {
+        margin-bottom: 80px;
+    }
     .main-news {
         margin-bottom: 15px;
         height: 300px;
+    }
+    .main-image {
+        height: 300px;
+        max-height: 400px;
     }
     .main-news-description {
         top: -300px;
@@ -4169,7 +4227,6 @@ window.outerHeight include toolbar and address bar----------- */
     .main-news-title {
         font-size: 4rem;
         line-height: 1em;
-        padding-top: 20%;
         margin-bottom: 15px;
     }
     .news-pgraph1 {
@@ -4191,12 +4248,8 @@ window.outerHeight include toolbar and address bar----------- */
         font-weight: 300;
         padding-right: 30px;
     }
-    .news-container {
-        height: 1800px;
-        padding: 0;
-    }
     .top-news {
-        height: 1500px;
+        height: 500px;
     }
     .news {
         height: 110px;
