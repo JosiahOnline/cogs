@@ -1642,7 +1642,7 @@ address,
 }
 
 .bulletin-section {
-    border-top: 3px solid #edeff2;
+/*    border-top: 3px solid #edeff2;*/
     background-color: #141e28;
 }
 
@@ -2747,21 +2747,75 @@ address,
     html {
         font-size: 10px;
     }
-    .mobile-nav {
-        height: 12%;
+    .preloader-container {
+        left: 0;
+    }
+    .pulse {
+        font-size: 1.3em;
+    }
+    .body {
+        padding-left: 20%;
+        overflow-x: hidden;
+    }
+    .main-nav {
+        display: block;
+        width: 20%;
+        
+    }
+    .mobile-nav, .mobile-container, .menu-links .closebtn {
+        display: none;
+        height: 0;
+        width: 0;
     }
     .cogs-logo {
         margin-bottom: 10px;
     }
+    .beta {
+        font-size: 1.1rem;
+        top: -8px;
+        left: -6px;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 2.4rem;
+        font-weight: 400;
+    }
+    .multiple-lang {
+        height: 15px;
+    }
+    .multiple-lang div a {
+        font-size: 1.3rem;
+    }
+    .chinese {
+        margin: 0 8px;
+    }
+    .nav-link {
+        font-size: 1.7rem;
+    }
+    .navbar {
+        padding-top: 15%;
+    }
+    
     .share-website {
-        margin-top: 2%;
-        padding: 5px;
+        width: 90%;
+        margin-top: 15%;
+        margin-left: 5%;
+        padding: 10px 5px;
     }
     .share-container {
         padding: 0;
     }
     .share-container p {
-        margin: 5px 0 10px;
+        margin: 5px 5px 10px;
+        font-size: 1.3rem;
+    }
+    .web__share>.share-icon {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 13px;
+    }
+    .share-button {
+        font-size: 1.2rem;
     }
     .navburger {
         -webkit-box-flex: 0;
@@ -2769,72 +2823,125 @@ address,
                 flex: 0;
     }
     .hero-title-wrapper {
-        -webkit-transform: perspective(1px) translateY(-10%);
-                transform: perspective(1px) translateY(-10%)
+        -webkit-transform: perspective(1px) translateY(-55%);
+                transform: perspective(1px) translateY(-55%)
     }
     .plan-visit {
         padding-top: 5%;
+    }
+    .fly-in-text li {
+        font-size: 5rem;
     }
     .fly-in-text li,
     .hero-subheading {
         margin-bottom: 15px;
     }
+    .hero-subheading, .section-subheading.center {
+        font-size: 2.4rem;
+    }
     .bulletin-text,
     .feedback-text,
     .call-to-action-heading,
-    .title,
-    .date-published {
-        font-size: 3rem;
-    }
-    .bulletin-pgraph,
-    .feedback-pgraph,
-    .call-to-action-pgraph {
-        font-size: 2.5rem;
+    {
+        font-size: 2.2rem;
     }
     .section-heading.centered {
         padding: 25px;
     }
-    .bulletin-pgraph,
-    .feedback-pgraph,
-    .call-to-action-pgraph,
-    .bulletin-download,
-    .welcome-pgraph,
-    .welcome-author,
-    .group-photo-caption,
-    .visit,
-    .history {
-        font-size: 2.5rem;
+    .bulletin-text, .feedback-text, .call-to-action-heading {
+        font-weight: 500;
+        font-size: 2rem;
     }
-    #welcome {
-        height: 160%;
-    }
-    .events-icon h2 {
-        font-size: 2.8rem;
-    }
-    .main-news {
-        height: 400px;
-    }
-    .main-image {
-        height: 400px;
-    }
-    .main-news-description {
-        top: -400px;
-    }
-    .news, .news-image {
-        width: 195px;
-    }
-    .top-news-title {
+    .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph {
         font-size: 1.8rem;
     }
-    .news-pgraph2 {
-        font-size: 1.7rem;
+    .welcome-pgraph,
+    .welcome-author
+    {
+        font-size: 1.9rem;
+    }
+    .bulletin-flex {
+        flex-direction: row;
+    }
+    .bulletin-row {
+        width: 20em;
+        height: 7em;
+    }
+    .bulletin-container-1 {
+        margin-bottom: 0;
+    }
+    .title,
+    .date-published,
+    .group-photo-caption {
+        font-size: 1.8rem;
+    }
+    .bulletin-download, .visit,
+    .history {
+        font-size: 1.5rem;
+    }
+    #welcome {
+        padding: 5em 0 8em;
+    }
+    .welcome-button-container {
+        padding-top: 1em;
+    }
+    .adjust-padding-td {
+        padding: 40px 0;
+    }
+    .news-container {
+        margin-bottom: 60px;
+    }
+    .events-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    .events-icon h2 {
+        font-size: 2rem;
+    }
+    .main-news {
+        height: 330px;
+    }
+    .main-image {
+        height: 330px;
+    }
+    .main-news-description {
+        top: -330px;
+    }
+    .news, .news-image {
+        width: 145px;
+    }
+    .news-image {
+        height: 72%;
+    }
+    .newsdescription {
+        height: 100px;
+    }
+    .card__share {
+        margin-top: -113px;
+        display: none;
+    }
+    .card__social {
+        width: 450%;
+    }
+    .card__social--active {
+        -webkit-transform: translateX(-36px);
+            transform:translateX(-36px);
+    }
+    .share-icon {
+        width: 25px;
+        height: 25px;
+        line-height: 25px;
+        font-size: 11px;
+    }
+    .top-news {
+        height: 235px;
     }
     .more h3 {
         font-size: 1.6rem;
         margin-bottom: 3px;
     }
     .address {
-        height: 34em;
+        height: 32.8em;
     }
     .googlemap iframe {
         height: 29.6em;
@@ -2855,7 +2962,11 @@ address,
     address,
     .contact-info p,
     .office-hour p {
-        font-size: 2rem;
+        font-size: 1.5rem;
+    }
+    .button.full-width,
+    .direction-button {
+        height: 40px; 
     }
     .location h2,
     .contact-info h2,
@@ -2863,14 +2974,16 @@ address,
         font-size: 3rem;
     }
     .bible-verse {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .footer {
         padding: 5px 0;
+        background-color: transparent;
     }
     .footer-container {
         top: 30%;
     }
+
 }
 
 
