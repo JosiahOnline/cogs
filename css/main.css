@@ -430,8 +430,10 @@ p {
 
 .section.section-contact {
     min-height: 1100px;
+/*
     border-top: 1px solid #e1e1e1;
     border-bottom: 1px solid #e1e1e1;
+*/
     background-color: #fafafa;
 }
 
@@ -2099,10 +2101,19 @@ address,
     html {
         font-size: 16px;
     }
+    .pulse {
+        font-size: 2rem;
+        width: 150px;
+        height: 150px;
+        line-height: 150px;
+    }
     .body {
         padding-left: 0%;
     }
-    
+    .hero-title-wrapper {
+        -webkit-transform: perspective(1px) translateY(-100%);
+            transform: perspective(1px) translateY(-100%);
+    }
     .transparent-layer {
         width: 100%;
     }
@@ -2181,7 +2192,7 @@ address,
         display: block;
         position: fixed;
         background-color: #141e28;
-        height: 10%;
+        height: 8%;
         width: 100%;
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -2221,18 +2232,22 @@ address,
     
     .bulletin-pgraph,
     .feedback-pgraph,
-    .call-to-action-pgraph,
+    .call-to-action-pgraph {
+        font-size: 2.4rem;
+    }
     .welcome-pgraph,
-    .welcome-author,
+    .welcome-author {
+        font-size: 2.3rem;
+    }
     .group-photo-caption {
-        font-size: 2rem;
+        font-size: 2.1rem;
     }
     
     .hollow-button,
     .bulletin-download,
     .visit,
     .history {
-        font-size: 1.6rem;
+        font-size: 2rem;
     }
     .COGS-title h1 {
         font-weight: 500;
@@ -2262,7 +2277,7 @@ address,
         display: none;
         bottom: auto;
         width: 100%;
-        padding-top: 5%;
+        padding-top: 10%;
         float: none;
         z-index: 1001;
     }
@@ -2287,13 +2302,13 @@ address,
     }
     .menu-links .closebtn {
         position: absolute;
-        top: 47px;
-        right: 27px;
+        top: 2%;
+        right: 2%;
         padding: 0;
         background-image: url(../img/error.png);
-        background-size: 50px;
-        height: 50px;
-        width: 50px;
+        background-size: 70px;
+        height: 70px;
+        width: 70px;
         background-repeat: no-repeat
     }
     .brand-logo,
@@ -2317,7 +2332,7 @@ address,
         margin: 0 15px;
     }
     .navbar {
-        padding-top: 10%;
+        padding-top: 5%;
     }
     .nav-link {
         font-size: 3rem;
@@ -2366,7 +2381,7 @@ address,
         height: 100%;
     }
     .bible-verse {
-        font-size: 3.5rem;
+        font-size: 3rem;
         line-height: 1.1em;
     }
     .fly-in-text li {
@@ -2376,7 +2391,7 @@ address,
     }
     .hero-subheading,
     .section-subheading.center {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
     .hero-subheading {
         line-height: 1em;
@@ -2446,7 +2461,7 @@ address,
         font-size: 2rem;
     }
     .main-news-title {
-        font-size: 5rem;
+        font-size: 4.5rem;
     }
     .main-news, .main-image {
         height: 500px;
@@ -2455,16 +2470,16 @@ address,
         top: -500px;
     }
     .news-pgraph3 {
-        font-size: 2.6rem;
+        font-size: 2.5rem;
     }
     .news-pgraph1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
     }
     .social-container p {
         font-size: 3rem;
     }
     .top-news {
-        height: 350px;
+        height: 320px;
     }
     .news {
         height: 155px;
@@ -2485,14 +2500,14 @@ address,
         font-size: 1.2rem;
     }
     .more h3 {
-        font-size: 1.4rem;
-        margin-bottom: 4px;
+        font-size: 1.5rem;
+        margin-bottom: 8px;
     }
     .card__social {
         width: 436%;
     }
     .card__share {
-        margin-top: -45px;
+        margin-top: -161px;
     }
     .call-to-action-section {
         height: 26%;
@@ -3192,9 +3207,6 @@ address,
         font-size: 14px;
     }
     /*Navigation Bar */
-    .menu-links .closebtn {
-        top: 35px;
-    }
     .navbar {
         padding-top: 5%;
     }
@@ -3205,10 +3217,10 @@ address,
         margin: 0.3em 0 0.6em;
     }
     .web__share>.share-icon {
-        width: 65px;
-        height: 65px;
-        line-height: 65px;
-        font-size: 25px;
+        width: 68px;
+        height: 68px;
+        line-height: 68px;
+        font-size: 27px;
     }
     .social-container {
         bottom: unset;
@@ -3232,17 +3244,34 @@ address,
         line-height: 1.2em;
     }
     .bulletin-row {
-        height: 14em;
+        height: 13em;
+        width: 34em;
     }
     .bulletin-image {
         -webkit-box-flex: 1.5;
             -ms-flex: 1.5;
                 flex: 1.5;
     }
+    .title {
+        font-size: 2.2rem;
+    }
     .bulletin-pgraph,
     .feedback-pgraph,
     .call-to-action-pgraph {
         font-size: 2rem;
+    }
+    .bulletin-download {
+        font-size: 1.8rem;
+    }
+    .visit,
+    .history {
+        font-size: 1.8rem;
+    }
+    .welcome-pgraph, .welcome-author {
+        font-size: 2rem;
+    }
+    .group-photo-caption {
+        font-size: 1.8rem;
     }
     .date-published {
         font-size: 2.2rem;
@@ -3254,6 +3283,7 @@ address,
     /*Welcome Message Session*/
     .section-heading.centered {
         font-size: 5.5rem;
+        padding-bottom: 35px;
     }
     .section-subheading.center {
         font-size: 2.2rem;
@@ -3326,8 +3356,17 @@ address,
         width: 170px;
         height: 125px;
     }
+    .newsdescription {
+        height: 110px;
+    }
+    .card__share {
+        margin-top: -130px;
+    }
     .top-news {
-        height: 290px;
+        height: 260px;
+    }
+    .more h3 {
+        margin-bottom: 6px;
     }
     .news {
         margin-bottom: 160px;
@@ -3337,6 +3376,15 @@ address,
     }
     .news-pgraph2 {
         font-size: 1.1rem;
+    }
+    .card__share {
+        margin-right: 1px;
+    }
+    .share-icon {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 14px;
     }
     .submit-button {
         padding: 0.55em 1em;
@@ -3704,6 +3752,12 @@ window.outerHeight include toolbar and address bar----------- */
     .social-container p {
         font-size: 2rem;
     }
+    .menu-links .closebtn {
+        background-size: 50px;
+        height: 50px;
+        width: 50px;
+        right: 4%;
+    }
     .navbar {
         padding-top: 0;
     }
@@ -3721,10 +3775,10 @@ window.outerHeight include toolbar and address bar----------- */
         width: 100%;
     }
     .web__share>.share-icon {
-        width: 45px;
-        height: 45px;
-        line-height: 45px;
-        font-size: 21px;
+        width: 50px;
+        height: 50px;
+        line-height: 50px;
+        font-size: 23px;
     }
     /* Temporary disable
     .social-container {
@@ -3754,12 +3808,18 @@ window.outerHeight include toolbar and address bar----------- */
         width: 100%;
     }
     .bulletin-row {
-        width: 31em;
+        width: 33em;
         height: 12em;
     }
+    .bulletin-description {
+        padding-left: 32px;
+    }
     .section-heading.centered {
-        font-size: 4.5rem;
+        font-size: 4rem;
         padding-bottom: 25px;
+    }
+    .section-subheading.center {
+        font-size: 2rem;
     }
     #welcome {
         padding: 6em 0;
@@ -3785,11 +3845,16 @@ window.outerHeight include toolbar and address bar----------- */
     #announcements {
         padding: 5em 0 0;
     }
-    .section-heading.centered {
-        padding-bottom: 25px;
+    .events-icon img {
+        width: 45px;
+        height: 45px;
+    }
+    .events-icon h2 {
+        font-size: 2rem;
     }
     .main-news {
         height: 293px;
+        margin-bottom: 20px;
     }
     .main-image {
         height: 293px;
@@ -3798,20 +3863,28 @@ window.outerHeight include toolbar and address bar----------- */
         top: -293px;
     }
     .main-news-title {
-        font-size: 5rem;
-        margin-bottom: 25px;
+        font-size: 3rem;
+        margin-bottom: 5px;
     }
-    .section-title-group, .main-news {
-        margin-bottom: 20px;
+    .news-pgraph3 {
+        font-size: 1.8rem;
     }
     .news-pgraph1 {
-        font-size: 2.1rem;
+        font-size: 1.6rem;
     }
+    
+    .news-pgraph2 {
+        font-size: 1.4rem;
+    }
+    .section-title-group{
+        margin-bottom: 30px;
+    }
+   
     .top-news {
         height: 720px;
     }
-    .newsdescription .top-news-title {
-        font-size: 2.1rem;
+    .top-news-title {
+        font-size: 1.6rem;
     }
     .news {
         width: 100%;
@@ -3839,12 +3912,7 @@ window.outerHeight include toolbar and address bar----------- */
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
     }
-    .top-news-title {
-        font-size: 2.5rem;
-    }
-    .news-pgraph2 {
-        font-size: 1.7rem;
-    }
+    
     .card__share {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3882,6 +3950,13 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 23px;
     }
     
+    .more h3 {
+        font-size: 1.8rem;
+    }
+    .more img {
+        width: 30px;
+        height: 30px;
+    }
     .call-to-action-section {
         height: 44%;
     }
@@ -3982,14 +4057,13 @@ window.outerHeight include toolbar and address bar----------- */
     .fly-in-text li {
         font-size: 5.5rem;
         letter-spacing: 0.01em;
-        margin-bottom: 0.35em;
     }
     .hero-subheading {
         font-size: 2.7rem;
         margin-bottom: 0.8em;
     }
     .send-message-button.full-width, .direction-button {
-        height: 45px;
+        height: 38px;
     }
     .direction-button {
         line-height: 1.3em;
@@ -4003,7 +4077,11 @@ window.outerHeight include toolbar and address bar----------- */
     .call-to-action-heading {
         font-size: 2.5rem;
     }
-    
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph {
+        font-size: 2rem;
+    }
     .bulletin-row {
         width: 33em;
         height: 12em;
@@ -4016,6 +4094,12 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .bulletin-download {
         font-size: 1.8rem;
+    }
+    .bulletin-description {
+        padding-left: 45px;
+    }
+    .section-subheading.center {
+        font-size: 2.2rem;
     }
     #welcome {
         height: 130%;
@@ -4030,8 +4114,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .welcome-pgraph,
     .welcome-author {
-        font-size: 2rem;
-        text-align: left;
+        font-size: 2.1rem;
         margin-bottom: 0;
     }
     .welcome-button-container {
@@ -4040,6 +4123,24 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .group-photo-caption {
         font-size: 2rem;
+    }
+    .main-news-title {
+        font-size: 3.2rem;
+    }
+    .top-news-title {
+        font-size: 1.8rem;
+    }
+    .news-pgraph3 {
+        font-size: 2rem;
+    }
+    .news-pgraph1 {
+        font-size: 1.8rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.6rem;
+    }
+    .more h3 {
+        font-size: 1.9rem;
     }
     .section.section-contact {
         padding: 7em 0em 10em;
