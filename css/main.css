@@ -3808,12 +3808,18 @@ window.outerHeight include toolbar and address bar----------- */
         width: 100%;
     }
     .bulletin-row {
-        width: 31em;
+        width: 33em;
         height: 12em;
     }
+    .bulletin-description {
+        padding-left: 32px;
+    }
     .section-heading.centered {
-        font-size: 4.5rem;
+        font-size: 4rem;
         padding-bottom: 25px;
+    }
+    .section-subheading.center {
+        font-size: 2rem;
     }
     #welcome {
         padding: 6em 0;
@@ -3839,11 +3845,16 @@ window.outerHeight include toolbar and address bar----------- */
     #announcements {
         padding: 5em 0 0;
     }
-    .section-heading.centered {
-        padding-bottom: 25px;
+    .events-icon img {
+        width: 45px;
+        height: 45px;
+    }
+    .events-icon h2 {
+        font-size: 2rem;
     }
     .main-news {
         height: 293px;
+        margin-bottom: 20px;
     }
     .main-image {
         height: 293px;
@@ -3852,24 +3863,28 @@ window.outerHeight include toolbar and address bar----------- */
         top: -293px;
     }
     .main-news-title {
-        font-size: 5rem;
-        margin-bottom: 25px;
+        font-size: 3rem;
+        margin-bottom: 5px;
+    }
+    .news-pgraph3 {
+        font-size: 1.8rem;
+    }
+    .news-pgraph1 {
+        font-size: 1.6rem;
+    }
+    
+    .news-pgraph2 {
+        font-size: 1.4rem;
     }
     .section-title-group{
         margin-bottom: 30px;
     }
-    
-    .main-news {
-        margin-bottom: 20px;
-    }
-    .news-pgraph1 {
-        font-size: 2.1rem;
-    }
+   
     .top-news {
         height: 720px;
     }
-    .newsdescription .top-news-title {
-        font-size: 2.1rem;
+    .top-news-title {
+        font-size: 1.6rem;
     }
     .news {
         width: 100%;
@@ -3897,12 +3912,7 @@ window.outerHeight include toolbar and address bar----------- */
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
     }
-    .top-news-title {
-        font-size: 2.5rem;
-    }
-    .news-pgraph2 {
-        font-size: 1.7rem;
-    }
+    
     .card__share {
         display: -webkit-box;
         display: -ms-flexbox;
@@ -3940,6 +3950,13 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 23px;
     }
     
+    .more h3 {
+        font-size: 1.8rem;
+    }
+    .more img {
+        width: 30px;
+        height: 30px;
+    }
     .call-to-action-section {
         height: 44%;
     }
@@ -4040,14 +4057,13 @@ window.outerHeight include toolbar and address bar----------- */
     .fly-in-text li {
         font-size: 5.5rem;
         letter-spacing: 0.01em;
-        margin-bottom: 0.35em;
     }
     .hero-subheading {
         font-size: 2.7rem;
         margin-bottom: 0.8em;
     }
     .send-message-button.full-width, .direction-button {
-        height: 45px;
+        height: 38px;
     }
     .direction-button {
         line-height: 1.3em;
@@ -4061,7 +4077,11 @@ window.outerHeight include toolbar and address bar----------- */
     .call-to-action-heading {
         font-size: 2.5rem;
     }
-    
+    .bulletin-pgraph,
+    .feedback-pgraph,
+    .call-to-action-pgraph {
+        font-size: 2rem;
+    }
     .bulletin-row {
         width: 33em;
         height: 12em;
@@ -4074,6 +4094,12 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .bulletin-download {
         font-size: 1.8rem;
+    }
+    .bulletin-description {
+        padding-left: 45px;
+    }
+    .section-subheading.center {
+        font-size: 2.2rem;
     }
     #welcome {
         height: 130%;
@@ -4088,8 +4114,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .welcome-pgraph,
     .welcome-author {
-        font-size: 2rem;
-        text-align: left;
+        font-size: 2.1rem;
         margin-bottom: 0;
     }
     .welcome-button-container {
@@ -4098,6 +4123,24 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .group-photo-caption {
         font-size: 2rem;
+    }
+    .main-news-title {
+        font-size: 3.2rem;
+    }
+    .top-news-title {
+        font-size: 1.8rem;
+    }
+    .news-pgraph3 {
+        font-size: 2rem;
+    }
+    .news-pgraph1 {
+        font-size: 1.8rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.6rem;
+    }
+    .more h3 {
+        font-size: 1.9rem;
     }
     .section.section-contact {
         padding: 7em 0em 10em;
