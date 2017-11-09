@@ -1288,9 +1288,6 @@ select {
     height: 100%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
-}
-
-.resize-img1 {
     width: 220px;
 }
 
@@ -1341,6 +1338,7 @@ select {
     font-size: 0.9rem;
     line-height: 1.2em;
     font-weight: 300;
+    margin-bottom: 0;
 }
 
 .main-news-title {
@@ -1980,6 +1978,9 @@ address,
     .align-right {
         margin-top: 32px;
     }
+    .more h3 {
+        margin-bottom: 3px;
+    }
     .submit-button {
         padding: 0.52em 1em;
     }
@@ -2069,7 +2070,7 @@ address,
         width: 180px;
     }
     .more h3 {
-        margin-bottom: 5px;
+        margin-bottom: 4px;
     }
     .w-form {
         margin: 0 0 5px;
@@ -2469,7 +2470,7 @@ address,
         height: 155px;
     }
     .news,
-    .resize-img1 {
+    .news-image {
         width: 205px;
     }
     .newsdescription {
@@ -2648,9 +2649,6 @@ address,
     }
     .more h3 {
         margin-bottom: 6px;
-    }
-    .news-pgraph2 {
-        font-size: 1.3rem;
     }
     .plan-visit {
         padding-top: 5%;
@@ -2855,10 +2853,17 @@ address,
     .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph {
         font-size: 1.8rem;
     }
+    .welcome-column-1 {
+        padding-right: 15px;
+    }
     .welcome-pgraph,
     .welcome-author
     {
         font-size: 1.9rem;
+        text-align: right;
+    }
+    .group-photo-container {
+        padding: 0 0 10px;
     }
     .bulletin-flex {
         flex-direction: row;
@@ -2870,20 +2875,29 @@ address,
     .bulletin-container-1 {
         margin-bottom: 0;
     }
+    .adjust-padding-lr {
+        padding: 0 60px;
+    }
     .title,
-    .date-published,
-    .group-photo-caption {
+    .date-published
+    {
         font-size: 1.8rem;
+    }
+    .group-photo-caption {
+        font-size: 1.6rem;
     }
     .bulletin-download, .visit,
     .history {
         font-size: 1.5rem;
     }
     #welcome {
-        padding: 5em 0 8em;
+        padding: 5em 0 6em;
     }
     .welcome-button-container {
         padding-top: 1em;
+        text-align: right;
+        position: static;
+        width: auto;
     }
     .adjust-padding-td {
         padding: 40px 0;
@@ -2915,6 +2929,7 @@ address,
     }
     .newsdescription {
         height: 100px;
+        padding: 0.8em;
     }
     .card__share {
         margin-top: -113px;
@@ -2935,6 +2950,12 @@ address,
     }
     .top-news {
         height: 235px;
+    }
+    .top-news-title {
+        font-size: 1.4rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.3rem;
     }
     .more h3 {
         font-size: 1.6rem;
@@ -2962,7 +2983,7 @@ address,
     address,
     .contact-info p,
     .office-hour p {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
     }
     .button.full-width,
     .direction-button {
@@ -2996,17 +3017,8 @@ address,
     .mobile-nav {
         height: 12%;
     }
-    .COGS-title {
-        -webkit-box-flex: 8;
-            -ms-flex: 8;
-                flex: 8;
-    }
-    .menu-links .closebtn {
-        height: 2.5em;
-        width: 2.5em;
-        background-size: 2.5em;
-        top: 2%;
-        right: 4%;
+    .navbar {
+        padding-top: 10%;
     }
     .web__share>.share-icon {
         width: 50px;
@@ -3023,66 +3035,124 @@ address,
     .welcome-button-container {
         padding-top: 1em;
     }
+    .fly-in-text li {
+        margin-bottom: 10px;
+    }
+    .adjust-padding-lr {
+        padding: 0 50px;
+    }
+    .section-title-group {
+        margin-bottom: 2em;
+    }
+    #announcements {
+        padding: 4em 0 2em;
+    }
+    #announcements .adjust-padding-lr {
+        padding: 0 60px;
+    }
+    .events-icon {
+        margin-bottom: 5px;
+    }
+    .events-icon img {
+        width: 35px;
+        height: 35px;
+    }
     .main-news {
-        height: 400px;
+        height: 350px;
+        margin-bottom: 20px;
     }
     .main-image {
-        max-height: 400px;
+        height: 350px;
     }
     .main-news-description {
-        top: -400px;
+        top: -350px;
     }
     .top-news {
-        height: 300px;
+        height: 210px;
     }
     .news,
-    .resize-img1 {
-        width: 190px;
+    .news-image {
+        width: 150px;
     }
     .news {
         height: 140px;
         margin-bottom: 20px;
     }
-    
     .newsdescription {
-        height: 120px;
+        height: 90px;
     }
     .top-news-title {
-        font-size: 1.8rem;
+        font-size: 1.4rem;
     }
     .news-pgraph2 {
-        font-size: 1.6rem;
+        font-size: 1.3rem;
     }
     .more h3 {
         font-size: 1.7rem;
+        margin-bottom: 4px;
+    }
+    .more img {
+        width: 20px;
+        height: 20px;
+    }
+    .card__share {
+        display: block;
+        margin-top: -105px;
+        margin-right: 2px;
     }
     .card__social {
-        width: 445%;
+        width: 470%;
+        right: 0;
+    }
+    .card__social--active {
+        -webkit-transform: translateX(-24px);
+                transform: translateX(-24px);
+    }
+    .web__share>.share-icon {
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
+        font-size: 14px;
     }
     .share-icon {
-        width: 30px;
-        height: 30px;
-        line-height: 30px;
-        font-size: 14px;
+        width: 26px;
+        height: 26px;
+        line-height: 26px;
+        font-size: 13px;
+    }
+    .share-icon:hover, .share-icon:focus {
+        -webkit-transform:scale(1.2);
+            -ms-transform:scale(1.2);
+                transform: scale(1.2);
     }
     .title, .date-published {
         padding-left: 0;
     }
+    .title, .date-published, .group-photo-caption {
+        font-size: 1.7rem;
+    }
     .bulletin-download {
         margin-left: 0;
-        font-size: 2.5rem;
     }
-    .hollow-button, .visit, .history {
-        font-size: 1.8rem;
-    }
-    .group-photo-caption {
-        font-size: 2.2rem;
+    .hollow-button, .visit, .history, .bulletin-download {
+        font-size: 1.5rem;
     }
     .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph, .welcome-pgraph, .welcome-author {
-        font-size: 2.5rem;
+        font-size: 1.9rem;
     }
-    .text-field, .submit-button, .nospam, .form-field, .plan-submit.button.full-width, .direction-button, address, .contact-info p, .office-hour p {
+    .text-field, .submit-button, .nospam, .form-field, .plan-submit.button.full-width {
         font-size: 1.8rem;
+    }
+    .location h2, .contact-info h2, .office-hour h2 {
+        font-size: 2.6rem;
+    }
+    .direction-button, address, .contact-info p, .office-hour p {
+        font-size: 1.4rem;
+    }
+    .section-heading.centered {
+        font-size: 5rem;
+        line-height: 1em;
+        padding: 10px;
     }
     .submit-button {
         padding: 9px 15px;
@@ -3093,20 +3163,24 @@ address,
     .form-field, select, #attendance-date {
         margin-bottom: 5px;
     }
+    .form-field,
+    .button.full-width {
+        font-size: 1.4rem;
+    }
     .selection {
         padding-bottom: 0;
     }
-    select, #attendance-date, .form-field, .plan-submit.button.full-width {
-        height: 40px;
+    select, #attendance-date, .form-field, .plan-submit.button.full-width, .button.full-width, .direction-button {
+        height: 36px;
     }
     .call-to-action-section {
         height: 64%;
     }
     .address {
-        height: 31em;
+        height: 28em;
     }
     .googlemap iframe {
-        height: 27.4em;
+        height: 25em;
     }
 }
 
@@ -3234,7 +3308,7 @@ address,
         height: 390px;
     }
     .main-image {
-        max-height: 390px;
+        height: 390px;
     }
     .main-news-title {
         font-size: 4rem;
@@ -3248,7 +3322,7 @@ address,
     .main-news-description {
         top: -390px;
     }
-    .news, .resize-img1 {
+    .news, .news-image {
         width: 170px;
         height: 125px;
     }
@@ -3541,7 +3615,7 @@ address,
     #welcome {
         height: 320%;
     }
-    .news, .resize-img1 {
+    .news, .news-image {
         width: 180px;
     }
     .card__social {
@@ -3591,7 +3665,7 @@ address,
     .main-news {
         height: 300px;
     }
-    .news, .resize-img1 {
+    .news, .news-image {
         width: 165px;
     }
     .main-news-title {
@@ -3718,7 +3792,7 @@ window.outerHeight include toolbar and address bar----------- */
         height: 293px;
     }
     .main-image {
-        max-height: 293px;
+        height: 293px;
     }
     .main-news-description {
         top: -293px;
@@ -4428,7 +4502,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .main-image {
         height: 300px;
-        max-height: 400px;
+        height: 400px;
     }
     .main-news-description {
         top: -300px;
