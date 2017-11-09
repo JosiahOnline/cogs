@@ -3816,7 +3816,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .section-heading.centered {
         font-size: 4rem;
-        padding-bottom: 25px;
+        padding-bottom: 20px;
     }
     .section-subheading.center {
         font-size: 2rem;
@@ -3863,21 +3863,24 @@ window.outerHeight include toolbar and address bar----------- */
         top: -293px;
     }
     .main-news-title {
-        font-size: 3rem;
+        font-size: 4.5rem;
+        padding: 0 10%;
         margin-bottom: 5px;
     }
     .news-pgraph3 {
-        font-size: 1.8rem;
+        font-size: 2rem;
+        padding: 0 6%;
     }
     .news-pgraph1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+        padding: 0 6%;
     }
     
     .news-pgraph2 {
         font-size: 1.4rem;
     }
     .section-title-group{
-        margin-bottom: 30px;
+        margin-bottom: 60px;
     }
    
     .top-news {
@@ -3954,8 +3957,8 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1.8rem;
     }
     .more img {
-        width: 30px;
-        height: 30px;
+        width: 27px;
+        height: 27px;
     }
     .call-to-action-section {
         height: 44%;
@@ -4063,7 +4066,7 @@ window.outerHeight include toolbar and address bar----------- */
         margin-bottom: 0.8em;
     }
     .send-message-button.full-width, .direction-button {
-        height: 38px;
+        height: 45px;
     }
     .direction-button {
         line-height: 1.3em;
@@ -4083,20 +4086,16 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 2rem;
     }
     .bulletin-row {
-        width: 33em;
-        height: 12em;
+        width: 32em;
     }
     .title {
         font-size: 2.5rem;
     }
     .date-published {
-        font-size: 2rem;
+        font-size: 2.2rem;
     }
     .bulletin-download {
-        font-size: 1.8rem;
-    }
-    .bulletin-description {
-        padding-left: 45px;
+        font-size: 2rem;
     }
     .section-subheading.center {
         font-size: 2.2rem;
