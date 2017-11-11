@@ -1322,7 +1322,7 @@ select {
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
 
-.newsdescription .top-news-title,
+.top-news-title,
 .news-pgraph2 {
     text-decoration: none;
     color: white;
@@ -3582,9 +3582,6 @@ address,
         font-size: 1.6rem;
         height: 40px;
     }
-    .news-container {
-        height: 1530px;
-    }
     .main-news-title {
         font-size: 8rem;
     }
@@ -3718,12 +3715,10 @@ address,
     }
     .main-news-title {
         font-size: 4em;
+        margin-bottom: 25px;
     }
     .news-pgraph1 {
         font-size: 1.7em;
-    }
-    .main-news-title {
-        margin-bottom: 25px;
     }
 }
 
@@ -4223,9 +4218,7 @@ window.outerHeight include toolbar and address bar----------- */
     .main-news a .news-image {
         width: 100%;
     }
-    .top-news {
-        height: 1900px;
-    }
+    
     .top-news-title {
         line-height: 1em;
     }
@@ -4365,6 +4358,12 @@ window.outerHeight include toolbar and address bar----------- */
     html {
         font-size: 14px;
     }
+    .pulse {
+        font-size: 1.5rem;
+        width: 100px;
+        height: 100px;
+        line-height: 100px;
+    }
     .home-container {
         top: 95%;
     }
@@ -4373,20 +4372,23 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .COGS-title h1,
     .navburger h1 {
-        font-size: 1.6rem;
+        font-size: 1.5rem;
         font-weight: 500;
     }
     .hamburger {
         background-size: 2.5rem;
     }
     .mobile-nav {
-        height: 10%;
+        height: 8%;
+    }
+    .navbar {
+        padding-top: 5%;
     }
     .nav-container {
         padding-top: 0;
     }
     .menu-links .closebtn {
-        top: 2.6%;
+        top: 2%;
         right: 6.6%;
         width: 2.5rem;
         height: 2.5rem;
@@ -4414,8 +4416,11 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1.8rem;
         padding: 1.3em 0;
     }
+    .share-website {
+        padding: 5px;
+    }
     .share-container {
-        padding: 3% 0;
+        padding: 2% 0;
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
@@ -4428,39 +4433,45 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .share-button {
         font-size: 1.2rem;
+        padding: 11px 20px;
     }
     .web__share>.share-icon {
-        width: 38px;
-        height: 38px;
-        line-height: 38px;
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
         font-size: 18px;
     }
     .social-container {
         margin-top: 20px;
         margin-bottom: 0;
     }
+    .hero-title-wrapper {
+        -webkit-transform: perspective(1px) translateY(-40%);
+                transform: perspective(1px) translateY(-40%);
+    }
     .fly-in-text {
-        width: 70%;
+        width: 96%;
         margin: 0 auto;
     }
     .fly-in-text li {
-        font-size: 4rem;
+        font-size: 3.1rem;
         text-align: center;
     }
     .fly-in-text li:nth-child(7) {
-        margin-right: 0;
+        margin-right: 15px;
     }
     .fly-in-text li, .section-heading.centered, .hero-subheading {
         padding-bottom: 15px;
     }
     .section-heading.centered {
-        font-size: 3rem;
-        padding-top: 0;
+        font-size: 2.8rem;
+        padding: 10px 0;
     }
     .hero-subheading {
-        font-size: 2rem;
+        font-size: 2.2rem;
+        line-height: 1.1em;
         margin: 0 auto;
-        width: 68%;
+        width: 96%;
     }
     .hero-button-container {
         display: -webkit-box;
@@ -4475,14 +4486,18 @@ window.outerHeight include toolbar and address bar----------- */
                 justify-content: center;
     }
     .hollow-button.white {
-        margin-bottom: 10px;
+        margin-bottom: 15px;
     }
     .hollow-button {
-        width: 55%;
+        width: 50%;
         margin: 0 auto;
+        padding: 0.6em;
     }
-    .hollow-button, .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph, .bulletin-download, .welcome-pgraph, .welcome-author, .group-photo-caption, .visit, .history {
+    .hollow-button, .bulletin-pgraph, .feedback-pgraph, .call-to-action-pgraph, .bulletin-download, .welcome-pgraph, .welcome-author, .group-photo-caption {
         font-size: 1.4rem;
+    }
+    .visit, .history {
+        font-size: 1.3rem;
     }
     .section-subheading.center {
         font-size: 1.5rem;
@@ -4508,7 +4523,7 @@ window.outerHeight include toolbar and address bar----------- */
         height: 90%;
     }
     .bulletin-description {
-        padding-left: 0;
+        padding-left: 10px;
     }
     .bulletin-row {
         width: 21em;
@@ -4598,37 +4613,43 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .main-news {
         margin-bottom: 15px;
-        height: 300px;
+        height: 280px;
     }
     .main-image {
-        height: 300px;
-        height: 400px;
+        height: 280px;
     }
     .main-news-description {
-        top: -300px;
+        top: -280px;
     }
     .main-news-title {
-        font-size: 4rem;
+        font-size: 3rem;
         line-height: 1em;
-        margin-bottom: 15px;
+        padding: 0 5%;
+        margin-bottom: 5px;
     }
     .news-pgraph1 {
-        font-size: 1.6rem;
-        padding: 0 40px;
+        font-size: 1.4rem;
         line-height: 1.3em;
     }
-    .newsdescription {
-        padding: 15px;
+    .news-pgraph3 {
+        font-size: 1.7rem;
+        margin-bottom: 0;
     }
-    .newsdescription .top-news-title,
+    .newsdescription {
+        top: -110px;
+        height: 110px;
+        left: 40%;
+        width: 60%;
+        padding: 10px;
+    }
+    .top-news-title,
     .news-pgraph2 {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         line-height: 1.2em;
         margin-bottom: 2px;
     }
     .news-pgraph2 {
         font-size: 1.2rem;
-        font-weight: 300;
         padding-right: 30px;
     }
     .top-news {
@@ -4640,17 +4661,12 @@ window.outerHeight include toolbar and address bar----------- */
     .news-image {
         width: 39.6%;
     }
-    .newsdescription {
-        top: -110px;
-        height: 110px;
-        left: 40%;
-        width: 60%;
-    }
     .card__share {
-        top: -160px;
+        top: -152px;
+        right: 5px;
     }
     .card__social {
-        width: 177px;
+        width: 160px;
     }
     .card__social--active {
         -webkit-transform: translateX(-10px);
@@ -4659,6 +4675,30 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .card__social>.share-icon {
         margin-left: 0;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 15px;
+    }
+    .separator:before {
+        height: 1.5px;
+    }
+    .more img {
+        width: 20px;
+        height: 20px;
+    }
+    .more h3 {
+        font-size: 1.3rem;
+        margin-bottom: 4px;
+    }
+    .events-icon img {
+        width: 40px;
+        height: 40px;
+    }
+    .events-icon h2 {
+        font-size: 1.6rem;
     }
     .form-wrapper.squeezed {
         margin-bottom: 40px;
@@ -4695,6 +4735,14 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1.2rem;
         line-height: 1.4em;
     }
+    .send-message-button.full-width {
+        height: 38px;
+        padding: 0;
+    }
+    .direction-button {
+        height: 40px;
+        padding: 8px;
+    }
     .googlemap iframe {
         height: 24em;
     }
@@ -4705,6 +4753,8 @@ window.outerHeight include toolbar and address bar----------- */
     .submit-button,
     .cogs-news-form>.text-field {
         font-size: 1.1rem;
+        height: 38px;
+        padding: 10px 20px;
     }
     .nospam {
         font-size: 1.2rem;
@@ -4715,15 +4765,39 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .section.section-contact {
         padding: 7em 0em 6em;
-    }    
+    }   
     .adjust-padding-lr {
         padding: 0 30px;
     }
     #announcements .adjust-padding-lr {
         padding: 0 30px;
     }
+    .verse-container {
+        width: 67%;
+    }
     .footer-container {
         top: 30%;
+    }
+}
+
+/* ----------- Galaxy Note 5 Potrait ----------- */
+
+@media screen and ( max-width: 420px) and ( max-height: 660px) {
+    .brand-logo, .brand-logo p {
+        font-size: 2.5rem;
+    }
+    .main-nav {
+        padding-top: 4%;
+    }
+    .beta {
+        font-size: 1.1rem;
+        top: -10px;
+    }
+    .navbar {
+        padding-top: 0;
+    }
+    .share-website {
+        margin-top: 35px;
     }
 }
 
@@ -4731,11 +4805,8 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
 
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
-    .brand-logo, .brand-logo p {
-        font-size: 2.5rem;
-    }
-    .beta {
-        font-size: 1.1rem;
+    .main-nav {
+        padding-top: 6%;
     }
     .cogs-logo {
         margin-bottom: 20px;
@@ -4754,6 +4825,9 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1.6rem;
         padding: 1.1em 0;
     }
+    .navbar {
+        padding-top: 5%;
+    }
     .share-website {
         margin-top: 30px;
     }
@@ -4769,7 +4843,7 @@ window.outerHeight include toolbar and address bar----------- */
     .call-to-action-section {
         height: 51%;
     }
-    .newsdescription .top-news-title {
+    .top-news-title {
         font-size: 1.2rem;
     }
     .news-pgraph2 {
@@ -4789,6 +4863,9 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .social-container p {
         padding-top: 6px;
+    }
+    .more h3 {
+        margin-bottom: 2px;
     }
     .plan-visit {
         padding-top: 15%;
@@ -4819,14 +4896,25 @@ window.outerHeight include toolbar and address bar----------- */
     .cogs-logo {
         margin-bottom: 20px;
     }
-    .bulletin-row {
-        width: 20em;
+    .fly-in-text li, .section-heading.centered {
+        padding-bottom: 12px;
     }
     .hero-subheading {
-        width: 65%;
+        padding-bottom: 15px;
+        font-size: 2.1rem;
+    }
+    .hollow-button {
+        padding: 0.65em;
+    }
+    .bulletin-row {
+        width: 20em;
+        height: 7em;
     }
     #welcome {
         height: 115%;
+    }
+    .section-title-group {
+        margin-bottom: 30px;
     }
     .welcome-column-1 {
         margin-bottom: 90px;
@@ -4834,16 +4922,22 @@ window.outerHeight include toolbar and address bar----------- */
     .container .title {
         padding: 0;
     }
-    .main-news-title {
-        font-size: 5rem;
-        margin-bottom: 10px;
-        padding-top: 22%;
+    .events-icon img {
+        width: 36px;
+        height: 36px;
     }
-    .news-container {
-        height: 1620px;
+    .main-news-title {
+        font-size: 3.1rem;
     }
     .main-news {
         margin-bottom: 10px;
+        height: 230px;
+    }
+    .main-image {
+        height: 230px;
+    }
+    .main-news-description {
+        top: -230px;
     }
     .news, .newsdescription {
         height: 100px;
@@ -4852,19 +4946,22 @@ window.outerHeight include toolbar and address bar----------- */
         top: -100px;
     }
     .top-news {
-        height: 1320px;
+        height: 440px;
+    }
+    .news-pgraph3 {
+        padding: 0 25px;
     }
     .share-toggle, .card__share .card__social .share-icon {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 17px;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 15px;
     }
     .card__social {
-        width: 155px;
+        width: 146px;
     }
     .card__share {
-        top: -145px;
+        top: -138px;
     }
     .cogs-news-form {
         margin-bottom: 5px;
@@ -4881,11 +4978,14 @@ window.outerHeight include toolbar and address bar----------- */
     .cogs-news-form>.text-field {
         margin-bottom: 10px;
     }
+    .submit-button {
+        height: 36px;
+    }
     .call-to-action-section .container {
         height: 220px;
     }
-    .send-message-button.full-width, .direction-button {
-        height: 40px;
+    .direction-button {
+        padding: 10px;
     }
 }
 
@@ -4893,8 +4993,20 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- iPhone 6  Potrait----------- */
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .mobile-container {
+        height: 8%;
+    }
     .cogs-logo {
         margin-bottom: 15px;
+    }
+    .menu-links .closebtn {
+        top: 2%;
+    }
+    .web__share>.share-icon {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 17px;
     }
     .plan-visit {
         padding-top: 12%;
@@ -4915,6 +5027,20 @@ window.outerHeight include toolbar and address bar----------- */
     }
     #welcome {
         height: 135%;
+    }
+    .main-news-title {
+        margin-bottom: 5px;
+    }
+    .news-pgraph3 {
+        padding: 0 25px;
+        margin-bottom: 0;
+    }
+    .more img {
+        width: 18px;
+        height: 18px;
+    }
+    .more h3 {
+        margin-bottom: 4px;
     }
 }
 
@@ -4973,8 +5099,29 @@ window.outerHeight include toolbar and address bar----------- */
     .welcome-column-1 {
         height: 75%;
     }
+    .main-news-title {
+        font-size: 3rem;
+        padding: 0 30px;
+    }
     .newsdescription {
         padding: 10px;
+    }
+    .top-news-title {
+        font-size: 1.5rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.4rem;
+    }
+    .news-pgraph3 {
+        padding: 0 35px;
+    }
+    .more img {
+        width: 20px;
+        height: 20px;
+    }
+    .more h3 {
+        font-size: 1.5rem;
+        margin-left: 15px;
     }
     .plan-visit {
         padding-top: 10%;
@@ -4987,9 +5134,6 @@ window.outerHeight include toolbar and address bar----------- */
     .service-time,
     .plan-visit form .button.full-width {
         font-size: 1.3rem;
-    }
-    .address {
-        height: 57em;
     }
     .plan-visit .form-container .form-row .form-field,
     select,
@@ -5008,6 +5152,12 @@ window.outerHeight include toolbar and address bar----------- */
     .address {
         height: 54em;
     }
+    address, .contact-info p, .office-hour p {
+        font-size: 1.4rem;
+    }
+    .verse-container {
+        width: 65%;
+    }
 }
 
 /* ----------- Galaxy Note 8 Potrait  ----------- */
@@ -5015,17 +5165,14 @@ window.outerHeight include toolbar and address bar----------- */
     .home-container {
         top: 100%;
     }
-    .hero-subheading {
-        width: 68%;
-    }
-    .bulletin-description, .title, .date-published {
-        text-align: center;
-    }
 }
 
 /* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
+    .main-nav {
+        padding-top: 10%;
+    }
     .brand-logo, .brand-logo p {
         font-size: 2.8rem;
     }
@@ -5035,6 +5182,9 @@ window.outerHeight include toolbar and address bar----------- */
     .menu-links a {
         font-size: 1.8rem;
         padding: 1.2em 0;
+    }
+    .navbar {
+        padding-top: 5%;
     }
     .social-container {
         margin-top: 30px;
@@ -5073,9 +5223,6 @@ window.outerHeight include toolbar and address bar----------- */
     .card__social {
         width: 160px;
     }
-    .top-news {
-        height: 1330px;
-    }
     .news {
         height: 100px;
     }
@@ -5098,6 +5245,36 @@ window.outerHeight include toolbar and address bar----------- */
     }
     #announcements .adjust-padding-lr {
         padding: 0 20px;
+    }
+}
+
+/* ----------- Samsung J Neo Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 570px) {
+    .COGS-title h1, .navburger h1 {
+        font-weight: 400;
+    }
+    .main-nav {
+    padding-top: 4%;
+    }
+    .brand-logo, .brand-logo p {
+        font-size: 2.5rem;
+    }
+    .navbar {
+        padding-top: 0;
+    }
+    .menu-links a {
+        font-size: 1.6rem;
+        padding: 25px 0;
+    }
+    .menu-links .closebtn {
+        top: 2%;
+    }
+    .web__share>.share-icon {
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 17px;
     }
 }
 
@@ -5136,11 +5313,14 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- HuaWei Mate9 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
-    .fly-in-text {
-        width: 70%;
+    .main-nav {
+        padding-top: 8%;
     }
-    .hero-subheading {
-        width: 70%;
+    .menu-links a {
+        padding: 20px 0;
+    }
+    .hollow-button {
+        width: 46%;
     }
     .social-container {
         margin-top: 12px;
@@ -5149,7 +5329,16 @@ window.outerHeight include toolbar and address bar----------- */
         width: 19em;
     }
     .bulletin-description {
-        padding-left: 1px;
+        padding-left: 8px;
+    }
+    .title, .date-published {
+        font-size: 1.7rem;
+    }
+    .bulletin-download {
+        font-size: 1.35rem;
+    }
+    .section-title-group {
+        margin-bottom: 25px;
     }
     .plan-visit .form-container .form-row .form-field,
     select,
@@ -5172,6 +5361,30 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .call-to-action-section {
         height: 52%;
+    }
+    .events-icon img {
+        width: 32px;
+        height: 32px;
+    }
+    .events-icon h2 {
+        font-size: 1.5rem;
+    }
+    .main-news-title {
+        font-size: 3rem;
+        padding: 0 35px;
+    }
+    .news-pgraph3 {
+        font-size: 1.7rem;
+    }
+    .news-pgraph1 {
+        font-size: 1.5rem;
+    }
+    
+    .card__social {
+        width: 148px;
+    }
+    .more h3 {
+        margin-bottom: 6px;
     }
 }
 
@@ -5204,6 +5417,9 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 568px) {
+    .main-nav {
+        padding-top: 10%;
+    }
     .hamburger {
         margin-left: 7px;
     }
@@ -5231,17 +5447,17 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 16px;
     }
     .fly-in-text {
-        width: 80%;
+        width: 100%;
     }
     .fly-in-text li {
-        font-size: 4.2rem;
+        font-size: 2.8rem;
     }
     .hero-subheading {
-        width: 72%;
+        width: 90%;
         font-size: 2rem;
     }
     .fly-in-text li, .section-heading.centered, .hero-subheading {
-        padding-bottom: 15px;
+        padding-bottom: 10px;
     }
     .bulletin-text, .feedback-text, .call-to-action-heading {
         font-size: 1.5rem;
@@ -5255,9 +5471,6 @@ window.outerHeight include toolbar and address bar----------- */
     .bulletin-download {
         font-size: 1.2rem;
     }
-    .fly-in-text li, .section-heading.centered, .hero-subheading {
-        padding: 0 0 8px;
-    }
     #welcome {
         height: 135%;
     }
@@ -5265,21 +5478,17 @@ window.outerHeight include toolbar and address bar----------- */
         line-height: 1.3em;
     }
     .main-news-description {
-        top: -260px;
+        top: -220px;
     }
-    .main-news {
-        height: 260px;
-    }
-    .main-news-title {
-        padding-top: 17%;
+    .main-news, .main-image {
+        height: 220px;
     }
     .news-pgraph1 {
         padding: 0 25px;
+    }    
+    .card__social {
+        width: 148px;
     }
-    .news-container {
-        height: 1600px;
-    }
-    
     .call-to-action-section {
         height: 46%;
     }
@@ -5301,6 +5510,15 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- iPhone 4 and 4S Potrait----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
+    .main-nav {
+        width: 100%;
+    }
+    .mobile-nav, .mobile-container, .menu-links .closebtn {
+        display: block;
+    }
+    .mobile-nav {
+        width: 100%;
+    }
     .hero-title-wrapper {
         -webkit-transform: perspective(1px) translateY(-30%);
                 transform: perspective(1px) translateY(-30%);
@@ -5359,9 +5577,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .plan-visit .form-field.text-area {
         min-height: 100px;
-    }
-    .main-news-title {
-        padding-top: 20%;
     }
     .news-pgraph1 {
         padding: 0 30px;
