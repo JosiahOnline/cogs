@@ -90,7 +90,7 @@ p {
     left: 0px;
     top: 0px;
     height: 100vh;
-    background-image: url("../News/img/s_white3.jpg");
+    background-image: url("../News/img/s_white4.jpg");
     background-position: 50% 1%;
     background-size: cover;
     font-family: Merriweather, serif;
@@ -112,29 +112,52 @@ p {
     font-size: 1.5rem;
     line-height: 1.3em;
 }
+
+.title-container {
+    position: absolute;
+    top: 20%;
+    left: 30px;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+.event-details {
+    
+}
+.event-details h1 {
+    font-size: 1.8rem;
+}
+.main-title {
+    font-size: 3.5rem;
+    line-height: 1em;
+    margin: 0 0 10px;
+}
+.title-container p {
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
 .verse-container {
     position: absolute;
-    top: 10%;
+    top: 20%;
     display: block;
     width: 26%;
     height: 90%;
     padding-top: 6%;
     right: 0;
-    text-align: center;
-    
+    text-align: center; 
 }
 
 .verse-pgraph {
     border-radius: 4px;
-    font-size: 1.2rem;
-    line-height: 1.2em; 
+    margin-top: 20px;
 }
 
 .verse-container h1 {
     font-size: 2.5em;
     line-height: 1.3em;
     width: 70%;
-    margin-left: 20%;
+    margin: 0 0 0 20%;
 }
 
 .verse-container .little-info {
@@ -163,9 +186,11 @@ p {
     color: rgb(216,23,46);
 }
 .verse-pgraph p {
+    font-size: 1rem;
+    line-height: 1.2em;
     background-color: rgba(255,255,255,1);
     color: rgb(216,23,46);
-    padding: 8px 0;
+    padding: 10px 0;
     position:relative;
     padding-left: 10px;
 }
@@ -184,15 +209,20 @@ p {
 }
 
 .verse-pgraph p:nth-child(1) {
-    width: 93%;
-    left: 7%;
+    width: 90%;
+    left: 10%;
 }
 
 .verse-pgraph p:nth-child(2) {
+    width: 93%;
+    left: 7%;
+}
+.verse-pgraph p:nth-child(3) {
     width: 96%;
     left: 4%;
 }
-.verse-pgraph p:nth-child(3) {
+
+.verse-pgraph p:nth-child(4) {
     width: 99%;
     left: 1%;
 }
@@ -504,29 +534,30 @@ p {
         box-shadow: none;
 }
 .footer {
-    height: 60px !important;
+    height: 45px !important;
     background-color: rgb(216,23,46) !important;
     color: #fff;
 }
 
 .footer.section .fp-tableCell {
-    height: 60px !important;
+    height: 45px !important;
 }
 
 .footer-container {
-   
     position: unset;
     top: unset;
     -webkit-transform: unset;
     -ms-transform: unset;
         transform: unset;
-    
 }
 
 .social-icons {
     -webkit-transform: unset;
         -ms-transform: unset;
             transform: unset;
+}
+.social-icon-link {
+    opacity: 1;
 }
 
 @media screen and ( max-width: 380px) {
