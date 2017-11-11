@@ -889,9 +889,9 @@ select {
     width: 80%;
     height: 100%;
     background-color: rgba(20, 30, 40, 1);
-    -webkit-transition: all 4.5s ease;
-    -o-transition: all 4.5s ease;
-    transition: all 4.5s ease;
+    -webkit-transition: all 3s ease;
+    -o-transition: all 3s ease;
+    transition: all 3s ease;
     /*background: url(../img/overlay.png) rgba(0, 0, 0, 0.25) repeat 0px 0px*/
 }
 
@@ -2776,9 +2776,10 @@ address,
         
     }
     .mobile-nav, .mobile-container, .menu-links .closebtn {
-        display: none;
+        display: none;  
+    }
+    .mobile-nav {
         height: 0;
-        width: 0;
     }
     .cogs-logo {
         margin-bottom: 10px;
@@ -5477,6 +5478,9 @@ window.outerHeight include toolbar and address bar----------- */
     .section-subheading.center {
         line-height: 1.3em;
     }
+     #announcements .section-heading.centered {
+        padding-bottom: 5px;
+    }
     .main-news-description {
         top: -220px;
     }
@@ -5510,14 +5514,25 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- iPhone 4 and 4S Potrait----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
-    .main-nav {
-        width: 100%;
+    .body {
+        padding-left: 0;
     }
-    .mobile-nav, .mobile-container, .menu-links .closebtn {
-        display: block;
+    .main-nav {
+        display: none;
+        width: 100%;
     }
     .mobile-nav {
-        width: 100%;
+        display: block;
+        height: 10%;
+    }
+    .mobile-container {
+        display: flex;
+    }
+    .mobile-nav, .mobile-container, {
+           
+    }
+    .menu-links .closebtn {
+        display: block;
     }
     .hero-title-wrapper {
         -webkit-transform: perspective(1px) translateY(-30%);
@@ -5546,16 +5561,19 @@ window.outerHeight include toolbar and address bar----------- */
         margin-top: 15px;
     }
     .web__share>.share-icon {
-        width: 32px;
-        height: 32px;
-        line-height: 32px;
-        font-size: 15px;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 18px;
     }
     .hero-subheading {
         width: 75%;
     }
     .fly-in-text li, .section-heading.centered, .hero-subheading {
         padding-bottom: 10px;
+    }
+    .bulletin-flex {
+        flex-direction: column;
     }
     .title, .date-published {
         font-size: 1.6rem;
@@ -5578,11 +5596,33 @@ window.outerHeight include toolbar and address bar----------- */
     .plan-visit .form-field.text-area {
         min-height: 100px;
     }
+    .events-icon img {
+        width: 36px;
+        height: 36px;
+    }
+    .events-icon h2 {
+        font-size: 1.7rem;
+    }
+    .top-news-title {
+        font-size: 1.4rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.3rem;
+    }
     .news-pgraph1 {
         padding: 0 30px;
     }
+    .more h3 {
+        margin-bottom: 5px;
+    }
     .call-to-action-section {
         height: 53%;
+    }
+    .card__social {
+        right: -13px;
+    }
+    .footer {
+        background-color: #141e28;
     }
 }
 
