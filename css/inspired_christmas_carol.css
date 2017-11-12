@@ -122,9 +122,6 @@ p {
     flex-direction: column;
     text-align: left;
 }
-.event-details {
-    
-}
 .event-details h1 {
     font-size: 1.8rem;
 }
@@ -133,6 +130,9 @@ p {
     line-height: 1em;
     margin: 0 0 10px;
 }
+.main-title, .event-details h1, .title-container p, .verse-container .little-info {
+        text-shadow: 1px 4px 2px rgba(216,23,46, 0.5);
+    }    
 .title-container p {
     margin-top: 5px;
     font-size: 1.2rem;
@@ -149,12 +149,11 @@ p {
 }
 
 .verse-pgraph {
-    border-radius: 4px;
     margin-top: 20px;
 }
 
 .verse-container h1 {
-    font-size: 2.5em;
+    font-size: 1.5rem;
     line-height: 1.3em;
     width: 70%;
     margin: 0 0 0 20%;
@@ -658,24 +657,6 @@ p {
     .main-section {
         background-position: 0% 1%;
     }
-    .verse-container {
-        padding-top: 8%;
-        width: 28%;
-    }
-    .verse-pgraph p:before {
-        border-width: unset;
-        border-color: unset;
-        border-style: unset;
-    }
-    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3) {
-        width: 100%;
-        left: 0;
-        border-top-left-radius: 4px;
-        border-bottom-left-radius: 4px;
-    }
-    .verse-pgraph {
-        font-size: 1.4rem;
-    }
     .scroll2-container {
         bottom: 20px;
     }
@@ -865,6 +846,9 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     .scroll-down {
         font-size: 1.1rem;
+    }
+    .scroll-container {
+        bottom: 20px;
     }
     .scroll2-container h1, .scroll3-container a {
         font-size: 1rem;
@@ -1131,6 +1115,34 @@ p {
 
 @media screen and ( max-width: 1441px) and (orientation: landscape) {
     html{font-size: 24px;}
+    .title-container p {
+        font-size: 1rem;
+    }
+    .verse-container {
+        padding-top: 15%;
+        width: 30%;
+    }
+    .verse-container h1 {
+        width: 90%;
+        margin-left: 5%;
+    }
+    .verse-pgraph p:before {
+        border-width: unset;
+        border-color: unset;
+        border-style: unset;
+    }
+    .verse-pgraph p {
+        font-size: 0.9rem;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        width: 100%;
+        left: 0;
+        border-top-left-radius: 4px;
+        border-bottom-left-radius: 4px;
+    }
+    .verse-pgraph {
+        font-size: 1.4rem;
+    }
     .share-info {
         padding: 40px 0;
     }
@@ -1140,8 +1152,34 @@ p {
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     html {font-size: 25px;}
+    .title-container {
+        top: 12%;
+        width: 800px;
+    }
+    .title-container p {
+        font-size: 1.3rem;
+    }
+    .main-title {
+        font-size: 3rem;
+    }
     .verse-container {
         padding-top: 25%;
+        left: 0;
+        width: 39%;
+    }
+    .verse-container h1 {
+        display: none;
+    }
+    .verse-pgraph p {
+        font-size: 1.1rem;
+        text-align: center;
+        padding-left: 30px;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
     }
 }
 
@@ -1149,8 +1187,68 @@ p {
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {font-size: 20px;}
+    .title-container {
+        top: 15%;
+        width: 500px;
+    }
+    .main-title {
+        font-size: 3.5rem;
+    }
     .verse-container {
-        padding-top: 15%;
+        padding-top: 6%;
+        left: unset;
+        right: 0;
+        width: 26%;
+    }
+    .verse-container h1 {
+        display: block;
+        font-size: 1.3rem;
+        margin-left: 10%;
+    }
+    .verse-pgraph p:before {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        border-width:50px 13px 0px 0px;
+        border-style:solid;
+        border-color:rgb(190,50,67) transparent transparent rgb(190,50,67) ;
+    }
+    .verse-pgraph p {
+        font-size: 0.9rem;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+        text-align: center;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .verse-pgraph p:nth-child(1) {
+        width: 90%;
+        left: 10%;
+    }
+    
+    .verse-pgraph p:nth-child(2) {
+        width: 93%;
+        left: 7%;
+    } 
+    
+    .verse-pgraph p:nth-child(3) {
+        width: 96%;
+        left: 4%;
+    } 
+    
+    .verse-pgraph p:nth-child(4) {
+        width: 99%;
+        left: 1%;
+    }
+    .verse-container .little-info {
+        padding-left: 20px;
+        text-align: left;
+    }
+    .title-container p {
+        font-size: 1.1rem;
     }
 }
 
@@ -1158,9 +1256,17 @@ p {
 
 @media screen and ( max-width: 1280px) {
     html {font-size: 22px;}
-    .verse-container {
-        padding-top: 30%;
+    .title-container {
+        width: 700px;
     }
+    .title-container p {
+        font-size: 1.3rem;
+    }
+    .verse-container {
+        width: 38%;
+        padding-top: 23%;
+    }
+    
 }
 
 
@@ -1168,16 +1274,52 @@ p {
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
+    .event-details h1 {
+        font-size: 1.6rem;
+    }
+    .main-title {
+        font-size: 2.6rem;
+    }
+    .title-container {
+        width: 580px;
+    }
+    .title-container p {
+        font-size: 1.1rem;
+    }
     .verse-container {
-        padding-top: 25%;
+        width: 33%;
+        padding-top: 19%;
+    }
+    .verse-pgraph p {
+        font-size: 1rem;
+    }
+    .verse-container .little-info {
+        margin-bottom: 30px;
     }
 }
 
 /* ----------- S Tab 10.1 Landscape ----------- */
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .title-container {
+        top: 25%;
+    }
     .verse-container {
-        padding-top: 15%;
+        padding-top: 6%;
+        width: 26%;
+    }
+    .verse-pgraph {
+        margin-top: 10px;
+    }
+    .verse-pgraph p {
+        font-size: 0.9rem;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .verse-container .little-info {
+        font-size: 0.8rem;
     }
 }
 
@@ -1185,6 +1327,13 @@ p {
 
 @media screen and ( max-width: 1100px) {
     html {font-size: 15px;}
+    .title-container {
+        width: 370px;
+    }
+    .verse-container {
+        padding-top: 7%;
+        width: 25%;
+    }
     .share-info {
         padding: 30px 0;
     }
@@ -1194,11 +1343,38 @@ p {
 
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
-    .verse-container {
-        padding-top: 45%;
+    .main-section {
+        background-position: 40% 1%;
     }
-    .verse-pgraph {
-        font-size: 1.4rem;
+    .title-container {
+        width: 600px;
+        top: 15%;
+    }
+    .title-container p {
+        font-size: 1.1rem;
+    }
+    .verse-container {
+        padding-top: 52%;
+        left: 0;
+        width: 50%;
+    }
+    .verse-container h1 {
+        display: none;
+    }
+    .verse-pgraph p:before {
+        border: 0 solid transparent;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        width: 100%;
+        left: 0;
+        border-top-right-radius: 4px;
+        border-bottom-right-radius: 4px;
+    }
+    .join {
+        background-color: white;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
+        color: rgb(216,23,46);
     }
     .share-button, .share-icon {
         font-size: 1.2rem;
@@ -1213,20 +1389,19 @@ p {
         height: 60vh;
         width: 100%;
     }
-    .main-section {
-        background-position: 28% 1%;
-    }
 }
 
 /* ----------- iPad Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
-    .verse-container {
-        padding-top: 26%;
+    .title-container {
+        top: 10%;
+        width: 550px;
     }
-    .verse-pgraph {
-        font-size: 1.3rem;
+    .verse-container {
+        padding-top: 23%;
+        width: 38%;
     }
     .share-info {
         padding: 40px 0;
@@ -1248,8 +1423,58 @@ p {
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
+    .title-container {
+        top: 25%;
+        width: 380px;
+    }
     .verse-container {
-        padding-top: 18%;
+        padding-top: 5%;
+        left: unset;
+        right: 0;
+        width: 25%;
+    }
+    .verse-container h1 {
+        display: block;
+    }
+    .verse-pgraph p:before {
+        content:"";
+        position:absolute;
+        top:0;
+        left:0;
+        border-width:50px 13px 0px 0px;
+        border-style:solid;
+        border-color:rgb(190,50,67) transparent transparent rgb(190,50,67) ;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .verse-pgraph p:nth-child(1) {
+    width: 90%;
+    left: 10%;
+    }
+
+    .verse-pgraph p:nth-child(2) {
+        width: 93%;
+        left: 7%;
+    }
+    .verse-pgraph p:nth-child(3) {
+        width: 96%;
+        left: 4%;
+    }
+
+    .verse-pgraph p:nth-child(4) {
+        width: 99%;
+        left: 1%;
+    }
+    .verse-pgraph p {
+        font-size: 0.8rem;
+    }
+    .join {
+        font-size: 1rem;
+    }
+    .verse-container .little-info {
+        margin-bottom: 20px;
     }
     .share-info {
         padding: 30px 0;
@@ -1268,7 +1493,7 @@ p {
 
 @media screen and ( max-width: 970px) and (max-height: 490px) {
     .verse-container {
-        padding-top: 14%;
+        padding-top: 4%;
     }
 }
 
