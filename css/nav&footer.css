@@ -314,6 +314,7 @@
 .social-icon-link {
     padding: 0;
     padding-right: 10px;
+    color: #000;
     opacity: 0.66;
     -webkit-transition: opacity 300ms ease;
     -o-transition: opacity 300ms ease;
