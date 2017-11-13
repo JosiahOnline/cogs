@@ -131,7 +131,7 @@ p {
     margin: 0 0 10px;
 }
 .main-title, .event-details h1, .title-container p, .verse-container .little-info {
-        text-shadow: 1px 4px 2px rgba(216,23,46, 0.5);
+        text-shadow: 1px 3px 2px rgba(216,23,46, 0.5);
     }    
 .title-container p {
     margin-top: 5px;
@@ -169,26 +169,27 @@ p {
     position: absolute;
     left: 22%;
     text-decoration: none;
-    color: white;
     font-weight: 300;
     font-size: 1.2rem;
     line-height: 1.2em;
-    padding: 10px 15px;
+    padding: 15px 20px;
     border: 1px solid white;
     border-radius: 4px;
-}
-
-.join:hover {
     background-color: white;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
-    color: rgb(216,23,46);
+    color: rgb(198,22,43);
+    opacity: 0.95;
+}
+
+.join:hover {
+    opacity: 1;
 }
 .verse-pgraph p {
     font-size: 1rem;
     line-height: 1.2em;
     background-color: rgba(255,255,255,1);
-    color: rgb(216,23,46);
+    color: rgb(198,22,43);
     padding: 10px 0;
     position:relative;
     padding-left: 10px;
@@ -201,7 +202,7 @@ p {
     left:0;
     border-width:50px 13px 0px 0px;
     border-style:solid;
-    border-color:rgb(190,50,67) transparent transparent rgb(190,50,67) ;
+    border-color:rgb(198,22,43) transparent transparent rgb(198,22,43);
 }
 .verse-pgraph, .scroll-down {
     font-weight: 300;
@@ -557,6 +558,7 @@ p {
 }
 .social-icon-link {
     opacity: 1;
+    color: rgb(216,23,46);
 }
 
 @media screen and ( max-width: 380px) {
@@ -758,6 +760,9 @@ p {
     }
 }
 @media screen and ( max-width: 1100px) {
+    .scroll-container {
+        bottom: 20px;
+    }
     .scroll2-container {
         bottom: 25px;
     }
@@ -883,7 +888,7 @@ p {
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .scroll-down, .scroll2-container h1, .scroll3-container a  {
-        font-size: 1rem;
+        font-size: 0.9rem;
     }
     .slide-heading {
         font-size: 1.2rem;
@@ -1139,6 +1144,8 @@ p {
         left: 0;
         border-top-left-radius: 4px;
         border-bottom-left-radius: 4px;
+        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
     }
     .verse-pgraph {
         font-size: 1.4rem;
@@ -1181,6 +1188,9 @@ p {
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
     }
+    .join {
+        opacity: 1;
+    }
 }
 
 /* ----------- Aspire E1 Laptop Landscape ----------- */
@@ -1190,6 +1200,9 @@ p {
     .title-container {
         top: 15%;
         width: 500px;
+    }
+    .title-container p {
+        font-size: 1.1rem;
     }
     .main-title {
         font-size: 3.5rem;
@@ -1212,7 +1225,7 @@ p {
         left:0;
         border-width:50px 13px 0px 0px;
         border-style:solid;
-        border-color:rgb(190,50,67) transparent transparent rgb(190,50,67) ;
+        border-color:rgb(198,22,43) transparent transparent rgb(198,22,43);
     }
     .verse-pgraph p {
         font-size: 0.9rem;
@@ -1223,6 +1236,10 @@ p {
         text-align: center;
         padding-left: 0;
         padding-right: 0;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        -webkit-box-shadow: 0 0px 0px rgba(0, 0, 0, 0.24), 0 0px 0px rgba(0, 0, 0, 0.24);
+        box-shadow: 0 0px 0px rgba(0, 0, 0, 0.24), 0 0px 0px rgba(0, 0, 0, 0.24);
     }
     .verse-pgraph p:nth-child(1) {
         width: 90%;
@@ -1247,8 +1264,8 @@ p {
         padding-left: 20px;
         text-align: left;
     }
-    .title-container p {
-        font-size: 1.1rem;
+    .join {
+        opacity: 0.95;
     }
 }
 
@@ -1321,6 +1338,9 @@ p {
     .verse-container .little-info {
         font-size: 0.8rem;
     }
+    .join {
+        opacity: 1;
+    }
 }
 
 /* ----------- Aspire V3 Laptop Landscape ----------- */
@@ -1333,6 +1353,9 @@ p {
     .verse-container {
         padding-top: 7%;
         width: 25%;
+    }
+    .join {
+        padding: 10px 15px;
     }
     .share-info {
         padding: 30px 0;
@@ -1365,16 +1388,17 @@ p {
         border: 0 solid transparent;
     }
     .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        padding: 15px 10px;
         width: 100%;
         left: 0;
         border-top-right-radius: 4px;
         border-bottom-right-radius: 4px;
-    }
-    .join {
-        background-color: white;
         -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.24), 0 2px 4px rgba(0, 0, 0, 0.24);
-        color: rgb(216,23,46);
+    }
+    .join {
+        opacity: 1;
+        padding: 15px 20px;
     }
     .share-button, .share-icon {
         font-size: 1.2rem;
@@ -1400,8 +1424,14 @@ p {
         width: 550px;
     }
     .verse-container {
-        padding-top: 23%;
+        padding-top: 22%;
         width: 38%;
+    }
+    .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
+        padding: 12px 10px;
+    }
+    .join {
+        padding: 13px 16px;
     }
     .share-info {
         padding: 40px 0;
@@ -1443,11 +1473,14 @@ p {
         left:0;
         border-width:50px 13px 0px 0px;
         border-style:solid;
-        border-color:rgb(190,50,67) transparent transparent rgb(190,50,67) ;
+        border-color:rgb(198,22,43) transparent transparent rgb(198,22,43);
     }
     .verse-pgraph p:nth-child(1), .verse-pgraph p:nth-child(2), .verse-pgraph p:nth-child(3), .verse-pgraph p:nth-child(4) {
         border-top-right-radius: 0;
         border-bottom-right-radius: 0;
+        -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0.24), 0 0 0 rgba(0, 0, 0, 0.24);
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.24), 0 0 0 rgba(0, 0, 0, 0.24);
+        padding: 10px;
     }
     .verse-pgraph p:nth-child(1) {
     width: 90%;
@@ -1501,13 +1534,30 @@ p {
 /* ----------- S Tab 10.1 Potrait ----------- */
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .title-container {
+        top: 10%;
+    }
+    .event-details h1 {
+        font-size: 1.6rem;
+    }
+    .main-title {
+        font-size: 2.6rem;
+    }
     .verse-container {
-        padding-top: 40%;
+        padding-top: 48%;
+        width: 63%;
     }
     .verse-pgraph {
         font-size: 1.2rem;
         line-height: 1.25em;
-        padding-bottom: 25px;
+        padding-bottom: 5px;
+    }
+    .verse-container .little-info {
+        margin-bottom: 20px;
+    }
+    .join {
+        left: 20%;
+        font-size: 1.1rem;
     }
     .share-pgraph {
         font-size: 1.2rem;
@@ -1525,8 +1575,30 @@ p {
 /* ----------- iPad Potrait----------- */
 
 @media screen and ( max-width: 768px) {
+    .event-details h1 {
+        font-size: 1.3rem;
+    }
+    .main-title {
+        font-size: 2.3rem;
+    }
+    .title-container p {
+        font-size: 1rem;
+    }
     .verse-container {
-        padding-top: 32%;
+        padding-top: 44%;
+        width: 61%;
+    }
+    .verse-pgraph {
+        padding-bottom: 0;
+    }
+    .verse-pgraph p {
+        font-size: 0.9rem;
+    }
+    .verse-container .little-info {
+        font-size: 0.8rem;
+    }
+    .join {
+        font-size: 0.9rem;
     }
 }
 
