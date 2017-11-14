@@ -1,12 +1,20 @@
+/*This theme3 only consist another design with join button(page1), share info(page2) and Youtube link(last page)*/
+
 html {
-    font-family: sans-serif;
+    font-family: Merriweather, serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
 }
 
 .body {
     margin: 0;
     font-family: Oswald, sans-serif;
+    min-height: 100%;
+    background-color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.45em;
+    color: #333
 }
 
 a {
@@ -18,32 +26,15 @@ a:active,a:hover {
 }
 
 img {
-    border: 0
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block
 }
 
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
-}
-
-html {
-    height: 100%
-}
-
-body {
-    margin: 0;
-    min-height: 100%;
-    background-color: #fff;
-    font-family: Arial,sans-serif;
-    font-size: 0.7rem;
-    line-height: 1.45em;
-    color: #333
-}
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block
 }
 
 p {
@@ -163,7 +154,7 @@ p {
     width: 30%;
 }
 
-.verse-container p, .verse-container .join, .scroll-down {
+.verse-container p, .verse-container .join, .scroll-down, .fb-link {
     font-weight: 300;
 }
 .verse-container .join {
@@ -193,22 +184,22 @@ p {
     font-size: 0.8rem;
     font-weight: 300;
 }
-.scroll-down {
+.scroll-down, .fb-link {
     display: inline-block;
     font-size: 1rem;
     line-height: 1em;
     margin: 0;
 }
 
-.scroll-down img {
+.scroll-down img, .fb-link img {
     width: 25px;
     margin-left: 5px;
 }
 
 .share-info {
     padding: 30px 0;
-    background-color: #000;
-    color: #fff;
+    background-color: rgba(245,245,245,1);
+    color: black;
 }
 
 .share-container {
@@ -506,13 +497,11 @@ p {
 }
 
 .footer-container {
-   
     position: unset;
     top: unset;
     -webkit-transform: unset;
     -ms-transform: unset;
-        transform: unset;
-    
+        transform: unset; 
 }
 
 .social-icons {
@@ -528,7 +517,7 @@ p {
     }
 }
 
-.scroll-container, .scroll2-container, .scroll3-container {
+.scroll-container, .scroll2-container, .fb-container {
     position: absolute;
     bottom: 30px;
     width: 100%;
@@ -536,17 +525,20 @@ p {
     z-index: 1000
 }
 
-.scroll2-container, .scroll3-container {
-    display: block;
-    text-align: center;
+.scroll2-container {
+    bottom: 60px;
 }
 
-.scroll2-container h1, .scroll3-container a {
+.scroll2-container h1 {
+    color: black;
+}
+
+.fb-container a {
     font-size: 0.9rem;
     border-radius: 4px;
 }
 
-.scroll3-container .tooltiptext {
+.fb-container .tooltiptext {
     position: absolute;
     visibility: hidden;
     width: 160px;
@@ -567,7 +559,7 @@ p {
     transition: opacity 1s;
 }
 
-.scroll3-container .tooltiptext::after {
+.fb-container .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -578,12 +570,12 @@ p {
     border-color: rgba(59,89,152,1) transparent transparent transparent;
 }
 
-.scroll3-container:hover .tooltiptext {
+.fb-container:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
 
-.scroll3-container a {
+.fb-container a {
     color: rgba(59,89,152,1);
     background: rgba(246,246,246, 1);
     font-weight: bold;
@@ -592,15 +584,15 @@ p {
     text-align: left;
 }
 
-.scroll3-container a:hover {
+.fb-container a:hover {
     background: white;
 }
 
-.scroll3-container a {
+.fb-container a {
     position: relative;
 }
 
-.scroll3-container a img {
+.fb-container a img {
     right: 10px;
     position:absolute;
     top: 5px;
@@ -622,16 +614,13 @@ p {
     .verse-container p, .verse-container .join {
         font-size: 1.4rem;
     }
-    .scroll2-container {
-        bottom: 20px;
-    }
-    .scroll3-container {
+    .fb-container {
         bottom: 13px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 208px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 28px;
         top: 6px;
     }
@@ -645,13 +634,13 @@ p {
 }
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
-    .scroll3-container {
+    .fb-container {
         bottom: 30px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 212px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 28px;
         top: 7px;
     }
@@ -661,10 +650,10 @@ p {
 }
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
-    .scroll3-container a {
+    .fb-container a {
         width: 180px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 25px;
         top: 6px;
     }
@@ -677,10 +666,10 @@ p {
 }
 
 @media screen and ( max-width: 1281px ) and ( max-height: 951px ) {
-    .scroll3-container a {
+    .fb-container a {
         width: 193px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         top: 5px;
     }
     .slide-heading {
@@ -692,13 +681,13 @@ p {
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
-    .scroll3-container {
+    .fb-container {
         bottom: 10px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 180px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 25px;
         top: 6px;
     }
@@ -711,26 +700,26 @@ p {
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
-    .scroll3-container {
+    .fb-container {
         bottom: 15px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 178px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 24px;
         top: 6px;
     }
 }
 @media screen and ( max-width: 1100px) {
     .scroll2-container {
-        bottom: 25px;
+        bottom: 45px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 147px;
         padding: 10px 15px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 23px;
         top: 5px;
     }
@@ -759,31 +748,34 @@ p {
         right: 35% !important;
         border-width: 20.5px 0 20.5px 15px !important;
     }
-    .scroll-down, .scroll2-container h1, .scroll3-container a {
+    .scroll-down .fb-container a {
         font-size: 1.1rem;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 285px;
         padding: 15px 20px 11px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 38px;
         top: 10px;
     }
-    .scroll3-container .tooltiptext {
+    .fb-container .tooltiptext {
         font-size: 1rem;
         line-height: 1.2em;
         width: 220px;
         padding: 15px 8px;
         left: 47%;
     }
-   .scroll2-container, .scroll3-container {
+    .scroll2-container {
+        bottom: 60px;
+    } 
+    .fb-container {
         bottom: 30px;
     }
 }
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
-    .scroll-down, .scroll2-container h1, .scroll3-container a {
+    .scroll-down, .fb-container a {
         font-size: 1rem;
     }
     .slide-heading {
@@ -793,13 +785,13 @@ p {
     .fp-controlArrow {
         bottom: 85px !important;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 200px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 28px;
     }
-    .scroll3-container .tooltiptext {
+    .fb-container .tooltiptext {
         line-height: 1.2em;
         padding: 15px;
     }
@@ -812,14 +804,14 @@ p {
     .scroll-down {
         font-size: 1.1rem;
     }
-    .scroll2-container h1, .scroll3-container a {
+    .fb-container a {
         font-size: 1rem;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 170px;
         padding: 14px 20px 12px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 26px;
         top: 9px;
     }
@@ -844,7 +836,7 @@ p {
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
-    .scroll-down, .scroll2-container h1, .scroll3-container a  {
+    .scroll-down, .fb-container a  {
         font-size: 1rem;
     }
     .slide-heading {
@@ -854,10 +846,10 @@ p {
     .adjust-space {
         left: 40%;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 262px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 35px;
         top: 10px;
     }
@@ -874,7 +866,7 @@ p {
     .fp-controlArrow {
         bottom: 90px !important;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 265px;
     }
 }
@@ -891,13 +883,13 @@ p {
     .scroll-down {
         font-size: 0.7rem;
     }
-    .scroll2-container h1, .scroll3-container a {
+    .fb-container a {
         font-size: 0.8rem;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 222px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 32px;
         top: 9px;
     }
@@ -917,7 +909,7 @@ p {
         left: 38%;
     }
     .scroll2-container {
-        bottom: 15px;
+        bottom: 50px;
     }
     .scroll-container {
         font-size: 0.9rem;
@@ -926,13 +918,10 @@ p {
     .slide-heading {
         font-size: 1rem;
     }
-    .scroll3-container {
+    .fb-container {
         bottom: 35px;
     }
-    .scroll2-container h1 {
-        font-size: 0.7rem;
-    }
-    .scroll3-container a {
+    .fb-container a {
         font-size: 0.7rem;
     }
     .fp-controlArrow {
@@ -946,15 +935,15 @@ p {
         right: 25% !important;
         border-width: 18.5px 0 18.5px 13px !important;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 150px;
         padding: 13px 15px 11px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 23px;
         top: 7px;
     }
-    .scroll3-container .tooltiptext {
+    .fb-container .tooltiptext {
         font-size: 0.9rem;
         padding: 10px;
     }
@@ -963,13 +952,13 @@ p {
 /* ----------- Galaxy Note 5 ----------- */
 
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
-    .scroll3-container a {
+    .fb-container a {
         width: 150px;
     }
-    .scroll3-container a {
+    .fb-container a {
         padding: 13px 15px 9px;
     }
-    .scroll-down, .scroll2-container h1 {
+    .scroll-down {
         font-size: 0.7rem;
     }
 }
@@ -982,10 +971,10 @@ p {
     .fp-controlArrow {
         bottom: 70px !important;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 138px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 21px;
         top: 7px;
     }
@@ -1006,12 +995,12 @@ p {
         left: 37%;
     }
     .scroll2-container {
-        bottom: 30px;
+        bottom: 50px;
     }
-    .scroll3-container a {
+    .fb-container a {
         padding: 13px 15px 9px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 21.5px;
         top: 7px;
     }
@@ -1027,9 +1016,6 @@ p {
     }
     .fp-controlArrow {
         bottom: 95px !important;
-    }
-    .scroll2-container {
-        bottom: 15px;
     }
 }
 
@@ -1574,7 +1560,7 @@ p {
     .credit-photographer {
         left: 20px;
     }
-    .scroll-down, .scroll2-container h1 {
+    .scroll-down {
         font-size: 0.7rem;
     }
 }
