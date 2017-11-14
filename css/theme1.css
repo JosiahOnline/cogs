@@ -123,7 +123,7 @@ p {
     top: 10%;
     width: 100%;
     height: 90%;
-    padding-top: 20%;
+    padding-top: 15%;
     text-align: center;
 }
 
@@ -131,15 +131,40 @@ p {
     border-radius: 4px;
 }
 
+.verse-title {
+    font-size: 2.5rem;
+}
+
 .verse-pgraph {
     margin-bottom: 10px;
     font-size: 1.5rem;
     line-height: 1.2em;
-    padding: 0 15%;
+    padding: 0 13%;
 }
 
 .verse-pgraph, .scroll-down {
     font-weight: 300;
+}
+
+.join {
+    margin-top: 30px;
+}
+
+.join a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: white;
+    padding: 0.6em;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.join a:hover {
+    color: darkgoldenrod;
+    background-color: white;
+    font-weight: bold;
 }
 
 .scroll-down {
@@ -480,8 +505,14 @@ p {
 }
 
 @media screen and (max-width: 1441px) and (orientation: landscape) {
+    .transparent-layer {
+        background-color: rgba(0, 0, 0, .35)
+    }
     .verse-container {
-        padding-top: 25%;
+        padding-top: 20%;
+    }
+    .verse-title {
+        font-size: 2.2rem;
     }
     .verse-pgraph {
         font-size: 1.4rem;
@@ -972,7 +1003,7 @@ p {
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     html {font-size: 25px;}
     .verse-container {
-        padding-top: 30%;
+        padding-top: 25%;
     }
 }
 
@@ -981,7 +1012,7 @@ p {
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 20%;
+        padding-top: 13%;
     }
 }
 
@@ -990,7 +1021,16 @@ p {
 @media screen and ( max-width: 1280px) {
     html {font-size: 22px;}
     .verse-container {
-        padding-top: 35%;
+        padding-top: 25%;
+    }
+    .verse-title {
+        font-size: 2.5rem;
+    }
+    .verse-pgraph {
+        font-size: 1.6rem;
+    }
+    .join a {
+        font-size: 1.4rem;
     }
 }
 
@@ -1000,7 +1040,7 @@ p {
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 25%;
+        padding-top: 18%;
     }
 }
 
@@ -1008,7 +1048,10 @@ p {
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
     .verse-container {
-        padding-top: 19%;
+        padding-top: 12%;
+    }
+    .join a {
+        font-size: 1.2rem;
     }
 }
 
@@ -1017,7 +1060,7 @@ p {
 @media screen and ( max-width: 1100px) {
     html {font-size: 15px;}
     .verse-container {
-        padding-top: 16%;
+        padding-top: 11%;
     }
     .share-info {
         padding: 30px 0;
@@ -1029,11 +1072,18 @@ p {
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
     .verse-container {
-        padding-top: 60%;
+        padding-top: 50%;
+    }
+    .verse-title {
+        font-size: 2.5rem;
     }
     .verse-pgraph {
         font-size: 1.6rem;
         padding: 0 10%;
+        margin-bottom: 20px;
+    }
+    .join a {
+        font-size: 1.3rem;
     }
     .share-button, .share-icon {
         font-size: 1.2rem;
@@ -1055,10 +1105,17 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 30%;
+        padding-top: 25%;
+    }
+    .verse-title {
+        font-size: 2.1rem;
     }
     .verse-pgraph {
         font-size: 1.6rem;
+        margin-bottom: 10px;
+    }
+    .join a {
+        font-size: 1.2rem;
     }
     .share-info {
         padding: 40px 0;
@@ -1073,7 +1130,10 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
     .verse-container {
-        padding-top: 16%;
+        padding-top: 11%;
+    }
+    .join {
+        margin-top: 20px;
     }
     .share-info {
         padding: 30px 0;
@@ -1087,22 +1147,43 @@ p {
     }
 }
 
-
-/* ----------- S Note 8.0 Landscape ----------- */
-
 @media screen and ( max-width: 970px) and (max-height: 490px) {
-    
+    .join a {
+        font-size: 1rem;
+        color: darkgoldenrod;
+        background-color: white;
+        font-weight: bold;
+        opacity: 0.95;
+    }
+    .join a:hover {
+        opacity: 1;
+    }
 }
-
 
 /* ----------- S Tab 10.1 Potrait ----------- */
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .verse-container {
+        padding-top: 45%;
+    }
+    .verse-title {
+        font-size: 2rem;
+    }
     .verse-pgraph {
         font-size: 1.4rem;
         line-height: 1.25em;
         padding-left: 5%;
         padding-right: 5%;
+    }
+    .join a {
+        font-size: 1.2rem;
+        color: darkgoldenrod;
+        background-color: white;
+        font-weight: bold;
+        opacity: 0.95;
+    }
+    .join a:hover {
+        opacity: 1;
     }
     .share-pgraph {
         font-size: 1.2rem;
@@ -1120,8 +1201,14 @@ p {
 /* ----------- iPad Potrait----------- */
 
 @media screen and ( max-width: 768px) {
+    .verse-container {
+        padding-top: 42%;
+    }
     .verse-pgraph {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    .join a {
+        font-size: 1.1rem;
     }
 }
 
@@ -1129,10 +1216,7 @@ p {
 
 @media screen and ( max-width: 768px) and (max-height: 930px) {
     .verse-container {
-        padding-top: 55%;
-    }
-    .verse-pgraph {
-        font-size: 1.15rem;
+        padding-top: 35%;
     }
 }
 
@@ -1142,11 +1226,17 @@ p {
     .top-nav .text-block, .top-nav a {
         font-size: 0.9rem;
     }
-    .verse-pgraph {
-        font-size: 1rem;
-    }
     .verse-container {
-        padding-top: 70%;
+        padding-top: 50%;
+    }
+    .verse-title {
+        font-size: 1.5rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+    .join a {
+        font-size: 0.9rem;
     }
     .share-pgraph {
         font-size: 1.1rem;
@@ -1160,18 +1250,27 @@ p {
 
 @media screen and ( max-width: 610px) and (max-height: 850px) {
     .verse-container {
-        padding-top: 65%;
+        padding-top: 45%;
     }
 }
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
 @media screen and ( max-width: 420px) and (max-height: 740px) {
+    .transparent-layer {
+        background-color: rgba(0, 0, 0, .4)
+    }
     .verse-container {
-        padding-top: 70%;
+        padding-top: 60%;
+    }
+    .verse-title {
+        font-size: 1.6rem;
     }
     .verse-pgraph {
         font-size: 1.2rem;    
+    }
+    .join a {
+        font-size: 1rem;
     }
     .share-button, .share-icon {
         font-size: 0.9rem;
@@ -1182,7 +1281,10 @@ p {
 
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
     .verse-container {
-        padding-top: 60%;
+        padding-top: 50%;
+    }
+    .join a {
+        font-size: 0.9rem;
     }
 }
 
@@ -1195,8 +1297,17 @@ p {
 /* ----------- iPhone 6  Potrait----------- */
 
 @media screen and ( max-width: 380px) {
+    .verse-title {
+        font-size: 1.5rem;
+    }
     .verse-pgraph {
         font-size: 1.1rem;
+    }
+    .join {
+        margin-top: 20px;
+    }
+    .join a {
+        font-size: 0.8rem;
     }
     .scroll-down, .scroll2-container h1 {
         font-size: 0.7rem;
@@ -1207,13 +1318,27 @@ p {
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .verse-container {
-        padding-top: 55%;
+        padding-top: 50%;
+    }
+}
+
+/* ----------- Galaxy Note 8 Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 670px) {
+    .verse-title {
+        font-size: 1.4rem;
+    }
+    .verse-pgraph {
+        font-size: 1rem;
     }
 }
 
 /* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
+    .verse-container {
+        padding-top: 60%;
+    }
     .share-button, .share-icon {
         font-size: 0.8rem;
     }
@@ -1230,21 +1355,51 @@ p {
     }
 }
 
+/* ----------- Samsung J Potrait  ----------- */
+
+@media screen and ( max-width: 360px) and ( max-height: 570px) {
+    .verse-container {
+        padding-top: 50%;
+    }
+}
+
 /* ----------- HuaWei Mate9 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
     .verse-container {
-        padding-top: 45%;
+        padding-top: 40%;
     }
 }
 
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 568px) { 
+    .verse-container {
+        padding-top: 55%;
+    }
+    .verse-title {
+        font-size: 1.3rem;
+    }
     .share-info {
         padding: 30px 0;
     }
     .share-pgraph {
         padding-bottom: 20px;
+    }
+}
+
+/* ----------- iPhone 4 Potrait ----------- */
+
+@media screen and ( max-width: 320px) and ( max-height: 480px) {
+    .verse-container {
+        padding-top: 45%;
+    }
+}
+
+/* ----------- iPhone 4 Potrait ----------- */
+
+@media screen and ( max-width: 320px) and ( max-height: 460px) {
+    .verse-container {
+        padding-top: 40%;
     }
 }
