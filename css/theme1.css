@@ -1,12 +1,20 @@
+/*This theme1 only consist introduction with join button(page1), share info(page2) and Youtube link(last page)*/
+
 html {
-    font-family: sans-serif;
+    font-family: Merriweather, serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
 }
 
 .body {
     margin: 0;
     font-family: Oswald, sans-serif;
+    min-height: 100%;
+    background-color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.45em;
+    color: #333
 }
 
 a {
@@ -18,32 +26,15 @@ a:active,a:hover {
 }
 
 img {
-    border: 0
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block
 }
 
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
-}
-
-html {
-    height: 100%
-}
-
-body {
-    margin: 0;
-    min-height: 100%;
-    background-color: #fff;
-    font-family: Arial,sans-serif;
-    font-size: 0.7rem;
-    line-height: 1.45em;
-    color: #333
-}
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block
 }
 
 p {
@@ -107,10 +98,6 @@ p {
     background-color: rgba(0, 0, 0, .2);
 }
 
-.share-pgraph {
-    font-size: 1.5rem;
-    line-height: 1.3em;
-}
 .verse-container {
     position: absolute;
     display: -webkit-box;
@@ -167,17 +154,7 @@ p {
     font-weight: bold;
 }
 
-.scroll-down, .fb-link {
-    display: inline-block;
-    font-size: 1rem;
-    line-height: 1em;
-    margin: 0;
-}
-
-.scroll-down img, .fb-link img {
-    width: 25px;
-    margin-left: 5px;
-}
+/*Start of Web Sharing Info & Social Media Container*/
 
 .share-info {
     padding: 30px 0;
@@ -187,6 +164,13 @@ p {
 
 .share-container {
     text-align: center;
+}
+
+.share-pgraph {
+    font-size: 1.5rem;
+    line-height: 1.3em;
+    padding-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .share-button {
@@ -292,95 +276,6 @@ p {
     color: #eee;
 }
 
-.slide-container {
-    background-color: black;
-}
-.pic1 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720990/WalkForJesus17/walk4.jpg");
-}
-
-.pic2 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720997/WalkForJesus17/walk3.jpg");
-}
-
-.pic3 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720994/WalkForJesus17/walk2.jpg");
-}
-
-.pic4 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720986/WalkForJesus17/walk11.jpg");
-}
-
-.pic5 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721004/WalkForJesus17/walk9.jpg");
-}
-
-.pic6 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721004/WalkForJesus17/walk6.jpg");
-}
-
-.pic7 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720982/WalkForJesus17/walk10.jpg");
-}
-
-.pic8 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720983/WalkForJesus17/walk1.jpg");
-}
-
-.pic9 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721000/WalkForJesus17/walk7.jpg");
-}
-
-.pic10 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507721001/WalkForJesus17/walk8.jpg");
-}
-
-.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10 {
-    height: 100vh;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.pic-container {
-    padding-top: 80vh;
-    text-align: center;
-}
-
-.slide-heading {
-    display: inline-block;
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 4px;
-    font-weight: 400;
-    padding: 10px 20px;
-    margin: 0;
-    position: absolute;
-    bottom: 80px;
-    left: 46.5%;
-}
-.adjust-space {
-    left: 46.1%;
-}
-.fp-tableCell {
-        position: relative;
-    }
-
-.fp-controlArrow.fp-prev {
-    border-color: transparent rgba(250, 250, 250, 1) transparent transparent !important;
-}
-
-.fp-controlArrow.fp-next {
-    border-color: transparent transparent transparent rgba(250, 250, 250, 1) !important;
-}
-
-.share-pgraph {
-    padding-bottom: 20px;
-    margin-bottom: 0;
-}
-
 .youtube {
     position: relative;
     background-color: black;
@@ -404,13 +299,11 @@ p {
 }
 
 .footer-container {
-   
     position: unset;
     top: unset;
     -webkit-transform: unset;
     -ms-transform: unset;
-        transform: unset;
-    
+        transform: unset;  
 }
 
 .social-icons {
@@ -419,12 +312,19 @@ p {
             transform: unset;
 }
 
+/* Do NOT Remove. This is require to position scroll2-container as absolute*/
+.fp-tableCell {
+        position: relative;
+}
+
 @media screen and ( max-width: 380px) {
     .social-icons {
         -webkit-transform: perspective(1px) translateY(-8%) !important;
         transform: perspective(1px) translateY(-8%) !important;
     }
 }
+
+/*For all Scroll-down container & FB container */
 
 .scroll-container, .scroll2-container, .fb-container {
     position: absolute;
@@ -485,6 +385,7 @@ p {
 }
 
 .fb-container a {
+    position: relative;
     color: rgba(59,89,152,1);
     background: rgba(246,246,246, 1);
     font-weight: bold;
@@ -497,15 +398,23 @@ p {
     background: white;
 }
 
-.fb-container a {
-    position: relative;
-}
-
 .fb-container a img {
     right: 10px;
     position:absolute;
     top: 5px;
     width: 25px;
+}
+
+.scroll-down, .fb-link {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1em;
+    margin: 0;
+}
+
+.scroll-down img, .fb-link img {
+    width: 25px;
+    margin-left: 5px;
 }
 
 @media screen and (max-width: 1441px) and (orientation: landscape) {
@@ -531,13 +440,6 @@ p {
         width: 28px;
         top: 6px;
     }
-    .slide-heading {
-        left: 45.5%;
-        bottom: 65px;
-    }
-    .adjust-space {
-        left: 45.4%;
-    }
 }
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
@@ -551,9 +453,6 @@ p {
         width: 28px;
         top: 7px;
     }
-    .adjust-space {
-        left: 45%;
-    }
 }
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
@@ -564,12 +463,6 @@ p {
         width: 25px;
         top: 6px;
     }
-    .slide-heading {
-        left: 46%;
-    }
-    .adjust-space {
-        left: 45.4%;
-    }
 }
 
 @media screen and ( max-width: 1281px ) and ( max-height: 951px ) {
@@ -578,12 +471,6 @@ p {
     }
     .fb-container a img {
         top: 5px;
-    }
-    .slide-heading {
-        left: 45.5%;
-    }
-    .adjust-space {
-        left: 44.6%;
     }
 }
 
@@ -597,12 +484,6 @@ p {
     .fb-container a img {
         width: 25px;
         top: 6px;
-    }
-    .slide-heading {
-        left: 45.7%;
-    }
-    .adjust-space {
-        left: 45.5%;
     }
 }
 
@@ -636,28 +517,6 @@ p {
 }
 
 @media screen and ( max-width: 1024px) {
-    .slide-heading {
-        bottom: 150px;
-        padding: 15px 20px;
-        left: 42.5%;
-        font-size: 1.2rem;
-    }
-    .adjust-space {
-        left: 42%;
-    }
-    .fp-controlArrow {
-        top: unset !important;
-        bottom: 155px !important;
-    }
-    .fp-controlArrow.fp-prev {
-        left: 35% !important;
-        border-width: 20.5px 15px 20.5px 0 !important;
-    }
-
-    .fp-controlArrow.fp-next {
-        right: 35% !important;
-        border-width: 20.5px 0 20.5px 15px !important;
-    }
     .scroll-down, .fb-container a {
         font-size: 1.1rem;
     }
@@ -679,7 +538,6 @@ p {
     .scroll2-container {
         bottom: 60px;
     } 
-    
     .fb-container {
         bottom: 30px;
     }
@@ -688,13 +546,6 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     .scroll-down, .fb-container a {
         font-size: 1rem;
-    }
-    .slide-heading {
-        bottom: 80px;
-        left: 44%;
-    }
-    .fp-controlArrow {
-        bottom: 85px !important;
     }
     .fb-container a {
         width: 200px;
@@ -705,9 +556,6 @@ p {
     .fb-container .tooltiptext {
         line-height: 1.2em;
         padding: 15px;
-    }
-    .adjust-space {
-        left: 44%;
     }
 }
 
@@ -729,36 +577,11 @@ p {
         width: 26px;
         top: 9px;
     }
-    .slide-heading {
-        left: 45.2%;
-    }
-    .fp-controlArrow {
-        top: 55% !important;
-        bottom: unset !important;
-    }
-    .fp-controlArrow.fp-prev {
-        left: 15px !important;
-        border-width: 38.5px 34px 38.5px 0;
-    }
-    .fp-controlArrow.fp-next {
-        right: 15px !important;
-        border-width: 38.5px 0 38.5px 34px;
-    }
-    .adjust-space {
-        left: 44.3%;
-    }
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .scroll-down, .fb-container a  {
         font-size: 1rem;
-    }
-    .slide-heading {
-        font-size: 1.2rem;
-        left: 41%;
-    }
-    .adjust-space {
-        left: 40%;
     }
     .fb-container a {
         width: 262px;
@@ -770,30 +593,12 @@ p {
 }
 
 @media screen and ( max-width: 768px ) {
-    .slide-heading {
-        left: 40.5%;
-        bottom: 85px;
-    }
-    .adjust-space {
-        left: 39.4%;
-    }
-    .fp-controlArrow {
-        bottom: 90px !important;
-    }
     .fb-container a {
         width: 265px;
     }
 }
 
 @media screen and ( max-width: 610px ) and ( max-height: 940px ) {
-    .slide-heading {
-        left: 39.9%;
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-    .adjust-space {
-        left: 38.6%;
-    }   
     .scroll-down, .fb-container a {
         font-size: 0.8rem;
     }
@@ -804,20 +609,11 @@ p {
         width: 32px;
         top: 9px;
     }
-    .fp-controlArrow {
-        bottom: 88px !important;
-    }
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 740px ) {
     .scroll-down img {
         width: 20px;
-    }
-    .slide-heading {
-        left: 39%;
-    }
-    .adjust-space {
-        left: 38%;
     }
     .scroll2-container {
         bottom: 50px;
@@ -826,25 +622,11 @@ p {
         font-size: 0.9rem;
         bottom: 15px;
     }
-    .slide-heading {
-        font-size: 1rem;
-    }
     .fb-container {
         bottom: 35px;
     }
     .fb-container a {
         font-size: 0.7rem;
-    }
-    .fp-controlArrow {
-        bottom: 86px !important;
-    }
-    .fp-controlArrow.fp-prev {
-        left: 25% !important;
-        border-width: 18.5px 13px 18.5px 0 !important;
-    }  
-    .fp-controlArrow.fp-next {
-        right: 25% !important;
-        border-width: 18.5px 0 18.5px 13px !important;
     }
     .fb-container a {
         width: 150px;
@@ -859,8 +641,6 @@ p {
         padding: 10px;
     }
 }
-
-/* ----------- Galaxy Note 5 ----------- */
 
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
     .scroll-container .scroll-down img {
@@ -879,13 +659,6 @@ p {
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 630px ) {
-    .slide-heading {
-        bottom: 70px;
-        left: 39.6%;
-    }
-    .fp-controlArrow {
-        bottom: 70px !important;
-    }
     .scroll-container .scroll-down img {
         width: 15px;
         height: 15px;
@@ -897,22 +670,9 @@ p {
         width: 21px;
         top: 7px;
     }
-    .adjust-space {
-        left: 39%;
-    }
 }
 
 @media screen and ( max-width: 380px ) and ( max-height: 670px ) {
-    .slide-heading {
-        bottom: 85px;
-        left: 38%;
-    }
-    .fp-controlArrow {
-        bottom: 85px !important;
-    }
-    .adjust-space {
-        left: 37%;
-    }
     .scroll2-container {
         bottom: 50px;
     }
@@ -928,8 +688,6 @@ p {
     }
 }
 
-/* ----------- iPhone 6S  Potrait----------- */
-
 @media screen and ( max-width: 380px) and ( max-height: 540px) {
     .scroll-container {
         bottom: 10px;
@@ -937,69 +695,19 @@ p {
 }
 
 @media screen and ( max-width: 360px ) and ( max-height: 670px ) {
-    .slide-heading {
-        bottom: 95px;
-        left: 37%;
-    }
-    .adjust-space {
-        left: 36%;
-    }
-    .fp-controlArrow {
-        bottom: 95px !important;
-    }
     .scroll-container .scroll-down img {
         width: 18px;
         height: 18px;
     }
 }
 
-@media screen and ( max-width: 360px) and ( max-height: 640px) {
-    .slide-heading {
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and ( max-width: 360px ) and ( max-height: 570px ) {
-    .slide-heading {
-        bottom: 60px;
-        left: 38.5%;
-    }
-    .adjust-space {
-        left: 37.5%;
-    }
-    .fp-controlArrow {
-        bottom: 60px !important;
-    }
-}
-
 @media screen and ( max-width: 320px) and ( max-height: 568px) {
-    .slide-heading {
-        bottom: 80px;
-        left: 37.5%;
-    }
-    .adjust-space {
-        left: 36.5%;
-    }
-    .fp-controlArrow {
-        bottom: 80px !important;
-    }
     .footer.section .fp-tableCell {
         height: 40px !important
     }
 }
 
-@media screen and ( max-width: 320px ) and ( max-height: 480px ) { 
-    .slide-heading {
-        bottom: 60px;
-    }
-    .fp-controlArrow {
-        bottom: 60px !important;
-        top: unset !important;
-    }
-}
-
-
-/* ----------- Laptop with HiDPI ----------- */
+/*End of Footer & Scroll Section*/
 
 @media screen and ( max-width: 1441px) and (orientation: landscape) {
     html{font-size: 24px;}
@@ -1008,8 +716,6 @@ p {
     }
 }
 
-/* ----------- iPad Pro Landscape ----------- */
-
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     html {font-size: 25px;}
     .verse-container {
@@ -1017,16 +723,12 @@ p {
     }
 }
 
-/* ----------- Aspire E1 Laptop Landscape ----------- */
-
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {font-size: 20px;}
     .verse-container {
         padding-top: 13%;
     }
 }
-
-/* ----------- Laptop with Touch ----------- */
 
 @media screen and ( max-width: 1280px) {
     html {font-size: 22px;}
@@ -1044,17 +746,12 @@ p {
     }
 }
 
-
-/* ----------- Laptop with MDPI screen----------- */
-
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
     .verse-container {
         padding-top: 18%;
     }
 }
-
-/* ----------- S Tab 10.1 Landscape ----------- */
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
     .verse-container {
@@ -1065,8 +762,6 @@ p {
     }
 }
 
-/* ----------- Aspire V3 Laptop Landscape ----------- */
-
 @media screen and ( max-width: 1100px) {
     html {font-size: 15px;}
     .verse-container {
@@ -1076,8 +771,6 @@ p {
         padding: 30px 0;
     }
 }
-
-/* ----------- iPad Pro Potrait------------------*/
 
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
@@ -1110,8 +803,6 @@ p {
     }
 }
 
-/* ----------- iPad Landscape ----------- */
-
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
     .verse-container {
@@ -1134,8 +825,6 @@ p {
         padding-bottom: 25px;
     }
 }
-
-/* ----------- Lenova IdeaPad Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
@@ -1170,8 +859,6 @@ p {
     }
 }
 
-/* ----------- S Tab 10.1 Potrait ----------- */
-
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .verse-container {
         padding-top: 45%;
@@ -1201,14 +888,11 @@ p {
     .share-button, .share-icon {
         font-size: 1rem;
     }
-    
     .youtube iframe {
         height: 50vh;
         width: 100%;
     }
 }
-
-/* ----------- iPad Potrait----------- */
 
 @media screen and ( max-width: 768px) {
     .verse-container {
@@ -1222,15 +906,11 @@ p {
     }
 }
 
-/* ----------- iPad Mini4 Potrait----------- */
-
 @media screen and ( max-width: 768px) and (max-height: 930px) {
     .verse-container {
         padding-top: 35%;
     }
 }
-
-/* ----------- S Note 8.0 Potrait include Address bar----------- */
 
 @media screen and ( max-width: 610px ) and ( max-height: 940px ) {
     .top-nav .text-block, .top-nav a {
@@ -1256,15 +936,11 @@ p {
     }
 }
 
-/* ----------- S Note 8.0 Potrait ----------- */
-
 @media screen and ( max-width: 610px) and (max-height: 850px) {
     .verse-container {
         padding-top: 45%;
     }
 }
-
-/* ----------- iPhone 6 PLUS Potrait----------- */
 
 @media screen and ( max-width: 420px) and (max-height: 740px) {
     .transparent-layer {
@@ -1287,8 +963,6 @@ p {
     }
 }
 
-/* ----------- Galaxy Note 5 ----------- */
-
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
     .verse-container {
         padding-top: 50%;
@@ -1298,13 +972,9 @@ p {
     }
 }
 
-/* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
-
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
     html{font-size: 18px;}
 }
-
-/* ----------- iPhone 6  Potrait----------- */
 
 @media screen and ( max-width: 380px) {
     .verse-title {
@@ -1324,15 +994,11 @@ p {
     }
 }
 
-/* ----------- iPhone 6  Potrait----------- */
-
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .verse-container {
         padding-top: 50%;
     }
 }
-
-/* ----------- Galaxy Note 8 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 670px) {
     .verse-title {
@@ -1343,8 +1009,6 @@ p {
     }
 }
 
-/* ----------- Galaxy Note 3 Potrait  ----------- */
-
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
     .verse-container {
         padding-top: 60%;
@@ -1353,8 +1017,6 @@ p {
         font-size: 0.8rem;
     }
 }
-
-/* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 560px) {
     .share-info {
@@ -1365,23 +1027,17 @@ p {
     }
 }
 
-/* ----------- Samsung J Potrait  ----------- */
-
 @media screen and ( max-width: 360px) and ( max-height: 570px) {
     .verse-container {
         padding-top: 50%;
     }
 }
 
-/* ----------- HuaWei Mate9 Potrait  ----------- */
-
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
     .verse-container {
         padding-top: 40%;
     }
 }
-
-/* ----------- iPhone 5 and 5S Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 568px) { 
     .verse-container {
@@ -1398,15 +1054,11 @@ p {
     }
 }
 
-/* ----------- iPhone 4 Potrait ----------- */
-
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
     .verse-container {
         padding-top: 45%;
     }
 }
-
-/* ----------- iPhone 4 Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
     .verse-container {

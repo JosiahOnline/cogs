@@ -1,12 +1,20 @@
+/*This theme2 only consist SPECIAL design with booking button(page1), share info(page2) and Youtube link(last page)*/
+
 html {
-    font-family: sans-serif;
+    font-family: Merriweather, serif;
     -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
 }
 
 .body {
     margin: 0;
     font-family: Oswald, sans-serif;
+    min-height: 100%;
+    background-color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.45em;
+    color: #333
 }
 
 a {
@@ -18,32 +26,15 @@ a:active,a:hover {
 }
 
 img {
-    border: 0
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block
 }
 
 * {
     -webkit-box-sizing: border-box;
     box-sizing: border-box
-}
-
-html {
-    height: 100%
-}
-
-body {
-    margin: 0;
-    min-height: 100%;
-    background-color: #fff;
-    font-family: Arial,sans-serif;
-    font-size: 0.7rem;
-    line-height: 1.45em;
-    color: #333
-}
-
-img {
-    max-width: 100%;
-    vertical-align: middle;
-    display: inline-block
 }
 
 p {
@@ -108,18 +99,18 @@ p {
     background-color: rgba(0, 0, 0, .10);
 }
 
-.share-pgraph {
-    font-size: 1.5rem;
-    line-height: 1.3em;
-}
-
 .title-container {
     position: absolute;
     top: 20%;
     left: 30px;
     width: 500px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: left;
 }
 .event-details h1 {
@@ -148,15 +139,57 @@ p {
     text-align: center; 
 }
 
-.verse-pgraph {
-    margin-top: 20px;
-}
-
 .verse-container h1 {
     font-size: 1.5rem;
     line-height: 1.3em;
     width: 70%;
     margin: 0 0 0 20%;
+}
+
+.verse-pgraph {
+    margin-top: 20px;
+}
+
+.verse-pgraph p {
+    font-size: 1rem;
+    line-height: 1.2em;
+    background-color: rgba(255,255,255,1);
+    color: rgb(198,22,43);
+    padding: 10px 0;
+    position:relative;
+    padding-left: 10px;
+}
+
+.verse-pgraph p:before {
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    border-width:50px 13px 0px 0px;
+    border-style:solid;
+    border-color:rgb(198,22,43) transparent transparent rgb(198,22,43);
+}
+.verse-pgraph, .scroll-down, .fb-link {
+    font-weight: 300;
+}
+
+.verse-pgraph p:nth-child(1) {
+    width: 90%;
+    left: 10%;
+}
+
+.verse-pgraph p:nth-child(2) {
+    width: 93%;
+    left: 7%;
+}
+.verse-pgraph p:nth-child(3) {
+    width: 96%;
+    left: 4%;
+}
+
+.verse-pgraph p:nth-child(4) {
+    width: 99%;
+    left: 1%;
 }
 
 .verse-container .little-info {
@@ -185,59 +218,6 @@ p {
 .join:hover {
     opacity: 1;
 }
-.verse-pgraph p {
-    font-size: 1rem;
-    line-height: 1.2em;
-    background-color: rgba(255,255,255,1);
-    color: rgb(198,22,43);
-    padding: 10px 0;
-    position:relative;
-    padding-left: 10px;
-}
-
-.verse-pgraph p:before {
-    content:"";
-    position:absolute;
-    top:0;
-    left:0;
-    border-width:50px 13px 0px 0px;
-    border-style:solid;
-    border-color:rgb(198,22,43) transparent transparent rgb(198,22,43);
-}
-.verse-pgraph, .scroll-down {
-    font-weight: 300;
-}
-
-.verse-pgraph p:nth-child(1) {
-    width: 90%;
-    left: 10%;
-}
-
-.verse-pgraph p:nth-child(2) {
-    width: 93%;
-    left: 7%;
-}
-.verse-pgraph p:nth-child(3) {
-    width: 96%;
-    left: 4%;
-}
-
-.verse-pgraph p:nth-child(4) {
-    width: 99%;
-    left: 1%;
-}
-
-.scroll-down {
-    display: inline-block;
-    font-size: 1rem;
-    line-height: 1em;
-    margin: 0;
-}
-
-.scroll-down img {
-    width: 25px;
-    margin-left: 5px;
-}
 
 .share-info {
     padding: 30px 0;
@@ -247,6 +227,13 @@ p {
 
 .share-container {
     text-align: center;
+}
+
+.share-pgraph {
+    padding-bottom: 20px;
+    margin-bottom: 0;
+    font-size: 1.5rem;
+    line-height: 1.3em;
 }
 
 .share-button {
@@ -351,170 +338,8 @@ p {
     color: #eee;
 }
 
-.slide-container {
-    background-color: black;
-}
-.pic1 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531882/JGeneration/j1.jpg");
-}
-
-.pic2 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j2.jpg");
-}
-
-.pic3 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j3.jpg");
-}
-
-.pic4 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531904/JGeneration/j4.jpg");
-}
-
-.pic5 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j5.jpg");
-}
-
-.pic6 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531893/JGeneration/j6.jpg");
-}
-
-.pic7 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531907/JGeneration/j7.jpg");
-}
-
-.pic8 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j8.jpg");
-}
-
-.pic9 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531918/JGeneration/j9.jpg");
-}
-
-.pic10 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531915/JGeneration/j10.jpg");
-}
-
-.pic11 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j11.jpg");
-}
-
-.pic12 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j12.jpg");
-}
-
-.pic13 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531921/JGeneration/j13.jpg");
-}
-
-.pic14 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531922/JGeneration/j14.jpg");
-}
-
-.pic15 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531920/JGeneration/j15.jpg");
-}
-
-.pic16 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j16.jpg");
-}
-
-.pic17 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531927/JGeneration/j17.jpg");
-}
-
-.pic18 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j18.jpg");
-}
-
-.pic19 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531937/JGeneration/j19.jpg");
-}
-
-.pic20 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531935/JGeneration/j20.jpg");
-}
-
-.pic21 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531862/JGeneration/j21.jpg");
-}
-
-.pic22 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531865/JGeneration/j22.jpg");
-}
-
-.pic23 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531879/JGeneration/j23.jpg");
-}
-
-.pic24 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531866/JGeneration/j24.jpg");
-}
-
-.pic25 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531906/JGeneration/j25.jpg");
-}
-
-.pic26 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531875/JGeneration/j26.jpg");
-}
-
-.pic27 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531881/JGeneration/j27.jpg");
-}
-
-.pic28 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531898/JGeneration/j28.jpg");
-}
-
-.pic29 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509531888/JGeneration/j29.jpg");
-}
-
-
-.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16, .pic17, .pic18, .pic19, .pic20, .pic21, .pic22, .pic23, .pic24, .pic25, .pic26, .pic27, .pic28, .pic29 {
-    height: 100vh;
-    width: 100%;
-    background-position: 50% 50%;
-    background-size: contain;
-    background-repeat: no-repeat;
-}
-
-.pic-container {
-    padding-top: 80vh;
-    text-align: center;
-}
-
-.slide-heading {
-    display: inline-block;
-    font-size: 1rem;
-    color: white;
-    background-color: rgba(0,0,0,0.5);
-    border-radius: 4px;
-    font-weight: 400;
-    padding: 10px 20px;
-    margin: 0;
-    position: absolute;
-    bottom: 80px;
-    left: 46.5%;
-}
-.adjust-space {
-    left: 46.1%;
-}
 .fp-tableCell {
         position: relative;
-    }
-
-.fp-controlArrow.fp-prev {
-    border-color: transparent rgba(250, 250, 250, 1) transparent transparent !important;
-}
-
-.fp-controlArrow.fp-next {
-    border-color: transparent transparent transparent rgba(250, 250, 250, 1) !important;
-}
-
-.share-pgraph {
-    padding-bottom: 20px;
-    margin-bottom: 0;
 }
 
 .youtube {
@@ -565,7 +390,7 @@ p {
     }
 }
 
-.scroll-container, .scroll2-container, .scroll3-container {
+.scroll-container, .scroll2-container, .fb-container {
     position: absolute;
     bottom: 30px;
     width: 100%;
@@ -580,12 +405,12 @@ p {
     color: black;
 }
 
-.scroll3-container a {
+.fb-container a {
     font-size: 0.9rem;
     border-radius: 4px;
 }
 
-.scroll3-container .tooltiptext {
+.fb-container .tooltiptext {
     position: absolute;
     visibility: hidden;
     width: 160px;
@@ -606,7 +431,7 @@ p {
     transition: opacity 1s;
 }
 
-.scroll3-container .tooltiptext::after {
+.fb-container .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -617,12 +442,12 @@ p {
     border-color: rgba(59,89,152,1) transparent transparent transparent;
 }
 
-.scroll3-container:hover .tooltiptext {
+.fb-container:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
 
-.scroll3-container a {
+.fb-container a {
     color: rgba(59,89,152,1);
     background: rgba(246,246,246, 1);
     font-weight: bold;
@@ -631,121 +456,102 @@ p {
     text-align: left;
 }
 
-.scroll3-container a:hover {
+.fb-container a:hover {
     background: white;
 }
 
-.scroll3-container a {
+.fb-container a {
     position: relative;
 }
 
-.scroll3-container a img {
+.fb-container a img {
     right: 10px;
     position:absolute;
     top: 5px;
     width: 25px;
 }
 
+.scroll-down, .fb-link {
+    display: inline-block;
+    font-size: 1rem;
+    line-height: 1em;
+    margin: 0;
+}
+
+.scroll-down img, .fb-link img {
+    width: 25px;
+    margin-left: 5px;
+}
+
 @media screen and (max-width: 1441px) and (orientation: landscape) {
     .main-section {
         background-position: 0% 1%;
     }
-    .scroll2-container {
-        bottom: 20px;
-    }
-    .scroll3-container {
+    .fb-container {
         bottom: 13px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 208px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 28px;
         top: 6px;
-    }
-    .slide-heading {
-        left: 45.5%;
-        bottom: 65px;
-    }
-    .adjust-space {
-        left: 45.4%;
     }
 }
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
-    .scroll3-container {
+    .fb-container {
         bottom: 30px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 212px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 28px;
         top: 7px;
-    }
-    .adjust-space {
-        left: 45%;
     }
 }
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
-    .scroll3-container a {
+    .fb-container a {
         width: 180px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 25px;
         top: 6px;
-    }
-    .slide-heading {
-        left: 46%;
-    }
-    .adjust-space {
-        left: 45.4%;
     }
 }
 
 @media screen and ( max-width: 1281px ) and ( max-height: 951px ) {
-    .scroll3-container a {
+    .fb-container a {
         width: 193px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         top: 5px;
-    }
-    .slide-heading {
-        left: 45.5%;
-    }
-    .adjust-space {
-        left: 44.6%;
     }
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
-    .scroll3-container {
+    .fb-container {
         bottom: 10px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 180px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 25px;
         top: 6px;
-    }
-    .slide-heading {
-        left: 45.7%;
-    }
-    .adjust-space {
-        left: 45.5%;
     }
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
-    .scroll3-container {
+    .fb-container {
         bottom: 15px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 178px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 24px;
         top: 6px;
     }
@@ -755,87 +561,59 @@ p {
         bottom: 20px;
     }
     .scroll2-container {
-        bottom: 25px;
+        bottom: 45px;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 147px;
         padding: 10px 15px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 23px;
         top: 5px;
     }
 }
 
 @media screen and ( max-width: 1024px) {
-    .slide-heading {
-        bottom: 150px;
-        padding: 15px 20px;
-        left: 42.5%;
-        font-size: 1.2rem;
-    }
-    .adjust-space {
-        left: 42%;
-    }
-    .fp-controlArrow {
-        top: unset !important;
-        bottom: 155px !important;
-    }
-    .fp-controlArrow.fp-prev {
-        left: 35% !important;
-        border-width: 20.5px 15px 20.5px 0 !important;
-    }
-
-    .fp-controlArrow.fp-next {
-        right: 35% !important;
-        border-width: 20.5px 0 20.5px 15px !important;
-    }
-    .scroll-down, .scroll3-container a {
+    .scroll-down, .fb-container a {
         font-size: 1.1rem;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 285px;
         padding: 15px 20px 11px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 38px;
         top: 10px;
     }
-    .scroll3-container .tooltiptext {
+    .fb-container .tooltiptext {
         font-size: 1rem;
         line-height: 1.2em;
         width: 220px;
         padding: 15px 8px;
         left: 47%;
     }
-   .scroll2-container, .scroll3-container {
+    .scroll2-container {
+        bottom: 60px;
+    } 
+    
+    .fb-container {
         bottom: 30px;
     }
 }
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
-    .scroll-down, .scroll3-container a {
+    .scroll-down, .fb-container a {
         font-size: 1rem;
     }
-    .slide-heading {
-        bottom: 80px;
-        left: 44%;
-    }
-    .fp-controlArrow {
-        bottom: 85px !important;
-    }
-    .scroll3-container a {
+    .fb-container a {
         width: 200px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 28px;
     }
-    .scroll3-container .tooltiptext {
+    .fb-container .tooltiptext {
         line-height: 1.2em;
         padding: 15px;
-    }
-    .adjust-space {
-        left: 44%;
     }
 }
 
@@ -846,200 +624,112 @@ p {
     .scroll-container {
         bottom: 20px;
     }
-    .scroll3-container a {
+    .fb-container a {
         font-size: 1rem;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 170px;
         padding: 14px 20px 12px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 26px;
         top: 9px;
-    }
-    .slide-heading {
-        left: 45.2%;
-    }
-    .fp-controlArrow {
-        top: 55% !important;
-        bottom: unset !important;
-    }
-    .fp-controlArrow.fp-prev {
-        left: 15px !important;
-        border-width: 38.5px 34px 38.5px 0;
-    }
-    .fp-controlArrow.fp-next {
-        right: 15px !important;
-        border-width: 38.5px 0 38.5px 34px;
-    }
-    .adjust-space {
-        left: 44.3%;
     }
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
-    .scroll-down, .scroll3-container a  {
+    .scroll-down, .fb-container a  {
         font-size: 0.9rem;
     }
-    .slide-heading {
-        font-size: 1.2rem;
-        left: 41%;
-    }
-    .adjust-space {
-        left: 40%;
-    }
-    .scroll3-container a {
+    .fb-container a {
         width: 262px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 35px;
         top: 10px;
     }
 }
 
 @media screen and ( max-width: 768px ) {
-    .slide-heading {
-        left: 40.5%;
-        bottom: 85px;
-    }
-    .adjust-space {
-        left: 39.4%;
-    }
-    .fp-controlArrow {
-        bottom: 90px !important;
-    }
-    .scroll3-container a {
+    .fb-container a {
         width: 265px;
     }
 }
 
-@media screen and ( max-width: 610px ) and ( max-height: 940px ) {
-    .slide-heading {
-        left: 39.9%;
-        padding: 10px 15px;
-        font-size: 1rem;
-    }
-    .adjust-space {
-        left: 38.6%;
-    }   
-    .scroll-down, .scroll3-container a {
+@media screen and ( max-width: 610px ) and ( max-height: 940px ) { 
+    .scroll-down, .fb-container a {
         font-size: 0.7rem;
     }
-    .scroll3-container a {
+    .fb-container a {
         width: 222px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 32px;
         top: 9px;
-    }
-    .fp-controlArrow {
-        bottom: 88px !important;
     }
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 740px ) {
-    .scroll-down img {
+    .scroll-down img, .fb-link img {
         width: 20px;
     }
-    .slide-heading {
-        left: 39%;
-    }
-    .adjust-space {
-        left: 38%;
-    }
     .scroll2-container {
-        bottom: 15px;
+        bottom: 50px;
     }
     .scroll-container {
         font-size: 0.9rem;
         bottom: 15px;
     }
-    .slide-heading {
-        font-size: 1rem;
-    }
-    .scroll3-container {
+    .fb-container {
         bottom: 35px;
     }
-    .scroll3-container a {
+    .fb-container a {
         font-size: 0.7rem;
     }
-    .fp-controlArrow {
-        bottom: 86px !important;
-    }
-    .fp-controlArrow.fp-prev {
-        left: 25% !important;
-        border-width: 18.5px 13px 18.5px 0 !important;
-    }  
-    .fp-controlArrow.fp-next {
-        right: 25% !important;
-        border-width: 18.5px 0 18.5px 13px !important;
-    }
-    .scroll3-container a {
+    .fb-container a {
         width: 150px;
         padding: 13px 15px 11px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 23px;
         top: 7px;
     }
-    .scroll3-container .tooltiptext {
+    .fb-container .tooltiptext {
         font-size: 0.8rem;
         padding: 10px;
     }
 }
 
-/* ----------- Galaxy Note 5 ----------- */
-
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
-    .scroll3-container a {
+    .fb-container a {
         width: 150px;
     }
-    .scroll3-container a {
+    .fb-container a {
         padding: 13px 15px 9px;
     }
-    .scroll-down {
+    .scroll-down, .fb-link {
         font-size: 0.7rem;
     }
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 630px ) {
-    .slide-heading {
-        bottom: 70px;
-        left: 39.6%;
-    }
-    .fp-controlArrow {
-        bottom: 70px !important;
-    }
-    .scroll3-container a {
+    .fb-container a {
         width: 138px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 21px;
         top: 7px;
-    }
-    .adjust-space {
-        left: 39%;
     }
 }
 
 @media screen and ( max-width: 380px ) and ( max-height: 670px ) {
-    .slide-heading {
-        bottom: 85px;
-        left: 38%;
-    }
-    .fp-controlArrow {
-        bottom: 85px !important;
-    }
-    .adjust-space {
-        left: 37%;
-    }
     .scroll2-container {
-        bottom: 30px;
+        bottom: 50px;
     }
-    .scroll3-container a {
+    .fb-container a {
         padding: 13px 15px 9px;
     }
-    .scroll3-container a img {
+    .fb-container a img {
         width: 21.5px;
         top: 7px;
     }
@@ -1051,66 +741,7 @@ p {
     }
 }
 
-@media screen and ( max-width: 360px ) and ( max-height: 670px ) {
-    .slide-heading {
-        bottom: 95px;
-        left: 37%;
-    }
-    .adjust-space {
-        left: 36%;
-    }
-    .fp-controlArrow {
-        bottom: 95px !important;
-    }
-    .scroll2-container {
-        bottom: 15px;
-    }
-}
-
-@media screen and ( max-width: 360px) and ( max-height: 640px) {
-    .slide-heading {
-        font-size: 0.9rem;
-    }
-}
-
-@media screen and ( max-width: 360px ) and ( max-height: 570px ) {
-    .slide-heading {
-        bottom: 60px;
-        left: 38.5%;
-    }
-    .adjust-space {
-        left: 37.5%;
-    }
-    .fp-controlArrow {
-        bottom: 60px !important;
-    }
-}
-
-@media screen and ( max-width: 320px) and ( max-height: 568px) {
-    .slide-heading {
-        bottom: 80px;
-        left: 37.5%;
-    }
-    .adjust-space {
-        left: 36.5%;
-    }
-    .fp-controlArrow {
-        bottom: 80px !important;
-    }
-}
-
-@media screen and ( max-width: 320px ) and ( max-height: 480px ) { 
-    .slide-heading {
-        bottom: 60px;
-    }
-    .fp-controlArrow {
-        bottom: 60px !important;
-        top: unset !important;
-    }
-}
-
-
-/* ----------- Laptop with HiDPI ----------- */
+/* End of Footer and Scroll-Container */
 
 @media screen and ( max-width: 1441px) and (orientation: landscape) {
     html{font-size: 24px;}
@@ -1149,8 +780,6 @@ p {
     }
 }
 
-/* ----------- iPad Pro Landscape ----------- */
-
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     html {font-size: 25px;}
     .title-container {
@@ -1186,8 +815,6 @@ p {
         opacity: 1;
     }
 }
-
-/* ----------- Aspire E1 Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {font-size: 20px;}
@@ -1239,17 +866,14 @@ p {
         width: 90%;
         left: 10%;
     }
-    
     .verse-pgraph p:nth-child(2) {
         width: 93%;
         left: 7%;
     } 
-    
     .verse-pgraph p:nth-child(3) {
         width: 96%;
         left: 4%;
     } 
-    
     .verse-pgraph p:nth-child(4) {
         width: 99%;
         left: 1%;
@@ -1263,8 +887,6 @@ p {
     }
 }
 
-/* ----------- Laptop with Touch ----------- */
-
 @media screen and ( max-width: 1280px) {
     html {font-size: 22px;}
     .title-container {
@@ -1277,22 +899,18 @@ p {
         width: 38%;
         padding-top: 23%;
     }
-    
 }
-
-
-/* ----------- Laptop with MDPI screen----------- */
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
+    .title-container {
+        width: 580px;
+    }
     .event-details h1 {
         font-size: 1.6rem;
     }
     .main-title {
         font-size: 2.6rem;
-    }
-    .title-container {
-        width: 580px;
     }
     .title-container p {
         font-size: 1.1rem;
@@ -1308,8 +926,6 @@ p {
         margin-bottom: 30px;
     }
 }
-
-/* ----------- S Tab 10.1 Landscape ----------- */
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
     .title-container {
@@ -1337,8 +953,6 @@ p {
     }
 }
 
-/* ----------- Aspire V3 Laptop Landscape ----------- */
-
 @media screen and ( max-width: 1100px) {
     html {font-size: 15px;}
     .title-container {
@@ -1355,8 +969,6 @@ p {
         padding: 30px 0;
     }
 }
-
-/* ----------- iPad Pro Potrait------------------*/
 
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
@@ -1409,8 +1021,6 @@ p {
     }
 }
 
-/* ----------- iPad Landscape ----------- */
-
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
     .title-container {
@@ -1435,15 +1045,11 @@ p {
     }
 }
 
-/* ----------- iPad Mini 4 Landscape ----------- */
-
 @media screen and ( max-width: 1024px) and ( max-height: 680px) {
     .verse-container {
         padding-top: 20%;
     }
 }
-
-/* ----------- Lenova IdeaPad Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
@@ -1480,7 +1086,6 @@ p {
     width: 90%;
     left: 10%;
     }
-
     .verse-pgraph p:nth-child(2) {
         width: 93%;
         left: 7%;
@@ -1489,7 +1094,6 @@ p {
         width: 96%;
         left: 4%;
     }
-
     .verse-pgraph p:nth-child(4) {
         width: 99%;
         left: 1%;
@@ -1515,17 +1119,11 @@ p {
     }
 }
 
-
-/* ----------- S Note 8.0 Landscape ----------- */
-
 @media screen and ( max-width: 970px) and (max-height: 490px) {
     .verse-container {
         padding-top: 4%;
     }
 }
-
-
-/* ----------- S Tab 10.1 Potrait ----------- */
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .title-container {
@@ -1566,9 +1164,11 @@ p {
     }
 }
 
-/* ----------- iPad Potrait----------- */
-
 @media screen and ( max-width: 768px) {
+    .title-container {
+        width: 90%;
+        top: 12%;
+    }
     .event-details h1 {
         font-size: 1.2rem;
         margin: 15px 0;
@@ -1576,10 +1176,6 @@ p {
     .main-title {
         font-size: 2.3rem;
         width: 70%;
-    }
-    .title-container {
-        width: 90%;
-        top: 12%;
     }
     .title-container p {
         font-size: 0.9rem;
@@ -1605,7 +1201,6 @@ p {
     }
 }
 
-/* ----------- iPad Mini4 Potrait----------- */
 
 @media screen and ( max-width: 768px) and (max-height: 930px) {
     .title-container {
@@ -1621,8 +1216,6 @@ p {
         margin-bottom: 10px;
     }
 }
-
-/* ----------- S Note 8.0 Potrait include Address bar----------- */
 
 @media screen and ( max-width: 610px ) and ( max-height: 940px ) {
     .top-nav .text-block, .top-nav a {
@@ -1652,15 +1245,11 @@ p {
     }
 }
 
-/* ----------- S Note 8.0 Potrait ----------- */
-
 @media screen and ( max-width: 610px) and (max-height: 850px) {
     .verse-container {
         padding-top: 47%;
     }
 }
-
-/* ----------- iPhone 6 PLUS Potrait----------- */
 
 @media screen and ( max-width: 420px) and (max-height: 740px) {
     .main-section {
@@ -1691,8 +1280,6 @@ p {
         font-size: 0.9rem;
     }
 }
-
-/* ----------- Galaxy Note 5 ----------- */
 
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
    .title-container {
@@ -1730,8 +1317,6 @@ p {
     } 
 }
 
-/* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
-
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
     html{font-size: 18px;}
     .main-title {
@@ -1742,8 +1327,6 @@ p {
         width: 57%;
     }
 }
-
-/* ----------- iPhone 6  Potrait----------- */
 
 @media screen and ( max-width: 380px) {
     .title-container {
@@ -1779,12 +1362,10 @@ p {
         font-size: 0.7rem;
         padding: 10px 15px;
     }
-    .scroll-down {
+    .scroll-down, .fb-link {
         font-size: 0.7rem;
     }
 }
-
-/* ----------- iPhone 6  Potrait----------- */
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .title-container {
@@ -1795,15 +1376,11 @@ p {
     }
 }
 
-/* ----------- iPhone 6S  Potrait----------- */
-
 @media screen and ( max-width: 380px) and ( max-height: 540px) {
     .verse-container {
         padding-top: 41%;
     }
 }
-
-/* ----------- Galaxy Note 8 Potrait  ----------- */
 
 @media screen and ( max-width: 360px ) and ( max-height: 670px ) {
     .title-container {
@@ -1820,8 +1397,6 @@ p {
         opacity: 1;
     }
 }
-
-/* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
     .title-container {
@@ -1847,15 +1422,11 @@ p {
     }
 }
 
-/* ----------- Samsung J Potrait  ----------- */
-
 @media screen and ( max-width: 360px) and ( max-height: 570px) {
     .verse-container {
         padding-top: 51%;
     }
 }
-
-/* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 560px) {
     .share-info {
@@ -1865,8 +1436,6 @@ p {
         font-size: 0.9rem;
     }
 }
-
-/* ----------- HuaWei Mate9 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
     .title-container {
@@ -1885,8 +1454,6 @@ p {
     }
 }
 
-/* ----------- iPhone 5 and 5S Potrait ----------- */
-
 @media screen and ( max-width: 320px) and ( max-height: 568px) { 
     .title-container {
         top: 18%;
@@ -1902,16 +1469,13 @@ p {
     }
 }
 
-
-/* ----------- iPhone 4 and 4S Potrait----------- */
-
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
+    .title-container {
+        top: 16%;
+    }
     .event-details h1 {
         font-size: 1rem;
         margin-bottom: 5px;
-    }
-    .title-container {
-        top: 16%;
     }
     .main-title {
         font-size: 1.4rem;
@@ -1945,8 +1509,6 @@ p {
         padding: 8px 12px;
     }
 }
-
-/* iPhone 5S Potrait */
 
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
     .title-container p {
