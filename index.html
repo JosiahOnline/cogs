@@ -113,9 +113,9 @@
             <div class="cogs-logo">
                 <span class="beta">BETA</span><a class="brand-logo" href="#">COGS <br><p>SANDAKAN</p></a>
                 <div class="multiple-lang">
-                    <div><a class="english" href="http://www.cogssandakan.com">English</a></div>
-                    <div><a class="chinese" href="http://www.cogssandakan.com">Chinese</a></div>
-                    <div><a class="bm" href="http://www.cogssandakan.com">BM</a></div>
+                    <div><a class="english" href="#">English</a></div>
+                    <div><a class="chinese under-construction" href="#">Chinese</a></div>
+                    <div><a class="bm under-construction" href="#">BM</a></div>
                 </div>
             </div>
             <nav class="navbar">
@@ -391,7 +391,7 @@
                             <h2>Ongoing Events</h2>
                         </div>
                         <article class="main-news">
-                            <a rel="canonical" href="./News/Ongoing/Church_Services.html"><img class="main-image" src="./News/img/worship1a.jpg">
+                            <a rel="canonical" href="./News/Ongoing/Church_Services.html"><img class="main-image round-radius" src="./News/img/worship1a.jpg">
                                 <div class="main-news-description">
                                     <h1 class="main-news-title">Church Services</h1>
                                     <p class="news-pgraph3">Click <span>here</span> for more information!</p>
@@ -484,7 +484,7 @@
                             
                         </div>
                         <div class="more separator">
-                            <a href="http://wwww.soyacincau.com">
+                            <a href="#">
                                 <h3>More</h3>
                                 <img src="img/arrow-right.png">
                             </a>
@@ -716,6 +716,15 @@
                 </div>
             </div>
         </div>
+        <div id="popMessage" class="pop-message">
+            <div class="pop-container">
+                <div class="pop-pic"></div>
+                <div class="pop-row">
+                    <h2>More exciting things are on the way, please be patient while we prepare these best moments!</h2>
+                    <a href="./index.html#announcements">CLOSE</a>
+                </div>
+            </div>
+        </div>
         <div id="rotateDevice" class="rotate-screen">
             <div class="rotate-container">
                 <div class="rotate-pic"></div>
@@ -745,7 +754,28 @@
             $(".share-button").click(function() {
                 $(".share-button").css('display', 'none');
                 $(".web__share").css('display', 'inline-block');
-            })
+            });
+            
+            $(".events-icon a").click(function() {
+                $("#popMessage").css('display', 'block');
+                $("#popMessage").css('overflow', 'hidden');
+            });
+            
+            $(".under-construction").click(function() {
+                $("#popMessage").css('display', 'block');
+                $("#popMessage").css('overflow', 'hidden');
+            });
+            
+            $(".more h3").click(function() {
+                $("#popMessage").css('display', 'block');
+                $("#popMessage").css('overflow', 'hidden');
+            });
+            
+            $(".pop-container a").click(function() {
+                $("#popMessage").css('display', 'none');
+                $("#popMessage").css('overflow-y', 'scroll');
+            });
+            
         });
 
         function openNav() {
