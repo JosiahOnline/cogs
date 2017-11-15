@@ -1,5 +1,9 @@
-/*This theme4 only consist another design with join button(page1), share info(page2) and pictures(last page)*/
-
+/*----- This theme4 only consist -----------------
+- 1.Default Introduction design(Section 1)
+- 2.Share Info(Section 2) 
+- 3.25 pictures(last Section)
+Examples: Boys Bridgade, Survival Youth Camp
+------------------------------------------------*/
 html {
     font-family: Merriweather, serif;
     -ms-text-size-adjust: 100%;
@@ -99,10 +103,6 @@ p {
     background-color: rgba(0, 0, 0, .20);
 }
 
-.share-pgraph {
-    font-size: 1.5rem;
-    line-height: 1.3em;
-}
 .verse-container {
     position: absolute;
     top: 10%;
@@ -125,7 +125,7 @@ p {
     line-height: 1.2em;
 }
 
-.verse-pgraph, .scroll-down {
+.verse-pgraph, .scroll-down, .fb-link {
     font-weight: 300;
 }
 
@@ -136,19 +136,26 @@ p {
     margin: 0;
 }
 
-.scroll-down img {
+.scroll-down img, .fb-link img {
     width: 25px;
     margin-left: 5px;
 }
 
 .share-info {
     padding: 30px 0;
-    background-color: #000;
-    color: #fff;
+    background-color: rgba(245,245,245,1);
+    color: black;
 }
 
 .share-container {
     text-align: center;
+}
+
+.share-pgraph {
+    font-size: 1.5rem;
+    line-height: 1.3em;
+    padding-bottom: 20px;
+    margin-bottom: 0;
 }
 
 .share-button {
@@ -398,11 +405,6 @@ p {
     border-color: transparent transparent transparent rgba(250, 250, 250, 1) !important;
 }
 
-.share-pgraph {
-    padding-bottom: 20px;
-    margin-bottom: 0;
-}
-
 .youtube {
     position: relative;
     background-color: black;
@@ -426,13 +428,11 @@ p {
 }
 
 .footer-container {
-   
     position: unset;
     top: unset;
     -webkit-transform: unset;
     -ms-transform: unset;
-        transform: unset;
-    
+        transform: unset;  
 }
 
 .social-icons {
@@ -448,24 +448,28 @@ p {
     }
 }
 
-.scroll-container, .scroll2-container, .scroll4-container {
+.scroll-container, .scroll2-container, .fb-container {
     position: absolute;
     bottom: 20px;
     width: 100%;
-    z-index: 1000
-}
-
-.scroll2-container, .scroll4-container {
-    display: block;
     text-align: center;
+    z-index: 1000;
 }
 
-.scroll2-container h1, .scroll4-container a {
+.scroll2-container {
+    bottom: 60px;
+}
+
+.scroll2-container h1 {
+    color: black;
+}
+
+.fb-container a {
     font-size: 0.9rem;
     border-radius: 4px;
 }
 
-.scroll4-container .tooltiptext {
+.fb-container .tooltiptext {
     position: absolute;
     visibility: hidden;
     width: 160px;
@@ -486,7 +490,7 @@ p {
     transition: opacity 1s;
 }
 
-.scroll4-container .tooltiptext::after {
+.fb-container .tooltiptext::after {
     content: "";
     position: absolute;
     top: 100%;
@@ -497,12 +501,12 @@ p {
     border-color: rgba(59,89,152,1) transparent transparent transparent;
 }
 
-.scroll4-container:hover .tooltiptext {
+.fb-container:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
 }
 
-.scroll4-container a {
+.fb-container a {
     color: rgba(59,89,152,1);
     background: rgba(246,246,246, 1);
     font-weight: bold;
@@ -511,15 +515,15 @@ p {
     text-align: left;
 }
 
-.scroll4-container a:hover {
+.fb-container a:hover {
     background: white;
 }
 
-.scroll4-container a {
+.fb-container a {
     position: relative;
 }
 
-.scroll4-container a img {
+.fb-container a img {
     right: 10px;
     position:absolute;
     top: 5px;
@@ -533,16 +537,13 @@ p {
     .verse-pgraph {
         font-size: 1.4rem;
     }
-    .scroll2-container {
-        bottom: 20px;
-    }
-    .scroll4-container {
+    .fb-container {
         bottom: 13px;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 208px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 28px;
         top: 6px;
     }
@@ -556,13 +557,13 @@ p {
 }
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
-    .scroll4-container {
+    .fb-container {
         bottom: 8px;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 212px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 28px;
         top: 7px;
     }
@@ -572,10 +573,10 @@ p {
 }
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
-    .scroll4-container a {
+    .fb-container a {
         width: 180px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 25px;
         top: 6px;
     }
@@ -588,10 +589,10 @@ p {
 }
 
 @media screen and ( max-width: 1281px ) and ( max-height: 951px ) {
-    .scroll4-container a {
+    .fb-container a {
         width: 193px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         top: 5px;
     }
     .slide-heading {
@@ -603,13 +604,13 @@ p {
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
-    .scroll4-container {
+    .fb-container {
         bottom: 10px;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 180px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 25px;
         top: 6px;
     }
@@ -622,26 +623,26 @@ p {
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
-    .scroll4-container {
+    .fb-container {
         bottom: 15px;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 178px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 24px;
         top: 6px;
     }
 }
 @media screen and ( max-width: 1100px) {
     .scroll2-container {
-        bottom: 25px;
+        bottom: 45px;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 147px;
         padding: 10px 15px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 23px;
         top: 5px;
     }
@@ -657,6 +658,12 @@ p {
     .adjust-space {
         left: 42%;
     }
+    .scroll-down, .fb-container a {
+        font-size: 1.1rem;
+    }
+    .scroll2-container {
+        bottom: 60px;
+    }
     .fp-controlArrow {
         top: unset !important;
         bottom: 155px !important;
@@ -670,31 +677,31 @@ p {
         right: 35% !important;
         border-width: 20.5px 0 20.5px 15px !important;
     }
-    .scroll-down, .scroll2-container h1, .scroll4-container a {
+    .scroll-down, .fb-container a {
         font-size: 1.1rem;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 285px;
         padding: 15px 20px 11px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 38px;
         top: 10px;
     }
-    .scroll4-container .tooltiptext {
+    .fb-container .tooltiptext {
         font-size: 1rem;
         line-height: 1.2em;
         width: 220px;
         padding: 15px 8px;
         left: 47%;
     }
-   .scroll2-container, .scroll4-container {
+    .fb-container {
         bottom: 30px;
     }
 }
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
-    .scroll-down, .scroll2-container h1, .scroll4-container a {
+    .scroll-down, .fb-container a {
         font-size: 1rem;
     }
     .slide-heading {
@@ -704,16 +711,16 @@ p {
     .fp-controlArrow {
         bottom: 85px !important;
     }
-    .scroll4-container {
+    .fb-container {
         bottom: 15px;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 200px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 28px;
     }
-    .scroll4-container .tooltiptext {
+    .fb-container .tooltiptext {
         line-height: 1.2em;
         padding: 15px;
     }
@@ -726,14 +733,12 @@ p {
     .scroll-down {
         font-size: 1.1rem;
     }
-    .scroll2-container h1, .scroll4-container a {
+    .fb-container a {
         font-size: 1rem;
-    }
-    .scroll4-container a {
         width: 170px;
         padding: 14px 20px 12px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 26px;
         top: 9px;
     }
@@ -758,7 +763,7 @@ p {
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
-    .scroll-down, .scroll2-container h1, .scroll4-container a  {
+    .scroll-down, .fb-container a  {
         font-size: 1rem;
     }
     .slide-heading {
@@ -768,10 +773,10 @@ p {
     .adjust-space {
         left: 40%;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 262px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 35px;
         top: 10px;
     }
@@ -788,10 +793,10 @@ p {
     .fp-controlArrow {
         bottom: 90px !important;
     }
-    .scroll4-container {
+    .fb-container {
         bottom: 15px;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 265px;
     }
 }
@@ -805,13 +810,13 @@ p {
     .adjust-space {
         left: 38.6%;
     }   
-    .scroll-down, .scroll2-container h1, .scroll4-container a {
+    .scroll-down, .fb-container a {
         font-size: 0.8rem;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 222px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 32px;
         top: 9px;
     }
@@ -831,7 +836,7 @@ p {
         left: 38%;
     }
     .scroll2-container {
-        bottom: 15px;
+        bottom: 50px;
     }
     .scroll-container {
         font-size: 0.9rem;
@@ -840,13 +845,10 @@ p {
     .slide-heading {
         font-size: 1rem;
     }
-    .scroll4-container {
+    .fb-container {
         bottom: 20px;
     }
-    .scroll2-container h1 {
-        font-size: 0.7rem;
-    }
-    .scroll4-container a {
+    .fb-container a {
         font-size: 0.7rem;
     }
     .fp-controlArrow {
@@ -860,30 +862,26 @@ p {
         right: 25% !important;
         border-width: 18.5px 0 18.5px 13px !important;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 150px;
         padding: 13px 15px 11px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 23px;
         top: 7px;
     }
-    .scroll4-container .tooltiptext {
+    .fb-container .tooltiptext {
         font-size: 0.9rem;
         padding: 10px;
     }
 }
 
-/* ----------- Galaxy Note 5 ----------- */
-
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
-    .scroll4-container a {
+    .fb-container a {
         width: 150px;
-    }
-    .scroll4-container a {
         padding: 13px 15px 9px;
     }
-    .scroll-down, .scroll2-container h1 {
+    .scroll-down {
         font-size: 0.7rem;
     }
 }
@@ -896,10 +894,10 @@ p {
     .fp-controlArrow {
         bottom: 70px !important;
     }
-    .scroll4-container a {
+    .fb-container a {
         width: 138px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 21px;
         top: 7px;
     }
@@ -920,12 +918,12 @@ p {
         left: 37%;
     }
     .scroll2-container {
-        bottom: 30px;
+        bottom: 50px;
     }
-    .scroll4-container a {
+    .fb-container a {
         padding: 13px 15px 9px;
     }
-    .scroll4-container a img {
+    .fb-container a img {
         width: 21.5px;
         top: 7px;
     }
@@ -941,9 +939,6 @@ p {
     }
     .fp-controlArrow {
         bottom: 95px !important;
-    }
-    .scroll2-container {
-        bottom: 15px;
     }
 }
 
@@ -964,7 +959,7 @@ p {
     .fp-controlArrow {
         bottom: 60px !important;
     }
-    .scroll4-container {
+    .fb-container {
         bottom: 10px;
     }
 }
@@ -980,7 +975,7 @@ p {
     .fp-controlArrow {
         bottom: 80px !important;
     }
-    .scroll4-container {
+    .fb-container {
         bottom: 20px;
     }
 }
@@ -993,13 +988,10 @@ p {
         bottom: 60px !important;
         top: unset !important;
     }
-    .scroll4-container {
+    .fb-container {
         bottom: 10px;
     }
 }
-
-
-/* ----------- Laptop with HiDPI ----------- */
 
 @media screen and ( max-width: 1441px) and (orientation: landscape) {
     html{font-size: 24px;}
@@ -1008,16 +1000,12 @@ p {
     }
 }
 
-/* ----------- iPad Pro Landscape ----------- */
-
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     html {font-size: 25px;}
     .verse-container {
         padding-top: 25%;
     }
 }
-
-/* ----------- Aspire E1 Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {font-size: 20px;}
@@ -1026,8 +1014,6 @@ p {
     }
 }
 
-/* ----------- Laptop with Touch ----------- */
-
 @media screen and ( max-width: 1280px) {
     html {font-size: 22px;}
     .verse-container {
@@ -1035,8 +1021,7 @@ p {
     }
 }
 
-
-/* ----------- Laptop with MDPI screen----------- */
+/* End of Footer & Scroll-Container */
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
@@ -1045,15 +1030,11 @@ p {
     }
 }
 
-/* ----------- S Tab 10.1 Landscape ----------- */
-
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
     .verse-container {
         padding-top: 15%;
     }
 }
-
-/* ----------- Aspire V3 Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1100px) {
     html {font-size: 15px;}
@@ -1061,8 +1042,6 @@ p {
         padding: 30px 0;
     }
 }
-
-/* ----------- iPad Pro Potrait------------------*/
 
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
@@ -1090,8 +1069,6 @@ p {
     }
 }
 
-/* ----------- iPad Landscape ----------- */
-
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
     .verse-container {
@@ -1108,15 +1085,11 @@ p {
     }
 }
 
-/* ----------- iPad Mini 4 Landscape ----------- */
-
 @media screen and ( max-width: 1024px) and ( max-height: 680px) {
     .verse-container {
         padding-top: 20%;
     }
 }
-
-/* ----------- Lenova IdeaPad Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
@@ -1135,17 +1108,11 @@ p {
     }
 }
 
-
-/* ----------- S Note 8.0 Landscape ----------- */
-
 @media screen and ( max-width: 970px) and (max-height: 490px) {
     .verse-container {
         padding-top: 14%;
     }
 }
-
-
-/* ----------- S Tab 10.1 Potrait ----------- */
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .verse-container {
@@ -1169,15 +1136,11 @@ p {
     }
 }
 
-/* ----------- iPad Potrait----------- */
-
 @media screen and ( max-width: 768px) {
     .verse-container {
         padding-top: 32%;
     }
 }
-
-/* ----------- iPad Mini4 Potrait----------- */
 
 @media screen and ( max-width: 768px) and (max-height: 930px) {
     .verse-container {
@@ -1187,8 +1150,6 @@ p {
         font-size: 1.15rem;
     }
 }
-
-/* ----------- iPone 6 Plus Landscape ----------- */
 
 @media screen and ( max-width: 740px) and (max-height: 420px) {
     .verse-container {
@@ -1208,23 +1169,17 @@ p {
     }
 }
 
-/* ----------- S Galaxy S5 ----------- */
-
 @media screen and ( max-width: 640px) and (max-height: 360px) {
     .verse-container {
         padding-top: 15%;
     }
 }
 
-/* ----------- iPhone 7 Landscape ----------- */
-
 @media screen and ( max-width: 635px) and (max-height: 420px) {
     .verse-container {
         padding-top: 22%;
     }
 }
-
-/* ----------- S Note 8.0 Potrait include Address bar----------- */
 
 @media screen and ( max-width: 610px ) and ( max-height: 940px ) {
     .top-nav .text-block, .top-nav a {
@@ -1246,8 +1201,6 @@ p {
     }
 }
 
-/* ----------- S Note 8.0 Potrait ----------- */
-
 @media screen and ( max-width: 610px) and (max-height: 850px) {
     .verse-container {
         padding-top: 45%;
@@ -1257,15 +1210,11 @@ p {
     }
 }
 
-/* ----------- iPhone 5 5s Landscape ----------- */
-
 @media screen and ( max-width: 568px) {
     .verse-container {
         padding-top: 18%;
     }
 }
-
-/* ----------- VIVO 5 Samsung J Landscape ----------- */
 
 @media screen and ( max-width: 560px) and (max-height: 360px) {
     .verse-container {
@@ -1273,15 +1222,11 @@ p {
     }
 }
 
-/* ----------- iPhone 6S Landscape ----------- */
-
 @media screen and ( max-width: 540px) {
     .verse-container {
         padding-top: 28%;
     }
 }
-
-/* ----------- HuaWei Mate 9 Landscape ----------- */
 
 @media screen and ( max-width: 530px) {
     .verse-container {
@@ -1289,15 +1234,11 @@ p {
     }
 }
 
-/* ----------- iPhone 4 Landscape ----------- */
-
 @media screen and ( max-width: 480px) and (max-height: 215px) {
     .verse-container {
         padding-top: 14%;
     }
 }
-
-/* ----------- iPhone 6 PLUS Potrait----------- */
 
 @media screen and ( max-width: 420px) and (max-height: 740px) {
     .main-section {
@@ -1314,15 +1255,11 @@ p {
     }
 }
 
-/* ----------- Galaxy Note 5 ----------- */
-
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
     .verse-pgraph {
         font-size: 0.9rem;
     }
 }
-
-/* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
 
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
     html{font-size: 18px;}
@@ -1331,8 +1268,6 @@ p {
     }
 }
 
-/* ----------- iPhone 6  Potrait----------- */
-
 @media screen and ( max-width: 380px) {
     .verse-container {
         padding-top: 60%;
@@ -1340,12 +1275,10 @@ p {
     .verse-pgraph {
         font-size: 0.9rem;
     }
-    .scroll-down, .scroll2-container h1 {
+    .scroll-down {
         font-size: 0.7rem;
     }
 }
-
-/* ----------- iPhone 6  Potrait----------- */
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .main-section {
@@ -1356,15 +1289,11 @@ p {
     }
 }
 
-/* ----------- Galaxy Note 8 Potrait  ----------- */
-
 @media screen and ( max-width: 360px) and ( max-height: 670px) {
     .main-section {
         background-position: 80% 1%;
     }
 }
-
-/* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
     .verse-container {
@@ -1375,8 +1304,6 @@ p {
     }
 }
 
-/* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
-
 @media screen and ( max-width: 360px) and ( max-height: 560px) {
     .share-info {
         padding: 30px 0;
@@ -1386,8 +1313,6 @@ p {
     }
 }
 
-/* ----------- HuaWei Mate9 Potrait  ----------- */
-
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
     .verse-container {
         padding-top: 40%;
@@ -1396,8 +1321,6 @@ p {
         padding-bottom: 10px;
     }
 }
-
-/* ----------- iPhone 5 and 5S Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 568px) { 
     .verse-pgraph {
@@ -1411,16 +1334,11 @@ p {
     }
 }
 
-
-/* ----------- iPhone 4 and 4S Potrait----------- */
-
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
     .verse-container {
         padding-top: 30%;
     }
 }
-
-/* iPhone 5S Potrait */
 
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
     .verse-pgraph {
