@@ -1,0 +1,27 @@
+.main-section {
+    background-image: url("../News/img/dance.jpg");
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance4.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720654/LineDance/dance3.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720656/LineDance/dance5.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance2.jpg");
+}
+
+.pic1, .pic2, .pic3, .pic4 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
