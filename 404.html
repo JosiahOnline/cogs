@@ -4,76 +4,109 @@
 
 <head>
     <meta charset="utf-8">
-    <meta content="width=device-width, initial-scale=1" name="viewport">
-    <meta name="Description" content="Online Bah - Thank you for your enquiry"/>
-    <title>Thank You for your enquiry</title>
-    <link href="css/main.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.4.7/webfont.js"></script>
-    <script type="text/javascript">
-        WebFont.load({
-            google: {
-                families: ["Merriweather:300,400,700,900", "Droid Serif:400,700", "Vollkorn:400,400italic,700,700italic", "Berkshire Swash:regular:latin,latin-ext", "Oleo Script:regular,700:latin,latin-ext"]
+    <title>COGS Sandakan | ERROR 404 Page - No page is found</title>
+    <meta name="description" content="Church of Good Shepeherds | ERROR 404 Page - No page is found">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+
+    <link href="css/normalize.css" rel="stylesheet" type="text/css">
+    <link href="css/nav&footer.css" rel="stylesheet" type="text/css">
+    <link href="css/rotate.css" rel="stylesheet" type="text/css">
+    <link href="css/church_services.css" rel="stylesheet" type="text/css">
+    <link href="css/error404.css" rel="stylesheet" type="text/css">
+    
+    <link href="https://fonts.googleapis.com/css?family=Merriweather" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playfair+Display" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+
+
+
+    <link href="img/favicon/favicon2-96x96.png" rel="shortcut icon" type="image/x-icon">
+    <link href="img/favicon/apple-icon2-180x180.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <section class="church-services">
+        <div class="top-nav">
+            <div class="top-container">
+                <div class="text-block">COGS SANDAKAN</div>
+                <a href="../../index.html#announcements" class="link">BACK</a>
+            </div>
+        </div>
+        <section class="error-page">
+            <div class="container">
+                <h1>Oops, this page could not be found!</h1>
+                <p>ERROR 404</p>
+            <a rel="canonical" href="http://www.cogssandakan.com">Our Homepage</a></div>
+        </section>
+            
+        <div class="footer">
+            <div class="footer-container w-container">
+                <div class="social-media-text">COGS SANDAKAN @ Copyright 2017. </div>
+                <div class="social-icons">
+                    <a class="social-icon-link " target="_blank" href="https://www.facebook.com/cogssandakan">
+                        <img src="img/fb.png" width="30">
+                    </a>
+                    <a class="social-icon-link " target="_blank" href="https://twitter.com/cogssandakan">
+                        <img src="img/twitter.png" width="30">
+                    </a>
+                    <a class="social-icon-link " target="_blank" href="https://instagram.com/cogssandakan">
+                        <img src="img/instag.png" width="30">
+                    </a>
+                    <a class="social-icon-link " target="_blank" href="https://plus.google.com/u/0/107266476292640136953">
+                        <img src="img/google-plus.png" width="30">
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div id="rotateDevice" class="rotate-screen">
+            <div class="rotate-container">
+                <div class="rotate-pic"></div>
+                <h2>Rotate your device</h2>
+            </div>
+        </div>
+    </section>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
+    <!--<script src="js/main.js" type="text/javascript"></script>-->
+    <script>
+        $(document).ready(function() {
+            $(".visit").click(function() {
+                $(".plan-visit").css('display', 'block');
+                $(".plan-visit").css('overflow-y', 'scroll');
+
+            });
+            $(".close-button").click(function() {
+                $(".plan-visit").css('display', 'none');
+                $(".plan-visit").css('overflow-y', 'hidden');
+            });
+            $(".share-button").click(function() {
+                $(".share-button").css('display', 'none');
+                $(".web__share").css('display', 'inline-block');
+            })
+        });
+    </script>
+    <script>
+        $(document).ready(function() {
+            // set the max height
+             if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
+            }
+        });
+
+    </script>
+    <script>
+        $(window).resize(function() {
+            if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
             }
         });
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js" type="text/javascript"></script>
-    <link href="img/favicon/favicon2-96x96.png" rel="shortcut icon" type="image/x-icon">
-    <link href="img/favicon/apple-icon2-180x180.png" rel="apple-touch-icon">
-</head>
-
-<body class="body">
-    <div class="main-wrapper">
-        <div id="myBgColor" class="bgcolor"></div>
-        <div class="top-nav">
-            <div class="nav-container">
-                <a class="brand-logo" href="#">COGS Sandakan</a>
-                <nav class="navbar">
-                    <div class="navburger">
-                        <p>Menu</p>
-                        <div class="hamburger" style="font-size:30px;cursor:pointer" onclick="openNav()"></div>
-                    </div>
-                    <div id="mySidenav" class="menu-links">
-                        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"></a>
-                        <a rel="canonical" class="nav-link addborder active" href="index.html">Home</a>
-                        <a rel="canonical" class="nav-link addborder" href="index.html#welcome">Welcome</a>
-                        <a rel="canonical" class="nav-link addborder" href="index.html#announcements">Announcements</a>
-                        <a rel="canonical" class="nav-link addborder" href="index.html#contact">Contact</a>
-                    </div>
-                </nav>
-            </div>
-        </div>
-    <section id="thankyou" class="container">
-        <div class="thanks">
-            <div class="formsent"><strong><span class="mailSent"></span> Success! Message sent.</strong></div>
-            <h1>Oops Page not found!</h1>
-            <p>You may want to try again!</p>
-        <a rel="canonical" class="homelink" href="index.html">HomePage</a></div>
-    </section><!--/#workinprogress-->
-    </div>
-    <script src="js/jquery-3.1.1.min.js" type="text/javascript"></script>
-    <script>
-        /* Set the width of the side navigation to 250px and the left margin of the page content to 250px and add a black background color to body */
-        function openNav() {
-
-            document.getElementById("mySidenav").style.borderLeft = "5px";
-            document.getElementById("mySidenav").style.borderLeftColor = "#e9ff00";
-            document.getElementById("mySidenav").style.borderLeftStyle = "solid";
-            document.getElementById("mySidenav").style.width = "250px";
-            document.getElementById("myBgColor").style.display = "block";
-            document.getElementById("myBgColor").style.backgroundColor = "rgba(19,19,42,0.4)";
-            document.getElementsByTagName("body")[0].style.overflow = "hidden";
-        }
-        /* Set the width of the side navigation to 0 and the left margin of the page content to 0, and the background color of body to white */
-        function closeNav() {
-
-            document.getElementById("mySidenav").style.borderLeft = "0";
-            document.getElementById("mySidenav").style.borderLeftColor = "0";
-            document.getElementById("mySidenav").style.borderLeftStyle = "0";
-            document.getElementById("mySidenav").style.width = "0";
-            document.getElementById("myBgColor").style.backgroundColor = "transparent";
-            document.getElementById("myBgColor").style.display = "none";
-            document.getElementsByTagName("body")[0].style.overflow = "visible";
-        }
-    </script>
-    </body>
+</body>
 </html>
