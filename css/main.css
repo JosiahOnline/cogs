@@ -2490,7 +2490,17 @@ address,
     .send-message-button, .direction-button {
         height: 55px;
     }
-    
+    .pop-container .pop-row {
+        top: 40%;
+    }
+    .pop-container h2 {
+        font-size: 3rem;
+        line-height: 1em;
+        margin-bottom: 40px;
+    }
+    .pop-container a {
+        font-size: 1.8rem;
+    }
     .footer {
         background-color: #141e28;
     }
@@ -2594,6 +2604,13 @@ address,
     }
     .bible-verse {
         font-size: 2.5rem;
+    }
+    .pop-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 30px;
+    }
+    .pop-container a {
+        font-size: 1.4rem;
     }
     .footer {
         padding: 15px 0;
@@ -2895,6 +2912,9 @@ address,
     .more h3 {
         font-size: 1.6rem;
         margin-bottom: 3px;
+    }
+    .pop-container h2 {
+        margin-bottom: 10px;
     }
     .address {
         height: 32.8em;
@@ -3309,6 +3329,9 @@ address,
     }
     .submit-button {
         padding: 0.55em 1em;
+    }
+    .pop-container .pop-row {
+        width: 50%;
     }
     /*Contact Session*/
     .address {
@@ -3798,7 +3821,6 @@ window.outerHeight include toolbar and address bar----------- */
     .section-title-group{
         margin-bottom: 60px;
     }
-   
     .top-news {
         height: 720px;
     }
@@ -3875,6 +3897,16 @@ window.outerHeight include toolbar and address bar----------- */
     .more img {
         width: 27px;
         height: 27px;
+    }
+    .pop-container .pop-row {
+        width: 52%;
+    }
+    .pop-container h2 {
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    .pop-container a {
+        font-size: 1.4rem;
     }
     .call-to-action-section {
         height: 44%;
@@ -4621,6 +4653,13 @@ window.outerHeight include toolbar and address bar----------- */
     .events-icon h2 {
         font-size: 1.6rem;
     }
+    .pop-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 15px;
+    }
+    .pop-container a {
+        font-size: 1rem;
+    }
     .form-wrapper.squeezed {
         margin-bottom: 40px;
     }
@@ -4884,6 +4923,10 @@ window.outerHeight include toolbar and address bar----------- */
     .card__share {
         top: -138px;
     }
+    .pop-container h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
     .cogs-news-form {
         margin-bottom: 5px;
     }
@@ -5085,6 +5128,12 @@ window.outerHeight include toolbar and address bar----------- */
 @media screen and ( max-width: 360px) and ( max-height: 668px) {
     .home-container {
         top: 100%;
+    }
+    .pop-container .pop-row {
+        width: 55%;
+    }
+    .pop-container a {
+        font-size: 1.1rem;
     }
 }
 
