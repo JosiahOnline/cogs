@@ -1,3 +1,27 @@
 .main-section {
     background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1510300328/Christmas/christmas3.jpg");
 }
+.join a:hover {
+    color: rgba(6,53,75,1);
+}
+@media screen and (max-width: 970px) and (max-height: 490px) {
+    .join a {
+        color: rgba(6,53,75,1);
+        background-color: white;
+        opacity: 0.90;
+    }
+    .join a:hover {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .join a {
+        color: rgba(6,53,75,1);
+        background-color: white;
+        opacity: 0.90;
+    }
+    .join a:hover {
+        opacity: 1;
+    }
+}
