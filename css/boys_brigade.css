@@ -2,14 +2,71 @@
     background-image: url("../News/img/boysbrigade.jpg");
     background-position: 50% 100%;
 }
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .4)
+}
+.verse-pgraph {
+    font-size: 1.7rem;
+}
+.topic {
+    font-size: 1.8rem;
+}
+.verse-pgraph {
+    padding-left: 5%;
+    padding-right: 5%;
+}
 @media screen and ( max-width: 1024px) {
     .main-section {
         background-position: 75% 70%;
     }
+    .topic {
+        font-size: 2rem;
+    }
 }
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .verse-container {
+        padding-top: 50%;
+    }
+    .verse-pgraph {
+        font-size: 1.4rem;
+        padding-bottom: 0;
+    }
+    .topic {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .verse-container {
+        padding-top: 40%;
+    }
+    .verse-pgraph {
+        font-size: 1.3rem;
+    }
+    .topic {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 610px) and (max-height: 940px) {
+    .verse-container {
+        padding-top: 55%;
+    }
+    .verse-pgraph {
+        font-size: 1rem;
+    }
+    .topic {
+        font-size: 1.2rem;
+    }
+}
+
 @media screen and ( max-width: 420px) and (max-height: 740px) {
     .main-section {
         background-position: 75% 1%;
+    }
+    .verse-container {
+        padding-top: 65%;
     }
 }
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
@@ -17,14 +74,36 @@
         background-position: 75% 1%;
     }
 }
+
+@media screen and ( max-width: 380px) {
+    .verse-container {
+        padding-top: 70%;
+    }
+    .verse-pgraph {
+        font-size: 0.9rem;
+    }
+    .topic {
+        font-size: 1.1rem;
+    }
+}
+
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .main-section {
         background-position: 75% 1%;
+    }
+    .verse-container {
+        padding-top: 60%;
     }
 }
 
 @media screen and ( max-width: 360px) and ( max-height: 670px) {
     .main-section {
         background-position: 80% 1%;
+    }
+    .verse-pgraph {
+        font-size: 0.8rem;
+    }
+    .topic {
+        font-size: 1rem;
     }
 }
