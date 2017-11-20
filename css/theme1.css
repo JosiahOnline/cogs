@@ -1,7 +1,7 @@
 /*----- This theme1 only consist -----------------
 - 1.Introduction with join button(Section 1)
 - 2.Share Info(Section 2) 
-- 3.Youtube link(last Section)
+- 3.Youtube link and Facebook Link(last Section)
 Examples: Christmas Carolling
 ------------------------------------------------*/
 html {
@@ -856,7 +856,7 @@ p {
         color: darkgoldenrod;
         background-color: white;
         font-weight: bold;
-        opacity: 0.95;
+        opacity: 0.90;
     }
     .join a:hover {
         opacity: 1;
