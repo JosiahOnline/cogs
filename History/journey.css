@@ -114,6 +114,7 @@ p {
 /* ==========================================================================
    Start of custom CSS
    ========================================================================== */
+
 ._1-intro,
 ._2-intro,
 ._3-intro {
@@ -581,6 +582,9 @@ p {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .raise-pgraph {
@@ -594,10 +598,6 @@ p {
 .process-pgraph {
     font-size: 25px;
     font-weight: 700;
-    position: absolute;
-    top: 50%;
-    -webkit-transform: perspective(1px) translateY(-50%);
-    transform: perspective(1px) translateY(-50%);
 }
 
 .process-pgraph {
@@ -662,6 +662,7 @@ p {
     background-size: cover;
     background-repeat: no-repeat;
 }
+
 .process10-pic {
     background-position: 50% 100%;
 }
@@ -876,7 +877,8 @@ p {
 .source {
     height: 92vh;
     background-color: #232321;
-    border-bottom: 1px solid white; /*Do not remove as fullpage problem will cause additinal line(when added border-top 1px at footer section) after user scroll to footer section*/
+    border-bottom: 1px solid white;
+    /*Do not remove as fullpage problem will cause additinal line(when added border-top 1px at footer section) after user scroll to footer section*/
 }
 
 .source-container {
@@ -1050,7 +1052,8 @@ p {
 /* ----------- iPad Pro Landscape ----------- */
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 35px;
     }
     .page1-container {
@@ -1089,7 +1092,8 @@ p {
 /* ----------- Aspire E1 Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 25px;
     }
     .pic5,
@@ -1126,7 +1130,8 @@ p {
 /* ----------- Laptop with Touch ----------- */
 
 @media screen and ( max-width: 1280px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 32px;
     }
     .page1-container {
@@ -1154,7 +1159,8 @@ p {
 /* ----------- Laptop with MDPI screen----------- */
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 28px;
     }
     .fund-table {
@@ -1173,7 +1179,8 @@ p {
 /* ----------- S Tab 10.1 Landscape ----------- */
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 25px;
     }
     .raise-container2 {
@@ -1198,7 +1205,8 @@ p {
 /* ----------- Aspire V3 Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1100px) and (max-height: 520px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 22px;
     }
     .page1-container {
@@ -1321,7 +1329,6 @@ p {
     .link {
         font-size: 40px;
     }
-    
     .paragraph,
     .page2-heading {
         font-size: 40px;
@@ -1443,7 +1450,7 @@ p {
     .raise-pgraph {
         top: 0;
         -webkit-transform: perspective(1px) translateY(0%);
-                transform: perspective(1px) translateY(0%);
+        transform: perspective(1px) translateY(0%);
     }
     .fund-table {
         width: 90%;
@@ -1777,7 +1784,8 @@ p {
 /* ----------- Lenova IdeaPad Laptop Landscape ----------- */
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 24px;
     }
     .heading,
@@ -1920,12 +1928,13 @@ p {
     }
 }
 
-
 @media screen and ( max-width: 990px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 20px;
     }
 }
+
 
 /* ----------- S Note 8.0 Landscape ----------- */
 
@@ -1961,7 +1970,7 @@ p {
     .progress-heading {
         -ms-flex: 0 0 250px;
         -webkit-box-flex: 0;
-                flex: 0 0 250px;
+        flex: 0 0 250px;
     }
     .fund-table {
         width: 86%;
@@ -1998,10 +2007,6 @@ p {
         width: 1.3rem;
     }
 }
-
-
-
-    
 
 
 /* ----------- S Tab 10.1 Potrait ----------- */
@@ -2126,16 +2131,24 @@ p {
     .w-container {
         max-width: 95%;
     }
-    .raise-heading, .heading, .find-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .raise-heading,
+    .heading,
+    .find-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 50px;
         line-height: 1em;
     }
-    .find-heading, .fund-heading, .progress-heading {
+    .find-heading,
+    .fund-heading,
+    .progress-heading {
         -ms-flex: 0 0 180px;
-            -webkit-box-flex: 0;
-                flex: 0 0 180px;
+        -webkit-box-flex: 0;
+        flex: 0 0 180px;
     }
-    .page5-pgraph, .land-pgraph2 {
+    .page5-pgraph,
+    .land-pgraph2 {
         width: 95%;
     }
     .fund-table {
@@ -2146,17 +2159,21 @@ p {
     }
 }
 
+
 /* ----------- iPone 6 Plus Landscape ----------- */
 
 @media screen and ( max-width: 740px) and (max-height: 420px) {
     .top-nav {
         height: 12vh;
     }
-    .text-block, .link, .paragraph, .page2-heading {
+    .text-block,
+    .link,
+    .paragraph,
+    .page2-heading {
         font-size: 25px;
-        
     }
 }
+
 
 /* ----------- S Note 8.0 Potrait include browser toolbar and menu ----------- */
 
@@ -2167,17 +2184,21 @@ p {
     ._3-intro .intro-container {
         padding: 0 60px;
     }
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 28px;
     }
     .raise-heading {
         font-size: 43px;
         padding: 10px;
     }
-    .fund-table th, .fund-table td {
+    .fund-table th,
+    .fund-table td {
         font-size: 25px;
     }
-    .page4-pgraph, .page5-pgraph, .land-pgraph2 {
+    .page4-pgraph,
+    .page5-pgraph,
+    .land-pgraph2 {
         width: 100%;
         padding: 20px 15px 20px 30px;
     }
@@ -2188,48 +2209,70 @@ p {
     .page3-container {
         padding: 30px 0px;
     }
-    .paragraph, .page2-heading {
+    .paragraph,
+    .page2-heading {
         font-size: 25px;
         font-weight: 400;
     }
     .page5-container {
         width: 95%;
-         margin: 0 auto;
+        margin: 0 auto;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-weight: 400;
     }
-    .pic4, .pic5 {
+    .pic4,
+    .pic5 {
         height: 55vh;
     }
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph {
         font-size: 25px;
         line-height: 1.2em;
         font-weight: 400;
     }
-    .find-container, .fund-container, .progress-container {
+    .find-container,
+    .fund-container,
+    .progress-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
         -webkit-box-align: left;
-            -ms-flex-align: left;
-                align-items: left;
+        -ms-flex-align: left;
+        align-items: left;
     }
-    .find-heading, .fund-heading, .progress-heading {
+    .find-heading,
+    .fund-heading,
+    .progress-heading {
         -webkit-box-flex: 1;
-            -ms-flex: auto;
-                flex: auto;
+        -ms-flex: auto;
+        flex: auto;
         text-align: left;
         padding: 10px 30px;
     }
     .progress-heading {
         padding-right: 35px;
     }
-    .find-pgraph, .fund-pgraph, .progress-pgraph {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
         padding: 0 30px;
     }
-    
     .dedication-heading {
         text-align: left;
         width: 90%;
@@ -2238,16 +2281,20 @@ p {
     .dedication-container {
         padding: 0;
     }
-    .phase1-heading, .source-heading {
+    .phase1-heading,
+    .source-heading {
         font-size: 50px;
     }
-    .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 30px;
     }
     .phase1-container {
         width: 82%;
     }
-    .source-heading, .source-pgraph {
+    .source-heading,
+    .source-pgraph {
         padding: 0 30px;
     }
     .source-subheading1 {
@@ -2269,19 +2316,38 @@ p {
 /* ----------- S Note 8.0 Potrait ----------- */
 
 @media screen and ( max-width: 610px) and (max-height: 850px) {
-    .pic4, .pic5 {
+    .pic4,
+    .pic5 {
         height: 45vh;
     }
-    .page4-container, .page5-container {
+    .page4-container,
+    .page5-container {
         height: 55vh;
     }
-    .pic6, .pic7 {
+    .pic6,
+    .pic7 {
         height: 60vh;
     }
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph {
         font-size: 22px;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic13, .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic13,
+    .picd1,
+    .picd2,
+    .picd3,
+    .picd4,
+    .picd5,
+    .picd6,
+    .picd7 {
         height: 70vh;
     }
     .pic12 {
@@ -2289,9 +2355,10 @@ p {
     }
 }
 
+
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 420px) and (max-height: 740px){
+@media screen and ( max-width: 420px) and (max-height: 740px) {
     .intro-heading {
         font-size: 34px;
         line-height: 1.1em;
@@ -2308,25 +2375,39 @@ p {
     .page3-container {
         padding: 20px 0;
     }
-    .find-container, .fund-container, .progress-container {
+    .find-container,
+    .fund-container,
+    .progress-container {
         top: 40%;
     }
-    .heading, .phase1-heading, .source-heading {
+    .heading,
+    .phase1-heading,
+    .source-heading {
         font-size: 30px;
     }
-    .find-heading, .raise-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 28px;
     }
-    .page4-pgraph, .page5-pgraph {
+    .page4-pgraph,
+    .page5-pgraph {
         padding: 15px 20px;
     }
-    .find-heading, .raise-heading, .fund-heading, .progress-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading,
+    .progress-heading {
         padding: 10px 20px;
     }
     .land-pgraph2 {
         padding: 10px 30px;
     }
-    .find-pgraph, .fund-pgraph, .progress-pgraph {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
         padding: 0 20px;
     }
     .raise-container {
@@ -2335,27 +2416,97 @@ p {
     .fund-table {
         margin: 10px auto;
     }
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 19px;
     }
     .top-nav {
         padding: 0 25px;
         max-height: 60px;
     }
-    .paragraph, .page2-heading, .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .paragraph,
+    .page2-heading,
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 16px;
     }
-    .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic, .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+    .pic6,
+    .pic7,
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic12,
+    .pic13,
+    .process1-pic,
+    .process2-pic,
+    .process3-pic,
+    .process4-pic,
+    .process5-pic,
+    .process6-pic,
+    .process7-pic,
+    .process8-pic,
+    .process9-pic,
+    .process10-pic,
+    .process11-pic,
+    .picd1,
+    .picd2,
+    .picd3,
+    .picd4,
+    .picd5,
+    .picd6,
+    .picd7 {
         background-size: contain;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic13, .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic, .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic13,
+    .process1-pic,
+    .process2-pic,
+    .process3-pic,
+    .process4-pic,
+    .process5-pic,
+    .process6-pic,
+    .process7-pic,
+    .process8-pic,
+    .process9-pic,
+    .process10-pic,
+    .process11-pic,
+    .picd1,
+    .picd2,
+    .picd3,
+    .picd4,
+    .picd5,
+    .picd6,
+    .picd7 {
         height: 55vh;
         background-position: 50% 100%;
     }
     .pic12 {
         height: 60vh;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 16px;
     }
     .source-pgraph {
@@ -2364,7 +2515,8 @@ p {
     .source-div {
         width: 95%;
     }
-    .source-pic1, .source-pic2 {
+    .source-pic1,
+    .source-pic2 {
         height: 200px;
     }
     .source-subheading1 {
@@ -2378,7 +2530,13 @@ p {
         padding-left: 55px;
         padding-right: 40px;
     }
-    .d1-container, .d2-container, .d3-container, .d4-container, .d5-container, .d6-container, .d7-container {
+    .d1-container,
+    .d2-container,
+    .d3-container,
+    .d4-container,
+    .d5-container,
+    .d6-container,
+    .d7-container {
         width: 95%;
     }
     .raise-container2 {
@@ -2391,8 +2549,8 @@ p {
     .footer-container {
         -webkit-box-orient: vertical;
         -webkit-box-direction: normal;
-            -ms-flex-direction: column;
-                flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
     }
     .social-media-text {
         font-size: 16px;
@@ -2403,25 +2561,53 @@ p {
     }
 }
 
+
 /* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
 
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
-    .pic4, .pic5 {
+    .pic4,
+    .pic5 {
         height: 40vh;
     }
-    .page4-container, .page5-container {
+    .page4-container,
+    .page5-container {
         height: 60vh;
     }
-    .text-block, .link, .paragraph, .page2-heading {
+    .text-block,
+    .link,
+    .paragraph,
+    .page2-heading {
         font-size: 18px;
     }
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 17px;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 17px;
     }
-    .raise-fund, .raise7, .progress {
+    .raise-fund,
+    .raise7,
+    .progress {
         margin-top: 0;
         margin-bottom: 0;
     }
@@ -2431,10 +2617,33 @@ p {
     .raise-heading {
         font-size: 25px;
     }
-    .pic6, .pic7 {
+    .pic6,
+    .pic7 {
         height: 65vh;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic13, .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic, .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic13,
+    .process1-pic,
+    .process2-pic,
+    .process3-pic,
+    .process4-pic,
+    .process5-pic,
+    .process6-pic,
+    .process7-pic,
+    .process8-pic,
+    .process9-pic,
+    .process10-pic,
+    .process11-pic,
+    .picd1,
+    .picd2,
+    .picd3,
+    .picd4,
+    .picd5,
+    .picd6,
+    .picd7 {
         height: 60vh;
     }
 }
@@ -2460,48 +2669,108 @@ p {
         min-height: 40px;
         max-height: 50px;
     }
-    .intro-heading, .heading, .phase1-heading, .source-heading {
+    .intro-heading,
+    .heading,
+    .phase1-heading,
+    .source-heading {
         font-size: 32px;
     }
-    .page1-container, .page3-container {
+    .page1-container,
+    .page3-container {
         padding: 15px 0;
         bottom: 30%;
     }
     .page2 {
         background-position: 35% 50%;
     }
-    .pic4, .pic5 {
+    .pic4,
+    .pic5 {
         height: 40vh;
     }
-    .page4-container, .page5-container {
+    .page4-container,
+    .page5-container {
         height: 60vh;
     }
-    .text-block, .link, .paragraph, .page2-heading {
+    .text-block,
+    .link,
+    .paragraph,
+    .page2-heading {
         font-size: 18px;
     }
-    .find-heading, .raise-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 25px;
     }
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 16px
     }
-    .find-container, .fund-container, .progress-container {
+    .find-container,
+    .fund-container,
+    .progress-container {
         top: 45%;
     }
-    .raise-fund, .raise7, .progress {
+    .raise-fund,
+    .raise7,
+    .progress {
         margin-top: 0;
         margin-bottom: 0;
     }
     .raise-container2 {
         width: 100%;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 16px;
     }
-    .pic6, .pic7 {
+    .pic6,
+    .pic7 {
         height: 65vh;
     }
-    .pic8, .pic9, .pic10, .pic11, .pic13, .process1-pic, .process2-pic, .process3-pic, .process4-pic, .process5-pic, .process6-pic, .process7-pic, .process8-pic, .process9-pic, .process10-pic, .process11-pic, .picd1, .picd2, .picd3, .picd4, .picd5, .picd6, .picd7 {
+    .pic8,
+    .pic9,
+    .pic10,
+    .pic11,
+    .pic13,
+    .process1-pic,
+    .process2-pic,
+    .process3-pic,
+    .process4-pic,
+    .process5-pic,
+    .process6-pic,
+    .process7-pic,
+    .process8-pic,
+    .process9-pic,
+    .process10-pic,
+    .process11-pic,
+    .picd1,
+    .picd2,
+    .picd3,
+    .picd4,
+    .picd5,
+    .picd6,
+    .picd7 {
         height: 60vh;
     }
     .dedication-heading {
@@ -2517,24 +2786,56 @@ p {
 /* ----------- iPhone 6  Potrait----------- */
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 17px;
     }
-    
-    .paragraph, .page2-heading {
+    .paragraph,
+    .page2-heading {
         font-size: 18px;
     }
-    
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 15.5px;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 15.5px;
     }
-    .find-heading, .fund-heading, .raise-heading, .progress-heading {
+    .find-heading,
+    .fund-heading,
+    .raise-heading,
+    .progress-heading {
         padding-bottom: 5px;
     }
-    .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         padding: 10px;
     }
     .source-container {
@@ -2551,31 +2852,62 @@ p {
     }
 }
 
+
 /* ----------- Galaxy Note 5 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 670px) {
-    .text-block, .link {
+    .text-block,
+    .link {
         font-size: 17px;
     }
     .intro-heading {
         padding: 0 15px;
     }
-    .paragraph, .page2-heading {
+    .paragraph,
+    .page2-heading {
         font-size: 17px;
     }
-    .land-pgraph, .land-pgraph2, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .land-pgraph2,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 15.5px;
     }
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 15.5px;
     }
-    .find-container, .fund-container, .progress-container {
+    .find-container,
+    .fund-container,
+    .progress-container {
         top: 48%;
     }
-    .find-heading, .raise-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 20px;
     }
-    .fund-heading, .raise-heading, .progress-heading {
+    .fund-heading,
+    .raise-heading,
+    .progress-heading {
         padding-bottom: 5px;
     }
     .source-container {
@@ -2587,26 +2919,57 @@ p {
         padding-right: 15px;
         background-color: #232321;
     }
-    .source-pic1, .source-pic2 {
+    .source-pic1,
+    .source-pic2 {
         height: 190px;
     }
 }
 
+
 /* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
-    .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         padding: 10px;
     }
 }
 
+
 /* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 560px) {
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading, .source-pgraph {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading,
+    .source-pgraph {
         font-size: 15.5px;
     }
-    .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 15.5px;
     }
     .fund-table {
@@ -2614,10 +2977,14 @@ p {
     }
 }
 
+
 /* ----------- HuaWei Mate9 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
-    .intro-heading, .heading, .phase1-heading, .source-heading {
+    .intro-heading,
+    .heading,
+    .phase1-heading,
+    .source-heading {
         font-size: 30px;
     }
     .heading {
@@ -2629,22 +2996,48 @@ p {
     .intro-pgraph {
         font-size: 18px;
     }
-    .page4-pgraph, .page5-pgraph, .find-pgraph, .land-pgraph2, .fund-pgraph, .progress-pgraph, .fund-table th, .fund-table td, .phase1-pgraph, .phase1-subheading {
+    .page4-pgraph,
+    .page5-pgraph,
+    .find-pgraph,
+    .land-pgraph2,
+    .fund-pgraph,
+    .progress-pgraph,
+    .fund-table th,
+    .fund-table td,
+    .phase1-pgraph,
+    .phase1-subheading {
         font-size: 14px;
     }
-    .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 14px;
     }
-    .find-container, .fund-container, .progress-container, .raise-container2 {
+    .find-container,
+    .fund-container,
+    .progress-container,
+    .raise-container2 {
         top: 48%;
     }
-    .find-heading, .raise-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 22px;
     }
     .dedication-heading {
         padding-right: 45px;
     }
 }
+
 
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
@@ -2658,14 +3051,19 @@ p {
     .paragraph {
         font-size: 16px;
     }
-    .page4-pgraph, .page5-pgraph, .fund-table th, .fund-table td {
+    .page4-pgraph,
+    .page5-pgraph,
+    .fund-table th,
+    .fund-table td {
         font-size: 14px;
         padding: 10px;
     }
     .fund-table {
         margin-top: 5px;
     }
-    .find-pgraph, .fund-pgraph, .progress-pgraph {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
         font-size: 14px;
         padding: 0 10px;
     }
@@ -2673,13 +3071,24 @@ p {
         padding: 10px 20px;
         font-size: 14px;
     }
-    .find-heading, .raise-heading, .fund-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading {
         padding: 0 10px 5px;
     }
     .progress-heading {
         padding-left: 10px;
     }
-    .land-pgraph, .raise-pgraph, .process-pgraph, .d1-pgraph, .d2-pgraph, .d3-pgraph, .d4-pgraph, .d5-pgraph, .d6-pgraph, .d7-pgraph {
+    .land-pgraph,
+    .raise-pgraph,
+    .process-pgraph,
+    .d1-pgraph,
+    .d2-pgraph,
+    .d3-pgraph,
+    .d4-pgraph,
+    .d5-pgraph,
+    .d6-pgraph,
+    .d7-pgraph {
         font-size: 14px;
     }
     .dedication-heading {
@@ -2692,7 +3101,8 @@ p {
     .phase1-container {
         width: 90%;
     }
-    .phase1-pgraph, .phase1-subheading {
+    .phase1-pgraph,
+    .phase1-subheading {
         padding: 0 10px;
     }
     .source-div {
@@ -2700,9 +3110,11 @@ p {
     }
     .source-pgraph {
         padding: 0 30px;
-        margin-bottom: 0;;
+        margin-bottom: 0;
+        ;
     }
-    .source-pic1, .source-pic2 {
+    .source-pic1,
+    .source-pic2 {
         height: 170px;
     }
     .source-heading {
@@ -2730,16 +3142,24 @@ p {
     .heading {
         padding: 0 20px;
     }
-    .find-heading, .raise-heading, .fund-heading, .progress-heading, .dedication-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading,
+    .progress-heading,
+    .dedication-heading {
         font-size: 20px;
     }
-    .find-pgraph, .fund-pgraph, .progress-pgraph {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
         font-size: 13.5px;
     }
     .fund-table {
         width: 95%;
     }
-    .find-heading, .raise-heading, .fund-heading {
+    .find-heading,
+    .raise-heading,
+    .fund-heading {
         padding-bottom: 0;
     }
     .land-pgraph2 {
@@ -2751,14 +3171,18 @@ p {
     .source-div {
         padding-top: 10px;
     }
-    .source-pic1, .source-pic2 {
+    .source-pic1,
+    .source-pic2 {
         height: 160px;
     }
 }
+
 /* ----------- iPhone 5S Potrait----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
-    .find-pgraph, .fund-pgraph, .progress-pgraph {
+    .find-pgraph,
+    .fund-pgraph,
+    .progress-pgraph {
         font-size: 13px;
     }
 }
