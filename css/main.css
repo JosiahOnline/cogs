@@ -1452,7 +1452,7 @@ select {
 
 .googlemap iframe {
     width: 100%;
-    height: 89%;
+    height: 88.5%;
     border-radius: 0.2em;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -1662,7 +1662,7 @@ address,
     }
 
     .googlemap iframe {
-        height: 30.2em;
+        height: 87.8%;
     }
     #announcements .adjust-padding-lr {
     padding: 0 80px;
@@ -1703,15 +1703,8 @@ address,
     .bulletin-row {
         height: 8rem;
     }
-    
     .submit-button {
         padding: 0.66em 1em;
-    }
-    .address {
-        height: 33em;
-    }
-    .googlemap iframe {
-        height: 29em;
     }
     .direction-button {
         height: 50px;
@@ -1778,11 +1771,8 @@ address,
     .newsdescription {
         padding: 0.8em 1em;
     }
-    .address {
-        height: 31em;
-    }
     .googlemap iframe {
-        height: 27.2em;
+        height: 87.2%;
     }
     .direction-button {
         line-height: 1.5em;
@@ -1995,11 +1985,8 @@ address,
     .submit-button {
         margin-top: 0;
     }
-    .address {
-        height: 30em;
-    }
     .googlemap iframe {
-        height: 26.8em;
+        height: 88.8%;
     }
     .send-message-button, .direction-button {
         height: 40px;
@@ -2471,8 +2458,8 @@ address,
     .submit-button {
         padding: 0.65em 1em;
     }
-    .address {
-        height: 34em;
+    .googlemap iframe {
+        height: 87%;
     }
     .location h2,
     .contact-info h2,
@@ -2483,9 +2470,6 @@ address,
     .contact-info p,
     .office-hour p {
         font-size: 1.3rem;
-    }
-    .googlemap iframe {
-        height: 29.6em;
     }
     .send-message-button, .direction-button {
         height: 55px;
@@ -2596,11 +2580,8 @@ address,
     .call-to-action-section {
         height: 42%;
     }
-    .address {
-        height: 31em;
-    }
     .googlemap iframe {
-        height: 27.3em;
+        height: 86.2%;
     }
     .bible-verse {
         font-size: 2.5rem;
@@ -2680,9 +2661,6 @@ address,
     .office-hour p {
         font-size: 1.6rem;
     }
-    .googlemap iframe {
-        height: 27.6em;
-    }
 }
 
 
@@ -2740,7 +2718,6 @@ address,
     .navbar {
         padding-top: 15%;
     }
-    
     .share-website {
         width: 90%;
         margin-top: 15%;
@@ -2916,12 +2893,6 @@ address,
     .pop-container h2 {
         margin-bottom: 10px;
     }
-    .address {
-        height: 32.8em;
-    }
-    .googlemap iframe {
-        height: 29.6em;
-    }
     .call-to-action-section {
         height: 55%;
     }
@@ -2948,6 +2919,9 @@ address,
     .contact-info h2,
     .office-hour h2 {
         font-size: 3rem;
+    }
+    .googlemap iframe {
+        height: 89.4%;
     }
     .bible-verse {
         font-size: 2rem;
@@ -3131,12 +3105,6 @@ address,
     }
     .call-to-action-section {
         height: 64%;
-    }
-    .address {
-        height: 28em;
-    }
-    .googlemap iframe {
-        height: 25em;
     }
 }
 
@@ -3334,12 +3302,6 @@ address,
         width: 50%;
     }
     /*Contact Session*/
-    .address {
-        height: 35em;
-    }
-    .googlemap iframe {
-        height: 30.7em;
-    }
     .direction-button {
         line-height: 1.3em;
     }
@@ -3403,11 +3365,8 @@ address,
     #announcements .adjust-padding-lr {
         padding: 0 35px;
     }
-    .address {
-        height: 37em;
-    }
     .googlemap iframe {
-        height: 32.7em;
+        height: 87.7%;
     }
     .call-to-action-section {
         height: 37%;
@@ -3958,7 +3917,6 @@ window.outerHeight include toolbar and address bar----------- */
         -webkit-box-direction: normal;
             -ms-flex-direction: column;
                 flex-direction: column;
-        height: 68em;
     }
     .location h2,
     .contact-info h2,
@@ -3975,6 +3933,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .googlemap {
         padding-left: 0;
+        height: 32em;
     }
     .direction-button {
         font-size: 1.5rem;
@@ -3985,7 +3944,7 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 2.3rem;
     }
     .section.section-contact {
-        padding: 7em 0em 12em;
+        padding: 6em 0em 8em;
     }
     .adjust-padding-lr {
         padding: 0 40px;
@@ -4088,9 +4047,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .more h3 {
         font-size: 1.9rem;
-    }
-    .section.section-contact {
-        padding: 7em 0em 10em;
     }
 }
 
@@ -4215,13 +4171,6 @@ window.outerHeight include toolbar and address bar----------- */
     .nospam,
     .form-field {
         font-size: 1.3rem;
-    }
-    .address {
-        height: 49em;
-    }
-    .googlemap iframe {
-        height: 15em;
-        min-height: 15em;
     }
     .bible-verse {
         font-size: 1.7rem;
@@ -4669,9 +4618,6 @@ window.outerHeight include toolbar and address bar----------- */
     .section {
         padding: 4em 0;
     }
-    .address {
-        height: 60em;
-    }
     .location h2,
     .contact-info h2,
     .office-hour h2 {
@@ -4702,9 +4648,6 @@ window.outerHeight include toolbar and address bar----------- */
     .direction-button {
         height: 40px;
         padding: 8px;
-    }
-    .googlemap iframe {
-        height: 24em;
     }
     .bible-verse {
         font-size: 1.6rem;
@@ -4834,13 +4777,9 @@ window.outerHeight include toolbar and address bar----------- */
     .container .title {
         padding: 0;
     }
-    .address {
-        height: 59em;
-    }
     .location {
         padding: 1.5em;
     }
-    
     .bible-verse {
         font-size: 1.6rem;
     }
@@ -4929,9 +4868,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .cogs-news-form {
         margin-bottom: 5px;
-    }
-    .address {
-        height: 55em;
     }
     .location {
         padding: 15px;
@@ -5113,9 +5049,6 @@ window.outerHeight include toolbar and address bar----------- */
     .call-to-action-section {
         height: 48%;
     }
-    .address {
-        height: 54em;
-    }
     address, .contact-info p, .office-hour p {
         font-size: 1.4rem;
     }
@@ -5191,7 +5124,7 @@ window.outerHeight include toolbar and address bar----------- */
         right: 5px;
     }
     .card__social {
-        width: 160px;
+        width: 150px;
     }
     .news {
         height: 100px;
@@ -5351,7 +5284,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     
     .card__social {
-        width: 148px;
+        width: 145px;
     }
     .more h3 {
         margin-bottom: 6px;
@@ -5373,9 +5306,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .plan-visit {
         padding-top: 10%;
-    }
-    .address {
-        height: 53em;
     }
     .location h2, .contact-info h2, .office-hour h2 {
         margin: 0 auto;
@@ -5468,7 +5398,6 @@ window.outerHeight include toolbar and address bar----------- */
     .section.section-contact {
         padding: 5em 0 4em;
     }
-    
     .adjust-padding-td {
         padding: 25px 0;
     }
