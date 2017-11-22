@@ -1,6 +1,122 @@
 .main-section {
     background-image: url("../News/img/dance.jpg");
 }
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .4)
+}
+.verse-pgraph {
+    font-size: 1.7rem;
+}
+.topic {
+    font-size: 1.8rem;
+}
+.verse-pgraph {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.join {
+    margin-top: 30px;
+}
+.join a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: white;
+    padding: 0.6em;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+
+.join a:hover {
+    color: rgba(255,105,180,1);
+    background-color: white;
+    font-weight: bold;
+}
+
+@media screen and ( max-width: 1280px) {
+    .join a {
+        font-size: 1.4rem;
+    }
+}
+@media screen and ( max-width: 1280px) and (max-height: 670px) {
+    .join a {
+        font-size: 1.2rem;
+    }
+}
+@media screen and ( max-width: 1024px) {
+    .join a {
+        font-size: 1.3rem;
+    }
+}
+@media screen and ( max-width: 1024px) and ( max-height: 770px) {
+    .join a {
+        font-size: 1.2rem;
+    }
+}
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    .join {
+        margin-top: 20px;
+    }
+}@media screen and ( max-width: 970px) and (max-height: 490px) {
+    .join a {
+        font-size: 1rem;
+        font-weight: bold;
+        color: rgba(255,105,180,1);
+        background-color: white;
+        opacity: 0.95;
+    }
+    .join a:hover {
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .join a {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: rgba(255,105,180,1);
+        background-color: white;
+        opacity: 0.95;
+    }
+    .join a:hover {
+        opacity: 1;
+    }
+}
+
+@media screen and ( max-width: 768px) {
+    .join a {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 610px ) and ( max-height: 940px ) {
+    .join a {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    .join a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and ( max-width: 420px ) and ( max-height: 655px ) {
+    .join a {
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and ( max-width: 380px) {
+    .join {
+        margin-top: 20px;
+    }
+    .join a {
+        font-size: 0.8rem;
+    }
+}
 
 .pic1 {
     background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance4.jpg");
@@ -24,4 +140,80 @@
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media screen and ( max-width: 1024px) {
+    .topic {
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .verse-container {
+        padding-top: 50%;
+    }
+    .verse-pgraph {
+        font-size: 1.4rem;
+        padding-bottom: 0;
+    }
+    .topic {
+        font-size: 1.6rem;
+    }
+}
+
+@media screen and (max-width: 768px){
+    .verse-container {
+        padding-top: 40%;
+    }
+    .verse-pgraph {
+        font-size: 1.3rem;
+    }
+    .topic {
+        font-size: 1.4rem;
+    }
+}
+
+@media screen and (max-width: 610px) and (max-height: 940px) {
+    .verse-container {
+        padding-top: 55%;
+    }
+    .verse-pgraph {
+        font-size: 1rem;
+    }
+    .topic {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    .verse-container {
+        padding-top: 65%;
+    }
+}
+
+@media screen and ( max-width: 380px) {
+    .verse-container {
+        padding-top: 70%;
+    }
+    .verse-pgraph {
+        font-size: 0.9rem;
+    }
+    .topic {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .verse-container {
+        padding-top: 60%;
+    }
+}
+
+@media screen and ( max-width: 360px) and ( max-height: 670px) {
+    .verse-pgraph {
+        font-size: 0.8rem;
+    }
+    .topic {
+        font-size: 1rem;
+    }
 }

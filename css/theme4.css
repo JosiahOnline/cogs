@@ -116,11 +116,14 @@ p {
     border-radius: 4px;
 }
 
+.topic {
+    font-size: 1.8rem;
+}
 .verse-pgraph {
     margin-bottom: 0px;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 1.5rem;
+    padding-left: 5%;
+    padding-right: 5%;
+    font-size: 1.7rem;
     line-height: 1.2em;
 }
 
@@ -540,6 +543,9 @@ p {
 }
 
 @media screen and ( max-width: 1024px) {
+    .topic {
+        font-size: 2rem;
+    }
     .slide-heading {
         bottom: 150px;
         padding: 15px 20px;
@@ -654,6 +660,16 @@ p {
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .verse-container {
+        padding-top: 50%;
+    }
+    .topic {
+        font-size: 1.6rem;
+    }
+    .verse-pgraph {
+        font-size: 1.4rem;
+        padding-bottom: 0;
+    }
     .scroll-down, .fb-container a  {
         font-size: 1rem;
     }
@@ -674,6 +690,15 @@ p {
 }
 
 @media screen and ( max-width: 768px ) {
+    .verse-container {
+        padding-top: 40%;
+    }
+    .topic {
+        font-size: 1.4rem;
+    }
+    .verse-pgraph {
+        font-size: 1.3rem;
+    }
     .slide-heading {
         left: 40.5%;
         bottom: 85px;
@@ -693,6 +718,15 @@ p {
 }
 
 @media screen and ( max-width: 610px ) and ( max-height: 940px ) {
+    .verse-container {
+        padding-top: 55%;
+    }
+    .topic {
+        font-size: 1.2rem;
+    }
+    .verse-pgraph {
+        font-size: 1rem;
+    }
     .slide-heading {
         left: 39.9%;
         padding: 10px 15px;
@@ -717,6 +751,9 @@ p {
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 740px ) {
+    .verse-container {
+        padding-top: 65%;
+    }
     .scroll-down img {
         width: 20px;
     }
@@ -798,6 +835,15 @@ p {
 }
 
 @media screen and ( max-width: 380px ) and ( max-height: 670px ) {
+    .verse-container {
+        padding-top: 70%;
+    }
+    .topic {
+        font-size: 1.1rem;
+    }
+    .verse-pgraph {
+        font-size: 0.9rem;
+    }
     .slide-heading {
         bottom: 85px;
         left: 38%;
@@ -820,7 +866,19 @@ p {
     }
 }
 
+@media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .verse-container {
+        padding-top: 60%;
+    }
+}
+
 @media screen and ( max-width: 360px ) and ( max-height: 670px ) {
+    .topic {
+        font-size: 1rem;
+    }
+    .verse-pgraph {
+        font-size: 0.8rem;
+    }
     .slide-heading {
         bottom: 95px;
         left: 37%;
