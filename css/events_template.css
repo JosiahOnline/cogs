@@ -1,0 +1,168 @@
+html {
+    font-family: Merriweather, serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+    height: 100%;
+}
+
+.body {
+    margin: 0;
+    font-family: Oswald, sans-serif;
+    min-height: 100%;
+    background-color: #fff;
+    font-size: 0.7rem;
+    line-height: 1.45em;
+    color: #333
+}
+
+a {
+    background-color: transparent
+}
+
+a:active,a:hover {
+    outline: 0
+}
+
+img {
+    border: 0;
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+p, button {
+    margin-top: 0;
+    margin-bottom: 0;
+} 
+
+.w-container {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1000px;
+}
+
+.w-container:before,.w-container:after {
+    content: " ";
+    display: table
+}
+
+.w-container:after {
+    clear: both
+}
+
+@media screen and ( max-width: 1441px) {
+    .w-container {
+        max-width: 80%;
+    }
+}
+
+/* ----------- S Tab 10.1 Potrait ----------- */
+
+@media screen and ( max-width: 800px) {
+    .w-container {
+        max-width: 85%;
+    }
+}
+
+
+/* ==========================================================================
+   Start of custom CSS
+   ========================================================================== */
+
+.main-section {
+    position: relative;
+    left: 0px;
+    top: 0px;
+    height: 100vh;
+    background-position: 50% 100%;
+    background-size: cover;
+    font-family: Merriweather, serif;
+    color: #fff;
+    font-weight: 700;
+}
+
+.transparent-layer {
+    display: none;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+}
+.top-nav {
+    position: fixed;
+    background-color: #141e28;
+}
+.filter-container {
+    width: 100%;
+    padding-top: 5%;
+    display: flex;
+    flex-direction: column;
+    color: black;
+    margin-bottom: 10px;
+}
+.search-row, .filter-row {
+    padding-left: 30px;
+    margin-top: 20px;
+}
+.filter-label {
+    font-size: 2rem;
+}
+.filter-group p {
+    font-size: 1.5rem;
+}
+button {
+    font-size: 1rem;
+}
+.filter-row {
+    display: flex;
+    justify-content: space-between;
+}
+.filter-group {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+.filter-buttons, .sort-buttons {
+    display: flex;
+    padding-left: 0;
+}
+.search-group, .filter-buttons, .sort-buttons {
+    margin-top: 10px;
+}
+.filter-buttons {
+    border: 1px solid rgb(70,134,200);
+    width: 65%;
+}
+.filter-buttons button, .sort-buttons button {
+    list-style-type: none;
+    flex: 1;
+    text-align: center;
+    height: 45px;
+}
+.filter-buttons button a{
+    color: rgb(70,134,200);
+    text-decoration: none;
+}
+.filter-buttons button a.active{
+    color: white;
+    background-color: rgb(70,134,200); 
+}
+.sort-buttons button a {
+    color: black;
+    text-decoration: none;
+}
+
+
+.all_events {
+    width: 100%;
+    display: flex;
+}
