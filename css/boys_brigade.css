@@ -2,20 +2,6 @@
     background-image: url("../News/img/boysbrigade.jpg");
     background-position: 50% 100%;
 }
-.transparent-layer {
-    background-color: rgba(0, 0, 0, .4)
-}
-.verse-pgraph {
-    font-size: 1.7rem;
-}
-.topic {
-    font-size: 1.8rem;
-}
-.verse-pgraph {
-    padding-left: 5%;
-    padding-right: 5%;
-}
-
 
 .pic1 {
     background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609284/BoysBrigade/BB1.jpg");
@@ -125,25 +111,19 @@
     background-size: contain;
     background-repeat: no-repeat;
 }
+
 @media screen and ( max-width: 1024px) {
     .main-section {
         background-position: 75% 70%;
-    }
-    .topic {
-        font-size: 2rem;
     }
 }
 
 @media screen and (max-width: 800px) and (max-height: 1140px) {
     .verse-container {
-        padding-top: 50%;
+        padding-top: 45%;
     }
     .verse-pgraph {
-        font-size: 1.4rem;
         padding-bottom: 0;
-    }
-    .topic {
-        font-size: 1.6rem;
     }
 }
 
@@ -151,23 +131,27 @@
     .verse-container {
         padding-top: 40%;
     }
-    .verse-pgraph {
-        font-size: 1.3rem;
-    }
-    .topic {
-        font-size: 1.4rem;
+}
+@media screen and ( max-width: 768px) and (max-height: 930px) {
+    .verse-container {
+        padding-top: 35%;
     }
 }
 
 @media screen and (max-width: 610px) and (max-height: 940px) {
     .verse-container {
-        padding-top: 55%;
+        padding-top: 50%;
     }
     .verse-pgraph {
         font-size: 1rem;
     }
-    .topic {
-        font-size: 1.2rem;
+}
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .verse-container {
+        padding-top: 45%;
+    }
+    .verse-pgraph {
+        font-size: 0.9rem;
     }
 }
 
@@ -176,7 +160,12 @@
         background-position: 75% 1%;
     }
     .verse-container {
-        padding-top: 65%;
+        padding-top: 60%;
+    }
+}
+@media screen and ( max-width: 420px) and ( max-height: 655px) {
+    .verse-container {
+        padding-top: 55%;
     }
 }
 @media screen and ( max-width: 420px) and ( max-height: 630px) {

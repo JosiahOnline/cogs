@@ -1,4 +1,4 @@
-/*----- This theme4 only consist -----------------
+/*----- This theme4 consist -----------------
 - 1.Default Introduction design(Section 1)
 - 2.Share Info(Section 2) 
 - 3.25 pictures & Facebook Link(last Section)
@@ -99,7 +99,7 @@ p {
     right: 0px;
     bottom: 0px;
     height: 100%;
-    background-color: rgba(0, 0, 0, .20);
+    background-color: rgba(0, 0, 0, .4);
 }
 
 .verse-container {
@@ -108,7 +108,7 @@ p {
     display: block;
     width: 100%;
     height: 90%;
-    padding-top: 20%;
+    padding-top: 15%;
     text-align: center;
 }
 
@@ -116,15 +116,20 @@ p {
     border-radius: 4px;
 }
 
-.verse-pgraph {
-    margin-bottom: 0px;
-    padding-left: 15%;
-    padding-right: 15%;
-    font-size: 1.5rem;
+.topic, .verse-pgraph {
     line-height: 1.2em;
+    font-weight: 300;
+    margin-bottom: 5px;
+    padding-left: 5%;
+    padding-right: 5%;
 }
-
-.verse-pgraph, .scroll-down, .fb-link {
+.topic {
+    font-size: 1.8rem;
+}
+.verse-pgraph {
+    font-size: 1.7rem;
+}
+.scroll-down, .fb-link {
     font-weight: 300;
 }
 
@@ -423,7 +428,7 @@ p {
 
 @media screen and (max-width: 1441px) and (orientation: landscape) {
     .verse-container {
-        padding-top: 25%;
+        padding-top: 20%;
     }
     .verse-pgraph {
         font-size: 1.4rem;
@@ -540,6 +545,9 @@ p {
 }
 
 @media screen and ( max-width: 1024px) {
+    .topic {
+        font-size: 2rem;
+    }
     .slide-heading {
         bottom: 150px;
         padding: 15px 20px;
@@ -654,6 +662,16 @@ p {
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
+    .verse-container {
+        padding-top: 50%;
+    }
+    .topic {
+        font-size: 1.6rem;
+    }
+    .verse-pgraph {
+        font-size: 1.4rem;
+        padding-bottom: 0;
+    }
     .scroll-down, .fb-container a  {
         font-size: 1rem;
     }
@@ -674,6 +692,15 @@ p {
 }
 
 @media screen and ( max-width: 768px ) {
+    .verse-container {
+        padding-top: 40%;
+    }
+    .topic {
+        font-size: 1.4rem;
+    }
+    .verse-pgraph {
+        font-size: 1.3rem;
+    }
     .slide-heading {
         left: 40.5%;
         bottom: 85px;
@@ -693,6 +720,15 @@ p {
 }
 
 @media screen and ( max-width: 610px ) and ( max-height: 940px ) {
+    .verse-container {
+        padding-top: 55%;
+    }
+    .topic {
+        font-size: 1.2rem;
+    }
+    .verse-pgraph {
+        font-size: 1rem;
+    }
     .slide-heading {
         left: 39.9%;
         padding: 10px 15px;
@@ -717,6 +753,9 @@ p {
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 740px ) {
+    .verse-container {
+        padding-top: 65%;
+    }
     .scroll-down img {
         width: 20px;
     }
@@ -798,6 +837,15 @@ p {
 }
 
 @media screen and ( max-width: 380px ) and ( max-height: 670px ) {
+    .verse-container {
+        padding-top: 70%;
+    }
+    .topic {
+        font-size: 1.1rem;
+    }
+    .verse-pgraph {
+        font-size: 0.9rem;
+    }
     .slide-heading {
         bottom: 85px;
         left: 38%;
@@ -820,7 +868,19 @@ p {
     }
 }
 
+@media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .verse-container {
+        padding-top: 60%;
+    }
+}
+
 @media screen and ( max-width: 360px ) and ( max-height: 670px ) {
+    .topic {
+        font-size: 1rem;
+    }
+    .verse-pgraph {
+        font-size: 0.8rem;
+    }
     .slide-heading {
         bottom: 95px;
         left: 37%;
@@ -907,9 +967,6 @@ p {
 
 @media screen and ( max-width: 1280px) {
     html {font-size: 22px;}
-    .verse-container {
-        padding-top: 30%;
-    }
 }
 
 /* End of Footer & Scroll-Container */
@@ -917,7 +974,7 @@ p {
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 25%;
+        padding-top: 20%;
     }
 }
 
@@ -932,6 +989,9 @@ p {
     .share-info {
         padding: 30px 0;
     }
+    .verse-container {
+        padding-top: 12%;
+    }
 }
 
 @media screen and ( max-width: 1024px) {
@@ -939,8 +999,11 @@ p {
     .verse-container {
         padding-top: 45%;
     }
+    .topic {
+        font-size: 2rem;
+    }
     .verse-pgraph {
-        font-size: 1.4rem;
+        font-size: 1.6rem;
     }
     .share-button, .share-icon {
         font-size: 1.2rem;
@@ -960,10 +1023,10 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
     .verse-container {
-        padding-top: 26%;
+        padding-top: 25%;
     }
     .verse-pgraph {
-        font-size: 1.3rem;
+        font-size: 1.5rem;
     }
     .share-info {
         padding: 40px 0;
@@ -982,7 +1045,7 @@ p {
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
     .verse-container {
-        padding-top: 18%;
+        padding-top: 12%;
     }
     .share-info {
         padding: 30px 0;
@@ -998,7 +1061,7 @@ p {
 
 @media screen and ( max-width: 970px) and (max-height: 490px) {
     .verse-container {
-        padding-top: 14%;
+        padding-top: 12%;
     }
 }
 
@@ -1006,8 +1069,11 @@ p {
     .verse-container {
         padding-top: 40%;
     }
+    .topic {
+        font-size: 1.6rem;
+    }
     .verse-pgraph {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         line-height: 1.25em;
         padding-bottom: 25px;
     }
@@ -1028,14 +1094,17 @@ p {
     .verse-container {
         padding-top: 32%;
     }
+    .topic {
+        font-size: 1.5rem;
+    }
+    .verse-pgraph {
+        font-size: 1.3rem;
+    }
 }
 
 @media screen and ( max-width: 768px) and (max-height: 930px) {
     .verse-container {
-        padding-top: 26%;
-    }
-    .verse-pgraph {
-        font-size: 1.15rem;
+        padding-top: 35%;
     }
 }
 
@@ -1073,6 +1142,9 @@ p {
     .top-nav .text-block, .top-nav a {
         font-size: 0.9rem;
     }
+    .topic {
+        font-size: 1.1rem;
+    }
     .verse-pgraph {
         font-size: 0.9rem;
         padding-left: 10%;
@@ -1091,7 +1163,7 @@ p {
 
 @media screen and ( max-width: 610px) and (max-height: 850px) {
     .verse-container {
-        padding-top: 45%;
+        padding-top: 50%;
     }
     .verse-pgraph {
         font-size: 0.9rem;
@@ -1148,6 +1220,9 @@ p {
 
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
     html{font-size: 18px;}
+    .topic {
+        font-size: 1.2rem;
+    }
 }
 
 @media screen and ( max-width: 380px) {
