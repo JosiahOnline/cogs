@@ -110,7 +110,29 @@ p, button {
 }
 .search-row, .filter-row {
     padding-left: 30px;
-    margin-top: 20px;
+    padding-right: 30px;
+    margin-top: 40px;
+}
+.textfield {
+    -webkit-appearance: none;
+    border: 2px solid #141e28;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #34495e;
+    font-size: 1rem;
+    padding: 0.5em;
+    -webkit-transition: width .35s ease-in-out;
+    transition: width .35s ease-in-out;
+    width: 30%;
+}
+.textfield:hover {
+    border-color: #141e28;color: #141e28;outline-width: 0;
+}
+.textfield:focus {
+    outline-color: #141e28; 
+}
+input[type=search]:focus {
+  width: 45%;
 }
 .filter-label {
     font-size: 2rem;
@@ -139,22 +161,89 @@ button {
     margin-top: 10px;
 }
 .filter-buttons {
-    border: 1px solid rgb(70,134,200);
-    width: 65%;
+    border: none;
+    width: 95%;
 }
 .filter-buttons button, .sort-buttons button {
     list-style-type: none;
     flex: 1;
     text-align: center;
     height: 45px;
+    padding: 10px 0;
+    border-radius: 0px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.16),
+    0 1px 2px rgba(0, 0, 0, 0.26);
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+    height: 52px;
+    line-height: 50px;
+    padding: 0 15px;
+    position: relative;
+    overflow: hidden;
+    text-transform: uppercase;
+    -webkit-transition: box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition: box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
-.filter-buttons button a{
-    color: rgb(70,134,200);
+.filter-buttons button, .sort-buttons button {
     text-decoration: none;
+    background-color: white;
+    border: none;
 }
-.filter-buttons button a.active{
+.filter-buttons button:nth-child(1), .sort-buttons button:nth-child(1) {
+    border-top-left-radius: 2px;
+    border-bottom-left-radius: 2px;
+}
+.filter-buttons button:last-child, .sort-buttons button:last-child {
+    border-top-right-radius: 2px;
+    border-bottom-right-radius: 2px;
+}
+
+.filter-buttons button {
+     color: rgb(70,134,200);
+}
+
+.sort-buttons button {
+    color: #34495e;
+}
+.filter-buttons button.active{
     color: white;
     background-color: rgb(70,134,200); 
+}
+.sort-buttons button.active{
+    color: white;
+    background-color: #34495e; 
+}
+.filter-buttons button:hover, .filter-buttons button:focus, .filter-buttons button:active {
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+    -webkit-transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index:2;
+}
+.sort-buttons button:hover, .sort-buttons button:focus, .sort-buttons button:active {
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+    -webkit-transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    z-index:2;
+}
+
+.filter-buttons button:focus {
+  outline: 0;
+}
+.sort-buttons button:focus {
+  outline: 0;
+}
+.filter-buttons button .pulse {
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  left: 0;
+  margin: 0 -50%;
+  position: absolute;
+  top: 0;
+  -webkit-transform: scaleX(0) scaleY(0);
+          transform: scaleX(0) scaleY(0);
 }
 .sort-buttons button a {
     color: black;
