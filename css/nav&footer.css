@@ -373,8 +373,12 @@
     }
     .footer {
         height: 6%;
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
-        align-items: baseline;
+        -webkit-box-align: baseline;
+            -ms-flex-align: baseline;
+                align-items: baseline;
         padding: 15px 0;
     }
 }
