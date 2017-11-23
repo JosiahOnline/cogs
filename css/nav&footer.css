@@ -266,6 +266,8 @@
     width: 100%;
     min-height: 55px;
     max-height: 100px;
+    display: flex;
+    justify-content: center;
 }
 
 .footer-container {
@@ -276,10 +278,6 @@
         -ms-flex-align: center;
             align-items: center;
     width: 100%;
-    position: relative;
-    top: 50%;
-    -webkit-transform: perspective(1px) translateY(-50%);
-    transform: perspective(1px) translateY(-50%);
 }
 
 .social-media-text {
@@ -330,37 +328,17 @@
     max-width: 100%;
 }
 
+@media screen and ( max-width: 1280px) and ( max-height: 960px) {
+    .footer-container {
+    -webkit-transform: perspective(1px) translateY(4%);
+        -ms-transform: perspective(1px) translateY(4%);
+            transform: perspective(1px) translateY(4%);
+    }
+}
+
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
     .footer {
         padding: 5px;    
-    }
-}
-
-@media screen and ( max-width: 1024px) and (max-height: 770px) {
-    .footer {
-        padding: 10px 0;
-    }
-}
-
-@media screen and ( max-width: 1024px) and (max-height: 510px) {
-    .footer {
-        min-height: 40px;
-        padding: 0;
-    }  
-    .footer-container {
-        top: 30% !important;
-    }
-}
-
-@media screen and ( max-width: 1100px) and (max-height: 520px) {
-    .social-media-text {
-        font-size: 16px;
-    }
-    .social-icon-link img {
-        width: 24px;
-    }
-    .footer {
-        padding: 0;
     }
 }
 
@@ -372,30 +350,23 @@
         width: 40px;
     }
     .footer {
-        height: 6%;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: baseline;
-            -ms-flex-align: baseline;
-                align-items: baseline;
         padding: 15px 0;
     }
 }
 
 @media screen and ( max-width: 1024px) and (max-height: 770px) {
-    .social-media-text {
+    .footer {
+        padding: 10px 0;
+    }
+     .social-media-text {
         font-size: 20px;
     }
     .social-icon-link img {
         width: 30px;
     }
-    .footer {
-        padding: 10px 0;
-    }
 }
 
-@media screen and ( max-width: 1024px) and (max-height: 510px) { 
+@media screen and ( max-width: 1024px) and (max-height: 510px) {
     .social-media-text {
         font-size: 15px;
     }
@@ -413,8 +384,26 @@
     }
 }
 
+@media screen and ( max-width: 1100px) and (max-height: 520px) {
+    .social-media-text {
+        font-size: 16px;
+    }
+    .social-icon-link img {
+        width: 24px;
+    }
+    .footer {
+        padding: 0;
+        min-height: 50px;
+    }
+}
+
 
 @media screen and ( max-width: 970px) and (max-height: 490px) {
+    .footer-container {
+        -webkit-transform: perspective(1px) translateY(4%);
+            -ms-transform: perspective(1px) translateY(4%);
+                transform: perspective(1px) translateY(4%);
+    }
     .footer {
         min-height: 50px;
     }
@@ -424,10 +413,6 @@
 }
 
 @media screen and ( max-width: 810px) {
-    .footer {
-        height: 8%;
-        padding: 10px 0;
-    }
     .social-media-text {
         font-size: 25px;
     }
@@ -436,34 +421,8 @@
     }
 }
 
-
-@media screen and ( max-width: 740px) and (max-height: 420px) {
-    .footer {
-        min-height: 50px;
-    }
-    .social-media-text {
-        font-size: 16px;
-    }
-    .social-icon-link img {
-        width: 22px;
-    }
-}
-
-@media screen and ( max-width: 670px) and (max-height: 380px) {
-    .footer {
-        min-height: 45px;
-    }
-    .social-media-text {
-        font-size: 14px;
-    }
-    .social-icon-link img {
-        width: 20px;
-    }
-}
-
 @media screen and ( max-width: 610px) and (max-height: 970px) {
     .footer {
-        height: 7%;
         padding: 15px 0;
     }
     .social-media-text {
@@ -475,9 +434,7 @@
 }
 
 @media screen and ( max-width: 610px) and (max-height: 850px) {
-    .footer {
-        padding: 10px 0;
-    }
+    
 }
 
 
@@ -485,8 +442,7 @@
     .footer {
         min-height: 45px;
         max-height: 55px;
-        height: 8%;
-        padding: 0 !important;
+        padding: 10px 0;
     }
     .social-media-text {
         padding-right: 5px;
@@ -535,6 +491,5 @@
         width: 17px;
     }
 }
-
 
 /****** End of Footer Section ********/
