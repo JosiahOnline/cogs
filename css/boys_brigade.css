@@ -103,8 +103,31 @@
     background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1509609298/BoysBrigade/BB25.jpg");
 }
 
-
-.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16, .pic17, .pic18, .pic19, .pic20, .pic21, .pic22, .pic23, .pic24, .pic25 {
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5,
+.pic6,
+.pic7,
+.pic8,
+.pic9,
+.pic10,
+.pic11,
+.pic12,
+.pic13,
+.pic14,
+.pic15,
+.pic16,
+.pic17,
+.pic18,
+.pic19,
+.pic20,
+.pic21,
+.pic22,
+.pic23,
+.pic24,
+.pic25 {
     height: 100vh;
     width: 100%;
     background-position: 50% 50%;
@@ -119,37 +142,18 @@
 }
 
 @media screen and (max-width: 800px) and (max-height: 1140px) {
-    .verse-container {
-        padding-top: 45%;
-    }
     .verse-pgraph {
         padding-bottom: 0;
     }
 }
 
-@media screen and (max-width: 768px){
-    .verse-container {
-        padding-top: 40%;
-    }
-}
-@media screen and ( max-width: 768px) and (max-height: 930px) {
-    .verse-container {
-        padding-top: 35%;
-    }
-}
-
 @media screen and (max-width: 610px) and (max-height: 940px) {
-    .verse-container {
-        padding-top: 50%;
-    }
     .verse-pgraph {
         font-size: 1rem;
     }
 }
+
 @media screen and ( max-width: 610px) and (max-height: 850px) {
-    .verse-container {
-        padding-top: 45%;
-    }
     .verse-pgraph {
         font-size: 0.9rem;
     }
@@ -159,15 +163,8 @@
     .main-section {
         background-position: 75% 1%;
     }
-    .verse-container {
-        padding-top: 60%;
-    }
 }
-@media screen and ( max-width: 420px) and ( max-height: 655px) {
-    .verse-container {
-        padding-top: 55%;
-    }
-}
+
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
     .main-section {
         background-position: 75% 1%;
@@ -175,12 +172,6 @@
 }
 
 @media screen and ( max-width: 380px) {
-    .verse-container {
-        padding-top: 70%;
-    }
-    .verse-pgraph {
-        font-size: 0.9rem;
-    }
     .topic {
         font-size: 1.1rem;
     }
@@ -189,9 +180,6 @@
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
     .main-section {
         background-position: 75% 1%;
-    }
-    .verse-container {
-        padding-top: 60%;
     }
 }
 

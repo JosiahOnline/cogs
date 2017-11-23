@@ -1,7 +1,8 @@
 /*----- This theme4 consist -----------------
 - 1.Default Introduction design(Section 1)
-- 2.Share Info(Section 2) 
-- 3.25 pictures & Facebook Link(last Section)
+- 2."Join" Button
+- 3.Share Info(Section 2) 
+- 4.25 pictures & Facebook Link(last Section)
 Examples: Boys Bridgade, Survival Youth Camp
 ------------------------------------------------*/
 html {
@@ -108,7 +109,16 @@ p {
     display: block;
     width: 100%;
     height: 90%;
-    padding-top: 15%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     text-align: center;
 }
 
@@ -132,7 +142,24 @@ p {
 .scroll-down, .fb-link {
     font-weight: 300;
 }
-
+.join {
+    margin-top: 30px;
+}
+.join a {
+    font-size: 1.2rem;
+    font-weight: 300;
+    line-height: 1.2em;
+    text-decoration: none;
+    color: white;
+    padding: 0.6em;
+    border: 1px solid white;
+    border-radius: 4px;
+}
+.join a:hover {
+    color: rgba(255,105,180,1);
+    background-color: white;
+    font-weight: bold;
+}
 .scroll-down {
     display: inline-block;
     font-size: 1rem;
@@ -427,9 +454,6 @@ p {
 }
 
 @media screen and (max-width: 1441px) and (orientation: landscape) {
-    .verse-container {
-        padding-top: 20%;
-    }
     .verse-pgraph {
         font-size: 1.4rem;
     }
@@ -662,9 +686,6 @@ p {
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
-    .verse-container {
-        padding-top: 50%;
-    }
     .topic {
         font-size: 1.6rem;
     }
@@ -692,14 +713,12 @@ p {
 }
 
 @media screen and ( max-width: 768px ) {
-    .verse-container {
-        padding-top: 40%;
-    }
     .topic {
         font-size: 1.4rem;
     }
     .verse-pgraph {
         font-size: 1.3rem;
+        line-height: 1.2em;
     }
     .slide-heading {
         left: 40.5%;
@@ -720,9 +739,6 @@ p {
 }
 
 @media screen and ( max-width: 610px ) and ( max-height: 940px ) {
-    .verse-container {
-        padding-top: 55%;
-    }
     .topic {
         font-size: 1.2rem;
     }
@@ -753,9 +769,6 @@ p {
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 740px ) {
-    .verse-container {
-        padding-top: 65%;
-    }
     .scroll-down img {
         width: 20px;
     }
@@ -837,9 +850,6 @@ p {
 }
 
 @media screen and ( max-width: 380px ) and ( max-height: 670px ) {
-    .verse-container {
-        padding-top: 70%;
-    }
     .topic {
         font-size: 1.1rem;
     }
@@ -869,9 +879,7 @@ p {
 }
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
-    .verse-container {
-        padding-top: 60%;
-    }
+    
 }
 
 @media screen and ( max-width: 360px ) and ( max-height: 670px ) {
@@ -953,16 +961,12 @@ p {
 
 @media screen and ( max-width: 1370px) and (orientation: landscape) {
     html {font-size: 25px;}
-    .verse-container {
-        padding-top: 25%;
-    }
+    
 }
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {font-size: 20px;}
-    .verse-container {
-        padding-top: 15%;
-    }
+    
 }
 
 @media screen and ( max-width: 1280px) {
@@ -973,14 +977,12 @@ p {
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
     html {font-size: 20px;}
-    .verse-container {
-        padding-top: 20%;
-    }
+    
 }
 
 @media screen and ( max-width: 1280px) and (max-height: 670px) {
-    .verse-container {
-        padding-top: 15%;
+    .join a {
+        font-size: 1.2rem;
     }
 }
 
@@ -989,21 +991,18 @@ p {
     .share-info {
         padding: 30px 0;
     }
-    .verse-container {
-        padding-top: 12%;
-    }
 }
 
 @media screen and ( max-width: 1024px) {
     html {font-size: 28px;}
-    .verse-container {
-        padding-top: 45%;
-    }
     .topic {
         font-size: 2rem;
     }
     .verse-pgraph {
         font-size: 1.6rem;
+    }
+    .join a {
+        font-size: 1.3rem;
     }
     .share-button, .share-icon {
         font-size: 1.2rem;
@@ -1022,11 +1021,11 @@ p {
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {font-size: 20px;}
-    .verse-container {
-        padding-top: 25%;
-    }
     .verse-pgraph {
         font-size: 1.5rem;
+    }
+    .join a {
+        font-size: 1.2rem;
     }
     .share-info {
         padding: 40px 0;
@@ -1037,15 +1036,13 @@ p {
 }
 
 @media screen and ( max-width: 1024px) and ( max-height: 680px) {
-    .verse-container {
-        padding-top: 20%;
-    }
+   
 }
 
 @media screen and ( max-width: 1024px) and ( max-height: 510px) {
     html {font-size: 16px;}
-    .verse-container {
-        padding-top: 12%;
+    .join {
+        margin-top: 20px;
     }
     .share-info {
         padding: 30px 0;
@@ -1060,22 +1057,36 @@ p {
 }
 
 @media screen and ( max-width: 970px) and (max-height: 490px) {
-    .verse-container {
-        padding-top: 12%;
+    .join a {
+        font-size: 1rem;
+        font-weight: bold;
+        color: rgba(255,105,180,1);
+        background-color: white;
+        opacity: 0.95;
+    }
+    .join a:hover {
+        opacity: 1;
     }
 }
 
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
-    .verse-container {
-        padding-top: 40%;
-    }
     .topic {
         font-size: 1.6rem;
     }
     .verse-pgraph {
         font-size: 1.4rem;
+        padding-bottom: 10px;
         line-height: 1.25em;
-        padding-bottom: 25px;
+    }
+    .join a {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: rgba(255,105,180,1);
+        background-color: white;
+        opacity: 0.95;
+    }
+    .join a:hover {
+        opacity: 1;
     }
     .share-pgraph {
         font-size: 1.2rem;
@@ -1091,27 +1102,21 @@ p {
 }
 
 @media screen and ( max-width: 768px) {
-    .verse-container {
-        padding-top: 32%;
-    }
     .topic {
         font-size: 1.5rem;
     }
     .verse-pgraph {
         font-size: 1.3rem;
     }
+    .join a {
+        font-size: 1rem;
+    }
 }
 
 @media screen and ( max-width: 768px) and (max-height: 930px) {
-    .verse-container {
-        padding-top: 35%;
-    }
 }
 
 @media screen and ( max-width: 740px) and (max-height: 420px) {
-    .verse-container {
-        padding-top: 17%;
-    }
     .verse-pgraph {
         padding-bottom: 5px;
     }
@@ -1123,18 +1128,6 @@ p {
     }
     .share-button, .share-icon {
         font-size: 1rem;
-    }
-}
-
-@media screen and ( max-width: 640px) and (max-height: 360px) {
-    .verse-container {
-        padding-top: 15%;
-    }
-}
-
-@media screen and ( max-width: 635px) and (max-height: 420px) {
-    .verse-container {
-        padding-top: 22%;
     }
 }
 
@@ -1150,8 +1143,8 @@ p {
         padding-left: 10%;
         padding-right: 10%;
     }
-    .verse-container {
-        padding-top: 50%;
+    .join a {
+        font-size: 0.85rem;
     }
     .share-pgraph {
         font-size: 1.1rem;
@@ -1162,50 +1155,21 @@ p {
 }
 
 @media screen and ( max-width: 610px) and (max-height: 850px) {
-    .verse-container {
-        padding-top: 50%;
-    }
     .verse-pgraph {
         font-size: 0.9rem;
     }
 }
 
-@media screen and ( max-width: 568px) {
-    .verse-container {
-        padding-top: 18%;
-    }
-}
-
-@media screen and ( max-width: 560px) and (max-height: 360px) {
-    .verse-container {
-        padding-top: 22%;
-    }
-}
-
-@media screen and ( max-width: 540px) {
-    .verse-container {
-        padding-top: 28%;
-    }
-}
-
-@media screen and ( max-width: 530px) {
-    .verse-container {
-        padding-top: 26%;
-    }
-}
-
-@media screen and ( max-width: 480px) and (max-height: 215px) {
-    .verse-container {
-        padding-top: 14%;
-    }
-}
-
 @media screen and ( max-width: 420px) and (max-height: 740px) {
-    .verse-container {
-        padding-top: 55%;
-    }
     .verse-pgraph {
-        font-size: 1rem;    
+        font-size: 1rem;
+        padding-bottom: 5px;
+    }
+    .join {
+        margin-top: 10px;
+    }
+    .join a {
+        font-size: 0.9rem;
     }
     .share-button, .share-icon {
         font-size: 0.9rem;
@@ -1215,6 +1179,9 @@ p {
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
     .verse-pgraph {
         font-size: 0.9rem;
+    }
+    .join a {
+        font-size: 0.85rem;
     }
 }
 
@@ -1226,11 +1193,15 @@ p {
 }
 
 @media screen and ( max-width: 380px) {
-    .verse-container {
-        padding-top: 60%;
+    .topic, .verse-pgraph {
+        padding-left: 2%;
+        padding-right: 2%;
     }
     .verse-pgraph {
-        font-size: 0.9rem;
+        font-size: 0.85rem;
+    }
+    .join a {
+        font-size: 0.7rem;
     }
     .scroll-down {
         font-size: 0.7rem;
@@ -1238,15 +1209,9 @@ p {
 }
 
 @media screen and ( max-width: 380px) and ( max-height: 560px) {
-    .verse-container {
-        padding-top: 42%;
-    }
 }
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
-    .verse-container {
-        padding-top: 50%;
-    }
     .share-button, .share-icon {
         font-size: 0.8rem;
     }
@@ -1262,9 +1227,6 @@ p {
 }
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
-    .verse-container {
-        padding-top: 40%;
-    }
     .verse-pgraph {
         padding-bottom: 10px;
     }
@@ -1283,9 +1245,6 @@ p {
 }
 
 @media screen and ( max-width: 320px) and ( max-height: 480px) {
-    .verse-container {
-        padding-top: 30%;
-    }
 }
 
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
