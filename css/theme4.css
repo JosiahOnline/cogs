@@ -347,15 +347,7 @@ p {
 }
 
 .footer.section .fp-tableCell {
-    height: 60px !important;
-}
-
-.footer-container {
-    position: unset;
-    top: unset;
-    -webkit-transform: unset;
-    -ms-transform: unset;
-        transform: unset;  
+    height: 45px !important;
 }
 
 .social-icons {
@@ -817,6 +809,9 @@ p {
         font-size: 0.9rem;
         padding: 10px;
     }
+    .footer {
+        padding: 0;
+    }
 }
 
 @media screen and ( max-width: 420px ) and ( max-height: 655px ) {
@@ -878,10 +873,6 @@ p {
     }
 }
 
-@media screen and ( max-width: 380px) and ( max-height: 560px) {
-    
-}
-
 @media screen and ( max-width: 360px ) and ( max-height: 670px ) {
     .topic {
         font-size: 1rem;
@@ -936,6 +927,9 @@ p {
     }
     .fb-container {
         bottom: 20px;
+    }
+    .footer.section .fp-tableCell {
+        height: 40px !important
     }
 }
 
