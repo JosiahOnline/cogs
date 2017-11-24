@@ -1,1 +1,16 @@
 ErrorDocument 404 /404.html
+
+# cache images and flash content for 8 days
+<FilesMatch ".(flv|gif|jpg|jpeg|png|ico|swf)$">
+	Header set Cache-Control "max-age=691200"   
+</FilesMatch>
+
+# cache text, css, and javascript files for one week
+<FilesMatch ".(js|css|pdf|txt)$">
+	Header set Cache-Control "max-age=604800"
+</FilesMatch>
+
+# cache html and htm files for one day
+<FilesMatch ".(html|htm)$">
+	Header set Cache-Control "max-age=43200"
+</FilesMatch>
