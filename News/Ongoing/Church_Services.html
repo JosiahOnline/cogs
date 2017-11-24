@@ -137,22 +137,24 @@
                 <h1>Plan a Visit</h1>
                 <h3>Please fill in your details below</h3><span class="close-button" title="Close">Close</span>
             </div>
-            <form action="#">
+            <form data-name="Email Form" id="email-form" name="email-form" action="https://formspree.io/josiahsoh@gmail.com" method="POST">
+                <input type="hidden" name="_subject" value="New Visitor(s) Planning A Visit @COGS"/>
+                <input type="text" name="_gotcha" style="display:none"/>
                 <div class="form-container">
                     <div class="form-row">
                         <!--DON't add autofocus="autofocus" show the input element should automatically get focus once the page reload-->
-                        <input class="form-field w-input" data-name="first-name" id="first-name" maxlength="256" name="first-name" placeholder="Name:" required="required" type="text">
+                        <input class="form-field w-input" data-name="Name 1" id="name-1" maxlength="256" name="Name" placeholder="Name:" required="required" type="text">
                     </div>
                     <div class="form-row">
-                        <input class="form-field w-input" data-name="email" id="email" maxlength="256" name="email" placeholder="Email:" required="required" type="email">
+                        <input class="form-field w-input" data-name="Email 1" id="email-1" maxlength="256" name="Email" placeholder="Email:" required="required" type="email">
                     </div>
                     <div class="form-row">
-                        <input class="form-field w-input" data-name="contact" id="smartphone-number" maxlength="256" name="contact" placeholder="Contact Number:" required="required" type="text">
+                        <input class="form-field w-input" data-name="Contact 1" id="contact-1" maxlength="256" name="Contact" placeholder="Contact Number:" required="required" type="text">
                     </div>
                 </div>
                 <textarea class="form-field text-area w-input" data-name="Additonal Info" id="additional-info" maxlength="5000" name="Additional Info" placeholder="Additional info that you would like us to know (optional)"></textarea>
                 <div class="selection">
-                    <select class="adult">
+                    <select class="adult" name="Adults">
                         <option value="1 Adult">1 Adult</option>
                         <option value="2 Adults">2 Adults</option>
                         <option value="3 Adults">3 Adults</option>
@@ -165,7 +167,7 @@
                         <option value="10 Adults">10 Adults</option>
                     </select>
                     <br>
-                    <select class="child">
+                    <select class="child" name="Child">
                         <option value="0 Child">0 Child</option>
                         <option value="1 Child">1 Child</option>
                         <option value="2 Children">2 Children</option>
@@ -177,7 +179,7 @@
                         <option value="8 Children">8 Children</option>
                     </select>
                     <br>
-                    <select class="infant">
+                    <select class="infant" name="Infant">
                         <option value="0 Infant">0 Infant</option>
                         <option value="1 Infants">1 Infants</option>
                         <option value="2 Infants">2 Infants</option>
@@ -187,7 +189,7 @@
                     <input type="date" name="year/month/day" value="2017-08-01" id="attendance-date" class="service-date"/>
                     <br>
                     <br>
-                    <select class="service-time">
+                    <select class="service-time" name="Service Time">
                         <option value="Saturday ENGLISH 7:30pm">Saturday CHINESE 7:30pm</option>
                         <option value="Sunday CHINESE 7:00am">Sunday CHINESE 7:00am</option>
                         <option value="Sunday ENGLISH 9:30am">Sunday ENGLISH 9:30am</option>
