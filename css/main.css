@@ -730,7 +730,7 @@ select {
     width: 3rem;
     padding: 0;
     margin-left: 10px;
-    background-image: url(img/menu1.png);
+    background-image: url("../img/menu1.png");
     background-size: 3rem;
     background-repeat: no-repeat
 }
@@ -820,7 +820,7 @@ select {
 
 .home-section {
     height: 100vh;
-    background-image: url("img/worship2a.jpg");
+    background-image: url("../img/worship2a.jpg");
     background-position: 17% 50%;
     background-size: cover;
 }
@@ -877,7 +877,7 @@ select {
     flex: 1.4;
     border-top-left-radius: 4px;
     border-bottom-left-radius: 4px;
-    background-image: url("img/bulletin1.jpg");
+    background-image: url("../img/bulletin1.jpg");
     background-position: 50% 50%;
     background-size: cover;
 }
@@ -1586,7 +1586,7 @@ address,
 
 .mission-statement-section {
     height: 100vh;
-    background-image: url("img/worship3a.jpg");
+    background-image: url("../img/worship3a.jpg");
     background-position: 50% 50%;
     background-size: cover;
     text-align: left;
@@ -2275,7 +2275,7 @@ address,
         top: 2%;
         right: 2%;
         padding: 0;
-        background-image: url(img/error.png);
+        background-image: url("../img/error.png");
         background-size: 70px;
         height: 70px;
         width: 70px;
