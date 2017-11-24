@@ -20,7 +20,7 @@
 .pop-pic {
     height: 100vh;
     width: 100%;
-    background-image: url('../img/exciting.jpg');
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1511521115/Christmas/christmas8.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

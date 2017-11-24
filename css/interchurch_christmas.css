@@ -1,5 +1,9 @@
 .main-section {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1510300328/Christmas/christmas3.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1510300336/Christmas/christmas7.jpg");
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .25);
 }
 .join a:hover {
     color: rgba(6,53,75,1);
