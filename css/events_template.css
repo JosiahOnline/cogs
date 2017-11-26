@@ -312,20 +312,15 @@ button {
 }
 
 .top-news {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    height: 600px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: 300px 300px;
+    grid-gap: 30px 25px;
+    
 }
 
 .news {
-    height: 150px;
-    width: 23%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -350,21 +345,24 @@ button {
 }
 
 .main-image {
-    min-width: 100%;
     height: 500px;
 }
-
+.main-news {
+    position: relative;
+    background-image: url(../News/img/s_white4.jpg);
+    top: 0;
+    left: 0;
+    background-size: contain;
+    background-position: center;
+}
 .news-image {
-    min-width: 100%;
-    height: 100%;
+    height: 55%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
 
 .main-news-description {
-    position: relative;
     height: 100%;
-    top: -500px;
     background-color: #141e28;
     opacity: 0.9;
     text-align: center;
@@ -385,9 +383,7 @@ button {
 }
 
 .newsdescription {
-    position: relative;
-    height: 120px;
-    top: 0px;
+    height: 45%;
     background-color: #141e28;
     text-align: left;
     border-bottom-left-radius: 5px;
@@ -465,7 +461,7 @@ button {
     display: none;
     float: right;
     position: relative;
-    margin-top: -140px;
+    margin-top: -155px;
     margin-right: 5px;
     z-index: 3;
 }
