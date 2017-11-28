@@ -104,8 +104,13 @@ p, button {
 .filter-container {
     width: 100%;
     padding-top: 5%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     color: black;
 }
 .search-row, .filter-row {
@@ -115,11 +120,13 @@ p, button {
     -webkit-appearance: none;
     border: 2px solid #141e28;
     border-radius: 4px;
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
     color: #34495e;
     font-size: 1rem;
     padding: 0.5em;
     -webkit-transition: width .35s ease-in-out;
+    -o-transition: width .35s ease-in-out;
     transition: width .35s ease-in-out;
     width: 30%;
 }
@@ -142,16 +149,31 @@ button {
     font-size: 1rem;
 }
 .filter-row {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    justify-content: space-between;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
 }
 .filter-group {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex: 1;
-    flex-direction: column;
-    justify-content: flex-start;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
 }
 .filter-buttons, .sort-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding-left: 0;
 }
@@ -164,12 +186,16 @@ button {
 }
 .filter-buttons button, .sort-buttons button {
     list-style-type: none;
-    flex: 1;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
     text-align: center;
     height: 45px;
     padding: 10px 0;
     border-radius: 0px;
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0.16),
+    -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.16),
+    0 1px 2px rgba(0, 0, 0, 0.26);
+            box-shadow: 0 0 1px rgba(0, 0, 0, 0.16),
     0 1px 2px rgba(0, 0, 0, 0.26);
     cursor: pointer;
     font-size: 14px;
@@ -181,7 +207,11 @@ button {
     overflow: hidden;
     text-transform: uppercase;
     -webkit-transition: box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition: -webkit-box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    -o-transition: box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
     transition: box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
+    transition: box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22), -webkit-box-shadow 0.2s cubic-bezier(0.895, 0.03, 0.685, 0.22);
 }
 .filter-buttons button, .sort-buttons button {
     text-decoration: none;
@@ -214,16 +244,26 @@ button {
 }
 .filter-buttons button:hover, .filter-buttons button:focus, .filter-buttons button:active {
     border-radius: 2px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
     -webkit-transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: -webkit-box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index:2;
 }
 .sort-buttons button:hover, .sort-buttons button:focus, .sort-buttons button:active {
     border-radius: 2px;
-    box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+    -webkit-box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
+            box-shadow: 0 0 6px rgba(0, 0, 0, 0.16), 0 6px 12px rgba(0, 0, 0, 0.32);
     -webkit-transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -webkit-transition: -webkit-box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: -webkit-box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    -o-transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1), -webkit-box-shadow 0.2s cubic-bezier(0.165, 0.84, 0.44, 1);
     z-index:2;
 }
 
@@ -241,7 +281,8 @@ button {
   position: absolute;
   top: 0;
   -webkit-transform: scaleX(0) scaleY(0);
-          transform: scaleX(0) scaleY(0);
+          -ms-transform: scaleX(0) scaleY(0);
+      transform: scaleX(0) scaleY(0);
 }
 .sort-buttons button a {
     color: black;
@@ -251,6 +292,8 @@ button {
 
 .all_events {
     width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -295,7 +338,7 @@ button {
 }
 
 .main-news {
-    height: 500px;
+    height: 34em;
     margin-bottom: 30px;
     border-radius: 4px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -312,20 +355,14 @@ button {
 }
 
 .top-news {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    height: 600px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 23% 23% 23% 23%;
+    grid-template-rows: 300px 300px;
+    grid-gap: 30px 25px; 
 }
 
 .news {
-    height: 150px;
-    width: 23%;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -334,10 +371,20 @@ button {
 
 .news a {
     text-decoration: none;
+    display: inline-block;/*For transform scale purpose*/
+    overflow: hidden;
+    height: 100%;
+}
+
+.news > a {
+    background-color: white;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
 }
 
 .news:hover .newsdescription {
     background-color: #2e80b6;
+
 }
 
 .news:hover .card__share {
@@ -351,20 +398,34 @@ button {
 
 .main-image {
     min-width: 100%;
-    height: 500px;
+    height: 34em;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;   
 }
 
 .news-image {
-    min-width: 100%;
-    height: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    position: relative;
+    height: 55%;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+    overflow: hidden;
+}
+.news:hover .news-image {
+    -webkit-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+    /*-webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+    overflow: hidden;*/
 }
 
 .main-news-description {
     position: relative;
     height: 100%;
-    top: -500px;
+    top: -34em;
+    height: 100%;
     background-color: #141e28;
     opacity: 0.9;
     text-align: center;
@@ -385,16 +446,15 @@ button {
 }
 
 .newsdescription {
-    position: relative;
-    height: 120px;
-    top: 0px;
+    height: 45%;
     background-color: #141e28;
     text-align: left;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-    padding: 0.5em 1em;
+    padding: 1.4em 1.2em;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    z-index:100;
 }
 
 .top-news-title,
@@ -465,7 +525,7 @@ button {
     display: none;
     float: right;
     position: relative;
-    margin-top: -140px;
+    margin-top: -155px;
     margin-right: 5px;
     z-index: 3;
 }
@@ -589,11 +649,17 @@ button {
     html {
         font-size: 20px;
     }
+    .card__share {
+        display: block;
+    }
 }
 
 @media screen and ( max-width: 1370px) and (max-height: 670px) {
     html {
         font-size: 18px;
+    }
+    .card__share {
+        display: none;
     }
 }
 
@@ -604,11 +670,23 @@ button {
     .filter-container, .all-news-container {
         width: 77%;
     }
+    .card__share {
+        display: none;
+    }
 }
 
 @media screen and ( max-width: 1281px) and (max-height: 670px) {
     html {
         font-size: 18px;
+    }
+    .card__share {
+        display: block;
+    }
+}
+
+@media screen and ( max-width: 1281px) and (max-height: 580px) {
+    .card__share {
+        display: none;
     }
 }
 
@@ -623,23 +701,11 @@ button {
         width: 45px;
         height: 45px;
     }
-    .main-news {
-        height: 430px;
-    }
-    .main-image {
-        height: 430px;
-    }
-    .main-news-description {
-        top: -430px;
-    }
     .top-news {
-        height: 560px;
+        grid-template-rows: 250px 250px;
     }
-    .news {
-        height: 140px;
-    }
-    .newsdescription {
-        height: 110px;
+    .card__share {
+        margin-top: -137px;
     }
 }
 
@@ -660,13 +726,7 @@ button {
     .main-news-title {
         font-size: 4.5rem;
     }
-    .main-news,
-    .main-image {
-        height: 500px;
-    }
-    .main-news-description {
-        top: -500px;
-    }
+    
     .news-pgraph3 {
         font-size: 2.5rem;
     }
@@ -677,20 +737,12 @@ button {
         font-size: 3rem;
     }
     .top-news {
-        height: 650px;
-    }
-    .news {
-        height: 155px;
-    }
-    .news {
-       width: 30%; 
-    }
-    .news-image {
-       
+        grid-template-columns: 30.8% 30.8% 30.8%;
+        grid-template-rows: 300px 300px;
+        grid-gap: 30px 30px;
     }
     .newsdescription {
-        height: 140px;
-        padding: 1em;
+        padding: 2.2em 2em;
     }
     .top-news-title {
         font-size: 1.3rem;
@@ -701,13 +753,10 @@ button {
     }
     .card__share {
         display: block;
-        margin-top: -161px;
+        margin-top: -155px;
     }
     .card__social {
         width: 436%;
-    }
-    .card__share {
-        margin-top: -161px;
     }
 }
 
@@ -721,6 +770,9 @@ button {
     }
     .events-icon h2 {
         font-size: 2rem;
+    }
+    .card__share {
+        display: none;
     }
 }
 
