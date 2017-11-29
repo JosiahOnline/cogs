@@ -2555,7 +2555,7 @@ address,
         padding: 0 80px;
     }
     #announcements .adjust-padding-lr {
-        padding: 0 80px;
+        padding: 0 60px;
     }
     #announcements {
         padding: 7em 0 2em;
@@ -2914,7 +2914,7 @@ address,
     }
     .news,
     .news-image {
-        width: 145px;
+        width: 153px;
     }
     .news-image {
         height: 72%;
@@ -2936,9 +2936,9 @@ address,
         transform: translateX(-36px);
     }
     .share-icon {
-        width: 25px;
-        height: 25px;
-        line-height: 25px;
+        width: 28px;
+        height: 28px;
+        line-height: 28px;
         font-size: 11px;
     }
     .top-news {
