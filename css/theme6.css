@@ -108,7 +108,9 @@ p {
     height: 100%;
     background-color: rgba(0, 0, 0, .25);
 }
-
+.previous {
+    cursor:pointer;
+}
 .verse-container {
     position: absolute;
     top: 10%;
