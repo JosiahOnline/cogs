@@ -1243,8 +1243,10 @@ select {
 .main-image {
     min-width: 100%;
     height: 500px;
-    object-fit: cover;
-    object-position: center;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
 }
 
 .news-image {

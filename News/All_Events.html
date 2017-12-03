@@ -67,6 +67,10 @@
                 <a href="../index.html#upcomingEvents" class="link">BACK</a>
             </div>
         </div>
+        <div class="main-message">
+            <h1>The Church of The Good Shepherd (Sandakan)</h1>
+            <h2>"All major news, events & information (shareable)"</h2>
+        </div>
         <div class="filter-container">
             <div class="search-row">
                 <label for="filters-search-input" class="filter-label">Search</label>
@@ -76,27 +80,27 @@
             </div>
             <div class="filter-row">
                 <div class="filter-group">
-                    <p>Filter</p>
-                    <div class="filter-buttons tab">
-                        <button class="button tablinks active" data-tab="tab-1" data-group="upcoming">Upcoming<span class="button-pulse"></span></button>
-                        <button class="button tablinks" data-tab="tab-2" data-group="ongoing">Ongoing<span class="button-pulse"></span></button>
-                        <button class="button tablinks" data-tab="tab-3" data-group="past">Past<span class="button-pulse"></span></button>
+                    <p>Filter Events</p>
+                    <div class="filter-buttons">
+                        <button class="button tablinks active" data-events="upcomingEvents">Upcoming<span class="button-pulse"></span></button>
+                        <button class="button tablinks" data-events="ongoingEvents">Ongoing<span class="button-pulse"></span></button>
+                        <button class="button tablinks" data-events="pastEvents">Past<span class="button-pulse"></span></button>
                     </div>
                 </div>
                 <div class="filter-group">
                     <p>Sort</p>
                     <div class="sort-buttons">
-                        <button class="button tablinks active" data-group="default" onclick="openCity(event, 'Default')">Default<span class="button-pulse"></span></button>
-                        <button class="button tablinks" data-group="title" onclick="openCity(event, 'Title')">Title<span class="button-pulse"></span></button>
-                        <button class="button tablinks" data-group="date" onclick="openCity(event, 'Date')">Date<span class="button-pulse"></span></button>
+                        <button class="button tablinks active">Default<span class="button-pulse"></span></button>
+                        <button class="button tablinks">Title<span class="button-pulse"></span></button>
+                        <button class="button tablinks">Date<span class="button-pulse"></span></button>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="all-news-container tabcontent" id="tab-1">
+        <div class="all-news-container tabcontent active" id="upcomingEvents">
             <div class="news-container">
                 <div class="events-icon">
-                    <a href="#"><img src="../img/calendar1.png"></a>
+                    <a><img src="../img/calendar1.png"></a>
                     <h2>Upcoming Events</h2>
                 </div>
                 <article class="main-news" data-groups="upcoming" data-date="2017-12-17" data-title="Inspired Christmas Night">
@@ -218,10 +222,10 @@
         </div>
         <!-- End of Upcoming events -->
 
-        <div class="all-news-container tabcontent" id="tab-2">
+        <div class="all-news-container tabcontent" id="ongoingEvents">
             <div class="news-container">
                 <div class="events-icon">
-                    <a href="#"><img src="../img/smart-noti.png"></a>
+                    <a><img src="../img/smart-noti.png"></a>
                     <h2>Ongoing Events</h2>
                 </div>
                 <article class="main-news" data-groups="upcoming" data-date="2017-12-17" data-title="Weekly Church Services">
@@ -317,10 +321,10 @@
         </div>
         <!-- End of Oncoming events -->
 
-        <div class="all-news-container tabcontent" id="tab-3">
+        <div class="all-news-container tabcontent" id="pastEvents">
             <div class="news-container">
                 <div class="events-icon">
-                    <a href="#"><img src="../img/trumpet.png"></a>
+                    <a><img src="../img/trumpet.png"></a>
                     <h2>Past Events</h2>
                 </div>
                 <article class="main-news" data-groups="past" data-date="2017-12-17" data-title="Weekly ch Churh Bulletin">
@@ -458,7 +462,6 @@
         </div>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-    <script src="../../js/event.js" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
             $('.card__share > a').on('click', function(e) {
@@ -472,12 +475,36 @@
                 $(".web__share").css('display', 'inline-block');
             });
 
-            $('.tab > button').on('click', function() {
-                e.preventDefault() // prevent default action - hash doesn't appear in url
-                var tab_id = $(this).attr('data-tab');
-                $('.tab button').removeClass('active');
-
+            $('.filter-buttons button').on('click', function() {
+                $('.filter-buttons button').removeClass('active');
+                $(this).addClass('active');
+                //show the click button
+                var panelToShow = $(this).attr('data-events');
+                
+                //hide current panel    
+                $('.tabcontent.active').fadeOut(300, function() {
+                    $(this).removeClass('active');
+                    
+                    $('#'+panelToShow).fadeIn(300, function() {
+                        $(this).addClass('active');
+                    });
+                });
             });
+            
+            // set the max height
+            if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
+            }
+            
+        });
+        $(window).resize(function () {
+            if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
+            }
         });
 
     </script>
