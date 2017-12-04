@@ -698,9 +698,13 @@ select {
     bottom: 0px;
     width: 20%;
     height: 100vh;
-    padding-top: 2%;
     background-color: #141e28;
     z-index: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding-top: 50px;
 }
 
 .main-content {
@@ -725,6 +729,11 @@ select {
 
 .nav-container {
     text-align: center;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 100%;
+    grid-template-rows: 100px auto; 
+    grid-gap: 45px; 
 }
 
 .brand-logo,
@@ -771,6 +780,13 @@ select {
     color: #f9c635;
 }
 
+.nav-container .navbar {
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: 100%; 
+    grid-gap: 50px;
+}
+
 .social-container {
     display: none;
     position: absolute;
@@ -786,10 +802,6 @@ select {
 
 .social-container p:hover {
     color: #f9c635;
-}
-
-.navbar {
-    padding-top: 15%;
 }
 
 .nav-link {
@@ -903,7 +915,6 @@ select {
 
 .share-website {
     padding: 10px;
-    margin-top: 15%;
     margin-left: 5%;
     width: 90%;
     border-radius: 0.2em;
@@ -1688,9 +1699,6 @@ address,
         font-size: 22px;
     }
     /*main navigation*/
-    .main-nav {
-        padding-top: 6%;
-    }
     .beta {
         top: -10px;
         left: -6px;
@@ -1703,8 +1711,11 @@ address,
     .multiple-lang div a {
         font-size: 1rem;
     }
-    .navbar {
-        padding-top: 20%;
+    .nav-container {
+        grid-template-rows: 140px auto;
+    }
+    .nav-container, .nav-container .navbar {
+        grid-gap: 60px;
     }
     .nav-link {
         padding: 1.5em 0;
@@ -1739,9 +1750,6 @@ address,
     html {
         font-size: 20px;
     }
-    .main-nav {
-        padding-top: 4%;
-    }
     .brand-logo,
     .brand-logo p {
         font-size: 1.8rem;
@@ -1749,11 +1757,15 @@ address,
     .multiple-lang div a {
         font-size: 1rem;
     }
-    .navbar {
-        padding-top: 25%;
+    .nav-container {
+        grid-template-rows: 120px auto;
+        grid-gap: 110px;
+    }
+    .nav-container .navbar {
+        grid-gap: 140px;
     }
     .nav-link {
-        padding: 2em 0;
+        padding: 1.6em 0;
         font-size: 1.4rem;
     }
     .card__share {
@@ -1787,16 +1799,17 @@ address,
         font-size: 18px;
     }
     .main-nav {
-        padding-top: 4%;
+        padding-top: 30px;
+    }
+    .nav-container {
+        grid-template-rows: 110px auto;
+        grid-gap: 15px;
+    }
+    .nav-container .navbar {
+        grid-gap: 35px;
     }
     .nav-link {
         padding: 1.2em 0;
-    }
-    .navbar {
-        padding-top: 6%;
-    }
-    .share-website {
-        margin-top: 6%;
     }
     .share-container p {
         font-size: 1rem;
@@ -1848,20 +1861,17 @@ address,
     html {
         font-size: 20px;
     }
-    .navbar {
-        padding-top: 35%;
+    .nav-container {
+        grid-gap: 70px;
+    }
+    .nav-container .navbar {
+        grid-gap: 110px;
     }
     .nav-link {
         padding: 1.6em 0;
     }
     .card__share {
         display: none;
-    }
-    .share-container {
-        padding: 2%;
-    }
-    .share-website {
-        margin-top: 14%;
     }
     .align-right {
         margin-top: 38px;
@@ -1890,11 +1900,14 @@ address,
 /* ----------- Laptop with MDPI screen----------- */
 
 @media screen and ( max-width: 1280px) and (max-height: 800px) {
-    .main-nav {
-        padding-top: 4%;
+    .nav-container {
+        grid-gap: 40px;
+    }
+    .nav-container .navbar {
+        grid-gap: 50px;
     }
     .nav-link {
-        padding: 1em 0;
+        padding: 1.3em 0;
     }
     .fly-in-text li {
         font-size: 4.5rem;
@@ -1917,18 +1930,12 @@ address,
     html {
         font-size: 18px;
     }
-    .main-nav {
-        padding-top: 2%;
-    }
-    .navbar {
-        padding-top: 12%;
+    .nav-container, .nav-container .navbar {
+        grid-gap: 30px;
     }
     .nav-link {
         padding: 1.2em 0;
         font-size: 1.3rem;
-    }
-    .share-website {
-        margin-top: 15%;
     }
     .card__share {
         display: block;
@@ -1959,6 +1966,33 @@ address,
     }
 }
 
+@media screen and ( max-width: 1281px) and (max-height: 580px) {
+    .main-nav {
+        padding-top: 20px;
+    }
+    .nav-container, .nav-container .navbar {
+        grid-gap: 30px;
+    }
+    .nav-link {
+        font-size: 1.1rem;
+        padding: 1.1em 0;
+    }
+    .share-container p {
+        font-size: 0.9rem;
+    }
+    .share-website {
+        padding: 10px 5px;
+    }
+    .share-button {
+        font-size: 0.8rem;
+    }
+    .web__share>.share-icon {
+        width: 35px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 0.9rem;
+    }
+}
 
 /* ----------- Aspire V3 Laptop Landscape ----------- */
 
@@ -1966,15 +2000,20 @@ address,
     html {
         font-size: 16px;
     }
+    .main-nav {
+        padding-top: 30px;
+    }
+    .nav-container {
+        grid-template-rows: 90px auto;
+    }
+    .nav-container, .nav-container .navbar {
+        grid-gap: 30px;
+    }
     .beta {
         top: -6px;
     }
     .nav-link {
-        font-size: 1.1rem;
-        padding: 1.1em 0;
-    }
-    .share-website {
-        margin-top: 14%;
+        padding: 1em 0;
     }
     .share-container p {
         font-size: 0.9rem;
@@ -1983,6 +2022,12 @@ address,
     }
     .share-button {
         font-size: 0.8rem;
+    }
+    .web__share>.share-icon {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 0.9rem;
     }
     .card__share {
         display: none;
@@ -2243,14 +2288,14 @@ address,
         float: none;
         z-index: 1001;
     }
+    .nav-container {
+        grid-template-rows: 200px auto;
+    }
     .hamburger {
         display: inline-block;
         -webkit-box-flex: 1;
         -ms-flex: 1;
         flex: 1;
-    }
-    .cogs-logo {
-        margin-bottom: 30px;
     }
     .menu-links {
         -webkit-transition: 50ms;
@@ -2293,15 +2338,14 @@ address,
     .chinese {
         margin: 0 15px;
     }
-    .navbar {
-        padding-top: 5%;
+    .nav-container, .nav-container .navbar {
+        grid-gap: 70px;
     }
     .nav-link {
         font-size: 3rem;
         padding: 1.5em 0;
     }
     .share-website {
-        margin-top: 7%;
         width: 100%;
         margin-left: 0;
     }
@@ -2323,10 +2367,10 @@ address,
         font-size: 2rem;
     }
     .web__share>.share-icon {
-        width: 80px;
-        height: 80px;
-        line-height: 80px;
-        font-size: 35px;
+        width: 78px;
+        height: 78px;
+        line-height: 78px;
+        font-size: 30px;
     }
     .card__share {
         display: block;
@@ -2569,19 +2613,42 @@ address,
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {
-        font-size: 15px;
+        font-size: 14px;
+    }
+    .main-nav {
+        padding-top: 5%;
+    }
+    .mobile-nav {
+        height: 10%;
+    }
+    .nav-container {
+        grid-template-rows: 150px auto;
+    }
+    .nav-container, .nav-container .navbar {
+        grid-gap: 30px;
     }
     .navbar {
         padding-top: 0;
     }
-    .share-website {
-        margin-top: 3%;
+    .brand-logo, .brand-logo p {
+        font-size: 3rem;
+    }
+    .beta {
+        font-size: 1.5rem;
+        top: -14px;
+    }
+    .multiple-lang div a {
+        font-size: 2rem;
     }
     .share-container {
         padding: 0;
     }
     .share-container p {
+        font-size: 1.6rem;
         margin: 20px 0;
+    }
+    .share-button {
+        font-size: 1.4rem;
     }
     .hero-title-wrapper {
         -webkit-transform: perspective(1px) translateY(-30%);
@@ -2597,18 +2664,21 @@ address,
         font-weight: 400;
     }
     .menu-links .closebtn {
+        background-size: 45px;
+        height: 45px;
+        width: 45px;
         top: 2%;
         right: 4.5%;
     }
     .nav-link {
-        font-size: 2.3rem;
+        font-size: 2rem;
         padding: 1.1em 0;
     }
     .web__share>.share-icon {
-        width: 60px;
-        height: 60px;
-        line-height: 60px;
-        font-size: 27px;
+        width: 47px;
+        height: 47px;
+        line-height: 47px;
+        font-size: 20px;
     }
     .bulletin-row {
         width: 38em;
@@ -2751,9 +2821,6 @@ address,
     .mobile-nav {
         height: 0;
     }
-    .cogs-logo {
-        margin-bottom: 10px;
-    }
     .beta {
         font-size: 1.1rem;
         top: -8px;
@@ -2773,15 +2840,18 @@ address,
     .chinese {
         margin: 0 8px;
     }
+    .nav-container {
+        grid-template-rows: 90px auto;
+        grid-gap: 25px;
+    }
+    .nav-container .navbar {
+        grid-gap: 35px;
+    }
     .nav-link {
         font-size: 1.7rem;
     }
-    .navbar {
-        padding-top: 15%;
-    }
     .share-website {
         width: 90%;
-        margin-top: 15%;
         margin-left: 5%;
         padding: 10px 5px;
     }
@@ -2796,7 +2866,7 @@ address,
         width: 28px;
         height: 28px;
         line-height: 28px;
-        font-size: 13px;
+        font-size: 12px;
     }
     .share-button {
         font-size: 1.2rem;
@@ -3008,14 +3078,12 @@ address,
     .mobile-nav {
         height: 0%;
     }
-    .navbar {
-        padding-top: 10%;
+    .nav-container {
+        grid-template-rows: 80px auto;
+        grid-gap: 20px;
     }
-    .web__share>.share-icon {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 21px;
+    .nav-container .navbar {
+        grid-gap: 30px;
     }
     .section {
         padding: 6em 0;
@@ -3104,13 +3172,13 @@ address,
         width: 28px;
         height: 28px;
         line-height: 28px;
-        font-size: 14px;
+        font-size: 12px;
     }
     .share-icon {
         width: 30px;
         height: 30px;
         line-height: 30px;
-        font-size: 1rem;
+        font-size: 13px;
     }
     .share-icon:hover,
     .share-icon:focus {
@@ -3205,14 +3273,25 @@ address,
     html {
         font-size: 14px;
     }
+    .menu-links .closebtn {
+        background-size: 50px;
+        height: 50px;
+        width: 50px;
+        right: 3%;
+    }
     /*Navigation Bar */
-    .navbar {
-        padding-top: 5%;
+    .nav-container {
+        grid-gap: 40px;
+    }
+    .nav-container .navbar {
+        grid-gap: 70px;
     }
     .nav-link {
+        font-size: 2.8rem;
         padding: 1.4em 0;
     }
     .share-container p {
+        font-size: 2.3rem;
         margin: 0.3em 0 0.6em;
     }
     .web__share>.share-icon {
@@ -3416,6 +3495,15 @@ address,
 /* ----------- iPad Potrait----------- */
 
 @media screen and ( max-width: 768px) {
+    .main-nav {
+        padding-top: 50px;
+    }
+    .nav-container {
+        grid-gap: 50px;
+    }
+    .nav-container .navbar {
+        grid-gap: 75px;
+    }
     .nav-link {
         padding: 1.1em 0;
     }
@@ -3479,7 +3567,13 @@ address,
         font-size: 12px;
     }
     .nav-container {
-        padding-top: 30px;
+        grid-template-rows: 150px auto;
+    }
+    .nav-container, .nav-container .navbar {
+        grid-gap: 70px;
+    }
+    .nav-link {
+        padding: 1.2em 0;
     }
     .beta {
         top: -17px;
@@ -3487,6 +3581,12 @@ address,
     .menu-links .closebtn {
         top: 23px;
         right: 22px;
+    }
+    .web__share>.share-icon {
+        height: 60px;
+        width: 60px;
+        line-height: 60px;
+        font-size: 26px;
     }
     .social-container {
         margin-top: 25px;
@@ -3727,9 +3827,6 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 3rem;
         font-weight: 500;
     }
-    .main-nav {
-        padding-top: 7%;
-    }
     .beta {
         font-size: 1.5rem;
         top: -12px;
@@ -3749,15 +3846,18 @@ window.outerHeight include toolbar and address bar----------- */
         width: 50px;
         right: 4%;
     }
+    .nav-container {
+        grid-template-rows: 140px auto;
+    }
+    .nav-container .navbar {
+        grid-gap: 50px;
+    }
     .navbar {
         padding-top: 0;
     }
     .nav-link {
-        font-size: 2.5rem;
-        padding: 1.5em 0;
-    }
-    .share-website {
-        margin-top: 40px;
+        font-size: 2.2rem;
+        padding: 1.4em 0;
     }
     .share-button {
         font-size: 1.5rem;
@@ -4066,9 +4166,26 @@ window.outerHeight include toolbar and address bar----------- */
     html {
         font-size: 12px;
     }
+    .nav-container {
+        grid-template-rows: 120px auto;
+    }
+    .nav-container .navbar {
+        grid-gap: 60px;
+    }
     .nav-link {
-        ;
         padding: 1.4em 0;
+    }
+    .menu-links .closebtn {
+        background-size: 45px;
+        width: 45px;
+        height: 45px;
+        
+    }
+    .web__share>.share-icon {
+        height: 45px;
+        width: 45px;
+        line-height: 45px;
+        font-size: 18px;
     }
     .fly-in-text li {
         font-size: 5.5rem;
@@ -4382,6 +4499,9 @@ window.outerHeight include toolbar and address bar----------- */
         height: 100px;
         line-height: 100px;
     }
+    .main-nav {
+        padding-top: 30px;
+    }
     .home-container {
         top: 95%;
     }
@@ -4404,11 +4524,8 @@ window.outerHeight include toolbar and address bar----------- */
     .mobile-nav {
         height: 8%;
     }
-    .navbar {
-        padding-top: 5%;
-    }
-    .nav-container {
-        padding-top: 0;
+    .nav-container, .nav-container .navbar {
+        grid-gap: 50px;
     }
     .menu-links .closebtn {
         top: 2%;
@@ -4419,9 +4536,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .beta {
         font-size: 1.2rem;
-    }
-    .cogs-logo {
-        position: unset;
     }
     .brand-logo,
     .brand-logo p {
@@ -4822,18 +4936,19 @@ window.outerHeight include toolbar and address bar----------- */
     .brand-logo p {
         font-size: 2.5rem;
     }
-    .main-nav {
-        padding-top: 4%;
+    .nav-container {
+        grid-gap: 20px;
+    }
+    .nav-container .navbar {
+        grid-gap: 40px;
     }
     .beta {
         font-size: 1.1rem;
         top: -10px;
     }
-    .navbar {
-        padding-top: 0;
-    }
-    .share-website {
-        margin-top: 35px;
+    .menu-links a {
+        font-size: 1.6rem;
+        padding: 1.2em 0;
     }
 }
 
@@ -4841,12 +4956,6 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
 
 @media screen and ( max-width: 420px) and ( max-height: 630px) {
-    .main-nav {
-        padding-top: 6%;
-    }
-    .cogs-logo {
-        margin-bottom: 20px;
-    }
     .multiple-lang {
         margin-top: 0;
     }
@@ -4861,13 +4970,13 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .menu-links a {
         font-size: 1.6rem;
-        padding: 1.1em 0;
+        padding: 1.2em 0;
     }
-    .navbar {
-        padding-top: 5%;
+    .nav-container {
+        grid-gap: 20px;
     }
-    .share-website {
-        margin-top: 30px;
+    .nav-container .navbar {
+        grid-gap: 40px;
     }
     .share-button {
         font-size: 1.1rem;
@@ -4928,9 +5037,18 @@ window.outerHeight include toolbar and address bar----------- */
     html {
         font-size: 12px;
     }
-    .cogs-logo {
-        margin-bottom: 20px;
+    .nav-container {
+        grid-gap: 40px;
     }
+    .nav-container .navbar {
+        grid-gap: 50px;
+    }
+    .web__share>.share-icon {
+        width: 40px;
+        height: 40px;
+        line-height: 40px;
+        font-size: 16px;
+    } 
     .fly-in-text li,
     .section-heading.centered {
         padding-bottom: 12px;
@@ -5035,8 +5153,12 @@ window.outerHeight include toolbar and address bar----------- */
     .mobile-container {
         height: 8%;
     }
-    .cogs-logo {
-        margin-bottom: 15px;
+    .nav-container {
+        grid-template-rows: 100px auto;
+        grid-gap: 20px;
+    }
+    .nav-container .navbar {
+        grid-gap: 40px;
     }
     .menu-links .closebtn {
         top: 2%;
@@ -5222,9 +5344,6 @@ window.outerHeight include toolbar and address bar----------- */
 /* ----------- Galaxy Note 3 Potrait  ----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 640px) {
-    .main-nav {
-        padding-top: 10%;
-    }
     .brand-logo,
     .brand-logo p {
         font-size: 2.8rem;
@@ -5236,8 +5355,8 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1.8rem;
         padding: 1.2em 0;
     }
-    .navbar {
-        padding-top: 5%;
+    .nav-container {
+        grid-gap: 30px;
     }
     .social-container {
         margin-top: 30px;
@@ -5312,19 +5431,22 @@ window.outerHeight include toolbar and address bar----------- */
     .navburger h1 {
         font-weight: 400;
     }
-    .main-nav {
-        padding-top: 4%;
-    }
     .brand-logo,
     .brand-logo p {
         font-size: 2.5rem;
+    }
+    .nav-container {
+        grid-template-rows: 100px auto;
+        grid-gap: 20px;
+    }
+    .nav-container .navbar {
+        grid-gap: 30px;
     }
     .navbar {
         padding-top: 0;
     }
     .menu-links a {
         font-size: 1.6rem;
-        padding: 25px 0;
     }
     .menu-links .closebtn {
         top: 2%;
@@ -5377,7 +5499,7 @@ window.outerHeight include toolbar and address bar----------- */
 
 @media screen and ( max-width: 360px) and ( max-height: 530px) {
     .main-nav {
-        padding-top: 8%;
+        padding-top: 25px;
     }
     .menu-links a {
         padding: 20px 0;
@@ -5416,12 +5538,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .multiple-lang {
         margin-bottom: 15px;
-    }
-    .share-website {
-        margin-top: 25px;
-    }
-    .share-button {
-        font-size: 1.3rem;
     }
     .call-to-action-section {
         height: 52%;
@@ -5480,8 +5596,13 @@ window.outerHeight include toolbar and address bar----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 568px) {
     .main-nav {
-        padding-top: 10%;
         z-index: 1001;
+    }
+    .nav-container {
+        grid-gap: 30px;
+    }
+    .nav-container .navbar {
+        grid-gap: 40px;
     }
     .hamburger {
         margin-left: 7px;
@@ -5497,9 +5618,6 @@ window.outerHeight include toolbar and address bar----------- */
     .menu-links a {
         font-size: 1.7rem;
         padding: 1em 0;
-    }
-    .share-button {
-        font-size: 1.2rem;
     }
     .social-container {
         margin-top: 25px;
@@ -5599,9 +5717,6 @@ window.outerHeight include toolbar and address bar----------- */
         display: -ms-flexbox;
         display: flex;
     }
-    .mobile-nav,
-    .mobile-container,
-    {}
     .menu-links .closebtn {
         display: block;
     }
@@ -5612,6 +5727,12 @@ window.outerHeight include toolbar and address bar----------- */
     .brand-logo,
     .brand-logo p {
         font-size: 2.4rem;
+    }
+    .nav-container {
+        grid-gap: 0;
+    }
+    .nav-container .navbar {
+        grid-gap: 30px;
     }
     .menu-links a {
         font-size: 1.6rem;
@@ -5627,16 +5748,19 @@ window.outerHeight include toolbar and address bar----------- */
         margin: 0 10px;
     }
     .share-button {
-        font-size: 1.2rem;
+        font-size: 1.1rem;
+    }
+    .share-container p {
+        font-size: 1.5rem;
     }
     .social-container {
         margin-top: 15px;
     }
     .web__share>.share-icon {
-        width: 38px;
-        height: 38px;
-        line-height: 38px;
-        font-size: 18px;
+        width: 36px;
+        height: 36px;
+        line-height: 36px;
+        font-size: 16px;
     }
     .hero-subheading {
         width: 75%;
@@ -5710,14 +5834,27 @@ window.outerHeight include toolbar and address bar----------- */
 /* iPhone 5S Potrait */
 
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
-    .cogs-logo {
-        margin-bottom: 10px;
-    }
-    .share-website {
-        margin-top: 15px;
+    .menu-links a {
+        font-size: 1.5rem;
     }
     .social-container {
         margin-top: 12px;
+    }
+    .share-container {
+        padding: 0 10%;
+    }
+    .share-container p {
+        font-size: 1.4rem;
+    }
+    .share-button {
+        font-size: 1rem;
+        padding: 10px 18px;
+    }
+    .web__share>.share-icon {
+        width: 34px;
+        height: 34px;
+        line-height: 34px;
+        font-size: 14px;
     }
     .plan-visit {
         padding-top: 10%;
