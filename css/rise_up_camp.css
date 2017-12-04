@@ -1,0 +1,81 @@
+.main-section {
+    background-image: url("../News/img/riseup1.jpg");
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.transparent-layer {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.verse-container .verse-pgraph {
+    background-color: rgba(0, 0, 0, 0.8);
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.link, .text-block {
+    color: black;
+}
+
+.scroll-container .scroll-down {
+    padding: 12px 17px 8px;
+    border-radius: 50px;
+    background-color: rgba(245,245,245,1);
+    -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+
+.scroll-down img {
+    margin-bottom: 5px;
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369245/Rise%20Up%20Youth%20Camp%2017/riseup3.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369251/Rise%20Up%20Youth%20Camp%2017/riseup7.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369251/Rise%20Up%20Youth%20Camp%2017/riseup8.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369254/Rise%20Up%20Youth%20Camp%2017/riseup10.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369246/Rise%20Up%20Youth%20Camp%2017/riseup14.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369251/Rise%20Up%20Youth%20Camp%2017/riseup16.jpg");
+}
+
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369263/Rise%20Up%20Youth%20Camp%2017/riseup22.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369258/Rise%20Up%20Youth%20Camp%2017/riseup24.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369259/Rise%20Up%20Youth%20Camp%2017/riseup25.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1512369263/Rise%20Up%20Youth%20Camp%2017/riseup26.jpg");
+}
+
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
