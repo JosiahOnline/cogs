@@ -10,8 +10,8 @@ html {
     font-family: Oswald, sans-serif;
     min-height: 100%;
     background-color: #fff;
-    font-size: 0.7rem;
-    line-height: 1.45em;
+    font-size: 16px;
+    line-height: 20px;
     color: #333
 }
 
@@ -343,16 +343,23 @@ button {
 /************************ Beginning of All Container News ***************************************
 *************************************************************************************************
 ************************************************************************************************/
-
-.filter-container, .all-news-container {
-    width: 65%;
+.filter-container {
     margin: 0 auto 30px;
 }
+.filter-container, .all-news-container {
+    width: 65%;
+}
 .all-news-container {
-    font-family: Oswald, sans-serif; 
+    font-family: Oswald, sans-serif;
+    margin: 0 auto;
 }
 .news-container {
     margin-bottom: 100px;
+}
+
+.add-radius img {
+    border: 2px solid goldenrod;
+    border-radius: 50%;
 }
 
 .events-icon {
@@ -449,12 +456,12 @@ button {
 
 .news-image {
     position: relative;
-    min-height: 55%;
-    min-width: 100%;
+    height: 55%;
+    width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: center;
-       object-position: center;  
+    -o-object-position: 50% 0%;
+       object-position: 50% 0%; 
     overflow: hidden;
 }
 .news:hover .news-image {
@@ -707,6 +714,12 @@ button {
     .main-message {
         padding-top: 10%;    
     }
+    .top-news-title {
+        font-size: 1.2rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.1rem;
+    }
     .card__share {
         display: none;
     }
@@ -734,20 +747,45 @@ button {
     .main-message {
         padding-top: 10%;    
     }
+    .newsdescription {
+        padding: 1.4em 1em;
+    }
+    .top-news-title {
+        font-size: 1.1rem;
+    }
+    .news-pgraph2 {
+        font-size: 1rem;
+    }
     .card__share {
         display: block;
     }
 }
 
 @media screen and ( max-width: 1281px) and (max-height: 580px) {
+    .filter-container, .all-news-container {
+        width: 74%;
+    }
+    .news-container {
+        margin-bottom: 60px;
+    }
+    .main-news, .main-image {
+        height: 28em;
+    }
+    .main-news-description {
+        top: -28em;
+    }
     .card__share {
         display: none;
+        margin-top: -160px;
     }
 }
 
 @media screen and ( max-width: 1100px) {
     html {
         font-size: 16px;
+    }
+    .filter-container, .all-news-container {
+        width: 71%;
     }
     .events-icon h2 {
         font-size: 1.6rem;
@@ -756,11 +794,33 @@ button {
         width: 45px;
         height: 45px;
     }
+    .main-news, .main-image {
+        height: 24em;
+    }
+    .main-news-description {
+        top: -24em;
+    }
     .top-news {
         grid-auto-rows: 250px;
     }
+    .top-news-title {
+        font-size: 1rem;
+    }
+    .news-pgraph2 {
+        font-size: 0.9rem;
+    }
     .card__share {
         margin-top: -137px;
+        margin-right: 0;
+    }
+    .card__social {
+        width: 145px;
+    }
+    .share-icon {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 0.9rem;
     }
 }
 
@@ -792,10 +852,10 @@ button {
         font-size: 2rem;
     }
     .main-news, .main-image {
-        height: 45em;
+        height: 30em;
     }
     .main-news-description {
-        top: -45em;
+        top: -30em;
     }
     .main-news-title {
         font-size: 4.5rem;
@@ -814,21 +874,20 @@ button {
         grid-gap: 25px
     }
     .newsdescription {
-        padding: 2.7em 1.5em;
+        padding: 1.7em 1.2em;
     }
     .top-news-title {
         font-size: 1.3rem;
-        line-height: 1.1em;
     }
     .news-pgraph2 {
         font-size: 1.2rem;
     }
     .card__share {
         display: block;
-        margin-top: -155px;
+        margin-top: -160px;
     }
     .card__social {
-        width: 440%;
+        width: 188px;
     }
     .share-toggle, .card__share .card__social .share-icon {
         width: 42px;
@@ -844,6 +903,9 @@ button {
     }
     .main-message {
         padding-top: 12%;    
+    }
+    .news-container {
+        margin-bottom: 80px;
     }
 }
 
@@ -861,7 +923,7 @@ button {
         padding-top: 10%;    
     }
     .filter-container, .all-news-container {
-        width: 76%;
+        width: 72%;
     }
     .all-news-container {
         padding-top: 0%;
@@ -884,32 +946,42 @@ button {
         font-size: 2rem;
     }
     .main-news, .main-image {
-        height: 46em;
+        height: 23em;
     }
     .main-news-description {
-        top: -46em;
+        top: -23em;
     }
     .top-news {
         grid-auto-rows: 220px;
         grid-gap: 25px;
     }
     .top-news-title {
+        font-size: 1.5rem;
+    }
+    .newsdescription {
+        padding: 1.2em 1em;
+    }
+    .news-pgraph2 {
         font-size: 1.4rem;
     }
     .card__social {
-        width: 420%;
+        width: 140px;
+    }
+    .card__social--active {
+        -webkit-transform: translateX(-35px);
+            -ms-transform: translateX(-35px);
+                transform: translateX(-35px);
     }
     .card__share {
         display: none;
-        margin-top: -124px;
+        margin-top: -120px;
         margin-right: 0;
     }
     .share-toggle, .card__share .card__social .share-icon {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 1.2rem;
-        
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px; 
     }
 }
 
@@ -923,6 +995,12 @@ button {
     .events-icon img {
         width: 35px;
         height: 35px;
+    }
+    .main-news, .main-image {
+        height: 22em;
+    }
+    .main-news-description {
+        top: -22em;
     }
     .top-news {
         grid-auto-rows: 220px;
@@ -951,7 +1029,10 @@ button {
         font-size: 1.6rem;
     }
     .filter-container, .all-news-container {
-        width: 90%;
+        width: 94%;
+    }
+    .news-container {
+        margin-bottom: 40px;
     }
     .top-news {
         grid-auto-rows: 220px;
@@ -959,10 +1040,10 @@ button {
     }
     .top-news-title {
         font-size: 1.2rem;
-        line-height: 1.1em;
+        line-height: 1.2em;
     }
     .newsdescription {
-        padding: 2em 1em 1em 1.5em;
+        padding: 1.2em 1em;
     }
     .news-pgraph2 {
         font-size: 1.1rem;
@@ -972,7 +1053,7 @@ button {
         margin-right: 0;
     }
     .card__social {
-        width: 425%;
+        width: 140px;
     }
     .share-toggle, .card__share .card__social .share-icon {
         width: 32px;
@@ -1007,7 +1088,7 @@ button {
         font-size: 1.2rem;
     }
     .newsdescription {
-        padding: 2em 1em 1em 1.2em;
+        padding: 1.3em 1em;
     }
 }
 
@@ -1053,16 +1134,16 @@ button {
 /*        margin-bottom: 40px;*/
     }
     .filter-container, .all-news-container {
-        width: 87%;
+        width: 88%;
     }
     .main-news {
         margin-bottom: 20px;
     }
     .main-news, .main-image {
-        height: 36em;
+        height: 28em;
     }
     .main-news-description {
-        top: -36em;
+        top: -28em;
     }
     .main-news-title {
         padding: 0 10%;
@@ -1099,25 +1180,28 @@ button {
                 flex-direction: row;
     }
     .news-image {
-        min-width: 0%;
-        max-width: 35%;
+        width: 55%;
+        height: 100%;
     }
     .newsdescription {
         height: 100%;
         width: 100%;
-        padding: 2em;
+        padding: 1.8em 1.5em;
         border-left: 2px solid white;
         border-bottom-left-radius: 0;
     }
     .top-news-title {
-        font-size: 1.6rem;
+        font-size: 1.7rem;
     }
     .news-pgraph2 {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
     }
     .card__share {
         margin-top: -56px;
         margin-right: 5px;
+    }
+    .card__social {
+        width: 210px;
     }
     .share-toggle, .card__share .card__social .share-icon {
         width: 48px;
@@ -1139,13 +1223,28 @@ button {
         font-size: 12px;
     }
     .main-news-title {
-        font-size: 3.2rem;
+        padding: 0 16%;
+    }
+    .main-news, .main-image {
+        height: 26em;
+    }
+    .main-news-description {
+        top: -26em;
     }
     .top-news-title {
-        font-size: 1.8rem;
+        font-size: 2rem;
+    }
+    .newsdescription {
+        padding: 1.8em 1.3em;
+    }
+    .news-pgraph3 {
+        font-size: 2.3rem;
     }
     .news-pgraph2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+    .news-pgraph1 {
+        font-size: 2.1rem;
     }
 }
 
@@ -1189,7 +1288,7 @@ button {
         height: 45px;
     }
     .news-container {
-        margin-bottom: 0;
+        margin-bottom: 20px;
     }
     .events-icon img {
         width: 40px;
@@ -1199,10 +1298,10 @@ button {
         font-size: 1.6rem;
     }
     .main-news, .main-image {
-        height: 29em;
+        height: 20em;
     }
     .main-news-description {
-        top: -29em;
+        top: -20em;
     }
     .main-news-title {
         font-size: 3rem;
@@ -1219,14 +1318,20 @@ button {
         grid-gap: 20px;
     }
     .newsdescription {
-        padding: 10px 5px 10px 10px;
+        padding: 1em 0.9em;
         border-left: 1px solid white;
     }
-    .top-news-title, .news-pgraph2 {
+    .top-news-title {
+        font-size: 1.3rem;
+    }
+    .news-pgraph2 {
         font-size: 1.2rem;
     }
     .card__share {
         margin-top: -42px;
+    }
+    .card__social {
+        width: 155px;
     }
     .card__social--active {
         -webkit-transform: translateZ(0);
@@ -1243,6 +1348,11 @@ button {
     }
 }
 
+@media screen and ( max-width: 420px) and (max-height: 660px) {
+    .news-pgraph3 {
+        font-size: 1.5rem;
+    }
+}
 @media screen and ( max-width: 380px) {
     html {
         font-size: 12px;
@@ -1283,23 +1393,44 @@ button {
         margin-bottom: 15px;
     }
     .main-news, .main-image {
-        height: 28em;
-    }
-    .main-news-title {
-        padding: 0 15%;
+        height: 16em;
     }
     .main-news-description {
-        top: -28em;
+        top: -16em;
+    }
+    .main-news-title {
+        padding: 0 16%;
     }
     .top-news {
         grid-auto-rows: 110px; 
         grid-gap: 15px;
+    }
+    .top-news-title {
+        font-size: 1.4rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.3rem;
     }
 }
 
 @media screen and ( max-width: 380px) and ( max-height: 540px) {
     html {
         font-size: 11px
+    }
+}
+
+@media screen and ( max-width: 360px) and ( max-height: 640px) {
+    .share-toggle, .card__share .card__social .share-icon {
+        font-size: 14px;
+    }
+}
+
+@media screen and ( max-width: 360px) and ( max-height: 570px) {
+    .card__social {
+        width: 155px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        font-size: 14px;
     }
 }
 
@@ -1314,27 +1445,33 @@ button {
 }
 
 @media screen and ( max-width: 320px) and ( max-height: 570px) {
+    .filter-container, .all-news-container {
+        width: 92%;
+    }
     .main-news-title {
         font-size: 3rem;
         padding: 0 10%;
     }
     .news-pgraph3 {
         font-size: 1.5rem;
-    }
-    .news-pgraph1 {
-        font-size: 1.3rem;    
-    }                    
+    }                
     .top-news {
         grid-auto-rows: 100px;
     }
     .news-image {
         max-width: 36%;
     }
-    .top-news-title, .news-pgraph2 {
-        font-size: 1.1rem;
+    .top-news-title {
+        font-size: 1.3rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.2rem;
     }
     .card__share {
         margin-top: -38px;
+    }
+    .card__social {
+        width: 145px;
     }
     .card__social--active {
         -webkit-transform: translateZ(0);
@@ -1359,9 +1496,13 @@ button {
     .events-icon h2 {
         font-size: 1.7rem;
     }
-    
-    .top-news-title, .news-pgraph2 {
-        font-size: 1.2rem;
+    .main-news-title {
+        padding: 0 14%;
     }
-    
+    .top-news-title {
+        font-size: 1.4rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.3rem;
+    }
 }

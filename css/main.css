@@ -1116,6 +1116,11 @@ select {
     margin-bottom: 100px;
 }
 
+.add-radius img {
+    border: 2px solid goldenrod;
+    border-radius: 50%;
+}
+
 .events-icon {
     margin-bottom: 10px;
     display: -webkit-box;
@@ -1130,74 +1135,20 @@ select {
 
 .events-icon h2 {
     margin-left: 10px;
+    margin-top: 0;
     margin-bottom: 0;
     font-weight: 500;
+    color: rgba(0, 0, 0, .74);
 }
 
 .events-icon img {
     width: 50px;
     height: 50px;
-}
-
-.add-radius img {
-    border: 2px solid goldenrod;
-    border-radius: 50%;
-}
-
-.more {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-}
-
-.more a {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    text-decoration: none;
-}
-
-.more h3:hover {
-    color: #f36;
-}
-
-.separator:before {
-    background: black;
-    content: "";
-    -webkit-box-flex: 1;
-    -ms-flex-positive: 1;
-    flex-grow: 1;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    height: 2px;
-}
-
-.more h3 {
-    display: inline-block;
-    margin-left: 20px;
-    margin-bottom: 8px;
-    color: black;
-    font-size: 1.2rem;
-}
-
-.more img {
-    margin-left: 5px;
-    width: 25px;
-    height: 25px;
+    cursor: context-menu;
 }
 
 .main-news {
-    height: 500px;
+    height: 34em;
     margin-bottom: 30px;
     border-radius: 4px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
@@ -1214,32 +1165,34 @@ select {
 }
 
 .top-news {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    height: 300px;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
+    display: grid;
+    max-width: 100%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 300px;
+    grid-gap: 30px 25px; 
 }
 
 .news {
-    height: 150px;
-    width: 220px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-radius: 4px;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
 
 .news a {
     text-decoration: none;
+    display: inline-block;/*For transform scale purpose*/
+    overflow: hidden;
+    height: 100%;
+}
+
+.news > a {
+    background-color: white;
+    border-radius: 4px;
 }
 
 .news:hover .newsdescription {
     background-color: #2e80b6;
+
 }
 
 .news:hover .card__share {
@@ -1253,25 +1206,37 @@ select {
 
 .main-image {
     min-width: 100%;
-    height: 500px;
+    height: 34em;
     -o-object-fit: cover;
        object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+       object-position: center;   
 }
 
 .news-image {
-    max-width: 100%;
-    height: 100%;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    width: 220px;
+    position: relative;
+    height: 55%;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: 50% 0%;
+       object-position: 50% 0%;  
+    overflow: hidden;
+}
+.news:hover .news-image {
+    -webkit-transition: all 0.5s linear;
+            -o-transition: all 0.5s linear;
+            transition: all 0.5s linear;
+    /*-webkit-transform: scale3d(1.1, 1.1, 1.1);
+            transform: scale3d(1.1, 1.1, 1.1);
+    overflow: hidden;*/
 }
 
 .main-news-description {
     position: relative;
     height: 100%;
-    top: -500px;
+    top: -34em;
+    height: 100%;
     background-color: #141e28;
     opacity: 0.9;
     text-align: center;
@@ -1292,14 +1257,12 @@ select {
 }
 
 .newsdescription {
-    position: relative;
-    height: 120px;
-    top: 0px;
+    height: 45%;
     background-color: #141e28;
     text-align: left;
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    padding: 0.5em 1em;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    padding: 1.4em 1.2em;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
@@ -1315,6 +1278,7 @@ select {
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.4em;
+    margin-top: 0;
     margin-bottom: 5px;
 }
 
@@ -1328,6 +1292,7 @@ select {
 .main-news-title {
     font-size: 4rem;
     line-height: 1em;
+    margin-top: 0;
     margin-bottom: 5px;
 }
 
@@ -1347,17 +1312,6 @@ select {
 .news-pgraph3 span {
     color: #f36;
     text-decoration: underline;
-}
-
-.feedback-pgraph span a {
-    color: #f36;
-    font-weight: 700;
-    text-decoration: underline;
-}
-
-.feedback-pgraph span {
-    color: #f36;
-    font-weight: 700;
 }
 
 .fa-whatsapp {
@@ -1382,7 +1336,7 @@ select {
     display: none;
     float: right;
     position: relative;
-    margin-top: -140px;
+    margin-top: -155px;
     margin-right: 5px;
     z-index: 3;
 }
@@ -1418,6 +1372,7 @@ select {
     -o-transition: transform 0.35s ease;
     transition: transform 0.35s ease;
     transition: transform 0.35s ease, -webkit-transform 0.35s ease;
+    z-index: 1000;
 }
 
 .share-toggle.share-expanded:before {
@@ -1488,6 +1443,59 @@ select {
 .googleplus:hover,
 .whatsapp:hover {
     color: #eee;
+}
+
+.more {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.more a {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.more h3:hover {
+    color: #f36;
+}
+
+.separator:before {
+    background: black;
+    content: "";
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    height: 2px;
+}
+
+.more h3 {
+    display: inline-block;
+    margin-left: 20px;
+    margin-bottom: 8px;
+    color: black;
+    font-size: 1.2rem;
+}
+
+.more img {
+    margin-left: 5px;
+    width: 25px;
+    height: 25px;
 }
 
 .address {
@@ -1669,7 +1677,10 @@ address,
     line-height: 1.3em;
     font-weight: 300;
 }
-
+.feedback-pgraph span, .feedback-pgraph span a {
+    color: #f36;
+    font-weight: bold;
+}
 .bulletin-row {
     padding-right: 20px;
     padding-left: 20px;
@@ -1838,13 +1849,10 @@ address,
         padding: 5em 0;
     }
     .top-news-title {
-        font-size: 1rem;
+        font-size: 1.2rem;
     }
     .news-pgraph2 {
-        font-size: 0.9rem;
-    }
-    .newsdescription {
-        padding: 0.8em 1em;
+        font-size: 1.1rem;
     }
     .googlemap iframe {
         height: 87.2%;
@@ -1946,6 +1954,15 @@ address,
     #welcome {
         padding: 6em 0;
     }
+    .newsdescription {
+        padding: 1.4em 1em;
+    }
+    .top-news-title {
+        font-size: 1.1rem;
+    }
+    .news-pgraph2 {
+        font-size: 1rem;
+    }
     .plan-visit {
         padding-top: 8%;
     }
@@ -1977,8 +1994,21 @@ address,
         font-size: 1.1rem;
         padding: 1.1em 0;
     }
+    .news-container {
+        margin-bottom: 60px;
+    }
+    .main-news, .main-image {
+        height: 28em;
+    }
+    .main-news-description {
+        top: -28em;
+    }
     .share-container p {
         font-size: 0.9rem;
+    }
+    .card__share {
+        display: none;
+        margin-top: -160px;
     }
     .share-website {
         padding: 10px 5px;
@@ -2063,24 +2093,33 @@ address,
         width: 45px;
         height: 45px;
     }
-    .main-news {
-        height: 430px;
-    }
-    .main-image {
-        height: 430px;
+    .main-news, .main-image {
+        height: 24em;
     }
     .main-news-description {
-        top: -430px;
+        top: -24em;
     }
     .top-news {
-        height: 285px;
+        grid-auto-rows: 250px;
     }
-    .news {
-        width: 180px;
-        height: 140px;
+    .top-news-title {
+        font-size: 1rem;
     }
-    .news-image {
-        width: 180px;
+    .news-pgraph2 {
+        font-size: 0.9rem;
+    }
+    .card__share {
+        margin-top: -137px;
+        margin-right: 0;
+    }
+    .card__social {
+        width: 145px;
+    }
+    .share-icon {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 0.9rem;
     }
     .more h3 {
         margin-bottom: 4px;
@@ -2466,15 +2505,14 @@ address,
     .events-icon h2 {
         font-size: 2rem;
     }
-    .main-news-title {
-        font-size: 4.5rem;
-    }
-    .main-news,
-    .main-image {
-        height: 500px;
+    .main-news, .main-image {
+        height: 30em;
     }
     .main-news-description {
-        top: -500px;
+        top: -30em;
+    }
+    .main-news-title {
+        font-size: 4.5rem;
     }
     .news-pgraph3 {
         font-size: 2.5rem;
@@ -2486,35 +2524,34 @@ address,
         font-size: 3rem;
     }
     .top-news {
-        height: 320px;
-    }
-    .news {
-        height: 155px;
-    }
-    .news,
-    .news-image {
-        width: 205px;
+        grid-auto-rows: 300px;
+        grid-gap: 25px
     }
     .newsdescription {
-        height: 140px;
-        padding: 1em;
+        padding: 1.7em 1.2em;
     }
     .top-news-title {
         font-size: 1.3rem;
-        line-height: 1.1em;
     }
     .news-pgraph2 {
         font-size: 1.2rem;
     }
+    .card__share {
+        display: block;
+        margin-top: -160px;
+    }
+    .card__social {
+        width: 188px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        width: 42px;
+        height: 42px;
+        line-height: 42px;
+        font-size: 1rem;
+    }
     .more h3 {
         font-size: 1.5rem;
         margin-bottom: 8px;
-    }
-    .card__social {
-        width: 436%;
-    }
-    .card__share {
-        margin-top: -161px;
     }
     .call-to-action-section {
         height: 26%;
@@ -2601,7 +2638,7 @@ address,
         padding: 0 80px;
     }
     #announcements .adjust-padding-lr {
-        padding: 0 60px;
+        padding: 0 5%;
     }
     #announcements {
         padding: 7em 0 2em;
@@ -2613,7 +2650,7 @@ address,
 
 @media screen and ( max-width: 1024px) and ( max-height: 770px) {
     html {
-        font-size: 14px;
+        font-size: 15px;
     }
     .main-nav {
         padding-top: 5%;
@@ -2691,11 +2728,11 @@ address,
     #welcome {
         height: 110%
     }
+    .news-container {
+        margin-bottom: 80px;
+    }
     .news-pgraph1 {
         font-size: 2.3rem;
-    }
-    .top-news {
-        height: 330px;
     }
     .top-news-title {
         font-size: 1.3rem;
@@ -2975,52 +3012,43 @@ address,
     .events-icon h2 {
         font-size: 2rem;
     }
-    .main-news {
-        height: 330px;
-    }
-    .main-image {
-        height: 330px;
+    .main-news, .main-image {
+        height: 23em;
     }
     .main-news-description {
-        top: -330px;
-    }
-    .news,
-    .news-image {
-        width: 153px;
-    }
-    .news-image {
-        height: 72%;
-    }
-    .newsdescription {
-        height: 100px;
-        padding: 0.8em;
-    }
-    .card__share {
-        margin-top: -113px;
-        display: none;
-    }
-    .card__social {
-        width: 450%;
-    }
-    .card__social--active {
-        -webkit-transform: translateX(-36px);
-        -ms-transform: translateX(-36px);
-        transform: translateX(-36px);
-    }
-    .share-icon {
-        width: 28px;
-        height: 28px;
-        line-height: 28px;
-        font-size: 11px;
+        top: -23em;
     }
     .top-news {
-        height: 235px;
+        grid-auto-rows: 220px;
+        grid-gap: 25px;
     }
     .top-news-title {
-        font-size: 1.4rem;
+        font-size: 1.5rem;
+    }
+    .newsdescription {
+        padding: 1.2em 1em;
     }
     .news-pgraph2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+    .card__social {
+        width: 140px;
+    }
+    .card__social--active {
+        -webkit-transform: translateX(-35px);
+            -ms-transform: translateX(-35px);
+                transform: translateX(-35px);
+    }
+    .card__share {
+        display: none;
+        margin-top: -120px;
+        margin-right: 0;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px; 
     }
     .more h3 {
         font-size: 1.6rem;
@@ -3106,9 +3134,6 @@ address,
     #announcements {
         padding: 4em 0 2em;
     }
-    #announcements .adjust-padding-lr {
-        padding: 0 60px;
-    }
     .events-icon {
         margin-bottom: 5px;
     }
@@ -3116,34 +3141,24 @@ address,
         width: 35px;
         height: 35px;
     }
-    .main-news {
-        height: 350px;
-        margin-bottom: 20px;
-    }
-    .main-image {
-        height: 350px;
+    .main-news, .main-image {
+        height: 22em;
     }
     .main-news-description {
-        top: -350px;
+        top: -22em;
     }
     .top-news {
-        height: 210px;
-    }
-    .news,
-    .news-image {
-        width: 150px;
-    }
-    .news {
-        height: 140px;
-        margin-bottom: 20px;
-    }
-    .newsdescription {
-        height: 90px;
-    }
-    .top-news-title {
-        font-size: 1.4rem;
+        grid-auto-rows: 220px;
+        grid-gap: 20px 18px;
     }
     .news-pgraph2 {
+        font-size: 1.3rem;
+    }
+    .card__share {
+        display: block;
+        margin-top: -118px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
         font-size: 1.3rem;
     }
     .more h3 {
@@ -3153,20 +3168,6 @@ address,
     .more img {
         width: 20px;
         height: 20px;
-    }
-    .card__share {
-        display: block;
-        margin-top: -105px;
-        margin-right: 2px;
-    }
-    .card__social {
-        width: 470%;
-        right: 0;
-    }
-    .card__social--active {
-        -webkit-transform: translateX(-24px);
-        -ms-transform: translateX(-24px);
-        transform: translateX(-24px);
     }
     .web__share>.share-icon {
         width: 28px;
@@ -3413,58 +3414,38 @@ address,
     #announcements {
         padding: 6em 0 0;
     }
-    .main-news {
-        height: 390px;
-    }
-    .main-image {
-        height: 390px;
-    }
-    .main-news-title {
-        font-size: 4rem;
-    }
-    .news-pgraph3 {
-        font-size: 2.5rem;
-    }
-    .news-pgraph1 {
-        font-size: 2.3rem;
-    }
-    .main-news-description {
-        top: -390px;
-    }
-    .news,
-    .news-image {
-        width: 170px;
-        height: 125px;
-    }
-    .newsdescription {
-        height: 110px;
-    }
-    .card__share {
-        margin-top: -130px;
+    .news-container {
+        margin-bottom: 80px;
     }
     .top-news {
-        height: 260px;
-    }
-    .more h3 {
-        margin-bottom: 6px;
-    }
-    .news {
-        margin-bottom: 160px;
+        grid-auto-rows: 220px;
+        grid-gap: 20px 18px;
     }
     .top-news-title {
         font-size: 1.2rem;
+        line-height: 1.2em;
+    }
+    .newsdescription {
+        padding: 1.2em 1em;
     }
     .news-pgraph2 {
         font-size: 1.1rem;
     }
     .card__share {
-        margin-right: 1px;
+        margin-top: -120px;
+        margin-right: 0;
     }
-    .share-icon {
+    .card__social {
+        width: 140px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
         width: 32px;
         height: 32px;
         line-height: 32px;
-        font-size: 14px;
+        font-size: 0.9rem;
+    }
+    .more h3 {
+        margin-bottom: 6px;
     }
     .submit-button {
         padding: 0.55em 1em;
@@ -3484,7 +3465,7 @@ address,
         font-size: 3rem;
     }
     #announcements .adjust-padding-lr {
-        padding: 0 40px;
+        padding: 0 3%;
     }
     .adjust-padding-lr {
         padding: 0 50px;
@@ -3511,25 +3492,14 @@ address,
         padding: 6em 0 0;
     }
     .top-news {
-        height: 280px;
+        grid-gap: 15px 10px;
     }
-    .news {
-        margin-bottom: 140px;
-    }
-    .share-icon {
-        width: 32px;
-        height: 32px;
-        line-height: 32px;
-        font-size: 15px;
-    }
-    .card__share {
-        margin-top: -38px;
-    }
-    .card__social {
-        width: 440%;
-    }
-    .newsdescription {
-        height: 120px;
+    .card__social--active {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transform: translateX(-43px);
+        -ms-transform: translateX(-43px);
+        transform: translateX(-43px);
     }
     #welcome {
         height: 95%;
@@ -3541,9 +3511,6 @@ address,
     #attendance-date,
     .form-field {
         margin-bottom: 0.5em;
-    }
-    #announcements .adjust-padding-lr {
-        padding: 0 35px;
     }
     .googlemap iframe {
         height: 87.7%;
@@ -3724,9 +3691,6 @@ address,
     .news-pgraph1 {
         font-size: 3rem;
     }
-    .news {
-        margin-bottom: 130px;
-    }
     .call-to-action-section {
         height: 85%;
     }
@@ -3750,10 +3714,6 @@ address,
     }
     #welcome {
         height: 320%;
-    }
-    .news,
-    .news-image {
-        width: 180px;
     }
     .card__social {
         width: 435%;
@@ -3803,10 +3763,6 @@ address,
     }
     .main-news {
         height: 300px;
-    }
-    .news,
-    .news-image {
-        width: 165px;
     }
     .main-news-title {
         font-size: 4em;
@@ -3951,6 +3907,28 @@ window.outerHeight include toolbar and address bar----------- */
     #announcements {
         padding: 5em 0 0;
     }
+    .main-news {
+        margin-bottom: 20px;
+    }
+    .main-news, .main-image {
+        height: 28em;
+    }
+    .main-news-description {
+        top: -28em;
+    }
+    .main-news-title {
+        padding: 0 10%;
+    }
+    .news-pgraph3 {
+        font-size: 2rem;
+    }
+    .news-pgraph3, .news-pgraph1 {
+        padding: 0 6%;
+        font-weight: 300;
+    }
+    .news-pgraph1 {
+        font-size: 1.8rem;
+    }
     .events-icon img {
         width: 45px;
         height: 45px;
@@ -3958,102 +3936,56 @@ window.outerHeight include toolbar and address bar----------- */
     .events-icon h2 {
         font-size: 2rem;
     }
-    .main-news {
-        height: 293px;
-        margin-bottom: 20px;
-    }
-    .main-image {
-        height: 293px;
-    }
-    .main-news-description {
-        top: -293px;
-    }
-    .main-news-title {
-        font-size: 4.5rem;
-        padding: 0 10%;
-        margin-bottom: 5px;
-    }
-    .news-pgraph3 {
-        font-size: 2rem;
-        padding: 0 6%;
-    }
-    .news-pgraph1 {
-        font-size: 1.8rem;
-        padding: 0 6%;
-    }
-    .news-pgraph2 {
-        font-size: 1.4rem;
-    }
-    .section-title-group {
-        margin-bottom: 60px;
-    }
     .top-news {
-        height: 720px;
+        grid-template-columns: 100%;
+        grid-auto-rows: 170px; 
+        grid-gap: 20px;
     }
-    .top-news-title {
-        font-size: 1.6rem;
-    }
-    .news {
-        width: 100%;
-        height: 160px;
-        margin-bottom: 0;
-        border-radius: 5px;
+    .news > a {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: row;
+                flex-direction: row;
     }
     .news-image {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
-        border-top-right-radius: 0;
-        background-position: 50% 50%;
-        background-size: cover;
-        width: 39.6%;
+        width: 55%;
         height: 100%;
     }
     .newsdescription {
-        top: -160.6px;
-        left: 40%;
-        width: 60%;
-        height: 161px;
-        border-top-right-radius: 5px;
-        border-top-left-radius: 0;
+        height: 100%;
+        width: 100%;
+        padding: 1.8em 1.5em;
+        border-left: 2px solid white;
         border-bottom-left-radius: 0;
-        -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0), 0 2px 4px rgba(0, 0, 0, 0);
+    }
+    .top-news-title {
+        font-size: 1.7rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.5rem;
     }
     .card__share {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        margin-top: 0;
-        margin-right: 0;
-        top: -225px;
-        right: 12px;
-    }
-    .card__social--active {
-        -webkit-transform: translateX(-15px);
-        -ms-transform: translateX(-15px);
-        transform: translateX(-15px);
+        margin-top: -56px;
+        margin-right: 5px;
     }
     .card__social {
-        position: relative;
-        width: 240px;
+        width: 210px;
     }
-    .news:hover .card__share {
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
+    .share-toggle, .card__share .card__social .share-icon {
+        width: 48px;
+        height: 48px;
+        line-height: 48px;
+        font-size: 1.4rem;
     }
-    .card__social>.share-icon {
-        margin-left: 5px;
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 23px;
-    }
-    .share-toggle {
-        width: 50px;
-        height: 50px;
-        line-height: 50px;
-        font-size: 23px;
+    .card__social--active {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transform: translateX(-60px);
+        -ms-transform: translateX(-60px);
+        transform: translateX(-60px);
     }
     .more h3 {
         font-size: 1.8rem;
@@ -4155,7 +4087,7 @@ window.outerHeight include toolbar and address bar----------- */
         padding: 0 40px;
     }
     #announcements .adjust-padding-lr {
-        padding: 0 40px;
+        padding: 0 6%;
     }
 }
 
@@ -4179,7 +4111,6 @@ window.outerHeight include toolbar and address bar----------- */
         background-size: 45px;
         width: 45px;
         height: 45px;
-        
     }
     .web__share>.share-icon {
         height: 45px;
@@ -4255,19 +4186,28 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 2rem;
     }
     .main-news-title {
-        font-size: 3.2rem;
+        padding: 0 16%;
+    }
+    .main-news, .main-image {
+        height: 26em;
+    }
+    .main-news-description {
+        top: -26em;
     }
     .top-news-title {
-        font-size: 1.8rem;
-    }
-    .news-pgraph3 {
         font-size: 2rem;
     }
-    .news-pgraph1 {
-        font-size: 1.8rem;
+    .newsdescription {
+        padding: 1.8em 1.3em;
+    }
+    .news-pgraph3 {
+        font-size: 2.3rem;
     }
     .news-pgraph2 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
+    }
+    .news-pgraph1 {
+        font-size: 2.1rem;
     }
     .more h3 {
         font-size: 1.9rem;
@@ -4343,21 +4283,8 @@ window.outerHeight include toolbar and address bar----------- */
     .main-news-description {
         top: -260px;
     }
-    .newsdescription {
-        top: -140px;
-        height: 140px;
-    }
-    .news {
-        height: 140px;
-    }
     .main-news a .news-image {
         width: 100%;
-    }
-    .top-news-title {
-        line-height: 1em;
-    }
-    .card__share {
-        top: -190px;
     }
     .card__social {
         width: 200px;
@@ -4758,79 +4685,63 @@ window.outerHeight include toolbar and address bar----------- */
         height: 135px;
     }
     .news-container {
-        margin-bottom: 80px;
+        margin-bottom: 60px;
     }
-    .main-news {
-        margin-bottom: 15px;
-        height: 280px;
+    .events-icon img {
+        width: 40px;
+        height: 40px;
     }
-    .main-image {
-        height: 280px;
+    .events-icon h2 {
+        font-size: 1.6rem;
+    }
+    .main-news, .main-image {
+        height: 20em;
     }
     .main-news-description {
-        top: -280px;
+        top: -20em;
     }
     .main-news-title {
         font-size: 3rem;
-        line-height: 1em;
-        padding: 0 5%;
-        margin-bottom: 5px;
-    }
-    .news-pgraph1 {
-        font-size: 1.4rem;
-        line-height: 1.3em;
+        padding: 0 12%;
     }
     .news-pgraph3 {
         font-size: 1.7rem;
-        margin-bottom: 0;
     }
-    .newsdescription {
-        top: -110px;
-        height: 110px;
-        left: 40%;
-        width: 60%;
-        padding: 10px;
-    }
-    .top-news-title,
-    .news-pgraph2 {
-        font-size: 1.2rem;
-        line-height: 1.2em;
-        margin-bottom: 2px;
-    }
-    .news-pgraph2 {
-        font-size: 1.2rem;
-        padding-right: 30px;
+    .news-pgraph1 {
+        font-size: 1.4rem;
     }
     .top-news {
-        height: 500px;
+        grid-auto-rows: 120px; 
+        grid-gap: 20px;
     }
-    .news {
-        height: 110px;
+    .newsdescription {
+        padding: 1em 0.9em;
+        border-left: 1px solid white;
     }
-    .news-image {
-        width: 39.6%;
+    .top-news-title {
+        font-size: 1.3rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.2rem;
     }
     .card__share {
-        top: -152px;
-        right: 5px;
+        margin-top: -42px;
     }
     .card__social {
-        width: 160px;
+        width: 155px;
     }
     .card__social--active {
-        -webkit-transform: translateX(-10px);
-        -ms-transform: translateX(-10px);
-        transform: translateX(-10px);
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transform: translateX(-48px);
+        -ms-transform: translateX(-48px);
+        transform: translateX(-48px);
     }
-    .card__social>.share-icon {
-        margin-left: 0;
-    }
-    .share-toggle,
-    .card__share .card__social .share-icon {
+    .share-toggle, .card__share .card__social .share-icon {
         width: 35px;
         height: 35px;
         line-height: 35px;
-        font-size: 15px;
+        font-size: 1rem;
     }
     .separator:before {
         height: 1.5px;
@@ -4920,9 +4831,6 @@ window.outerHeight include toolbar and address bar----------- */
     .adjust-padding-lr {
         padding: 0 30px;
     }
-    #announcements .adjust-padding-lr {
-        padding: 0 30px;
-    }
     .verse-container {
         width: 67%;
     }
@@ -4949,6 +4857,9 @@ window.outerHeight include toolbar and address bar----------- */
     .menu-links a {
         font-size: 1.6rem;
         padding: 1.2em 0;
+    }
+    .news-pgraph3 {
+        font-size: 1.5rem;
     }
 }
 
@@ -5002,9 +4913,6 @@ window.outerHeight include toolbar and address bar----------- */
         height: 35px;
         line-height: 35px;
         font-size: 17px;
-    }
-    .card__share {
-        top: -155px;
     }
     .card__social {
         width: 160px;
@@ -5080,44 +4988,27 @@ window.outerHeight include toolbar and address bar----------- */
         width: 36px;
         height: 36px;
     }
-    .main-news-title {
-        font-size: 3.1rem;
-    }
     .main-news {
-        margin-bottom: 10px;
-        height: 230px;
+        margin-bottom: 15px;
     }
-    .main-image {
-        height: 230px;
+    .main-news, .main-image {
+        height: 16em;
     }
     .main-news-description {
-        top: -230px;
+        top: -16em;
     }
-    .news,
-    .newsdescription {
-        height: 100px;
-    }
-    .newsdescription {
-        top: -100px;
+    .main-news-title {
+        padding: 0 16%;
     }
     .top-news {
-        height: 440px;
+        grid-auto-rows: 110px; 
+        grid-gap: 15px;
     }
-    .news-pgraph3 {
-        padding: 0 25px;
+    .top-news-title {
+        font-size: 1.4rem;
     }
-    .share-toggle,
-    .card__share .card__social .share-icon {
-        width: 32px;
-        height: 32px;
-        line-height: 32px;
-        font-size: 15px;
-    }
-    .card__social {
-        width: 146px;
-    }
-    .card__share {
-        top: -138px;
+    .news-pgraph2 {
+        font-size: 1.3rem;
     }
     .pop-container h2 {
         font-size: 1.8rem;
@@ -5191,13 +5082,6 @@ window.outerHeight include toolbar and address bar----------- */
     #welcome {
         height: 135%;
     }
-    .main-news-title {
-        margin-bottom: 5px;
-    }
-    .news-pgraph3 {
-        padding: 0 25px;
-        margin-bottom: 0;
-    }
     .more img {
         width: 18px;
         height: 18px;
@@ -5264,22 +5148,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .welcome-column-1 {
         height: 75%;
-    }
-    .main-news-title {
-        font-size: 3rem;
-        padding: 0 30px;
-    }
-    .newsdescription {
-        padding: 10px;
-    }
-    .top-news-title {
-        font-size: 1.5rem;
-    }
-    .news-pgraph2 {
-        font-size: 1.4rem;
-    }
-    .news-pgraph3 {
-        padding: 0 35px;
     }
     .more img {
         width: 20px;
@@ -5387,23 +5255,11 @@ window.outerHeight include toolbar and address bar----------- */
         height: 120%;
         padding: 4em 0;
     }
+    .share-toggle, .card__share .card__social .share-icon {
+        font-size: 14px;
+    }
     .welcome-column-2 {
         height: 80%;
-    }
-    .card__share {
-        top: -140px;
-        right: 5px;
-    }
-    .card__social {
-        width: 150px;
-    }
-    .news {
-        height: 100px;
-    }
-    .newsdescription {
-        top: -100px;
-        height: 100px;
-        padding: 10px;
     }
     .submit-button,
     .cogs-news-form>.text-field {
@@ -5456,6 +5312,12 @@ window.outerHeight include toolbar and address bar----------- */
         height: 38px;
         line-height: 38px;
         font-size: 17px;
+    }
+    .card__social {
+        width: 155px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        font-size: 14px;
     }
 }
 
@@ -5549,19 +5411,6 @@ window.outerHeight include toolbar and address bar----------- */
     .events-icon h2 {
         font-size: 1.5rem;
     }
-    .main-news-title {
-        font-size: 3rem;
-        padding: 0 35px;
-    }
-    .news-pgraph3 {
-        font-size: 1.7rem;
-    }
-    .news-pgraph1 {
-        font-size: 1.5rem;
-    }
-    .card__social {
-        width: 145px;
-    }
     .more h3 {
         margin-bottom: 6px;
     }
@@ -5594,7 +5443,7 @@ window.outerHeight include toolbar and address bar----------- */
 
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
-@media screen and ( max-width: 320px) and ( max-height: 568px) {
+@media screen and ( max-width: 320px) and ( max-height: 570px) {
     .main-nav {
         z-index: 1001;
     }
@@ -5667,18 +5516,46 @@ window.outerHeight include toolbar and address bar----------- */
     #announcements .section-heading.centered {
         padding-bottom: 5px;
     }
-    .main-news-description {
-        top: -220px;
+    .news-container {
+        margin-bottom: 40px;
     }
-    .main-news,
-    .main-image {
-        height: 220px;
+    .main-news-title {
+        font-size: 3rem;
+        padding: 0 10%;
     }
-    .news-pgraph1 {
-        padding: 0 25px;
+    .news-pgraph3 {
+        font-size: 1.5rem;
+    }                  
+    .top-news {
+        grid-auto-rows: 100px;
+    }
+    .news-image {
+        max-width: 36%;
+    }
+    .top-news-title {
+        font-size: 1.3rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.2rem;
+    }
+    .card__share {
+        margin-top: -38px;
     }
     .card__social {
-        width: 148px;
+        width: 145px;
+    }
+    .card__social--active {
+        -webkit-transform: translateZ(0);
+        transform: translateZ(0);
+        -webkit-transform: translateX(-45px);
+        -ms-transform: translateX(-45px);
+        transform: translateX(-45px);
+    }
+    .share-toggle, .card__share .card__social .share-icon {
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        font-size: 1rem;
     }
     .call-to-action-section {
         height: 46%;
@@ -5693,7 +5570,7 @@ window.outerHeight include toolbar and address bar----------- */
         padding: 0 20px;
     }
     #announcements .adjust-padding-lr {
-        padding: 0 12px;
+        padding: 0 4%;
     }
 }
 
@@ -5799,13 +5676,15 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .plan-visit .form-field.text-area {
         min-height: 100px;
-    }
-    .events-icon img {
+    }.events-icon img {
         width: 36px;
         height: 36px;
     }
     .events-icon h2 {
         font-size: 1.7rem;
+    }
+    .main-news-title {
+        padding: 0 14%;
     }
     .top-news-title {
         font-size: 1.4rem;
@@ -5813,17 +5692,11 @@ window.outerHeight include toolbar and address bar----------- */
     .news-pgraph2 {
         font-size: 1.3rem;
     }
-    .news-pgraph1 {
-        padding: 0 30px;
-    }
     .more h3 {
         margin-bottom: 5px;
     }
     .call-to-action-section {
         height: 53%;
-    }
-    .card__social {
-        right: -13px;
     }
     .footer {
         background-color: #141e28;
