@@ -10,8 +10,8 @@ html {
     font-family: Oswald, sans-serif;
     min-height: 100%;
     background-color: #fff;
-    font-size: 0.7rem;
-    line-height: 1.45em;
+    font-size: 16px;
+    line-height: 20px;
     color: #333
 }
 
@@ -458,8 +458,8 @@ button {
     width: 100%;
     -o-object-fit: cover;
        object-fit: cover;
-    -o-object-position: center;
-       object-position: center;  
+    -o-object-position: 50% 0%;
+       object-position: 50% 0%; 
     overflow: hidden;
 }
 .news:hover .news-image {
@@ -712,6 +712,12 @@ button {
     .main-message {
         padding-top: 10%;    
     }
+    .top-news-title {
+        font-size: 1.2rem;
+    }
+    .news-pgraph2 {
+        font-size: 1.1rem;
+    }
     .card__share {
         display: none;
     }
@@ -739,20 +745,42 @@ button {
     .main-message {
         padding-top: 10%;    
     }
+    .newsdescription {
+        padding: 1.4em 1em;
+    }
+    .top-news-title {
+        font-size: 1.1rem;
+    }
+    .news-pgraph2 {
+        font-size: 1rem;
+    }
     .card__share {
         display: block;
     }
 }
 
 @media screen and ( max-width: 1281px) and (max-height: 580px) {
+    .filter-container, .all-news-container {
+        width: 74%;
+    }
+    .main-news, .main-image {
+        height: 28em;
+    }
+    .main-news-description {
+        top: -28em;
+    }
     .card__share {
         display: none;
+        margin-top: -160px;
     }
 }
 
 @media screen and ( max-width: 1100px) {
     html {
         font-size: 16px;
+    }
+    .filter-container, .all-news-container {
+        width: 71%;
     }
     .events-icon h2 {
         font-size: 1.6rem;
@@ -761,11 +789,33 @@ button {
         width: 45px;
         height: 45px;
     }
+    .main-news, .main-image {
+        height: 24em;
+    }
+    .main-news-description {
+        top: -24em;
+    }
     .top-news {
         grid-auto-rows: 250px;
     }
+    .top-news-title {
+        font-size: 1rem;
+    }
+    .news-pgraph2 {
+        font-size: 0.9rem;
+    }
     .card__share {
         margin-top: -137px;
+        margin-right: 0;
+    }
+    .card__social {
+        width: 145px;
+    }
+    .share-icon {
+        width: 33px;
+        height: 33px;
+        line-height: 33px;
+        font-size: 0.9rem;
     }
 }
 
@@ -797,10 +847,10 @@ button {
         font-size: 2rem;
     }
     .main-news, .main-image {
-        height: 45em;
+        height: 30em;
     }
     .main-news-description {
-        top: -45em;
+        top: -30em;
     }
     .main-news-title {
         font-size: 4.5rem;
@@ -819,21 +869,20 @@ button {
         grid-gap: 25px
     }
     .newsdescription {
-        padding: 2.7em 1.5em;
+        padding: 1.7em 1.2em;
     }
     .top-news-title {
         font-size: 1.3rem;
-        line-height: 1.1em;
     }
     .news-pgraph2 {
         font-size: 1.2rem;
     }
     .card__share {
         display: block;
-        margin-top: -155px;
+        margin-top: -160px;
     }
     .card__social {
-        width: 440%;
+        width: 188px;
     }
     .share-toggle, .card__share .card__social .share-icon {
         width: 42px;
@@ -866,7 +915,7 @@ button {
         padding-top: 10%;    
     }
     .filter-container, .all-news-container {
-        width: 76%;
+        width: 72%;
     }
     .all-news-container {
         padding-top: 0%;
@@ -889,31 +938,42 @@ button {
         font-size: 2rem;
     }
     .main-news, .main-image {
-        height: 46em;
+        height: 23em;
     }
     .main-news-description {
-        top: -46em;
+        top: -23em;
     }
     .top-news {
         grid-auto-rows: 220px;
         grid-gap: 25px;
     }
     .top-news-title {
+        font-size: 1.5rem;
+    }
+    .newsdescription {
+        padding: 1.2em 1em;
+    }
+    .news-pgraph2 {
         font-size: 1.4rem;
     }
     .card__social {
-        width: 420%;
+        width: 140px;
+    }
+    .card__social--active {
+        -webkit-transform: translateX(-35px);
+            -ms-transform: translateX(-35px);
+                transform: translateX(-35px);
     }
     .card__share {
         display: none;
-        margin-top: -124px;
+        margin-top: -120px;
         margin-right: 0;
     }
     .share-toggle, .card__share .card__social .share-icon {
-        width: 35px;
-        height: 35px;
-        line-height: 35px;
-        font-size: 1.2rem; 
+        width: 30px;
+        height: 30px;
+        line-height: 30px;
+        font-size: 12px; 
     }
 }
 
