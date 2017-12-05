@@ -3122,9 +3122,6 @@ address,
     #announcements {
         padding: 4em 0 2em;
     }
-    #announcements .adjust-padding-lr {
-        padding: 0 60px;
-    }
     .events-icon {
         margin-bottom: 5px;
     }
@@ -3132,31 +3129,24 @@ address,
         width: 35px;
         height: 35px;
     }
-    .main-news {
-        height: 350px;
-        margin-bottom: 20px;
-    }
-    .main-image {
-        height: 350px;
+    .main-news, .main-image {
+        height: 22em;
     }
     .main-news-description {
-        top: -350px;
+        top: -22em;
     }
-    .news,
-    .news-image {
-        width: 150px;
-    }
-    .news {
-        height: 140px;
-        margin-bottom: 20px;
-    }
-    .newsdescription {
-        height: 90px;
-    }
-    .top-news-title {
-        font-size: 1.4rem;
+    .top-news {
+        grid-auto-rows: 220px;
+        grid-gap: 20px 18px;
     }
     .news-pgraph2 {
+        font-size: 1.3rem;
+    }
+    .card__share {
+        display: block;
+        margin-top: -118px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
         font-size: 1.3rem;
     }
     .more h3 {
@@ -3166,20 +3156,6 @@ address,
     .more img {
         width: 20px;
         height: 20px;
-    }
-    .card__share {
-        display: block;
-        margin-top: -105px;
-        margin-right: 2px;
-    }
-    .card__social {
-        width: 470%;
-        right: 0;
-    }
-    .card__social--active {
-        -webkit-transform: translateX(-24px);
-        -ms-transform: translateX(-24px);
-        transform: translateX(-24px);
     }
     .web__share>.share-icon {
         width: 28px;
@@ -3426,55 +3402,35 @@ address,
     #announcements {
         padding: 6em 0 0;
     }
-    .main-news {
-        height: 390px;
-    }
-    .main-image {
-        height: 390px;
-    }
-    .main-news-title {
-        font-size: 4rem;
-    }
-    .news-pgraph3 {
-        font-size: 2.5rem;
-    }
-    .news-pgraph1 {
-        font-size: 2.3rem;
-    }
-    .main-news-description {
-        top: -390px;
-    }
-    .news,
-    .news-image {
-        width: 170px;
-        height: 125px;
-    }
-    .newsdescription {
-        height: 110px;
-    }
-    .card__share {
-        margin-top: -130px;
-    }
-    .more h3 {
-        margin-bottom: 6px;
-    }
-    .news {
-        margin-bottom: 160px;
+    .top-news {
+        grid-auto-rows: 220px;
+        grid-gap: 20px 18px;
     }
     .top-news-title {
         font-size: 1.2rem;
+        line-height: 1.1em;
+    }
+    .newsdescription {
+        padding: 1em;
     }
     .news-pgraph2 {
         font-size: 1.1rem;
     }
     .card__share {
-        margin-right: 1px;
+        margin-top: -120px;
+        margin-right: 0;
     }
-    .share-icon {
+    .card__social {
+        width: 140px;
+    }
+    .share-toggle, .card__share .card__social .share-icon {
         width: 32px;
         height: 32px;
         line-height: 32px;
-        font-size: 14px;
+        font-size: 0.9rem;
+    }
+    .more h3 {
+        margin-bottom: 6px;
     }
     .submit-button {
         padding: 0.55em 1em;
@@ -3494,7 +3450,7 @@ address,
         font-size: 3rem;
     }
     #announcements .adjust-padding-lr {
-        padding: 0 40px;
+        padding: 0 3%;
     }
     .adjust-padding-lr {
         padding: 0 50px;
@@ -3519,9 +3475,6 @@ address,
     }
     #announcements {
         padding: 6em 0 0;
-    }
-    .news {
-        margin-bottom: 140px;
     }
     .share-icon {
         width: 32px;
@@ -3731,9 +3684,6 @@ address,
     .news-pgraph1 {
         font-size: 3rem;
     }
-    .news {
-        margin-bottom: 130px;
-    }
     .call-to-action-section {
         height: 85%;
     }
@@ -3757,10 +3707,6 @@ address,
     }
     #welcome {
         height: 320%;
-    }
-    .news,
-    .news-image {
-        width: 180px;
     }
     .card__social {
         width: 435%;
@@ -3810,10 +3756,6 @@ address,
     }
     .main-news {
         height: 300px;
-    }
-    .news,
-    .news-image {
-        width: 165px;
     }
     .main-news-title {
         font-size: 4em;
@@ -4351,9 +4293,6 @@ window.outerHeight include toolbar and address bar----------- */
         top: -140px;
         height: 140px;
     }
-    .news {
-        height: 140px;
-    }
     .main-news a .news-image {
         width: 100%;
     }
@@ -4804,9 +4743,6 @@ window.outerHeight include toolbar and address bar----------- */
     .news-pgraph2 {
         font-size: 1.2rem;
         padding-right: 30px;
-    }
-    .news {
-        height: 110px;
     }
     .news-image {
         width: 39.6%;
@@ -5394,9 +5330,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .card__social {
         width: 150px;
-    }
-    .news {
-        height: 100px;
     }
     .newsdescription {
         top: -100px;

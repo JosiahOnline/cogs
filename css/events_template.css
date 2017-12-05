@@ -988,6 +988,12 @@ button {
         width: 35px;
         height: 35px;
     }
+    .main-news, .main-image {
+        height: 22em;
+    }
+    .main-news-description {
+        top: -22em;
+    }
     .top-news {
         grid-auto-rows: 220px;
         grid-gap: 20px 18px;
@@ -1015,7 +1021,7 @@ button {
         font-size: 1.6rem;
     }
     .filter-container, .all-news-container {
-        width: 90%;
+        width: 94%;
     }
     .top-news {
         grid-auto-rows: 220px;
@@ -1026,7 +1032,7 @@ button {
         line-height: 1.1em;
     }
     .newsdescription {
-        padding: 2em 1em 1em 1.5em;
+        padding: 1em;
     }
     .news-pgraph2 {
         font-size: 1.1rem;
@@ -1036,7 +1042,7 @@ button {
         margin-right: 0;
     }
     .card__social {
-        width: 425%;
+        width: 140px;
     }
     .share-toggle, .card__share .card__social .share-icon {
         width: 32px;
