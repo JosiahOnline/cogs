@@ -11,11 +11,12 @@ $(document).ready(function () {
         fitToSection: false,
         scrollBar: true,
         loopBottom: true,
-//        afterRender: function () {
-//            setInterval(function () {
-//                $.fn.fullpage.moveSlideRight();
-//            }, 2000);
-//        }
+        afterRender: function () {
+            setInterval(function () {
+                $.fn.fullpage.moveSlideRight();
+            }, 3500);
+        }
+        
     });
 
     // set the max height
