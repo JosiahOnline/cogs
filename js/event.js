@@ -9,7 +9,13 @@ $(document).ready(function () {
     $('#fullpage').fullpage({
         autoScrolling: true,
         fitToSection: false,
-        scrollBar: true
+        scrollBar: true,
+        loopBottom: true,
+//        afterRender: function () {
+//            setInterval(function () {
+//                $.fn.fullpage.moveSlideRight();
+//            }, 2000);
+//        }
     });
 
     // set the max height
