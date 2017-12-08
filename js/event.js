@@ -1,8 +1,9 @@
+/*global $, jQuery, alert*/
 $(document).ready(function () {
     $(".share-button").click(function () {
         $(".share-button").css('display', 'none');
         $(".web__share").css('display', 'inline-block');
-    })
+    });
 });
 
 $(document).ready(function () {

@@ -1,3 +1,4 @@
+/*global $, jQuery, alert*/
 $(document).ready(function () {
     $(".visit").click(function () {
         $(".plan-visit").css('display', 'block');
@@ -9,7 +10,7 @@ $(document).ready(function () {
         $(".plan-visit").css('overflow-y', 'hidden');
     });
     $('.card__share > a').on('click', function (e) {
-        e.preventDefault() // prevent default action - hash doesn't appear in url
+        e.preventDefault(); // prevent default action - hash doesn't appear in url
         $(this).parent().find('div').toggleClass('card__social--active');
         $(this).toggleClass('share-expanded');
     });
@@ -64,7 +65,7 @@ $(window).scroll(function () {
         iScrollPos = iCurScrollPos;
 
         var triggered_times = 0;
-        if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times == 0) {
+        if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times === 0) {
             $("#scrollDown").css("display", "block");
 
             triggered_times = 1;
@@ -78,7 +79,7 @@ $(document).ready(function () {
         var target = $(this.getAttribute('href'));
         if (target.length) {
             event.preventDefault();
-            if ($(".main-nav").css("z-index") == "1001") {
+            if ($(".main-nav").css("z-index") === "1001") {
                 $("#mNav").css('display', 'none');
             }
             $('html, body').stop().animate({
@@ -136,7 +137,6 @@ if (navigator.userAgent.match(/Android/i) ||
     if (nViewH > nPageH) {
         nViewH -= 250;
         $('BODY').css('height', nViewH + 'px');
-        console.log("greater");
     }
     window.scrollTo(0, 1);
 }
