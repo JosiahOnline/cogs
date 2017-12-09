@@ -5671,6 +5671,9 @@ window.outerHeight include toolbar and address bar----------- */
     #welcome {
         height: 150%;
     }
+    .welcome-pgraph, .welcome-author {
+        text-align: left;
+    }
     .plan-visit {
         padding-top: 13%;
     }
