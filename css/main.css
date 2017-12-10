@@ -1582,6 +1582,10 @@ address,
     -webkit-box-flex: 0;
     -ms-flex: 0 auto;
     flex: 0 auto;
+    color: #edeff2;
+}
+
+.english.current, .chinese.current, .bm.current {
     color: #f9c635;
 }
 
