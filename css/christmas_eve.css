@@ -1,3 +1,22 @@
 .main-section {
     background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1510300333/Christmas/christmas4.jpg");
+    background-position: 50% 100%;
+}
+
+@media screen and (max-width: 1024px) and (max-height: 1370px) {
+    .main-section {
+        background-position: 70% 100%;
+    }
+    .transparent-layer {
+        background-color: rgba(0, 0, 0, .30);
+    }
+}
+
+@media screen and (max-width: 420px) and (max-height: 740px) {
+    .main-section {
+        background-position: 76% 100%;
+    }
+    .transparent-layer {
+        background-color: rgba(0, 0, 0, .30);
+    }
 }
