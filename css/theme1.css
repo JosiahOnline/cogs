@@ -30,6 +30,9 @@ Examples: Christmas Carolling
 /* ==========================================================================
    Start of custom CSS
    ========================================================================== */
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .20);
+}
 
 .verse-container {
     position: absolute;
