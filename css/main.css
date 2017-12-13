@@ -1685,6 +1685,9 @@ address,
     color: #f36;
     font-weight: bold;
 }
+span.chi_nounderline, .chi_nounderline {
+    text-decoration: none;
+}
 .bulletin-row {
     padding-right: 20px;
     padding-left: 20px;
@@ -2280,6 +2283,9 @@ address,
     .title,
     .date-published {
         font-size: 2.5rem;
+    }
+    .navburger .cn_menu {
+        color: transparent;
     }
     .bulletin-pgraph,
     .feedback-pgraph,

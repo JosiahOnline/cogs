@@ -115,6 +115,10 @@ p, button {
     font-size: 1.6rem;
     line-height: 1.1rem;
 }
+
+.main-message h2.chi-message {
+    padding: 0 25px;
+}
 .filter-container {
     width: 100%;
     display: -webkit-box;
@@ -284,6 +288,9 @@ button {
 .filter-buttons .tablinks.active{
     color: white;
     background-color: rgb(70,134,200); 
+}
+.filter-buttons .button.chi_tab {
+    font-size: 1.3rem;
 }
 .sort-buttons button.active{
     color: white;
@@ -553,6 +560,10 @@ button {
 .news-pgraph3 span {
     color: #f36;
     text-decoration: underline;
+}
+
+span.chi_nounderline {
+    text-decoration: none;
 }
 
 .fa-whatsapp {
