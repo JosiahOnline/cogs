@@ -107,7 +107,17 @@ $(document).ready(function () {
     });
     $(function () {
         setTimeout(function () {
+            $('.chi-fly-in-text').removeClass('hidden');
+        }, 2500);
+    });
+    $(function () {
+        setTimeout(function () {
             $('.fly-in-text').removeClass('hidden');
+        }, 2500);
+    });
+    $(function () {
+        setTimeout(function () {
+            $('.chi-fly-in-text').removeClass('hidden');
         }, 2500);
     });
     $(function () {
