@@ -452,6 +452,18 @@ p {
     transform: translateX(20px) translateY(-200px);
 }
 
+.fly-in-text.hidden li:nth-child(12) {
+    -webkit-transform: translateX(50px) translateY(100px);
+    -ms-transform: translateX(50px) translateY(100px);
+    transform: translateX(50px) translateY(100px);
+}
+
+.fly-in-text.hidden li:nth-child(13) {
+    -webkit-transform: translateX(80px) translateY(240px);
+    -ms-transform: translateX(80px) translateY(240px);
+    transform: translateX(80px) translateY(240px);
+}
+
 .hero-subheading {
     margin: 0.5em auto 0.8em;
     color: #fff;
@@ -4527,7 +4539,7 @@ window.outerHeight include toolbar and address bar----------- */
         transform: perspective(1px) translateY(-40%);
     }
     .fly-in-text {
-        width: 96%;
+        width: 98%;
         margin: 0 auto;
     }
     .fly-in-text li {
