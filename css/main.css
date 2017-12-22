@@ -4853,6 +4853,9 @@ window.outerHeight include toolbar and address bar----------- */
     .section.section-contact {
         padding: 7em 0em 6em;
     }
+    .home-container.adjust-padding-lr {
+        padding: 0;
+    }
     .adjust-padding-lr {
         padding: 0 30px;
     }
@@ -5296,6 +5299,9 @@ window.outerHeight include toolbar and address bar----------- */
     .verse-container {
         width: 75%;
     }
+    .home-container.adjust-padding-lr {
+        padding: 0;
+    }
     .adjust-padding-lr {
         padding: 0 30px;
     }
@@ -5590,6 +5596,9 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .adjust-padding-td {
         padding: 25px 0;
+    }
+    .home-container.adjust-padding-lr {
+        padding: 0;
     }
     .adjust-padding-lr {
         padding: 0 20px;
