@@ -1,3 +1,112 @@
 .main-section {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1510300328/Christmas/christmas3.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464675/Christmas%20Day%20Service%2017/christmas1.jpg");
+    background-position: 50% 50%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .05);    
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464723/Christmas%20Day%20Service%2017/christmas2.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464675/Christmas%20Day%20Service%2017/christmas1.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464676/Christmas%20Day%20Service%2017/christmas3.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464682/Christmas%20Day%20Service%2017/christmas4.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464676/Christmas%20Day%20Service%2017/christmas5.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464691/Christmas%20Day%20Service%2017/christmas6.jpg");
+}
+
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464686/Christmas%20Day%20Service%2017/christmas7.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464702/Christmas%20Day%20Service%2017/christmas8.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464697/Christmas%20Day%20Service%2017/christmas9.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464689/Christmas%20Day%20Service%2017/christmas10.jpg");
+}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464691/Christmas%20Day%20Service%2017/christmas11.jpg");
+}
+
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464701/Christmas%20Day%20Service%2017/christmas12.jpg");
+}
+
+.pic13 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464703/Christmas%20Day%20Service%2017/christmas13.jpg");
+}
+
+.pic14 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464701/Christmas%20Day%20Service%2017/christmas14.jpg");
+}
+
+.pic15 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464707/Christmas%20Day%20Service%2017/christmas15.jpg");
+}
+
+.pic16 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1514464713/Christmas%20Day%20Service%2017/Group.jpg");
+}
+
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and ( max-width: 1024px) {
+    .main-section {
+        background-position: 40% 1%;
+    }
+}
+
+@media screen and ( max-width: 420px) and (max-height: 740px) {
+    .main-section {
+        background-position: 50% 1%;
+    }
+}
+
+@media screen and ( max-width: 420px) and ( max-height: 630px) {
+    html{font-size: 18px;}
+    .main-section {
+        background-position: 45% 1%;
+    }
+}
+
+@media screen and ( max-width: 380px) and ( max-height: 560px) {
+    .main-section {
+        background-position: 45% 1%;
+    }
+}
+
+@media screen and ( max-width: 360px) and ( max-height: 670px) {
+    .main-section {
+        background-position: 48% 1%;
+    }
 }
