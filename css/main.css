@@ -447,21 +447,21 @@ p {
 }
 
 .fly-in-text.hidden li:nth-child(11) {
-    -webkit-transform: translateX(20px) translateY(-200px);
-    -ms-transform: translateX(20px) translateY(-200px);
-    transform: translateX(20px) translateY(-200px);
+    -webkit-transform: translateX(-70px) translateY(200px);
+    -ms-transform: translateX(-70px) translateY(200px);
+    transform: translateX(-70px) translateY(200px);
 }
 
 .fly-in-text.hidden li:nth-child(12) {
-    -webkit-transform: translateX(50px) translateY(100px);
-    -ms-transform: translateX(50px) translateY(100px);
-    transform: translateX(50px) translateY(100px);
+    -webkit-transform: translateX(30px) translateY(-100px);
+    -ms-transform: translateX(30px) translateY(-100px);
+    transform: translateX(30px) translateY(-100px);
 }
 
 .fly-in-text.hidden li:nth-child(13) {
-    -webkit-transform: translateX(80px) translateY(240px);
-    -ms-transform: translateX(80px) translateY(240px);
-    transform: translateX(80px) translateY(240px);
+    -webkit-transform: translateX(20px) translateY(80px);
+    -ms-transform: translateX(20px) translateY(80px);
+    transform: translateX(20px) translateY(80px);
 }
 
 .hero-subheading {
