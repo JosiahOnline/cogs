@@ -94,11 +94,11 @@
             </tr>
             <tr>
                 <td>星期六: </td>
-                <td>中文 - 晚上 7:30</td>
+                <td>中文/客家 - 晚上 7:30</td>
             </tr>
             <tr>
                 <td>星期日: </td>
-                <td>中文 - 早上 7:00</td>
+                <td>中文/客家 - 早上 7:00</td>
             </tr>
             <tr>
                 <td>星期日: </td>
@@ -110,7 +110,7 @@
             </tr>
             <tr>
                 <td>星期日: </td>
-                <td>中文 - 下午 2:30</td>
+                <td>中文/客家 - 下午 2:30</td>
             </tr>
         </table>
         <div class="button-container">
@@ -227,7 +227,6 @@
         </div>
     </section>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js" type="text/javascript"></script>
-    <script src="js/event.js" type="text/javascript"></script>
     <script>
         $(document).ready(function() {
             $(".visit").click(function() {
@@ -239,11 +238,25 @@
                 $(".plan-visit").css('display', 'none');
                 $(".plan-visit").css('overflow-y', 'hidden');
             });
-            $(".share-button").click(function() {
+            $(".share-button").click(function () {
                 $(".share-button").css('display', 'none');
                 $(".web__share").css('display', 'inline-block');
-            })
+            });
+            // set the max height
+            if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+                $("#rotateDevice").css("display", "block");
+            } else {
+                $("#rotateDevice").css("display", "none");
+            }
+            $(window).resize(function() {
+                if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+                    $("#rotateDevice").css("display", "block");
+                } else {
+                    $("#rotateDevice").css("display", "none");
+                }
+            });
         });
+
     </script>
     
 </body>

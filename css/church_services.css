@@ -1480,6 +1480,12 @@ input.w-button {
     }
 }
 
+@media screen and ( max-width: 1281px) and (max-height: 580px) {
+    .services-container {
+        margin-top: 2%;
+    }
+}
+
 
 /* ----------- Aspire V3 Laptop Landscape ----------- */
 
@@ -1501,6 +1507,7 @@ input.w-button {
     }
     .services-container {
         margin-top: 35%;
+        font-size: 1.6rem;
     }
 }
 
@@ -1536,7 +1543,8 @@ input.w-button {
         font-size: 16px;
     }
     .services-container {
-        margin-top: 3%;
+        margin-top: 4%;
+        font-size: 1.7rem;
     }
 }
 
@@ -1548,7 +1556,7 @@ input.w-button {
         font-size: 16px;
     }
     .services-container {
-        margin-top: 1%;
+        margin-top: 2%;
     }
 }
 
@@ -1560,8 +1568,7 @@ input.w-button {
         font-size: 26px;
     }
     .services-container {
-        font-size: 1.6rem;
-        margin-top: 40%;
+        font-size: 1.5rem;
     }
 }
 
@@ -1571,9 +1578,6 @@ input.w-button {
 @media screen and ( max-width: 768px) {
     html {
         font-size: 24px;
-    }
-    .services-container {
-        margin-top: 38%;
     }
 }
 
@@ -1585,7 +1589,7 @@ input.w-button {
         font-size: 24px;
     }
     .services-container {
-        margin-top: 32%;
+        margin-top: 25%;
     }
 }
 
@@ -1634,8 +1638,12 @@ input.w-button {
     }
 }
 
-
-/* ----------- iPhone 7 Landscape ----------- */
+@media screen and ( max-width: 610px) and (max-height: 940px) {
+    .services-container {
+        margin-top: 35%;
+        font-size: 1.3rem;
+    }
+}
 
 
 /* ----------- S Note 8.0 Potrait ----------- */
@@ -1645,7 +1653,8 @@ input.w-button {
         font-size: 20px;
     }
     .services-container {
-        margin-top: 36%;
+       
+        font-size: 1.4rem;
     }
 }
 
@@ -1714,9 +1723,10 @@ input.w-button {
         font-size: 14px;
     }
     .services-container {
-        margin-top: 45%;
-        margin-bottom: 10px;
+        margin-top: 40%;
+        margin-bottom: 20px;
         font-weight: 400;
+        padding: 0;
     }
     .services-container tr {
         height: 3rem;
@@ -1733,6 +1743,13 @@ input.w-button {
     }
 }
 
+/* ----------- Galaxy Note 5 Potrait ----------- */
+
+@media screen and ( max-width: 420px) and ( max-height: 660px) {
+    .services-container {
+       margin-top: 30%; 
+    }
+}
 
 /* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
 
@@ -1754,6 +1771,7 @@ input.w-button {
     }
     .services-container {
         margin-top: 40%;
+        font-size: 1.3rem;
     }
 }
 
@@ -1799,6 +1817,12 @@ input.w-button {
     }
 }
 
+@media screen and ( max-width: 360px) and ( max-height: 580px) {
+    .services-container {
+        margin-top: 30%;
+    }
+}
+
 
 /* ----------- VIVO 5, S Note 3 Neo Potrait  ----------- */
 
@@ -1815,6 +1839,9 @@ input.w-button {
     html {
         font-size: 14px;
     }
+    .services-container {
+        margin-top: 25%;
+    }
 }
 
 
@@ -1825,7 +1852,7 @@ input.w-button {
         font-size: 14px;
     }
     .services-container {
-        margin-bottom: 0;
+        margin-bottom: 10px;
     }
     .services-container tr {
         height: 2.3rem;
@@ -1840,8 +1867,8 @@ input.w-button {
         font-size: 13px;
     }
     .services-container {
-        margin-top: 45%;
-        margin-bottom: 5px;
+        margin-top: 40%;
+        margin-bottom: 10px;
     }
 }
 
