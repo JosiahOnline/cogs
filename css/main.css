@@ -3543,9 +3543,6 @@ span.chi_nounderline, .chi_nounderline {
     .call-to-action-section {
         height: 37%;
     }
-    .verse-container {
-        top: 55%;
-    }
     .bible-verse {
         font-size: 3rem;
     }
@@ -5383,7 +5380,7 @@ window.outerHeight include toolbar and address bar----------- */
         margin-top: 20px;
     }
     .bible-verse {
-        font-size: 1.8rem;
+        font-size: 1.65rem;
     }
 }
 
@@ -5734,6 +5731,9 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .call-to-action-section {
         height: 53%;
+    }
+    .verse-container {
+        top: 45%;
     }
     .footer {
         background-color: #141e28;
