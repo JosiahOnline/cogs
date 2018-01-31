@@ -709,7 +709,7 @@ select {
 .main-nav {
     position: fixed;
     left: 0px;
-    top: 0px;
+    top: inherit;
     bottom: 0px;
     width: 20%;
     height: 100vh;
