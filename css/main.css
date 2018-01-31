@@ -5468,11 +5468,17 @@ window.outerHeight include toolbar and address bar----------- */
     }
 }
 
+@media screen and ( max-width: 320px) and ( max-height: 670px) {
+    .main-nav {
+    display: none;
+}
+}
 
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 570px) {
     .main-nav {
+      display: none;
         z-index: 1001;
     }
     .nav-container {
