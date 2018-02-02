@@ -5480,6 +5480,12 @@ window.outerHeight include toolbar and address bar----------- */
     display: none;
     width: 100%;
 }
+.bulletin-flex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
 }
 
 /* ----------- iPhone 5 and 5S Potrait ----------- */
