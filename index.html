@@ -930,7 +930,23 @@ $(document).ready(function() {
         googleCalendarApiKey: 'AIzaSyBkPdk0t2Xckpqpirsl7V76T_b7f-R516Y',
         events: {
             googleCalendarId: 'be8ksislojsuknv56h93niup0g@group.calendar.google.com'
-        }
+        },
+        eventClick: function(calEvent, jsEvent, view) {
+
+        alert('Event: ' + calEvent.title);
+        alert('Coordinates: ' + jsEvent.pageX + ',' + jsEvent.pageY);
+        alert('View: ' + view.name);
+
+        // change the border color just for fun
+        $(this).css('border-color', 'red');
+
+    },
+        defaultView: 'timeline', // or 'agenda' or 'basic'
+
+    duration: { days: 35 }
+    // can also specify:
+    // - visibleRange
+    // - dayCount
     });
 });
 
