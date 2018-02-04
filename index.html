@@ -931,6 +931,11 @@ $(document).ready(function() {
         events: {
             googleCalendarId: 'be8ksislojsuknv56h93niup0g@group.calendar.google.com'
         },
+        header: {
+    left:   'title',
+    center: '',
+    right:  'prev,next, month, basicWeek,basicDay'
+},
         eventClick: function(calEvent, jsEvent, view) {
 
         alert('Event: ' + calEvent.title);
@@ -940,13 +945,7 @@ $(document).ready(function() {
         // change the border color just for fun
         $(this).css('border-color', 'red');
 
-    },
-        defaultView: 'timeline', // or 'agenda' or 'basic'
-
-    duration: { days: 35 }
-    // can also specify:
-    // - visibleRange
-    // - dayCount
+    }
     });
 });
 
