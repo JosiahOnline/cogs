@@ -19,8 +19,8 @@
 
 .slidePhoto {
     position: absolute;
-    -webkit-animation: round 30s infinite;
-            animation: round 30s infinite;
+    -webkit-animation: round 40s infinite;
+            animation: round 40s infinite;
     opacity: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -116,24 +116,24 @@
 }
 
 .slidePhoto:nth-child(5) {
+    -webkit-animation-delay: 32s;
+            animation-delay: 32s;
+}
+
+.slidePhoto:nth-child(4) {
     -webkit-animation-delay: 24s;
             animation-delay: 24s;
 }
 
-.slidePhoto:nth-child(4) {
-    -webkit-animation-delay: 18s;
-            animation-delay: 18s;
-}
-
 .slidePhoto:nth-child(3) {
-    -webkit-animation-delay: 12s;
-            animation-delay: 12s;
+    -webkit-animation-delay: 16s;
+            animation-delay: 16s;
 
 }
 
 .slidePhoto:nth-child(2) {
-    -webkit-animation-delay: 6s;
-            animation-delay: 6s;
+    -webkit-animation-delay: 8s;
+            animation-delay: 8s;
 }
 
 .slidePhoto:nth-child(1) {
