@@ -308,6 +308,7 @@
     .progress-bar {
         bottom: 45%;
 }
+}
 
 @media screen and (max-height: 850px) and (max-width: 610px) {
     .newsSlider {
@@ -375,4 +376,14 @@
     .newsSlider {
         height: 23em;
     }
+}
+
+.calendar-container {
+    position: absolute;
+    top: 30%;
+    left: 40%;
+    background: #2e80b6;
+    color: white;
+    width: 40%;
+    height: 50%;
 }

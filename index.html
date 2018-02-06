@@ -759,13 +759,15 @@
                 </div>
                 <!-- End of Ongoing News Container -->
 
-                <div id='calendar'></div>
-                        <div id="eventContent" title="Event Details" style="display:none;">
-                           <h2 id="eventTitle"></h2>
-                            Start: <span id="startTime"></span><br>
-                            End: <span id="endTime"></span><br><br>
-                            <p id="eventInfo"></p>
-                        </div>
+                <div id='calendar'>
+                    <div id="eventContent" class="calendar-container" title="Event Details" style="display:none;">
+                       <h2 id="eventTitle"></h2>
+                        Start: <span id="startTime"></span><br>
+                        End: <span id="endTime"></span><br><br>
+                        <p id="eventInfo"></p>
+                    </div>
+                </div>
+                        
                 <!--
                  <div class="calendar" id="cogsCalendar">
                     <div class="events-icon">
@@ -944,14 +946,14 @@
                     eventLimit: false,
                     eventBackgroundColor: "#de1f1f",
                    
-                    eventRender: function (event, element, calEvent) {
+                    eventRender: function (event, element) {
     
                         element.click(function(e) {                   
                             e.preventDefault();
-                            $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
-                            $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
+                            $("#startTime").html(moment(event.start).format('h:mm A'));
+                            $("#endTime").html(moment(event.end).format('h:mm A'));
                             $("#eventInfo").html(event.description);
-                            $("#eventTitle").html(calEvent.title);
+                            $("#eventTitle").html(event.title);
                             $("#eventContent").css('display', 'inline-block');
                         });
                     }
