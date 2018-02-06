@@ -764,7 +764,7 @@
                        <h2 id="eventTitle"></h2>
                         Start: <span id="startTime"> </span> End: <span id="endTime"></span><br><br>
                         <p id="eventInfo"></p>
-                        <a id="closeButton">x</a>
+                        <a class="closeButton">x</a>
                     </div>
                 </div>
                         
@@ -947,7 +947,6 @@
                     eventBackgroundColor: "#de1f1f",
                    
                     eventRender: function (event, element) {
-                        event.description = "";
                         element.click(function(e) {                   
                             e.preventDefault();
                             $("#startTime").html(moment(event.start).format('h:mm A'));
@@ -958,6 +957,9 @@
                         });
                     },
                     });
+                $('.closeButton').click(function() {
+                    $("#eventContent").css('display', 'none');
+                });
                 });
 
         </script>
