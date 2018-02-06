@@ -945,23 +945,17 @@
                     eventLimit: false,
                     eventBackgroundColor: "#de1f1f",
                     eventClick: function(calEvent, jsEvent, view) {
+                        if (calEvent.url) {
+                            window.open(calEvent.url);
+                            return false;
+                        }
                         $("#startTime").html(moment(calEvent.start).format('h:mm A'));
-                       $("#endTime").html(moment(calEvent.end).format('h:mm A'));
+                        $("#endTime").html(moment(calEvent.end).format('h:mm A'));
                         $("#eventInfo").html(calEvent.description);
                         $("#eventTitle").html(calEvent.title);
-                       $("#eventContent").css('display', 'inline-block');
+                        $("#eventContent").css('display', 'inline-block');
                     }
                     
-//                    eventRender: function (event, element) {
-//                        element.click(function(e) {                   
-//                            e.preventDefault();
-//                            $("#startTime").html(moment(event.start).format('h:mm A'));
-//                            $("#endTime").html(moment(event.end).format('h:mm A'));
-//                            $("#eventInfo").html(event.description);
-//                            $("#eventTitle").html(event.title);
-//                            $("#eventContent").css('display', 'inline-block');
-//                        });
-//                    }
                 });
             });
 
