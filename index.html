@@ -764,6 +764,7 @@
                        <h2 id="eventTitle"></h2>
                         Start: <span id="startTime"> </span> End: <span id="endTime"></span><br><br>
                         <p id="eventInfo"></p>
+                        <div id="closeButton">x</div>
                     </div>
                 </div>
                         
@@ -955,6 +956,9 @@
                             $("#eventContent").css('display', 'inline-block');
                         });
                     }
+                    $("#closeButton").click(function() {
+                        $(this).add('#eventContent').css('display', 'none');
+                    });
                 });
             });
 
