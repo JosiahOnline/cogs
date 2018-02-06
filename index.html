@@ -764,7 +764,7 @@
                        <h2 id="eventTitle"></h2>
                         Start: <span id="startTime"> </span> End: <span id="endTime"></span><br><br>
                         <p id="eventInfo"></p>
-                        <div id="closeButton">x</div>
+                        <a id="closeButton">x</a>
                     </div>
                 </div>
                         
@@ -947,21 +947,18 @@
                     eventBackgroundColor: "#de1f1f",
                    
                     eventRender: function (event, element) {
+                        event.description = "";
                         element.click(function(e) {                   
                             e.preventDefault();
-                            event.title = "";
                             $("#startTime").html(moment(event.start).format('h:mm A'));
                             $("#endTime").html(moment(event.end).format('h:mm A'));
                             $("#eventInfo").html(event.description);
                             $("#eventTitle").html(event.title);
                             $("#eventContent").css('display', 'inline-block');
                         });
-                        $("#closeButton").click(function() {
-                        $(this).add('#eventContent').css('display', 'none');
                     });
                     }
                 });
-            });
 
         </script>
         <script type="application/ld+json">
