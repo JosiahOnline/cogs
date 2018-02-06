@@ -946,7 +946,8 @@
                    
                     eventRender: function (event, element, calEvent) {
     
-                        element.click(function() {
+                        element.click(function(e) {                   
+                            e.preventDefault();
                             $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
                             $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
                             $("#eventInfo").html(event.description);
