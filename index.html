@@ -945,15 +945,16 @@
                     eventLimit: false,
                     eventBackgroundColor: "#de1f1f",
                     eventRender: function (event, element) {
-                        event.preventDefault();
+                        
                     event.Click: function(calEvent, jsEvent, view) {
 //                        $("#date").val(calEvent.start);
-                        $("#startTime").val(calEvent.start);
-                        $("#endTime").val(calEvent.end);
-                        $("#eventtitle").val(calEvent.title);
-                        $("#eventInfo").val(calEvent.description);
+                        $("#startTime").html(moment(calEvent.start).format('h:mm A'));
+                       $("#endTime").html(moment(calEvent.end).format('h:mm A'));
+                        $("#eventtitle").html(calEvent.title);
+                        $("#eventInfo").html(calEvent.description);
                         $("#eventContent").css('display', 'inline-block');
                     }
+                        
                     }
                    
 //                    eventRender: function (event, element) {
