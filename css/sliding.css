@@ -387,15 +387,30 @@
     width: 40%;
     height: 50%;
     border-radius: 4px;
+    -webkit-box-shadow: 
+        0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
+    box-shadow:
+        0 24px 38px 3px rgba(0,0,0,0.14), 0 9px 46px 8px rgba(0,0,0,0.12), 0 11px 15px -7px rgba(0,0,0,0.2);
     z-index: 1;
 }
-.calendar-info {
-    margin-top: 10%;
+.cal-title {
+    position: relative;
+    color: white;
+}
+.cal-title h2 {
+    position: absolute;
+    top: 35%;
+    font-size: 2rem;
+    line-height: 1.1em;
+}
+.cal-info {
+    margin-top: 40%;
+    height: 60%;
     padding: 0 20px;
     background: white;
     color: #2e80b6;
 }
-.calendar-info span, .calendar-info p  {
+.cal-info span, .cal-info p  {
     font-size: 16px;
     line-height: 22px;
     font-weight: 300;
