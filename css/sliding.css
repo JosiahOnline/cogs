@@ -399,6 +399,11 @@
     display: flex;
     flex-direction: column;
 }
+.cal-h1 {
+    display: flex;
+    justify-content: flex-end;
+    padding-bottom: 10px;
+}
 .cal-title h2 {
     font-size: 2rem;
     line-height: 1.1em;
@@ -408,6 +413,7 @@
 }
 .cal-info {
     padding-top: 5%;
+    padding-left: 20px;
     height: 60%;
     background: white;
     color: #2e80b6;
