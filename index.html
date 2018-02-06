@@ -944,18 +944,29 @@
                     allDaySlot: true,
                     eventLimit: false,
                     eventBackgroundColor: "#de1f1f",
-                   
-                    eventRender: function (event, element) {
-    
-                        element.click(function(e) {                   
-                            e.preventDefault();
-                            $("#startTime").html(moment(event.start).format('h:mm A'));
-                            $("#endTime").html(moment(event.end).format('h:mm A'));
-                            $("#eventInfo").html(event.description);
-                            $("#eventTitle").html(event.title);
-                            $("#eventContent").css('display', 'inline-block');
-                        });
+                    eventFrender: function (event, element) {
+                        event.preventDefault();
+                    event.Click: function(calEvent, jsEvent, view) {
+//                        $("#date").val(calEvent.start);
+                        $("#startTime").val(calEvent.start);
+                        $("#endTime").val(calEvent.end);
+                        $("#eventtitle").val(calEvent.title);
+                        $("#eventInfo").val(calEvent.description);
+                        $("#eventContent").css('display', 'inline-block');
                     }
+                    }
+                   
+//                    eventRender: function (event, element) {
+//    
+//                        element.click(function(e) {                   
+//                            e.preventDefault();
+//                            $("#startTime").html(moment(event.start).format('h:mm A'));
+//                            $("#endTime").html(moment(event.end).format('h:mm A'));
+//                            $("#eventInfo").html(event.description);
+//                            $("#eventTitle").html(event.title);
+//                            $("#eventContent").css('display', 'inline-block');
+//                        });
+//                    }
                 });
             });
 
