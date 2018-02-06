@@ -761,6 +761,7 @@
 
                 <div id='calendar'></div>
                         <div id="eventContent" title="Event Details" style="display:none;">
+                           <h2 id="eventTitle"></h2>
                             Start: <span id="startTime"></span><br>
                             End: <span id="endTime"></span><br><br>
                             <p id="eventInfo"></p>
@@ -942,17 +943,15 @@
                     allDaySlot: true,
                     eventLimit: false,
                     eventBackgroundColor: "#de1f1f",
-                    eventClick: function(calEvent, jsEvent, view) {
-
-                        alert('Event: ' + calEvent.title);
-                    },
-                    eventRender: function (event, element) {
-                        element.attr('href', 'javascript:void(0);');
+                   
+                    eventRender: function (event, element, calEvent) {
+    
                         element.click(function() {
                             $("#startTime").html(moment(event.start).format('MMM Do h:mm A'));
                             $("#endTime").html(moment(event.end).format('MMM Do h:mm A'));
                             $("#eventInfo").html(event.description);
-                            $("#eventContent").dialog({ modal: true, title: event.title, width:350});
+                            $("#eventTitle").html(calEvent.title);
+                            $("#eventContent").css('display', 'inline-block');
                         });
                     }
                 });
