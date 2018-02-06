@@ -762,7 +762,7 @@
                 <div id='calendar'>
                     <div id="eventContent" class="calendar-container" title="Event Details" style="display:none;">
                        <h2 id="eventTitle"></h2>
-                        Start: <span id="startTime"></span>End: <span id="endTime"></span><br><br>
+                        Start: <span id="startTime"> </span> End: <span id="endTime"></span><br><br>
                         <p id="eventInfo"></p>
                     </div>
                 </div>
@@ -946,7 +946,6 @@
                     eventBackgroundColor: "#de1f1f",
                    
                     eventRender: function (event, element) {
-    
                         element.click(function(e) {                   
                             e.preventDefault();
                             $("#startTime").html(moment(event.start).format('h:mm A'));
