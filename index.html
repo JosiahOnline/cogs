@@ -946,8 +946,7 @@
                     eventBackgroundColor: "#de1f1f",
                     eventClick: function(calEvent, jsEvent, view) {
                         if (calEvent.url) {
-                            window.open(calEvent.url);
-                            return false;
+                            calEvent.preventDefault();
                         }
                         $("#startTime").html(moment(calEvent.start).format('h:mm A'));
                         $("#endTime").html(moment(calEvent.end).format('h:mm A'));
