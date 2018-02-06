@@ -1,4 +1,3 @@
-
 .newsSlider {
     height: 34em;
     margin-bottom: 100px;
@@ -20,13 +19,39 @@
 .slidePhoto {
     position: absolute;
     -webkit-animation: round 40s infinite;
-            animation: round 40s infinite;
+    animation: round 40s infinite;
     opacity: 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 100%;
+}
+
+.progress-bar {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 6px;
+  background: #141e28;
+  -moz-animation: fullexpand 40s ease-out infinite;
+  -webkit-animation: fullexpand 40s ease-out infinite;
+    z-index: 1;
+}
+/* ANIMATION BAR */
+@-moz-keyframes fullexpand {
+    0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
+    4%, 24%, 44%, 64%, 84% { width:0%; opacity:0.5; }
+   16%, 36%, 56%, 76%, 96% { width:100%; opacity:0.7; }
+   17%, 37%, 57%, 77%, 97% { width:100%; opacity:0.5; }
+   18%, 38%, 58%, 78%, 98% { width:100%; opacity:0; }	
+}
+@-webkit-keyframes fullexpand {
+    0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
+    4%, 24%, 44%, 64%, 84% { width:0%; opacity:0.5; }
+   16%, 36%, 56%, 76%, 96% { width:100%; opacity:0.7; }
+   17%, 37%, 57%, 77%, 97% { width:100%; opacity:0.5; }
+   18%, 38%, 58%, 78%, 98% { width:100%; opacity:0; }	
 }
 
 .slideimg {
@@ -46,13 +71,28 @@
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -ms-flex-line-pack: center;
-        align-content: center;
+    align-content: center;
+}
+
+.slideDescription h5 {
+    position: absolute;
+    background: #2C3E50;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    text-align: center;
+    border-bottom-left-radius: 4px;
+    width: 2.2em;
+    height: 2.2em;
+    line-height: 2.2em;
+    top: 0;
+    right: 0;
 }
 
 .slideDescription p {
@@ -60,11 +100,13 @@
     bottom: 0;
     color: white;
     background: #2C3E50;
-    padding: 10px;
+    padding: 10px 15px 10px 20px;
     text-align: center;
+    font-size: 18px;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
+
 /*
     -webkit-box-shadow:
         inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(35,49,64,0.1), 0 -1px 0 rgba(0,0,0,0.5);
@@ -75,24 +117,25 @@
 */
 
 .slideDescription h2 {
-    padding: 0 30px;
+    padding: 0 20px;
 }
 
 .slideDescription h4 {
-    padding: 0 30px;
+    padding: 0 10px 0 20px;
     color: #5B0000;
- 
+    font-size: 22px;
+    line-height: 1.1em;
 }
 
- .slideimg img {
+.slideimg img {
     min-width: 100%;
-    min-height:100%;
+    min-height: 100%;
     background-position: 50% 50%;
     background-size: contain;
-      -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
 }
 
 
@@ -117,33 +160,46 @@
 
 .slidePhoto:nth-child(5) {
     -webkit-animation-delay: 32s;
-            animation-delay: 32s;
+    animation-delay: 32s;
 }
 
 .slidePhoto:nth-child(4) {
     -webkit-animation-delay: 24s;
-            animation-delay: 24s;
+    animation-delay: 24s;
 }
 
 .slidePhoto:nth-child(3) {
     -webkit-animation-delay: 16s;
-            animation-delay: 16s;
+    animation-delay: 16s;
 
 }
 
 .slidePhoto:nth-child(2) {
     -webkit-animation-delay: 8s;
-            animation-delay: 8s;
+    animation-delay: 8s;
 }
 
 .slidePhoto:nth-child(1) {
     -webkit-animation-delay: 0s;
-            animation-delay: 0s;
+    animation-delay: 0s;
 }
 
 @media screen and (max-height: 580px) and (max-width: 1281px) {
     .newsSlider {
         height: 28em;
+    }
+    .slideDescription h2 {
+        font-size: 26px;
+        line-height: 30px;
+        padding: 0 15px;
+    }
+    .slideDescription h4 {
+        font-size: 20px;
+        padding: 0 5px 0 15px;
+    }
+    .slideDescription p {
+        font-size: 18px;
+        padding-left: 15px;
     }
 }
 
@@ -151,11 +207,33 @@
     .newsSlider {
         height: 24em;
     }
+    .slideDescription h2 {
+        font-size: 22px;
+        line-height: 26px;
+    }
+    .slideDescription h4 {
+        font-size: 18px;
+    }
+    .slideDescription p {
+        font-size: 16px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
     .newsSlider {
         height: 30em;
+    }
+    .slideDescription h2 {
+        font-size: 1.7rem;
+        line-height: 1.2em;
+        padding: 0 15px;
+    }
+    .slideDescription h4 {
+        font-size: 1.4rem;
+        padding: 0 5px 0 15px;
+    }
+    .slideDescription p {
+        padding-left: 15px;
     }
 }
 
@@ -164,14 +242,31 @@
         height: 23em;
     }
     .slideDescription h2 {
-        font-size: 1.5em;
-        line-height: 3rem;
+        font-size: 2rem;
+    }
+    .slideDescription h4 {
+        font-size: 1.8rem;
     }
 }
 
-@media screen and (max-height: 490px) and (max-width: 970px){
+@media screen and (max-height: 490px) and (max-width: 970px) {
     .newsSlider {
         height: 22em;
+    }
+    .slideDescription h5 {
+        font-size: 14px;
+    }
+    .slideDescription p {
+        font-size: 15px;
+    }
+}
+
+@media screen and (max-height: 1140px) and (max-width: 800px) {
+    .slideDescription h4 {
+        font-size: 1.6rem;
+    }
+    .slideDescription h2 {
+        font-size: 1.9rem;
     }
 }
 
@@ -190,23 +285,30 @@
         height: 45%;
         width: 100%;
         -webkit-box-pack: start;
-            -ms-flex-pack: start;
-                justify-content: flex-start;
-        padding-top: 10%;
+        -ms-flex-pack: start;
+        justify-content: flex-start;
+        padding-top: 11%;
         bottom: 0;
     }
-     .slideDescription h2 {
-        padding: 0 15px;
+    .slideDescription h5 {
+        top: 0px;
+        right: unset;
+        left: 0;
+        color: #fff;
+        background: #2C3E50;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 4px;
     }
     .slideDescription h4 {
-        font-size: 1.6em;
-        padding: 0 15px 5px;
+        font-size: 1.8rem;
     }
-    .slideDescription p {
-        font-size: 1.35em;
-        padding: 10px 15px;
+    .slideDescription h2 {
+        font-size: 2rem;
     }
+    .progress-bar {
+        bottom: 45%;
 }
+
 @media screen and (max-height: 850px) and (max-width: 610px) {
     .newsSlider {
         height: 36em;
@@ -217,52 +319,58 @@
     .newsSlider {
         height: 30em;
     }
+    .slideDescription {
+        padding-top: 14%;
+    }
+    .slideDescription h5 {
+        font-size: 14px;
+    }
     .slideDescription h2 {
-        font-size: 1.4em;
-        line-height: 2rem;
+        font-size: 1.6rem;
     }
     .slideDescription h4 {
-        font-size: 1.2em;
+        font-size: 1.4rem;
     }
     .slideDescription p {
-        font-size: 1.1em;
+        font-size: 1.1rem;
+        padding: 8px 15px;
     }
 }
+
 @media screen and (max-width: 380px) {
     .newsSlider {
         height: 26em;
     }
     .slideDescription {
-        padding-top: 20px;
+        padding-top: 12%;
     }
-    .slideDescription h2 {
-        font-size: 1.2em;
-    }
-    .slideDescription h4 {
-        font-size: 1.1em;
-        padding-bottom: 0;
-    }
-    .slideDescription p {
-        font-size: 0.9em;
+    .slideDescription h5 {
+        font-size: 12px;
     }
 }
-@media screen and ( max-width: 320px) and ( max-height: 570px) {
+
+
+@media screen and ( max-width: 320px) and ( max-height: 670px) {
+    .slideDescription {
+        padding-top: 14%;
+    }
     .slideDescription h2 {
-        font-size: 1.1em;
+        font-size: 1.5rem;
     }
     .slideDescription h4 {
-        font-size: 1em;
-        padding-bottom: 0;
+        font-size: 1.3rem;
     }
     .slideDescription p {
-        font-size: 0.85em;
+        font-size: 1.2rem;
     }
 }
+
 @media screen and ( max-width: 320px) and ( max-height: 500px) {
     .newsSlider {
         height: 24em;
     }
 }
+
 @media screen and ( max-width: 320px) and ( max-height: 460px) {
     .newsSlider {
         height: 23em;
