@@ -949,16 +949,17 @@
                     eventRender: function (event, element) {
                         element.click(function(e) {                   
                             e.preventDefault();
+                            event.title = "";
                             $("#startTime").html(moment(event.start).format('h:mm A'));
                             $("#endTime").html(moment(event.end).format('h:mm A'));
                             $("#eventInfo").html(event.description);
                             $("#eventTitle").html(event.title);
                             $("#eventContent").css('display', 'inline-block');
                         });
-                    }
-                    $("#closeButton").click(function() {
+                        $("#closeButton").click(function() {
                         $(this).add('#eventContent').css('display', 'none');
                     });
+                    }
                 });
             });
 
