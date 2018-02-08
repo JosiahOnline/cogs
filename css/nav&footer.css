@@ -155,7 +155,7 @@
 
 /* ----------- iPone 6 Plus Landscape ----------- */
 
-@media screen and ( max-width: 740px) and (max-height: 420px) {
+@media screen and ( max-width: 740px) and (max-height: 430px) {
     .top-nav {
         padding: 15px 0;
     }
@@ -180,7 +180,7 @@
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 420px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 740px) {
     .top-nav {
         max-height: 60px;
     }
@@ -191,7 +191,7 @@
 
 /* ----------- iPhone 7 Potrait----------- */
 
-@media screen and ( max-width: 420px) and (max-height: 630px) {
+@media screen and ( max-width: 430px) and (max-height: 630px) {
     .top-nav {
         padding: 15px 0;
         min-height: 40px;
@@ -470,7 +470,7 @@
     }
 }
 
-@media screen and ( max-width: 420px ) and ( max-height: 655px ) {
+@media screen and ( max-width: 430px ) and ( max-height: 655px ) {
     .social-media-text {
         font-size: 15px;
     }

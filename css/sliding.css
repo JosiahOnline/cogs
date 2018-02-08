@@ -316,7 +316,7 @@
     }
 }
 
-@media screen and (max-height: 740px) and (max-width: 420px) {
+@media screen and (max-height: 740px) and (max-width: 430px) {
     .newsSlider {
         height: 30em;
     }

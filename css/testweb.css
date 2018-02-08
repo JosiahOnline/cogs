@@ -794,7 +794,7 @@ section.main {
 
 /* ----------- iPone 6 Plus Landscape ----------- */
 
-@media screen and ( max-width: 740px) and ( max-height: 420px) {
+@media screen and ( max-width: 740px) and ( max-height: 430px) {
     .navbar {
         height: 50px;
         padding: 0 15px;
@@ -901,7 +901,7 @@ section.main {
 
 /* ----------- iPhone 7 Landscape ----------- */
 
-@media screen and ( max-width: 630px) and ( max-height: 420px) {
+@media screen and ( max-width: 630px) and ( max-height: 430px) {
     .navbar .navbar-brand {
         font-size: 0.8rem;
     }
@@ -1159,7 +1159,7 @@ section.main {
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 420px) and ( max-height: 740px) {
+@media screen and ( max-width: 430px) and ( max-height: 740px) {
     .navbar {
         height: 60px;
         padding: 10px 15px;
@@ -1208,7 +1208,7 @@ section.main {
 
 /* ----------- iPhone 7 Potrait ----------- */
 
-@media screen and ( max-width: 420px) and ( max-height: 630px) {
+@media screen and ( max-width: 430px) and ( max-height: 630px) {
     .carousel {
         top: 22%;
     }

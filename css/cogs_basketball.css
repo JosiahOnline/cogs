@@ -8,12 +8,12 @@
         background-position: 10% 1%;
     }
 }
-@media screen and ( max-width: 420px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 740px) {
     .main-section {
         background-position: 30% 100%;
     }
 }
-@media screen and ( max-width: 420px) and ( max-height: 630px) {
+@media screen and ( max-width: 430px) and ( max-height: 630px) {
     .main-section {
         background-position: 30% 100%;
     }

@@ -117,7 +117,7 @@ div {
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 420px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 740px) {
     .social-container p {
         margin-top: 0.9rem;
     }

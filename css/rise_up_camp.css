@@ -161,14 +161,14 @@
     }
 }
 
-@media screen and (max-width:420px) and (max-height:740px) {
+@media screen and (max-width:430px) and (max-height:740px) {
     .scroll-container .scroll-down {
         line-height: 28px;
         padding: 10px 20px;
     }
 }
 
-@media screen and (max-width:420px) and (max-height:630px) {
+@media screen and (max-width:430px) and (max-height:630px) {
     .scroll-container {
         bottom: 10px;
     }

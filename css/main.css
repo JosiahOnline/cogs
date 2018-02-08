@@ -3645,7 +3645,7 @@ span.chi_nounderline, .chi_nounderline {
 
 /* ----------- iPone 6 Plus Landscape ----------- */
 
-@media screen and ( max-width: 740px) and (max-height: 420px) {
+@media screen and ( max-width: 740px) and (max-height: 430px) {
     html {
         font-size: 10px
     }
@@ -3804,7 +3804,7 @@ span.chi_nounderline, .chi_nounderline {
 
 /* ----------- iPhone 7 Landscape ----------- */
 
-@media screen and ( max-width: 635px) and (max-height: 420px) {
+@media screen and ( max-width: 635px) and (max-height: 430px) {
     .main-news-description {
         top: -300px;
     }
@@ -4466,7 +4466,7 @@ window.outerHeight include toolbar and address bar----------- */
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 420px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 740px) {
     html {
         font-size: 14px;
     }
@@ -4896,7 +4896,7 @@ window.outerHeight include toolbar and address bar----------- */
 
 /* ----------- Galaxy Note 5 Potrait ----------- */
 
-@media screen and ( max-width: 420px) and ( max-height: 660px) {
+@media screen and ( max-width: 430px) and ( max-height: 660px) {
     .brand-logo,
     .brand-logo p {
         font-size: 2.5rem;
@@ -4923,7 +4923,7 @@ window.outerHeight include toolbar and address bar----------- */
 
 /* ----------- iPhone 7, iPhone 6 PLUS Potrait ----------- */
 
-@media screen and ( max-width: 420px) and ( max-height: 630px) {
+@media screen and ( max-width: 430px) and ( max-height: 630px) {
     .multiple-lang {
         margin-top: 0;
     }
