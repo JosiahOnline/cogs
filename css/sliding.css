@@ -28,6 +28,16 @@
     height: 100%;
 }
 
+.CHIpar {
+    -webkit-animation: round 48s infinite;
+    animation: round 48s infinite;
+}
+
+.BMpar {
+    -webkit-animation: round 24s infinite;
+    animation: round 24s infinite;
+}
+
 .progress-bar {
   position: absolute;
   bottom: 0;
@@ -38,6 +48,7 @@
   -webkit-animation: fullexpand 40s ease-out infinite;
     z-index: 1;
 }
+
 /* ANIMATION BAR */
 @-moz-keyframes fullexpand {
     0%, 20%, 40%, 60%, 80%, 100% { width:0%; opacity:0; }
@@ -148,6 +159,15 @@
     }
 }
 
+@-webkit-keyframes square {
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
 
 @keyframes round {
     15% {
@@ -156,6 +176,20 @@
     30% {
         opacity: 0;
     }
+}
+
+@keyframes square {
+    10% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.CHIpar:nth-child(6) {
+    -webkit-animation-delay: 40s;
+    animation-delay: 40s;
 }
 
 .slidePhoto:nth-child(5) {
@@ -180,6 +214,21 @@
 }
 
 .slidePhoto:nth-child(1) {
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+}
+
+/*BM Version*/
+
+.BMpar:nth-child(3) {
+    -webkit-animation-delay: 16s;
+    animation-delay: 16s;
+}
+.BMpar:nth-child(2) {
+    -webkit-animation-delay: 8s;
+    animation-delay: 8s;
+}
+.BMpar:nth-child(1) {
     -webkit-animation-delay: 0s;
     animation-delay: 0s;
 }
