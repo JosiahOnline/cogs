@@ -1,0 +1,26 @@
+.main-section {
+    background-image: url("../News/img/news/noservice.jpg");
+}
+
+.join a:hover {
+    color: white;
+    background: darkorange; 
+    border-color: darkorange;
+}
+@media screen and (max-height: 490px) and (max-width: 970px) {
+    .join a {
+        color: white;
+        background: darkorange; 
+        border-color: darkorange;
+        font-weight: 300;
+    } 
+}
+
+@media screen and (max-height: 740px) and (max-width: 430px) {
+    .join a {
+        color: white;
+        background: darkorange; 
+        border-color: darkorange;
+        font-weight: 300;
+    } 
+}
