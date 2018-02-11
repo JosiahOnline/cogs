@@ -400,6 +400,7 @@ button {
 }
 
 .main-news {
+    position: relative;
     height: 34em;
     margin-bottom: 30px;
     border-radius: 4px;
@@ -485,12 +486,13 @@ button {
 }
 
 .main-news-description {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     height: 100%;
-    top: -34em;
-    height: 100%;
+    width: 100%;
     background-color: #141e28;
-    opacity: 0.9;
+    opacity: 0.8;
     text-align: center;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -786,9 +788,6 @@ span.chi_nounderline {
     .main-news, .main-image {
         height: 28em;
     }
-    .main-news-description {
-        top: -28em;
-    }
     .card__share {
         display: none;
         margin-top: -160px;
@@ -811,9 +810,6 @@ span.chi_nounderline {
     }
     .main-news, .main-image {
         height: 24em;
-    }
-    .main-news-description {
-        top: -24em;
     }
     .top-news {
         grid-auto-rows: 250px;
@@ -868,9 +864,6 @@ span.chi_nounderline {
     }
     .main-news, .main-image {
         height: 30em;
-    }
-    .main-news-description {
-        top: -30em;
     }
     .main-news-title {
         font-size: 4.5rem;
@@ -963,9 +956,6 @@ span.chi_nounderline {
     .main-news, .main-image {
         height: 23em;
     }
-    .main-news-description {
-        top: -23em;
-    }
     .top-news {
         grid-auto-rows: 220px;
         grid-gap: 25px;
@@ -1013,9 +1003,6 @@ span.chi_nounderline {
     }
     .main-news, .main-image {
         height: 22em;
-    }
-    .main-news-description {
-        top: -22em;
     }
     .top-news {
         grid-auto-rows: 220px;
@@ -1157,9 +1144,6 @@ span.chi_nounderline {
     .main-news, .main-image {
         height: 28em;
     }
-    .main-news-description {
-        top: -28em;
-    }
     .main-news-title {
         padding: 0 10%;
     }
@@ -1243,9 +1227,6 @@ span.chi_nounderline {
     .main-news, .main-image {
         height: 26em;
     }
-    .main-news-description {
-        top: -26em;
-    }
     .top-news-title {
         font-size: 2rem;
     }
@@ -1314,9 +1295,6 @@ span.chi_nounderline {
     }
     .main-news, .main-image {
         height: 20em;
-    }
-    .main-news-description {
-        top: -20em;
     }
     .main-news-title {
         font-size: 3rem;
@@ -1409,9 +1387,6 @@ span.chi_nounderline {
     }
     .main-news, .main-image {
         height: 16em;
-    }
-    .main-news-description {
-        top: -16em;
     }
     .main-news-title {
         padding: 0 16%;
