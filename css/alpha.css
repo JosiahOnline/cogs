@@ -1,0 +1,64 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519505197/COGS%20ALPHA/Alpha.png");
+    background-position: 50% 50%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .05);    
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519505127/COGS%20ALPHA/poster.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519503267/COGS%20ALPHA/alpha1.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519503264/COGS%20ALPHA/alpha2.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519503263/COGS%20ALPHA/alpha3.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519503268/COGS%20ALPHA/alpha4.jpg");
+}
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519503272/COGS%20ALPHA/details.png")
+}
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and ( max-width: 1024px) {
+    .main-section {
+        background-position: 58% 50%;
+    }
+}
+
+@media screen and ( max-width: 430px) and (max-height: 740px) {
+    .main-section {
+        background-position: 70% 50%;
+    }
+}
+
+@media screen and ( max-width: 430px) and ( max-height: 630px) {
+    html{font-size: 18px;}
+    .main-section {
+        background-position: 70% 50%;
+    }
+}
+
+@media screen and ( max-width: 360px) and ( max-height: 670px) {
+    .main-section {
+        background-position: 78% 50%;
+    }
+}

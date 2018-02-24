@@ -34,8 +34,8 @@
 }
 
 .BMpar {
-    -webkit-animation: round 48s infinite;
-    animation: round 48s infinite;
+    -webkit-animation: square 32s infinite;
+    animation: square 32s infinite;
 }
 
 .progress-bar {
@@ -179,10 +179,10 @@
 }
 
 @keyframes square {
-    10% {
+    15% {
         opacity: 1;
     }
-    40% {
+    50% {
         opacity: 0;
     }
 }
@@ -219,7 +219,10 @@
 }
 
 /*BM Version*/
-
+.BMpar:nth-child(4) {
+    -webkit-animation-delay: 24s;
+    animation-delay: 24s;
+}
 .BMpar:nth-child(3) {
     -webkit-animation-delay: 16s;
     animation-delay: 16s;
