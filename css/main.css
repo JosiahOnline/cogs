@@ -1763,6 +1763,16 @@ span.chi_nounderline, .chi_nounderline {
     opacity: 1;
 }
 
+.youtube iframe {
+    height:34em;
+    width:100%
+}
+.youtube-container {
+    position: absolute;
+    bottom: 10px;
+    left: 30%;
+}
+
 
 /* ----------- Laptop with HiDPI ----------- */
 
