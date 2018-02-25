@@ -1,6 +1,11 @@
 .main-section {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519505197/COGS%20ALPHA/Alpha.png");
-    background-position: 50% 50%;
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1519546687/COGS%20ALPHA/alpha1b.png");
+    background-position: 45% 50%;
+}
+
+.share-button {
+    background: #ee362a;
+    
 }
 
 .transparent-layer {
@@ -38,27 +43,6 @@
     background-repeat: no-repeat;
 }
 
-@media screen and ( max-width: 1024px) {
-    .main-section {
-        background-position: 58% 50%;
-    }
-}
-
-@media screen and ( max-width: 430px) and (max-height: 740px) {
-    .main-section {
-        background-position: 70% 50%;
-    }
-}
-
 @media screen and ( max-width: 430px) and ( max-height: 630px) {
     html{font-size: 18px;}
-    .main-section {
-        background-position: 70% 50%;
-    }
-}
-
-@media screen and ( max-width: 360px) and ( max-height: 670px) {
-    .main-section {
-        background-position: 78% 50%;
-    }
 }

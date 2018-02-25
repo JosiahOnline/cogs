@@ -1496,3 +1496,144 @@ span.chi_nounderline {
         font-size: 1.3rem;
     }
 }
+
+/* Video Promo Section */
+
+.youtube iframe {
+    height: 34em;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.youtube-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #c62d23;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.youtube-container a {
+    font-size: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    padding: 16px 10px;
+}
+
+.youtube-container .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    text-align: center;
+    font-size: .8rem;
+    background-color: white;
+    color: #c62d23;
+    border-radius: 6px;
+    padding: 10px 8px 14px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s
+}
+
+.youtube-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #c62d23 transparent transparent
+}
+
+.youtube-container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1
+}
+
+@media screen and ( max-width: 1281px) and (max-height: 580px) {
+    .videoad,
+    .youtube iframe {
+        height: 28em;
+    }
+}
+
+@media screen and ( max-width: 1100px) {
+    .videoad,
+    .youtube iframe {
+        height: 24em;
+    }
+}
+
+@media screen and ( max-width: 1024px) {
+    .videoad,
+    .youtube iframe {
+        height: 30em;
+    }
+    .youtube-container a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    .videoad,
+    .youtube iframe {
+        height: 23em;
+    }
+}
+
+@media screen and ( max-width: 970px) and (max-height: 490px) {
+    .videoad,
+    .youtube iframe {
+        height: 22em;
+    }
+    .youtube-container a {
+        padding: 12px;
+    }
+}
+
+@media screen and ( max-width: 610px) and (max-height: 940px) {
+    .videoad,
+    .youtube iframe {
+        height: 28em;
+    }
+}
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .videoad,
+    .youtube iframe {
+        height: 26em;
+    }
+}
+
+@media screen and ( max-width: 568px) {
+    .videoad,
+    .youtube iframe {
+        height: 260px;
+    }
+}
+
+@media screen and ( max-width: 430px) and (max-height: 740px) {
+    .videoad,
+    .youtube iframe {
+        height: 20em;
+    }
+    .youtube-container a {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
+
+@media screen and ( max-width: 380px) {
+    .videoad,
+    .youtube iframe {
+        height: 16em;
+    }
+}

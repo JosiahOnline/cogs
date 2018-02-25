@@ -1,6 +1,3 @@
-
-
-
 * {
     padding: 0;
     margin: 0;
@@ -354,13 +351,15 @@ p {
 
 .call-to-action-form {}
 
-.fly-in-text, .chi-fly-in-text {
+.fly-in-text,
+.chi-fly-in-text {
     list-style: none;
     padding-left: 0;
     text-align: center;
 }
 
-.fly-in-text li, .chi-fly-in-text li  {
+.fly-in-text li,
+.chi-fly-in-text li {
     margin-bottom: 0.45em;
     color: #fff;
     font-size: 4rem;
@@ -374,25 +373,29 @@ p {
     transition: all 2s ease;
 }
 
-.fly-in-text li:nth-child(7){
+.fly-in-text li:nth-child(7) {
     margin-right: 30px;
 }
 
-.fly-in-text li:last-child, .chi-fly-in-text li:last-child {
+.fly-in-text li:last-child,
+.chi-fly-in-text li:last-child {
     margin-right: 0;
 }
 
-.fly-in-text.hidden li, .chi-fly-in-text.hidden li {
+.fly-in-text.hidden li,
+.chi-fly-in-text.hidden li {
     opacity: 0;
 }
 
-.fly-in-text.hidden li:nth-child(1), .chi-fly-in-text.hidden li:nth-child(1) {
+.fly-in-text.hidden li:nth-child(1),
+.chi-fly-in-text.hidden li:nth-child(1) {
     -webkit-transform: translateX(-200px) translateY(-200px);
     -ms-transform: translateX(-200px) translateY(-200px);
     transform: translateX(-200px) translateY(-200px);
 }
 
-.fly-in-text.hidden li:nth-child(2), .chi-fly-in-text.hidden li:nth-child(2) {
+.fly-in-text.hidden li:nth-child(2),
+.chi-fly-in-text.hidden li:nth-child(2) {
     -webkit-transform: translateX(20px) translateY(100px);
     -ms-transform: translateX(20px) translateY(100px);
     transform: translateX(20px) translateY(100px);
@@ -404,13 +407,15 @@ p {
     transform: translateX(-150px) translateY(-80px);
 }
 
-.fly-in-text.hidden li:nth-child(4), .chi-fly-in-text.hidden li:nth-child(4) {
+.fly-in-text.hidden li:nth-child(4),
+.chi-fly-in-text.hidden li:nth-child(4) {
     -webkit-transform: translateX(10px) translateY(-200px);
     -ms-transform: translateX(10px) translateY(-200px);
     transform: translateX(10px) translateY(-200px);
 }
 
-.fly-in-text.hidden li:nth-child(5), .chi-fly-in-text.hidden li:nth-child(3) {
+.fly-in-text.hidden li:nth-child(5),
+.chi-fly-in-text.hidden li:nth-child(3) {
     -webkit-transform: translateX(-300px) translateY(200px);
     -ms-transform: translateX(-300px) translateY(200px);
     transform: translateX(-300px) translateY(200px);
@@ -720,14 +725,14 @@ select {
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
     -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     padding-top: 50px;
 }
 
@@ -757,9 +762,9 @@ select {
     display: grid;
     max-width: 100%;
     -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
     -ms-grid-rows: 100px auto;
-        grid-template-rows: 100px auto;
+    grid-template-rows: 100px auto;
     grid-gap: 45px;
 }
 
@@ -812,7 +817,7 @@ select {
     display: grid;
     max-width: 100%;
     -ms-grid-columns: 100%;
-        grid-template-columns: 100%;
+    grid-template-columns: 100%;
     grid-gap: 50px;
 }
 
@@ -1141,7 +1146,7 @@ select {
     text-align: right;
 }
 
-.news-container, .videoad {
+.news-container {
     margin-bottom: 100px;
 }
 
@@ -1200,7 +1205,7 @@ select {
     display: grid;
     max-width: 100%;
     -ms-grid-columns: (1fr)[4];
-        grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-auto-rows: 300px;
     grid-gap: 30px 25px;
 }
@@ -1213,7 +1218,8 @@ select {
 
 .news a {
     text-decoration: none;
-    display: inline-block;/*For transform scale purpose*/
+    display: inline-block;
+    /*For transform scale purpose*/
     overflow: hidden;
     height: 100%;
 }
@@ -1241,9 +1247,9 @@ select {
     min-width: 100%;
     height: 34em;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: center;
-       object-position: center;
+    object-position: center;
 }
 
 .news-image {
@@ -1251,15 +1257,16 @@ select {
     height: 55%;
     width: 100%;
     -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
     -o-object-position: 50% 0%;
-       object-position: 50% 0%;
+    object-position: 50% 0%;
     overflow: hidden;
 }
+
 .news:hover .news-image {
     -webkit-transition: all 0.5s linear;
-            -o-transition: all 0.5s linear;
-            transition: all 0.5s linear;
+    -o-transition: all 0.5s linear;
+    transition: all 0.5s linear;
     /*-webkit-transform: scale3d(1.1, 1.1, 1.1);
             transform: scale3d(1.1, 1.1, 1.1);
     overflow: hidden;*/
@@ -1620,17 +1627,19 @@ address,
     color: #edeff2;
 }
 
-.english a.current, .chinese a.current, .bm a.current {
+.english a.current,
+.chinese a.current,
+.bm a.current {
     color: #f9c635;
 }
 
-.chinese a{
+.chinese a {
     margin-right: 10px;
     margin-left: 10px;
     color: #edeff2;
 }
 
-.bm a{
+.bm a {
     color: #edeff2;
 }
 
@@ -1716,13 +1725,18 @@ address,
     line-height: 1.3em;
     font-weight: 300;
 }
-.feedback-pgraph span, .feedback-pgraph span a {
+
+.feedback-pgraph span,
+.feedback-pgraph span a {
     color: #f36;
     font-weight: bold;
 }
-span.chi_nounderline, .chi_nounderline {
+
+span.chi_nounderline,
+.chi_nounderline {
     text-decoration: none;
 }
+
 .bulletin-row {
     padding-right: 20px;
     padding-left: 20px;
@@ -1748,10 +1762,11 @@ span.chi_nounderline, .chi_nounderline {
     position: absolute;
     right: 0;
 }
+
 .refreshButton input {
     font-size: 1rem;
-    padding: 0.4em 0.6em ;
-     border-radius: 4px;
+    padding: 0.4em 0.6em;
+    border-radius: 4px;
     border-color: transparent;
     background: #cf404d;
     opacity: 0.9;
@@ -1759,66 +1774,9 @@ span.chi_nounderline, .chi_nounderline {
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
+
 .refreshButton input:hover {
     opacity: 1;
-}
-
-.youtube iframe {
-    height:34em;
-    width:100%;
-    border-radius: 4px;
-}
-.youtube-container {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    background: #c62d23;
-    border-bottom-left-radius: 4px;
-    border-bottom-right-radius: 4px;
-}
-
-.youtube-container a {
-    font-size: 1rem;
-    border-radius: 4px;
-    text-align: center;
-    width: 100%;
-    padding: 16px 10px;
-}
-
-.youtube-container .tooltiptext {
-    visibility: hidden;
-    width: 160px;
-    text-align: center;
-    font-size: .8rem;
-    background-color: white;
-    color: #c62d23;
-    border-radius: 6px;
-    padding: 10px 8px 14px;
-    position: absolute;
-    z-index: 1;
-    bottom: 125%;
-    left: 50%;
-    margin-left: -60px;
-    opacity: 0;
-    -webkit-transition: opacity 1s;
-    -o-transition: opacity 1s;
-    transition: opacity 1s
-}
-
-.youtube-container .tooltiptext::after {
-    content: "";
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #c62d23 transparent transparent
-}
-
-.youtube-container:hover .tooltiptext {
-    visibility: visible;
-    opacity: 1
 }
 
 
@@ -1843,9 +1801,10 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 140px auto;
-            grid-template-rows: 140px auto;
+        grid-template-rows: 140px auto;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 60px;
     }
     .nav-link {
@@ -1890,7 +1849,7 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 120px auto;
-            grid-template-rows: 120px auto;
+        grid-template-rows: 120px auto;
         grid-gap: 110px;
     }
     .nav-container .navbar {
@@ -1935,7 +1894,7 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 110px auto;
-            grid-template-rows: 110px auto;
+        grid-template-rows: 110px auto;
         grid-gap: 15px;
     }
     .nav-container .navbar {
@@ -2060,7 +2019,8 @@ span.chi_nounderline, .chi_nounderline {
     html {
         font-size: 18px;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 30px;
     }
     .nav-link {
@@ -2109,17 +2069,19 @@ span.chi_nounderline, .chi_nounderline {
     .main-nav {
         padding-top: 20px;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 30px;
     }
     .nav-link {
         font-size: 1.1rem;
         padding: 1.1em 0;
     }
-    .news-container, .videoad {
+    .news-container {
         margin-bottom: 60px;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 28em;
     }
     .share-container p {
@@ -2135,7 +2097,7 @@ span.chi_nounderline, .chi_nounderline {
     .share-button {
         font-size: 0.8rem;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 35px;
         height: 35px;
         line-height: 35px;
@@ -2154,9 +2116,10 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 90px auto;
-            grid-template-rows: 90px auto;
+        grid-template-rows: 90px auto;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 30px;
     }
     .beta {
@@ -2173,7 +2136,7 @@ span.chi_nounderline, .chi_nounderline {
     .share-button {
         font-size: 0.8rem;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 32px;
         height: 32px;
         line-height: 32px;
@@ -2213,7 +2176,8 @@ span.chi_nounderline, .chi_nounderline {
         width: 45px;
         height: 45px;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 24em;
     }
     .top-news {
@@ -2449,7 +2413,7 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 200px auto;
-            grid-template-rows: 200px auto;
+        grid-template-rows: 200px auto;
     }
     .hamburger {
         display: inline-block;
@@ -2498,7 +2462,8 @@ span.chi_nounderline, .chi_nounderline {
     .chinese {
         margin: 0 15px;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 70px;
     }
     .nav-link {
@@ -2526,7 +2491,7 @@ span.chi_nounderline, .chi_nounderline {
     .share-button {
         font-size: 2rem;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 78px;
         height: 78px;
         line-height: 78px;
@@ -2626,7 +2591,8 @@ span.chi_nounderline, .chi_nounderline {
     .events-icon h2 {
         font-size: 2rem;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 30em;
     }
     .main-news-title {
@@ -2661,7 +2627,8 @@ span.chi_nounderline, .chi_nounderline {
     .card__social {
         width: 188px;
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         width: 42px;
         height: 42px;
         line-height: 42px;
@@ -2701,7 +2668,7 @@ span.chi_nounderline, .chi_nounderline {
     .align-right {
         margin-top: 0;
     }
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         width: 80%;
     }
     .text-field,
@@ -2761,9 +2728,6 @@ span.chi_nounderline, .chi_nounderline {
     #announcements {
         padding: 7em 0 2em;
     }
-    .youtube-container a {
-    font-size: 1.5rem;
-    }
 }
 
 
@@ -2781,15 +2745,17 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 150px auto;
-            grid-template-rows: 150px auto;
+        grid-template-rows: 150px auto;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 30px;
     }
     .navbar {
         padding-top: 0;
     }
-    .brand-logo, .brand-logo p {
+    .brand-logo,
+    .brand-logo p {
         font-size: 3rem;
     }
     .beta {
@@ -2833,7 +2799,7 @@ span.chi_nounderline, .chi_nounderline {
         font-size: 2rem;
         padding: 1.1em 0;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 47px;
         height: 47px;
         line-height: 47px;
@@ -2850,7 +2816,7 @@ span.chi_nounderline, .chi_nounderline {
     #welcome {
         height: 110%
     }
-    .news-container, .videoad {
+    .news-container {
         margin-bottom: 80px;
     }
     .news-pgraph1 {
@@ -3001,7 +2967,7 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 90px auto;
-            grid-template-rows: 90px auto;
+        grid-template-rows: 90px auto;
         grid-gap: 25px;
     }
     .nav-container .navbar {
@@ -3022,7 +2988,7 @@ span.chi_nounderline, .chi_nounderline {
         margin: 5px 5px 10px;
         font-size: 1.3rem;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 28px;
         height: 28px;
         line-height: 28px;
@@ -3057,7 +3023,7 @@ span.chi_nounderline, .chi_nounderline {
     .bulletin-text,
     .feedback-text,
     .call-to-action-heading,
-    {
+        {
         font-size: 2.2rem;
     }
     .section-heading.centered {
@@ -3125,7 +3091,7 @@ span.chi_nounderline, .chi_nounderline {
     .adjust-padding-td {
         padding: 40px 0;
     }
-    .news-container, .videoad {
+    .news-container {
         margin-bottom: 60px;
     }
     .events-icon img {
@@ -3135,7 +3101,8 @@ span.chi_nounderline, .chi_nounderline {
     .events-icon h2 {
         font-size: 2rem;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 23em;
     }
     .top-news {
@@ -3156,15 +3123,16 @@ span.chi_nounderline, .chi_nounderline {
     }
     .card__social--active {
         -webkit-transform: translateX(-35px);
-            -ms-transform: translateX(-35px);
-                transform: translateX(-35px);
+        -ms-transform: translateX(-35px);
+        transform: translateX(-35px);
     }
     .card__share {
         display: none;
         margin-top: -120px;
         margin-right: 0;
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         width: 30px;
         height: 30px;
         line-height: 30px;
@@ -3228,7 +3196,7 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 80px auto;
-            grid-template-rows: 80px auto;
+        grid-template-rows: 80px auto;
         grid-gap: 20px;
     }
     .nav-container .navbar {
@@ -3262,7 +3230,8 @@ span.chi_nounderline, .chi_nounderline {
         width: 35px;
         height: 35px;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 22em;
     }
     .top-news {
@@ -3276,7 +3245,8 @@ span.chi_nounderline, .chi_nounderline {
         display: block;
         margin-top: -118px;
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         font-size: 1.3rem;
     }
     .more h3 {
@@ -3287,7 +3257,7 @@ span.chi_nounderline, .chi_nounderline {
         width: 20px;
         height: 20px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 28px;
         height: 28px;
         line-height: 28px;
@@ -3383,9 +3353,6 @@ span.chi_nounderline, .chi_nounderline {
     .call-to-action-section {
         height: 64%;
     }
-    .youtube-container a {
-        padding: 12px;
-    }
 }
 
 
@@ -3416,7 +3383,7 @@ span.chi_nounderline, .chi_nounderline {
         font-size: 2.3rem;
         margin: 0.3em 0 0.6em;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 68px;
         height: 68px;
         line-height: 68px;
@@ -3517,7 +3484,7 @@ span.chi_nounderline, .chi_nounderline {
         -ms-flex-align: left;
         align-items: left;
     }
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         margin-bottom: 15px;
     }
     .align-right {
@@ -3535,7 +3502,7 @@ span.chi_nounderline, .chi_nounderline {
     #announcements {
         padding: 6em 0 0;
     }
-    .news-container, .videoad {
+    .news-container {
         margin-bottom: 80px;
     }
     .top-news {
@@ -3559,7 +3526,8 @@ span.chi_nounderline, .chi_nounderline {
     .card__social {
         width: 140px;
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         width: 32px;
         height: 32px;
         line-height: 32px;
@@ -3653,9 +3621,10 @@ span.chi_nounderline, .chi_nounderline {
     }
     .nav-container {
         -ms-grid-rows: 150px auto;
-            grid-template-rows: 150px auto;
+        grid-template-rows: 150px auto;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 70px;
     }
     .nav-link {
@@ -3668,7 +3637,7 @@ span.chi_nounderline, .chi_nounderline {
         top: 23px;
         right: 22px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         height: 60px;
         width: 60px;
         line-height: 60px;
@@ -3738,7 +3707,7 @@ span.chi_nounderline, .chi_nounderline {
         right: 5px;
         left: unset;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 45px;
         height: 45px;
         line-height: 45px;
@@ -3920,7 +3889,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .nav-container {
         -ms-grid-rows: 140px auto;
-            grid-template-rows: 140px auto;
+        grid-template-rows: 140px auto;
     }
     .nav-container .navbar {
         grid-gap: 50px;
@@ -3938,7 +3907,7 @@ window.outerHeight include toolbar and address bar----------- */
     .share-container {
         width: 100%;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 50px;
         height: 50px;
         line-height: 50px;
@@ -4027,16 +3996,15 @@ window.outerHeight include toolbar and address bar----------- */
     .main-news {
         margin-bottom: 20px;
     }
-    .videoad {
-        margin-bottom: 60px;
-    }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 28em;
     }
     .news-pgraph3 {
         font-size: 2rem;
     }
-    .news-pgraph3, .news-pgraph1 {
+    .news-pgraph3,
+    .news-pgraph1 {
         padding: 0 6%;
         font-weight: 300;
     }
@@ -4052,7 +4020,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .top-news {
         -ms-grid-columns: 100%;
-            grid-template-columns: 100%;
+        grid-template-columns: 100%;
         grid-auto-rows: 170px;
         grid-gap: 20px;
     }
@@ -4062,8 +4030,8 @@ window.outerHeight include toolbar and address bar----------- */
         display: flex;
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
-            -ms-flex-direction: row;
-                flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
     }
     .news-image {
         width: 55%;
@@ -4089,7 +4057,8 @@ window.outerHeight include toolbar and address bar----------- */
     .card__social {
         width: 210px;
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         width: 48px;
         height: 48px;
         line-height: 48px;
@@ -4141,11 +4110,11 @@ window.outerHeight include toolbar and address bar----------- */
         -ms-flex-direction: column;
         flex-direction: column;
     }
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         width: 100%;
     }
     .submit-button,
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         font-size: 1.5rem;
         line-height: 1em;
     }
@@ -4215,7 +4184,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .nav-container {
         -ms-grid-rows: 120px auto;
-            grid-template-rows: 120px auto;
+        grid-template-rows: 120px auto;
     }
     .nav-container .navbar {
         grid-gap: 60px;
@@ -4228,7 +4197,7 @@ window.outerHeight include toolbar and address bar----------- */
         width: 45px;
         height: 45px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         height: 45px;
         width: 45px;
         line-height: 45px;
@@ -4301,7 +4270,8 @@ window.outerHeight include toolbar and address bar----------- */
     .group-photo-caption {
         font-size: 2rem;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 26em;
     }
     .top-news-title {
@@ -4352,7 +4322,7 @@ window.outerHeight include toolbar and address bar----------- */
     .share-container {
         width: 90%;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 32px;
         height: 32px;
         line-height: 32px;
@@ -4387,7 +4357,7 @@ window.outerHeight include toolbar and address bar----------- */
     .welcome-container {
         margin-bottom: 0;
     }
-    .main-news, .videoad, .youtube iframe{
+    .main-news {
         height: 260px;
     }
     .main-news a .news-image {
@@ -4420,7 +4390,7 @@ window.outerHeight include toolbar and address bar----------- */
         margin-top: 0;
     }
     .submit-button,
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         line-height: 0;
         height: 35px;
     }
@@ -4528,7 +4498,7 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 14px;
     }
     .body {
-      padding-left: 0;
+        padding-left: 0;
     }
     .pulse {
         font-size: 1.5rem;
@@ -4537,7 +4507,7 @@ window.outerHeight include toolbar and address bar----------- */
         line-height: 100px;
     }
     .main-nav {
-       width: 100%;
+        width: 100%;
         padding-top: 30px;
     }
     .home-container {
@@ -4562,7 +4532,8 @@ window.outerHeight include toolbar and address bar----------- */
     .mobile-nav {
         height: 8%;
     }
-    .nav-container, .nav-container .navbar {
+    .nav-container,
+    .nav-container .navbar {
         grid-gap: 50px;
     }
     .menu-links .closebtn {
@@ -4610,7 +4581,7 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1.2rem;
         padding: 11px 20px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 42px;
         height: 42px;
         line-height: 42px;
@@ -4798,21 +4769,15 @@ window.outerHeight include toolbar and address bar----------- */
     .news-container {
         margin-bottom: 60px;
     }
-    .videoad {
-        margin-bottom: 40px;
-    }
-    .youtube-container a {
-        font-size: 1.2rem;
-        padding: 12px;
-    }
-    .events-icon img {
+    s .events-icon img {
         width: 40px;
         height: 40px;
     }
     .events-icon h2 {
         font-size: 1.6rem;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 20em;
     }
     .main-news-title {
@@ -4851,7 +4816,8 @@ window.outerHeight include toolbar and address bar----------- */
         -ms-transform: translateX(-48px);
         transform: translateX(-48px);
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         width: 35px;
         height: 35px;
         line-height: 35px;
@@ -4927,7 +4893,7 @@ window.outerHeight include toolbar and address bar----------- */
         line-height: 1.2em;
     }
     .submit-button,
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         font-size: 1.1rem;
         height: 38px;
         padding: 10px 20px;
@@ -5068,7 +5034,7 @@ window.outerHeight include toolbar and address bar----------- */
     .nav-container .navbar {
         grid-gap: 50px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 40px;
         height: 40px;
         line-height: 40px;
@@ -5108,7 +5074,8 @@ window.outerHeight include toolbar and address bar----------- */
     .main-news {
         margin-bottom: 15px;
     }
-    .main-news, .main-image, .videoad, .youtube iframe {
+    .main-news,
+    .main-image {
         height: 16em;
     }
     .top-news {
@@ -5134,7 +5101,7 @@ window.outerHeight include toolbar and address bar----------- */
     address {
         margin-bottom: 15px;
     }
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         margin-bottom: 10px;
     }
     .submit-button {
@@ -5157,7 +5124,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .nav-container {
         -ms-grid-rows: 100px auto;
-            grid-template-rows: 100px auto;
+        grid-template-rows: 100px auto;
         grid-gap: 20px;
     }
     .nav-container .navbar {
@@ -5166,7 +5133,7 @@ window.outerHeight include toolbar and address bar----------- */
     .menu-links .closebtn {
         top: 2%;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 38px;
         height: 38px;
         line-height: 38px;
@@ -5367,14 +5334,15 @@ window.outerHeight include toolbar and address bar----------- */
         height: 120%;
         padding: 4em 0;
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         font-size: 14px;
     }
     .welcome-column-2 {
         height: 80%;
     }
     .submit-button,
-    .cogs-news-form>.text-field {
+    .cogs-news-form > .text-field {
         height: 35px;
         padding: 8px 15px;
         font-size: 1.2rem;
@@ -5408,7 +5376,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .nav-container {
         -ms-grid-rows: 100px auto;
-            grid-template-rows: 100px auto;
+        grid-template-rows: 100px auto;
         grid-gap: 20px;
     }
     .nav-container .navbar {
@@ -5423,7 +5391,7 @@ window.outerHeight include toolbar and address bar----------- */
     .menu-links .closebtn {
         top: 2%;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 38px;
         height: 38px;
         line-height: 38px;
@@ -5432,7 +5400,8 @@ window.outerHeight include toolbar and address bar----------- */
     .card__social {
         width: 155px;
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         font-size: 14px;
     }
 }
@@ -5557,26 +5526,26 @@ window.outerHeight include toolbar and address bar----------- */
 }
 
 @media screen and ( max-width: 320px) and ( max-height: 670px) {
-  .body {
-    padding-left: 0;
-  }
+    .body {
+        padding-left: 0;
+    }
     .main-nav {
-    display: none;
-    width: 100%;
-}
-.bulletin-flex {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-direction: column;
-    flex-direction: column;
-}
+        display: none;
+        width: 100%;
+    }
+    .bulletin-flex {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
 }
 
 /* ----------- iPhone 5 and 5S Potrait ----------- */
 
 @media screen and ( max-width: 320px) and ( max-height: 570px) {
     .main-nav {
-      display: none;
+        display: none;
         z-index: 1001;
     }
     .nav-container {
@@ -5603,7 +5572,7 @@ window.outerHeight include toolbar and address bar----------- */
     .social-container {
         margin-top: 25px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 35px;
         height: 35px;
         line-height: 35px;
@@ -5648,7 +5617,7 @@ window.outerHeight include toolbar and address bar----------- */
     #announcements .section-heading.centered {
         padding-bottom: 5px;
     }
-    .news-container, .videoad {
+    .news-container {
         margin-bottom: 40px;
     }
     .main-news-title {
@@ -5682,7 +5651,8 @@ window.outerHeight include toolbar and address bar----------- */
         -ms-transform: translateX(-45px);
         transform: translateX(-45px);
     }
-    .share-toggle, .card__share .card__social .share-icon {
+    .share-toggle,
+    .card__share .card__social .share-icon {
         width: 32px;
         height: 32px;
         line-height: 32px;
@@ -5767,7 +5737,7 @@ window.outerHeight include toolbar and address bar----------- */
     .social-container {
         margin-top: 15px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 36px;
         height: 36px;
         line-height: 36px;
@@ -5805,7 +5775,8 @@ window.outerHeight include toolbar and address bar----------- */
     #welcome {
         height: 150%;
     }
-    .welcome-pgraph, .welcome-author {
+    .welcome-pgraph,
+    .welcome-author {
         text-align: left;
     }
     .plan-visit {
@@ -5813,7 +5784,8 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .plan-visit .form-field.text-area {
         min-height: 100px;
-    }.events-icon img {
+    }
+    .events-icon img {
         width: 36px;
         height: 36px;
     }
@@ -5860,7 +5832,7 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 1rem;
         padding: 10px 18px;
     }
-    .web__share>.share-icon {
+    .web__share > .share-icon {
         width: 34px;
         height: 34px;
         line-height: 34px;
@@ -5877,5 +5849,146 @@ window.outerHeight include toolbar and address bar----------- */
     }
     #welcome {
         height: 155%;
+    }
+}
+
+/* Video Promo Section */
+
+.youtube iframe {
+    height: 34em;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.youtube-container {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: #c62d23;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+}
+
+.youtube-container a {
+    font-size: 1rem;
+    border-radius: 4px;
+    text-align: center;
+    width: 100%;
+    padding: 16px 10px;
+}
+
+.youtube-container .tooltiptext {
+    visibility: hidden;
+    width: 160px;
+    text-align: center;
+    font-size: .8rem;
+    background-color: white;
+    color: #c62d23;
+    border-radius: 6px;
+    padding: 10px 8px 14px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -60px;
+    opacity: 0;
+    -webkit-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    transition: opacity 1s
+}
+
+.youtube-container .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #c62d23 transparent transparent
+}
+
+.youtube-container:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1
+}
+
+@media screen and ( max-width: 1281px) and (max-height: 580px) {
+    .videoad,
+    .youtube iframe {
+        height: 28em;
+    }
+}
+
+@media screen and ( max-width: 1100px) {
+    .videoad,
+    .youtube iframe {
+        height: 24em;
+    }
+}
+
+@media screen and ( max-width: 1024px) {
+    .videoad,
+    .youtube iframe {
+        height: 30em;
+    }
+    .youtube-container a {
+        font-size: 1.5rem;
+    }
+}
+
+@media screen and ( max-width: 1024px) and ( max-height: 510px) {
+    .videoad,
+    .youtube iframe {
+        height: 23em;
+    }
+}
+
+@media screen and ( max-width: 970px) and (max-height: 490px) {
+    .videoad,
+    .youtube iframe {
+        height: 22em;
+    }
+    .youtube-container a {
+        padding: 12px;
+    }
+}
+
+@media screen and ( max-width: 610px) and (max-height: 940px) {
+    .videoad,
+    .youtube iframe {
+        height: 28em;
+    }
+}
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .videoad,
+    .youtube iframe {
+        height: 26em;
+    }
+}
+
+@media screen and ( max-width: 568px) {
+    .videoad,
+    .youtube iframe {
+        height: 260px;
+    }
+}
+
+@media screen and ( max-width: 430px) and (max-height: 740px) {
+    .videoad,
+    .youtube iframe {
+        height: 20em;
+    }
+    .youtube-container a {
+        font-size: 1.2rem;
+        padding: 12px;
+    }
+}
+
+@media screen and ( max-width: 380px) {
+    .videoad,
+    .youtube iframe {
+        height: 16em;
     }
 }
