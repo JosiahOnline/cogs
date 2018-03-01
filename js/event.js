@@ -21,7 +21,7 @@ $(document).ready(function () {
     });
 
     // set the max height
-    if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+    if ((window.matchMedia('(max-height: 460px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
         $("#rotateDevice").css("display", "block");
     } else {
         $("#rotateDevice").css("display", "none");
@@ -29,7 +29,7 @@ $(document).ready(function () {
 });
 
 $(window).resize(function () {
-    if ((window.matchMedia('(max-height: 460px)').matches) && (window.innerWidth > window.innerHeight)) {
+    if ((window.matchMedia('(orientation: landscape)').matches)) {
         $("#rotateDevice").css("display", "block");
     } else {
         $("#rotateDevice").css("display", "none");
