@@ -161,10 +161,10 @@ $(document).ready(function () {
 });
 
 
-$(window).resize(function () {
-    if ((window.matchMedia('(orientation: landscape)').matches)) {
-        $("#rotateDevice").css("display", "block");
-    } else {
-        $("#rotateDevice").css("display", "none");
-    }
-});
+//$(window).resize(function () {
+//    if ((window.matchMedia('(orientation: landscape)').matches)) {
+//        $("#rotateDevice").css("display", "block");
+//    } else {
+//        $("#rotateDevice").css("display", "none");
+//    }
+//});
