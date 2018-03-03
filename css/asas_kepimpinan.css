@@ -1,0 +1,94 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091254/Asas%20Kepimpinan/kepimpinan6.jpg");
+    background-position: 50% 100%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091257/Asas%20Kepimpinan/kepimpinan1.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091256/Asas%20Kepimpinan/kepimpinan2.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091258/Asas%20Kepimpinan/kepimpinan3.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091261/Asas%20Kepimpinan/kepimpinan4.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091262/Asas%20Kepimpinan/kepimpinan5.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091267/Asas%20Kepimpinan/kepimpinan7.jpg");
+}
+
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091262/Asas%20Kepimpinan/kepimpinan8.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091263/Asas%20Kepimpinan/kepimpinan9.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091265/Asas%20Kepimpinan/kepimpinan10.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091268/Asas%20Kepimpinan/kepimpinan11.jpg");
+}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091254/Asas%20Kepimpinan/kepimpinan6.jpg");
+}
+
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5,
+.pic6,
+.pic7,
+.pic8,
+.pic9,
+.pic10,
+.pic11 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and ( max-width: 1024px) {
+    .main-section {
+        background-position: 50% 50%;
+    }
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 610px) and (max-height: 940px) {
+    .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
