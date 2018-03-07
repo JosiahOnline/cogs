@@ -2359,7 +2359,7 @@ span.chi_nounderline,
         font-size: 2.5rem;
     }
     .navburger .cn_menu {
-        color: transparent;
+        display: none;
     }
     .bulletin-pgraph,
     .feedback-pgraph,
@@ -2384,9 +2384,6 @@ span.chi_nounderline,
         margin-bottom: 0;
     }
     .navburger {
-        -webkit-box-flex: 1;
-        -ms-flex: 1;
-        flex: 1;
         display: -webkit-box;
         display: -ms-flexbox;
         display: flex;
@@ -5971,9 +5968,6 @@ window.outerHeight include toolbar and address bar----------- */
     .videoad {
         height: 28em;
     }
-    .youtube-container a {
-        padding: 12px;
-    }
 }
 
 @media screen and ( max-width: 610px) and (max-height: 940px) {
@@ -6000,7 +5994,6 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .youtube-container a {
         font-size: 1.2rem;
-        padding: 12px;
     }
 }
 
