@@ -5906,14 +5906,14 @@ window.outerHeight include toolbar and address bar----------- */
     width: 160px;
     text-align: center;
     font-size: .8rem;
-    background-color: white;
-    color: #c62d23;  
+    background-color: #c62d23;
+    color: white;  
     border-radius: 6px;
     padding: 10px 8px 14px;
     position: absolute;
     z-index: 1;
-    bottom: 125%;
-    left: 50%;
+    bottom: 10%;
+    left: 60%;
     margin-left: -60px;
     opacity: 0;
     -webkit-transition: opacity 1s;

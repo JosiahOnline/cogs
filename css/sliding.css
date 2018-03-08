@@ -18,8 +18,8 @@
 
 .slidePhoto {
     position: absolute;
-    -webkit-animation: round 48s infinite;
-    animation: round 48s infinite;
+    -webkit-animation: round 64s infinite;
+    animation: round 64s infinite;
     opacity: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -29,8 +29,8 @@
 }
 
 .CHIpar {
-    -webkit-animation: round 48s infinite;
-    animation: round 48s infinite;
+    -webkit-animation: round 64s infinite;
+    animation: round 64s infinite;
 }
 
 .BMpar {
@@ -187,6 +187,16 @@
     }
 }
 
+
+.slidePhoto:nth-child(8) {
+    -webkit-animation-delay: 56s;
+    animation-delay: 56s;
+}
+
+.slidePhoto:nth-child(7) {
+    -webkit-animation-delay: 48s;
+    animation-delay: 48s;
+}
 .slidePhoto:nth-child(6) {
     -webkit-animation-delay: 40s;
     animation-delay: 40s;
