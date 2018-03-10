@@ -3,6 +3,13 @@
     background-position: 45% 50%;
 }
 
+.verse-pgraph {
+    color: white;
+    font-weight: bold;
+    background: rgba(0,0,0,0.9);
+    padding: 6px 0;
+}
+
 .share-button {
     background: #ee362a;
     
