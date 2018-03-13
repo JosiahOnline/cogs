@@ -1636,6 +1636,12 @@ span.chi_nounderline {
     }
 }
 
+@media screen and ( max-width: 480px) and (max-height: 780px) {
+    .videoad {
+        height: 32em;
+    }
+}
+
 @media screen and ( max-width: 430px) and (max-height: 740px) {
     .videoad {
         height: 26em;
