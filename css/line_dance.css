@@ -1,27 +1,76 @@
 .main-section {
-    background-image: url("../News/img/dance.jpg");
-}
-
-.pic1 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance4.jpg");
-}
-
-.pic2 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720654/LineDance/dance3.jpg");
-}
-
-.pic3 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720656/LineDance/dance5.jpg");
-}
-
-.pic4 {
     background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance2.jpg");
 }
 
-.pic1, .pic2, .pic3, .pic4 {
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825300/LineDance/excelsis1.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825300/LineDance/excelsis2.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825300/LineDance/excelsis3.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825300/LineDance/excelsis4.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825300/LineDance/excelsis5.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825300/LineDance/excelsis6.jpg");
+}
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825301/LineDance/excelsis7.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825302/LineDance/excelsis8.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825301/LineDance/excelsis9.jpg");
+}
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825302/LineDance/excelsis10.jpg");
+}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825302/LineDance/excelsis11.jpg");
+}
+
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825302/LineDance/excelsis12.jpg");
+}
+.pic13 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520825303/LineDance/excelsis13.jpg");
+}
+.pic14 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance2.jpg");
+}
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14 {
     height: 100vh;
     width: 100%;
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 970px) and (max-height: 490px) {
+    .join a {
+        color: white;
+        background-color: transparent;
+    }
+}
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .join a {
+        color: white;
+        background-color: transparent;
+    }
 }
