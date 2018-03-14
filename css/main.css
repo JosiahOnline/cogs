@@ -4449,9 +4449,12 @@ window.outerHeight include toolbar and address bar----------- */
 }
 
 /*----------- Samsung Mega -----------------*/
-@media screen and ( max-width: 480px) and (max-height: 780px) {
+@media screen and ( max-width: 480px) and (max-height: 900px) {
     .mobile-nav {
         height: 8%;
+    }
+    .home-container.adjust-padding-lr {
+        padding: 0;
     }
     .bulletin-row {
         width: 25em;
@@ -6039,7 +6042,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
 }
 
-@media screen and ( max-width: 480px) and (max-height: 780px) {
+@media screen and ( max-width: 480px) and (max-height: 900px) {
     .videoad {
         height: 32em;
     }
