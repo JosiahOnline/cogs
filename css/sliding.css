@@ -279,7 +279,7 @@
     position: absolute;
     background: #2C3E50;
     color: #fff;
-    font-size: 15px;
+    font-size: 0.9rem;
     font-weight: 300;
     text-align: center;
     border-bottom-left-radius: 4px;
@@ -295,9 +295,9 @@
     bottom: 0;
     color: white;
     background: #2C3E50;
-    padding: 10px 15px 10px 20px;
+    padding: 15px 15px 15px 20px;
     text-align: center;
-    font-size: 18px;
+    font-size: 1.2rem;
     border-top-right-radius: 4px;
     border-bottom-right-radius: 4px;
 }
@@ -310,7 +310,10 @@
     box-shadow:
         inset 0 1px 10px rgba(0,0,0,0.3), 0 1px 0 rgba(35,49,64,0.1), 0 -1px 0 rgba(0,0,0,0.5)
 */
-
+.slideDescription h2, .slideDescription h4{
+    font-size: 1.5rem;
+    line-height: 1.1em;
+}
 .slideDescription h2 {
     padding: 0 20px;
 }
@@ -318,8 +321,6 @@
 .slideDescription h4 {
     padding: 0 10px 0 20px;
     color: #5B0000;
-    font-size: 30px;
-    line-height: 1.1em;
 }
 
 .slideimg img {
@@ -338,34 +339,11 @@
     .newsSlider {
         height: 28em;
     }
-    .slideDescription h2 {
-        font-size: 26px;
-        line-height: 30px;
-        padding: 0 15px;
-    }
-    .slideDescription h4 {
-        font-size: 20px;
-        padding: 0 5px 0 15px;
-    }
-    .slideDescription p {
-        font-size: 18px;
-        padding-left: 15px;
-    }
 }
 
 @media screen and (max-width: 1100px) {
     .newsSlider {
         height: 24em;
-    }
-    .slideDescription h2 {
-        font-size: 22px;
-        line-height: 26px;
-    }
-    .slideDescription h4 {
-        font-size: 18px;
-    }
-    .slideDescription p {
-        font-size: 16px;
     }
 }
 
@@ -373,17 +351,12 @@
     .newsSlider {
         height: 30em;
     }
-    .slideDescription h2 {
-        font-size: 1.7rem;
+    .slideDescription h2, .slideDescription h4 {
+        font-size: 1.6rem;
         line-height: 1.2em;
-        padding: 0 15px;
     }
-    .slideDescription h4 {
-        font-size: 1.4rem;
-        padding: 0 5px 0 15px;
-    }
-    .slideDescription p {
-        padding-left: 15px;
+    .slideDescription h5 {
+        font-size: 1rem;
     }
 }
 
@@ -391,11 +364,15 @@
     .newsSlider {
         height: 23em;
     }
-    .slideDescription h2 {
-        font-size: 2rem;
+    .slideDescription h2, .slideDescription h4 {
+        font-size: 2.2rem;
     }
-    .slideDescription h4 {
-        font-size: 1.8rem;
+    .slideDescription p {
+        font-size: 1.6rem;
+        padding: 10px 15px 10px 20px
+    }
+    .slideDescription h5 {
+        font-size: 1.5rem;
     }
 }
 
@@ -404,10 +381,10 @@
         height: 22em;
     }
     .slideDescription h5 {
-        font-size: 14px;
+        font-size: 1.4rem;
     }
     .slideDescription p {
-        font-size: 15px;
+        font-size: 1.6rem;
     }
 }
 
@@ -417,6 +394,9 @@
     }
     .slideDescription p {
         font-size: 1.5rem;
+    }
+    .slideDescription h5 {
+        font-size: 1.4rem;
     }
 }
 
@@ -441,7 +421,7 @@
         bottom: 0;
     }
     .slideDescription h5 {
-        font-size: 18px;
+        font-size: 1.4rem;
         top: 0px;
         right: unset;
         left: 0;
@@ -450,15 +430,12 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 4px;
     }
-    .slideDescription h2, .slideDescription h4 {
-        font-size: 2rem;
-    }
     .slideDescription p {
         font-size: 1.5rem;
     }
     .progress-bar {
         bottom: 45%;
-}
+    }
 }
 
 @media screen and (max-height: 850px) and (max-width: 610px) {
@@ -467,22 +444,35 @@
     }
 }
 
+@media screen and (max-height: 780px) and (max-width: 480px) {
+    .slideDescription h2, .slideDescription h4 {
+        font-size: 2.4rem;
+    }
+    .slideDescription h5 {
+        font-size: 1.5rem;
+    }
+    .slideDescription p {
+        font-size: 1.9rem;
+    }
+}
+
 @media screen and (max-height: 740px) and (max-width: 430px) {
     .newsSlider {
         height: 30em;
     }
     .slideDescription {
-        padding-top: 14%;
-    }
-    .slideDescription h5 {
-        font-size: 14px;
+        padding-top: 13%;
     }
     .slideDescription h2, .slideDescription h4 {
         font-size: 1.6rem;
+        padding: 0 10px 0 20px;
+    }
+    .slideDescription h5 {
+        font-size: 1.1rem;
     }
     .slideDescription p {
         font-size: 1.2rem;
-        padding: 8px 15px;
+        padding: 10px 15px 10px 20px;
     }
 }
 
@@ -493,15 +483,23 @@
     .slideDescription {
         padding-top: 12%;
     }
+    .slideDescription h2, .slideDescription h4 {
+        font-size: 1.6rem;
+        padding: 0 10px 0 15px;
+    }
     .slideDescription h5 {
-        font-size: 12px;
+        font-size: 1.1rem;
+    }
+    .slideDescription p {
+        font-size: 1.2rem;
+        padding: 10px 15px;
     }
 }
 
 
 @media screen and ( max-width: 320px) and ( max-height: 670px) {
     .slideDescription {
-        padding-top: 14%;
+        padding-top: 13%;
     }
     .slideDescription h2, .slideDescription h4 {
         font-size: 1.5rem;
@@ -515,11 +513,8 @@
     .newsSlider {
         height: 24em;
     }
-}
-
-@media screen and ( max-width: 320px) and ( max-height: 460px) {
-    .newsSlider {
-        height: 23em;
+    .slideDescription {
+        padding-top: 12%;
     }
 }
 
