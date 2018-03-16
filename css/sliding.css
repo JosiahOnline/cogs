@@ -318,7 +318,7 @@
 .slideDescription h4 {
     padding: 0 10px 0 20px;
     color: #5B0000;
-    font-size: 22px;
+    font-size: 30px;
     line-height: 1.1em;
 }
 
@@ -412,11 +412,11 @@
 }
 
 @media screen and (max-height: 1140px) and (max-width: 800px) {
-    .slideDescription h4 {
-        font-size: 1.6rem;
-    }
-    .slideDescription h2 {
+    .slideDescription h2, .slideDescription h4 {
         font-size: 1.9rem;
+    }
+    .slideDescription p {
+        font-size: 1.5rem;
     }
 }
 
@@ -441,6 +441,7 @@
         bottom: 0;
     }
     .slideDescription h5 {
+        font-size: 18px;
         top: 0px;
         right: unset;
         left: 0;
@@ -449,11 +450,11 @@
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 4px;
     }
-    .slideDescription h4 {
-        font-size: 1.8rem;
-    }
-    .slideDescription h2 {
+    .slideDescription h2, .slideDescription h4 {
         font-size: 2rem;
+    }
+    .slideDescription p {
+        font-size: 1.5rem;
     }
     .progress-bar {
         bottom: 45%;
@@ -476,14 +477,11 @@
     .slideDescription h5 {
         font-size: 14px;
     }
-    .slideDescription h2 {
+    .slideDescription h2, .slideDescription h4 {
         font-size: 1.6rem;
     }
-    .slideDescription h4 {
-        font-size: 1.4rem;
-    }
     .slideDescription p {
-        font-size: 1.1rem;
+        font-size: 1.2rem;
         padding: 8px 15px;
     }
 }
@@ -505,11 +503,8 @@
     .slideDescription {
         padding-top: 14%;
     }
-    .slideDescription h2 {
+    .slideDescription h2, .slideDescription h4 {
         font-size: 1.5rem;
-    }
-    .slideDescription h4 {
-        font-size: 1.3rem;
     }
     .slideDescription p {
         font-size: 1.2rem;
