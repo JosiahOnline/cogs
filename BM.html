@@ -33,7 +33,75 @@
     <meta property="og:image" content="http://www.cogssandakan.com/img/worship2a.jpg" />
     <meta property="og:image:alt" content="Menyembah di Church of The Good Shepherds(COGS)" />
     <style>
-          .preloader-container{position:fixed;height:100vh;width:100%;background-color:#f0f2f2;transition:all 2s ease;z-index:10000}.preloader{position:absolute;top:50%;left:41%;transform:translate(-50%,-50%)}.pulse{font-family:Oswald,sans-serif;text-align:center;width:100px;height:100px;line-height:100px;font-size:1.3rem;text-transform:uppercase;color:#fff;background:#141e28;border-radius:50%;animation:animate 2s linear infinite}@keyframes animate{0%{box-shadow:0 0 0 0 rgba(20,30,40,.7),0 0 50px 0 rgba(20,30,40,.7)}25%{box-shadow:0 0 0 50px rgba(20,30,40,.1.5),0 0 0 10px rgba(20,30,40,.6)}540%{box-shadow:0 0 0 100px rgba(20,30,40,.1.5),0 0 0 50px rgba(20,30,40,.6)}75%{box-shadow:0 0 0 200px rgba(20,30,40,0),0 0 0 100px rgba(20,30,40,0)}100%{box-shadow:0 0 0 300PX rgba(20,30,40,0),0 0 0 200px rgba(20,30,40,0)}}@media screen and (max-width:1280px){.preloader{top:55%}@media screen and (max-width:1024px){.preloader{left:50%}}@media screen and (max-width:970px) and (max-height:490px){.pulse{font-size:2.3rem}}@media screen and (max-width:768px){.pulse{font-size:1.8rem}}}
+        .preloader-container {
+            position: fixed;
+            height: 100vh;
+            width: 100%;
+            background-color: #f0f2f2;
+            transition: all 2s ease;
+            z-index: 10000
+        }
+
+        .preloader {
+            position: absolute;
+            top: 50%;
+            left: 41%;
+            transform: translate(-50%, -50%)
+        }
+
+        .pulse {
+            font-family: Oswald, sans-serif;
+            text-align: center;
+            width: 100px;
+            height: 100px;
+            line-height: 100px;
+            font-size: 1.3rem;
+            text-transform: uppercase;
+            color: #fff;
+            background: #141e28;
+            border-radius: 50%;
+            animation: animate 2s linear infinite
+        }
+
+        @keyframes animate {
+            0% {
+                box-shadow: 0 0 0 0 rgba(20, 30, 40, .7), 0 0 50px 0 rgba(20, 30, 40, .7)
+            }
+            25% {
+                box-shadow: 0 0 0 50px rgba(20, 30, 40, .1.5), 0 0 0 10px rgba(20, 30, 40, .6)
+            }
+            540% {
+                box-shadow: 0 0 0 100px rgba(20, 30, 40, .1.5), 0 0 0 50px rgba(20, 30, 40, .6)
+            }
+            75% {
+                box-shadow: 0 0 0 200px rgba(20, 30, 40, 0), 0 0 0 100px rgba(20, 30, 40, 0)
+            }
+            100% {
+                box-shadow: 0 0 0 300PX rgba(20, 30, 40, 0), 0 0 0 200px rgba(20, 30, 40, 0)
+            }
+        }
+
+        @media screen and (max-width:1280px) {
+            .preloader {
+                top: 55%
+            }
+            @media screen and (max-width:1024px) {
+                .preloader {
+                    left: 50%
+                }
+            }
+            @media screen and (max-width:970px) and (max-height:490px) {
+                .pulse {
+                    font-size: 2.3rem
+                }
+            }
+            @media screen and (max-width:768px) {
+                .pulse {
+                    font-size: 1.8rem
+                }
+            }
+        }
+
     </style>
     <link href="css/font.css" rel="stylesheet" type="text/css">
     <link href="css/basic.css" rel="stylesheet" type="text/css">
@@ -178,7 +246,7 @@
                 <div class="multiple-lang">
                     <div class="english"><a href="index.html">English</a></div>
                     <div class="chinese"><a href="CHI.html">Chinese</a></div>
-                    <div class="bm"><a class="current"  href="#">BM</a></div>
+                    <div class="bm"><a class="current" href="#">BM</a></div>
                 </div>
             </div>
             <nav class="navbar">
@@ -322,19 +390,19 @@
                     <h2 class="centered section-heading">Pengumuman</h2>
                     <div class="center section-subheading">Semua berita terkini & acara utama<br>(Tarikh Dikemaskini: <strong>17.MAC.2018</strong>)</div>
                 </div>
-                
+
                 <div class="latestNews">
-                <div class="events-icon">
+                    <div class="events-icon">
                         <a href="#"><img src="img/news.png"></a>
                         <h2>10 Berita Terkini</h2>
                         <form class="refreshButton">
                             <input TYPE="button" onClick="history.go(0)" VALUE="Refresh">
                         </form>
                     </div>
-                <div class="newsSlider">
-                    <div class="slideContainer">
-<!--                        BMpar -->
-                           <div class="slidePhoto" id="pic1">
+                    <div class="newsSlider">
+                        <div class="slideContainer">
+                            <!--                        BMpar -->
+                            <div class="slidePhoto" id="pic1">
                                 <div class="slideimg"><img src="http://res.cloudinary.com/trippleninja/image/upload/v1520997898/Belia%20BM/BeliaBM11.jpg" alt="" /></div>
                                 <div class="slideDescription">
                                     <h5>1</h5>
@@ -342,7 +410,8 @@
                                     <h2>Dewan Grace, 7.30 malam<br>Jamuan ringan, Games, Pujian & Penyembahan, Tayangan 4 buah video</h2>
                                     <p>16.MAC.2018 (Ahad)</p>
                                 </div>
-                            </div><div class="slidePhoto" id="pic2">
+                            </div>
+                            <div class="slidePhoto" id="pic2">
                                 <div class="slideimg"><img src="http://res.cloudinary.com/trippleninja/image/upload/v1520673867/News%20Images/baptism2b.jpg" alt="" /></div>
                                 <div class="slideDescription">
                                     <h5>2</h5>
@@ -356,8 +425,7 @@
                                 <div class="slideDescription">
                                     <h5>3</h5>
                                     <h4>Buat Salib Palma</h4>
-                                    <h2>Tempat: Dewan Barret<br>
-                                    Masa: 9:00 Pagi
+                                    <h2>Tempat: Dewan Barret<br> Masa: 9:00 Pagi
                                     </h2>
                                     <p>24.MAC.2018 (Sabtu)</p>
                                 </div>
@@ -376,13 +444,12 @@
                                 <div class="slideDescription">
                                     <h5>5</h5>
                                     <h4>Mesyuarat Agung Tahunan</h4>
-                                    <h2>Tempat: Dewan Barret<br>
-                                    Masa: 2:00 Petang
+                                    <h2>Tempat: Dewan Barret<br> Masa: 2:00 Petang
                                     </h2>
                                     <p>25.MAC.2018 (Ahad)</p>
                                 </div>
                             </div>
-                            
+
                             <div class="slidePhoto" id="pic6">
                                 <div class="slideimg"><img src="http://res.cloudinary.com/trippleninja/image/upload/v1520672903/News%20Images/maundy-thursday2b.jpg" alt="" /></div>
                                 <div class="slideDescription">
@@ -428,16 +495,16 @@
                                     <p>08.APRIL.2018 (Ahad)</p>
                                 </div>
                             </div>
-                        <div class="progress-bar"></div>
+                            <div class="progress-bar"></div>
+                        </div>
                     </div>
                 </div>
-                </div>
-                
+
                 <div class="news-container" id="upcomingEvents">
-                   <div class="events-icon">
-                    <a><img src="http://www.cogssandakan.com/img/calendar1.png"></a>
-                    <h2>Acara Yang Akan Datang</h2>
-                </div>
+                    <div class="events-icon">
+                        <a><img src="http://www.cogssandakan.com/img/calendar1.png"></a>
+                        <h2>Acara Yang Akan Datang</h2>
+                    </div>
                     <article class="main-news">
                         <a rel="canonical" href="BM/BERITA/AkanDatang/Extravagant_Worship.html"><img class="main-image round-radius" src="News/img/news/noservice.jpg">
                             <div class="main-news-description">
@@ -455,98 +522,18 @@
                             </div>
                         </a>
                     </article>
-
-<!--
+                    <!--
                     <div class="top-news">
 
-                        <article class="news">
-                            <a rel="canonical" href="./BM/BERITA/AkanDatang/Krismas/Karoling_Krismas.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1510300332/Christmas/christmas1.jpg">
-
-                                <div class="newsdescription">
-                                    <h1 class="top-news-title">Karoling Krismas COGS</h1>
-                                    <p class="news-pgraph2">4-13.Dis.Hari Bekerja</p>
-                                </div>
-                            </a>
-                            <div class="card__share">
-                                <div class="card__social">
-                                    <a class="share-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Karoling_Krismas.html" target="_blank"><span class="fa fa-facebook"></span></a>
-                                    <a class="share-icon twitter" href="https://twitter.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Karoling_Krismas.html" target="_blank"><span class="fa fa-twitter"></span></a>
-                                    <a class="share-icon googleplus" href="https://plus.google.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Karoling_Krismas.html" target="_blank"><span class="fa fa-google-plus"></span></a>
-                                    <a class="share-icon whatsapp" href="whatsapp://send?text=http://www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Karoling_Krismas.html" target="_blank"><span class="fa fa-whatsapp"></span></a>
-                                </div>
-
-                                <a class="share-toggle share-icon" href="#"></a>
-                            </div>
-                        </article>
-
-                        <article class="news">
-                            <a rel="canonical" href="./BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_Kanak_Kanak.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1510301473/Christmas/christmas5.jpg">
-
-                                <div class="newsdescription">
-                                    <h1 class="top-news-title">Perayaan Krismas Kanak-Kanak ENG & CHI</h1>
-                                    <p class="news-pgraph2">9.Dis.Ahad</p>
-                                </div>
-                            </a>
-                            <div class="card__share">
-                                <div class="card__social">
-                                    <a class="share-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_Kanak_Kanak.html" target="_blank"><span class="fa fa-facebook"></span></a>
-                                    <a class="share-icon twitter" href="https://twitter.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_Kanak_Kanak.html" target="_blank"><span class="fa fa-twitter"></span></a>
-                                    <a class="share-icon googleplus" href="https://plus.google.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_Kanak_Kanak.html" target="_blank"><span class="fa fa-google-plus"></span></a>
-                                    <a class="share-icon whatsapp" href="whatsapp://send?text=http://www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_Kanak_Kanak.html" target="_blank"><span class="fa fa-whatsapp"></span></a>
-                                </div>
-
-                                <a class="share-toggle share-icon" href="#"></a>
-                            </div>
-                        </article>
-
-                        <article class="news">
-                            <a rel="canonical" href="./BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_BM.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1510300329/Christmas/christmas2.jpg">
-
-                                <div class="newsdescription">
-                                    <h1 class="top-news-title">Perayaan Krismas BM</h1>
-                                    <p class="news-pgraph2">17.Dis.Ahad</p>
-                                </div>
-                            </a>
-                            <div class="card__share">
-                                <div class="card__social">
-                                    <a class="share-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_BM.html" target="_blank"><span class="fa fa-facebook"></span></a>
-                                    <a class="share-icon twitter" href="https://twitter.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_BM.html" target="_blank"><span class="fa fa-twitter"></span></a>
-                                    <a class="share-icon googleplus" href="https://plus.google.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_BM.html" target="_blank"><span class="fa fa-google-plus"></span></a>
-                                    <a class="share-icon whatsapp" href="whatsapp://send?text=http://www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Perayaan_Krismas_BM.html" target="_blank"><span class="fa fa-whatsapp"></span></a>
-                                </div>
-
-                                <a class="share-toggle share-icon" href="#"></a>
-                            </div>
-                        </article>
-
-                        <article class="news">
-                            <a rel="canonical" href="./BM/BERITA/AkanDatang/Krismas/Malam_Pra_Krismas.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1510300333/Christmas/christmas4.jpg">
-
-                                <div class="newsdescription">
-                                    <h1 class="top-news-title">Malam Pra Krismas COGS</h1>
-                                    <p class="news-pgraph2">24.Dis.Ahad</p>
-                                </div>
-                            </a>
-                            <div class="card__share">
-                                <div class="card__social">
-                                    <a class="share-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Malam_Pra_Krismas.html" target="_blank"><span class="fa fa-facebook"></span></a>
-                                    <a class="share-icon twitter" href="https://twitter.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Malam_Pra_Krismas.html" target="_blank"><span class="fa fa-twitter"></span></a>
-                                    <a class="share-icon googleplus" href="https://plus.google.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Malam_Pra_Krismas.html" target="_blank"><span class="fa fa-google-plus"></span></a>
-                                    <a class="share-icon whatsapp" href="whatsapp://send?text=http://www.cogssandakan.com/BM/BERITA/AkanDatang/Krismas/Malam_Pra_Krismas.html" target="_blank"><span class="fa fa-whatsapp"></span></a>
-                                </div>
-
-                                <a class="share-toggle share-icon" href="#"></a>
-                            </div>
-                        </article>
-
                     </div>
+ -->
                     <div class="more separator">
                         <a href="http://www.cogssandakan.com/BM/BERITA/Semua_Acara_COGS.html">
                             <h3>Selanjutnya</h3>
                             <img src="img/arrow-right.png">
                         </a>
                     </div>
--->
+
                 </div>
                 <!-- End of Upcoming News Container -->
 
@@ -652,24 +639,43 @@
                     </div>
                 </div>
                 <!-- End of Ongoing News Container -->
-                
+
                 <div class="news-container" id="pastEvents">
                     <div class="events-icon add-radius">
                         <a href="#"><img src="img/trumpet.png"></a>
                         <h2>Acara Yang Sudah Berlalu</h2>
                     </div>
                     <article class="main-news">
-                        <a rel="canonical" href="./BM/BERITA/SudahBerlalu/Asas_Kepimpinan.html"><img class="main-image round-radius" src="http://res.cloudinary.com/trippleninja/image/upload/v1520091254/Asas%20Kepimpinan/kepimpinan6.jpg">
+                        <a rel="canonical" href="./BM/BERITA/SudahBerlalu/Sandakan_Interchurch_Youth.html"><img class="main-image round-radius" src="http://res.cloudinary.com/trippleninja/image/upload/v1521434489/Sandakan%20Interchurch%20Youth/siy2.jpg">
                             <div class="main-news-description">
-                                <h1 class="main-news-title">Asas Kepimpinan</h1>
-                                <p class="news-pgraph3">23-24hb February 2018</p>
+                                <h1 class="main-news-title">Sandakan Interchurch Youth</h1>
+                                <p class="news-pgraph3">09hb MAC 2018</p>
                                 <p class="news-pgraph1">Klik di <span>sini</span> untuk maklumat lanjut</p>
                             </div>
                         </a>
                     </article>
 
                     <div class="top-news">
-                       <article class="news">
+                        <article class="news">
+                            <a rel="canonical" href="./BM/BERITA/SudahBerlalu/Asas_Kepimpinan.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1520091254/Asas%20Kepimpinan/kepimpinan6.jpg">
+
+                                <div class="newsdescription">
+                                    <h1 class="top-news-title">Asas Kepimpinan</h1>
+                                    <p class="news-pgraph2">23-24/02/2018</p>
+                                </div>
+                            </a>
+                            <div class="card__share">
+                                <div class="card__social">
+                                    <a class="share-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.cogssandakan.com/BM/BERITA/SudahBerlalu/Asas_Kepimpinan.html" target="_blank"><span class="fa fa-facebook"></span></a>
+                                    <a class="share-icon twitter" href="https://twitter.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/SudahBerlalu/Asas_Kepimpinan.html" target="_blank"><span class="fa fa-twitter"></span></a>
+                                    <a class="share-icon googleplus" href="https://plus.google.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/SudahBerlalu/Asas_Kepimpinan.html" target="_blank"><span class="fa fa-google-plus"></span></a>
+                                    <a class="share-icon whatsapp" href="whatsapp://send?text=http://www.cogssandakan.com/BM/BERITA/SudahBerlalu/Asas_Kepimpinan.html" target="_blank"><span class="fa fa-whatsapp"></span></a>
+                                </div>
+
+                                <a class="share-toggle share-icon" href="#"></a>
+                            </div>
+                        </article>
+                        <article class="news">
                             <a rel="canonical" href="./BM/BERITA/SudahBerlalu/Kebaktian_Krismas.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1514464675/Christmas%20Day%20Service%2017/christmas1.jpg">
 
                                 <div class="newsdescription">
@@ -689,7 +695,7 @@
                             </div>
                         </article>
                         <article class="news">
-                          <a rel="canonical" href="./BM/BERITA/SudahBerlalu/Malam_Pra_Krismas.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1514464898/Christmas%20Eve%20Service%2017/Eve1.jpg">
+                            <a rel="canonical" href="./BM/BERITA/SudahBerlalu/Malam_Pra_Krismas.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1514464898/Christmas%20Eve%20Service%2017/Eve1.jpg">
 
                                 <div class="newsdescription">
                                     <h1 class="top-news-title">Malam Pra Krismas(Gabungan)</h1>
@@ -728,25 +734,6 @@
                             </div>
                         </article>
 
-                        <article class="news">
-                            <a rel="canonical" href="./BM/BERITA/SudahBerlalu/Inspirasi_Malam_Krismas.html"><img class="news-image" src="http://res.cloudinary.com/trippleninja/image/upload/v1514560579/Inspired%20Christmas%20Night/Inpsired17.jpg">
-
-                                <div class="newsdescription">
-                                    <h1 class="top-news-title">Inspirasi Malam Krismas</h1>
-                                    <p class="news-pgraph2">17/12/2017</p>
-                                </div>
-                            </a>
-                            <div class="card__share">
-                                <div class="card__social">
-                                    <a class="share-icon facebook" href="https://www.facebook.com/sharer/sharer.php?u=http%3A//www.cogssandakan.com/BM/BERITA/SudahBerlalu/Inspirasi_Malam_Krismas.html" target="_blank"><span class="fa fa-facebook"></span></a>
-                                    <a class="share-icon twitter" href="https://twitter.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/SudahBerlalu/Inspirasi_Malam_Krismas.html" target="_blank"><span class="fa fa-twitter"></span></a>
-                                    <a class="share-icon googleplus" href="https://plus.google.com/share?url=http%3A//www.cogssandakan.com/BM/BERITA/SudahBerlalu/Inspirasi_Malam_Krismas.html" target="_blank"><span class="fa fa-google-plus"></span></a>
-                                    <a class="share-icon whatsapp" href="whatsapp://send?text=http://www.cogssandakan.com/BM/BERITA/SudahBerlalu/Inspirasi_Malam_Krismas.html" target="_blank"><span class="fa fa-whatsapp"></span></a>
-                                </div>
-
-                                <a class="share-toggle share-icon" href="#"></a>
-                            </div>
-                        </article>
                     </div>
                     <div class="more separator">
                         <a href="http://www.cogssandakan.com/BM/BERITA/Semua_Acara_COGS.html">
@@ -885,7 +872,7 @@
                 </div>
             </div>
         </div>
-<!--
+        <!--
         <div id="popMessage" class="pop-message">
             <div class="pop-container">
                 <div class="pop-pic"></div>
