@@ -1,6 +1,6 @@
 .main-section {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520398231/Children%20Bible%20Camp%20Mar18/2018_Bible_Camp2.jpg");
-    background-position: 50% 100%;
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382325/Children%20Bible%20Camp%20Mar18/biblecamp1.jpg");
+    background-position: 50% 50%;
 }
 
 .transparent-layer {
@@ -8,47 +8,50 @@
 }
 
 .pic1 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097772/Children%20Bible%20Camp%20Mar18/camp41.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382325/Children%20Bible%20Camp%20Mar18/biblecamp1.jpg");
 }
 
 .pic2 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097771/Children%20Bible%20Camp%20Mar18/camp37.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382334/Children%20Bible%20Camp%20Mar18/biblecamp2.jpg");
 }
 
 .pic3 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097771/Children%20Bible%20Camp%20Mar18/camp35.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382348/Children%20Bible%20Camp%20Mar18/biblecamp3.jpg");
 }
 
 .pic4 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097760/Children%20Bible%20Camp%20Mar18/camp28.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382341/Children%20Bible%20Camp%20Mar18/biblecamp4.jpg");
 }
 
 .pic5 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097769/Children%20Bible%20Camp%20Mar18/camp25.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382334/Children%20Bible%20Camp%20Mar18/biblecamp5.jpg");
 }
 
 .pic6 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097762/Children%20Bible%20Camp%20Mar18/camp17.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382334/Children%20Bible%20Camp%20Mar18/biblecamp6.jpg");
 }
 
 .pic7 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097755/Children%20Bible%20Camp%20Mar18/camp15.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382335/Children%20Bible%20Camp%20Mar18/biblecamp7.jpg");
 }
 
 .pic8 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097770/Children%20Bible%20Camp%20Mar18/camp10.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382334/Children%20Bible%20Camp%20Mar18/biblecamp8.jpg");
 }
 
 .pic9 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097755/Children%20Bible%20Camp%20Mar18/camp5.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382345/Children%20Bible%20Camp%20Mar18/biblecamp9.jpg");
 }
 
 .pic10 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520097761/Children%20Bible%20Camp%20Mar18/camp2.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382343/Children%20Bible%20Camp%20Mar18/biblecamp10.jpg");
 }
 
 .pic11 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520398231/Children%20Bible%20Camp%20Mar18/2018_Bible_Camp2.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382345/Children%20Bible%20Camp%20Mar18/biblecamp11.jpg");
+}
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521382348/Children%20Bible%20Camp%20Mar18/biblecamp12");
 }
 
 .pic1,
@@ -61,18 +64,13 @@
 .pic8,
 .pic9,
 .pic10,
-.pic11 {
+.pic11,
+.pic12 {
     height: 100vh;
     width: 100%;
     background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
-}
-
-@media screen and ( max-width: 1024px) {
-    .main-section {
-        background-position: 16% 1%;
-    }
 }
 
 @media screen and (max-width: 800px) and (max-height: 1140px) {
@@ -100,9 +98,6 @@
 }
 
 @media screen and ( max-width: 430px) and (max-height: 740px) {
-    .main-section {
-        background-position: 16% 1%;
-    }
     .topic {
         font-size: 1.3rem;
     }
