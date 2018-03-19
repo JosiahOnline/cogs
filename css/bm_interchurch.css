@@ -39,14 +39,14 @@
 .pic6 {
     height: 100vh;
     width: 100%;
-    background-position: 50% 1%;
+    background-position: 50% 50%;
     background-size: contain;
     background-repeat: no-repeat;
 }
 
 @media screen and ( max-width: 1024px) {
     .main-section {
-        background-position: 50% 1%;
+        background-position: 50% 50%;
     }
 }
 
