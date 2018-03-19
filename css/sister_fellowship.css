@@ -1,0 +1,76 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405052/Sisters'%20Fellowship/sisters1.jpg");
+    background-position: 50% 50%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .25);    
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405052/Sisters'%20Fellowship/sisters1.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405055/Sisters'%20Fellowship/sisters2.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405058/Sisters'%20Fellowship/sisters3.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405057/Sisters'%20Fellowship/sisters4.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405061/Sisters'%20Fellowship/sisters5.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405064/Sisters'%20Fellowship/sisters6.jpg");
+}
+
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405060/Sisters'%20Fellowship/sisters7.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405069/Sisters'%20Fellowship/sisters8.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405075/Sisters'%20Fellowship/sisters9.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405074/Sisters'%20Fellowship/sisters10.jpg");
+}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405075/Sisters'%20Fellowship/sisters11.jpg");
+}
+
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405070/Sisters'%20Fellowship/sisters12.jpg");
+}
+
+.pic13 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405072/Sisters'%20Fellowship/sisters13.jpg");
+}
+
+.pic14 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520405077/Sisters'%20Fellowship/sisters14.jpg");
+}
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and ( max-width: 430px) and ( max-height: 630px) {
+    html{font-size: 18px;}
+}
