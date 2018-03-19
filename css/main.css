@@ -5719,6 +5719,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .card__share {
         margin-top: -38px;
+        display: block;
     }
     .card__social {
         width: 145px;
