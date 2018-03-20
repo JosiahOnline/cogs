@@ -1,5 +1,5 @@
 .main-section {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance2.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521560727/LineDance/Line_Dance.jpg");
 }
 
 .pic1 {
@@ -53,8 +53,11 @@
 .pic14 {
     background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1507720653/LineDance/dance2.jpg");
 }
+.pic15 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521560727/LineDance/Line_Dance.jpg");
+}
 
-.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14 {
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15 {
     height: 100vh;
     width: 100%;
     background-position: 50% 50%;
