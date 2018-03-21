@@ -48,7 +48,47 @@
 }
 
 .pic11 {
-    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091254/Asas%20Kepimpinan/kepimpinan6.jpg");
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520091268/Asas%20Kepimpinan/kepimpinan11.jpg");
+}
+
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614664/Asas%20Kepimpinan/kepimpinan12.jpg");
+}
+
+.pic13 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614663/Asas%20Kepimpinan/kepimpinan13.jpg");
+}
+
+.pic14 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614664/Asas%20Kepimpinan/kepimpinan14.jpg");
+}
+
+.pic15 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614664/Asas%20Kepimpinan/kepimpinan15.jpg");
+}
+
+.pic16 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614664/Asas%20Kepimpinan/kepimpinan16.jpg");
+}
+
+.pic17 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614664/Asas%20Kepimpinan/kepimpinan17.jpg");
+}
+
+.pic18 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614664/Asas%20Kepimpinan/kepimpinan18.jpg");
+}
+
+.pic19 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614665/Asas%20Kepimpinan/kepimpinan19.jpg");
+}
+
+.pic20 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614665/Asas%20Kepimpinan/kepimpinan20.jpg");
+}
+
+.pic21 {
+ background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521614665/Asas%20Kepimpinan/kepimpinan21.jpg");
 }
 
 .pic1,
@@ -61,7 +101,17 @@
 .pic8,
 .pic9,
 .pic10,
-.pic11 {
+.pic11,
+.pic12,
+.pic13,
+.pic14,
+.pic15,
+.pic16,
+.pic17,
+.pic18,
+.pic19,
+.pic20,
+.pic21 {
     height: 100vh;
     width: 100%;
     background-position: 50% 50%;
