@@ -1,0 +1,93 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520997898/Belia%20BM/BeliaBM11.jpg");
+    background-position: 50% 50%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.pic1 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478251/Belia%20BM/BeliaBM1.jpg");}
+
+.pic2 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478252/Belia%20BM/BeliaBM2.jpg");}
+
+.pic3 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478259/Belia%20BM/BeliaBM3.jpg");}
+
+.pic4 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478258/Belia%20BM/BeliaBM4.jpg");}
+
+.pic5 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478259/Belia%20BM/BeliaBM5.jpg");}
+
+.pic6 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478259/Belia%20BM/BeliaBM6.jpg");}
+
+.pic7 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478257/Belia%20BM/BeliaBM7.jpg");}
+
+.pic8 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478264/Belia%20BM/BeliaBM8.jpg");}
+
+.pic9 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478267/Belia%20BM/BeliaBM9.jpg");}
+
+.pic10 {
+background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520478266/Belia%20BM/BeliaBM10.jpg");}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1520997898/Belia%20BM/BeliaBM11.jpg");
+}
+
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5,
+.pic6,
+.pic7,
+.pic8,
+.pic9,
+.pic10,
+.pic11 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and ( max-width: 1024px) {
+    .main-section {
+        background-position: 50% 1%;
+    }
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 610px) and (max-height: 940px) {
+    .topic {
+        font-size: 1.2rem;
+        text-align: left;
+        padding: 0 10%;
+    }
+    .verse-pgraph {
+        font-size: 1rem;
+        text-align: left
+    }
+    .share-pgraph {
+        text-align: left;
+    }
+    .share-button {
+        text-align: left;
+    }
+}
