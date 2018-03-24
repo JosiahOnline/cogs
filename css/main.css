@@ -818,7 +818,7 @@ select {
     max-width: 100%;
     -ms-grid-columns: 100%;
     grid-template-columns: 100%;
-    grid-gap: 50px;
+    grid-gap: 70px;
 }
 
 .social-container {
@@ -1754,7 +1754,7 @@ span.chi_nounderline,
     padding: 0 80px;
 }
 
-#announcements .adjust-padding-lr {
+#announcements .adjust-padding-lr, #download .adjust-padding-lr {
     padding: 0 120px;
 }
 
@@ -1828,7 +1828,7 @@ span.chi_nounderline,
     .googlemap iframe {
         height: 87.8%;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 80px;
     }
 }
@@ -1853,7 +1853,7 @@ span.chi_nounderline,
         grid-gap: 110px;
     }
     .nav-container .navbar {
-        grid-gap: 140px;
+        grid-gap: 130px;
     }
     .nav-link {
         padding: 1.6em 0;
@@ -1877,7 +1877,7 @@ span.chi_nounderline,
     .adjust-padding-lr {
         padding: 0 50px;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 70px;
     }
 }
@@ -1954,7 +1954,7 @@ span.chi_nounderline,
         grid-gap: 70px;
     }
     .nav-container .navbar {
-        grid-gap: 110px;
+        grid-gap: 100px;
     }
     .nav-link {
         padding: 1.6em 0;
@@ -1980,7 +1980,7 @@ span.chi_nounderline,
     #welcome {
         padding: 9em 0 6em;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 50px;
     }
 }
@@ -2071,7 +2071,10 @@ span.chi_nounderline,
     }
     .nav-container,
     .nav-container .navbar {
-        grid-gap: 30px;
+        grid-gap: 40px;
+    }
+    .navbar .social-icon-link img {
+        width: 25px;
     }
     .nav-link {
         font-size: 1.1rem;
@@ -2461,11 +2464,17 @@ span.chi_nounderline,
     }
     .nav-container,
     .nav-container .navbar {
-        grid-gap: 70px;
+        grid-gap: 80px;
     }
     .nav-link {
         font-size: 3rem;
-        padding: 1.5em 0;
+        padding: 1.4em 0;
+    }
+    .navbar .social-icon-link {
+        padding: 0 20px;
+    }
+    .navbar .social-icon-link img {
+        width: 60px;
     }
     .share-website {
         width: 100%;
@@ -2719,7 +2728,7 @@ span.chi_nounderline,
     .adjust-padding-lr {
         padding: 0 80px;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 5%;
     }
     #announcements {
@@ -2750,6 +2759,9 @@ span.chi_nounderline,
     }
     .navbar {
         padding-top: 0;
+    }
+    .navbar .social-icon-link img {
+        width: 40px;
     }
     .brand-logo,
     .brand-logo p {
@@ -2884,6 +2896,12 @@ span.chi_nounderline,
     }
     .nav-link {
         font-size: 2rem;
+    }
+    .navbar .social-icon-link {
+        padding: 0 5px;
+    }
+    .navbar .social-icon-link img {
+        width: 20px;
     }
     .share-container {
         padding: 1% 0 2%;
@@ -3376,6 +3394,9 @@ span.chi_nounderline,
         font-size: 2.8rem;
         padding: 1.4em 0;
     }
+    .navbar .social-icon-link img {
+        width: 45px;
+    }
     .share-container p {
         font-size: 2.3rem;
         margin: 0.3em 0 0.6em;
@@ -3550,7 +3571,7 @@ span.chi_nounderline,
     .bible-verse {
         font-size: 3rem;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 3%;
     }
     .adjust-padding-lr {
@@ -3779,7 +3800,7 @@ span.chi_nounderline,
     .call-to-action-section {
         height: 85%;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 40px;
     }
     .adjust-padding-lr {
@@ -3889,7 +3910,7 @@ window.outerHeight include toolbar and address bar----------- */
         grid-template-rows: 140px auto;
     }
     .nav-container .navbar {
-        grid-gap: 50px;
+        grid-gap: 70px;
     }
     .navbar {
         padding-top: 0;
@@ -3897,6 +3918,9 @@ window.outerHeight include toolbar and address bar----------- */
     .nav-link {
         font-size: 2.2rem;
         padding: 1.4em 0;
+    }
+    .navbar .social-icon-link img {
+        width: 40px;
     }
     .share-button {
         font-size: 1.5rem;
@@ -3984,7 +4008,7 @@ window.outerHeight include toolbar and address bar----------- */
     .welcome-button-container {
         width: 100%;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 40px;
     }
     #announcements {
@@ -4167,7 +4191,7 @@ window.outerHeight include toolbar and address bar----------- */
     .adjust-padding-lr {
         padding: 0 40px;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 6%;
     }
 }
@@ -4188,6 +4212,9 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .nav-link {
         padding: 1.4em 0;
+    }
+    .navbar .social-icon-link img {
+        width: 35px;
     }
     .menu-links .closebtn {
         background-size: 45px;
@@ -4453,6 +4480,15 @@ window.outerHeight include toolbar and address bar----------- */
     .mobile-nav {
         height: 8%;
     }
+    .nav-container {
+        grid-template-rows: 95px auto;
+    }
+    .navbar .social-icon-link {
+        padding: 10px;
+    }
+    .navbar .social-icon-link img {
+        width: 30px;
+    }
     .home-container.adjust-padding-lr {
         padding: 0;
     }
@@ -4610,7 +4646,7 @@ window.outerHeight include toolbar and address bar----------- */
     }
     .nav-container,
     .nav-container .navbar {
-        grid-gap: 50px;
+        grid-gap: 60px;
     }
     .menu-links .closebtn {
         top: 2%;
@@ -5007,10 +5043,10 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 2.5rem;
     }
     .nav-container {
-        grid-gap: 20px;
+        grid-gap: 45px;
     }
     .nav-container .navbar {
-        grid-gap: 40px;
+        grid-gap: 45px;
     }
     .beta {
         font-size: 1.1rem;
@@ -5046,7 +5082,7 @@ window.outerHeight include toolbar and address bar----------- */
         padding: 1.2em 0;
     }
     .nav-container {
-        grid-gap: 20px;
+        grid-gap: 40px;
     }
     .nav-container .navbar {
         grid-gap: 40px;
@@ -5108,10 +5144,13 @@ window.outerHeight include toolbar and address bar----------- */
         font-size: 12px;
     }
     .nav-container {
-        grid-gap: 40px;
+        grid-gap: 50px;
     }
     .nav-container .navbar {
         grid-gap: 50px;
+    }
+    .navbar .social-icon-link img {
+        width: 28px;
     }
     .web__share > .share-icon {
         width: 40px;
@@ -5207,7 +5246,10 @@ window.outerHeight include toolbar and address bar----------- */
         grid-gap: 20px;
     }
     .nav-container .navbar {
-        grid-gap: 40px;
+        grid-gap: 30px;
+    }
+    .navbar .social-icon-link img {
+        width: 25px;
     }
     .menu-links .closebtn {
         top: 2%;
@@ -5382,7 +5424,10 @@ window.outerHeight include toolbar and address bar----------- */
         padding: 1.2em 0;
     }
     .nav-container {
-        grid-gap: 30px;
+        grid-gap: 50px;
+    }
+    .navbar .social-icon-link img {
+        width: 26px;
     }
     .social-container {
         margin-top: 30px;
@@ -5436,7 +5481,7 @@ window.outerHeight include toolbar and address bar----------- */
     .adjust-padding-lr {
         padding: 0 30px;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 20px;
     }
 }
@@ -5444,7 +5489,7 @@ window.outerHeight include toolbar and address bar----------- */
 
 /* ----------- Samsung J Neo Potrait  ----------- */
 
-@media screen and ( max-width: 360px) and ( max-height: 570px) {
+@media screen and ( max-width: 360px) and ( max-height: 580px) {
     .COGS-title h1,
     .navburger h1 {
         font-weight: 400;
@@ -5456,10 +5501,13 @@ window.outerHeight include toolbar and address bar----------- */
     .nav-container {
         -ms-grid-rows: 100px auto;
         grid-template-rows: 100px auto;
-        grid-gap: 20px;
+        grid-gap: 25px;
     }
     .nav-container .navbar {
-        grid-gap: 30px;
+        grid-gap: 25px;
+    }
+    .navbar .social-icon-link img {
+        width: 24px;
     }
     .navbar {
         padding-top: 0;
@@ -5753,7 +5801,7 @@ window.outerHeight include toolbar and address bar----------- */
     .adjust-padding-lr {
         padding: 0 20px;
     }
-    #announcements .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
         padding: 0 4%;
     }
 }
@@ -5946,10 +5994,21 @@ window.outerHeight include toolbar and address bar----------- */
     height: 38.4em;
     background: white;
 }
-.picAd .main-image {
+.picAd .main-image, .picAd .promo-title {
     height: 30em;
     border-top-left-radius: 4px;
     border-top-right-radius: 4px;
+}
+.picAd .promo-title {
+    background: rgb(237, 53, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.promo-title p {
+    font-size: 4rem;
+    line-height: 1.1em;
+    text-align: center;
 }
 .youtube {
     flex: 85%;
@@ -6070,7 +6129,7 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 35.9em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 28em;
     }
 }
@@ -6092,7 +6151,7 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 34em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 26em;
     }
 }
@@ -6104,7 +6163,7 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 29.3em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 22em;
     }
 }
@@ -6116,7 +6175,7 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 38.1em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 29em;
     }
     .description-container a, .description-container p {
@@ -6140,8 +6199,11 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 28.8em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 22em;
+    }
+    .promo-title p {
+        font-size: 5rem;
     }
 }
 
@@ -6153,6 +6215,9 @@ window.outerHeight include toolbar and address bar----------- */
 @media screen and ( max-width: 800px) and (max-height: 1140px) {
     .picAd {
         height: 37.3em;
+    }
+    .promo-title p {
+        font-size: 5rem;
     }
 }
 @media screen and ( max-width: 770px) and (max-height: 930px) {
@@ -6168,8 +6233,11 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 36.6em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 27em;
+    }
+    .promo-title p {
+        font-size: 4rem;
     }
     .description-container {
         padding: 20px;
@@ -6204,7 +6272,7 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 28.5em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 20em;
     }
 }
@@ -6215,8 +6283,11 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 28em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 18em;
+    }
+    .promo-title p {
+        font-size: 2.8rem;
     }
     .description-container {
         padding: 1em 0.9em;
@@ -6237,7 +6308,7 @@ window.outerHeight include toolbar and address bar----------- */
      .picAd {
         height: 24.7em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 17em;
     }
     .description-container a, .description-container p {
@@ -6252,7 +6323,7 @@ window.outerHeight include toolbar and address bar----------- */
     .picAd {
         height: 25.1em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 16em;
     }
     .description-container a, .description-container p {
@@ -6265,23 +6336,37 @@ window.outerHeight include toolbar and address bar----------- */
         height: 23.4em;
     }
 }
+@media screen and ( max-width: 360px) {
+     .promo-title p {
+        font-size: 3rem;
+    }
+}
 @media screen and ( max-width: 360px) and (max-height: 530px) {
     .picAd {
         height: 24.6em;
+    }
+    .promo-title p {
+        font-size: 3.2rem;
     }
 }
 @media screen and ( max-width: 320px) and ( max-height: 570px) {
     .picAd {
         height: 23.7em;
     }
-    .picAd .main-image {
+    .picAd .main-image, .picAd .promo-title {
         height: 15em;
+    }
+     .promo-title p {
+        font-size: 2.8rem;
     }
      .description-container a, .description-container p {
         font-size: 1.3rem;
     }
 }
 @media screen and ( max-width: 320px) and ( max-height: 500px) {
+    .promo-title p {
+        font-size: 3rem;
+    }
      .description-container a, .description-container p {
         font-size: 1.4rem;
     }

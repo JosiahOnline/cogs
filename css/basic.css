@@ -318,7 +318,10 @@
     flex-grow: 1;
     text-align: left;
 }
-
+.navbar .social-icons {
+    text-align: center;
+    padding-left: 0;
+}
 .social-icon-link {
     padding: 0;
     padding-right: 10px;
