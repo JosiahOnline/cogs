@@ -1309,7 +1309,7 @@ header {
 }
 */
 .content {
-    padding: 0 10%;
+    padding: 0 20%;
     background: rgba(245, 245, 245, 1);
 }
 header {
@@ -1384,14 +1384,14 @@ header {
 
 .gallery {
   overflow: hidden;
-  height: 90vh;
-  width:  80vw;
+  height: 80vh;
+  width:  60VW;
   margin: 0 auto 30px;
   border-radius: 4px;
 }
 
 .slide-wrapper {
-  width: calc(80vw * 5);
+  width: calc(60VW * 5);
   -webkit-animation: slide 40s ease infinite;
 }
 
@@ -1414,7 +1414,6 @@ header {
   80% {margin-left: -400%;}
   95% {margin-left: -400%;}
 }
-
 
 @media screen and (max-width: 1441px) and (orientation: landscape) {
     .details {
