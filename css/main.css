@@ -259,7 +259,8 @@ textarea.w-input {
 body {
     height: 100%;
     padding-left: 329px;
-    background-color: #edeff2;
+/*    background-color: #edeff2;*/
+    background-color:  rgba(245, 245, 245, 1);
     color: rgba(0, 0, 0, .74);
     font-size: 16px;
     line-height: 20px;

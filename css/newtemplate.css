@@ -1275,7 +1275,9 @@ p {
 /* ==========================================================================
    Start of custom CSS
    ========================================================================== */
-
+body {
+    background: rgba(245, 245, 245, 1);
+}
 .hero {
     background-position: 50% 80%;
 }
@@ -1308,8 +1310,7 @@ header {
     text-align: center;
 }
 */
-.content {
-    padding: 0 20%;
+main {
     background: rgba(245, 245, 245, 1);
 }
 header {
