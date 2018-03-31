@@ -36,24 +36,24 @@
 */
 
 .BMpar {
-    -webkit-animation: square 64s infinite;
-    animation: square 64s infinite;
+    -webkit-animation: round 48s infinite;
+    animation: round 48s infinite;
 }
 
 @-webkit-keyframes round {
-    5% {
+    10% {
         opacity: 1;
     }
-    25% {
+    35% {
         opacity: 0;
     }
 }
 
 @keyframes round {
-    5% {
+    10% {
         opacity: 1;
     }
-    25% {
+    35% {
         opacity: 0;
     }
 }
@@ -62,7 +62,7 @@
     5% {
         opacity: 1;
     }
-    30% {
+    20% {
         opacity: 0;
     }
 }
