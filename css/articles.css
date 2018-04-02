@@ -1166,10 +1166,18 @@
     border-top-right-radius: 4px;
 }
 .picAd .promo-title {
-    background: rgb(237, 53, 43);
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.picAd .redbg {
+    background: rgb(237, 53, 43);
+}
+.picAd .pinkbg {
+    background: rgba(255,102,153,1);
+}
+.picAd .pinkbg p {
+
 }
 .promo-title p {
     font-size: 4rem;
