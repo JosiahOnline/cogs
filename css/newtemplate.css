@@ -545,7 +545,8 @@ body {
 }
 
 a {
-    background-color: transparent
+    background-color: transparent;
+    text-decoration: none;
 }
 
 a:active,
@@ -561,7 +562,9 @@ img {
 
 * {
     -webkit-box-sizing: border-box;
-    box-sizing: border-box
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
 }
 
 p {
@@ -1319,11 +1322,11 @@ header {
 .intro {
     padding: 30px 0;
 }
-.bible h2, .intro p {
+.highlighted h2, .intro p {
     line-height: 1.2em;
     font-weight: 300;
 }
-.bible h2 {
+.highlighted h2 {
     font-size: 1.5rem;
     padding: 30px 0;
     margin: 0;
@@ -1371,10 +1374,12 @@ header {
     align-items: center;
 }
 .icon h2 {
+    font-size: 1.6rem;
+    line-height: 1.2em;
+    font-weight: 500;
     margin-left: 10px;
     margin-top: 0;
     margin-bottom: 0;
-    font-weight: 500;
     color: rgba(0, 0, 0, .74);
 }
 .icon img {
@@ -1386,13 +1391,13 @@ header {
 .gallery {
   overflow: hidden;
   height: 80vh;
-  width:  60VW;
-  margin: 0 auto 30px;
+  width:  100%;
+  margin: 0 0 30px;
   border-radius: 4px;
 }
 
 .slide-wrapper {
-  width: calc(60VW * 5);
+  width: calc(100% * 5);
   -webkit-animation: slide 40s ease infinite;
 }
 
