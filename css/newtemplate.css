@@ -518,9 +518,11 @@ img {
 
 .fb-container .tooltiptext,
 .share-button,
-.share-container,
 .share-icon {
     text-align: center
+}
+.share-container {
+    text-align: left;
 }
 
 .hero {
