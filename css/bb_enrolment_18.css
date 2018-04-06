@@ -1,0 +1,128 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381811/BBenrolment18/BBenrolment9.jpg");
+    background-position: 50% 50%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .30);
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381798/BBenrolment18/BBenrolment1.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381788/BBenrolment18/BBenrolment2.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381818/BBenrolment18/BBenrolment3.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381803/BBenrolment18/BBenrolment4.jpg");
+}
+
+.pic5 {
+   background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381800/BBenrolment18/BBenrolment5.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381801/BBenrolment18/BBenrolment6.jpg");
+}
+
+.pic7 {
+   background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381792/BBenrolment18/BBenrolment7.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381803/BBenrolment18/BBenrolment8.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381811/BBenrolment18/BBenrolment9.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381824/BBenrolment18/BBenrolment10.jpg");
+}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381811/BBenrolment18/BBenrolment11.jpg");
+}
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381812/BBenrolment18/BBenrolment12.jpg");
+}
+.pic13 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381825/BBenrolment18/BBenrolment15.jpg");
+}
+.pic14 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381831/BBenrolment18/BBenrolment20.jpg");
+}
+.pic15 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1521381831/BBenrolment18/BBenrolment19.jpg");
+}
+
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5,
+.pic6,
+.pic7,
+.pic8,
+.pic9,
+.pic10,
+.pic11,
+.pic12,
+.pic13,
+.pic14,
+.pic15 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .verse-pgraph {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 610px) and (max-height: 940px) {
+    .topic {
+        font-size: 1.4rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .topic {
+        font-size: 1.4rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 430px) and (max-height: 740px) {
+    .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 380px) {
+   .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
