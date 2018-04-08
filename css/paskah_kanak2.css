@@ -1,0 +1,89 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165983/Hari%20Paskah/PK_1.jpg");
+    background-position: 50% 1%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .3);
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165980/Hari%20Paskah/pk_2.jpg");}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165975/Hari%20Paskah/pk_3.jpg");}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165973/Hari%20Paskah/pk_4.jpg");}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165968/Hari%20Paskah/pk_5.jpg");}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165980/Hari%20Paskah/pk_6.jpg");}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165989/Hari%20Paskah/pk_7.jpg");}
+
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523166001/Hari%20Paskah/pk_8.jpg");}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523166001/Hari%20Paskah/pk_9.jpg");}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165990/Hari%20Paskah/pk_12.jpg");}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523165983/Hari%20Paskah/PK_1.jpg");
+}
+
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5,
+.pic6,
+.pic7,
+.pic8,
+.pic9,
+.pic10 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and ( max-width: 1024px) {
+    .main-section {
+        background-position: 50% 1%;
+    }
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and (max-width: 610px) and (max-height: 940px) {
+    .topic {
+        font-size: 1.2rem;
+        text-align: left;
+        padding: 0 10%;
+    }
+    .verse-pgraph {
+        font-size: 1rem;
+        text-align: left
+    }
+    .share-pgraph {
+        text-align: left;
+    }
+    .share-button {
+        text-align: left;
+    }
+}
