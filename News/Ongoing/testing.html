@@ -340,8 +340,7 @@
                         $("#eventInfo").html(event.description);
                         $("#eventTitle").html(event.title);
                         $("#eventLocation").html(event.location);
-                        var bgcolor = $("#eventColor").html(event.colorId);
-                        $("#eventContent").css('background', bgcolor)
+                        $("#eventContent").css('background', event.colorId);
                         $("#eventContent").css('display', 'inline-block');
                     });
                 },
