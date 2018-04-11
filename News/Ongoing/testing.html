@@ -226,12 +226,12 @@
             </header>
 
             <div id='calendar'>
-                <div id="eventContent" class="calendar-container" title="Event Details" style="display:inline-block;background:eventColor">
+                <div id="eventContent" class="calendar-container" title="Event Details" style="display:inline-block;">
                     <div class="cal-title">
                         <div class="cal-h1">
                             <h2 id="eventTitle"></h2>
                         </div>
-                        <div class="cal-info" style="color:eventColor;">
+                        <div class="cal-info">
                             Time: <span id="startTime"> </span> - <span id="endTime"></span><br>
                             Venue: <p id="eventLocation"></p>
                             <p id="eventInfo"></p>
@@ -340,7 +340,8 @@
                         $("#eventInfo").html(event.description);
                         $("#eventTitle").html(event.title);
                         $("#eventLocation").html(event.location);
-                        $("#eventColor").html(event.colorId);
+                        var bgcolor = $("#eventColor").html(event.colorId);
+                        $("#eventContent").css('background', bgcolor)
                         $("#eventContent").css('display', 'inline-block');
                     });
                 },
@@ -357,6 +358,8 @@
                 $(".share-button").css('display', 'none');
                 $(".web__share").css('display', 'inline-block');
             });
+            
+            
             // set the max height
             if ((window.matchMedia('(max-height: 460px)').matches) && (window.matchMedia('(orientation: landscape)').matches)) {
                 $("#rotateDevice").css("display", "block");

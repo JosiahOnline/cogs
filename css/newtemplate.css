@@ -1,8 +1,10 @@
-
 main {
     padding-bottom: 5%;
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+}
+.setting-width {
+    width: 70%;
 }
 .set-padding {
     padding: 0 5% 4%;
