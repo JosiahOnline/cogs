@@ -226,13 +226,14 @@
             </header>
 
             <div id='calendar'>
-                <div id="eventContent" class="calendar-container" title="Event Details" style="display:inline-block;">
+                <div id="eventContent" class="calendar-container" title="Event Details" style="display:inline-block;background:eventColor">
                     <div class="cal-title">
                         <div class="cal-h1">
                             <h2 id="eventTitle"></h2>
                         </div>
-                        <div class="cal-info">
+                        <div class="cal-info" style="color:eventColor;">
                             Time: <span id="startTime"> </span> - <span id="endTime"></span><br>
+                            Venue: <p id="eventLocation"></p>
                             <p id="eventInfo"></p>
                             <a class="closeButton">Dismiss</a>
                         </div>
@@ -338,6 +339,8 @@
                         $("#endTime").html(moment(event.end).format('h:mm A'));
                         $("#eventInfo").html(event.description);
                         $("#eventTitle").html(event.title);
+                        $("#eventLocation").html(event.location);
+                        $("#eventColor").html(event.colorId);
                         $("#eventContent").css('display', 'inline-block');
                     });
                 },
