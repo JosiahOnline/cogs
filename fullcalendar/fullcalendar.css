@@ -15,8 +15,10 @@ body .fc {
 font-size: 1em; 
 background-color: white;
 border-radius: 4px;
-padding: 10px;
-position: relative;}
+padding: 15px;
+position: relative;
+-webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);}
 
 /* Colors
 --------------------------------------------------------------------------------------------------*/
@@ -781,7 +783,9 @@ NOTE: use percentage font sizes or else old IE chokes
   margin-top: 1em; }
 
 .fc-toolbar .fc-left {
-  float: left; }
+  float: left;
+  margin-top: 10px;
+  margin-left: 5px; }
 
 .fc-toolbar .fc-right {
   float: right; }
