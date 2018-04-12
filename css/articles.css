@@ -1320,13 +1320,12 @@
     border-radius: 4px;
     text-align: left;
     width: 100%;
-    padding-top: 5px;
 }
 
 .youtube-container p {
     font-family: Merriweather, serif;
     display: inline-block;
-    margin: 0 5px;
+    margin-right: 5px;
 }
 
 .fa-youtube-play,
