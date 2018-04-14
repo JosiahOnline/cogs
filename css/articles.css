@@ -1253,8 +1253,12 @@
     background: rgba(255, 102, 153, 1);
 }
 
-.picAd .pinkbg p {}
-
+.picAd .bluebg {
+    background: rgba(50, 91, 132, 1);
+}
+.picAd .orangebg {
+    background: rgba(255, 165, 0, 1);
+}
 .promo-title p {
     font-size: 4rem;
     line-height: 1.1em;
@@ -1549,7 +1553,7 @@
 
 @media screen and ( max-width: 380px) {
     .videoad {
-        height: 22em;
+        height: 24em;
     }
     .picAd img,
     .picAd .promo-title {
