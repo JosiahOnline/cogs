@@ -1294,11 +1294,18 @@ p {
         padding: 8px 10px
     }
     .fb-container a {
-        width: 130px;
+        width: 110px;
         padding: 12px 10px 9px
     }
     .fb-container a img {
+        top: 6px;
         right: 8px
+    }
+}
+
+@media screen and (max-width:360px) {
+    .fb-container a img {
+        top: 6px;
     }
 }
 
@@ -1314,7 +1321,6 @@ p {
 
 @media screen and (max-width:360px) and (max-height:571px) {
     .fb-container a {
-        width: 130px;
         padding: 12px 10px 9px
     }
 }
@@ -1481,7 +1487,6 @@ hr.style14 {
     margin-bottom: 0;
     color: rgba(0, 0, 0, .74);
 }
-@media screen and (max-width: 380px) and (max-height: )
 
 .gallery .container {
     overflow: hidden;
@@ -1638,7 +1643,7 @@ hr.style14 {
     }
     .top-nav .text-block,
     .top-nav a {
-        font-size: 0.9rem;
+        font-size: 1.8rem;
     }
     .title, .highlighted h2 {
         font-size: 1.8rem;
@@ -1658,12 +1663,18 @@ hr.style14 {
 }
 
 @media screen and (max-width: 500px) and (max-height: 780px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 2.1rem;
+    }
     .share-pgraph, .content p {
         font-size: 1.8rem;
     }
 }
 
 @media screen and ( max-width: 430px) and (max-height: 740px) {
+     .top-nav .text-block, .top-nav a {
+        font-size: 1.3rem;
+    }
     .hero {
         height: 38vh;
     }
@@ -1689,10 +1700,32 @@ hr.style14 {
         font-size: 0.9rem;
     }
 }
-
+@media screen and ( max-width: 430px) and (max-height: 630px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 1.2rem;
+    }
+}
 @media screen and (max-width: 380px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 1.5rem;
+    }
     .share-button, .share-icon {
         font-size: 1.3rem;
     }
 }
+@media screen and (max-width: 360px) and (max-height: 571px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 1.4rem;
+    }
+}
+@media screen and (max-width: 360px) and (max-height: 561px) {
+    .top-nav .text-block, .top-nav a {
+        font-size: 1.5rem;
+    }
+}
 
+@media screen and ( max-width: 320px) and ( max-height: 500px) {
+    .setting-width {
+        width: 100%;
+    }
+}
