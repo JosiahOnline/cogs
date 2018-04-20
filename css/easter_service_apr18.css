@@ -1,0 +1,107 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005207/Easter/easter1.jpg");
+    background-position: 50% 50%;
+}
+
+.transparent-layer {
+    background-color: rgba(0, 0, 0, .30);
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005203/Easter/easter.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005207/Easter/easter1.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005202/Easter/easter2.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005217/Easter/easter3.jpg");
+}
+
+.pic5 {
+   background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005208/Easter/easter4.jpg");
+}
+
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005205/Easter/easter5.jpg");
+}
+
+.pic7 {
+   background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005214/Easter/easter6.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005227/Easter/easter8.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005220/Easter/easter10.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1523005219/Easter/easter9.jpg");
+}
+
+.pic1,
+.pic2,
+.pic3,
+.pic4,
+.pic5,
+.pic6,
+.pic7,
+.pic8,
+.pic9,
+.pic10 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 800px) and (max-height: 1140px) {
+    .verse-pgraph {
+        padding-bottom: 0;
+    }
+}
+
+@media screen and (max-width: 610px) and (max-height: 940px) {
+    .topic {
+        font-size: 1.4rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 610px) and (max-height: 850px) {
+    .topic {
+        font-size: 1.4rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 430px) and (max-height: 740px) {
+    .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
+
+@media screen and ( max-width: 380px) {
+   .topic {
+        font-size: 1.3rem;
+    }
+    .verse-pgraph {
+        font-size: 1.1rem;
+    }
+}
