@@ -1,2 +1,8 @@
 User-agent: *
-Disallow:
+Disallow: /Bulletin/
+Disallow: /News/Leaders_Conference_July17.html
+Disallow: /News/Men_Fellowship.html
+Disallow: /News/Resource_Center.html
+Disallow: /News/testweb.html
+Disallow: /News/WFJ2017.html
+Disallow: /News/Ongoing/testing.html
