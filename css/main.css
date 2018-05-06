@@ -3662,7 +3662,8 @@ window.outerHeight include toolbar and address bar----------- */
         height: 8%;
     }
     .nav-container {
-        grid-template-rows: 95px auto;
+        -ms-grid-rows: 95px auto;
+            grid-template-rows: 95px auto;
     }
     .navbar .social-icon-link {
         padding: 10px;
@@ -3720,9 +3721,14 @@ window.outerHeight include toolbar and address bar----------- */
         z-index: 1001;
     }
     .bulletin-flex {
-        flex-direction: column;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+                flex-direction: column;
     }
     .mobile-nav, .mobile-container, .menu-links .closebtn {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
     }
     .mobile-nav {
