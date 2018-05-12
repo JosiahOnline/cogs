@@ -18,8 +18,8 @@
 
 .slidePhoto, .CHpar, .BMpar {
     position: absolute;
-    -webkit-animation: square 100s infinite;
-    animation: square 100s infinite;
+    -webkit-animation: square 80s infinite;
+    animation: square 80s infinite;
     opacity: 0;
     display: -webkit-box;
     display: -ms-flexbox;
