@@ -1,0 +1,77 @@
+.main-section {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308908/ALPHA/LastApha15.jpg");
+    background-position: 45% 50%;
+}
+
+.pic1 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308872/ALPHA/LastAlpha.jpg");
+}
+
+.pic2 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308862/ALPHA/LastAlpha2.jpg");
+}
+
+.pic3 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308862/ALPHA/LastAlpha3.jpg");
+}
+
+.pic4 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308895/ALPHA/LastAlpha4.jpg");
+}
+
+.pic5 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308874/ALPHA/LastAlpha5.jpg");
+}
+.pic6 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308866/ALPHA/LastAlpha6.jpg")
+}
+.pic7 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308882/ALPHA/LastAlpha7.jpg");
+}
+
+.pic8 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308898/ALPHA/LastAlpha8.jpg");
+}
+
+.pic9 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308885/ALPHA/LastAlpha9.jpg");
+}
+
+.pic10 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308891/ALPHA/LastAlpha10.jpg");
+}
+
+.pic11 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308898/ALPHA/LastAlpha11.jpg");
+}
+.pic12 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308896/ALPHA/LastApha12.jpg")
+}
+.pic13 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308905/ALPHA/LastApha13.jpg");
+}
+
+.pic14 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308905/ALPHA/LastApha14.jpg");
+}
+
+.pic15 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308908/ALPHA/LastApha15.jpg");
+}
+
+.pic16 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308910/ALPHA/LastApha16.jpg");
+}
+
+.pic17 {
+    background-image: url("http://res.cloudinary.com/trippleninja/image/upload/v1527308913/ALPHA/LastApha17.jpg");
+}
+
+
+.pic1, .pic2, .pic3, .pic4, .pic5, .pic6, .pic7, .pic8, .pic9, .pic10, .pic11, .pic12, .pic13, .pic14, .pic15, .pic16, .pic17 {
+    height: 100vh;
+    width: 100%;
+    background-position: 50% 50%;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
