@@ -451,7 +451,7 @@
 
 @media screen and (max-height: 740px) and (max-width: 430px) {
     .newsSlider {
-        height: 30em;
+        height: 33em;
     }
     .slideDescription {
         padding-top: 13%;
@@ -471,7 +471,7 @@
 
 @media screen and (max-width: 380px) {
     .newsSlider {
-        height: 26em;
+        height: 30em;
         margin-bottom: 60px;
     }
     .slideDescription {
@@ -505,7 +505,7 @@
 
 @media screen and ( max-width: 320px) and ( max-height: 500px) {
     .newsSlider {
-        height: 24em;
+        height: 27em;
     }
     .slideDescription {
         padding-top: 12%;
