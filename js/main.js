@@ -14,7 +14,17 @@ $(document).ready(function () {
         $(this).parent().find('div').toggleClass('card__social--active');
         $(this).toggleClass('share-expanded');
     });
-
+    
+//    $(".slideContainer").click(function () {
+//        $(".newsAutoChange").css('display', 'block');
+//        $(".newsAutoChange").css('overflow', 'hidden');
+//    });
+//
+//    $(".close-news").click(function () {
+//        $(".newsAutoChange").css('display', 'none');
+//        $(".newsAutoChange").css('overflow', 'scroll');
+//    });
+    
     $(".share-button").click(function () {
         $(".share-button").css('display', 'none');
         $(".web__share").css('display', 'inline-block');
