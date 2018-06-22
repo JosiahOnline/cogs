@@ -16,6 +16,14 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
 
+.newsAutoChange {
+    display:none; 
+    margin:0 auto; 
+    width: 100%; 
+    height:100%; 
+    position:absolute; 
+    z-index:10000;
+}
 .slidePhoto, .CHpar, .BMpar {
     position: absolute;
     -webkit-animation: square 100s infinite;

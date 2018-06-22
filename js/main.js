@@ -20,7 +20,7 @@ $(document).ready(function () {
 //        $(".newsAutoChange").css('overflow', 'hidden');
 //    });
 //
-//    $(".close-news").click(function () {
+//    $(".closeNews").click(function () {
 //        $(".newsAutoChange").css('display', 'none');
 //        $(".newsAutoChange").css('overflow', 'scroll');
 //    });
@@ -98,7 +98,6 @@ $(document).ready(function () {
         }
     });
 
-
     $(function () {
         setTimeout(function () {
             $('#preloaderBG').css('opacity', '0');
@@ -141,6 +140,17 @@ $(document).ready(function () {
         }, 3000);
     });
 });
+
+//  var timeleft = 10;
+//    var downloadTimer = setInterval(function(){
+//    timeleft--;
+//    document.getElementById("countdowntimer").textContent = timeleft;
+//    if(timeleft <= 0)
+//        clearInterval(downloadTimer);
+//    },1000);
+//    document.getElementsByClassName("newsAutoChange").style.display = "none";
+//    document.getElementsByClassName("newsAutoChange").style.overflow = "scroll";
+//    
 
 
 if (navigator.userAgent.match(/Android/i) ||
