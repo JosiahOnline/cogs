@@ -613,7 +613,7 @@ p {
     background-position: 50% 50%;
     background-size: cover;
     background-repeat: no-repeat;
-    background-attachment: fixed, scroll;
+    background-attachment: fixed;
 }
 
 .share-info {
