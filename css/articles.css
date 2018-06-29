@@ -215,7 +215,10 @@
 }
 
 /* Article Share Icons */
-
+/*Display none for the links when clicked in mobile version*/
+.news a:active + .card__share {
+    display: none;
+}
 .card__share {
     display: none;
     float: right;

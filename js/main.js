@@ -62,26 +62,26 @@ function closeNav() {
     document.getElementById("mNav").style.overflowY = "hidden";
 }
 
-
-var iScrollPos = 0;
-$(window).scroll(function () {
-    var iCurScrollPos = $(this).scrollTop();
-    if (window.matchMedia("(max-width: 1024px)").matches) {
-        if (iCurScrollPos > iScrollPos) {
-            $("#scrollDown").css('display', 'none');
-        } else {
-            $("#scrollDown").css('display', 'block');
-        }
-        iScrollPos = iCurScrollPos;
-
-        var triggered_times = 0;
-        if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times === 0) {
-            $("#scrollDown").css("display", "block");
-
-            triggered_times = 1;
-        }
-    }
-});
+// Disable because user can't find the menu bar especially those who are not familiar with the technologies.
+//var iScrollPos = 0;
+//$(window).scroll(function () {
+//    var iCurScrollPos = $(this).scrollTop();
+//    if (window.matchMedia("(max-width: 1024px)").matches) {
+//        if (iCurScrollPos > iScrollPos) {
+//            $("#scrollDown").css('display', 'none');
+//        } else {
+//            $("#scrollDown").css('display', 'block');
+//        }
+//        iScrollPos = iCurScrollPos;
+//
+//        var triggered_times = 0;
+//        if ($(window).scrollTop() + $(window).height() > $(document).height() - 100 && triggered_times === 0) {
+//            $("#scrollDown").css("display", "block");
+//
+//            triggered_times = 1;
+//        }
+//    }
+//});
 
 
 $(document).ready(function () {
