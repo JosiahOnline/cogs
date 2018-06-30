@@ -2101,9 +2101,9 @@ span.chi_nounderline,
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-box-align: left;
-        -ms-flex-align: left;
-        align-items: left;
+        -webkit-box-align: flex-start;
+        -ms-flex-align: flex-start;
+        align-items: flex-start;
     }
     .bulletin-row {
         width: 40em;
@@ -2159,9 +2159,9 @@ span.chi_nounderline,
         -webkit-box-direction: normal;
         -ms-flex-direction: column;
         flex-direction: column;
-        -webkit-box-align: left;
-        -ms-flex-align: left;
-        align-items: left;
+        -webkit-box-align: flex-start;
+        -ms-flex-align: flex-start;
+        align-items: flex-start;
     }
     .call-to-action-heading,
     .call-to-action-pgraph {
@@ -2880,18 +2880,7 @@ span.chi_nounderline,
     .call-to-action-form {
         padding: 10px 0;
     }
-    .cogs-news-form {
-        -webkit-box-orient: vertical;
-        -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -webkit-box-align: left;
-        -ms-flex-align: left;
-        align-items: left;
-    }
-    .cogs-news-form > .text-field {
-        margin-bottom: 15px;
-    }
+    
     .align-right {
         margin-top: 0;
     }
@@ -2908,7 +2897,7 @@ span.chi_nounderline,
         padding: 6em 0 0;
     }
     .submit-button {
-        padding: 0.55em 1em;
+        padding: 0.6em 1em;
     }
     .pop-container .pop-row {
         width: 50%;
@@ -3019,7 +3008,6 @@ span.chi_nounderline,
     .form-field {
         margin-bottom: 0.5em;
     }
-    .submit-button,
     .send-message-button.button,
     .direction-button {
         padding: 10px 15px;
@@ -4108,8 +4096,22 @@ window.outerHeight include toolbar and address bar----------- */
     .cogs-news-form > .text-field {
         font-size: 1.1rem;
         height: 38px;
-        padding: 10px 20px;
+        margin-right: 0;
     }
+    .cogs-news-form > .text-field {
+        margin-bottom: 15px;
+    }
+    .cogs-news-form {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+        -webkit-box-align: flex-start;
+        -ms-flex-align: flex-start;
+        align-items: flex-start;
+        margin-bottom: 10px;
+    }
+    
     .nospam {
         font-size: 1.2rem;
         font-weight: 300;
