@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html  lang="en" >
+    <head>
+    <meta charset="utf-8">
+    <title>Randomly Select Teammate Apps</title>
+    
+    <link href="http://www.cogssandakan.com/css/font.css" rel="stylesheet" type="text/css">
+    <link href="http://www.cogssandakan.com/css/basic.css" rel="stylesheet" type="text/css">
+
+    <link href="http://www.cogssandakan.com/css/articles.css" rel="stylesheet" type="text/css">
+    <link href="http://www.cogssandakan.com/css/newtemplate.css" rel="stylesheet" type="text/css">
+
+    <link href="http://www.cogssandakan.com/img/favicon/favicon2-96x96.png" rel="shortcut icon" type="image/x-icon">
+    <link href="http://www.cogssandakan.com/img/favicon/apple-icon2-180x180.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        .hero {
+            background-image: url("../../img/basketball.jpg");
+            position: fixed;
+        }
+        .transparentbg {
+            background-color: rgba(0, 0, 0, .40);
+            width: 100%;
+            height: 100%;
+        }
+        section {
+            position: fixed;
+            width: 100%;
+            height:100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        h1, h2, p {
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+             padding: 10px;
+        }
+        h2 {
+            font-size: 2em;
+             padding: 10px;
+        }
+        p {
+            font-size: 1.5em;
+        }
+        button {
+            font-size: 1.7em;
+            font-weight: bold;
+            padding: 5px 8px;
+            color: brown;
+            background-color: white;
+            border-color: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="top-nav">
+        <div class="top-container">
+            <div class="text-block">COGS SANDAKAN</div>
+            <a href="http://www.cogssandakan.com/News/COGS_All_Events.html" class="link">EVENTS</a>
+        </div>
+    </nav>
+    <div class="hero">
+    <div class="transparentbg">
+    </div>
+    </div>
+    <section>
+    <h1>Select Your Teammates Randomly</h1>
+    <h2>(Your Fate depends on Your Teamwork!)</h2>
+    <h2>Team A</h2>
+    <p id="listA"></p>
+    <button id="button1" onclick="teamA.forEach(myFunction1)">Choose</button>
+    <!--
+        <h3><p>1.<span id=name1></span></p></h3>
+        <h3><p>2.<span id=name2></span></p></h3>
+        <h3><p>3.<span id=name3></span></p></h3>
+        <h3><p>4.<span id=name4></span></p></h3>
+        <h3><p>5.<span id=name5></span></p></h3><br>
+-->
+    <h2>Team B</h2>
+    <p id="listB"></p>
+    <!--
+        <h3><p>1.<span id=name6></span></p></h3>
+        <h3><p>2.<span id=name7></span></p></h3>
+        <h3><p>3.<span id=name8></span></p></h3>
+        <h3><p>4.<span id=name9></span></p></h3>
+        <h3><p>5.<span id=name10></span></p></h3>
+-->
+    <button id="button2" onclick="teamB.forEach(myFunction2)">Choose</button>
+    </section>
+    <script type="text/javascript" src="score.js"></script>
+</body>
+</html>
