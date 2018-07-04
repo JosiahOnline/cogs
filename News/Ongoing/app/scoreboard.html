@@ -32,7 +32,7 @@
             justify-content: center;
             align-items: center;
         }
-        h1, h2, p {
+        h1, h2, h3, p {
             color: white;
         }
         h1 {
@@ -43,16 +43,31 @@
             font-size: 2em;
              padding: 10px;
         }
+        h3 {
+            font-size: 1.7em;
+            margin: 10px auto;
+        }
         p {
-            font-size: 1.5em;
+            font-size: 1.3em;
+           
+            margin-bottom: 0;
+        }
+        form {
+            text-align: center;
+            margin: 15px auto;
+        }
+        input {
+            padding: 2px;
+            margin-left: 10px;
         }
         button {
-            font-size: 1.7em;
+            font-size: 1.3em;
             font-weight: bold;
             padding: 5px 8px;
             color: brown;
             background-color: white;
             border-color: transparent;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -70,10 +85,26 @@
     </div>
     <section>
     <h1>Select Your Teammates Randomly</h1>
-    <h2>(Your Fate depends on Your Teamwork!)</h2>
+    <h3>Your Fate depends on Your Teamwork!</h3>
+    <h2>Please enter players' name:</h2>
+    
+<form id="frm1">
+  <p>Player 1: <input type="text" id="input1" value="" onchange="name1()"></p>
+  <p>Player 2: <input type="text" id="input2" value="" onchange="name2()"></p>
+  <p>Player 3: <input type="text" id="input3" value="" onchange="name3()"></p>
+  <p>Player 4: <input type="text" id="input4" value="" onchange="name4()"></p>
+  <p>Player 5: <input type="text" id="input5" value="" onchange="name5()"></p>
+  <p>Player 6: <input type="text" id="input6" value="" onchange="name6()"></p>
+  <p>Player 7: <input type="text" id="input7" value="" onchange="name7()"></p>
+  <p>Player 8: <input type="text" id="input8" value="" onchange="name8()"></p>
+  <p>Player 9: <input type="text" id="input9" value="" onchange="name9()"></p>
+  <p>Player 10: <input type="text" id="input10" value="" onchange="name10()"></p>
+  <button id="button1" type="button" onclick="select_random()">Submit</button>
+  <p id="demo"></p>
+</form> 
     <h2>Team A</h2>
     <p id="listA"></p>
-    <button id="button1" onclick="teamA.forEach(myFunction1)">Choose</button>
+    <button type="button" id="button2" onclick="teamA.forEach(myFunction1)">Choose</button>
     <!--
         <h3><p>1.<span id=name1></span></p></h3>
         <h3><p>2.<span id=name2></span></p></h3>
@@ -90,7 +121,7 @@
         <h3><p>4.<span id=name9></span></p></h3>
         <h3><p>5.<span id=name10></span></p></h3>
 -->
-    <button id="button2" onclick="teamB.forEach(myFunction2)">Choose</button>
+    <button type="button" id="button3" onclick="teamB.forEach(myFunction2)">Choose</button>
     </section>
     <script type="text/javascript" src="score.js"></script>
 </body>
