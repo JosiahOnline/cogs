@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html  lang="en" >
-    <head>
+<html lang="en">
+
+<head>
     <meta charset="utf-8">
     <title>Randomly Select Teammate Apps</title>
 
@@ -10,8 +11,8 @@
     <link href="http://www.cogssandakan.com/css/articles.css" rel="stylesheet" type="text/css">
     <link href="http://www.cogssandakan.com/css/newtemplate.css" rel="stylesheet" type="text/css">
 
-    <link href="http://www.cogssandakan.com/img/favicon/favicon2-96x96.png" rel="shortcut icon" type="image/x-icon">
-    <link href="http://www.cogssandakan.com/img/favicon/apple-icon2-180x180.png" rel="apple-touch-icon">
+    <link href="http://www.cogssandakan.com/News/Ongoing/app/favicon-96x96.png" rel="shortcut icon" type="image/x-icon">
+    <link href="http://www.cogssandakan.com/News/Ongoing/app/apple-icon-180x180.png" rel="apple-touch-icon">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
@@ -45,12 +46,17 @@
             color: white;
             font-family: 'Graduate', cursive;
             text-align: center;
+            line-height: 1em;
         }
 
         h1 {
             font-size: 2.5em;
             line-height: 1em;
             padding: 10px;
+        }
+
+        #yourFate {
+            display: none;
         }
 
         h2 {
@@ -60,10 +66,12 @@
 
         h3 {
             color: white;
-           font-family: 'Playball', cursive;
+            font-family: 'Playball', cursive;
             font-size: 2em;
             font-weight: 100;
             margin: 10px auto;
+            text-align: center;
+            line-height: 1em;
         }
 
         p {
@@ -101,21 +109,146 @@
         .choose {
             display: none;
         }
+
         .team {
             margin: 0.5em auto;
         }
+
         .namelist {
+            font-size: 1.4em;
             text-align: center;
             margin: 5px 8px;
             display: inline-block;
         }
 
+        #stopWatch {
+            width: 60%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #stopButton {
+            text-align: center;
+        }
+
+        #stopButton button {
+            margin-left: 5px;
+            margin-right: 5px;
+        }
+
+        #startBtn {
+            color: #DAD6D6;
+            background: #48633B;
+            border: solid 2px #35492C;
+            border-radius: 5px;
+            letter-spacing: 2px;
+        }
+
+/*
+        #stopBtn {
+            color: #DAD6D6;
+            background: #721329;
+            border: solid 2px #590F20;
+            border-radius: 5px;
+            letter-spacing: 2px;
+        }
+*/
+
+/*
+        #clear {
+            color: #DAD6D6;
+            background: #564E58;
+            border: solid 2px #3E383F;
+            border-radius: 5px;
+            letter-spacing: 2px;
+        }
+*/
+
+        #timer {
+            background-color: #419D78;
+            color: #EFD0CA;
+            font-size: 2em;
+            text-align: center;
+            padding: 0.5em 1em;
+            width: 90%;
+            margin: 20px auto;
+            border-radius: 4px;
+        }
+        #chrono {
+            margin-top: 20px;
+            display: none;
+        }
+        .setting {
+                display: none;
+                flex-direction: column;
+                align-items: center;
+                position: absolute;
+                width: 35%;
+                right: 0;
+                bottom: 10px;
+                border-radius: 4px;
+                background-color: rgba(0,0,0,.8);
+                border: solid 1px white;
+                padding: 10px;
+            }
+            .container {
+                color: white;
+            }
+            .container label {
+                width: 10px;
+            }
+            .container button {
+                background-color:#599bb3;
+                border:1px solid #29668f;
+                display:inline-block;
+                cursor:pointer;
+                color:#ffffff;
+                margin: 0 5px;
+                padding: 5px 10px;
+                text-decoration:none;
+                text-shadow:0px 1px 0px #3d768a;
+            }
+            #runBtn {
+            color: #DAD6D6;
+            background: #48633B;
+            border: solid 2px #35492C;
+            border-radius: 5px;
+            letter-spacing: 2px;
+        }
+        #pauseBtn {
+            color: #DAD6D6;
+            background: #721329;
+            border: solid 2px #590F20;
+            border-radius: 5px;
+            letter-spacing: 2px;
+        }
+
+        #stopBtn {
+            color: #DAD6D6;
+            background: #564E58;
+            border: solid 2px #3E383F;
+            border-radius: 5px;
+            letter-spacing: 2px;
+        }
+            .container button:hover {
+                background-color:#408c99;
+            }
+            .container button:active {
+                position:relative;
+                top:1px;
+            }
+            .container p {
+              text-align: center;
+              margin-top: 10px;
+              margin-bottom: 0px;
+            }
         @media screen and (max-width: 1024px) {
             .hero {
                 background-size: cover;
                 background-position: 30% 50%;
             }
-            .top-nav .text-block, .top-nav a {
+            .top-nav .text-block,
+            .top-nav a {
                 font-size: 2em;
             }
             h1 {
@@ -127,9 +260,8 @@
                 padding: 10px;
                 margin: 15px auto 20px;
             }
-
             h3 {
-                font-size: 2.8em;
+                font-size: 4em;
                 padding: 10px;
                 margin: 20px;
             }
@@ -137,6 +269,9 @@
             p {
                 font-size: 2.5em;
                 margin-bottom: 15px;
+            }
+            .namelist {
+                font-size: 2.5em;
             }
             input {
                 font-size: 1em;
@@ -150,7 +285,22 @@
             .team {
                 margin: 1em auto;
             }
+            #chrono {
+                width: 400px;
+                height: 400px;
+            }
+            .setting {
+                width: 90%;
+                right: 5%;
+                padding-top: 20px;
+                padding-bottom: 20px;
+            }
+            .container button {
+                margin: 0 10px;
+                padding: 12px 24px;
+            }
         }
+
     </style>
 </head>
 
@@ -167,8 +317,8 @@
     </div>
     <section>
         <h1>Select Your Teammates Randomly</h1>
-        <h3>"Your Fate Depends on Your Teamwork!"</h3>
-        <h2>Please enter players' name:</h2>
+        <h3 id="yourFate">"Your Fate Depends on Your Teamwork!"</h3>
+        <h2 id="enterName">Please enter players' name:</h2>
 
         <form id="frm1">
             <p>Player 1: <input type="text" id="input1" value="" onchange="name1()"></p>
@@ -183,12 +333,42 @@
             <p>Player 10: <input type="text" id="input10" value="" onchange="name10()"></p>
         </form>
         <button id="button1" type="button" onclick="select_random()">Submit</button>
-        <button class="choose" type="button" id="button2" onclick="myFunction1()">Choose</button>
         <h2 class="team">Team A</h2>
         <div id="listA"></div>
         <h2 class="team">Team B</h2>
         <div id="listB"></div>
+        <button class="choose" type="button" id="button2" onclick="myFunction1()">Choose</button>
+        <canvas id='chrono'></canvas>
+        <div id="clockSetting" class='setting'>
+          <div class='container'>
+                <button id='runBtn'>Run</button>
+                <button id='pauseBtn'>Stop</button>
+                <button id='stopBtn'>Reset</button>
+            </div>
+           <div class='container'>
+                <p>Choose Your Game Time:</p>
+                <p>
+                    <label for='hour'>H</label>
+                    <input type="number" min="0" max="10" step="1" value="0" id='hour'>
+                    <label for='m'>M</label>
+                    <input type="number" min="0" max="60" step="1" value="1" id='minute'>
+                    <label for='s'>S</label>
+                    <input type="number" min="0" max="60" step="10" value="0" id='second'>
+                </p>
+            </div>
+        </div>
+<!--
+        <div id="stopWatch">
+            <div id="timer">Time left = <span id="timerLabel"></span></div>
+            <div id="stopButton">
+                <button type="button" id="startBtn" onclick="start()">Start</button>
+                <button type="button" id="stopBtn" onclick="stop()">Stop</button>
+                <button type="button" id="clear" onclick="reset()">Clear</button>
+            </div>
+        </div>
+-->
     </section>
     <script type="text/javascript" src="score.js"></script>
 </body>
+
 </html>
