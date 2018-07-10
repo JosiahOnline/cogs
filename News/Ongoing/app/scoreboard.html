@@ -104,7 +104,13 @@
             border-color: transparent;
             font-family: 'Graduate', cursive;
         }
-
+        
+        #playerForm {
+            display: flex;
+        }
+        .form {
+            margin: 0 15px;
+        }
         .team,
         .choose {
             display: none;
@@ -121,127 +127,80 @@
             display: inline-block;
         }
 
-        #stopWatch {
-            width: 60%;
-            display: flex;
-            flex-direction: column;
-        }
-
-        #stopButton {
-            text-align: center;
-        }
-
-        #stopButton button {
-            margin-left: 5px;
-            margin-right: 5px;
-        }
-
-        #startBtn {
-            color: #DAD6D6;
-            background: #48633B;
-            border: solid 2px #35492C;
-            border-radius: 5px;
-            letter-spacing: 2px;
-        }
-
-/*
-        #stopBtn {
-            color: #DAD6D6;
-            background: #721329;
-            border: solid 2px #590F20;
-            border-radius: 5px;
-            letter-spacing: 2px;
-        }
-*/
-
-/*
-        #clear {
-            color: #DAD6D6;
-            background: #564E58;
-            border: solid 2px #3E383F;
-            border-radius: 5px;
-            letter-spacing: 2px;
-        }
-*/
-
-        #timer {
-            background-color: #419D78;
-            color: #EFD0CA;
-            font-size: 2em;
-            text-align: center;
-            padding: 0.5em 1em;
-            width: 90%;
-            margin: 20px auto;
-            border-radius: 4px;
-        }
         #chrono {
             margin-top: 20px;
             display: none;
         }
         .setting {
-                display: none;
-                flex-direction: column;
-                align-items: center;
-                position: absolute;
-                width: 35%;
-                right: 0;
-                bottom: 10px;
-                border-radius: 4px;
-                background-color: rgba(0,0,0,.8);
-                border: solid 1px white;
-                padding: 10px;
-            }
-            .container {
-                color: white;
-            }
-            .container label {
-                width: 10px;
-            }
-            .container button {
-                background-color:#599bb3;
-                border:1px solid #29668f;
-                display:inline-block;
-                cursor:pointer;
-                color:#ffffff;
-                margin: 0 5px;
-                padding: 5px 10px;
-                text-decoration:none;
-                text-shadow:0px 1px 0px #3d768a;
-            }
-            #runBtn {
-            color: #DAD6D6;
-            background: #48633B;
-            border: solid 2px #35492C;
-            border-radius: 5px;
-            letter-spacing: 2px;
-        }
-        #pauseBtn {
-            color: #DAD6D6;
-            background: #721329;
-            border: solid 2px #590F20;
-            border-radius: 5px;
-            letter-spacing: 2px;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            position: absolute;
+            width: 35%;
+            right: 0;
+            bottom: 10px;
+            border-radius: 4px;
+            background-color: rgba(0, 0, 0, .8);
+            border: solid 1px white;
+            padding: 10px;
         }
 
-        #stopBtn {
+        .container {
+            color: white;
+        }
+
+        .container label {
+            width: 10px;
+        }
+
+        .container button {
+            display: inline-block;
+            cursor: pointer;
+            color: #ffffff;
+            margin: 0 5px;
+            padding: 5px 10px;
+            text-decoration: none;
             color: #DAD6D6;
-            background: #564E58;
-            border: solid 2px #3E383F;
             border-radius: 5px;
             letter-spacing: 2px;
+            font-size: 1.2em;
         }
-            .container button:hover {
-                background-color:#408c99;
-            }
-            .container button:active {
-                position:relative;
-                top:1px;
-            }
-            .container p {
-              text-align: center;
-              margin-top: 10px;
-              margin-bottom: 0px;
-            }
+
+        #startBtn {
+            background: #48633B;
+            border: solid 2px #35492C;
+
+        }
+
+        #pauseBtn {
+            background: #721329;
+            border: solid 2px #590F20;
+        }
+
+        #resetBtn {
+            background: #564E58;
+            border: solid 2px #3E383F;
+        }
+
+        .container button:hover {
+            background-color: #408c99;
+        }
+
+        .container button:active {
+            position: relative;
+            top: 1px;
+        }
+
+        .container p {
+            text-align: center;
+            margin-top: 10px;
+            margin-bottom: 0px;
+        }
+
+        .container input {
+            margin: 0 10px;
+        }
+
         @media screen and (max-width: 1024px) {
             .hero {
                 background-size: cover;
@@ -267,7 +226,7 @@
             }
 
             p {
-                font-size: 2.5em;
+                font-size: 2.2em;
                 margin-bottom: 15px;
             }
             .namelist {
@@ -276,6 +235,19 @@
             input {
                 font-size: 1em;
                 line-height: 1.3em;
+            }
+            .form input {
+                width: 45%;
+                margin-left: 0;
+            }
+            #playerForm {
+                padding-right: 5%;
+            }
+            #playerForm .form:nth-child(1) {
+                margin-right: 0;
+            }
+            #playerForm .form:nth-child(2) {
+                margin-left: 0;
             }
             button {
                 font-size: 3.0em;
@@ -286,8 +258,8 @@
                 margin: 1em auto;
             }
             #chrono {
-                width: 400px;
-                height: 400px;
+                width: 360px;
+                height: 360px;
             }
             .setting {
                 width: 90%;
@@ -298,17 +270,17 @@
             .container button {
                 margin: 0 10px;
                 padding: 12px 24px;
+                font-size: 3em;
             }
         }
-
     </style>
 </head>
 
 <body>
     <nav class="top-nav">
         <div class="top-container">
-            <div class="text-block">COGS SANDAKAN</div>
-            <a href="http://www.cogssandakan.com/News/Ongoing/COGS_Basketball.html" class="link">Basketball</a>
+            <div class="text-block">OnlineBah</div>
+            <a href="https://www.onlinebah.com/" class="link">Our Work</a>
         </div>
     </nav>
     <div class="hero">
@@ -320,53 +292,47 @@
         <h3 id="yourFate">"Your Fate Depends on Your Teamwork!"</h3>
         <h2 id="enterName">Please enter players' name:</h2>
 
-        <form id="frm1">
-            <p>Player 1: <input type="text" id="input1" value="" onchange="name1()"></p>
-            <p>Player 2: <input type="text" id="input2" value="" onchange="name2()"></p>
-            <p>Player 3: <input type="text" id="input3" value="" onchange="name3()"></p>
-            <p>Player 4: <input type="text" id="input4" value="" onchange="name4()"></p>
-            <p>Player 5: <input type="text" id="input5" value="" onchange="name5()"></p>
-            <p>Player 6: <input type="text" id="input6" value="" onchange="name6()"></p>
-            <p>Player 7: <input type="text" id="input7" value="" onchange="name7()"></p>
-            <p>Player 8: <input type="text" id="input8" value="" onchange="name8()"></p>
-            <p>Player 9: <input type="text" id="input9" value="" onchange="name9()"></p>
-            <p>Player 10: <input type="text" id="input10" value="" onchange="name10()"></p>
+        <form id="playerForm">
+            <div class="form">
+                <p>Player 1: <input type="text" id="input1" value="" onchange="name1()"></p>
+                <p>Player 2: <input type="text" id="input2" value="" onchange="name2()"></p>
+                <p>Player 3: <input type="text" id="input3" value="" onchange="name3()"></p>
+                <p>Player 4: <input type="text" id="input4" value="" onchange="name4()"></p>
+                <p>Player 5: <input type="text" id="input5" value="" onchange="name5()"></p>
+            </div>
+            <div class="form">
+                <p>Player 6: <input type="text" id="input6" value="" onchange="name6()"></p>
+                <p>Player 7: <input type="text" id="input7" value="" onchange="name7()"></p>
+                <p>Player 8: <input type="text" id="input8" value="" onchange="name8()"></p>
+                <p>Player 9: <input type="text" id="input9" value="" onchange="name9()"></p>
+                <p>Player 10: <input type="text" id="input10" value="" onchange="name10()"></p>
+            </div>
         </form>
-        <button id="button1" type="button" onclick="select_random()">Submit</button>
+        <button id="submitBtn" type="button" onclick="select_random()">Submit</button>
         <h2 class="team">Team A</h2>
         <div id="listA"></div>
         <h2 class="team">Team B</h2>
         <div id="listB"></div>
-        <button class="choose" type="button" id="button2" onclick="myFunction1()">Choose</button>
+        <button class="choose" type="button" id="chooseBtn" onclick="chooseTeam()">Choose</button>
         <canvas id='chrono'></canvas>
         <div id="clockSetting" class='setting'>
-          <div class='container'>
-                <button id='runBtn'>Run</button>
-                <button id='pauseBtn'>Stop</button>
-                <button id='stopBtn'>Reset</button>
+            <div class='container'>
+                <button id='startBtn'>Start</button>
+                <button id='pauseBtn'>Pause</button>
+                <button id='resetBtn'>Reset</button>
             </div>
-           <div class='container'>
+            <div class='container'>
                 <p>Choose Your Game Time:</p>
                 <p>
-                    <label for='hour'>H</label>
-                    <input type="number" min="0" max="10" step="1" value="0" id='hour'>
-                    <label for='m'>M</label>
-                    <input type="number" min="0" max="60" step="1" value="1" id='minute'>
-                    <label for='s'>S</label>
+                    <label for='hour' style="display: none">H</label>
+                    <input style="display: none" type="number" min="0" max="10" step="1" value="0" id='hour'>
+                    <label for='m'>Minute</label>
+                    <input type="number" min="0" max="60" step="1" value="15" id='minute'>
+                    <label for='s'>Second</label>
                     <input type="number" min="0" max="60" step="10" value="0" id='second'>
                 </p>
             </div>
         </div>
-<!--
-        <div id="stopWatch">
-            <div id="timer">Time left = <span id="timerLabel"></span></div>
-            <div id="stopButton">
-                <button type="button" id="startBtn" onclick="start()">Start</button>
-                <button type="button" id="stopBtn" onclick="stop()">Stop</button>
-                <button type="button" id="clear" onclick="reset()">Clear</button>
-            </div>
-        </div>
--->
     </section>
     <script type="text/javascript" src="score.js"></script>
 </body>

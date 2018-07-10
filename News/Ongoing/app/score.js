@@ -107,7 +107,7 @@ function select_random() {
             teamB.push(teamA[number]);
             teamA.splice(number, 1);
         }
-        let z = document.getElementById("button1");
+        let z = document.getElementById("submitBtn");
         let teams = document.getElementsByClassName("team");
         //An array was created in teams variable
         let j;
@@ -121,7 +121,7 @@ function select_random() {
             chooseTeam[i].style.display = "block";
         }
         z.style.display = "none";
-        let y = document.getElementById("frm1");
+        let y = document.getElementById("playerForm");
         y.style.display = "none";
         let x = document.getElementById("enterName");
         x.style.display = "none";
@@ -138,7 +138,7 @@ function select_random() {
 demoA = document.getElementById("listA");
 demoB = document.getElementById("listB");
 
-function myFunction1() {
+function chooseTeam() {
     let i;
     for (i = 0; i < teamA.length; i++) {
         demoA.innerHTML = demoA.innerHTML + "<p class='namelist' >" + teamA[i] + "</p>";
@@ -147,7 +147,7 @@ function myFunction1() {
     for (j = 0; j < teamA.length; j++) {
         demoB.innerHTML = demoB.innerHTML + "<p class='namelist' >" + teamB[j] + "</p>";
     }
-    let z = document.getElementById("button2");
+    let z = document.getElementById("chooseBtn");
     z.style.display = "none";
     let w = document.getElementById("yourFate");
     w.style.display = "block";
@@ -162,30 +162,29 @@ let cnv = document.getElementById("chrono"); // canvas
 let h = document.getElementById("hour");
 let m = document.getElementById("minute");
 let s = document.getElementById("second");
-//taille du canvas égal au dimension de l'écran
+//canvas size equal to the size of the screen
 cnv.width = 200; 
 cnv.height = 200;
 let ctx = cnv.getContext("2d");
-//initialisation de letiable
+//initialization of letiable
 let status = 'w'; // status : w = waiting ; p = pause ; s = stop ; r = run 
 let fontType = "Arial"
 let time = dTime = 0;
-let duration = 60000;
+let duration = 900000; //the duration is 15 mins as default.
 
 let x = cnv.width / 2;
 let y = cnv.height / 2;
-let r = Math.min(cnv.width, cnv.height) / 2; // rayon = la plus petite dimension de l'écran
-let e = r / 8; //epaisseur du contour du cercle en fonction du rayon
-r = r - e; // on enlève l'épaisseur du trait pour ne pas dépasser la taille du canvas
-let fontSize = computeFontSize("00:00:00", fontType); //adapter le texte du chrono au rayon du cercle
+let r = Math.min(cnv.width, cnv.height) / 2; // radius = the smallest dimension of the screen
+let e = r / 8; //thickness of the outline of the circle according to the radius
+r = r - e; // we remove the thickness of the line to not exceed the size of the canvas
+let fontSize = computeFontSize("00:00:00", fontType); //adapt the chrono text to the radius of the circle
 let font = fontSize + "px " + fontType;
 /*
  *
- * fonctions de calcul
+ * calculation functions
  *
  */
 function computeDuration() {
-    let d = 0;
     if (h && m && s) {
         duration = h.value * 3600000 + m.value * 60000 + s.value * 1000;
     }
@@ -202,7 +201,7 @@ function computeFontSize(text, fontface) {
 }
 /*
  *
- * fonctions de formattage
+ * formatting functions
  *
  */
 function formatTime(time) {
@@ -216,16 +215,16 @@ function formatTime(time) {
     if (minute < 10) {
         minute = '0' + minute
     };
-    tmp = Math.floor(tmp / 60);
-    let hour = tmp;
-    if (hour < 10) {
-        hour = '0' + hour
-    };
-    return hour + ':' + minute + ':' + second;
+//    tmp = Math.floor(tmp / 60);
+//    let hour = tmp;
+//    if (hour < 10) {
+//        hour = '0' + hour
+//    };
+    return minute + ':' + second;
 }
 /*
  *
- * fonctions création d'objet
+ * object creation functions
  *
  */
 function createCircle() {
@@ -241,7 +240,7 @@ function createCircle() {
 }
 /*
  *
- * fonctions de canvas et dessins
+ * canvas and drawings functions
  *
  */
 function clearCanvas(context, canvas) {
@@ -305,9 +304,9 @@ function animate() {
  * Events listener
  *
  */
-document.getElementById("runBtn").addEventListener("click", run);
+document.getElementById("startBtn").addEventListener("click", start);
 document.getElementById("pauseBtn").addEventListener("click", pause);
-document.getElementById("stopBtn").addEventListener("click", stop);
+document.getElementById("resetBtn").addEventListener("click", reset);
 h.addEventListener("change", computeDuration);
 m.addEventListener("change", computeDuration);
 s.addEventListener("change", computeDuration);
@@ -317,7 +316,7 @@ function init() {
     drawChrono(0, font, ctx)
 }
 
-function run() {
+function start() {
     status = 'r';
     animate();
 }
@@ -327,7 +326,7 @@ function pause() {
     dTime = time;
 }
 
-function stop() {
+function reset() {
     status = 's';
     dTime = 0;
     clearCanvas(ctx, cnv);
@@ -335,47 +334,8 @@ function stop() {
 }
 
 init();
-//let status = 0; //0:stop 1:running
-//    let time = 0;
-//                    
-//    function start(){
-//        status = 1;
-//        document.getElementById("startBtn").disabled = true;
-//        timer();
-//    }
-//    function stop(){
-//        status = 0;
-//        document.getElementById("startBtn").disabled = false;
-//    }
-//    function reset(){
-//        status = 0;
-//        time = 0;
-//        document.getElementById('timerLabel').innerHTML = '00:00:00';
-//        document.getElementById("startBtn").disabled = false;
-//    }
-//    function timer(){
-//        if(status == 1){
-//            setTimeout(function(){
-//                time++;
-//                let min = Math.floor(time/100/60);
-//                let sec = Math.floor(time/100);
-//                let mSec = time % 100;
-//                    
-//                if(min < 10) {
-//                    min = "0" + min;
-//                }
-//                if(sec >= 60) {
-//                    sec = sec % 60;
-//                }
-//                if(sec < 10) {
-//                    sec = "0" + sec;
-//                }
-//                    
-//                document.getElementById('timerLabel').innerHTML = min + ":" + sec + ":" + mSec;
-//                timer();
-//            }, 10);
-//        }
-//    }
+
+
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.
 //    //return the chosen one to the team list.
