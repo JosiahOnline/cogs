@@ -342,3 +342,20 @@ init();
 //}
 //
 //select_captain(teamA);
+if (navigator.userAgent.match(/Android/i) ||
+    navigator.userAgent.match(/webOS/i) ||
+    navigator.userAgent.match(/iPhone/i) ||
+    navigator.userAgent.match(/iPad/i) ||
+    navigator.userAgent.match(/iPod/i) ||
+    navigator.userAgent.match(/BlackBerry/i) ||
+    navigator.userAgent.match(/IEMobile/i) ||
+    navigator.userAgent.match(/Windows Phone/i)) {
+    window.scrollTo(0, 0); // reset in case prev not scrolled  
+    var nPageH = $(document).height();
+    var nViewH = window.outerHeight;
+    if (nViewH > nPageH) {
+        nViewH -= 250;
+        $('BODY').css('height', nViewH + 'px');
+    }
+    window.scrollTo(0, 1);
+}
