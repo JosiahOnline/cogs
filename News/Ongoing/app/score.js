@@ -1,39 +1,25 @@
 let players = [];
-let player1 = "",
- player2 = "",
- player3 = "",
- player4 = "",
- player5 = "",
- player6 = "",
- player7 = "",
- player8 = "",
- player9 = "",
- player10 = "";
-
-players = [];
-//var player1 = document.getElementById('input1');
-//var player1a = document.getElementById('input1').value;
-//player1.addEventListener('change', function (e) {
-//    player1a = e.target.value;
-//});
+//let player1 = "",
+// player2 = "",
+// player3 = "",
+// player4 = "",
+// player5 = "",
+// player6 = "",
+// player7 = "",
+// player8 = "",
+// player9 = "",
+// player10 = "";
 
 function nameEntered(element) {
         let x = element.getAttribute("id");
 //        let z = element.getAttribute("name");
         let y = document.getElementById(x).value;
-//        for (let i = 0; i < players.length; i++) {
-//            if ( players[i] == z) {
-//                players[i]= z;
-//                
-//            }
-//        }
         players.push(y);
         document.getElementById(x).disabled = true;
 //        document.getElementById("input1").style.backgroundColor = "darkred";
 //        document.getElementById("input1").style.color = "#ffffff";
 //        document.getElementById("input1").style.borderColor = "#ffffff";
 }
-
 
 let teamA = [];
 teamA = players;
@@ -45,6 +31,12 @@ function select_random() {
     if (players.length < "10") {
         alert("Please enter all players' name!")
     } else {
+        for (let k = 0; k <11; k++) {
+            window["player"+(k+1)] = new String(); // <--create 10 global string object without naming them manually in the beginning.
+            window["player"+(k+1)] = players[k]; // k+1 are integers thus need to add first before it convert to string player (0+1), which is player1.
+            // typeof the variable is based on the value whether it is primitive value such as string, integer, null, undefine, boolean or symbols.
+            // so in this case i am trying to create a variable with a string value, thus using new String constructor will do the job.
+        }
         for (let i = 0; i < teamA.length; i++) {
             let number = Math.floor(Math.random() * teamA.length);
             //<-- based on the players length it will randomly select a number which doesn't exceed the players length.
