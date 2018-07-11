@@ -1382,7 +1382,7 @@ span.chi_nounderline,
     padding: 0 80px;
 }
 
-#announcements .adjust-padding-lr, #download .adjust-padding-lr {
+#announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
     padding: 0 120px;
 }
 
@@ -1456,7 +1456,7 @@ span.chi_nounderline,
     .googlemap iframe {
         height: 87.8%;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr  {
         padding: 0 80px;
     }
 }
@@ -1502,7 +1502,7 @@ span.chi_nounderline,
     .adjust-padding-lr {
         padding: 0 50px;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 70px;
     }
 }
@@ -1593,7 +1593,7 @@ span.chi_nounderline,
     #welcome {
         padding: 9em 0 6em;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 50px;
     }
 }
@@ -2224,7 +2224,7 @@ span.chi_nounderline,
     .adjust-padding-lr {
         padding: 0 80px;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 5%;
     }
     #announcements {
@@ -2913,7 +2913,7 @@ span.chi_nounderline,
     .bible-verse {
         font-size: 3rem;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 3%;
     }
     .adjust-padding-lr {
@@ -3115,7 +3115,7 @@ span.chi_nounderline,
     .call-to-action-section {
         height: 85%;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 40px;
     }
     .adjust-padding-lr {
@@ -3300,7 +3300,7 @@ window.outerHeight include toolbar and address bar----------- */
     .welcome-button-container {
         width: 100%;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 40px;
     }
     #announcements {
@@ -3398,7 +3398,7 @@ window.outerHeight include toolbar and address bar----------- */
     .adjust-padding-lr {
         padding: 0 40px;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 6%;
     }
 }
@@ -4518,7 +4518,7 @@ window.outerHeight include toolbar and address bar----------- */
     .adjust-padding-lr {
         padding: 0 30px;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 20px;
     }
 }
@@ -4779,7 +4779,7 @@ window.outerHeight include toolbar and address bar----------- */
     .adjust-padding-lr {
         padding: 0 20px;
     }
-    #announcements .adjust-padding-lr, #download .adjust-padding-lr {
+    #announcements .adjust-padding-lr, #download .adjust-padding-lr, #education .adjust-padding-lr {
         padding: 0 4%;
     }
 }
