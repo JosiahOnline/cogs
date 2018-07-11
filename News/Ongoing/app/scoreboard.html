@@ -107,15 +107,22 @@
             border-color: transparent;
             font-family: 'Graduate', cursive;
         }
-        
+        #teamSec {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 76%;
+        }
+        .teamList {
+            text-align: center;
+        }
         #playerForm {
             display: flex;
         }
         .form {
             margin: 0 15px;
         }
-        .team,
-        .choose {
+        #teamSec, #chooseBtn {
             display: none;
         }
 
@@ -209,31 +216,28 @@
                 background-size: cover;
                 background-position: 30% 50%;
             }
-            .top-nav .text-block,
-            .top-nav a {
-                font-size: 2em;
-            }
             h1 {
-                font-size: 3.5em;
+                font-size: 3em;
+                margin: 0 10%;
             }
 
             h2 {
-                font-size: 3em;
+                font-size: 2.5em;
                 padding: 10px;
                 margin: 15px auto 20px;
             }
             h3 {
-                font-size: 4em;
+                font-size: 3em;
                 padding: 10px;
-                margin: 20px;
+                margin: 0px;
             }
 
             p {
-                font-size: 2.2em;
+                font-size: 2em;
                 margin-bottom: 15px;
             }
             .namelist {
-                font-size: 2.5em;
+                font-size: 2em;
             }
             input {
                 font-size: 1em;
@@ -253,7 +257,7 @@
                 margin-left: 0;
             }
             button {
-                font-size: 3.0em;
+                font-size: 3em;
                 padding: 20px 25px;
                 border-radius: 4px;
             }
@@ -263,6 +267,7 @@
             #chrono {
                 width: 360px;
                 height: 360px;
+                margin-bottom: 10%;
             }
             .setting {
                 width: 90%;
@@ -273,7 +278,218 @@
             .container button {
                 margin: 0 10px;
                 padding: 12px 24px;
-                font-size: 3em;
+                font-size: 2.5em;
+            }
+        }
+        @media screen and (max-width: 800px) {
+            h1 {
+                font-size: 2.8em;
+            }
+            h2 {
+                font-size: 2.3em;
+            }
+            #teamSec {
+                width: 92%;
+            }
+            .team {
+                margin: 0.3em auto;
+            }
+            .namelist {
+                font-size: 1.8em;
+            }
+            #chrono {
+                width: 300px;
+                height: 300px;
+            }
+            .container button {
+                font-size: 2em;
+            }
+            p {
+                font-size: 1.8em;
+            }
+        }
+        @media screen and (max-width: 770px) {
+            h1 {
+                font-size: 2.6em;
+            }
+            h2 {
+                font-size: 2.2em;
+            }
+            h3 {
+                font-size: 2.8em;
+                padding: 10px 0;
+            }
+            #chrono {
+                width: 260px;
+                height: 260px;
+                margin-bottom: 15%;
+            }
+            .container button {
+                font-size: 1.8em;
+            }
+            p {
+                font-size: 1.6em;
+            }
+        }
+        @media screen and (max-width: 610px) {
+            h1 {
+                font-size: 2em;
+            }
+            h2 {
+                font-size: 1.8em;
+            }
+            h3 {
+                font-size: 2.2em;
+            }
+            .namelist {
+                font-size: 1.5em;
+            }
+            #chrono {
+                width: 200px;
+                height: 200px;
+            }
+            .container button {
+                font-size: 1.2em;
+            }
+            p {
+                font-size: 1.3em;
+            }
+        }
+        @media screen and (max-width: 480px) {
+            h1 {
+                font-size: 1.8em;
+                padding: 10px 0;
+                margin: 0 20px;
+            }
+            h2 {
+                font-size: 1.6em;
+            }
+            h3 {
+                font-size: 1.8em;
+            }
+            .namelist {
+                font-size: 1.2em;
+                margin: 5px 7px;
+            }
+            #chrono {
+                width: 160px;
+                height: 160px;
+            }
+            .container button {
+                font-size: 1em;
+            }
+            p {
+                font-size: 1.1em;
+            }
+        }
+        @media screen and (max-width: 420px) {
+            h1 {
+                font-size: 1.6em;
+            }
+            h2 {
+                font-size: 1.4em;
+                padding: 5px 0;
+            }
+            h3 {
+                font-size: 1.6em;
+            }
+            .namelist {
+                font-size: 1em;
+            }
+            #chrono {
+                width: 140px;
+                height: 140px;
+            }
+            .setting {
+                width: 96%;
+                right: 2%;
+                padding-top: 10px;
+                padding-bottom: 10px;
+            }
+            .container button {
+                font-size: 0.8em;
+                padding: 10px 18px;
+            }
+            p {
+                font-size: 1em;
+            }
+        }
+        @media screen and (max-width: 380px) and (max-height: 680px) {
+            h1 {
+                font-size: 1.4em;
+            }
+            h2 {
+                font-size: 1.2em;
+            }
+            h3 {
+                font-size: 1.4em;
+            }
+            .container button {
+                margin: 0 4px;
+                padding: 10px 14px;
+            }
+            p {
+                font-size: 0.9em;
+            }
+        }
+        @media screen and (max-width: 380px) and (max-height: 560px) {
+            h1, h2 {
+                font-size: 1.2em;
+                padding: 5px 0;
+            }
+            h3 {
+                font-size: 1.4em;
+            }
+            #chrono {
+                margin-top: 0px;
+            }
+            #teamSec {
+                width: 96%;
+            }
+            .team {
+                margin: 0 auto;
+            }
+            .setting {
+                padding-top: 5px;
+                padding-bottom: 5px;
+                bottom: 5px;
+            }
+            .container button {
+                margin: 0 2px;
+                padding: 8px 12px;
+            }
+            p {
+                font-size: 0.9em;
+            }
+            .container p {
+                margin-top: 5px;
+            }
+        }
+        @media screen and (max-width: 360px) and (max-height: 530px) {
+            h3 {
+                padding: 5px;
+            }
+            #chrono {
+                width:120px;
+                height: 120px;
+            }
+        }
+        @media screen and (max-width: 320px) and (max-height: 570px) {
+            h2 {
+                font-size: 1em;
+            }
+            .namelist {
+                font-size: 0.8em;
+            }
+            #chrono {
+                width:100px;
+                height: 100px;
+            }
+            .container button {
+                padding: 6px 10px;
+            }
+            p {
+                font-size: 0.8em;
             }
         }
     </style>
@@ -283,7 +499,7 @@
     <nav class="top-nav">
         <div class="top-container">
             <div class="text-block">OnlineBah</div>
-            <a href="https://www.onlinebah.com/" class="link">Our Work</a>
+            <a href="https://www.onlinebah.com/" class="link">Work</a>
         </div>
     </nav>
     <div class="hero">
@@ -292,31 +508,40 @@
     </div>
     <section>
         <h1>Select Your Teammates Randomly</h1>
-        <h3 id="yourFate">"Your Fate Depends on Your Teamwork!"</h3>
-        <h2 id="enterName">Please enter players' name:</h2>
+        <h3 id="yourFate">Your Fate Depends on Your Teamwork</h3>
+        <h2 id="instructText">Please enter players' name:</h2>
 
         <form id="playerForm">
             <div class="form">
-                <p>Player 1: <input type="text" id="input1" value="" onchange="name1()"></p>
-                <p>Player 2: <input type="text" id="input2" value="" onchange="name2()"></p>
-                <p>Player 3: <input type="text" id="input3" value="" onchange="name3()"></p>
-                <p>Player 4: <input type="text" id="input4" value="" onchange="name4()"></p>
-                <p>Player 5: <input type="text" id="input5" value="" onchange="name5()"></p>
+                <p>Player 1: <input type="text" id="input1" value="" name="player1" onchange="nameEntered(this)"></p>
+                <p>Player 2: <input type="text" id="input2" value="" name="player2"onchange="nameEntered(this)"></p>
+                <p>Player 3: <input type="text" id="input3" value="" name="player3"onchange="nameEntered(this)"></p>
+                <p>Player 4: <input type="text" id="input4" value="" name="player4"onchange="nameEntered(this)"></p>
+                <p>Player 5: <input type="text" id="input5" value="" name="player5"onchange="nameEntered(this)"></p>
             </div>
             <div class="form">
-                <p>Player 6: <input type="text" id="input6" value="" onchange="name6()"></p>
-                <p>Player 7: <input type="text" id="input7" value="" onchange="name7()"></p>
-                <p>Player 8: <input type="text" id="input8" value="" onchange="name8()"></p>
-                <p>Player 9: <input type="text" id="input9" value="" onchange="name9()"></p>
-                <p>Player 10: <input type="text" id="input10" value="" onchange="name10()"></p>
+                <p>Player 6: <input type="text" id="input6" value="" name="player6"onchange="nameEntered(this)"></p>
+                <p>Player 7: <input type="text" id="input7" value="" name="player7" onchange="nameEntered(this)"></p>
+                <p>Player 8: <input type="text" id="input8" value="" name="player8"onchange="nameEntered(this)"></p>
+                <p>Player 9: <input type="text" id="input9" value="" name="player9"onchange="nameEntered(this)"></p>
+                <p>Player 10: <input type="text" id="input10" value="" name="player10"onchange="nameEntered(this)"></p>
             </div>
         </form>
         <button id="submitBtn" type="button" onclick="select_random()">Submit</button>
-        <h2 class="team">Team A</h2>
-        <div id="listA"></div>
-        <h2 class="team">Team B</h2>
-        <div id="listB"></div>
-        <button class="choose" type="button" id="chooseBtn" onclick="chooseTeam()">Choose</button>
+        <div id="teamSec">
+            <div>
+                <h2 class="team">Team A</h2>
+                <div id="listA" class="teamList"></div>
+            </div>
+            <div class="versus">
+                <h1>VS</h1>
+            </div>
+            <div>
+                <h2 class="team">Team B</h2>
+                <div id="listB" class="teamList"></div>
+            </div>
+        </div>
+        <button type="button" id="chooseBtn" onclick="chooseTeam()">Choose</button>
         <canvas id='chrono'></canvas>
         <div id="clockSetting" class='setting'>
             <div class='container'>
@@ -335,6 +560,14 @@
                     <input type="number" min="0" max="60" step="10" value="0" id='second'>
                 </p>
             </div>
+            <audio id="myAudio">
+              <source src="NBA Pump1.ogg" type="audio/ogg">
+              <source src="NBA Pump1.mp3" type="audio/mpeg">
+            </audio>
+<!--
+            <button onclick="playAudio()" type="button">Play Audio</button>
+            <button onclick="pauseAudio()" type="button">Pause Audio</button> 
+-->
         </div>
     </section>
     <script type="text/javascript" src="score.js"></script>

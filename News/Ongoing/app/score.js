@@ -1,101 +1,45 @@
-var player1 = "",
-    player2 = "",
-    player3 = "",
-    player4 = "",
-    player5 = "",
-    player6 = "",
-    player7 = "",
-    player8 = "",
-    player9 = "",
-    player10 = "";
-var players = [];
+let players = [];
+let player1 = "",
+ player2 = "",
+ player3 = "",
+ player4 = "",
+ player5 = "",
+ player6 = "",
+ player7 = "",
+ player8 = "",
+ player9 = "",
+ player10 = "";
 
+players = [];
 //var player1 = document.getElementById('input1');
 //var player1a = document.getElementById('input1').value;
 //player1.addEventListener('change', function (e) {
 //    player1a = e.target.value;
 //});
-function name1() {
-    if (player1 === "") {
-        var x = document.getElementById("input1").value;
-        player1 = x;
-        players.push(x);
-        document.getElementById("input1").disabled = true;
-        //    document.getElementById("input1").style.backgroundColor = "red";
-    } else {
-        alert("You have to refresh to enter again!");
-    }
-}
 
-function name2() {
-    var x = document.getElementById("input2").value;
-    player2 = x;
-    players.push(x);
-    document.getElementById("input2").disabled = true;
-}
-
-function name3() {
-    var x = document.getElementById("input3").value;
-    player3 = x;
-    players.push(x);
-    document.getElementById("input3").disabled = true;
-}
-
-function name4() {
-    var x = document.getElementById("input4").value;
-    player4 = x;
-    players.push(x);
-    document.getElementById("input4").disabled = true;
-}
-
-function name5() {
-    var x = document.getElementById("input5").value;
-    player5 = x;
-    players.push(x);
-    document.getElementById("input5").disabled = true;
-}
-
-function name6() {
-    var x = document.getElementById("input6").value;
-    player6 = x;
-    players.push(x);
-    document.getElementById("input6").disabled = true;
-}
-
-function name7() {
-    var x = document.getElementById("input7").value;
-    player7 = x;
-    players.push(x);
-    document.getElementById("input7").disabled = true;
-}
-
-function name8() {
-    var x = document.getElementById("input8").value;
-    player8 = x;
-    players.push(x);
-    document.getElementById("input8").disabled = true;
-}
-
-function name9() {
-    var x = document.getElementById("input9").value;
-    player9 = x;
-    players.push(x);
-    document.getElementById("input9").disabled = true;
-}
-
-function name10() {
-    var x = document.getElementById("input10").value;
-    player10 = x;
-    players.push(x);
-    document.getElementById("input10").disabled = true;
+function nameEntered(element) {
+        let x = element.getAttribute("id");
+//        let z = element.getAttribute("name");
+        let y = document.getElementById(x).value;
+//        for (let i = 0; i < players.length; i++) {
+//            if ( players[i] == z) {
+//                players[i]= z;
+//                
+//            }
+//        }
+        players.push(y);
+        document.getElementById(x).disabled = true;
+//        document.getElementById("input1").style.backgroundColor = "darkred";
+//        document.getElementById("input1").style.color = "#ffffff";
+//        document.getElementById("input1").style.borderColor = "#ffffff";
 }
 
 
-var teamA = [];
+let teamA = [];
 teamA = players;
 // due to the references in object, function and arrays, both teamA and players are pointing to the same memory location (references). 
 //whatever changes in teamA same applied to players array.
-var teamB = [];
+let teamB = [];
 
 function select_random() {
     if (players.length < "10") {
@@ -107,24 +51,25 @@ function select_random() {
             teamB.push(teamA[number]);
             teamA.splice(number, 1);
         }
-        let z = document.getElementById("submitBtn");
         let teams = document.getElementsByClassName("team");
         //An array was created in teams variable
         let j;
         for (j = 0; j < teams.length; j++) {
             teams[j].style.display = "block";
         }
-        let chooseTeam = document.getElementsByClassName("choose");
+        let t = document.getElementById("yourFate");
+        t.style.display = "block";
+        let u = document.getElementById("teamSec");
+        u.style.display = "flex";
+        let w = document.getElementById("chooseBtn");
         //An array was created in teams variable
-        let i;
-        for (i = 0; i < chooseTeam.length; i++) {
-            chooseTeam[i].style.display = "block";
-        }
-        z.style.display = "none";
+        w.style.display = "block";
+        let x = document.getElementById("submitBtn");
+        x.style.display = "none";
         let y = document.getElementById("playerForm");
         y.style.display = "none";
-        let x = document.getElementById("enterName");
-        x.style.display = "none";
+        let z = document.getElementById("instructText");
+        z.style.display = "none";
     }
 
     //randomly select first 5 players from var players
@@ -147,14 +92,14 @@ function chooseTeam() {
     for (j = 0; j < teamA.length; j++) {
         demoB.innerHTML = demoB.innerHTML + "<p class='namelist' >" + teamB[j] + "</p>";
     }
-    let z = document.getElementById("chooseBtn");
-    z.style.display = "none";
-    let w = document.getElementById("yourFate");
-    w.style.display = "block";
-    let v = document.getElementById("chrono");
-    v.style.display = "block";
-    let k = document.getElementById("clockSetting");
-    k.style.display = "flex";
+//    let w = document.getElementById("yourFate");
+//    w.style.display = "none";
+    let x = document.getElementById("chooseBtn");
+    x.style.display = "none";
+    let y = document.getElementById("chrono");
+    y.style.display = "block";
+    let z = document.getElementById("clockSetting");
+    z.style.display = "flex";
 }
 
 
@@ -311,6 +256,8 @@ h.addEventListener("change", computeDuration);
 m.addEventListener("change", computeDuration);
 s.addEventListener("change", computeDuration);
 
+var mySong= document.getElementById("myAudio"); 
+
 function init() {
     drawCircle(createCircle(), ctx);
     drawChrono(0, font, ctx)
@@ -319,11 +266,13 @@ function init() {
 function start() {
     status = 'r';
     animate();
+    mySong.play();
 }
 
 function pause() {
     status = 'p';
     dTime = time;
+    mySong.pause();
 }
 
 function reset() {
@@ -331,9 +280,12 @@ function reset() {
     dTime = 0;
     clearCanvas(ctx, cnv);
     init();
+    mySong.currentTime = 0;
+    mySong.pause();
 }
 
 init();
+
 
 
 //function select_captain(team) {
