@@ -72,8 +72,8 @@ function select_random() {
     //return Team A and B list into the document.
 }
 
-demoA = document.getElementById("listA");
-demoB = document.getElementById("listB");
+demoA = document.getElementById("homeA");
+demoB = document.getElementById("guestB");
 
 function chooseTeam() {
     let i;
