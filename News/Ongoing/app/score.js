@@ -278,7 +278,99 @@ function reset() {
 
 init();
 
+let home = document.getElementById("team1");
+let homePlus = document.getElementById("homeplus");
+let homeMinus = document.getElementById("homeminus");
+let away = document.getElementById("team2");
+let awayPlus = document.getElementById("awayplus");
+let awayMinus = document.getElementById("awayminus");
 
+let homeScore = 0;
+let awayScore = 0;
+homePlus.addEventListener('click', function() {
+    if (homeScore >= 0) {
+        homeScore += 1;
+        home.innerHTML = homeScore;
+    } else {
+        homeScore;
+    }
+});
+homeMinus.addEventListener('click', function() {
+    if (homeScore >= 1) {
+        homeScore -= 1;
+        home.innerHTML = homeScore;
+    } else {
+        homeScore;
+    }
+});
+
+awayPlus.addEventListener('click', function() {
+    if (awayScore >= 0) {
+        awayScore += 1;
+        away.innerHTML = awayScore;
+    } else {
+        awayScore;
+    }
+    
+})
+awayMinus.addEventListener('click', function() {
+    if (awayScore >= 1) {
+        awayScore -= 1;
+        away.innerHTML = awayScore;
+    } else {
+        awayScore;
+    }
+});
+
+let roundNum = document.getElementById("roundnum");
+let roundScore = 0;
+let roundPlus = document.getElementById("roundplus");
+let roundMinus = document.getElementById("roundminus");
+
+roundPlus.addEventListener('click', function() {
+    if ((roundScore <= 3) && (roundScore >= 0)) {
+        roundScore += 1;
+        roundNum.innerHTML = roundScore;
+    } else  if (roundScore == 4) {
+        roundScore;
+    } else {
+        roundScore;
+    }
+});
+
+roundMinus.addEventListener('click', function() {
+    if ((roundScore <= 4) && (roundScore >= 1)) {
+        roundScore -= 1;
+        roundNum.innerHTML = roundScore;
+    } else  if (roundScore == 0 ) {
+        roundScore;
+    } else {
+        roundScore;
+    }
+});
+//var x = document.getElementById("player1Puls").nextSibling.innerHTML;
+function addScore(element) {
+    let y = element.nextElementSibling.id;
+    let z = document.getElementById(y).innerHTML;
+    let x = parseInt(z);
+    x +=1;
+    document.getElementById(y).innerHTML = x;
+}
+
+function deductScore(element) {
+    let y = element.previousElementSibling.id;
+    let z = document.getElementById(y).innerHTML;
+    let x = parseInt(z);
+    x -=1;
+    document.getElementById(y).innerHTML = x;
+}
+//function nameEntered(element) {
+//        let x = element.getAttribute("id");
+////        let z = element.getAttribute("name");
+//        let y = document.getElementById(x).value;
+//        players.push(y);
+//        document.getElementById(x).disabled = true;
+//}
 
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.

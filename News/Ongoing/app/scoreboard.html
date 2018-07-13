@@ -74,7 +74,7 @@
         <div id="clockSetting" class='setting'>
             <div class='container'>
                 <button id='startBtn'>Start</button>
-                <button id='pauseBtn'>Pause</button>
+                <button id='pauseBtn'>Stop</button>
                 <button id='resetBtn'>Reset</button>
             </div>
             <div class='container'>
@@ -93,10 +93,10 @@
               <source src="NBA Pump1.mp3" type="audio/mpeg">
             </audio>
         </div>
-        <div class="scorecontainer">
+        <div class="scorecontainer" style="display: none">
             <div class="btncontainer">
                 <h2>Home</h2>
-                <div class="scorediv" id="team1">98</div>
+                <div class="scorediv" id="team1">0</div>
                 <div class="countBtn">
                     <button class="scorebtn" id="homeplus">+</button>
                     <button class="scorebtn" id="homeminus">-</button>
@@ -113,11 +113,80 @@
             </div>
             <div class="btncontainer">
                 <h2>Guest</h2>
-                <div class="scorediv" id="team2">101</div>
+                <div class="scorediv" id="team2">0</div>
                 <div class="countBtn">
                     <button class="scorebtn" id="awayplus">+</button>
                     <button class="scorebtn" id="awayminus">-</button>
                 </div>
+            </div>
+        </div>
+        <div class="playerScore">
+            <div class="playerContainer">
+                <div class="playerDiv">
+                    <p>Lee Foh</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team1Score" id="player1Score">88</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Fen</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team1Score" id="player2Score">0</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Josiah</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team1Score" id="player3Score">02</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Charles</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team1Score" id="player4Score">77</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Jack</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team1Score" id="player5Score">50</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+            </div>
+            <div class="playerContainer">
+                <div class="playerDiv">
+                    <p>Lee Foh</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team2Score" id="player6Score">88</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Fen</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team2Score" id="player7Score">0</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Josiah</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team2Score" id="player8Score">02</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Charles</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team2Score" id="player9Score">77</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <p>Jack</p>
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <p class="team2Score" id="player10Score">50</p>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+            </div>
+            <div>
+                
             </div>
         </div>
     </section>
