@@ -72,17 +72,28 @@ function select_random() {
     //return Team A and B list into the document.
 }
 
-demoA = document.getElementById("homeA");
-demoB = document.getElementById("guestB");
+let demoA = document.getElementById("homeA");
+let demoB = document.getElementById("guestB");
 
 function chooseTeam() {
     let i;
+    let g = demoA.children;
+    // g is HTML Collection [0] div.playerDiv, [1] div.playerDiv.... and so on.
     for (i = 0; i < teamA.length; i++) {
-        demoA.innerHTML = demoA.innerHTML + "<p class='namelist' >" + teamA[i] + "</p>";
+        let x = g[i].firstElementChild;
+        let para = document.createElement("p"); 
+        let node = document.createTextNode(teamA[i]);
+        para.appendChild(node); // add the textnode to p tag
+        g[i].insertBefore(para, g[i].childNodes[0]); //insert the para before the first node of the g[i];
     }
     let j;
+    let h = demoB.children;
     for (j = 0; j < teamA.length; j++) {
-        demoB.innerHTML = demoB.innerHTML + "<p class='namelist' >" + teamB[j] + "</p>";
+        let x = h[j].firstElementChild;
+        let para = document.createElement("p"); 
+        let node = document.createTextNode(teamB[j]);
+        para.appendChild(node);
+        h[j].insertBefore(para, h[j].childNodes[0]);
     }
 //    let w = document.getElementById("yourFate");
 //    w.style.display = "none";
