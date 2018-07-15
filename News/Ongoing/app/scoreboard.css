@@ -1,5 +1,6 @@
 .hero {
             background-image: url("../../img/basketball.jpg");
+    background-size: cover;
             position: fixed;
             height: 100vh;
         }
@@ -30,7 +31,7 @@
         }
 
         h1 {
-            font-size: 2.5em;
+            font-size: 1.1em;
             line-height: 1em;
             padding: 10px;
         }
@@ -40,14 +41,14 @@
         }
 
         h2 {
-            font-size: 2em;
+            font-size: 0.9em;
             padding: 10px;
         }
 
         h3 {
             color: white;
             font-family: 'Playball', cursive;
-            font-size: 2em;
+            font-size: 1.5em;
             font-weight: 100;
             margin: 10px auto;
             text-align: center;
@@ -55,8 +56,7 @@
         }
 
         p {
-            font-size: 1em;
-            text-align: right;
+            font-size: 0.7em;
             margin-bottom: 0;
         }
 
@@ -64,18 +64,19 @@
             text-align: center;
             margin: 15px auto;
         }
-
+        
         input {
+            width: 60px;
             padding: 0px;
-            margin-left: 10px;
             font-size: 1em;
             line-height: 1.5em;
             margin-bottom: 5px;
             text-align: center;
+            border-radius: 1px;
         }
 
         button {
-            font-size: 1.5em;
+            font-size: 0.9em;
             font-weight: bold;
             padding: 5px 10px;
             color: brown;
@@ -84,12 +85,14 @@
             border-color: transparent;
             font-family: 'Graduate', cursive;
         }
+/*
         #teamSec {
             display: flex;
             justify-content: space-around;
             align-items: center;
             width: 76%;
         }
+*/
         .teamList {
             text-align: center;
         }
@@ -99,6 +102,12 @@
         .form {
             margin: 0 15px;
         }
+.form:nth-child(1) {
+    margin-right: 5px;
+}
+.form:nth-child(2) {
+    margin-left: 5px;
+}
         #teamSec, #chooseBtn {
             display: none;
         }
@@ -115,23 +124,29 @@
         }
 
         #chrono {
-            margin-top: 20px;
             display: none;
         }
         .setting {
             display: none;
-            flex-direction: column;
             align-items: center;
             position: absolute;
-            width: 35%;
-            right: 0;
-            bottom: 10px;
-            border-radius: 4px;
+            width: 98%;
+            right: 1%;
+            bottom: 4px;
+            border-radius: 2px;
             background-color: rgba(0, 0, 0, .8);
             border: solid 1px white;
-            padding: 10px;
+            padding: 5px;
         }
-
+.setting div {
+    display: flex;
+    flex-direction:column;
+    margin-left: 5px;
+}
+.setting .container:nth-child(1) {
+    display: flex;
+    flex-direction: row;
+}
         .container {
             color: white;
         }
@@ -142,15 +157,12 @@
 
         .container button {
             display: inline-block;
-            cursor: pointer;
-            color: #ffffff;
-            margin: 0 5px;
-            padding: 5px 10px;
+            font-size: 0.8em;
+            padding: 5px;
+            margin: 0 2px;
             text-decoration: none;
             color: #DAD6D6;
-            border-radius: 5px;
             letter-spacing: 2px;
-            font-size: 1.2em;
         }
 
         #startBtn {
@@ -180,34 +192,48 @@
 
         .container p {
             text-align: center;
-            margin-top: 10px;
+            margin-top: 6px;
             margin-bottom: 0px;
         }
 
         .container input {
-            margin: 0 10px;
+            margin: 0 5px;
+            width: 35px;
         }
         
         /*  Score Board */
         .scorecontainer {
             display: flex;
-            height: 40%;
-            width: 60%;
-            padding: 15px;
+            height: 30%;
+            width: 88%;
+            padding: 10px;
+            margin-bottom: 10px;
             justify-content: space-around;
+            border-radius: 4px;
             background-color: rgba(0, 0, 0, 0.5);
         }
         .btncontainer {
             display: flex;
             flex-direction: column;
-            width: 30%;
+            justify-content: center;
         }
+#roundcounter button {
+    height: 30px;
+    font-size: 1em;
+    padding: 5px;
+    line-height: 0.6em;
+    margin-bottom: 5px;
+}
+#roundnum {
+    font-size: 1.5em;
+}
         .scorediv {
-            height: 60%;
+            height: 60px;
+            width: 65px;
             display: flex;
             justify-content: center;
             align-items: center;
-            font-size: 5em;
+            font-size: 2em;
             color: white;
             border-radius: 4px;
         }
@@ -243,8 +269,9 @@
 }
 #roundnum {
     font-family: Oswald, sans-serif;
-    font-size: 2.5em;
+    font-size: 1.5em;
 }
+/*
         @media screen and (max-width: 1024px) {
             .hero {
                 background-size: cover;
@@ -526,13 +553,14 @@
                 font-size: 0.8em;
             }
         }
+*/
 
 /* Player Score Board */
 .playerScore {
-    width: 60%;
     display: flex;
     justify-content: space-around;
     align-items: center;
+    margin-bottom: 18%;
 }
 .playerContainer {
     display: flex;
@@ -540,15 +568,22 @@
     justify-content: center;
     align-items: center;
 }
+.playerContainer:nth-child(1) {
+    margin-right: 6px;
+}
+.playerContainer:nth-child(2) {
+    margin-left: 6px;
+}
 .playerDiv {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px auto;
+    align-items: baseline;
+    margin: 2px auto;
 }
 .playerDiv p:nth-child(1) {
-    width: 140px;
-    font-size: 2em;
+    width: 60px;
+    font-size: 0.7em;
+    padding: 4px 5px;
+    border: 1px solid white;
 }
 .playerDiv p{
     display: inline-block;
@@ -556,17 +591,25 @@
     padding: 8px 10px;
     margin: 0 5px;
 }
-.team1Score, .team2Score {
-    font-size: 1.5em;
-    width: 50px;
+.team1Score, .team2Score, .scorebtn1 {
+    font-size: 0.6em;
+    padding: 3px 8px;
     text-align: center;
+    font-family: Oswald, sans-serif;
     border-radius: 2px;
+}
+.scorebtn1 {
+    border: 1px solid transparent;
 }
 .team1Score {
     background-color: #900c3f;
     border: 1px solid #900c3f;
+    color: white;
+    margin: 0 2px;
 }
 .team2Score {
     background-color: #2f7fb0;
     border: 1px solid #2f7fb0;
+    color: white;
+    margin: 0 2px;
 }

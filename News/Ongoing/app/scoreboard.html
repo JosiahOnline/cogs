@@ -35,7 +35,7 @@
         </div>
     </div>
     <section>
-        <h1>Select Your Teammates Randomly</h1>
+        <h1 id="appName">Select Your Teammates Randomly</h1>
         <h3 id="yourFate">Your Fate Depends on Your Teamwork</h3>
         <h2 id="instructText">Please enter players' name:</h2>
 
@@ -56,7 +56,8 @@
             </div>
         </form>
         <button id="submitBtn" type="button" onclick="select_random()">Submit</button>
-        <div id="teamSec">
+<!--
+        <div>
             <div>
                 <h2 class="team">Home</h2>
                 
@@ -69,38 +70,17 @@
                 
             </div>
         </div>
-        <button type="button" id="chooseBtn" onclick="chooseTeam()">Choose</button>
-        <canvas id='chrono'></canvas>
-        <div id="clockSetting" class='setting'>
-            <div class='container'>
-                <button id='startBtn'>Start</button>
-                <button id='pauseBtn'>Stop</button>
-                <button id='resetBtn'>Reset</button>
-            </div>
-            <div class='container'>
-                <p>Choose Your Game Time:</p>
-                <p>
-                    <label for='hour' style="display: none">H</label>
-                    <input style="display: none" type="number" min="0" max="10" step="1" value="0" id='hour'>
-                    <label for='m'>Minute</label>
-                    <input type="number" min="0" max="60" step="1" value="15" id='minute'>
-                    <label for='s'>Second</label>
-                    <input type="number" min="0" max="60" step="10" value="0" id='second'>
-                </p>
-            </div>
-            <audio id="myAudio">
-              <source src="NBA Pump1.ogg" type="audio/ogg">
-              <source src="NBA Pump1.mp3" type="audio/mpeg">
-            </audio>
-        </div>
-        <div class="scorecontainer" style="display: none">
+-->
+        <div class="scorecontainer" id="teamSec">
             <div class="btncontainer">
                 <h2>Home</h2>
                 <div class="scorediv" id="team1">0</div>
+<!--
                 <div class="countBtn">
                     <button class="scorebtn" id="homeplus">+</button>
                     <button class="scorebtn" id="homeminus">-</button>
                 </div>
+-->
             </div>
             <div id="roundcounter">
                 <button id="roundplus">+</button>
@@ -114,70 +94,98 @@
             <div class="btncontainer">
                 <h2>Guest</h2>
                 <div class="scorediv" id="team2">0</div>
+<!--
                 <div class="countBtn">
                     <button class="scorebtn" id="awayplus">+</button>
                     <button class="scorebtn" id="awayminus">-</button>
                 </div>
+-->
             </div>
         </div>
-        <div class="playerScore">
+        <button type="button" id="chooseBtn" onclick="chooseTeam()">Choose</button>
+        <div id="playerSetting" class="playerScore" style="display: none">
             <div class="playerContainer" id="homeA">
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team1Score" id="player1Score">0</p>
+                    <button class="team1Score" id="player1Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team1Score" id="player2Score">0</p>
+                    <button class="team1Score" id="player2Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team1Score" id="player3Score">0</p>
+                    <button class="team1Score" id="player3Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team1Score" id="player4Score">0</p>
+                    <button class="team1Score" id="player4Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team1Score" id="player5Score">0</p>
+                    <button class="team1Score" id="player5Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
             </div>
             <div class="playerContainer" id="guestB">
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team2Score" id="player6Score">0</p>
+                    <button class="team2Score" id="player6Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team2Score" id="player7Score">0</p>
+                    <button class="team2Score" id="player7Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team2Score" id="player8Score">0</p>
+                    <button class="team2Score" id="player8Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team2Score" id="player9Score">0</p>
+                    <button class="team2Score" id="player9Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
                 <div class="playerDiv">
                     <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <p class="team2Score" id="player10Score">0</p>
+                    <button class="team2Score" id="player10Score">0</button>
                     <button class="scorebtn1" onclick="deductScore(this)">-</button>
                 </div>
             </div>
             <div>
                 
             </div>
+        </div>
+        <div id="clockSetting" class='setting'>
+            <canvas id='chrono'></canvas>
+            <div>
+            <div class='container'>
+                <button id='startBtn'>Start</button>
+                <button id='pauseBtn'>Stop</button>
+                <button id='resetBtn'>Reset</button>
+            </div>
+            <div class='container'>
+                <p>Choose Game Time:</p>
+                <p>
+                    <label for='hour' style="display: none">H</label>
+                    <input style="display: none" type="number" min="0" max="10" step="1" value="0" id='hour'>
+                    <label for='m'>Minute</label>
+                    <input type="number" min="0" max="60" step="1" value="15" id='minute'>
+                    <label for='s'>Second</label>
+                    <input type="number" min="0" max="60" step="10" value="0" id='second'>
+                </p>
+            </div>
+            </div>
+            <audio id="myAudio">
+              <source src="song1.ogg" type="audio/ogg">
+              <source src="song1.mp3" type="audio/mpeg">
+            </audio>
         </div>
     </section>
     

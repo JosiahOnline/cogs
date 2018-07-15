@@ -9,16 +9,15 @@ let players = [];
 // player8 = "",
 // player9 = "",
 // player10 = "";
-
 function nameEntered(element) {
-        let x = element.getAttribute("id");
-//        let z = element.getAttribute("name");
-        let y = document.getElementById(x).value;
-        players.push(y);
-        document.getElementById(x).disabled = true;
-//        document.getElementById("input1").style.backgroundColor = "darkred";
-//        document.getElementById("input1").style.color = "#ffffff";
-//        document.getElementById("input1").style.borderColor = "#ffffff";
+    let x = element.getAttribute("id");
+    //        let z = element.getAttribute("name");
+    let y = document.getElementById(x).value;
+    players.push(y);
+    document.getElementById(x).disabled = true;
+    //        document.getElementById("input1").style.backgroundColor = "darkred";
+    //        document.getElementById("input1").style.color = "#ffffff";
+    //        document.getElementById("input1").style.borderColor = "#ffffff";
 }
 
 let teamA = [];
@@ -31,9 +30,9 @@ function select_random() {
     if (players.length < "10") {
         alert("Please enter all players' name!")
     } else {
-        for (let k = 0; k <11; k++) {
-            window["player"+(k+1)] = new String(); // <--create 10 global string object without naming them manually in the beginning.
-            window["player"+(k+1)] = players[k]; // k+1 are integers thus need to add first before it convert to string player (0+1), which is player1.
+        for (let k = 0; k < 11; k++) {
+            window["player" + (k + 1)] = new String(); // <--create 10 global string object without naming them manually in the beginning.
+            window["player" + (k + 1)] = players[k]; // k+1 are integers thus need to add first before it convert to string player (0+1), which is player1.
             // typeof the variable is based on the value whether it is primitive value such as string, integer, null, undefine, boolean or symbols.
             // so in this case i am trying to create a variable with a string value, thus using new String constructor will do the job.
         }
@@ -81,7 +80,7 @@ function chooseTeam() {
     // g is HTML Collection [0] div.playerDiv, [1] div.playerDiv.... and so on.
     for (i = 0; i < teamA.length; i++) {
         let x = g[i].firstElementChild;
-        let para = document.createElement("p"); 
+        let para = document.createElement("p");
         let node = document.createTextNode(teamA[i]);
         para.appendChild(node); // add the textnode to p tag
         g[i].insertBefore(para, g[i].childNodes[0]); //insert the para before the first node of the g[i];
@@ -90,13 +89,20 @@ function chooseTeam() {
     let h = demoB.children;
     for (j = 0; j < teamA.length; j++) {
         let x = h[j].firstElementChild;
-        let para = document.createElement("p"); 
+        let para = document.createElement("p");
         let node = document.createTextNode(teamB[j]);
         para.appendChild(node);
         h[j].insertBefore(para, h[j].childNodes[0]);
     }
-//    let w = document.getElementById("yourFate");
-//    w.style.display = "none";
+    //    let w = document.getElementById("yourFate");
+    //    w.style.display = "none";
+    let t = document.getElementById("yourFate");
+    t.style.display = "none";
+    let v = document.getElementById("appName");
+    v.style.display = "none";
+    let u = document.getElementById("playerSetting");
+    u.style.display = "flex";
+    
     let x = document.getElementById("chooseBtn");
     x.style.display = "none";
     let y = document.getElementById("chrono");
@@ -111,8 +117,8 @@ let h = document.getElementById("hour");
 let m = document.getElementById("minute");
 let s = document.getElementById("second");
 //canvas size equal to the size of the screen
-cnv.width = 200; 
-cnv.height = 200;
+cnv.width = 85;
+cnv.height = 85;
 let ctx = cnv.getContext("2d");
 //initialization of letiable
 let status = 'w'; // status : w = waiting ; p = pause ; s = stop ; r = run 
@@ -163,11 +169,11 @@ function formatTime(time) {
     if (minute < 10) {
         minute = '0' + minute
     };
-//    tmp = Math.floor(tmp / 60);
-//    let hour = tmp;
-//    if (hour < 10) {
-//        hour = '0' + hour
-//    };
+    //    tmp = Math.floor(tmp / 60);
+    //    let hour = tmp;
+    //    if (hour < 10) {
+    //        hour = '0' + hour
+    //    };
     return minute + ':' + second;
 }
 /*
@@ -259,7 +265,7 @@ h.addEventListener("change", computeDuration);
 m.addEventListener("change", computeDuration);
 s.addEventListener("change", computeDuration);
 
-var mySong= document.getElementById("myAudio"); 
+var mySong = document.getElementById("myAudio");
 
 function init() {
     drawCircle(createCircle(), ctx);
@@ -289,99 +295,117 @@ function reset() {
 
 init();
 
-let home = document.getElementById("team1");
-let homePlus = document.getElementById("homeplus");
-let homeMinus = document.getElementById("homeminus");
-let away = document.getElementById("team2");
-let awayPlus = document.getElementById("awayplus");
-let awayMinus = document.getElementById("awayminus");
-
-let homeScore = 0;
-let awayScore = 0;
-homePlus.addEventListener('click', function() {
-    if (homeScore >= 0) {
-        homeScore += 1;
-        home.innerHTML = homeScore;
-    } else {
-        homeScore;
-    }
-});
-homeMinus.addEventListener('click', function() {
-    if (homeScore >= 1) {
-        homeScore -= 1;
-        home.innerHTML = homeScore;
-    } else {
-        homeScore;
-    }
-});
-
-awayPlus.addEventListener('click', function() {
-    if (awayScore >= 0) {
-        awayScore += 1;
-        away.innerHTML = awayScore;
-    } else {
-        awayScore;
-    }
-    
-})
-awayMinus.addEventListener('click', function() {
-    if (awayScore >= 1) {
-        awayScore -= 1;
-        away.innerHTML = awayScore;
-    } else {
-        awayScore;
-    }
-});
+//let home = document.getElementById("team1");
+////let homePlus = document.getElementById("homeplus");
+////let homeMinus = document.getElementById("homeminus");
+//let away = document.getElementById("team2");
+////let awayPlus = document.getElementById("awayplus");
+////let awayMinus = document.getElementById("awayminus");
+//
+//let homeScore = 0;
+//let awayScore = 0;
+//homePlus.addEventListener('click', function() {
+//    if (homeScore >= 0) {
+//        homeScore += 1;
+//        home.innerHTML = homeScore;
+//    } else {
+//        homeScore;
+//    }
+//});
+//homeMinus.addEventListener('click', function() {
+//    if (homeScore >= 1) {
+//        homeScore -= 1;
+//        home.innerHTML = homeScore;
+//    } else {
+//        homeScore;
+//    }
+//});
+//
+//awayPlus.addEventListener('click', function() {
+//    if (awayScore >= 0) {
+//        awayScore += 1;
+//        away.innerHTML = awayScore;
+//    } else {
+//        awayScore;
+//    }
+//    
+//})
+//awayMinus.addEventListener('click', function() {
+//    if (awayScore >= 1) {
+//        awayScore -= 1;
+//        away.innerHTML = awayScore;
+//    } else {
+//        awayScore;
+//    }
+//});
 
 let roundNum = document.getElementById("roundnum");
 let roundScore = 0;
 let roundPlus = document.getElementById("roundplus");
 let roundMinus = document.getElementById("roundminus");
 
-roundPlus.addEventListener('click', function() {
+roundPlus.addEventListener('click', function () {
     if ((roundScore <= 3) && (roundScore >= 0)) {
         roundScore += 1;
         roundNum.innerHTML = roundScore;
-    } else  if (roundScore == 4) {
+    } else if (roundScore == 4) {
         roundScore;
     } else {
         roundScore;
     }
 });
 
-roundMinus.addEventListener('click', function() {
+roundMinus.addEventListener('click', function () {
     if ((roundScore <= 4) && (roundScore >= 1)) {
         roundScore -= 1;
         roundNum.innerHTML = roundScore;
-    } else  if (roundScore == 0 ) {
+    } else if (roundScore == 0) {
         roundScore;
     } else {
         roundScore;
     }
 });
-//var x = document.getElementById("player1Puls").nextSibling.innerHTML;
+
+let home = document.getElementById("team1");
+let away = document.getElementById("team2");
+let homeScore = 0;
+let awayScore = 0;
+
 function addScore(element) {
-    let y = element.nextElementSibling.id;
-    let z = document.getElementById(y).innerHTML;
-    let x = parseInt(z);
-    x +=1;
-    document.getElementById(y).innerHTML = x;
+    let w = element.parentElement.parentElement; //Grandparent either homeA or guestB element
+    let y = element.nextElementSibling.id; //next sibling
+    let z = document.getElementById(y).innerHTML; //the next sibling current value
+    let x = parseInt(z); //Change the string to integer
+        x += 1;
+        document.getElementById(y).innerHTML = x;
+        if (w.id == "homeA") {
+            homeScore += 1;
+            home.innerHTML = homeScore;
+        } else {
+            awayScore += 1;
+            away.innerHTML = awayScore;
+        }
 }
 
 function deductScore(element) {
+    let w = element.parentElement.parentElement;
     let y = element.previousElementSibling.id;
     let z = document.getElementById(y).innerHTML;
     let x = parseInt(z);
-    x -=1;
-    document.getElementById(y).innerHTML = x;
+    if (x >= 1) { //to avoid -1 and all negative value;
+        x -= 1;
+        document.getElementById(y).innerHTML = x;
+        if (w.id == "homeA") {
+            homeScore -= 1;
+            home.innerHTML = homeScore;
+        } else {
+            awayScore -= 1;
+            away.innerHTML = awayScore;
+        }
+    }
+
 }
-//function nameEntered(element) {
-//        let x = element.getAttribute("id");
-////        let z = element.getAttribute("name");
-//        let y = document.getElementById(x).value;
-//        players.push(y);
-//        document.getElementById(x).disabled = true;
-//}
+
 
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.
