@@ -102,7 +102,7 @@ function chooseTeam() {
     v.style.display = "none";
     let u = document.getElementById("playerSetting");
     u.style.display = "flex";
-    
+
     let x = document.getElementById("chooseBtn");
     x.style.display = "none";
     let y = document.getElementById("chrono");
@@ -376,15 +376,15 @@ function addScore(element) {
     let y = element.nextElementSibling.id; //next sibling
     let z = document.getElementById(y).innerHTML; //the next sibling current value
     let x = parseInt(z); //Change the string to integer
-        x += 1;
-        document.getElementById(y).innerHTML = x;
-        if (w.id == "homeA") {
-            homeScore += 1;
-            home.innerHTML = homeScore;
-        } else {
-            awayScore += 1;
-            away.innerHTML = awayScore;
-        }
+    x += 1;
+    document.getElementById(y).innerHTML = x;
+    if (w.id == "homeA") {
+        homeScore += 1;
+        home.innerHTML = homeScore;
+    } else {
+        awayScore += 1;
+        away.innerHTML = awayScore;
+    }
 }
 
 function deductScore(element) {
