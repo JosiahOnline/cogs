@@ -48,14 +48,17 @@
                 <p>Player 5: <input type="text" id="input5" value="" name="player5" onchange="nameEntered(this)"></p>
             </div>
             <div class="form">
-                <p>Player 6: <input type="text" id="input6" value="" name="player6" onchange="nameEntered(this)"></p>
-                <p>Player 7: <input type="text" id="input7" value="" name="player7" onchange="nameEntered(this)"></p>
-                <p>Player 8: <input type="text" id="input8" value="" name="player8" onchange="nameEntered(this)"></p>
-                <p>Player 9: <input type="text" id="input9" value="" name="player9" onchange="nameEntered(this)"></p>
-                <p>Player 10: <input type="text" id="input10" value="" name="player10" onchange="nameEntered(this)"></p>
+                <p>Player 1: <input type="text" id="input6" value="" name="player6" onchange="nameEntered(this)"></p>
+                <p>Player 2: <input type="text" id="input7" value="" name="player7" onchange="nameEntered(this)"></p>
+                <p>Player 3: <input type="text" id="input8" value="" name="player8" onchange="nameEntered(this)"></p>
+                <p>Player 4: <input type="text" id="input9" value="" name="player9" onchange="nameEntered(this)"></p>
+                <p>Player 5: <input type="text" id="input10" value="" name="player10" onchange="nameEntered(this)"></p>
             </div>
         </form>
-        <button id="submitBtn" type="button" onclick="select_random()">Submit</button>
+        <div>
+            <button id="manual1" type="button" onclick="manual()">Manual</button>
+            <button id="random2" type="button" onclick="random()">Random</button>
+        </div>
         <!--
         <div>
             <div>
@@ -104,7 +107,7 @@
 -->
             </div>
         </div>
-        <button type="button" id="chooseBtn" onclick="chooseTeam()">Choose</button>
+        <button type="button" id="displayBtn" onclick="displayTeam()">Proceed</button>
         <div id="playerSetting" class="playerScore" style="display: none">
             <div class="playerContainer" id="homeA">
                 <div class="playerDiv">

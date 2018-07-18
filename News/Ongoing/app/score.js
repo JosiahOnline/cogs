@@ -26,7 +26,41 @@ teamA = players;
 //whatever changes in teamA same applied to players array.
 let teamB = [];
 
-function select_random() {
+function page2() {
+//    let teams = document.getElementsByClassName("team");
+//    //An array was created in teams variable
+//    let j;
+//    for (j = 0; j < teams.length; j++) {
+//        teams[j].style.display = "block";
+//    }
+    let t = document.getElementById("yourFate");
+    t.style.display = "block";
+    let u = document.getElementById("manual1");
+    u.style.display = "none";
+    let v = document.getElementById("random2");
+    v.style.display = "none";
+    let w = document.getElementById("teamSec");
+    w.style.display = "flex";
+    let x = document.getElementById("displayBtn");
+    x.style.display = "block";
+    let y = document.getElementById("playerForm");
+    y.style.display = "none";
+    let z = document.getElementById("instructText");
+    z.style.display = "none";
+}
+
+function manual() {
+    if (players.length < "10") {
+        alert("Please enter all players' name!")
+    } else {
+        teamA = players.splice(0, 5);
+        teamB = players;
+        page2();
+    }
+    
+}
+
+function random() {
     if (players.length < "10") {
         alert("Please enter all players' name!")
     } else {
@@ -42,25 +76,7 @@ function select_random() {
             teamB.push(teamA[number]);
             teamA.splice(number, 1);
         }
-        let teams = document.getElementsByClassName("team");
-        //An array was created in teams variable
-        let j;
-        for (j = 0; j < teams.length; j++) {
-            teams[j].style.display = "block";
-        }
-        let t = document.getElementById("yourFate");
-        t.style.display = "block";
-        let u = document.getElementById("teamSec");
-        u.style.display = "flex";
-        let w = document.getElementById("chooseBtn");
-        //An array was created in teams variable
-        w.style.display = "block";
-        let x = document.getElementById("submitBtn");
-        x.style.display = "none";
-        let y = document.getElementById("playerForm");
-        y.style.display = "none";
-        let z = document.getElementById("instructText");
-        z.style.display = "none";
+        page2();
     }
 
     //randomly select first 5 players from var players
@@ -74,7 +90,7 @@ function select_random() {
 let demoA = document.getElementById("homeA");
 let demoB = document.getElementById("guestB");
 
-function chooseTeam() {
+function displayTeam() {
     let i;
     let g = demoA.children;
     // g is HTML Collection [0] div.playerDiv, [1] div.playerDiv.... and so on.
@@ -102,8 +118,7 @@ function chooseTeam() {
     v.style.display = "none";
     let u = document.getElementById("playerSetting");
     u.style.display = "flex";
-
-    let x = document.getElementById("chooseBtn");
+    let x = document.getElementById("displayBtn");
     x.style.display = "none";
     let y = document.getElementById("chrono");
     y.style.display = "block";
