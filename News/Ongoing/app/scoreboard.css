@@ -1,10 +1,20 @@
 .hero {
-    background-image: url("../../img/basketball.jpg");
+    background-image: url("http://www.cogssandakan.com/News/img/basketball.jpg");
     background-size: cover;
     position: fixed;
     height: 100vh;
 }
 
+#box1 {
+  width:400px;
+  height:300px;
+  border-style: solid;
+  border-width: 2px;
+}
+canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
 .transparentbg {
     background-color: rgba(0, 0, 0, .40);
     width: 100%;

@@ -10,7 +10,7 @@
 
     <link href="http://www.cogssandakan.com/css/font.css" rel="stylesheet" type="text/css">
     <link href="http://www.cogssandakan.com/css/basic.css" rel="stylesheet" type="text/css">
-
+    
     <link href="http://www.cogssandakan.com/css/articles.css" rel="stylesheet" type="text/css">
     <link href="http://www.cogssandakan.com/css/newtemplate.css" rel="stylesheet" type="text/css">
     <link href="scoreboard.css" rel="stylesheet" type="text/css">
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
-
+    
 </head>
 
 <body>
@@ -58,6 +58,9 @@
         <div>
             <button id="manual1" type="button" onclick="manual()">Manual</button>
             <button id="random2" type="button" onclick="random()">Random</button>
+            <a href=# onclick="genScreenshot()"> Get Screenshot</a>
+            <a id="test"></a>
+            <div id="box1"></div>
         </div>
         <!--
         <div>
@@ -193,7 +196,8 @@
             </audio>
         </div>
     </section>
-
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="html2canvas.js"></script>
     <script type="text/javascript" src="score.js"></script>
 </body>
 

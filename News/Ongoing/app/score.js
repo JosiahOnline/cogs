@@ -27,12 +27,12 @@ teamA = players;
 let teamB = [];
 
 function page2() {
-//    let teams = document.getElementsByClassName("team");
-//    //An array was created in teams variable
-//    let j;
-//    for (j = 0; j < teams.length; j++) {
-//        teams[j].style.display = "block";
-//    }
+    //    let teams = document.getElementsByClassName("team");
+    //    //An array was created in teams variable
+    //    let j;
+    //    for (j = 0; j < teams.length; j++) {
+    //        teams[j].style.display = "block";
+    //    }
     let t = document.getElementById("yourFate");
     t.style.display = "block";
     let u = document.getElementById("manual1");
@@ -57,7 +57,7 @@ function manual() {
         teamB = players;
         page2();
     }
-    
+
 }
 
 function random() {
@@ -421,6 +421,26 @@ function deductScore(element) {
 
 }
 
+function genScreenshot() {
+    html2canvas(document.body, {allowTaint: true, 
+      onrendered: function(canvas) {
+      $('#box1').html("");
+			$('#box1').append(canvas);
+      
+      if (navigator.userAgent.indexOf("MSIE ") > 0 || 
+					navigator.userAgent.match(/Trident.*rv\:11\./)) 
+			{
+      	var blob = canvas.msToBlob();
+        window.navigator.msSaveBlob(blob,'Test file.png');
+      }
+      else {
+//        $('#test').attr('href', canvas.toDataURL("image/png"));
+        $('#test').attr('download','Test file.png');
+        $('#test')[0].click();
+      }
+      }
+    });
+}
 
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.
