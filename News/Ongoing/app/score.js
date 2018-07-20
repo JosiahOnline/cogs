@@ -280,7 +280,22 @@ h.addEventListener("change", computeDuration);
 m.addEventListener("change", computeDuration);
 s.addEventListener("change", computeDuration);
 
-var mySong = document.getElementById("myAudio");
+let songList = document.getElementsByClassName("songs");
+let mySong = [];
+
+function randomSong() {
+        let chosenSong = Math.floor(Math.random() * songList.length);
+        //<-- based on the length it will randomly select a number which doesn't exceed the songlist length.
+        mySong.push(songList[chosenSong]);
+        mySong[0].play();
+        mySong[0].addEventListener("onended", function () {
+            mySong[0].currentTime = 0;
+            mySong[0].pause();
+            mySong.length = 0;
+            randomSong();
+        });
+}
+
 
 function init() {
     drawCircle(createCircle(), ctx);
@@ -290,13 +305,13 @@ function init() {
 function start() {
     status = 'r';
     animate();
-    mySong.play();
+    randomSong();
 }
 
 function pause() {
     status = 'p';
     dTime = time;
-    mySong.pause();
+    mySong[0].pause();
 }
 
 function reset() {
@@ -304,8 +319,9 @@ function reset() {
     dTime = 0;
     clearCanvas(ctx, cnv);
     init();
-    mySong.currentTime = 0;
-    mySong.pause();
+    mySong[0].currentTime = 0;
+    mySong[0].pause();
+    mySong.length = 0;
 }
 
 init();
@@ -421,26 +437,7 @@ function deductScore(element) {
 
 }
 
-function genScreenshot() {
-    html2canvas(document.body, {allowTaint: true, 
-      onrendered: function(canvas) {
-      $('#box1').html("");
-			$('#box1').append(canvas);
-      
-      if (navigator.userAgent.indexOf("MSIE ") > 0 || 
-					navigator.userAgent.match(/Trident.*rv\:11\./)) 
-			{
-      	var blob = canvas.msToBlob();
-        window.navigator.msSaveBlob(blob,'Test file.png');
-      }
-      else {
-//        $('#test').attr('href', canvas.toDataURL("image/png"));
-        $('#test').attr('download','Test file.png');
-        $('#test')[0].click();
-      }
-      }
-    });
-}
+
 
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.

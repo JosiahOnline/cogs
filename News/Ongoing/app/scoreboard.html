@@ -58,9 +58,6 @@
         <div>
             <button id="manual1" type="button" onclick="manual()">Manual</button>
             <button id="random2" type="button" onclick="random()">Random</button>
-            <a href=# onclick="genScreenshot()"> Get Screenshot</a>
-            <a id="test"></a>
-            <div id="box1"></div>
         </div>
         <!--
         <div>
@@ -190,14 +187,20 @@
                     </p>
                 </div>
             </div>
-            <audio id="myAudio">
-              <source src="NBA%20Pump1.ogg" type="audio/ogg">
-              <source src="NBA%20Pump1.mp3" type="audio/mpeg">
-            </audio>
+            <div id="songContainer">
+                <audio id="myAudio1" class="songs">
+                  <source src="song1.ogg" type="audio/ogg">
+                  <source src="song1.mp3" type="audio/mpeg">
+                </audio>
+                <audio id="myAudio2" class="songs">
+                  <source src="NBA%20Pump1.ogg" type="audio/ogg">
+                  <source src="NBA%20Pump1.mp3" type="audio/mpeg">
+                </audio>
+            </div>
+            
         </div>
     </section>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="html2canvas.js"></script>
+    
     <script type="text/javascript" src="score.js"></script>
 </body>
 
