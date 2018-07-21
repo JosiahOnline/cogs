@@ -1249,6 +1249,11 @@
     border-top-right-radius: 4px;
 }
 
+.picAd .contain {
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
 .picAd .promo-title {
     display: -webkit-box;
     display: -ms-flexbox;
