@@ -1270,6 +1270,10 @@
     background: rgb(237, 53, 43);
 }
 
+.picAd .greenbg {
+    background: rgb(46,139,87);
+}
+
 .picAd .pinkbg {
     background: rgba(255, 102, 153, 1);
 }
@@ -1277,6 +1281,10 @@
 .picAd .bluebg {
     background: rgba(50, 91, 132, 1);
 }
+.picAd .lightbluebg {
+    background: rgb(0, 155, 173);
+}
+
 .picAd .orangebg {
     background: rgba(255, 165, 0, 1);
 }
