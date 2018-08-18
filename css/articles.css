@@ -1291,6 +1291,7 @@
 .promo-title p {
     font-size: 4rem;
     line-height: 1.1em;
+    padding: 0 10px;
     text-align: center;
     color: white;
     text-decoration: none;
