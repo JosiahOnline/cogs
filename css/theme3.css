@@ -181,7 +181,7 @@ Examples: COGS Basketball Team
     }
 }
 
-@media screen and (max-width:430px) and (max-height:740px) {
+@media screen and (max-width:430px) and (max-height:840px) {
     .top-nav {
         max-height: 60px
     }
@@ -1696,7 +1696,7 @@ p {
     }
 }
 
-@media screen and (max-width:430px) and (max-height:740px) {
+@media screen and (max-width:430px) and (max-height:840px) {
     .share-button,
     .share-icon {
         font-size: .9rem
@@ -2008,7 +2008,7 @@ p {
     }
 }
 
-@media screen and ( max-width: 430px) and ( max-height: 740px) {
+@media screen and ( max-width: 430px) and ( max-height: 840px) {
     .footer {
         padding: 0;
     }
@@ -2259,7 +2259,7 @@ p {
     }
 }
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
     .main-section {
         background-position: 30% 100%;
     }

@@ -948,7 +948,7 @@
     }
 }
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
     .news-container {
         margin-bottom: 60px;
     }
@@ -1544,7 +1544,7 @@
     }
 }
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
     .videoad {
         height: 26em;
     }

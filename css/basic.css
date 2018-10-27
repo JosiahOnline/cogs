@@ -179,7 +179,7 @@
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
     .top-nav {
         max-height: 60px;
     }

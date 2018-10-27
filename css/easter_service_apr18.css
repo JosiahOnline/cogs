@@ -88,7 +88,7 @@
     }
 }
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
     .topic {
         font-size: 1.3rem;
     }

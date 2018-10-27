@@ -2360,7 +2360,7 @@ p {
 
 /* ----------- iPhone 6 PLUS Potrait----------- */
 
-@media screen and ( max-width: 420px) and (max-height: 740px) {
+@media screen and ( max-width: 420px) and (max-height: 840px) {
     .intro-heading {
         font-size: 34px;
         line-height: 1.1em;

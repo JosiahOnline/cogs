@@ -183,7 +183,7 @@ Examples: Children Bible Camp March 17, Children Motivation Camp March 17, JGene
     }
 }
 
-@media screen and (max-width:430px) and (max-height:740px) {
+@media screen and (max-width:430px) and (max-height:840px) {
     .top-nav {
         max-height: 60px
     }
@@ -1699,7 +1699,7 @@ p {
     }
 }
 
-@media screen and (max-width:430px) and (max-height:740px) {
+@media screen and (max-width:430px) and (max-height:840px) {
     .share-button,
     .share-icon {
         font-size: .9rem
@@ -1970,7 +1970,7 @@ p {
     }
 }
 
-@media screen and ( max-width: 430px) and ( max-height: 740px) {
+@media screen and ( max-width: 430px) and ( max-height: 840px) {
     .footer {
         padding: 0;
     }
@@ -2115,7 +2115,7 @@ p {
     }
 }
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
     .verse-pgraph {
         font-size: 1rem;
         padding-bottom: 5px;

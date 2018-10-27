@@ -82,7 +82,7 @@
     }
 }
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
     .main-section {
         background-position: 50% 1%;
     }

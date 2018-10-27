@@ -205,7 +205,7 @@ main {
     }
 }
 
-@media screen and (max-width:430px) and (max-height:740px) {
+@media screen and (max-width:430px) and (max-height:840px) {
     .top-nav {
         max-height: 60px
     }
@@ -1209,7 +1209,7 @@ p {
         font-size: 1.4rem;
     }
 }
-@media screen and (max-width:430px) and (max-height:740px) {
+@media screen and (max-width:430px) and (max-height:840px) {
     html {
         font-size: 14px;
     }
@@ -1547,7 +1547,7 @@ hr.style14 {
     }
 }
 
-@media screen and ( max-width: 430px) and ( max-height: 740px) {
+@media screen and ( max-width: 430px) and ( max-height: 840px) {
     .footer {
         padding: 0;
     }
@@ -1668,7 +1668,7 @@ hr.style14 {
     }
 }
 
-@media screen and ( max-width: 430px) and (max-height: 740px) {
+@media screen and ( max-width: 430px) and (max-height: 840px) {
      .top-nav .text-block, .top-nav a {
         font-size: 1.3rem;
     }
