@@ -26,8 +26,8 @@
 }
 .slidePhoto, .CHpar, .BMpar {
     position: absolute;
-    -webkit-animation: square 100s infinite;
-    animation: square 100s infinite;
+    -webkit-animation: square 80s infinite;
+    animation: square 80s infinite;
     opacity: 0;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -35,6 +35,7 @@
     width: 100%;
     height: 100%;
 }
+/*previously animation is square 100s infinite */
 
 /*
 .CHIpar {
@@ -44,8 +45,8 @@
 */
 
 .BMpar {
-    -webkit-animation: square 80s infinite;
-    animation: square 80s infinite;
+    -webkit-animation: square 60s infinite;
+    animation: square 60s infinite;
 }
 
 @-webkit-keyframes round {
