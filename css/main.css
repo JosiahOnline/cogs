@@ -1050,6 +1050,7 @@ select {
 
 .welcome-pgraph,
 .welcome-author {
+    font-family: 'Niconne', cursive;
     font-size: 1.3rem;
     line-height: 1.3em;
     padding-bottom: 1em;
