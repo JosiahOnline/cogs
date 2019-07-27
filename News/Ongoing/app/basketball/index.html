@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Randomly Select Teammate Apps</title>
+    <meta name="description" content="An app that allow you to select your teammates randomly - Created By OnlineBah.com Josiah Soh">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+
+    <link href="http://www.cogssandakan.com/css/font.css" rel="stylesheet" type="text/css">
+    <link href="http://www.cogssandakan.com/css/basic.css" rel="stylesheet" type="text/css">
+    
+    <link href="http://www.cogssandakan.com/css/articles.css" rel="stylesheet" type="text/css">
+    <link href="http://www.cogssandakan.com/css/newtemplate.css" rel="stylesheet" type="text/css">
+    <link href="../scoreboard.css" rel="stylesheet" type="text/css">
+
+    <link href="http://www.cogssandakan.com/News/Ongoing/app/favicon-96x96.png" rel="shortcut icon" type="image/x-icon">
+    <link href="http://www.cogssandakan.com/News/Ongoing/app/apple-icon-180x180.png" rel="apple-touch-icon">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Graduate" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Playball" rel="stylesheet">
+    
+</head>
+
+<body>
+    <nav class="top-nav">
+        <div class="top-container">
+            <div class="text-block">OnlineBah</div>
+            <a href="https://www.onlinebah.com/" class="link">Work</a>
+        </div>
+    </nav>
+    <div class="hero">
+        <div class="transparentbg">
+        </div>
+    </div>
+    <section>
+        <h1 id="appName">Basketball Scoreboard App</h1>
+        <h3 id="yourFate">Community Project by Josiah & Andrew</h3>
+        <h2 id="instructText">Please enter your teams' name and players' number:</h2>
+
+        <form id="playerForm">
+            <div class="form">
+               <h1>Team A: <input type="text" id="inputA" value="" name="teamA" onchange="teamName(this)"></h1>
+                <p>Player 1: <input type="text" id="input1" value="" name="player1" onchange="nameEntered(this)"></p>
+                <p>Player 2: <input type="text" id="input2" value="" name="player2" onchange="nameEntered(this)"></p>
+                <p>Player 3: <input type="text" id="input3" value="" name="player3" onchange="nameEntered(this)"></p>
+                <p>Player 4: <input type="text" id="input4" value="" name="player4" onchange="nameEntered(this)"></p>
+                <p>Player 5: <input type="text" id="input5" value="" name="player5" onchange="nameEntered(this)"></p>
+                <p>Player 6: <input type="text" id="input6" value="" name="player6" onchange="nameEntered(this)"></p>
+                <p>Player 7: <input type="text" id="input7" value="" name="player7" onchange="nameEntered(this)"></p>
+                <p>Player 8: <input type="text" id="input8" value="" name="player8" onchange="nameEntered(this)"></p>
+                <p>Player 9: <input type="text" id="input9" value="" name="player9" onchange="nameEntered(this)"></p>
+                <p>Player 10: <input type="text" id="inpu10" value="" name="player10" onchange="nameEntered(this)"></p>
+                <p>Player 11: <input type="text" id="input11" value="" name="player11" onchange="nameEntered(this)"></p>
+                <p>Player 12: <input type="text" id="inpu12" value="" name="player12" onchange="nameEntered(this)"></p>
+            </div>
+            <div class="form">
+               <h1>Team B: <input type="text" id="inputB" value="" name="teamB" onchange="teamName(this)"></h1>
+                <p>Player 1: <input type="text" id="input13" value="" name="player13" onchange="nameEntered(this)"></p>
+                <p>Player 2: <input type="text" id="input14" value="" name="player14" onchange="nameEntered(this)"></p>
+                <p>Player 3: <input type="text" id="input15" value="" name="player15" onchange="nameEntered(this)"></p>
+                <p>Player 4: <input type="text" id="input16" value="" name="player16" onchange="nameEntered(this)"></p>
+                <p>Player 5: <input type="text" id="input17" value="" name="player17" onchange="nameEntered(this)"></p>
+                <p>Player 6: <input type="text" id="input18" value="" name="player18" onchange="nameEntered(this)"></p>
+                <p>Player 7: <input type="text" id="input19" value="" name="player19" onchange="nameEntered(this)"></p>
+                <p>Player 8: <input type="text" id="inpu20" value="" name="player20" onchange="nameEntered(this)"></p>
+                <p>Player 9: <input type="text" id="inpu21" value="" name="player21" onchange="nameEntered(this)"></p>
+                <p>Player 10: <input type="text" id="inpu22" value="" name="player22" onchange="nameEntered(this)"></p>
+                <p>Player 11: <input type="text" id="input23" value="" name="player23" onchange="nameEntered(this)"></p>
+                <p>Player 12: <input type="text" id="input24" value="" name="player24" onchange="nameEntered(this)"></p>
+            </div>
+        </form>
+        <div>
+            <button id="manual1" type="button" onclick="displayTeam()">Confirm</button>
+<!--            <button id="random2" type="button" onclick="random()">Random</button>-->
+        </div>
+        <!--
+        <div>
+            <div>
+                <h2 class="team">Home</h2>
+                
+            </div>
+            <div class="versus">
+                <h1>VS</h1>
+            </div>
+            <div>
+                <h2 class="team">Guest</h2>
+                
+            </div>
+        </div>
+-->
+        <div class="scorecontainer" id="teamSec">
+            <div class="btncontainer">
+                <h2 id="nameHome"></h2>
+                <div class="scorediv" id="team1">0</div>
+                <!--
+                <div class="countBtn">
+                    <button class="scorebtn" id="homeplus">+</button>
+                    <button class="scorebtn" id="homeminus">-</button>
+                </div>
+-->
+            </div>
+            <div id="roundcounter">
+                <div id="rounddisplay">
+                    <p>Period</p>
+                    <p id="roundnum">0
+                        <p>
+                </div>
+                <div>
+                    <button id="roundplus">+</button>
+                    <button id="roundminus">-</button>
+                </div>
+            </div>
+            <div class="btncontainer">
+                <h2 id="nameAway"></h2>
+                <div class="scorediv" id="team2">0</div>
+                <!--
+                <div class="countBtn">
+                    <button class="scorebtn" id="awayplus">+</button>
+                    <button class="scorebtn" id="awayminus">-</button>
+                </div>
+-->
+            </div>
+        </div>
+        <button type="button" id="displayBtn" onclick="displayTeam()">Proceed</button>
+        <div id="playerSetting" class="playerScore" style="display: none">
+            <div class="playerContainer" id="homeA">
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player1Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player2Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player3Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player4Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player5Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player6Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player7Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player8Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player9Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player10Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player11Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team1Score" id="player12Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+            </div>
+            <div class="playerContainer" id="guestB">
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player13Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player14Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player15Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player16Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player17Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player18Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player19Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player20Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player21Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player22Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player23Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+                <div class="playerDiv">
+                    <button class="scorebtn1" onclick="addScore(this)">+</button>
+                    <button class="team2Score" id="player24Score">0</button>
+                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                </div>
+            </div>
+            <div>
+
+            </div>
+        </div>
+        <div id="clockSetting" class='setting'>
+            <canvas id='chrono'></canvas>
+            <div>
+                <div class='container'>
+                    <button id='startBtn'>Start</button>
+                    <button id='pauseBtn'>Stop</button>
+                    <button id='resetBtn'>Reset</button>
+                </div>
+                <div class='container'>
+                    <p>Choose Game Time:</p>
+                    <p>
+                        <label for='hour' style="display: none">H</label>
+                        <input style="display: none" type="number" min="0" max="10" step="1" value="0" id='hour'>
+                        <label for='m'>Minute</label>
+                        <input type="number" min="0" max="60" step="1" value="15" id='minute'>
+                        <label for='s'>Second</label>
+                        <input type="number" min="0" max="60" step="10" value="0" id='second'>
+                    </p>
+                </div>
+            </div>
+            <div id="songContainer">
+                <audio id="myAudio1" class="songs">
+                  <source src="song1.ogg" type="../audio/ogg">
+                  <source src="song1.mp3" type="../audio/mpeg">
+                </audio>
+                <audio id="myAudio2" class="songs">
+                  <source src="NBA%20Pump1.ogg" type="../audio/ogg">
+                  <source src="NBA%20Pump1.mp3" type="../audio/mpeg">
+                </audio>
+            </div>
+            
+        </div>
+    </section>
+    
+    <script type="text/javascript" src="score.js"></script>
+</body>
+
+</html>
