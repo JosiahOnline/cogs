@@ -38,29 +38,6 @@ teamA = players;
 //whatever changes in teamA same applied to players array.
 let teamB = [];
 
-function page2() {
-    //    let teams = document.getElementsByClassName("team");
-    //    //An array was created in teams variable
-    //    let j;
-    //    for (j = 0; j < teams.length; j++) {
-    //        teams[j].style.display = "block";
-    //    }
-    let t = document.getElementById("yourFate");
-    t.style.display = "block";
-    let u = document.getElementById("manual1");
-    u.style.display = "none";
-//    let v = document.getElementById("random2");
-//    v.style.display = "none";
-    let w = document.getElementById("teamSec");
-    w.style.display = "flex";
-    let x = document.getElementById("displayBtn");
-    x.style.display = "block";
-    let y = document.getElementById("playerForm");
-    y.style.display = "none";
-    let z = document.getElementById("instructText");
-    z.style.display = "none";
-}
-
 
 let demoA = document.getElementById("homeA");
 let demoB = document.getElementById("guestB");
@@ -75,41 +52,40 @@ function displayTeam() {
         nameB = teams;
         document.getElementById("nameHome").innerHTML = nameA;
         document.getElementById("nameAway").innerHTML = nameB;
-        page2();
-    }
-    let i;
-    let g = demoA.children;
-    // g is HTML Collection [0] div.playerDiv, [1] div.playerDiv.... and so on.
-    for (i = 0; i < teamA.length; i++) {
-        let x = g[i].firstElementChild;
-        let para = document.createElement("p");
-        let node = document.createTextNode(teamA[i]);
-        para.appendChild(node); // add the textnode to p tag
-        g[i].insertBefore(para, g[i].childNodes[0]); //insert the para before the first node of the g[i];
-    }
-    let j;
-    let h = demoB.children;
-    for (j = 0; j < teamA.length; j++) {
-        let x = h[j].firstElementChild;
-        let para = document.createElement("p");
-        let node = document.createTextNode(teamB[j]);
-        para.appendChild(node);
-        h[j].insertBefore(para, h[j].childNodes[0]);
-    }
-    //    let w = document.getElementById("yourFate");
-    //    w.style.display = "none";
-    let t = document.getElementById("yourFate");
-    t.style.display = "none";
-    let v = document.getElementById("appName");
-    v.style.display = "none";
-    let u = document.getElementById("playerSetting");
-    u.style.display = "flex";
-    let x = document.getElementById("displayBtn");
-    x.style.display = "none";
-    let y = document.getElementById("chrono");
-    y.style.display = "block";
-    let z = document.getElementById("clockSetting");
-    z.style.display = "flex";
+        let q = document.getElementById("appName");
+        q.style.display = "none";
+        let r = document.getElementById("yourFate");
+        r.style.display = "none";
+        let s = document.getElementById("instructText");
+        s.style.display = "none";
+        let t = document.getElementById("playerForm");
+        t.style.display = "none";
+        let u = document.getElementById("manual1");
+        u.style.display = "none";
+        let v = document.getElementById("teamSec");
+        v.style.display = "flex";
+        let w = document.getElementById("playerSetting");
+        w.style.display = "flex";        
+        }
+        let i;
+        let g = demoA.children;
+        // g is HTML Collection [0] div.playerDiv, [1] div.playerDiv.... and so on.
+        for (i = 0; i < teamA.length; i++) {
+            let x = g[i].firstElementChild;
+            let para = document.createElement("p");
+            let node = document.createTextNode(teamA[i]);
+            para.appendChild(node); // add the textnode to p tag
+            g[i].insertBefore(para, g[i].childNodes[0]); //insert the para before the first node of the g[i];
+        }
+        let j;
+        let h = demoB.children;
+        for (j = 0; j < teamA.length; j++) {
+            let x = h[j].firstElementChild;
+            let para = document.createElement("p");
+            let node = document.createTextNode(teamB[j]);
+            para.appendChild(node);
+            h[j].insertBefore(para, h[j].childNodes[0]);
+        }
 }
 
 
@@ -254,107 +230,7 @@ function animate() {
     }
     step();
 };
-/*
- *
- * Events listener
- *
- */
-document.getElementById("startBtn").addEventListener("click", start);
-document.getElementById("pauseBtn").addEventListener("click", pause);
-document.getElementById("resetBtn").addEventListener("click", reset);
-h.addEventListener("change", computeDuration);
-m.addEventListener("change", computeDuration);
-s.addEventListener("change", computeDuration);
 
-let songList = document.getElementsByClassName("songs");
-let mySong = [];
-
-function randomSong() {
-        let chosenSong = Math.floor(Math.random() * songList.length);
-        //<-- based on the length it will randomly select a number which doesn't exceed the songlist length.
-        mySong.push(songList[chosenSong]);
-        mySong[0].play();
-        mySong[0].addEventListener("onended", function () {
-            mySong[0].currentTime = 0;
-            mySong[0].pause();
-            mySong.length = 0;
-            randomSong();
-        });
-}
-
-
-function init() {
-    drawCircle(createCircle(), ctx);
-    drawChrono(0, font, ctx)
-}
-
-function start() {
-    status = 'r';
-    animate();
-    randomSong();
-}
-
-function pause() {
-    status = 'p';
-    dTime = time;
-    mySong[0].pause();
-}
-
-function reset() {
-    status = 's';
-    dTime = 0;
-    clearCanvas(ctx, cnv);
-    init();
-    mySong[0].currentTime = 0;
-    mySong[0].pause();
-    mySong.length = 0;
-}
-
-init();
-
-//let home = document.getElementById("team1");
-////let homePlus = document.getElementById("homeplus");
-////let homeMinus = document.getElementById("homeminus");
-//let away = document.getElementById("team2");
-////let awayPlus = document.getElementById("awayplus");
-////let awayMinus = document.getElementById("awayminus");
-//
-//let homeScore = 0;
-//let awayScore = 0;
-//homePlus.addEventListener('click', function() {
-//    if (homeScore >= 0) {
-//        homeScore += 1;
-//        home.innerHTML = homeScore;
-//    } else {
-//        homeScore;
-//    }
-//});
-//homeMinus.addEventListener('click', function() {
-//    if (homeScore >= 1) {
-//        homeScore -= 1;
-//        home.innerHTML = homeScore;
-//    } else {
-//        homeScore;
-//    }
-//});
-//
-//awayPlus.addEventListener('click', function() {
-//    if (awayScore >= 0) {
-//        awayScore += 1;
-//        away.innerHTML = awayScore;
-//    } else {
-//        awayScore;
-//    }
-//    
-//})
-//awayMinus.addEventListener('click', function() {
-//    if (awayScore >= 1) {
-//        awayScore -= 1;
-//        away.innerHTML = awayScore;
-//    } else {
-//        awayScore;
-//    }
-//});
 
 let roundNum = document.getElementById("roundnum");
 let roundScore = 0;
@@ -388,31 +264,49 @@ let away = document.getElementById("team2");
 let homeScore = 0;
 let awayScore = 0;
 
+function showBtn(element) {
+    let w = element.nextElementSibling;
+    w.classList.add("calBtn");
+    let y = w.children;
+    y[0].classList.add("scorebtn1");
+    y[1].classList.add("scorebtn1");
+    y[2].classList.add("scorebtn1");
+    y[3].classList.add("scorebtn1");
+}
 function addScore(element) {
-    let w = element.parentElement.parentElement; //Grandparent either homeA or guestB element
-    let y = element.nextElementSibling.id; //next sibling
+    let t = element.innerHTML; //String Value
+    let u = Number(t);
+    let v = element.parentElement.parentElement.parentElement; //Great Grandparent either homeA or guestB element
+    let w = element.parentElement; //next sibling
+    let y = w.previousElementSibling.id; //next sibling
     let z = document.getElementById(y).innerHTML; //the next sibling current value
     let x = parseInt(z); //Change the string to integer
-    x += 1;
+    x += u;
     document.getElementById(y).innerHTML = x;
-    if (w.id == "homeA") {
-        homeScore += 1;
+    if (v.id == "homeA") {
+        homeScore += u;
         home.innerHTML = homeScore;
     } else {
-        awayScore += 1;
+        awayScore += u;
         away.innerHTML = awayScore;
     }
+    removeBtn(w);
+}
+
+function removeBtn(element) {
+    element.classList.remove("calBtn");
 }
 
 function deductScore(element) {
-    let w = element.parentElement.parentElement;
-    let y = element.previousElementSibling.id;
+    let v = element.parentElement.parentElement.parentElement;
+    let w = element.parentElement; //next sibling
+    let y = w.previousElementSibling.id;
     let z = document.getElementById(y).innerHTML;
     let x = parseInt(z);
     if (x >= 1) { //to avoid -1 and all negative value;
         x -= 1;
         document.getElementById(y).innerHTML = x;
-        if (w.id == "homeA") {
+        if (v.id == "homeA") {
             homeScore -= 1;
             home.innerHTML = homeScore;
         } else {
@@ -420,7 +314,7 @@ function deductScore(element) {
             away.innerHTML = awayScore;
         }
     }
-
+    removeBtn(w);
 }
 
 
@@ -448,3 +342,4 @@ if (navigator.userAgent.match(/Android/i) ||
     }
     window.scrollTo(0, 1);
 }
+

@@ -13,7 +13,7 @@
     
     <link href="http://www.cogssandakan.com/css/articles.css" rel="stylesheet" type="text/css">
     <link href="http://www.cogssandakan.com/css/newtemplate.css" rel="stylesheet" type="text/css">
-    <link href="../scoreboard.css" rel="stylesheet" type="text/css">
+    <link href="scoreboard.css" rel="stylesheet" type="text/css">
 
     <link href="http://www.cogssandakan.com/News/Ongoing/app/favicon-96x96.png" rel="shortcut icon" type="image/x-icon">
     <link href="http://www.cogssandakan.com/News/Ongoing/app/apple-icon-180x180.png" rel="apple-touch-icon">
@@ -36,8 +36,8 @@
     </div>
     <section>
         <h1 id="appName">Basketball Scoreboard App</h1>
-        <h3 id="yourFate">Community Project by Josiah & Andrew</h3>
         <h2 id="instructText">Please enter your teams' name and players' number:</h2>
+        
 
         <form id="playerForm">
             <div class="form">
@@ -73,33 +73,12 @@
         </form>
         <div>
             <button id="manual1" type="button" onclick="displayTeam()">Confirm</button>
-<!--            <button id="random2" type="button" onclick="random()">Random</button>-->
         </div>
-        <!--
-        <div>
-            <div>
-                <h2 class="team">Home</h2>
-                
-            </div>
-            <div class="versus">
-                <h1>VS</h1>
-            </div>
-            <div>
-                <h2 class="team">Guest</h2>
-                
-            </div>
-        </div>
--->
+        <h3 id="yourFate">Community Project by Josiah & Andrew</h3>
         <div class="scorecontainer" id="teamSec">
             <div class="btncontainer">
                 <h2 id="nameHome"></h2>
                 <div class="scorediv" id="team1">0</div>
-                <!--
-                <div class="countBtn">
-                    <button class="scorebtn" id="homeplus">+</button>
-                    <button class="scorebtn" id="homeminus">-</button>
-                </div>
--->
             </div>
             <div id="roundcounter">
                 <div id="rounddisplay">
@@ -115,138 +94,257 @@
             <div class="btncontainer">
                 <h2 id="nameAway"></h2>
                 <div class="scorediv" id="team2">0</div>
-                <!--
-                <div class="countBtn">
-                    <button class="scorebtn" id="awayplus">+</button>
-                    <button class="scorebtn" id="awayminus">-</button>
-                </div>
--->
             </div>
         </div>
-        <button type="button" id="displayBtn" onclick="displayTeam()">Proceed</button>
-        <div id="playerSetting" class="playerScore" style="display: none">
+        <div id="playerSetting" class="playerScore" ><!--        style="display: none"-->
             <div class="playerContainer" id="homeA">
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player1Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player1Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP1">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player2Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player2Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP2">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player3Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player3Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP3">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player4Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player4Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP4">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player5Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player5Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP5">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player6Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player6Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP6">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player7Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player7Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP7">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player8Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player8Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP8">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player9Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player9Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP9">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player10Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player10Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP10">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player11Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player11Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP11">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team1Score" id="player12Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team1Score" id="player12Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP12">0</button>
                 </div>
+            </div>
+            
+            <div  class="playerBox">
+                <p class="box1">Players</p>
+                <p class="box2">Scores</p>
+                <p class="box3">Fouls</p>
             </div>
             <div class="playerContainer" id="guestB">
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player13Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player13Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP13">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player14Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player14Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP14">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player15Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player15Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP15">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player16Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player16Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP16">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player17Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player17Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP17">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player18Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player18Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP18">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player19Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player19Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP19">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player20Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player20Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP20">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player21Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player21Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP21">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player22Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player22Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP22">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player23Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player23Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP23">0</button>
                 </div>
                 <div class="playerDiv">
-                    <button class="scorebtn1" onclick="addScore(this)">+</button>
-                    <button class="team2Score" id="player24Score">0</button>
-                    <button class="scorebtn1" onclick="deductScore(this)">-</button>
+                    <button class="team2Score" id="player24Score" onclick="showBtn(this)">0</button>
+                    <div class="noDisplay">
+                        <button  onclick="addScore(this)">+3</button>
+                        <button  onclick="addScore(this)">+2</button>
+                        <button  onclick="addScore(this)">+1</button>
+                        <button  onclick="deductScore(this)">-1</button>
+                    </div>
+                    <button class="foulBox" id="foulP24">0</button>
                 </div>
             </div>
             <div>
