@@ -89,148 +89,6 @@ function displayTeam() {
 }
 
 
-let cnv = document.getElementById("chrono"); // canvas
-let h = document.getElementById("hour");
-let m = document.getElementById("minute");
-let s = document.getElementById("second");
-//canvas size equal to the size of the screen
-cnv.width = 85;
-cnv.height = 85;
-let ctx = cnv.getContext("2d");
-//initialization of letiable
-let status = 'w'; // status : w = waiting ; p = pause ; s = stop ; r = run 
-let fontType = "Arial"
-let time = dTime = 0;
-let duration = 900000; //the duration is 15 mins as default.
-
-let x = cnv.width / 2;
-let y = cnv.height / 2;
-let r = Math.min(cnv.width, cnv.height) / 2; // radius = the smallest dimension of the screen
-let e = r / 8; //thickness of the outline of the circle according to the radius
-r = r - e; // we remove the thickness of the line to not exceed the size of the canvas
-let fontSize = computeFontSize("00:00:00", fontType); //adapt the chrono text to the radius of the circle
-let font = fontSize + "px " + fontType;
-/*
- *
- * calculation functions
- *
- */
-function computeDuration() {
-    if (h && m && s) {
-        duration = h.value * 3600000 + m.value * 60000 + s.value * 1000;
-    }
-}
-
-function computeFontSize(text, fontface) {
-    let maxWidth = r * 2 * 0.8;
-    let fontsize = 300;
-    do {
-        fontsize--;
-        ctx.font = fontsize + "px " + fontface;
-    } while (ctx.measureText(text).width > maxWidth)
-    return fontsize;
-}
-/*
- *
- * formatting functions
- *
- */
-function formatTime(time) {
-    let tmp = Math.floor(time / 1000);
-    let second = tmp % 60;
-    if (second < 10) {
-        second = '0' + second
-    };
-    tmp = Math.floor(tmp / 60);
-    let minute = tmp % 60;
-    if (minute < 10) {
-        minute = '0' + minute
-    };
-    //    tmp = Math.floor(tmp / 60);
-    //    let hour = tmp;
-    //    if (hour < 10) {
-    //        hour = '0' + hour
-    //    };
-    return minute + ':' + second;
-}
-/*
- *
- * object creation functions
- *
- */
-function createCircle() {
-    return {
-        centerX: cnv.width / 2,
-        centerY: cnv.height / 2,
-        radius: Math.min(cnv.width, cnv.height) / 2 - (Math.min(cnv.width, cnv.height) / 2) / 8,
-        startAngle: 1.5 * Math.PI,
-        endAngle: 3.5 * Math.PI,
-        lineWidth: (Math.min(cnv.width, cnv.height) / 2) / 8,
-        color: 'rgba(255,255,255,0.2)',
-    };
-}
-/*
- *
- * canvas and drawings functions
- *
- */
-function clearCanvas(context, canvas) {
-    context.clearRect(0, 0, canvas.width, canvas.height);
-}
-
-function drawCircle(myCircle, ctx) {
-    ctx.beginPath();
-    ctx.arc(myCircle.centerX, myCircle.centerY, myCircle.radius, myCircle.startAngle, myCircle.endAngle);
-    ctx.lineWidth = myCircle.lineWidth;
-    ctx.strokeStyle = myCircle.color;
-    ctx.stroke();
-}
-
-function drawChrono(time, font, ctx) {
-    ctx.font = font;
-    ctx.fillStyle = "white";
-    ctx.textAlign = "center";
-    ctx.fillText(formatTime(time), cnv.width / 2, cnv.height / 2 + fontSize / 4);
-}
-/*
- *
- * function animation
- *
- */
-function animate() {
-    let startTime = +new Date();
-    let step = function () {
-        if (status != 'p' && status != 's') {
-            time = +new Date() - startTime + dTime;
-            let perc = time / duration;
-            if (perc > 1) {
-                perc = 1;
-            }
-            let angle = 2 * Math.PI * perc;
-            clearCanvas(ctx, cnv);
-            let color = 'green';
-            if (perc > (3 / 4 + 2 / 12)) {
-                color = 'red';
-            } else if (perc > (3 / 4 + 1 / 12)) {
-                color = 'orange';
-            } else if (perc > 3 / 4) {
-                color = 'yellow';
-            }
-            progCircle = createCircle();
-            progCircle.endAngle = progCircle.startAngle + angle;
-            progCircle.color = color;
-            whiteCircle = createCircle();
-            drawChrono(time, font, ctx);
-            drawCircle(whiteCircle, ctx);
-            drawCircle(progCircle, ctx);
-            requestAnimationFrame(step)
-        } else {
-            status = 'w';
-        }
-    }
-    step();
-};
-
 
 let roundNum = document.getElementById("roundnum");
 let roundScore = 0;
@@ -238,22 +96,9 @@ let roundPlus = document.getElementById("roundplus");
 let roundMinus = document.getElementById("roundminus");
 
 roundPlus.addEventListener('click', function () {
-    if ((roundScore <= 3) && (roundScore >= 0)) {
+    if ((roundScore <= 4) && (roundScore >= 0)) {
         roundScore += 1;
         roundNum.innerHTML = roundScore;
-    } else if (roundScore == 4) {
-        roundScore;
-    } else {
-        roundScore;
-    }
-});
-
-roundMinus.addEventListener('click', function () {
-    if ((roundScore <= 4) && (roundScore >= 1)) {
-        roundScore -= 1;
-        roundNum.innerHTML = roundScore;
-    } else if (roundScore == 0) {
-        roundScore;
     } else {
         roundScore;
     }
@@ -263,6 +108,37 @@ let home = document.getElementById("team1");
 let away = document.getElementById("team2");
 let homeScore = 0;
 let awayScore = 0;
+
+let teamFoul1 = document.getElementById("teamFoul1");
+let teamFoul2 = document.getElementById("teamFoul2");
+let homeFoul = 0;
+let awayFoul = 0;
+
+function foulCal (element) {
+    let t = element.innerHTML; //Current String Value
+    let u = Number(t); //convert to integer 0, 1, 2, 3, 4, 5
+    let v = element.parentElement.parentElement; // Either homeFoul or awayFoul
+    let y = element.id; //
+    document.getElementById(y).innerHTML = t;
+//    alert("Button clicked, id "+element.id+", text"+element.innerHTML); useful to get the id.
+    
+    
+    if (v.id == "homeA") {
+        if (homeFoul == 5) { 
+            console.log(teamFoul1);
+            console.log(u);
+        } else {
+            u +=1;
+            teamFoul1.innerHTML = u;
+            console.log(teamFoul1);
+            
+            homeFoul += 1;
+            document.getElementById("teamFoul1").innerHTML = homeFoul;
+            document.getElementById(y).innerHTML =homeFoul;
+    
+        } 
+    }
+}
 
 function showBtn(element) {
     let w = element.nextElementSibling;
@@ -274,12 +150,12 @@ function showBtn(element) {
     y[3].classList.add("scorebtn1");
 }
 function addScore(element) {
-    let t = element.innerHTML; //String Value
-    let u = Number(t);
+    let t = element.innerHTML; //Current String Value
+    let u = Number(t); //convert to integer +3, +2, +1 or -1
     let v = element.parentElement.parentElement.parentElement; //Great Grandparent either homeA or guestB element
     let w = element.parentElement; //next sibling
-    let y = w.previousElementSibling.id; //next sibling
-    let z = document.getElementById(y).innerHTML; //the next sibling current value
+    let y = w.previousElementSibling.id; // teamScore id
+    let z = document.getElementById(y).innerHTML; // teamScore current value
     let x = parseInt(z); //Change the string to integer
     x += u;
     document.getElementById(y).innerHTML = x;

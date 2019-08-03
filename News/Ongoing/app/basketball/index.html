@@ -91,6 +91,11 @@
                     <button id="roundminus">-</button>
                 </div>
             </div>
+            <div id="teamFoul">
+                <p id="teamFoul1">0</p>
+                <p>Team Foul</p>
+                <p id="teamFoul2">0</p>
+            </div>
             <div class="btncontainer">
                 <h2 id="nameAway"></h2>
                 <div class="scorediv" id="team2">0</div>
@@ -106,7 +111,7 @@
                         <button  onclick="addScore(this)">+1</button>
                         <button  onclick="deductScore(this)">-1</button>
                     </div>
-                    <button class="foulBox" id="foulP1">0</button>
+                    <button class="foulBox" id="foulP1" onclick="foulCal(this)">0</button>
                 </div>
                 <div class="playerDiv">
                     <button class="team1Score" id="player2Score" onclick="showBtn(this)">0</button>
@@ -225,6 +230,7 @@
                 <p class="box2">Scores</p>
                 <p class="box3">Fouls</p>
             </div>
+            
             <div class="playerContainer" id="guestB">
                 <div class="playerDiv">
                     <button class="team2Score" id="player13Score" onclick="showBtn(this)">0</button>
