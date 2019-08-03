@@ -109,36 +109,70 @@ let away = document.getElementById("team2");
 let homeScore = 0;
 let awayScore = 0;
 
-let teamFoul1 = document.getElementById("teamFoul1");
-let teamFoul2 = document.getElementById("teamFoul2");
-let homeFoul = 0;
-let awayFoul = 0;
 
-function foulCal (element) {
+
+let homeFoul = document.getElementById("homeFoul").innerHTML;
+let awayFoul = document.getElementById("awayFoul").innerHTML;
+
+let homeTf = Number(homeFoul);
+let awayTf = Number(awayFoul);
+
+// if it is teamFoul1 or teamFoul2?
+function checkFoul(element) { //id
     let t = element.innerHTML; //Current String Value
     let u = Number(t); //convert to integer 0, 1, 2, 3, 4, 5
-    let v = element.parentElement.parentElement; // Either homeFoul or awayFoul
-    let y = element.id; //
-    document.getElementById(y).innerHTML = t;
-//    alert("Button clicked, id "+element.id+", text"+element.innerHTML); useful to get the id.
-    
-    
-    if (v.id == "homeA") {
-        if (homeFoul == 5) { 
-            console.log(teamFoul1);
-            console.log(u);
+    let v = element.id; // current element id
+    let y = element.parentElement.parentElement; // Either homeFoul or awayFoul
+        if (y.id == "homeA") {
+            if (u <= 4) {
+                u += 1;
+                document.getElementById(v).innerHTML = u;
+                homeTf += 1;
+                document.getElementById("homeFoul").innerHTML = homeTf;
+            } else {
+                u = 0;
+                document.getElementById(v).innerHTML = u;
+                homeTf += 1;
+                document.getElementById("homeFoul").innerHTML = homeTf;
+            }  
         } else {
-            u +=1;
-            teamFoul1.innerHTML = u;
-            console.log(teamFoul1);
-            
-            homeFoul += 1;
-            document.getElementById("teamFoul1").innerHTML = homeFoul;
-            document.getElementById(y).innerHTML =homeFoul;
-    
-        } 
-    }
+            u += 1;
+            document.getElementById(v).innerHTML = u;
+            awayTf += 1;
+            document.getElementById("awayFoul").innerHTML = awayTf;
+        }
 }
+// Take the current value of the specific player
+// Increase the value by 1 for current teamFoul
+// Increase the value by 1 of current value of specific player
+// if the current value of the specific player = 4, then make it red.
+// if the current value of the specific player = 5, then set the value back to 0, make it transparent.
+
+//function foulCal (element) {
+//    let t = element.innerHTML; //Current String Value
+//    let u = Number(t); //convert to integer 0, 1, 2, 3, 4, 5
+//    let v = element.parentElement.parentElement; // Either homeFoul or awayFoul
+//    let y = element.id; //
+//    document.getElementById(y).innerHTML = t;
+////    alert("Button clicked, id "+element.id+", text"+element.innerHTML); useful to get the id.
+//    
+//    
+//    if (v.id == "homeA") {
+//        if (homeFoul == 5) { 
+//            console.log(teamFoul1);
+//            console.log(u);
+//        } else {
+//            u +=1;
+//            teamFoul1.innerHTML = u;
+//            console.log(teamFoul1);
+//            
+//            homeFoul += 1;
+//            document.getElementById("teamFoul1").innerHTML = homeFoul;
+//            document.getElementById(y).innerHTML =homeFoul;
+//    
+//        } 
+//    }
+//}
 
 function showBtn(element) {
     let w = element.nextElementSibling;
