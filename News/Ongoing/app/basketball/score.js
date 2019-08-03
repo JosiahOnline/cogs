@@ -122,25 +122,57 @@ function checkFoul(element) { //id
     let t = element.innerHTML; //Current String Value
     let u = Number(t); //convert to integer 0, 1, 2, 3, 4, 5
     let v = element.id; // current element id
-    let y = element.parentElement.parentElement; // Either homeFoul or awayFoul
-        if (y.id == "homeA") {
-            if (u <= 4) {
+    let y = element.parentElement.parentElement; 
+    let z = y.id; // Either homeA or guestB
+        if (z == "homeA") {
+            if (u < 4) {
                 u += 1;
                 document.getElementById(v).innerHTML = u;
                 homeTf += 1;
                 document.getElementById("homeFoul").innerHTML = homeTf;
-            } else {
-                u = 0;
+            } else if (u == 4) {
+                element.classList.add("foulOut");
+                u += 1;
                 document.getElementById(v).innerHTML = u;
                 homeTf += 1;
                 document.getElementById("homeFoul").innerHTML = homeTf;
-            }  
+            }  else {
+                foulReset(u, v, z);
+            }
         } else {
-            u += 1;
-            document.getElementById(v).innerHTML = u;
-            awayTf += 1;
+            if (u < 4) {
+                u += 1;
+                document.getElementById(v).innerHTML = u;
+                awayTf += 1;
+                document.getElementById("awayFoul").innerHTML = awayTf;
+            } else if (u == 4) {
+                element.classList.add("foulOut");
+                u += 1;
+                document.getElementById(v).innerHTML = u;
+                awayTf += 1;
+                document.getElementById("awayFoul").innerHTML = awayTf;
+            } else {
+                foulReset(u, v, z);
+            }   
+        }
+}
+
+function foulReset(u, v, z) {
+    if (confirm("Do you want to reset this player's foul?")) {
+        // Save it!
+        let x = document.getElementById(v);
+        x.classList.remove("foulOut");
+        u = 0;
+        document.getElementById(v).innerHTML = u;
+        if (z == "homeA") {
+            homeTf -= 5;
+            document.getElementById("homeFoul").innerHTML = homeTf;
+        } else {
+            awayTf -= 5;
             document.getElementById("awayFoul").innerHTML = awayTf;
         }
+        
+    }                
 }
 // Take the current value of the specific player
 // Increase the value by 1 for current teamFoul
@@ -148,31 +180,6 @@ function checkFoul(element) { //id
 // if the current value of the specific player = 4, then make it red.
 // if the current value of the specific player = 5, then set the value back to 0, make it transparent.
 
-//function foulCal (element) {
-//    let t = element.innerHTML; //Current String Value
-//    let u = Number(t); //convert to integer 0, 1, 2, 3, 4, 5
-//    let v = element.parentElement.parentElement; // Either homeFoul or awayFoul
-//    let y = element.id; //
-//    document.getElementById(y).innerHTML = t;
-////    alert("Button clicked, id "+element.id+", text"+element.innerHTML); useful to get the id.
-//    
-//    
-//    if (v.id == "homeA") {
-//        if (homeFoul == 5) { 
-//            console.log(teamFoul1);
-//            console.log(u);
-//        } else {
-//            u +=1;
-//            teamFoul1.innerHTML = u;
-//            console.log(teamFoul1);
-//            
-//            homeFoul += 1;
-//            document.getElementById("teamFoul1").innerHTML = homeFoul;
-//            document.getElementById(y).innerHTML =homeFoul;
-//    
-//        } 
-//    }
-//}
 
 function showBtn(element) {
     let w = element.nextElementSibling;

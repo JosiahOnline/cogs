@@ -642,6 +642,10 @@ button {
     padding: 4px;
     margin-top: 15px;
 }
+
+.foulOut {
+    background-color: red;
+}
 /* Player Score Board */
 
 .playerScore {
