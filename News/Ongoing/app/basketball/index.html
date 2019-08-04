@@ -75,32 +75,25 @@
             <button id="manual1" type="button" onclick="displayTeam()">Confirm</button>
         </div>
         <h3 id="yourFate">Community Project by Josiah & Andrew</h3>
-        <div class="scorecontainer" id="teamSec">
-            <div class="btncontainer">
-                <h2 id="nameHome"></h2>
-                <div class="scorediv" id="team1">0</div>
-            </div>
-            <div id="roundcounter">
-                <div id="rounddisplay">
-                    <p>Period</p>
-                    <p id="roundnum">0
-                        <p>
+        <div id = "scoreboard" class="boarddiv">
+            <div class="scorecontainer" id="teamSec">
+                <div class="btncontainer">
+                    <h2 id="nameHome"></h2>
+                    <div class="scorediv" id="team1">0</div>
                 </div>
-                <div>
-                    <button id="roundplus">+</button>
-                    <button id="roundminus">-</button>
+
+                <div class="btncontainer">
+                    <h2 id="nameAway"></h2>
+                    <div class="scorediv" id="team2">0</div>
                 </div>
             </div>
-            <div id="teamFoul">
-                <p id="homeFoul">0</p>
-                <p>Team Foul</p>
-                <p id="awayFoul">0</p>
-            </div>
-            <div class="btncontainer">
-                <h2 id="nameAway"></h2>
-                <div class="scorediv" id="team2">0</div>
+            <div id="teamFoul" class="fouldiv">
+                <div id="homeFoul">0</div>
+                <h1>Team Foul</h1>
+                <div id="awayFoul">0</div>
             </div>
         </div>
+        
         <div id="playerSetting" class="playerScore" ><!--        style="display: none"-->
             <div class="playerContainer" id="homeA">
                 <div class="playerDiv">

@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Basketball score board</title>
+    <link rel="stylesheet" href="boostrap4/css/bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.0.0/moment.min.js"></script>
+</head>
+<body>
+    <div id="showInput">
+        <input type="number" value="5" id="InputId" min="5" max="15">
+        <button id="ChangeMin">Next</button>
+    </div>
+    <div style="display: none" id="2_page" class="position_all">
+    <div class="position_quater">
+        <div id="quater_change" style="width: 170px">FIRST</div>
+        <div style="padding : 10px 20px">QUATER</div>
+    </div>
+    <div class="position_timer">
+    <div id="clock_1" class="light">
+			<div class="display_1">
+                <div class="digits_1"></div>
+<!--            <button id="myReset">Reset</button>-->
+                <div id="myConfirm"></div>
+			</div>
+            <div id="faul" class="timer_but1">Start</div>
+    </div>
+    <div id="clock" class="light">
+			<div class="display">
+                <div class="digits"></div>
+			</div>
+        <div style="display: flex; justify-content: space-around;">
+            <div id="24s" class="timer_but">24</div>
+            <div id="14s" class="timer_but">14</div>
+        </div>
+    </div>
+    </div>
+    <div id="clock_2" class="light">
+			<div class="display_2">
+                <div id="timeout" style="cursor: pointer; margin: 0px 30px; width: 150px; ">Timeout</div>
+                <div class="digits_2"></div>
+                <div>s</div>
+			</div>
+    </div>
+    </div>
+    <div id="page_3">
+        <h1>Analysis of data</h1>
+    </div>
+
+    <script>
+        $(function(){
+    // Cache some selectors
+    var clock = $('#clock');
+    var myClock = $('#clock_1');
+    var myTimeout = $('#clock_2');
+    var myQuater = $('#quater_change')
+        myButton = myClock.find('#faul');
+        myTimeButton = myTimeout.find('#timeout');
+            
+    // Map digits to their names (this will be an array)
+    var digit_to_name = 'nine eight seven six five four three two one zero'.split(' ');
+    var digit_to_quater = 'FIRST SECOND THIRD FOURT'.split(' ');
+
+    // This object will hold the digit elements
+    var digits = {};
+
+    // Positions for the hours, minutes, and seconds
+    var positions  = ['s1', 's2'];
+    var position_1 = ['m1', 's3', ':', 's4', 's5' ]
+                    //        f          c     d
+    var position_2 = ['s6', 's7']
+
+    let i = 6;//three
+    let k = 7;//two
+    let a = 9;//zero
+    let b = 8;//nine
+    let a_1 = 8;
+    let a_2 = 7;
+    let a_3 = 6;
+    let a_4 = 5;
+    let b_1 = 8;
+    let b_2 = 8;
+    let b_3 = 8;
+    let b_4 = 8;
+    let c = 4;//five
+    let d = 0;//nine
+    let e = 1;
+    let f = 1;
+    let z = 4;
+    let q = 0;
+    let myInterval = -1;
+    let myTimeterval = -1;
+    // Generate the digits with the needed markup,
+    // and add them to the clock
+
+    var digit_holder = clock.find('.digits');
+    var digitholder = myClock.find('.digits_1');
+    var digitHolder = myTimeout.find('.digits_2');
+            
+     $.each(positions, function(){
+         if (this == 's1') {
+            var pos = $('<div class="' + digit_to_name[k] + '">');
+
+            for(let i=1; i<8; i++){
+                pos.append('<span class="d' + i + '">');
+            }
+
+           digits[this] = pos;
+
+            digit_holder.append(pos);
+         }
+         if (this == 's2') {
+            var pos = $('<div class="' + digit_to_name[5] + '">');
+            for(let i=1; i<8; i++){
+                pos.append('<span class="d' + i + '">');
+            }
+
+           digits[this] = pos;
+
+            digit_holder.append(pos);
+         }
+
+    });
+
+        $.each(position_1, function(){
+            if (this == ':') {
+                digitholder.append('<div class="dots">');
+            }else if(this =='m1'){
+                 var pos = $('<div class="' + digit_to_name + '">');
+
+            for(let i=1; i<8; i++){
+                pos.append('<span class="d' + i + '">');
+            }
+
+           digits[this] = pos;
+
+            digitholder.append(pos);
+            }else    {
+            var pos = $('<div class="' + digit_to_name[9]   + '">');
+
+            for(let i=1; i<8; i++){
+                pos.append('<span class="d' + i + '">');
+            }
+
+           digits[this] = pos;
+
+            digitholder.append(pos);
+
+            }
+        });
+         $.each(position_2, function(){
+         if (this == 's6') {
+            var pos = $('<div class="' + digit_to_name[3] + '">');
+
+            for(let i=1; i<8; i++){
+                pos.append('<span class="d' + i + '">');
+            }
+
+           digits[this] = pos;
+
+            digitHolder.append(pos);
+         }else {
+            var pos = $('<div class="' + digit_to_name[9] + '">');
+            for(let i=1; i<8; i++){
+                pos.append('<span class="d' + i + '">');
+            }
+
+           digits[this] = pos;
+
+            digitHolder.append(pos);
+         }
+
+    });
+            
+    //i = five[4] , k = two[7]
+    function update_timeout() {
+        digits.s6.attr('class', digit_to_name[z]);
+        digits.s7.attr('class', digit_to_name[e]);      
+       e++;
+      if(e == 10) {
+          e = 0;
+          z++;
+      } 
+      if(z >= 10) {
+            clearInterval(myTimeterval);
+            digits.s6.attr('class', digit_to_name[9]);
+            digits.s7.attr('class', digit_to_name[9]);
+          z = 4;
+      }
+    console.log(e, z)
+
+     };
+    function quater_change(x, y) {
+         if(q >= 4) {
+           alert('Match had ended');
+          $('#page_2').hide;
+          $('#page_3').fadeIn;
+          q = 0;
+        }else {
+       let r = alert("ARE YOU SURE"); 
+        if(r !== "true"){
+        i = 5;//three
+        k = 7;//two
+        a = 9;//zero
+        b = 8;//nine
+        a_1 = 8;
+        a_2 = 7;
+        a_3 = 6;
+        a_4 = 5;
+        b_1 = 8;
+        b_2 = 8;
+        b_3 = 8;
+        b_4 = 8;
+        c = 4;//five
+        d = 0;;//nine
+        e = 1;
+        f = 1;
+        q++;
+        }
+        myQuater.html(digit_to_quater[q]);
+        digits.s1.attr('class', digit_to_name[k]);
+        digits.s2.attr('class', digit_to_name[i]);
+        digits.m1.attr('class', digit_to_name[x]);
+        digits.s3.attr('class', digit_to_name[y]);
+        digits.s4.attr('class', digit_to_name[9]);
+        digits.s5.attr('class', digit_to_name[9]);
+             myButton.html("Resume");
+             clearInterval(myInterval);
+             myInterval = -1;
+            console.log(q)
+         }  
+    }
+
+     function update_time() {
+        let setMin = parseInt($('#InputId').val())
+        digits.s1.attr('class', digit_to_name[k]);
+        digits.s2.attr('class', digit_to_name[i]);
+        digits.s4.attr('class', digit_to_name[c]);
+        digits.s5.attr('class', digit_to_name[d]);
+
+      if(setMin == 5) {
+        digits.s3.attr('class', digit_to_name[f + 4]);
+        if(f >= 6) {
+        quater_change(9, 4);
+        }
+      }      
+        if(setMin == 6) {
+        digits.s3.attr('class', digit_to_name[f + 3]);
+        if(f >= 7) {
+        quater_change(9, 3)
+      }
+      }
+      if(setMin == 7) {
+        digits.s3.attr('class', digit_to_name[f + 2]);
+        if(f >= 8) {
+        quater_change(9, 2)
+      }
+      }
+      if(setMin == 8) {
+        digits.s3.attr('class', digit_to_name[f + 1]);
+        if(f >= 9) {
+        quater_change(9, 1)
+      }
+      }
+      if(setMin == 9) {
+        digits.s3.attr('class', digit_to_name[f]);
+        if(f >= 10) {
+        quater_change(9, 0)
+      }
+      }
+      if(setMin == 10) {
+        digits.m1.attr('class', digit_to_name[9]);
+        digits.s3.attr('class', digit_to_name[f - 1]);
+        if(f >= 11) {
+        quater_change(8, 9)
+      }
+      }
+      if(setMin == 11) {
+        digits.s3.attr('class', digit_to_name[a]);
+        digits.m1.attr('class', digit_to_name[b]);
+        if(f >= 12) {
+        quater_change(8, 8)
+
+      }
+      }
+      if(setMin == 12) {
+        digits.s3.attr('class', digit_to_name[a_1]);
+        digits.m1.attr('class', digit_to_name[b_1]);
+        if(f >= 13) {
+        quater_change(8, 7)
+      }
+      }
+      if(setMin == 13) {
+        digits.s3.attr('class', digit_to_name[a_2]);
+        digits.m1.attr('class', digit_to_name[b_2]);
+        if(f >= 14) {
+        quater_change(8, 6)
+      }
+      }
+      if(setMin == 14) {
+        digits.s3.attr('class', digit_to_name[a_3]);
+        digits.m1.attr('class', digit_to_name[b_3]);
+        if(f >= 15) {
+        quater_change(8, 5)
+      }
+      }
+      if(setMin == 15) {
+        digits.s3.attr('class', digit_to_name[a_4]);
+        digits.m1.attr('class', digit_to_name[b_4]);
+        if(f >= 16) {
+        quater_change(8, 4)
+      }
+      }
+         i++;
+      if(i == 10) {
+        i = 0;
+        k++;
+      }
+      if(k >= 10) {
+        digits.s2.attr('class', digit_to_name[9]);
+      }
+       d++;
+      if(d >= 10) {
+          d = 0;
+          c++;
+      } 
+      if(c >= 10) {
+          c = 4;
+          f++;
+          a++; 
+          a_1++;
+          a_2++;
+          a_3++;
+          a_4++;
+      }
+      if(a >= 10) {
+          a = 0;
+          b++
+      }
+      if(a_1 >= 10) {
+          a_1 = 0;
+          b_1++
+      }
+      if(a_2 >= 10) {
+          a_2 = 0;
+          b_2++
+      }
+      if(a_3 >= 10) {
+          a_3 = 0;
+          b_3++
+      }
+      if(a_4 >= 10) {
+          a_4 = 0;
+          b_4++
+      }
+         
+    console.log(f, c, d)
+     } 
+    $('#24s').click(function(){
+        i = 5;
+        k = 7;
+        digits.s1.attr('class', digit_to_name[k]);
+        digits.s2.attr('class', digit_to_name[i]);
+    });
+    $('#14s').click(function(){
+        i = 5;
+        k = 8;
+        digits.s1.attr('class', digit_to_name[k]);
+        digits.s2.attr('class', digit_to_name[i]);
+    });
+
+    $('#timeout').click(function(){
+        if(myTimeterval == -1) {
+            myTimeterval = setInterval(update_timeout, 1000);
+            myButton.html("Resume");
+            clearInterval(myInterval);
+            myInterval = -1;
+            myTimeButton.html('Cancel');
+            digits.s6.attr('class', digit_to_name[4]);
+            digits.s7.attr('class', digit_to_name[0]);
+        }else {
+            myTimeButton.html("Timeout");
+            clearInterval(myTimeterval);
+            myTimeterval = -1;
+            e = 1;
+            digits.s6.attr('class', digit_to_name[3]);
+            digits.s7.attr('class', digit_to_name[9]);
+        }
+        
+    });
+    $('#timeChange').click(function(){
+        $('#showInput').fadeToggle(500)
+    });
+    $('#ChangeMin').click(function(){
+        $('#showInput').fadeToggle(500);
+        $('#2_page').delay(500).fadeIn(1000);
+        let setMin = parseInt($('#InputId').val())
+        if(setMin == 5) {
+          digits.m1.attr('class', digit_to_name[9]);
+          digits.s3.attr('class', digit_to_name[4]); 
+        }
+        if(setMin == 6) {
+          digits.m1.attr('class', digit_to_name[9]);
+          digits.s3.attr('class', digit_to_name[3]); 
+        }
+        if(setMin == 7) {
+          digits.m1.attr('class', digit_to_name[9]);
+          digits.s3.attr('class', digit_to_name[2]); 
+        }
+        if(setMin == 8) {
+          digits.m1.attr('class', digit_to_name[9]);
+          digits.s3.attr('class', digit_to_name[1]); 
+        }
+        if(setMin == 9) {
+          digits.m1.attr('class', digit_to_name[9]);
+          digits.s3.attr('class', digit_to_name[0]); 
+        }        
+        if(setMin == 10) {
+          digits.m1.attr('class', digit_to_name[8]);
+          digits.s3.attr('class', digit_to_name[9]); 
+        }       
+        if(setMin == 11) {
+          digits.m1.attr('class', digit_to_name[8]);
+          digits.s3.attr('class', digit_to_name[8]); 
+        }        
+        if(setMin == 12) {
+          digits.m1.attr('class', digit_to_name[8]);
+          digits.s3.attr('class', digit_to_name[7]); 
+        }       
+        if(setMin == 13) {
+          digits.m1.attr('class', digit_to_name[8]);
+          digits.s3.attr('class', digit_to_name[6]); 
+        }        
+        if(setMin == 14) {
+          digits.m1.attr('class', digit_to_name[8]);
+          digits.s3.attr('class', digit_to_name[5]); 
+        }
+        if(setMin == 15) {
+          digits.m1.attr('class', digit_to_name[8]);
+          digits.s3.attr('class', digit_to_name[4]); 
+        }
+    });
+     myButton.click (function(event){
+
+            if(myInterval == -1) {
+                myButton.html("Pause");
+                myInterval = setInterval(update_time, 1000);
+            } else {
+                myButton.html("Resume");
+                clearInterval(myInterval);
+                myInterval = -1;
+            }            
+        });
+        });
+    </script>
+</body>
+</html>

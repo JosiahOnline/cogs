@@ -66,6 +66,8 @@ function displayTeam() {
         v.style.display = "flex";
         let w = document.getElementById("playerSetting");
         w.style.display = "flex";        
+        let x = document.getElementById("scoreboard");
+        x.style.display = "flex";
         }
         let i;
         let g = demoA.children;
@@ -89,21 +91,6 @@ function displayTeam() {
 }
 
 
-
-let roundNum = document.getElementById("roundnum");
-let roundScore = 0;
-let roundPlus = document.getElementById("roundplus");
-let roundMinus = document.getElementById("roundminus");
-
-roundPlus.addEventListener('click', function () {
-    if ((roundScore <= 4) && (roundScore >= 0)) {
-        roundScore += 1;
-        roundNum.innerHTML = roundScore;
-    } else {
-        roundScore;
-    }
-});
-
 let home = document.getElementById("team1");
 let away = document.getElementById("team2");
 let homeScore = 0;
@@ -119,6 +106,7 @@ let awayTf = Number(awayFoul);
 
 // if it is teamFoul1 or teamFoul2?
 function checkFoul(element) { //id
+    element.classList.add("foulColor");
     let t = element.innerHTML; //Current String Value
     let u = Number(t); //convert to integer 0, 1, 2, 3, 4, 5
     let v = element.id; // current element id
@@ -162,6 +150,7 @@ function foulReset(u, v, z) {
         // Save it!
         let x = document.getElementById(v);
         x.classList.remove("foulOut");
+        x.classList.remove("foulColor");
         u = 0;
         document.getElementById(v).innerHTML = u;
         if (z == "homeA") {

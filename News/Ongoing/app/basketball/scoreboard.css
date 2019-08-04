@@ -130,10 +130,45 @@ button {
     margin-left: 5px;
 }
 
+#scoreboard,
 #teamSec,
 #displayBtn,
 #playerSetting {
     display: none;
+}
+
+.boarddiv {
+    width: 88%;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.fouldiv {
+    display: flex;
+    justify-content: center;
+    margin: 15px;
+}
+
+.fouldiv h2 {
+    margin: 0 10px;
+}
+
+.fouldiv div:first-child {
+    background-color: #900C3F;
+}
+.fouldiv div:last-child {
+    background-color: #2F7FBF;
+}
+.fouldiv div {
+    margin: 0 10px;
+    padding: 10px;
+    color: white;
+    font-family: Oswald, sans-serif;
+    font-size: 1em;
+    text-align: center;
+    border-radius: 4px;
 }
 
 .team {
@@ -237,12 +272,11 @@ button {
 .scorecontainer {
     display: flex;
     height: 130px;
-    width: 88%;
+    width: 100%;
     padding: 10px;
     margin-bottom: 10px;
     justify-content: space-around;
-    border-radius: 4px;
-    background-color: rgba(0, 0, 0, 0.5);
+    
 }
 
 .btncontainer {
@@ -252,16 +286,6 @@ button {
     align-items: center;
 }
 
-#roundcounter button {
-    height: 20px;
-    width: 20px;
-    font-size: 12px;
-    padding: 0px;
-}
-
-#roundnum {
-    font-size: 1.5em;
-}
 
 .scorediv {
     height: 60px;
@@ -292,32 +316,6 @@ button {
     width: 30%;
 }
 
-#roundcounter {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-
-#rounddisplay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 5px 10px;
-    margin: 5px 0;
-    border-radius: 2px;
-    border: 1px solid white;
-}
-
-#rounddisplay p {
-    padding: 5px 0;
-}
-
-#roundnum {
-    font-family: Oswald, sans-serif;
-    font-size: 1.2em;
-}
 
 /*
         @media screen and (max-width: 1024px) {
@@ -635,8 +633,8 @@ button {
 .foulBox {
     background-color: black;
     font-family: Oswald, sans-serif;
-    font-size: 10px;
-    color: rgba(255,255,255,1);
+    font-size: 0.7em;
+    color: rgba(255,255,255,0);
     width: 40px;
     height: 30px;
     padding: 4px;
@@ -695,7 +693,7 @@ button {
 .team1Score,
 .team2Score,
 .scorebtn1 {
-    font-size: 10px;
+    font-size: 0.7em;
     width: 40px;
     height: 30px;
     padding: 0;
@@ -720,6 +718,40 @@ button {
 
 .team1Score:hover, .team2Score:hover {
     box-shadow: 0 2px 10px rgba(0,0,0,.16), 0 2px 6px;
+}
+.foulBox:hover {
+    box-shadow: 0 2px 10px rgba(0,0,0,.16), 0 2px 6px;
+    color: rgba(255,255,255,1);
+}
+.foulColor {
+    color: rgba(255,255,255,1);
+}
+
+
+/* Glowing Div */
+@-webkit-keyframes pulse {
+  0% { box-shadow:0 0 8px #ea4c89, inset 0 0 8px #ea4c89; }
+  50% { box-shadow:0 0 16px #ea4c89, inset 0 0 14px #ea4c89; }
+  100% { box-shadow:0 0 8px #ea4c89, inset 0 0 8px #ea4c89; }
+}
+
+.glow {
+  background-color:transparent;
+  width:100px;
+  height:100px;
+  border-radius:50px;
+  box-shadow: 0 0 8px #ea4c89, inset 0 0 8px #ea4c89;
+  -webkit-animation: pulse 2s linear 1s infinite;
+}
+.glow div {
+  display:block;
+  text-align: center;
+  line-height: 100px;
+  font-family:sans-serif;
+  font-weight:100;
+  font-size:24px;
+  color: #ea4c89;
+  text-shadow: 0 0 4px #ea4c89;
 }
 
 .team1Score {
