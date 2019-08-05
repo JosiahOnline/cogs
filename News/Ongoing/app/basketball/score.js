@@ -42,6 +42,23 @@ let teamB = [];
 let demoA = document.getElementById("homeA");
 let demoB = document.getElementById("guestB");
 
+let q = document.getElementById("appName");
+        q.style.display = "none";
+        let r = document.getElementById("yourFate");
+        r.style.display = "none";
+        let s = document.getElementById("instructText");
+        s.style.display = "none";
+        let t = document.getElementById("playerForm");
+        t.style.display = "none";
+        let u = document.getElementById("manual1");
+        u.style.display = "none";
+        let v = document.getElementById("teamSec");
+        v.style.display = "flex";
+        let w = document.getElementById("playerSetting");
+        w.style.display = "flex";        
+        let x = document.getElementById("scoreboard");
+        x.style.display = "flex";
+
 function displayTeam() {
     if (players.length < "24") {
         alert("Please enter all players' name!")
@@ -95,8 +112,6 @@ let home = document.getElementById("team1");
 let away = document.getElementById("team2");
 let homeScore = 0;
 let awayScore = 0;
-
-
 
 let homeFoul = document.getElementById("homeFoul").innerHTML;
 let awayFoul = document.getElementById("awayFoul").innerHTML;
@@ -173,11 +188,13 @@ function foulReset(u, v, z) {
 function showBtn(element) {
     let w = element.nextElementSibling;
     w.classList.add("calBtn");
+//    w.classList.toggle("transform-active");
     let y = w.children;
     y[0].classList.add("scorebtn1");
     y[1].classList.add("scorebtn1");
     y[2].classList.add("scorebtn1");
     y[3].classList.add("scorebtn1");
+    y[4].classList.add("overlay");
 }
 function addScore(element) {
     let t = element.innerHTML; //Current String Value
@@ -201,6 +218,8 @@ function addScore(element) {
 
 function removeBtn(element) {
     element.classList.remove("calBtn");
+    let x = element.lastElementChild; //y[4] which is class bground
+    x.classList.remove("overlay");
 }
 
 function deductScore(element) {
