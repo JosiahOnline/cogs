@@ -186,6 +186,8 @@ function foulReset(u, v, z) {
 
 
 function showBtn(element) {
+    let x = element.id;
+    document.getElementById(x).classList.add("hLight");
     let w = element.nextElementSibling;
     w.classList.add("calBtn");
 //    w.classList.toggle("transform-active");
@@ -201,7 +203,7 @@ function addScore(element) {
     let u = Number(t); //convert to integer +3, +2, +1 or -1
     let v = element.parentElement.parentElement.parentElement; //Great Grandparent either homeA or guestB element
     let w = element.parentElement; //next sibling
-    let y = w.previousElementSibling.id; // teamScore id
+    let y = w.previousElementSibling.id; // playerScore id
     let z = document.getElementById(y).innerHTML; // teamScore current value
     let x = parseInt(z); //Change the string to integer
     x += u;
@@ -209,17 +211,20 @@ function addScore(element) {
     if (v.id == "homeA") {
         homeScore += u;
         home.innerHTML = homeScore;
+        document.getElementById(y).classList.remove("hLight");
     } else {
         awayScore += u;
         away.innerHTML = awayScore;
+        document.getElementById(y).classList.remove("hLight");
     }
-    removeBtn(w);
+    removeBtn(w, y);
 }
 
-function removeBtn(element) {
-    element.classList.remove("calBtn");
-    let x = element.lastElementChild; //y[4] which is class bground
+function removeBtn(w, y) {
+    w.classList.remove("calBtn");
+    let x = w.lastElementChild; //y[4] which is class bground
     x.classList.remove("overlay");
+    document.getElementById(y).classList.remove("hLight");
 }
 
 function deductScore(element) {
@@ -234,15 +239,28 @@ function deductScore(element) {
         if (v.id == "homeA") {
             homeScore -= 1;
             home.innerHTML = homeScore;
+            document.getElementById(y).classList.remove("hLight");
         } else {
             awayScore -= 1;
             away.innerHTML = awayScore;
+            document.getElementById(y).classList.remove("hLight");
         }
     }
-    removeBtn(w);
+    removeBtn(w, y);
 }
 
-
+function whoseTurn(element) {
+    let v = element.id;
+    if (v =="foulLeft") {
+        document.getElementById(v).classList.add("showArrow-left");
+        let x = document.getElementById("foulRight");
+        x.classList.remove("showArrow-right");
+    } else {
+        document.getElementById(v).classList.add("showArrow-right");
+        let x = document.getElementById("foulLeft");
+        x.classList.remove("showArrow-left");
+    }
+}
 
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.
