@@ -1,22 +1,7 @@
 
-*{
-	margin:0;
-	padding:0;
-}
-html{
-	background:#dbe4e6;
-	overflow:hidden;
-}
-
-body{
-	font:15px/1.3 Arial, sans-serif;
-	color: #4f4f4f;
-	z-index:1;
-}
 
 a, a:visited {
 	outline:none;
-	color:#389dc1;
 }
 
 a:hover{
@@ -36,20 +21,20 @@ section, footer, header, aside{
     display: inline-flex;
     flex-direction: column;
     background: #cc000000;
-    position: relative;
-    left: 37%;
 }
 .position_quater {
     display: inline-flex;
+    justify-content: space-between;
     margin-bottom: 20px;
-    font-size: 30px;
+    font-size: 2em;
     margin-top: 20px;
     text-align: center;
 }
 #quater_change {
     padding : 10px 20px;
-    border: 3px solid black;
+    border: 3px solid white;
     border-radius: 5px;
+    color: white;
 }
 .position_timer {
     display: flex;
@@ -73,16 +58,14 @@ section, footer, header, aside{
 }
 #showInput {
     display: flex;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
-    background: #dbe4e6;
-    padding : 200px 300px;
+    align-items: center;
 }
 #InputId {
+    margin-left: 10px;
     text-align: center;
-    position: absolute;
+    font-size: 0.7em;
+    width: 45px;
+    padding: 0;
 }
 
 #clock .display, 
@@ -96,7 +79,8 @@ section, footer, header, aside{
 #clock_2 .display_2{
     margin: 10px 0px;
     display: flex;
-    font-size: 40px;
+    font-size: 2.3em;
+    padding: 7px 2px;
 }
 
 
@@ -118,16 +102,18 @@ section, footer, header, aside{
 
 
 #clock.light .display, 
-#clock_1.light .display_1,
-#clock_2.light .display_2{
+#clock_1.light .display_1{
 	background-color:#dddddd;
 	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 }
+#clock_2.light .display_2 {
+    display: flex;
+    background-color: white;
+    justify-content: space-around;
+    align-items: center;
+}
 #clock_1.light .display_1{
     margin-right: 10px;
-}
-#clock_2 .digits_2 {
-   margin-right: 10px
 }
 
 
