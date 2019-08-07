@@ -119,6 +119,14 @@ let awayFoul = document.getElementById("awayFoul").innerHTML;
 let homeTf = Number(homeFoul);
 let awayTf = Number(awayFoul);
 
+function foulTotal(element, x) {
+    if (element >4) {
+        x.classList.add("highLighRed");
+    } else {
+        x.classList.remove("highLighRed");
+    }
+}
+
 // if it is teamFoul1 or teamFoul2?
 function checkFoul(element) { //id
     element.classList.add("foulColor");
@@ -127,6 +135,7 @@ function checkFoul(element) { //id
     let v = element.id; // current element id
     let y = element.parentElement.parentElement;
     let z = y.id; // Either homeA or guestB
+
     if (z == "homeA") {
         if (u < 4) {
             u += 1;
@@ -142,6 +151,8 @@ function checkFoul(element) { //id
         } else {
             foulReset(u, v, z);
         }
+        let a = document.getElementById("homeFoul");
+        foulTotal(homeTf, a);
     } else {
         if (u < 4) {
             u += 1;
@@ -157,6 +168,8 @@ function checkFoul(element) { //id
         } else {
             foulReset(u, v, z);
         }
+        let a = document.getElementById("awayFoul");
+        foulTotal(awayTf, a);
     }
 }
 
@@ -175,7 +188,6 @@ function foulReset(u, v, z) {
             awayTf -= 5;
             document.getElementById("awayFoul").innerHTML = awayTf;
         }
-
     }
 }
 // Take the current value of the specific player

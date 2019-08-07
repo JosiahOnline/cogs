@@ -83,12 +83,16 @@ section, footer, header, aside{
     padding: 7px 2px;
 }
 
-
-#clock.light .digits div span, 
+ 
 #clock_1.light .digits_1 div span,
 #clock_2.light .digits_2 div span{
 	background-color:#272e38;
 	border-color:#272e38;	
+}
+
+#clock.light .digits div span{
+	background-color: white;
+	border-color: white;	
 }
 
 #clock.light .digits div.dots:before,
@@ -101,7 +105,11 @@ section, footer, header, aside{
 }
 
 
-#clock.light .display, 
+#clock.light .display{
+	background-color: #ff5757;
+	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
+}
+
 #clock_1.light .display_1{
 	background-color:#dddddd;
 	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
