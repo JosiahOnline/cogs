@@ -686,6 +686,8 @@ $(function () {
     });
 });
 
+//Don't change anything
+
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.
 //    //return the chosen one to the team list.
