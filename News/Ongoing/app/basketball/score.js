@@ -119,14 +119,7 @@ let awayFoul = document.getElementById("awayFoul").innerHTML;
 let homeTf = Number(homeFoul);
 let awayTf = Number(awayFoul);
 
-function foulTotal(element, x) {
-    if (element >4) {
-        x.classList.add("highLighRed");
-    } else {
-        x.classList.remove("highLighRed");
-    }
-}
-
+// Add this to Andrew Code
 // if it is teamFoul1 or teamFoul2?
 function checkFoul(element) { //id
     element.classList.add("foulColor");
@@ -153,6 +146,7 @@ function checkFoul(element) { //id
         }
         let a = document.getElementById("homeFoul");
         foulTotal(homeTf, a);
+        foulMax(homeTf, a); 
     } else {
         if (u < 4) {
             u += 1;
@@ -170,7 +164,32 @@ function checkFoul(element) { //id
         }
         let a = document.getElementById("awayFoul");
         foulTotal(awayTf, a);
+        foulMax(awayTf, a);
     }
+}
+
+// Add this to Andrew Code
+function foulTotal(element, x) {
+    if (element >4) {
+        x.classList.add("highLighRed");
+    } else {
+        x.classList.remove("highLighRed");
+    }
+}
+function foulMax(element, x) {
+    if (element > 5) {
+        x.innerHTML = 5;
+    }
+}
+
+// Add this to Andrew Code No.482
+function resetTeamFoul() {
+    homeTf = 0;
+    document.getElementById("homeFoul").innerHTML = homeTf;
+    document.getElementById("homeFoul").classList.remove("highLighRed");
+    awayTf = 0;
+    document.getElementById("awayFoul").innerHTML = awayTf;
+    document.getElementById("awayFoul").classList.remove("highLighRed");
 }
 
 function foulReset(u, v, z) {
@@ -209,6 +228,15 @@ function showBtn(element) {
     y[2].classList.add("scorebtn1");
     y[3].classList.add("scorebtn1");
     y[4].classList.add("overlay");
+}
+
+function removeBg(element) {
+    let x = element.parentElement; //NoDisplay
+    let y = x.previousElementSibling.id; 
+    element.classList.remove("overlay");
+    x.classList.remove("calBtn");
+    let z = document.getElementById(y);
+    z.classList.remove("hLight");
 }
 
 function addScore(element) {
@@ -284,13 +312,15 @@ $(function () {
     var clock = $('#clock');
     var myClock = $('#clock_1');
     var myTimeout = $('#clock_2');
-    var myQuater = $('#quater_change')
+    var myQuater = $('#quater_change');
+    var mySound = $('#sound');
+    var vid = document.getElementById("myAudio"); 
     myButton = myClock.find('#faul');
     myTimeButton = myTimeout.find('#timeout');
 
     // Map digits to their names (this will be an array)
     var digit_to_name = 'nine eight seven six five four three two one zero'.split(' ');
-    var digit_to_quater = 'FIRST SECOND THIRD FOURT'.split(' ');
+    var digit_to_quater = '1ST 2ND 3RD 4TH'.split(' ');
 
     // This object will hold the digit elements
     var digits = {};
@@ -300,25 +330,27 @@ $(function () {
     var position_1 = ['m1', 's3', ':', 's4', 's5']
     //        f          c     d
     var position_2 = ['s6', 's7']
-
-    let i = 6; //three
-    let k = 7; //two
-    let a = 9; //zero
-    let b = 8; //nine
-    let a_1 = 8;
-    let a_2 = 7;
-    let a_3 = 6;
-    let a_4 = 5;
-    let b_1 = 8;
-    let b_2 = 8;
-    let b_3 = 8;
-    let b_4 = 8;
-    let c = 4; //five
-    let d = 0; //nine
-    let e = 1;
-    let f = 1;
-    let z = 4;
-    let q = 0;
+    //Variables of number fo timer
+    let varTimeOutS6 = 4;// Timeout
+    let varTimeOutS7 = 1;
+    let varQuater = 0; // Quater
+    let var24_1 = 7; // 24s, 14s
+    let var24_2 = 6; 
+    let varMinS4 = 4; // Minit's 60s
+    let varMinS5 = 0; 
+    let varMinS3_5 = 5; // Minit's S3 (0[S3]:00)
+    let varMinS3_6 = 4;
+    let varMinS3_7 = 3;
+    let varMinS3_8 = 2;
+    let varMinS3_9 = 1;
+    let varMinS3_10 = 0;
+    let varMinS3_11 = 9;
+    let varMinS3_12 = 8;
+    let varMinS3_13 = 7;
+    let varMinS3_14 = 6;
+    let varMinS3_15 = 5;
+    let varMinM1 = 9; //Minit's M1 ([M1]0:00), only change between 1 and 0;
+    let varMinM2 = 8;
     let myInterval = -1;
     let myTimeterval = -1;
     // Generate the digits with the needed markup,
@@ -330,7 +362,7 @@ $(function () {
 
     $.each(positions, function () {
         if (this == 's1') {
-            var pos = $('<div class="' + digit_to_name[k] + '">');
+            var pos = $('<div class="' + digit_to_name[var24_1] + '">');
 
             for (let i = 1; i < 8; i++) {
                 pos.append('<span class="d' + i + '">');
@@ -402,56 +434,66 @@ $(function () {
         }
 
     });
-
+    function playVid() { 
+       vid.play();
+       console.log('work')
+    }
+    var silentSet = false;
+    function silent() {
+        silentSet = true;
+        var24_1 = 9;
+        var24_2 = 9;
+        digits.s1.attr('class', digit_to_name[9]);
+        digits.s2.attr('class', digit_to_name[9]);
+    }
     //i = five[4] , k = two[7]
     function update_timeout() {
-        digits.s6.attr('class', digit_to_name[z]);
-        digits.s7.attr('class', digit_to_name[e]);
-        e++;
-        if (e == 10) {
-            e = 0;
-            z++;
+        digits.s6.attr('class', digit_to_name[varTimeOutS6]);
+        digits.s7.attr('class', digit_to_name[varTimeOutS7]);
+        varTimeOutS7++;
+        if (varTimeOutS7 == 10) {
+            varTimeOutS7 = 0;
+            varTimeOutS6++;
         }
-        if (z >= 10) {
+        if (varTimeOutS6 >= 10) {
             clearInterval(myTimeterval);
             digits.s6.attr('class', digit_to_name[9]);
             digits.s7.attr('class', digit_to_name[9]);
-            z = 4;
+            varTimeOutS6 = 4;
+            playVid();
         }
-        console.log(e, z)
 
     };
 
     function quater_change(x, y) {
-        if (q >= 4) {
-            alert('Match had ended');
-            $('#page_2').hide;
-            $('#page_3').fadeIn;
-            q = 0;
+        if (varQuater >= 4) {
+            varQuater = 0;
         } else {
             let r = alert("ARE YOU SURE");
             if (r !== "true") {
-                i = 5; //three
-                k = 7; //two
-                a = 9; //zero
-                b = 8; //nine
-                a_1 = 8;
-                a_2 = 7;
-                a_3 = 6;
-                a_4 = 5;
-                b_1 = 8;
-                b_2 = 8;
-                b_3 = 8;
-                b_4 = 8;
-                c = 4; //five
-                d = 0;; //nine
-                e = 1;
-                f = 1;
-                q++;
+            var24_1 = 7; // 24s, 14s
+            var24_2 = 5; 
+            varMinS4 = 3; // Minit's 60s
+            varMinS5 = 9; 
+            varMinS3_5 = 5; // Minit's S3 (0[S3]:00)
+            varMinS3_6 = 4;
+            varMinS3_7 = 3;
+            varMinS3_8 = 2;
+            varMinS3_9 = 1;
+            varMinS3_10 = 0;
+            varMinS3_11 = 9;
+            varMinS3_12 = 8;
+            varMinS3_13 = 7;
+            varMinS3_14 = 6;
+            varMinS3_15 = 5;
+            varMinM1 = 9; //Minit's M1 ([M1]0:00), only change between 1 and 0;
+            varMinM2 = 8;
+            varQuater++;
+            z = 0;
             }
-            myQuater.html(digit_to_quater[q]);
-            digits.s1.attr('class', digit_to_name[k]);
-            digits.s2.attr('class', digit_to_name[i]);
+            myQuater.html(digit_to_quater[varQuater]);
+            digits.s1.attr('class', digit_to_name[var24_1]);
+            digits.s2.attr('class', digit_to_name[var24_2]);
             digits.m1.attr('class', digit_to_name[x]);
             digits.s3.attr('class', digit_to_name[y]);
             digits.s4.attr('class', digit_to_name[9]);
@@ -459,148 +501,277 @@ $(function () {
             myButton.html("Resume");
             clearInterval(myInterval);
             myInterval = -1;
-            console.log(q)
+            resetTeamFoul();
         }
     }
-
-    function update_time() {
+    let z = 0;
+    function timeFormat(x, y, a, b) {
         let setMin = parseInt($('#InputId').val())
-        digits.s1.attr('class', digit_to_name[k]);
-        digits.s2.attr('class', digit_to_name[i]);
-        digits.s4.attr('class', digit_to_name[c]);
-        digits.s5.attr('class', digit_to_name[d]);
+        digits.s1.attr('class', digit_to_name[a]);
+        digits.s2.attr('class', digit_to_name[b]);
+        digits.s4.attr('class', digit_to_name[varMinS4 + x]);
+        digits.s5.attr('class', digit_to_name[varMinS5 + y]);
 
         if (setMin == 5) {
-            digits.s3.attr('class', digit_to_name[f + 4]);
-            if (f >= 6) {
-                quater_change(9, 4);
+            let conCat = varMinS3_5 + z
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_5 = 5;
+               z = 4;
             }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_5 = 5;
+               z = -5;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 4)
+            }
+            console.log(conCat, z, varMinM1);
         }
         if (setMin == 6) {
-            digits.s3.attr('class', digit_to_name[f + 3]);
-            if (f >= 7) {
+            let conCat = varMinS3_6 + z
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_6 = 6;
+               z = 3;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_6 = 6;
+               z = -6;
+            }
+            if(varMinM1 >= 10) {
                 quater_change(9, 3)
             }
+            console.log(conCat, z)
         }
         if (setMin == 7) {
-            digits.s3.attr('class', digit_to_name[f + 2]);
-            if (f >= 8) {
+            let conCat = varMinS3_7 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_7 = 7;
+               z = 2;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_7 = 7;
+               z = -7;
+            }
+            if(varMinM1 >= 10) {
                 quater_change(9, 2)
             }
         }
         if (setMin == 8) {
-            digits.s3.attr('class', digit_to_name[f + 1]);
-            if (f >= 9) {
+            let conCat = varMinS3_8 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_8 = 8;
+               z = 1;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_8 = 8;
+               z = -8;
+            }
+            if(varMinM1 >= 10) {
                 quater_change(9, 1)
             }
         }
         if (setMin == 9) {
-            digits.s3.attr('class', digit_to_name[f]);
-            if (f >= 10) {
+            let conCat = varMinS3_9 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[varMinS3_9]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_9 = 9;
+               z = 0;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_9 = 9;
+               z = -9;
+            }
+            if(varMinM1 >= 10) {
                 quater_change(9, 0)
             }
         }
         if (setMin == 10) {
-            digits.m1.attr('class', digit_to_name[9]);
-            digits.s3.attr('class', digit_to_name[f - 1]);
-            if (f >= 11) {
+            let conCat = varMinS3_10 + z
+            digits.m1.attr('class', digit_to_name[varMinM1]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_10 = 0;
+               z = 9;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_10 = 0;
+               z = 0;
+            }
+            if(varMinM1 >= 10) {
                 quater_change(8, 9)
             }
+            console.log(conCat, z, varMinM1)
         }
         if (setMin == 11) {
-            digits.s3.attr('class', digit_to_name[a]);
-            digits.m1.attr('class', digit_to_name[b]);
-            if (f >= 12) {
+            let conCat = varMinS3_11 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_11 = 9;
+               z = 0;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_11 = 9;
+               z = -9;
+            }
+            if(varMinM2 >= 10) {
                 quater_change(8, 8)
-
             }
         }
         if (setMin == 12) {
-            digits.s3.attr('class', digit_to_name[a_1]);
-            digits.m1.attr('class', digit_to_name[b_1]);
-            if (f >= 13) {
+            let conCat = varMinS3_12 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_12 = 8;
+               z = 1;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_12 = 8;
+               z = -8;
+            }
+            if(varMinM2 >= 10) {
                 quater_change(8, 7)
             }
         }
         if (setMin == 13) {
-            digits.s3.attr('class', digit_to_name[a_2]);
-            digits.m1.attr('class', digit_to_name[b_2]);
-            if (f >= 14) {
+            let conCat = varMinS3_13 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_13 = 7;
+               z = 2;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_13 = 7;
+               z = -7;
+            }
+            if(varMinM2 >= 10) {
                 quater_change(8, 6)
             }
         }
         if (setMin == 14) {
-            digits.s3.attr('class', digit_to_name[a_3]);
-            digits.m1.attr('class', digit_to_name[b_3]);
-            if (f >= 15) {
+            let conCat = varMinS3_14 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_14 = 6;
+               z = 3;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_14 = 6;
+               z = -6;
+            }
+            if(varMinM2 >= 10) {
                 quater_change(8, 5)
             }
         }
         if (setMin == 15) {
-            digits.s3.attr('class', digit_to_name[a_4]);
-            digits.m1.attr('class', digit_to_name[b_4]);
-            if (f >= 16) {
+            let conCat = varMinS3_15 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_15 = 5;
+               z = 4;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_15 = 5;
+               z = -5;
+            }
+            if(varMinM2 >= 10) {
                 quater_change(8, 4)
             }
         }
-        i++;
-        if (i == 10) {
-            i = 0;
-            k++;
+    }
+    function update_time() {
+        timeFormat(0, 0, var24_1, var24_2);
+        var24_2++;
+        if (var24_2 == 10) {
+            var24_2 = 0;
+            var24_1++;
         }
-        if (k >= 10) {
+        if(var24_1 >= 10 && silentSet === true) {
             digits.s2.attr('class', digit_to_name[9]);
-        }
-        d++;
-        if (d >= 10) {
-            d = 0;
-            c++;
-        }
-        if (c >= 10) {
-            c = 4;
-            f++;
-            a++;
-            a_1++;
-            a_2++;
-            a_3++;
-            a_4++;
-        }
-        if (a >= 10) {
-            a = 0;
-            b++
-        }
-        if (a_1 >= 10) {
-            a_1 = 0;
-            b_1++
-        }
-        if (a_2 >= 10) {
-            a_2 = 0;
-            b_2++
-        }
-        if (a_3 >= 10) {
-            a_3 = 0;
-            b_3++
-        }
-        if (a_4 >= 10) {
-            a_4 = 0;
-            b_4++
-        }
+            console.log('work1')
+        }else if (var24_1 >= 10 ){
+            playVid();
+            digits.s2.attr('class', digit_to_name[9]);
+            silentSet = true;
+            console.log('work2')
+        }else {
+            console.log('work3')
 
-        console.log(f, c, d)
+        }
+        varMinS5++;
+        if (varMinS5 >= 10) {
+            varMinS5 = 0;
+            varMinS4++;
+        }
+        if(z >= 10) {
+            z = 0
+        }
+        if (varMinS4 >= 10) {
+            varMinS4 = 4;
+            varMinS3_5++;
+            varMinS3_6++;
+            varMinS3_7++;
+            varMinS3_8++;
+            varMinS3_9++;
+            varMinS3_10++;
+            varMinS3_11++;
+            varMinS3_12++;
+            varMinS3_13++;
+            varMinS3_14++;
+            varMinS3_15++;
+        }
+        console.log(var24_1)
     }
     $('#24s').click(function () {
-        i = 5;
-        k = 7;
-        digits.s1.attr('class', digit_to_name[k]);
-        digits.s2.attr('class', digit_to_name[i]);
+        var24_1 = 7;
+        var24_2 = 5;
+        digits.s1.attr('class', digit_to_name[7]);
+        digits.s2.attr('class', digit_to_name[5]);
+        silentSet = false;
     });
     $('#14s').click(function () {
-        i = 5;
-        k = 8;
-        digits.s1.attr('class', digit_to_name[k]);
-        digits.s2.attr('class', digit_to_name[i]);
+        var24_1 = 8;
+        var24_2 = 5;
+        digits.s1.attr('class', digit_to_name[8]);
+        digits.s2.attr('class', digit_to_name[5]);
+        silentSet = false;
     });
-
+    $('#00s').click(silent);
     $('#timeout').click(function () {
         if (myTimeterval == -1) {
             myTimeterval = setInterval(update_timeout, 1000);
@@ -614,19 +785,553 @@ $(function () {
             myTimeButton.html("Timeout");
             clearInterval(myTimeterval);
             myTimeterval = -1;
-            e = 1;
+            varTimeOutS7 = 1;
+            varTimeOutS6 = 4;
             digits.s6.attr('class', digit_to_name[3]);
             digits.s7.attr('class', digit_to_name[9]);
         }
 
     });
-    $('#timeChange').click(function () {
-        $('#showInput').fadeToggle(500)
-    });
+    $('#quater_change').click(function () {
+        varQuater++
+        myQuater.html(digit_to_quater[varQuater]);
+        if (varQuater >= 4) {
+        myQuater.html(digit_to_quater[0]);
+            varQuater = 0;
+        }
+        
+    })
+    $('#plusMin').click(() => {
+        let setMin = parseInt($('#InputId').val())
+        digits.s1.attr('class', digit_to_name[var24_1]);
+        digits.s2.attr('class', digit_to_name[var24_2 - 1]);
+        digits.s4.attr('class', digit_to_name[varMinS4 + 9]);
+        digits.s5.attr('class', digit_to_name[varMinS5 + 9]);
+
+        if (setMin == 5) {
+            let conCat = varMinS3_5 + z
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_5 = 5;
+               z = 4;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_5 = 5;
+               z = -5;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 4)
+            }
+            if(conCat == 5 && varMinM1 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+            console.log(conCat, z, varMinM1);
+        }
+        if (setMin == 6) {
+            let conCat = varMinS3_6 + z
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_6 = 6;
+               z = 3;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_6 = 6;
+               z = -6;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 3)
+            }
+            if(conCat == 5 && varMinM1 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+            console.log(conCat, z)
+        }
+        if (setMin == 7) {
+            let conCat = varMinS3_7 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_7 = 7;
+               z = 2;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_7 = 7;
+               z = -7;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 2)
+            }
+            if(conCat == 5 && varMinM1 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 8) {
+            let conCat = varMinS3_8 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_8 = 8;
+               z = 1;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_8 = 8;
+               z = -8;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 1)
+            }
+            if(conCat == 5 && varMinM1 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 9) {
+            let conCat = varMinS3_9 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[varMinS3_9]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_9 = 9;
+               z = 0;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_9 = 9;
+               z = -9;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 0)
+            }
+            if(conCat == 5 && varMinM1 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 10) {
+            let conCat = varMinS3_10 + z
+            digits.m1.attr('class', digit_to_name[varMinM1]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_10 = 0;
+               z = 9;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_10 = 0;
+               z = 0;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(8, 9)
+            }
+            if(conCat == 5 && varMinM1 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 11) {
+            let conCat = varMinS3_11 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_11 = 9;
+               z = 0;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_11 = 9;
+               z = -9;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 8)
+            }
+            if(conCat == 5 && varMinM2 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 12) {
+            let conCat = varMinS3_12 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_12 = 8;
+               z = 1;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_12 = 8;
+               z = -8;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 7)
+            }
+            if(conCat == 5 && varMinM2 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 13) {
+            let conCat = varMinS3_13 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_13 = 7;
+               z = 2;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_13 = 7;
+               z = -7;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 6)
+            }
+            if(conCat == 5 && varMinM2 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 14) {
+            let conCat = varMinS3_14 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_14 = 6;
+               z = 3;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_14 = 6;
+               z = -6;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 5)
+            }
+            if(conCat == 5 && varMinM2 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+        if (setMin == 15) {
+            let conCat = varMinS3_15 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_15 = 5;
+               z = 4;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_15 = 5;
+               z = -5;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 4)
+            }
+            if(conCat == 5 && varMinM2 == 8) {
+                console.log("cant change")
+            }else {
+                z--;
+            }
+        }
+    })
+    $('#minusMin').click(() => {
+        let setMin = parseInt($('#InputId').val())
+        digits.s1.attr('class', digit_to_name[var24_1]);
+        digits.s2.attr('class', digit_to_name[var24_2 - 1]);
+        digits.s4.attr('class', digit_to_name[varMinS4 + 9]);
+        digits.s5.attr('class', digit_to_name[varMinS5 + 9]);
+
+        if (setMin == 5) {
+            let conCat = varMinS3_5 + z
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_5 = 5;
+               z = 4;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_5 = 5;
+               z = -5;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 4)
+            }
+            if(conCat == 9 && varMinM1 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+            console.log(conCat, z, varMinM1);
+        }
+        if (setMin == 6) {
+            let conCat = varMinS3_6 + z
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_6 = 6;
+               z = 3;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_6 = 6;
+               z = -6;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 3)
+            }
+            if(conCat == 9 && varMinM1 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+            console.log(conCat, z)
+        }
+        if (setMin == 7) {
+            let conCat = varMinS3_7 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_7 = 7;
+               z = 2;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_7 = 7;
+               z = -7;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 2)
+            }
+            if(conCat == 9 && varMinM1 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 8) {
+            let conCat = varMinS3_8 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_8 = 8;
+               z = 1;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_8 = 8;
+               z = -8;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 1)
+            }
+            if(conCat == 9 && varMinM1 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 9) {
+            let conCat = varMinS3_9 + z  
+            digits.m1.attr('class', digit_to_name[varMinM1])
+            digits.s3.attr('class', digit_to_name[varMinS3_9]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_9 = 9;
+               z = 0;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_9 = 9;
+               z = -9;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(9, 0)
+            }
+            if(conCat == 9 && varMinM1 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 10) {
+            let conCat = varMinS3_10 + z
+            digits.m1.attr('class', digit_to_name[varMinM1]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM1--; 
+               varMinS3_10 = 0;
+               z = 9;
+            }
+            if (conCat >= 10) {
+               varMinM1++; 
+               varMinS3_10 = 0;
+               z = 0;
+            }
+            if(varMinM1 >= 10) {
+                quater_change(8, 9)
+            }
+            if(conCat == 9 && varMinM1 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 11) {
+            let conCat = varMinS3_11 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_11 = 9;
+               z = 0;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_11 = 9;
+               z = -9;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 8)
+            }
+            if(conCat == 9 && varMinM2 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 12) {
+            let conCat = varMinS3_12 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_12 = 8;
+               z = 1;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_12 = 8;
+               z = -8;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 7)
+            }
+            if(conCat == 9 && varMinM2 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 13) {
+            let conCat = varMinS3_13 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_13 = 7;
+               z = 2;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_13 = 7;
+               z = -7;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 6)
+            }
+            if(conCat == 9 && varMinM2 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 14) {
+            let conCat = varMinS3_14 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_14 = 6;
+               z = 3;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_14 = 6;
+               z = -6;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 5)
+            }
+            if(conCat == 9 && varMinM2 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+        if (setMin == 15) {
+            let conCat = varMinS3_15 + z
+            digits.m1.attr('class', digit_to_name[varMinM2]);
+            digits.s3.attr('class', digit_to_name[conCat]);
+            if (conCat <= -1) {
+               varMinM2--; 
+               varMinS3_15 = 5;
+               z = 4;
+            }
+            if (conCat >= 10) {
+               varMinM2++; 
+               varMinS3_15 = 5;
+               z = -5;
+            }
+            if(varMinM2 >= 10) {
+                quater_change(8, 4)
+            }
+            if(conCat == 9 && varMinM2 == 9) {
+                console.log("cant change")
+            }else {
+                z++;
+            }
+        }
+    })
+
     $('#manual1').click(function () {
         displayTeam();
 //        $('#showInput').fadeToggle(500);
-        $('#2_page').delay(500).fadeIn(1000);
+        $('#2_page').fadeIn(1000);
         let setMin = parseInt($('#InputId').val())
         if (setMin == 5) {
             digits.m1.attr('class', digit_to_name[9]);
@@ -678,15 +1383,22 @@ $(function () {
         if (myInterval == -1) {
             myButton.html("Pause");
             myInterval = setInterval(update_time, 1000);
-        } else {
+        }else {
             myButton.html("Resume");
             clearInterval(myInterval);
             myInterval = -1;
         }
+       if (myTimeterval !== -1) {
+            myTimeButton.html("Timeout");
+            clearInterval(myTimeterval);
+            myTimeterval = -1;
+            varTimeOutS7 = 1;
+            varTimeOutS6 = 4;
+            digits.s6.attr('class', digit_to_name[3]);
+            digits.s7.attr('class', digit_to_name[9]);
+        }
     });
-});
-
-//Don't change anything
+    });
 
 //function select_captain(team) {
 //    //from the list, randomly choose a captain.

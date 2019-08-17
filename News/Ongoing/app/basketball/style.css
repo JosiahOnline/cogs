@@ -18,12 +18,21 @@ section, footer, header, aside{
 	display: block;
 }
 .position_all {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column;
     background: #cc000000;
 }
 .position_quater {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
     display: inline-flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     margin-bottom: 20px;
     font-size: 2em;
@@ -37,6 +46,8 @@ section, footer, header, aside{
     color: white;
 }
 .position_timer {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     padding : 30px 40px;
     background: black;
@@ -52,12 +63,24 @@ section, footer, header, aside{
     background: #dbe4e6;
     
 }
+.changtime {
+    padding: 0px 5px;
+    border-radius: 3px;
+    background: #ff5757;
+    margin: 3px;
+    color: white;
+    cursor: pointer;
+}
 .timer_but1 {
     width: 95%;
     text-align: center;
 }
 #showInput {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 #InputId {
@@ -78,6 +101,8 @@ section, footer, header, aside{
 }
 #clock_2 .display_2{
     margin: 10px 0px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     font-size: 2.3em;
     padding: 7px 2px;
@@ -107,17 +132,24 @@ section, footer, header, aside{
 
 #clock.light .display{
 	background-color: #ff5757;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 }
 
 #clock_1.light .display_1{
 	background-color:#dddddd;
+	-webkit-box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 	box-shadow:0 1px 1px rgba(0,0,0,0.08) inset, 0 1px 1px #fafafa;
 }
 #clock_2.light .display_2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     background-color: white;
+    -ms-flex-pack: distribute;
     justify-content: space-around;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 #clock_1.light .display_1{
@@ -143,7 +175,6 @@ section, footer, header, aside{
 	position:absolute;
 
 	-webkit-transition:0.25s;
-	-moz-transition:0.25s;
 	transition:0.25s;
 }
 

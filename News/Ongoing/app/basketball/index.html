@@ -77,7 +77,7 @@
         </form>
         <div id="showInput">
                         <p>Select time for each quarter (5 - 15mins): </p>
-                        <input type="number" value="5" id="InputId" min="5" max="15">
+                        <input type="number" value="10" id="InputId" min="5" max="15">
                     </div>
         <div>
             <button id="manual1" type="button">Confirm</button>
@@ -89,17 +89,21 @@
                     <h2 id="nameHome"></h2>
                     <div class="scorediv" id="team1">0</div>
                 </div>
-                
+<!--Andrew part-->
                     <div id="2_page" class="position_all" style="display: none">
                         <div class="position_quater">
-                            <div id="quater_change" style="width: 200px">FIRST</div>
+                            <div id="quater_change" style="width: 200px; cursor: pointer;">1ST</div>
                             <div style="padding: 10px 20px; color: white;">QUARTER</div>
                         </div>
                         <div class="position_timer">
                             <div id="clock_1" class="light">
-                                <div class="display_1">
-                                    <div class="digits_1"></div>
-                                    <!--            <button id="myReset">Reset</button>-->
+                                <div class="display_1" style="display: flex">
+                                    <div id="myReset">
+                                        <div id="plusMin" class="changtime">+</div>
+                                        <div id="minusMin" class="changtime">-</div>
+                                    </div>
+                                     <div class="digits_1"></div>
+
                                     <div id="myConfirm"></div>
                                 </div>
                                 <div id="faul" class="timer_but1">Start</div>
@@ -111,6 +115,7 @@
                                 <div style="display: flex; justify-content: space-around;">
                                     <div id="24s" class="timer_but">24</div>
                                     <div id="14s" class="timer_but">14</div>
+                                    <div id="00s" class="timer_but">00</div>
                                 </div>
                             </div>
                         </div>
@@ -122,7 +127,10 @@
                             </div>
                         </div>
                     </div>
-                
+                    <audio id="myAudio">
+                       <source src="WhatsApp%20Audio%202019-08-15%20at%203.15.45%20PM.mpeg" type="audio/mpeg">
+                    </audio>
+<!--End here-->
                 <div class="btncontainer">
                     <h2 id="nameAway"></h2>
                     <div class="scorediv" id="team2">0</div>
@@ -149,7 +157,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP1" onclick="checkFoul(this)">0</button>
                 </div>
@@ -160,7 +168,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP2" onclick="checkFoul(this)">0</button>
                 </div>
@@ -171,7 +179,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP3" onclick="checkFoul(this)">0</button>
                 </div>
@@ -182,7 +190,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP4" onclick="checkFoul(this)">0</button>
                 </div>
@@ -193,7 +201,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP5" onclick="checkFoul(this)">0</button>
                 </div>
@@ -204,7 +212,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP6" onclick="checkFoul(this)">0</button>
                 </div>
@@ -215,7 +223,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP7" onclick="checkFoul(this)">0</button>
                 </div>
@@ -226,7 +234,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP8" onclick="checkFoul(this)">0</button>
                 </div>
@@ -237,7 +245,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP9" onclick="checkFoul(this)">0</button>
                 </div>
@@ -248,7 +256,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP10" onclick="checkFoul(this)">0</button>
                 </div>
@@ -259,7 +267,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP11" onclick="checkFoul(this)">0</button>
                 </div>
@@ -270,7 +278,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP12" onclick="checkFoul(this)">0</button>
                 </div>
@@ -290,7 +298,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP13" onclick="checkFoul(this)">0</button>
                 </div>
@@ -301,7 +309,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP14" onclick="checkFoul(this)">0</button>
                 </div>
@@ -312,7 +320,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP15" onclick="checkFoul(this)">0</button>
                 </div>
@@ -323,7 +331,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP16" onclick="checkFoul(this)">0</button>
                 </div>
@@ -334,7 +342,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP17" onclick="checkFoul(this)">0</button>
                 </div>
@@ -345,7 +353,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP18" onclick="checkFoul(this)">0</button>
                 </div>
@@ -356,7 +364,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP19" onclick="checkFoul(this)">0</button>
                 </div>
@@ -367,7 +375,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP20" onclick="checkFoul(this)">0</button>
                 </div>
@@ -378,7 +386,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP21" onclick="checkFoul(this)">0</button>
                 </div>
@@ -389,7 +397,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP22" onclick="checkFoul(this)">0</button>
                 </div>
@@ -400,7 +408,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP23" onclick="checkFoul(this)">0</button>
                 </div>
@@ -411,7 +419,7 @@
                         <button onclick="addScore(this)">+2</button>
                         <button onclick="addScore(this)">+1</button>
                         <button onclick="deductScore(this)">-1</button>
-                        <div class="bground"></div>
+                        <div class="bground" onclick="removeBg(this)"></div>
                     </div>
                     <button class="foulBox" id="foulP24" onclick="checkFoul(this)">0</button>
                 </div>
