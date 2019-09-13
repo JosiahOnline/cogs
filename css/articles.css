@@ -96,9 +96,11 @@
     -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
 }
+
 .main-news-description.onlybg {
     opacity: 1;
 }
+
 .main-news-title {
     font-size: 4rem;
     line-height: 1.2em;
@@ -217,10 +219,13 @@
 }
 
 /* Article Share Icons */
+
 /*Display none for the links when clicked in mobile version*/
+
 .news a:active + .card__share {
     display: none;
 }
+
 .card__share {
     display: none;
     float: right;
@@ -1219,12 +1224,12 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
 }
 
 .picAd {
@@ -1261,11 +1266,11 @@
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 .picAd .redbg {
@@ -1273,7 +1278,7 @@
 }
 
 .picAd .greenbg {
-    background: rgb(46,139,87);
+    background: rgb(46, 139, 87);
 }
 
 .picAd .pinkbg {
@@ -1283,6 +1288,7 @@
 .picAd .bluebg {
     background: rgba(50, 91, 132, 1);
 }
+
 .picAd .lightbluebg {
     background: rgb(0, 155, 173);
 }
@@ -1290,6 +1296,7 @@
 .picAd .orangebg {
     background: rgba(255, 165, 0, 1);
 }
+
 .promo-title p {
     font-size: 4rem;
     line-height: 1.1em;
@@ -1301,8 +1308,8 @@
 
 .youtube {
     -webkit-box-flex: 85%;
-        -ms-flex: 85%;
-            flex: 85%;
+    -ms-flex: 85%;
+    flex: 85%;
 }
 
 .youtube iframe {
@@ -1314,8 +1321,8 @@
 
 .youtube-container {
     -webkit-box-flex: 15%;
-        -ms-flex: 15%;
-            flex: 15%;
+    -ms-flex: 15%;
+    flex: 15%;
 }
 
 .description-container,
@@ -1647,3 +1654,24 @@
         font-size: 1.4rem;
     }
 }
+
+.scrolling-wrapper {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+}
+
+.description-container p.smallLetter {
+    font-size: 0.9rem;
+}
+.card {
+    flex: 0 0 auto;
+    margin-right: 10px;
+}
+
+.card img {
+    border-radius: 5px;
+}
+
+
