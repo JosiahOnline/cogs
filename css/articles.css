@@ -1655,6 +1655,11 @@
     }
 }
 
+
+/*New Article Combined with Youtube*/
+
+.video90 {
+width: 90%;}
 .scrolling-wrapper {
     display: flex;
     flex-wrap: nowrap;
