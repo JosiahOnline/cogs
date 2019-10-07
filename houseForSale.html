@@ -11,313 +11,621 @@
     <link href="img/favicon/favicon2-96x96.png" rel="shortcut icon" type="image/x-icon">
     <link href="img/favicon/apple-icon2-180x180.png" rel="apple-touch-icon">
     <style>
-        * {
-            padding: 0;
-            margin: 0;
-            box-sizing: border-box;
-            user-select: none;
-        }
-
-        body {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            font-family: Merriweather, serif;
-
-            overflow-x: hidden;
-            font-weight: normal;
-            font-size: 12px;
-            color: #678790;
-            perspective: -2000px;
-        }
-
-        .main {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-start;
-            align-items: center;
-            width: 100%;
-            max-width: 1600px;
-            position: relative;
-            overflow: hidden;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            width: 100%;
-            background: white;
-        }
-
-        h1 {
-            display: flex;
-            align-items: center;
-            width: 100%;
-            height: 100px;
-            letter-spacing: 2px;
-            color: #d0d0d0;
-        }
-
-        img {
-            min-width: 100%;
-        }
-
-        .slider {
-            width: 100%;
-            height: 45vmax;
-            position: relative;
-            transform-style: preserve-3d;
-            animation: slider 16s infinite;
-        }
-
-        .face {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: absolute;
-            width: 100%;
-            height: 45vmax;
-
-            overflow: hidden;
-            object-fit: cover;
-            object-position: center;
-        }
-
-        .face--front {
-            transform: translateZ(50vw);
-        }
-
-        .face--back {
-            transform: rotateY(180deg) translateZ(50vw);
-        }
-
-        .face--left {
-            transform: rotateY(-90deg) translateZ(50vw);
-        }
-
-        .face--right {
-            transform: rotateY(90deg) translateZ(50vw);
-        }
-
-        .description {
-            display: flex;
-            flex-direction: column;
-            justify-content: flex-end;
-            align-items: flex-start;
-            position: absolute;
-            width: 100%;
-            height: 100%;
-
-            padding: 40px 20px;
-            text-shadow: 0 0 1px rgba(103, 135, 144, 1);
-        }
-
-        .title {
-            font-size: 24px;
-            color: black;
-            padding: 20px;
-            background: white;
-        }
-
-        .para {
-            font-size: 16px;
-            text-shadow: 2px 2px 8px #211717;
-            padding: 10px 0;
-            font-weight: bold;
-            color: white;
-        }
-
-        .indicator {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 5px;
-
-            background-color: #0d5266;
-            z-index: 200;
-        }
-
-        .indicator:after {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0%;
-            height: 5px;
-
-            background-color: #678790;
-            animation: indicator 4s infinite;
-        }
-
-
-        /**/
-
-        @keyframes slider {
-            0%,
-            20% {
-                transform: rotateY(0deg);
+        @media screen and ( min-width: 320px) and ( min-height: 500px) {
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                user-select: none;
             }
-            25%,
-            45% {
-                transform: rotateY(-90deg);
-            }
-            50%,
-            70% {
-                transform: rotateY(-180deg);
-            }
-            75%,
-            95% {
-                transform: rotateY(-270deg);
-            }
-            100% {
-                transform: rotateY(-360deg);
-            }
-        }
 
-        @keyframes indicator {
-            0% {
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                font-family: Merriweather, serif;
+
+                overflow-x: hidden;
+                font-weight: normal;
+                font-size: 1.5rem;
+                color: #678790;
+                perspective: -2000px;
+            }
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                max-width: 1600px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                background: white;
+            }
+
+            h1 {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+                letter-spacing: 2px;
+                color: #d0d0d0;
+            }
+
+            img {
+                min-width: 100%;
+            }
+
+            .slider {
+                width: 100%;
+                height: 55vmax;
+                position: relative;
+                transform-style: preserve-3d;
+                animation: slider 16s infinite;
+            }
+
+            .face {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 55vmax;
+
+                overflow: hidden;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .face--front {
+                transform: translateZ(50vw);
+            }
+
+            .face--back {
+                transform: rotateY(180deg) translateZ(50vw);
+            }
+
+            .face--left {
+                transform: rotateY(-90deg) translateZ(50vw);
+            }
+
+            .face--right {
+                transform: rotateY(90deg) translateZ(50vw);
+            }
+
+            .description {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-end;
+                align-items: flex-start;
+                position: absolute;
+                bottom: 20%;
+                left: 5%;
+
+                padding: 40px 20px;
+                text-shadow: 0 0 1px rgba(103, 135, 144, 1);
+            }
+
+            .title {
+                font-size: 2rem;
+                color: black;
+                padding: 20px;
+                background: white;
+            }
+
+            .para {
+                font-size: 1.5rem;
+                text-shadow: 2px 2px 8px #211717;
+                padding: 10px 0;
+                font-weight: bold;
+                color: white;
+            }
+
+            .indicator {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+
+                background-color: #0d5266;
+                z-index: 200;
+            }
+
+            .indicator:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
                 width: 0%;
+                height: 5px;
+
+                background-color: #678790;
+                animation: indicator 4s infinite;
             }
-            100% {
+
+
+            /**/
+            @keyframes slider {
+                0%,
+                20% {
+                    transform: rotateY(0deg);
+                }
+                25%,
+                45% {
+                    transform: rotateY(-90deg);
+                }
+                50%,
+                70% {
+                    transform: rotateY(-180deg);
+                }
+                75%,
+                95% {
+                    transform: rotateY(-270deg);
+                }
+                100% {
+                    transform: rotateY(-360deg);
+                }
+            }
+
+            @keyframes indicator {
+                0% {
+                    width: 0%;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+            .top-nav .text-block,
+            .top-nav a {
+                font-size: 2.1rem;
+            }
+            .bigContainer {
+                color: #2d4053;
+                width: 80%;
+                margin-bottom: 50px;
+                position: relative;
+            }
+
+            header {
+
+                display: flex;
+                padding: 30px 10px;
+                justify-content: space-around;
+                align-content: center;
+                background: #F7F7F7;
+            }
+
+            header i,
+            header span {
+                font-size: 1.8rem;
+            }
+
+            header span {
+                padding: 20px 10px;
+            }
+
+            .detailsContainer {
+                padding-left: 40px;
+                z-index: 1;
+                opacity: 1;
+            }
+
+            .detailsContainer h1 {
+                color: #241919;
+                font-size: 2.5rem;
+            }
+
+            .roomIcons {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .roomIcons div {
+                display: flex;
+                width: 100%;
+            }
+
+            .roomIcons div i,
+            .roomIcons div p,
+            .roomIcons div span {
+                font-size: 2rem;
+            }
+
+            .contactInfo i {
+                font-size: 1.2rem;
+                padding: 0 10px;
+            }
+
+            .roomIcons div i {
+                margin-right: 20px;
+            }
+
+            .detailsContainer h1,
+            .detailsContent {
+                margin-top: 30px;
+            }
+
+            .detail-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .detail-col {
+                width: 50%;
+                padding-right: 50px;
+                margin: 10px 0;
+            }
+
+            .detail-label {
+                font-size: 1.3rem;
+                padding-bottom: 20px;
+                color: grey;
+            }
+
+            .detail-data {
+                font-size: 1.5rem;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .descriptionContent p {
+                font-family: poppins, sans-serif;
+                font-size: 1.3rem;
+                line-height: 1.8rem;
+            }
+
+            .contactInfo p {
+                font-size: 1.3rem;
+            }
+
+            .active {
+                background: black;
+            }
+            .locationContainer {
+                height: 500px;
+                background: black;
+                z-index: 0;
+                opacity: 0;
+                top: 130px;
+                position: absolute;
+                width: 100%;
+            }
+
+            .locationContainer iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .videoContainer {
+                height: 500px;
+                background: black;
+                z-index: 0;
+                opacity: 0;
+                top: 130px;
+                position: absolute;
+                width: 100%;
+            }
+
+            .videoContainer iframe {
+                height: 100%;
                 width: 100%;
             }
         }
 
-        .bigContainer {
-            color: #2d4053;
-            width: 60%;
-            margin-top: 10px;
-            margin-bottom: 50px;
-            position: relative;
+        @media screen and ( min-width: 1280px) and ( min-height: 580px) {
+
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+                user-select: none;
+            }
+
+            body {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                font-family: Merriweather, serif;
+
+                overflow-x: hidden;
+                font-weight: normal;
+                font-size: 12px;
+                color: #678790;
+                perspective: -2000px;
+            }
+
+            .main {
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+                width: 100%;
+                max-width: 1600px;
+                position: relative;
+                overflow: hidden;
+            }
+
+            header {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                background: white;
+            }
+
+            h1 {
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+                letter-spacing: 2px;
+                color: #d0d0d0;
+            }
+
+            img {
+                min-width: 100%;
+            }
+
+            .slider {
+                width: 100%;
+                height: 45vmax;
+                position: relative;
+                transform-style: preserve-3d;
+                animation: slider 16s infinite;
+            }
+
+            .face {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: absolute;
+                width: 100%;
+                height: 45vmax;
+
+                overflow: hidden;
+                object-fit: cover;
+                object-position: center;
+            }
+
+            .face--front {
+                transform: translateZ(50vw);
+            }
+
+            .face--back {
+                transform: rotateY(180deg) translateZ(50vw);
+            }
+
+            .face--left {
+                transform: rotateY(-90deg) translateZ(50vw);
+            }
+
+            .face--right {
+                transform: rotateY(90deg) translateZ(50vw);
+            }
+
+             .description {
+                bottom: 5%;
+                left: 3%;
+            }
+
+            .title {
+                font-size: 24px;
+                color: black;
+                padding: 20px;
+                background: white;
+            }
+
+            .para {
+                font-size: 16px;
+                text-shadow: 2px 2px 8px #211717;
+                padding: 10px 0;
+                font-weight: bold;
+                color: white;
+            }
+
+            .indicator {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 5px;
+
+                background-color: #0d5266;
+                z-index: 200;
+            }
+
+            .indicator:after {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 0%;
+                height: 5px;
+
+                background-color: #678790;
+                animation: indicator 4s infinite;
+            }
+
+
+            /**/
+            @keyframes slider {
+                0%,
+                20% {
+                    transform: rotateY(0deg);
+                }
+                25%,
+                45% {
+                    transform: rotateY(-90deg);
+                }
+                50%,
+                70% {
+                    transform: rotateY(-180deg);
+                }
+                75%,
+                95% {
+                    transform: rotateY(-270deg);
+                }
+                100% {
+                    transform: rotateY(-360deg);
+                }
+            }
+
+            @keyframes indicator {
+                0% {
+                    width: 0%;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+            .top-nav .text-block,
+            .top-nav a {
+                font-size: 1.2rem;
+            }
+            .bigContainer {
+                margin-top: 10px;
+            }
+
+            header {
+
+                display: flex;
+                padding: 20px 10px;
+                justify-content: space-around;
+                align-content: center;
+                background: #F7F7F7;
+            }
+
+            header i,
+            header span {
+                font-size: 1.4rem;
+            }
+
+            header span {
+                padding: 20px 10px;
+            }
+
+            .detailsContainer {
+                padding-left: 40px;
+                z-index: 1;
+                opacity: 1;
+            }
+
+            .detailsContainer h1 {
+                color: #241919;
+            }
+
+            .roomIcons {
+                flex-direction: row;
+            }
+
+            .roomIcons div {
+                display: flex;
+                width: 100%;
+            }
+
+            .roomIcons div i,
+            .roomIcons div p,
+            .roomIcons div span {
+                font-size: 1rem;
+            }
+
+            .contactInfo i {
+                font-size: 1.2rem;
+                padding: 0 10px;
+            }
+
+            .roomIcons div i {
+                margin-right: 10px;
+            }
+
+            .detailsContainer h1,
+            .detailsContent {
+                margin-top: 30px;
+            }
+
+            .detail-row {
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .detail-col {
+                width: 50%;
+                padding-right: 50px;
+                margin: 10px 0;
+            }
+
+            .detail-label {
+                font-size: 1rem;
+                padding-bottom: 20px;
+                color: grey;
+            }
+
+            .detail-data {
+                font-size: 1.3rem;
+                padding-bottom: 10px;
+                border-bottom: 1px solid #ddd;
+            }
+
+            .descriptionContent p {
+                font-family: poppins, sans-serif;
+                font-size: 1.2rem;
+            }
+
+            .contactInfo p {
+                font-size: 1.2rem;
+            }
+
+            .active {
+                background: black;
+            }
+            .locationContainer {
+                height: 500px;
+                background: black;
+                z-index: 0;
+                opacity: 0;
+                top: 100px;
+                position: absolute;
+                width: 100%;
+            }
+
+            .locationContainer iframe {
+                width: 100%;
+                height: 100%;
+            }
+
+            .videoContainer {
+                height: 500px;
+                background: black;
+                z-index: 0;
+                opacity: 0;
+                top: 100px;
+                position: absolute;
+                width: 100%;
+            }
+
+            .videoContainer iframe {
+                height: 100%;
+                width: 100%;
+            }
         }
 
-        header {
-
-            display: flex;
-            padding: 20px 10px;
-            justify-content: space-around;
-            align-content: center;
-            background: #F7F7F7;
-        }
-
-        header i,
-        header span {
-            font-size: 1.4rem;
-        }
-
-        header span {
-            padding: 20px 10px;
-        }
-
-        .detailsContainer {
-            padding-left: 40px;
-            z-index: 1;
-            opacity: 1;
-        }
-
-        .detailsContainer h1 {
-            color: #241919;
-        }
-
-        .roomIcons {
-            display: flex;
-            justify-content: flex-start;
-            align-items: center;
-        }
-
-        .roomIcons div {
-            display: flex;
-            width: 100%;
-        }
-
-        .roomIcons div i,
-        .roomIcons div p,
-        .roomIcons div span {
-            font-size: 1rem;
-        }
-        
-        .contactInfo i {
-            font-size: 1.2rem;
-            padding: 0 10px;
-        }
-
-        .roomIcons div i {
-            margin-right: 10px;
-        }
-
-        .detailsContainer h1,
-        .detailsContent {
-            margin-top: 30px;
-        }
-
-        .detail-row {
-            display: flex;
-            flex-wrap: wrap;
-        }
-
-        .detail-col {
-            width: 50%;
-            padding-right: 50px;
-            margin: 10px 0;
-        }
-
-        .detail-label {
-            font-size: 1rem;
-            padding-bottom: 20px;
-            color: grey;
-        }
-
-        .detail-data {
-            font-size: 1.3rem;
-            padding-bottom: 10px;
-            border-bottom: 1px solid #ddd;
-        }
-
-        .descriptionContent p {
-            font-family: poppins, sans-serif;
-            font-size: 1.2rem;
-        }
-
-        .contactInfo p {
-            font-size: 1.2rem;
-        }
-        
-        .active {
-            background: black;
-        }
-        .locationContainer {
-            height: 500px;
-            background: black;
-            z-index: 0;
-            opacity: 0;
-            top: 100px;
-            position: absolute;
-            width: 100%;
-        }
-        
-        .locationContainer iframe {
-            width: 100%;
-            height: 100%;
-        }
-        
-        .videoContainer {
-            height: 500px;
-            background: black;
-            z-index: 0;
-            opacity: 0;
-            top: 100px;
-            position: absolute;
-            width: 100%;
-        }
-        
-        .videoContainer iframe {
-            height: 100%;
-            width: 100%;
-        }
+        /*
         @media(min-width: 640px) {
 
             .description {
@@ -339,6 +647,7 @@
                 height: 40vmax;
             }
         }
+*/
 
     </style>
 
@@ -354,33 +663,33 @@
 
             <div class="slider">
                 <div class="face face--front">
-                    <img class="img" src="./bedrooms.jpg">
+                    <img class="img" src="https://res.cloudinary.com/trippleninja/image/upload/v1570371038/News%20Images/house2.jpg">
                     <div class="description">
-                        <h2 class="title">Bedroom</h2>
+                        <h2 class="title">Picture 1</h2>
                         <p class="para">Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.</p>
                     </div>
                 </div>
 
                 <div class="face face--right">
-                    <img class="img" src="./bathrooms.jpg">
+                    <img class="img" src="https://res.cloudinary.com/trippleninja/image/upload/v1570371038/News%20Images/house4.jpg">
                     <div class="description">
-                        <h2 class="title">Bathroom</h2>
+                        <h2 class="title">Picture 2</h2>
                         <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
 
                 <div class="face face--back">
-                    <img class="img" src="./living.jpg">
+                    <img class="img" src="https://res.cloudinary.com/trippleninja/image/upload/v1570371038/News%20Images/house3.jpg">
                     <div class="description">
-                        <h2 class="title">Living Room</h2>
+                        <h2 class="title">Picture 3</h2>
                         <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
                     </div>
                 </div>
 
                 <div class="face face--left">
-                    <img class="img" src="./kitchen.jpg">
+                    <img class="img" src="https://res.cloudinary.com/trippleninja/image/upload/v1570371038/News%20Images/house1.jpg">
                     <div class="description">
-                        <h2 class="title">Kitchen</h2>
+                        <h2 class="title">Picture 4</h2>
                         <p class="para">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                     </div>
                 </div>
@@ -408,7 +717,7 @@
                         <p>2 <span>Bathrooms</span></p>
                     </div>
                     <div>
-                        <p>1,xxx <span>Sqft</span></p>
+                        <p>N/A <span>Sqft</span></p>
                     </div>
                 </div>
                 <div class="detailsContent">
@@ -432,17 +741,32 @@
                         </div>
                         <div class="detail-col">
                             <div class="detail-label">Floor Level</div>
-                            <div class="detail-data">N/A</div>
+                            <div class="detail-data">2 Floors</div>
                         </div>
                         <div class="detail-col">
-                            <div class="detail-label">Build Year</div>
-                            <div class="detail-data">2xxxx</div>
+                            <div class="detail-label">Land Size</div>
+                            <div class="detail-data">N/A</div>
                         </div>
                     </div>
                 </div>
                 <div class="descriptionContent">
                     <h1>Description</h1>
-                    <p>FEATURES:<br> * Low Down payment<br> * FREE legal fee for S&amp;P<br> * FREE MOT<br> * Size 26 x 80, from 3,000 sf: From RM 1.0 m<br> * Modern design with beautiful landscaping and wide road frontage<br> * Gated &amp; Guarded with 24 hours security<br> * Garden Homes with good greenery<br> * Open layout and high ceiling for a luxurious sense of space<br> * Interior layout provides more natural light<br> * Nearby Amenities: Central park, Government and International schools, Hospital, Shopping Malls, Golf and Country Club and etc.<br> " ACCESSIBILITY &amp; CONNECTIVITY "<br> * Lebuhraya Shah Alam (KESAS)<br> * Lebuhraya Kemuning Shah Alam (LKSA)<br> * South Klang Valley Expressway (SKVE)<br> * Expressway Lingkaran Tengah (ELITE)<br> * West Coast Expressway (WCE)
+                    <p>FEATURES:
+                    <br>* Nearby Amenities: 
+                    <br>* Easy access to Banks, Hospital, Primary and Secondary Schools, 
+                    <br>* Hotels, Governement and Post Offices. 
+                    <br>* Surrounded with different varieties of Restaurants, Cafe,
+                    <br>* Bars and Coffee, Salon, Stationaries, Workshop, Petrol Station, etc.
+                    <br>* Easy access to OneStop Superstore, Giant Hypermarket, Survey Hypermarket, 
+                    <br>* MYDIN, Mr.D.I.Y, etc. 
+                    <br>* 10 mins drive to Sandakan Airport.
+                    <br>* 15 mins drive to Sandakan Town Area.
+                    <br>* Less than 12 mins drive to any of these areas: 
+                    <br>* Sandakan Sports Complex, Sandakan Golf & Country Club, Eagles Rugby Club,
+                    <br>* Indah Jaya Waterpark, Sandakan Futsal, Sandakan Rainforest Park.
+                    <br>* Less than 25 mins drive to any of these areas:
+                    <br>* Sepilok Orangutan Rehabilitation Centre, Bornean Sun Bear Conservation Centre
+                    <br>* and Sandakan Crocodile Farm.
                     </p>
                 </div>
                 <div class="contactInfo">
@@ -451,12 +775,11 @@
                 </div>
             </div>
             <div id="location2" class="locationContainer">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m23!1m12!1m3!1d992.2335195561849!2d118.07224020474598!3d5.864892425358194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m8!3e6!4m0!4m5!1s0x3238db0ce9b34deb%3A0x4a0cb490d220eec1!2s70%2C%20Lor%20San%20Uno%204%2C%2090000%20Sandakan%2C%20Sabah!3m2!1d5.8654581!2d118.07330909999999!5e0!3m2!1sen!2smy!4v1569518291554!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3968.93099016754!2d118.07101571458688!3d5.865326395750436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3238db0c93f23f03%3A0x6cf8690ac3587e72!2s68%2C%20Lor%20San%20Uno%204%2C%2090000%20Sandakan%2C%20Sabah!5e0!3m2!1sen!2smy!4v1570268845397!5m2!1sen!2smy" width="600" height="450" frameborder="0" style="border:0;" allowfullscreen=""></iframe>
             </div>
             <div id="video2" class="videoContainer">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/C9SlNs2N7hM?controls=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/Ey4KtjcZHSM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
-
         </section>
 
 
@@ -468,38 +791,37 @@
           “Close to Everything”. If you are looking for a good environment, basic amenities nearby (such as grocery stores, shops, restaurants, bank, park, etc) this is a very good place to start off. 
       </p>
 -->
-    <script>
+        <script>
+            function toggleButton(element) {
+                let x = element.getAttribute("id");
+                if (x == "details1") {
+                    document.getElementById("details2").style.zIndex = "1";
+                    document.getElementById("location2").style.zIndex = "0";
+                    document.getElementById("video2").style.zIndex = "0";
+                    document.getElementById("details2").style.opacity = "1";
+                    document.getElementById("location2").style.opacity = "0";
+                    document.getElementById("video2").style.opacity = "0";
+                    console.log(x);
+                } else if (x == "location1") {
+                    document.getElementById("location2").style.zIndex = "1";
+                    document.getElementById("details2").style.zIndex = "0";
+                    document.getElementById("video2").style.zIndex = "0";
+                    document.getElementById("location2").style.opacity = "1";
+                    document.getElementById("details2").style.opacity = "0";
+                    document.getElementById("video2").style.opacity = "0";
+                } else {
+                    document.getElementById("video2").style.zIndex = "1";
+                    document.getElementById("details2").style.zIndex = "0";
+                    document.getElementById("location2").style.zIndex = "0";
+                    document.getElementById("video2").style.opacity = "1";
+                    document.getElementById("details2").style.opacity = "0";
+                    document.getElementById("location2").style.opacity = "0";
+                }
 
-function toggleButton (element) {
-    let x = element.getAttribute("id");
-    if (x == "details1") {
-        document.getElementById("details2").style.zIndex = "1";
-        document.getElementById("location2").style.zIndex = "0";
-        document.getElementById("video2").style.zIndex = "0";
-        document.getElementById("details2").style.opacity = "1";
-        document.getElementById("location2").style.opacity = "0";
-        document.getElementById("video2").style.opacity = "0";
-        console.log(x);
-    } else if (x == "location1") {
-        document.getElementById("location2").style.zIndex = "1";
-        document.getElementById("details2").style.zIndex = "0";
-        document.getElementById("video2").style.zIndex = "0";
-        document.getElementById("location2").style.opacity = "1";
-        document.getElementById("details2").style.opacity = "0";
-        document.getElementById("video2").style.opacity = "0";
-    } else {
-        document.getElementById("video2").style.zIndex = "1";
-        document.getElementById("details2").style.zIndex = "0";
-        document.getElementById("location2").style.zIndex = "0";
-        document.getElementById("video2").style.opacity = "1";
-        document.getElementById("details2").style.opacity = "0";
-        document.getElementById("location2").style.opacity = "0";
-    }
-   
-//  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
-}
-        
-    </script>
+                //  document.getElementById("demo").innerHTML = "YOU CLICKED ME!";
+            }
+
+        </script>
 
     </body>
 </head>
