@@ -218,6 +218,11 @@
     margin-bottom: 0;
 }
 
+a.share-link {
+    color: #eb282b;
+    font-weight: bold;
+    text-decoration: underline;
+}
 /* Article Share Icons */
 
 /*Display none for the links when clicked in mobile version*/
